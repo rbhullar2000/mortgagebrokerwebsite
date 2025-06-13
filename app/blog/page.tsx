@@ -26,7 +26,7 @@ export default function BlogPage() {
       category: "Interest Rates",
       slug: "/blog/bank-of-canada-holds-key-interest-rate",
       featured: true,
-      image: "/images/bank-of-canada-building.png",
+      image: "bank-of-canada-building.png",
     },
     {
       title: "First-Time Home Buyer Incentive Changes",
@@ -36,7 +36,7 @@ export default function BlogPage() {
       category: "Government Programs",
       slug: "/blog/first-time-home-buyer-incentive-changes",
       featured: false,
-      image: "/images/first-time-homebuyer-family.png",
+      image: "first-time-homebuyer-family.png",
     },
     {
       title: "Vancouver Housing Market Update",
@@ -46,7 +46,7 @@ export default function BlogPage() {
       category: "Market Updates",
       slug: "/blog/vancouver-housing-market-update",
       featured: false,
-      image: "/images/vancouver-skyline-housing.png",
+      image: "vancouver-skyline-housing.png",
     },
     {
       title: "Fixed vs. Variable: Which is Right for You?",
@@ -56,7 +56,7 @@ export default function BlogPage() {
       category: "Mortgage Tips",
       slug: "/blog/fixed-vs-variable-which-is-right-for-you",
       featured: false,
-      image: "/images/fixed-vs-variable-rates.png",
+      image: "fixed-vs-variable-rates.png",
     },
     {
       title: "How to Improve Your Credit Score for Better Mortgage Rates",
@@ -66,7 +66,7 @@ export default function BlogPage() {
       category: "Credit Tips",
       slug: "/blog/improve-credit-score-for-better-mortgage-rates",
       featured: false,
-      image: "/images/credit-score-improvement.png",
+      image: "credit-score-improvement.png",
     },
     {
       title: "Understanding Mortgage Stress Tests in 2024",
@@ -76,7 +76,7 @@ export default function BlogPage() {
       category: "Regulations",
       slug: "/blog/understanding-mortgage-stress-tests-2024",
       featured: false,
-      image: "/images/stress-test-calculator.png",
+      image: "stress-test-calculator.png",
     },
   ]
 
