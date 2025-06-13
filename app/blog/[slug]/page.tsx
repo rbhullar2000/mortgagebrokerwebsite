@@ -257,7 +257,7 @@ function getPostData() {
       date: "June 5, 2024",
       author: "Rob Bhullar",
       category: "Interest Rates",
-      image: "/images/bank-of-canada-building.png",
+      image: "bank-of-canada-building.png",
     },
 
     "first-time-home-buyer-incentive-changes": {
@@ -340,7 +340,7 @@ function getPostData() {
       date: "May 22, 2024",
       author: "Rob Bhullar",
       category: "Government Programs",
-      image: "/images/first-time-homebuyer-family.png",
+      image: "first-time-homebuyer-family.png",
     },
 
     "vancouver-housing-market-update": {
@@ -589,7 +589,7 @@ function getPostData() {
       date: "May 15, 2024",
       author: "Rob Bhullar",
       category: "Market Updates",
-      image: "/images/vancouver-skyline-housing.png",
+      image: "vancouver-skyline-housing.png",
     },
 
     "improve-credit-score-for-better-mortgage-rates": {
@@ -849,7 +849,7 @@ function getPostData() {
       date: "April 30, 2024",
       author: "Rob Bhullar",
       category: "Credit Tips",
-      image: "/images/credit-score-improvement.png",
+      image: "credit-score-improvement.png",
     },
 
     "understanding-mortgage-stress-tests-2024": {
@@ -1138,7 +1138,7 @@ function getPostData() {
       date: "April 22, 2024",
       author: "Rob Bhullar",
       category: "Regulations",
-      image: "/images/stress-test-calculator.png",
+      image: "stress-test-calculator.png",
     },
 
     "fixed-vs-variable-which-is-right-for-you": {
@@ -1174,7 +1174,7 @@ function getPostData() {
       date: "May 8, 2024",
       author: "Rob Bhullar",
       category: "Mortgage Tips",
-      image: "/images/fixed-vs-variable-rates.png",
+      image: "fixed-vs-variable-rates.png",
     },
   }
 }
