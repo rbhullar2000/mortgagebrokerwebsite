@@ -383,7 +383,7 @@ export default function HomePage() {
               date="June 5, 2024"
               category="Interest Rates"
               slug="/blog/bank-of-canada-holds-key-interest-rate"
-              image="/images/bank-of-canada-building.png"
+              image="bank-of-canada-building.png"
             />
             <NewsCard
               title="First-Time Home Buyer Incentive Changes"
@@ -391,7 +391,7 @@ export default function HomePage() {
               date="May 22, 2024"
               category="Government Programs"
               slug="/blog/first-time-home-buyer-incentive-changes"
-              image="/images/first-time-homebuyer-family.png"
+              image="first-time-homebuyer-family.png"
             />
             <NewsCard
               title="Vancouver Housing Market Update"
@@ -399,7 +399,7 @@ export default function HomePage() {
               date="May 15, 2024"
               category="Market Updates"
               slug="/blog/vancouver-housing-market-update"
-              image="/images/vancouver-skyline-housing.png"
+              image="vancouver-skyline-housing.png"
             />
           </div>
           <div className="text-center mt-12">
