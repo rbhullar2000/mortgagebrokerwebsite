@@ -139,7 +139,7 @@ export default function BlogPage() {
               </div>
               <div>
                 <img
-                  src="/images/bank-of-canada-building.png"
+                  src="bank-of-canada-building.png"
                   alt="Bank of Canada"
                   className="rounded-lg shadow-lg w-full"
                 />
