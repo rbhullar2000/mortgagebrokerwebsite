@@ -294,7 +294,7 @@ export default function HomePage() {
 
           <div className="mb-12">
             <img
-              src="/images/lenders.png"
+              src="lenders.png"
               alt="Major lending partners including Scotiabank, TD Bank, First National, Home Trust, and RMG Mortgages"
               className="w-full max-w-4xl mx-auto"
             />
