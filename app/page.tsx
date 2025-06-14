@@ -223,15 +223,13 @@ export default function HomePage() {
                 Your Dedicated Mortgage Professional
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With over 8 years of experience in the mortgage industry, I've helped hundreds of families achieve their
-                homeownership dreams. As an independent broker, I work for YOU, not the bank.
+                With over 15 years of experience in the financial industry, I bring a deep understanding of lending, credit, and personal finance. As an independent mortgage broker, I use that expertise to find smart, tailored solutions that serve your best interests—not the bank’s.
               </p>
               <div className="space-y-4 mb-8">
                 {[
                   "Licensed Mortgage Broker in British Columbia",
                   "Access to 50+ lenders including major banks and credit unions",
                   "Specializing in complex deals and alternative solutions",
-                  "Fluent in English, Punjabi, and Hindi",
                   "Member of Mortgage Professionals Canada",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center">
@@ -242,9 +240,9 @@ export default function HomePage() {
               </div>
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#032133]">500+</div>
-                  <div className="text-sm text-gray-600">Happy Clients</div>
-                </div>
+                  <div className="text-3xl font-bold text-[#032133]">15+ years</div>
+                  <div className="text-sm text-gray-600">Financial Industry</div>
+                </div> {/*
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#032133]">$200M+</div>
                   <div className="text-sm text-gray-600">Mortgages Funded</div>
@@ -252,8 +250,8 @@ export default function HomePage() {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#032133]">4.9★</div>
                   <div className="text-sm text-gray-600">Client Rating</div>
-                </div>
-              </div>
+                </div> */}
+              </div> 
               <div className="flex items-center space-x-4 mb-8">
                 <span className="text-gray-600">Follow me for market updates:</span>
                 <Link
