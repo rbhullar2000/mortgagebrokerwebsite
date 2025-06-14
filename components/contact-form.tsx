@@ -295,13 +295,13 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
                   Send Message
                 </>
               )}
-            </Button>
+            </Button> {/*
             <Button type="button" variant="outline" className="flex-1" asChild>
               <a href="tel:+16041234567">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </a>
-            </Button>
+            </Button> */}
           </div>
         </form>
       </CardContent>
