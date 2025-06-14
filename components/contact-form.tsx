@@ -71,7 +71,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
       console.error("Error submitting form:", error)
       setSubmitStatus({
         success: false,
-        message: "There was an error sending your message. Please try again or call me directly at (604) 123-4567.",
+        message: "There was an error sending your message. Please try again or call me directly at (778) 889-7964.",
       })
     } finally {
       setIsSubmitting(false)
@@ -178,7 +178,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
           <Send className="w-5 h-5 mr-2 text-[#032133]" />
           Send Me a Message
         </CardTitle>
-        <CardDescription>Fill out the form below and I'll get back to you within 2 hours.</CardDescription>
+        <CardDescription>Fill out the form below and I’ll be in touch shortly.</CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
