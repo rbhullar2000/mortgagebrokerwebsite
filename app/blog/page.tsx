@@ -44,7 +44,7 @@ export default function BlogPage() {
         "Vancouver's housing market shows signs of stabilizing after months of price increases. Sales volume has decreased while inventory has slightly increased.",
       date: "May 15, 2025",
       category: "Market Updates",
-      slug: "/blog/vancouver-housing-market-update",
+      slug: "/blog/vancouver-housing-skyline-housing",
       featured: false,
       image: "vancouver-skyline-housing.png",
     },
