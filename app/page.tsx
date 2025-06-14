@@ -378,25 +378,25 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <NewsCard
-              title="Bank of Canada Holds Key Interest Rate"
-              excerpt="The Bank of Canada maintained its target for the overnight rate at 5%, with the Bank Rate at 5.25%."
-              date="June 5, 2024"
+              title="Bank of Canada Cuts Key Interest Rate to 2.75%"
+              excerpt="The Bank of Canada reduced its target for the overnight rate to 2.75%, providing significant relief for mortgage holders and homebuyers."
+              date="June 13, 2025"
               category="Interest Rates"
               slug="/blog/bank-of-canada-holds-key-interest-rate"
               image="bank-of-canada-building.png"
             />
             <NewsCard
-              title="First-Time Home Buyer Incentive Changes"
-              excerpt="The federal government announced changes to the First-Time Home Buyer Incentive program."
-              date="May 22, 2024"
+              title="First-Time Home Buyer Programs Enhanced for 2025"
+              excerpt="The federal and provincial governments have expanded first-time homebuyer programs with increased assistance and new opportunities."
+              date="March 15, 2025"
               category="Government Programs"
               slug="/blog/first-time-home-buyer-incentive-changes"
               image="first-time-homebuyer-family.png"
             />
             <NewsCard
-              title="Vancouver Housing Market Update"
-              excerpt="Vancouver's housing market shows signs of stabilizing after months of price increases."
-              date="May 15, 2024"
+              title="Vancouver Housing Market Recovery Underway"
+              excerpt="Vancouver's housing market shows strong signs of recovery as interest rate cuts boost buyer confidence and sales activity."
+              date="June 10, 2025"
               category="Market Updates"
               slug="/blog/vancouver-housing-market-update"
               image="vancouver-skyline-housing.png"
