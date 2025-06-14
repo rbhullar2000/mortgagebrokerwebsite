@@ -55,12 +55,12 @@ export function Header() {
             </Link>
           </nav>
           <div className="flex items-center space-x-3">
-            <Button asChild variant="outline" size="sm" className="h-10">
+            {/*  <Button asChild variant="outline" size="sm" className="h-10">
               <Link href="tel:+1234567890" onClick={() => window.trackPhoneClick?.()}>
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </Link>
-            </Button>
+            </Button> */}
             <Button
               asChild
               size="sm"
