@@ -913,7 +913,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <div className="text-gray-600 mb-4">
         Published on {post.date} by {post.author} in {post.category}
       </div>
-      <img src={`/images/${post.image}`} alt={post.title} className="rounded-lg shadow-md mb-8" />
+      <img src={`${post.image}`} alt={post.title} className="rounded-lg shadow-md mb-8" />
       <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
     </div>
   )
