@@ -445,7 +445,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+1 (604) 123-4567</p>
+                    <p className="text-gray-600">+1 (778) 889-7964</p>
                     <p className="text-sm text-gray-500">Available 7 days a week</p>
                   </div>
                 </div>
@@ -455,8 +455,8 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">rob@robbhullar.com</p>
-                    <p className="text-sm text-gray-500">Response within 2 hours</p>
+                    <p className="text-gray-600">mrtg@robbhullar.com</p>
+                    <p className="text-sm text-gray-500">Thanks for reaching out — I’ll respond as soon as possible.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
