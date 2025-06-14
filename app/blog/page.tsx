@@ -22,7 +22,7 @@ export default function BlogPage() {
       title: "Bank of Canada Holds Key Interest Rate",
       excerpt:
         "The Bank of Canada maintained its target for the overnight rate at 5%, with the Bank Rate at 5.25%. The Bank is continuing its policy of quantitative tightening.",
-      date: "June 5, 2024",
+      date: "June 5, 2025",
       category: "Interest Rates",
       slug: "/blog/bank-of-canada-holds-key-interest-rate",
       featured: true,
@@ -32,7 +32,7 @@ export default function BlogPage() {
       title: "First-Time Home Buyer Incentive Changes",
       excerpt:
         "The federal government announced changes to the First-Time Home Buyer Incentive program, increasing the eligible home price threshold in high-cost markets.",
-      date: "May 22, 2024",
+      date: "May 22, 2025",
       category: "Government Programs",
       slug: "/blog/first-time-home-buyer-incentive-changes",
       featured: false,
@@ -42,7 +42,7 @@ export default function BlogPage() {
       title: "Vancouver Housing Market Update",
       excerpt:
         "Vancouver's housing market shows signs of stabilizing after months of price increases. Sales volume has decreased while inventory has slightly increased.",
-      date: "May 15, 2024",
+      date: "May 15, 2025",
       category: "Market Updates",
       slug: "/blog/vancouver-housing-market-update",
       featured: false,
@@ -52,7 +52,7 @@ export default function BlogPage() {
       title: "Fixed vs. Variable: Which is Right for You?",
       excerpt:
         "With interest rates stabilizing, many homebuyers are wondering whether to choose a fixed or variable rate mortgage. Here's what you need to consider.",
-      date: "May 8, 2024",
+      date: "May 8, 2025",
       category: "Mortgage Tips",
       slug: "/blog/fixed-vs-variable-which-is-right-for-you",
       featured: false,
@@ -62,7 +62,7 @@ export default function BlogPage() {
       title: "How to Improve Your Credit Score for Better Mortgage Rates",
       excerpt:
         "Your credit score has a significant impact on the mortgage rates you qualify for. Learn practical steps to improve your score before applying.",
-      date: "April 30, 2024",
+      date: "April 30, 2025",
       category: "Credit Tips",
       slug: "/blog/improve-credit-score-for-better-mortgage-rates",
       featured: false,
@@ -72,7 +72,7 @@ export default function BlogPage() {
       title: "Understanding Mortgage Stress Tests in 2024",
       excerpt:
         "Mortgage stress tests continue to impact homebuyers across Canada. Learn how the current rules work and how to prepare for them.",
-      date: "April 22, 2024",
+      date: "April 22, 2025",
       category: "Regulations",
       slug: "/blog/understanding-mortgage-stress-tests-2024",
       featured: false,
@@ -131,18 +131,14 @@ export default function BlogPage() {
                   implications for mortgage holders and prospective homebuyers.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">June 5, 2024</span>
+                  <span className="text-sm text-gray-500">June 5, 2025</span>
                   <Button asChild className="bg-[#032133] hover:bg-[#032133]/90">
                     <Link href="/blog/bank-of-canada-holds-key-interest-rate">Read Full Article</Link>
                   </Button>
                 </div>
               </div>
               <div>
-                <img
-                  src="bank-of-canada-building.png"
-                  alt="Bank of Canada"
-                  className="rounded-lg shadow-lg w-full"
-                />
+                <img src="bank-of-canada-building.png" alt="Bank of Canada" className="rounded-lg shadow-lg w-full" />
               </div>
             </div>
           </div>
