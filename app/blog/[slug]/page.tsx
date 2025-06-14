@@ -1195,7 +1195,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           {/* Featured Image */}
           <div className="mb-8">
             <img
-              src={post.image || "/placeholder.svg"}
+              src={post.image || "/bank-of-canada-building.png"}
               alt={post.title}
               className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
             />
