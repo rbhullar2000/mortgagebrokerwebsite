@@ -905,7 +905,20 @@ function getPostData() {
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const posts = getPostData()
-  const post = posts[params.slug] || posts["bank-of-canada-cuts-rates-again"]
+  const post = posts[params.slug]
+
+  // If no post found, show a 404 or redirect to blog index
+  if (!post) {
+    return (
+      <div className="container mx-auto py-12 text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Post Not Found</h1>
+        <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+        <a href="/blog" className="text-blue-600 hover:text-blue-800 underline">
+          Return to Blog
+        </a>
+      </div>
+    )
+  }
 
   return (
     <div className="container mx-auto py-12">
