@@ -898,7 +898,7 @@ function getPostData() {
       date: "June 10, 2025",
       author: "Rob Bhullar",
       category: "Market Updates",
-      image: "vancouver-houses-downtown.png",
+      image: "vancouver-skyline-housing.png",
     },
   }
 }
