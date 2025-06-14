@@ -58,14 +58,14 @@ export function Footer() {
               <li>Surrey</li>
               <li>Burnaby</li>
               <li>Richmond</li>
-              <li>Coquitlam</li>
+              <li>Plus other BC regions</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>+1 (604) 123-4567</p>
-              <p>rob@robbhullar.com</p>
+              <p>+1 (778) 889-7964</p>
+              <p>mrtg@robbhullar.com</p>
               <p>Licensed in British Columbia</p>
             </div>
             <div className="mt-6">
@@ -80,7 +80,7 @@ export function Footer() {
                   <Twitter className="w-4 h-4" />
                   <span className="sr-only">Follow on X (Twitter)</span>
                 </Link>
-                <Link
+                {/*  <Link
                   href="https://linkedin.com/in/robbhullar"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -88,13 +88,13 @@ export function Footer() {
                 >
                   <Linkedin className="w-4 h-4" />
                   <span className="sr-only">Connect on LinkedIn</span>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2024 Rob Bhullar Mortgage Services. All rights reserved. | Licensed Mortgage Broker</p>
+          <p>&copy; 2025 Rob Bhullar Mortgage Services. All rights reserved. | Licensed Mortgage Broker</p>
         </div>
       </div>
     </footer>
