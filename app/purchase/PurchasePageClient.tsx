@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { MortgageCalculator } from "@/components/mortgage-calculator"
 
 export default function PurchasePageClient() {
   return (
@@ -149,6 +150,20 @@ export default function PurchasePageClient() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Calculator Section */}
+      <section id="calculator" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Calculate Your Monthly Payments</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Use our mortgage calculator to estimate your monthly payments and see how different factors affect your
+              mortgage.
+            </p>
+          </div>
+          <MortgageCalculator />
         </div>
       </section>
 
