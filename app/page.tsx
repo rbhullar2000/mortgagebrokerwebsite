@@ -424,9 +424,9 @@ export default function HomePage() {
                   Start Application
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              {/* <Button size="lg" variant="outline" asChild>
                 <Link href="#contact">Free Consultation</Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
           <div className="grid lg:grid-cols-2 gap-16">
