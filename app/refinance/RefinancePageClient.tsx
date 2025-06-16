@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { MortgageCalculator } from "@/components/mortgage-calculator"
 
 export default function RefinancePageClient() {
   return (
@@ -216,6 +217,19 @@ export default function RefinancePageClient() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Calculator Section */}
+      <section id="calculator" className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Calculate Your Refinancing Benefits</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Use our calculator to see how much you could save or access through refinancing.
+            </p>
+          </div>
+          <MortgageCalculator />
         </div>
       </section>
 
