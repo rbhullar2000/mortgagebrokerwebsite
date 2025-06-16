@@ -8,6 +8,7 @@ import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { ROICalculator } from "@/components/roi-calculator"
 
 export default function InvestmentPageClient() {
   return (
@@ -201,6 +202,13 @@ export default function InvestmentPageClient() {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* ROI Calculator Section */}
+      <section id="calculator" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <ROICalculator />
         </div>
       </section>
 
