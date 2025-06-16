@@ -42,10 +42,10 @@ export default function QuickClosingsPageClient() {
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild onClick={() => window.trackPhoneClick?.()}>
-                  <Link href="tel:+16041234567">
+                  {/*  <Link href="tel:+16041234567">
                     <Phone className="w-5 h-5 mr-2" />
                     Call Now
-                  </Link>
+                  </Link> */}
                 </Button>
               </div>
               <div className="grid grid-cols-3 gap-6 text-center">
@@ -278,7 +278,7 @@ export default function QuickClosingsPageClient() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild onClick={() => window.trackPhoneClick?.()}>
-              <Link href="tel:+16041234567">
+              <Link href="tel:+17788897964">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </Link>
