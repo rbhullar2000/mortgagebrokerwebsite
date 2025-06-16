@@ -10,7 +10,11 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-6">
+              <div>
+                <h1 className="text-xl font-bold text-gray-900">Rob Bhullar</h1>
+                <p className="text-sm text-gray-600">Mortgage Broker</p>
+              </div>
               <div className="w-12 h-10 flex items-center justify-center">
                 <Image
                   src="/BRX_brand_black.png"
@@ -19,10 +23,6 @@ export function Header() {
                   height={32}
                   className="object-contain"
                 />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Rob Bhullar</h1>
-                <p className="text-sm text-gray-600">Mortgage Broker</p>
               </div>
             </Link>
           </div>
