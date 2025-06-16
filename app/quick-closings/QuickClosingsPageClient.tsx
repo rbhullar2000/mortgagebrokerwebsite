@@ -229,9 +229,9 @@ export default function QuickClosingsPageClient() {
           </div>
         </div>
       </section>
-
+     
       {/* Emergency Contact Section */}
-      <section className="py-20 bg-orange-50">
+  {/*     <section className="py-20 bg-orange-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -260,7 +260,7 @@ export default function QuickClosingsPageClient() {
           </div>
         </div>
       </section>
-
+*/}
       {/* CTA Section */}
       <section className="py-20 bg-[#032133] text-white">
         <div className="container mx-auto px-4 text-center">
