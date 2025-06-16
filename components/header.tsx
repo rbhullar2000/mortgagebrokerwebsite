@@ -1,8 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Phone } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Header() {
   return (
@@ -11,28 +11,20 @@ export function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-[#032133] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">RB</span>
+              <div className="w-12 h-10 flex items-center justify-center">
+                <Image
+                  src="/BRX_brand_black.png"
+                  alt="BRX Mortgage"
+                  width={48}
+                  height={32}
+                  className="object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Rob Bhullar</h1>
                 <p className="text-sm text-gray-600">Mortgage Broker</p>
               </div>
             </Link>
-            <div className="h-8 border-l border-gray-300 mx-2 hidden md:block"></div>
-            <div className="hidden md:block">
-              {/* Replace with actual BRX logo when available */}
-              <div className="text-sm text-gray-500">Powered by</div>
-              <div className="text-[#032133] font-semibold">BRX Mortgage</div>
-              {/* Uncomment when you have the logo
-              <Image 
-                src="/images/brx-logo.png" 
-                alt="BRX Mortgage" 
-                width={100} 
-                height={30} 
-              />
-              */}
-            </div>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="/#services" className="text-gray-700 hover:text-[#032133] transition-colors">
