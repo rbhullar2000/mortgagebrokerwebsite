@@ -278,10 +278,10 @@ export default function QuickClosingsPageClient() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild onClick={() => window.trackPhoneClick?.()}>
-              <Link href="tel:+17788897964">
+              {/* <Link href="tel:+17788897964">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
-              </Link>
+              </Link> */}
             </Button>
           </div>
         </div>
