@@ -165,7 +165,7 @@ export default function HomePage() {
       </section>
 
       {/* Rate Comparison Tool Section */}
-      <section id="rates" className="py-20 bg-slate-50">
+      {/*  <section id="rates" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Today's Best Mortgage Rates</h2>
@@ -182,7 +182,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mortgage Calculator Section */}
       <section id="calculator" className="py-20 bg-white">
