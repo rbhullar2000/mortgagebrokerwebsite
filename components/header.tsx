@@ -39,9 +39,9 @@ export function Header() {
             <Link href="/blog" className="text-gray-700 hover:text-[#032133] transition-colors">
               Blog
             </Link>
-            <Link href="/#rates" className="text-gray-700 hover:text-[#032133] transition-colors">
+            {/* <Link href="/#rates" className="text-gray-700 hover:text-[#032133] transition-colors">
               Rates
-            </Link>
+            </Link> */}
             <Link href="/#contact" className="text-gray-700 hover:text-[#032133] transition-colors">
               Contact
             </Link>
