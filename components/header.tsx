@@ -10,17 +10,17 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <Link href="/" className="flex items-center space-x-6">
+            <Link href="/" className="flex items-center space-x-10">
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Rob Bhullar</h1>
                 <p className="text-sm text-gray-600">Mortgage Broker</p>
               </div>
-              <div className="w-20 h-16 flex items-center justify-center">
+              <div className="w-28 h-20 flex items-center justify-center">
                 <Image
                   src="/BRX_brand_black.png"
                   alt="BRX Mortgage"
-                  width={80}
-                  height={64}
+                  width={112}
+                  height={80}
                   className="object-contain"
                 />
               </div>
