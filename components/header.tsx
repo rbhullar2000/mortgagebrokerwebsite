@@ -15,12 +15,12 @@ export function Header() {
                 <h1 className="text-xl font-bold text-gray-900">Rob Bhullar</h1>
                 <p className="text-sm text-gray-600">Mortgage Broker</p>
               </div>
-              <div className="w-28 h-20 flex items-center justify-center">
+              <div className="w-24 h-18 flex items-center justify-center">
                 <Image
                   src="/BRX_brand_black.png"
                   alt="BRX Mortgage"
-                  width={112}
-                  height={80}
+                  width={96}
+                  height={72}
                   className="object-contain"
                 />
               </div>
