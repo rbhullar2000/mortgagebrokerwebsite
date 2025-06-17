@@ -283,10 +283,10 @@ export default function SelfEmployedPageClient() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild onClick={() => window.trackPhoneClick?.()}>
-              <Link href="tel:+16041234567">
+              {/*   <Link href="tel:+16041234567">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
-              </Link>
+              </Link> */}
             </Button>
           </div>
         </div>
