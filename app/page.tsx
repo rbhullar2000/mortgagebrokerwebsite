@@ -411,77 +411,76 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Contact me today for a free consultation, or start your secure online application right away.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-                <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                  Start Application
-                </Link>
-              </Button>
-              {/* <Button size="lg" variant="outline" asChild>
-                <Link href="#contact">Free Consultation</Link>
-              </Button> */}
+<section id="contact" className="py-20 bg-slate-50">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+        Contact me today for a free consultation, or start your secure online application right away.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+        <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+          <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+            Start Application
+          </Link>
+        </Button>
+        {/* Optional consultation button */}
+        {/* <Button size="lg" variant="outline" asChild>
+          <Link href="#contact">Free Consultation</Link>
+        </Button> */}
+      </div>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-16">
+      {/* Left: Contact Form */}
+      <div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-8">Get Your Free Consultation</h3>
+        <ContactForm />
+      </div>
+
+      {/* Right: Contact Info + Highlights */}
+      <div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
+        <div className="space-y-6">
+          {/* Email */}
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
+              <Mail className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900">Email</h4>
+              <p className="text-gray-600">contact@bcmortgageteam.com</p>
+              <p className="text-sm text-gray-500">Thanks for reaching out — we’ll be in touch shortly.</p>
             </div>
           </div>
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">Get Your Free Consultation</h3>
-              <ContactForm />
+
+          {/* Location */}
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
+              <MapPin className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
-              {/*   <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                    <div>
-                    <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+1 (778) 889-7964</p>
-                    <p className="text-sm text-gray-500">Available 7 days a week</p>
-                  </div> 
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <div>  */}
-                    <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">contact@bcmortgageteam.com</p>
-                    <p className="text-sm text-gray-500">Thanks for reaching out — we’ll be in touch shortly.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Service Area</h4>
-                    <p className="text-gray-600">Greater Vancouver Area</p>
-                    <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8 p-6 bg-[#032133]/5 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Why Choose Me?</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• No cost for my services - lenders pay me</li>
-                  <li>• Access to rates banks don't advertise</li>
-                  <li>• Pre-approvals in 24-48 hours</li>
-                  <li>• Support throughout the entire process</li>
-                </ul>
-              </div>
+              <h4 className="font-semibold text-gray-900">Service Area</h4>
+              <p className="text-gray-600">Greater Vancouver Area</p>
+              <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
             </div>
           </div>
         </div>
-      </section>
 
+        {/* Highlights Box */}
+        <div className="mt-8 p-6 bg-[#032133]/5 rounded-lg">
+          <h4 className="font-semibold text-gray-900 mb-2">Why Choose Me?</h4>
+          <ul className="space-y-2 text-sm text-gray-600">
+            <li>• No cost for my services – lenders pay me</li>
+            <li>• Access to rates banks don't advertise</li>
+            <li>• Pre-approvals in 24–48 hours</li>
+            <li>• Support throughout the entire process</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       <Footer />
     </div>
   )
