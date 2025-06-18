@@ -8,12 +8,12 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-[#032133] rounded-lg flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-[#032133] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">RB</span>
-              </div>
+              </div> */}
               <div>
-                <h3 className="text-lg font-bold">Rob Bhullar</h3>
-                <p className="text-sm text-gray-400">Mortgage Broker</p>
+                <h3 className="text-lg font-bold">BC Mortgage Team</h3>
+                <p className="text-sm text-gray-400">Mortgage Brokers</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm">
