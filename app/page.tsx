@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+ƒimport { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -218,7 +218,7 @@ export default function HomePage() {
 />
             </div>
             <div>
-              <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">About Rob Bhullar</Badge>
+              <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">About Rob S. Bhullar, BSc</Badge>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Lead Mortgage Expert 
               </h2>
