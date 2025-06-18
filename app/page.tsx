@@ -223,7 +223,7 @@ export default function HomePage() {
                 Lead Mortgage Expert 
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With over 15 years in the financial industry, I specialize in helping BC homeowners, first-time buyers, and real estate investors secure the right mortgage — with better rates, fewer roadblocks, and expert guidance at every step.
+                With over 20 years in the financial industry, I specialize in helping BC homeowners, first-time buyers, and real estate investors secure the right mortgage — with better rates, fewer roadblocks, and expert guidance at every step.
               </p>
               <div className="space-y-4 mb-8">
                 {[
@@ -240,7 +240,7 @@ export default function HomePage() {
               </div>
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#032133]">15+ years</div>
+                  <div className="text-3xl font-bold text-[#032133]">20+ years</div>
                   <div className="text-sm text-gray-600">Financial Industry</div>
                 </div> {/*
                 <div className="text-center">
@@ -285,7 +285,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Trusted Lending Partners</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              I work with 50+ lenders including major banks, credit unions, and alternative lenders to find you the best
+              We work with 50+ lenders including major banks, credit unions, and alternative lenders to find you the best
               rates and terms.
             </p>
           </div>
