@@ -206,12 +206,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Section */}
-<section id="about" className="py-20 bg-white">
+     <section id="about" className="py-20 bg-white">
   <div className="container mx-auto px-4">
     <div className="grid lg:grid-cols-2 gap-16 items-center">
-      
-      {/* Image */}
       <div>
         <img
           src="/headshot.png?height=600&width=500"
@@ -219,8 +216,6 @@ export default function HomePage() {
           className="rounded-2xl shadow-2xl w-96 mx-auto"
         />
       </div>
-
-      {/* Text Section */}
       <div>
         <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">
           About Rob S. Bhullar, BSc
@@ -229,17 +224,14 @@ export default function HomePage() {
           Lead Mortgage Expert
         </h2>
         <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-          With over 20 years in the financial industry, I specialize in helping BC homeowners, first-time buyers, and real estate investors secure the right mortgage — with better rates, fewer roadblocks, and expert guidance at every step.
+          With over 20 years in the financial industry, I combine analytics, lending expertise, and a client-first approach to guide BC homeowners, investors, and first-time buyers through complex mortgage decisions. My focus is on clarity, speed, and securing the right solution—without the stress.
         </p>
-        
-        {/* Bullet Points */}
         <div className="space-y-4 mb-8">
           {[
             "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
-            "Access to 50+ lenders including major banks and credit unions",
-            "Expert in complex deals and alternative solutions",
+            "Access to 50+ lenders including major banks, credit unions, and alternative lenders",
+            "Expert in complex approvals, debt consolidation, and investor financing",
             "BSc in Mathematics and Business Administration from Simon Fraser University",
-            // "Member of Mortgage Professionals Canada", // optional line
           ].map((item, index) => (
             <div key={index} className="flex items-center">
               <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
@@ -248,25 +240,13 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Stats (optional) */}
         <div className="grid grid-cols-3 gap-6 mb-8">
           <div className="text-center">
             <div className="text-3xl font-bold text-[#032133]">20+ years</div>
-            <div className="text-sm text-gray-600">Financial Industry</div>
+            <div className="text-sm text-gray-600">Financial Experience</div>
           </div>
-          {/* 
-          <div className="text-center">
-            <div className="text-3xl font-bold text-[#032133]">$200M+</div>
-            <div className="text-sm text-gray-600">Mortgages Funded</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-[#032133]">4.9★</div>
-            <div className="text-sm text-gray-600">Client Rating</div>
-          </div> 
-          */}
         </div>
 
-        {/* Social */}
         <div className="flex items-center space-x-4 mb-8">
           <span className="text-gray-600">Follow me for market updates:</span>
           <Link
@@ -280,19 +260,21 @@ export default function HomePage() {
           </Link>
         </div>
 
-        {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
           <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
             <Link href="#contact">Contact Rob</Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
-            <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://r.mtg-app.com/robbhullar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Apply Online
             </Link>
           </Button>
         </div>
       </div>
-
     </div>
   </div>
 </section>
