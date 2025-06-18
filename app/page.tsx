@@ -39,7 +39,7 @@ export default function HomePage() {
                 Your Trusted Mortgage Team in <span className="text-[#032133]">British Columbia</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Get the best mortgage rates and personalized service. we work with 50+ lenders to find you the perfect
+                Get the best mortgage rates and personalized service. We work with 50+ lenders to find you the perfect
                 mortgage solution for your home purchase, renewal, or refinance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
