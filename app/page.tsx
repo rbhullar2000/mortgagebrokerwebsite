@@ -33,7 +33,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">
-                Licensed Mortgage Professionals
+                Licensed in British Columbia
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Your Trusted Mortgage Team in <span className="text-[#032133]">British Columbia</span>
