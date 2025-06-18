@@ -227,7 +227,7 @@ export default function HomePage() {
               </p>
               <div className="space-y-4 mb-8">
                 {[
-  "Licensed Mortgage Broker in British Columbia",
+  "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
   "Access to 50+ lenders including major banks and credit unions",
   "Expert in complex deals and alternative solutions",
   // "Member of Mortgage Professionals Canada", // safe comment now
