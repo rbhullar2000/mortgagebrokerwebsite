@@ -218,27 +218,28 @@ export default function HomePage() {
 />
             </div>
             <div>
-              <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">About Rob S. Bhullar, BSc</Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Lead Mortgage Expert 
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With over 20 years in the financial industry, I specialize in helping BC homeowners, first-time buyers, and real estate investors secure the right mortgage — with better rates, fewer roadblocks, and expert guidance at every step.
-              </p>
-              <div className="space-y-4 mb-8">
-                {[
-  "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
-  "Access to 50+ lenders including major banks and credit unions",
-  "Expert in complex deals and alternative solutions",
-  "BSc in Mathematics and Business Administration from Simon Fraser University,
-  // "Member of Mortgage Professionals Canada", // safe comment now
-].map((item, index) => (
-                  <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
-                    <span className="text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
+  <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">About Rob S. Bhullar, BSc</Badge>
+  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+    Lead Mortgage Expert
+  </h2>
+  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+    With over 20 years in the financial industry, I specialize in helping BC homeowners, first-time buyers, and real estate investors secure the right mortgage — with better rates, fewer roadblocks, and expert guidance at every step.
+  </p>
+  <div className="space-y-4 mb-8">
+    {[
+      "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
+      "Access to 50+ lenders including major banks and credit unions",
+      "Expert in complex deals and alternative solutions",
+      "BSc in Mathematics and Business Administration from Simon Fraser University",
+      // "Member of Mortgage Professionals Canada", // optional comment
+    ].map((item, index) => (
+      <div key={index} className="flex items-center">
+        <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
+        <span className="text-gray-700">{item}</span>
+      </div>
+    ))}
+  </div>
+</div>
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#032133]">20+ years</div>
