@@ -220,16 +220,16 @@ export default function HomePage() {
             <div>
               <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">About Rob Bhullar</Badge>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Your Dedicated Mortgage Professional
+                Lead Mortgage Expert 
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With over 15 years of experience in the financial industry, I bring a deep understanding of lending, credit, and personal finance. As an independent mortgage broker, I use that expertise to find smart, tailored solutions that serve your best interests—not the bank’s.
+                With over 15 years in the financial industry, I specialize in helping BC homeowners, first-time buyers, and real estate investors secure the right mortgage — with better rates, fewer roadblocks, and expert guidance at every step.
               </p>
               <div className="space-y-4 mb-8">
                 {[
   "Licensed Mortgage Broker in British Columbia",
   "Access to 50+ lenders including major banks and credit unions",
-  "Specializing in complex deals and alternative solutions",
+  "Expert in complex deals and alternative solutions",
   // "Member of Mortgage Professionals Canada", // safe comment now
 ].map((item, index) => (
                   <div key={index} className="flex items-center">
