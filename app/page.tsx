@@ -230,7 +230,7 @@ export default function HomePage() {
                   "Licensed Mortgage Broker in British Columbia",
                   "Access to 50+ lenders including major banks and credit unions",
                   "Specializing in complex deals and alternative solutions",
-                  "Member of Mortgage Professionals Canada",
+      {/*     "Member of Mortgage Professionals Canada",  */}
                 ].map((item, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
