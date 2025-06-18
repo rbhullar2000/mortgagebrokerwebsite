@@ -50,7 +50,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
       if (result.success) {
         setSubmitStatus({
           success: true,
-          message: result.message || "Thanks for reaching out — I’ll be in touch shortly.",
+          message: result.message || "Thanks for reaching out — we’ll be in touch shortly.",
         })
         setFormData({
           name: "",
