@@ -33,13 +33,13 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">
-                Licensed Mortgage Professional
+                Licensed Mortgage Professionals
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Your Trusted Mortgage Broker in <span className="text-[#032133]">British Columbia</span>
+                Your Trusted Mortgage Team in <span className="text-[#032133]">British Columbia</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Get the best mortgage rates and personalized service. I work with 50+ lenders to find you the perfect
+                Get the best mortgage rates and personalized service. we work with 50+ lenders to find you the perfect
                 mortgage solution for your home purchase, renewal, or refinance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -86,7 +86,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Comprehensive Mortgage Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From first-time homebuyers to seasoned investors, I provide tailored mortgage solutions for every
+              From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every
               situation.
             </p>
           </div>
