@@ -13,7 +13,7 @@ export function Header() {
             <Link href="/" className="flex items-center space-x-10">
               <div>
                 <h1 className="text-xl font-bold text-gray-900">BC Mortgage Team</h1>
-                <p className="text-sm text-gray-600">Mortgage Brokers</p>
+                <p className="text-sm text-gray-600">Smart Mortgage Solutions</p>
               </div>
               <div className="w-24 h-18 flex items-center justify-center">
                 <Image
