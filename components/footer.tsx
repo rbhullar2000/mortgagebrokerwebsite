@@ -20,6 +20,12 @@ export function Footer() {
               Licensed mortgage professional serving the Greater Vancouver Area with personalized service and
               competitive rates.
             </p>
+<div className="text-center text-xs text-gray-500 p-4">
+  Rob Bhullar is a licensed submortgage broker with BRX Mortgages.
+  This website, robbhullar.com, is an independent marketing platform and not affiliated with any third-party companies mentioned.
+</div>
+            
+        
           </div>
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
