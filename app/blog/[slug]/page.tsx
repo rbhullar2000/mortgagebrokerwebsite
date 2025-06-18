@@ -1847,7 +1847,7 @@ function getPostData() {
           </p>
         </div>
       `,
-      date: "February 18, 2025",
+      date: "March 12, 2025",
       author: "Rob Bhullar",
       category: "Mortgage Qualification",
       image: "stress-test-calculator.png",
