@@ -211,11 +211,11 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <img
-                src="/headshot.png?height=300&width=200"
-                alt="Rob Bhullar - Mortgage Broker"
-                className="rounded-2xl shadow-2xl w-full"
-              />
+             <img
+  src="/headshot.png?height=500&width=500"
+  alt="Rob Bhullar - Mortgage Broker"
+  className="rounded-2xl shadow-2xl w-32 mx-auto"
+/>
             </div>
             <div>
               <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">About Rob Bhullar</Badge>
