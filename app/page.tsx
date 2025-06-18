@@ -298,14 +298,6 @@ export default function HomePage() {
   <img src="rmg.png" alt="RMG Mortgages" className="h-40" />
 </div>
 
-          <div className="mb-12">
-            <img
-         //     src="lenders.png"
-              alt="Major lending partners including Scotiabank, TD Bank, First National, Home Trust, and RMG Mortgages"
-              className="w-full max-w-4xl mx-auto"
-            />
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
