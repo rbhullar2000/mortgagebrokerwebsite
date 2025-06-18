@@ -311,9 +311,9 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
                 <Users className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Big 6 Banks</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Big Banks</h3>
               <p className="text-gray-600">
-                Access to all major Canadian banks including RBC, TD, Scotiabank, BMO, CIBC, and National Bank.
+                Access to major Canadian banks.
               </p>
             </div>
 
