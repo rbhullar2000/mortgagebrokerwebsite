@@ -102,7 +102,7 @@ export default function HomePage() {
               {
                 icon: <TrendingUp className="w-8 h-8" />,
                 title: "Mortgage Renewals",
-                description: "Don't auto-renew! I'll find you better rates and terms when your mortgage comes due.",
+                description: "Don't auto-renew! We'll find you better rates and terms when your mortgage comes due.",
                 features: ["Rate comparison", "Term optimization", "No-cost renewals"],
                 link: "/renewal",
               },
