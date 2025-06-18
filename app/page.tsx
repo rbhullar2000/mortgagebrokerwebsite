@@ -1,4 +1,4 @@
-ƒimport { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -207,80 +207,96 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-             <img
-  src="/headshot.png?height=600&width=500"
-  alt="Rob Bhullar - Mortgage Broker"
-  className="rounded-2xl shadow-2xl w-96 mx-auto"
-/>
-            </div>
-            <div>
-  <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">About Rob S. Bhullar, BSc</Badge>
-  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-    Lead Mortgage Expert
-  </h2>
-  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-    With over 20 years in the financial industry, I specialize in helping BC homeowners, first-time buyers, and real estate investors secure the right mortgage — with better rates, fewer roadblocks, and expert guidance at every step.
-  </p>
-  <div className="space-y-4 mb-8">
-    {[
-      "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
-      "Access to 50+ lenders including major banks and credit unions",
-      "Expert in complex deals and alternative solutions",
-      "BSc in Mathematics and Business Administration from Simon Fraser University",
-      // "Member of Mortgage Professionals Canada", // optional comment
-    ].map((item, index) => (
-      <div key={index} className="flex items-center">
-        <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
-        <span className="text-gray-700">{item}</span>
+<section id="about" className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      
+      {/* Image */}
+      <div>
+        <img
+          src="/headshot.png?height=600&width=500"
+          alt="Rob Bhullar - Mortgage Broker"
+          className="rounded-2xl shadow-2xl w-96 mx-auto"
+        />
       </div>
-    ))}
-  </div>
-</div>
-              <div className="grid grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#032133]">20+ years</div>
-                  <div className="text-sm text-gray-600">Financial Industry</div>
-                </div> {/*
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#032133]">$200M+</div>
-                  <div className="text-sm text-gray-600">Mortgages Funded</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#032133]">4.9★</div>
-                  <div className="text-sm text-gray-600">Client Rating</div>
-                </div> */}
-              </div> 
-              <div className="flex items-center space-x-4 mb-8">
-                <span className="text-gray-600">Follow me for market updates:</span>
-                <Link
-                  href="https://x.com/robbhullar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[#032133] hover:underline"
-                >
-                  <Twitter className="w-5 h-5" />
-                  <span>@robbhullar</span>
-                </Link>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-                  <Link href="#contact">Contact Rob</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Apply Online
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
+      {/* Text Section */}
+      <div>
+        <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">
+          About Rob S. Bhullar, BSc
+        </Badge>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+          Lead Mortgage Expert
+        </h2>
+        <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+          With over 20 years in the financial industry, I specialize in helping BC homeowners, first-time buyers, and real estate investors secure the right mortgage — with better rates, fewer roadblocks, and expert guidance at every step.
+        </p>
+        
+        {/* Bullet Points */}
+        <div className="space-y-4 mb-8">
+          {[
+            "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
+            "Access to 50+ lenders including major banks and credit unions",
+            "Expert in complex deals and alternative solutions",
+            "BSc in Mathematics and Business Administration from Simon Fraser University",
+            // "Member of Mortgage Professionals Canada", // optional line
+          ].map((item, index) => (
+            <div key={index} className="flex items-center">
+              <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
+              <span className="text-gray-700">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Stats (optional) */}
+        <div className="grid grid-cols-3 gap-6 mb-8">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-[#032133]">20+ years</div>
+            <div className="text-sm text-gray-600">Financial Industry</div>
+          </div>
+          {/* 
+          <div className="text-center">
+            <div className="text-3xl font-bold text-[#032133]">$200M+</div>
+            <div className="text-sm text-gray-600">Mortgages Funded</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-[#032133]">4.9★</div>
+            <div className="text-sm text-gray-600">Client Rating</div>
+          </div> 
+          */}
+        </div>
+
+        {/* Social */}
+        <div className="flex items-center space-x-4 mb-8">
+          <span className="text-gray-600">Follow me for market updates:</span>
+          <Link
+            href="https://x.com/robbhullar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 text-[#032133] hover:underline"
+          >
+            <Twitter className="w-5 h-5" />
+            <span>@robbhullar</span>
+          </Link>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+            <Link href="#contact">Contact Rob</Link>
+          </Button>
+          <Button size="lg" variant="outline" asChild>
+            <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+              Apply Online
+            </Link>
+          </Button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+      
       {/* Lenders Section */}
       <section id="lenders" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
