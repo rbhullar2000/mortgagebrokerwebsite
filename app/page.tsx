@@ -214,7 +214,7 @@ export default function HomePage() {
              <img
   src="/headshot.png?height=500&width=500"
   alt="Rob Bhullar - Mortgage Broker"
-  className="rounded-2xl shadow-2xl w-32 mx-auto"
+  className="rounded-2xl shadow-2xl w-64 mx-auto"
 />
             </div>
             <div>
