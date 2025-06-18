@@ -454,7 +454,7 @@ export default function HomePage() {
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
                     <p className="text-gray-600">contact@bcmortgageteam.com</p>
-                    <p className="text-sm text-gray-500">Thanks for reaching out — I’ll be in touch shortly.</p>
+                    <p className="text-sm text-gray-500">Thanks for reaching out — we’ll be in touch shortly.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
