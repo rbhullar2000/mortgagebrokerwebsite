@@ -230,6 +230,7 @@ export default function HomePage() {
   "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
   "Access to 50+ lenders including major banks and credit unions",
   "Expert in complex deals and alternative solutions",
+  "BSc in Mathematics and Business Administration from Simon Fraser University
   // "Member of Mortgage Professionals Canada", // safe comment now
 ].map((item, index) => (
                   <div key={index} className="flex items-center">
