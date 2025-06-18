@@ -178,7 +178,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
           <Send className="w-5 h-5 mr-2 text-[#032133]" />
           Send Me a Message
         </CardTitle>
-        <CardDescription>Fill out the form below and I’ll be in touch shortly.</CardDescription>
+        <CardDescription>Fill out the form below and we’ll be in touch shortly.</CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
