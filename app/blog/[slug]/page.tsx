@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-function getPostData() {
+function getPostData() { 
   return {
     "bank-of-canada-cuts-rates-again": {
       title: "Bank of Canada Cuts Key Interest Rate to 2.75%: Historic Relief for Mortgage Holders",
