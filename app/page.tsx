@@ -378,7 +378,7 @@ export default function HomePage() {
             <NewsCard
               title="Bank of Canada Cuts Key Interest Rate to 2.75%"
               excerpt="The Bank of Canada reduced its target for the overnight rate to 2.75%, providing significant relief for mortgage holders and homebuyers."
-              date="June 13, 2025"
+              date="March 12, 2025"
               category="Interest Rates"
               slug="/blog/bank-of-canada-holds-key-interest-rate"
               image="bank-of-canada-building.png"
