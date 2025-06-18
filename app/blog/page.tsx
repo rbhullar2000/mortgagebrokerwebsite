@@ -20,14 +20,13 @@ export default function BlogPage() {
   const blogPosts = [
    {
   title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
-  excerpt:
-    "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
+  excerpt: "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
   date: "March 12, 2025",
   category: "Interest Rates",
   slug: "/blog/bank-of-canada-cuts-key-interest-rate-2025",
   featured: true,
   image: "bank-of-canada-building.png",
-}
+},
     {
       title: "First-Time Home Buyer Incentive Changes",
       excerpt:
