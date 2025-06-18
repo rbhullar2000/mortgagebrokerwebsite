@@ -227,11 +227,11 @@ export default function HomePage() {
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  "Licensed Mortgage Broker in British Columbia",
-                  "Access to 50+ lenders including major banks and credit unions",
-                  "Specializing in complex deals and alternative solutions",
-      {/*     "Member of Mortgage Professionals Canada",  */}
-                ].map((item, index) => (
+  "Licensed Mortgage Broker in British Columbia",
+  "Access to 50+ lenders including major banks and credit unions",
+  "Specializing in complex deals and alternative solutions",
+  // "Member of Mortgage Professionals Canada", // safe comment now
+].map((item, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
                     <span className="text-gray-700">{item}</span>
