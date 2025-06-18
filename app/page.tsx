@@ -436,12 +436,12 @@ export default function HomePage() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
-              <div className="space-y-6">
+             {/*  <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
                     <Phone className="w-6 h-6" />
                   </div>
-                  {/*   <div>
+                    <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
                     <p className="text-gray-600">+1 (778) 889-7964</p>
                     <p className="text-sm text-gray-500">Available 7 days a week</p>
