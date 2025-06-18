@@ -15,12 +15,12 @@ export function Footer() {
                 <h3 className="text-lg font-bold">BC Mortgage Team</h3>
                 <p className="text-sm text-gray-400">Mortgage Brokers</p>
               </div>
-            </div>
-            {/*   <p className="text-gray-400 text-sm">
+              {/*     </div>
+              <p className="text-gray-400 text-sm">
               Licensed submortgage professional with BRX Mortgages, serving the Greater Vancouver Area with personalized service and
               competitive rates.
-            </p> */}
-          </div>
+            </p> 
+          </div> */}
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-gray-400">
