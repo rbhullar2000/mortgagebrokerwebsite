@@ -10,7 +10,7 @@ export function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <div>
                 <h3 className="text-lg font-bold">BC Mortgage Team</h3>
-                <p className="text-sm text-gray-400">Mortgage Brokers</p>
+                <p className="text-sm text-gray-400">Smart Mortgage Solutions</p>
               </div>
             </div>
             {/* 
