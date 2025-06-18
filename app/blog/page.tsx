@@ -22,7 +22,7 @@ export default function BlogPage() {
       title: "Bank of Canada Holds Key Interest Rate",
       excerpt:
         "The Bank of Canada maintained its target for the overnight rate at 5%, with the Bank Rate at 5.25%. The Bank is continuing its policy of quantitative tightening.",
-      date: "June 5, 2025",
+      date: "March 12, 2025",
       category: "Interest Rates",
       slug: "/blog/bank-of-canada-holds-key-interest-rate",
       featured: true,
@@ -131,7 +131,7 @@ export default function BlogPage() {
                   implications for mortgage holders and prospective homebuyers.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">June 5, 2025</span>
+                  <span className="text-sm text-gray-500">March 12, 2025</span>
                   <Button asChild className="bg-[#032133] hover:bg-[#032133]/90">
                     <Link href="/blog/bank-of-canada-holds-key-interest-rate">Read Full Article</Link>
                   </Button>
