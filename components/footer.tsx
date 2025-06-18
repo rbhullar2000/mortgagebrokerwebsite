@@ -64,7 +64,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>+1 (778) 889-7964</p>
+              {/*    <p>+1 (778) 889-7964</p> */)
               <p>mrtg@robbhullar.com</p>
               <p>Licensed in British Columbia</p>
             </div>
@@ -94,7 +94,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2025 Rob Bhullar Mortgage Services. All rights reserved. | Licensed Mortgage Broker</p>
+          <p>&copy; 2025 BC Mortgage Team. All rights reserved. </p>
         </div>
       </div>
     </footer>
