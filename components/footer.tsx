@@ -61,13 +61,7 @@ export function Footer() {
               <li>Plus other BC regions</li>
             </ul>
           </div>
-          <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-sm text-gray-400">
-              {/*    <p>+1 (778) 889-7964</p> */)
-              <p>mrtg@robbhullar.com</p>
-              <p>Licensed in British Columbia</p>
-            </div>
+          
             <div className="mt-6">
               <h5 className="font-semibold mb-3">Follow Me</h5>
               <div className="flex space-x-3">
