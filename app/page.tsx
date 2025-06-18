@@ -212,7 +212,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <img
-                src="/headshot.png?height=600&width=500"
+                src="/headshot.png?height=300&width=200"
                 alt="Rob Bhullar - Mortgage Broker"
                 className="rounded-2xl shadow-2xl w-full"
               />
