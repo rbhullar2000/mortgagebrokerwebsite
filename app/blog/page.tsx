@@ -9,25 +9,25 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Mortgage Blog | Rob Bhullar Mortgage Broker",
+  title: "Mortgage Blog | BC Mortgage Team",
   description:
-    "Expert mortgage advice, market updates, and financial tips from Rob Bhullar, licensed mortgage broker in BC.",
+    "Expert mortgage advice, market updates, and financial tips from licensed mortgage professionals in BC.",
   keywords: "mortgage blog, mortgage tips, BC housing market, mortgage rates, first-time homebuyer tips",
 }
 
 export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
   const blogPosts = [
-    {
-      title: "Bank of Canada Holds Key Interest Rate",
-      excerpt:
-        "The Bank of Canada maintained its target for the overnight rate at 5%, with the Bank Rate at 5.25%. The Bank is continuing its policy of quantitative tightening.",
-      date: "March 12, 2025",
-      category: "Interest Rates",
-      slug: "/blog/bank-of-canada-holds-key-interest-rate",
-      featured: true,
-      image: "bank-of-canada-building.png",
-    },
+   {
+  title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
+  excerpt:
+    "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
+  date: "March 12, 2025",
+  category: "Interest Rates",
+  slug: "/blog/bank-of-canada-cuts-key-interest-rate-2025",
+  featured: true,
+  image: "bank-of-canada-building.png",
+}
     {
       title: "First-Time Home Buyer Incentive Changes",
       excerpt:
@@ -122,14 +122,13 @@ export default function BlogPage() {
                 <Badge className="mb-4">Interest Rates</Badge>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
                   <Link href="/blog/bank-of-canada-holds-key-interest-rate" className="hover:underline">
-                    Bank of Canada Holds Key Interest Rate
+                    Bank of Canada Cuts Key Interest Rate
                   </Link>
                 </h3>
-                <p className="text-gray-600 mb-6">
-                  The Bank of Canada maintained its target for the overnight rate at 5%, with the Bank Rate at 5.25%.
-                  The Bank is continuing its policy of quantitative tightening. This decision has significant
-                  implications for mortgage holders and prospective homebuyers.
-                </p>
+               <p className="text-gray-600 mb-6">
+  The Bank of Canada lowered its target for the overnight rate to 2.75% on March 12, 2025 — the first rate cut in years.
+  This shift marks a move away from tight monetary policy, offering significant relief for mortgage holders and creating new opportunities for homebuyers.
+</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">March 12, 2025</span>
                   <Button asChild className="bg-[#032133] hover:bg-[#032133]/90">
