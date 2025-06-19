@@ -2,23 +2,10 @@ import { Button } from "@/components/ui/button"
 import { NewsletterSubscription } from "@/components/newsletter-subscription"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Calculator,
-  FileText,
-  Users,
-  TrendingUp,
-  Shield,
-  Clock,
-  ArrowRight,
-  Twitter,
-} from "lucide-react"
+import { Mail, MapPin, Calculator, FileText, Users, TrendingUp, Shield, Clock, ArrowRight, Twitter } from "lucide-react"
 import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { MortgageCalculator } from "@/components/mortgage-calculator"
-import { RateComparisonTool } from "@/components/rate-comparison-tool"
 import { NewsCard } from "@/components/news-card"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -207,97 +194,93 @@ export default function HomePage() {
         </div>
       </section>
 
-     <section id="about" className="py-20 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="grid lg:grid-cols-2 gap-16 items-center">
-      <div>
-        <img
-          src="/headshot.png?height=600&width=500"
-          alt="Rob Bhullar - Mortgage Broker"
-          className="rounded-2xl shadow-2xl w-96 mx-auto"
-        />
-      </div>
-      <div>
-        <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">
-          About Rob S. Bhullar, BSc
-        </Badge>
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-          Lead Mortgage Expert
-        </h2>
-        <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-          With over 20 years in the financial industry, I combine analytics, lending expertise, and a client-first approach to guide BC homeowners, investors, and first-time buyers through complex mortgage decisions. My focus is on clarity, speed, and securing the right solution—without the stress.
-        </p>
-        <div className="space-y-4 mb-8">
-          {[
-            "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
-            "Access to 50+ lenders including major banks, credit unions, and alternative lenders",
-            "Expert in complex approvals, debt consolidation, and investor financing",
-            "BSc in Mathematics and Business Administration from Simon Fraser University",
-          ].map((item, index) => (
-            <div key={index} className="flex items-center">
-              <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
-              <span className="text-gray-700">{item}</span>
+      <section id="about" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <img
+                src="/headshot.png?height=600&width=500"
+                alt="Rob Bhullar - Mortgage Broker"
+                className="rounded-2xl shadow-2xl w-96 mx-auto"
+              />
             </div>
-          ))}
-        </div>
+            <div>
+              <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">
+                About Rob S. Bhullar, BSc
+              </Badge>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Lead Mortgage Expert</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                With over 20 years in the financial industry, I combine analytics, lending expertise, and a client-first
+                approach to guide BC homeowners, investors, and first-time buyers through complex mortgage decisions. My
+                focus is on clarity, speed, and securing the right solution—without the stress.
+              </p>
+              <div className="space-y-4 mb-8">
+                {[
+                  "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
+                  "Access to 50+ lenders including major banks, credit unions, and alternative lenders",
+                  "Expert in complex approvals, debt consolidation, and investor financing",
+                  "BSc in Mathematics and Business Administration from Simon Fraser University",
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center">
+                    <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
 
-        <div className="grid grid-cols-3 gap-6 mb-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-[#032133]">20+ years</div>
-            <div className="text-sm text-gray-600">Financial Experience</div>
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-[#032133]">20+ years</div>
+                  <div className="text-sm text-gray-600">Financial Experience</div>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 mb-8">
+                <span className="text-gray-600">Follow me for market updates:</span>
+                <Link
+                  href="https://x.com/robbhullar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-[#032133] hover:underline"
+                >
+                  <Twitter className="w-5 h-5" />
+                  <span>@robbhullar</span>
+                </Link>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+                  <Link href="#contact">Contact Rob</Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                    Apply Online
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="flex items-center space-x-4 mb-8">
-          <span className="text-gray-600">Follow me for market updates:</span>
-          <Link
-            href="https://x.com/robbhullar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-[#032133] hover:underline"
-          >
-            <Twitter className="w-5 h-5" />
-            <span>@robbhullar</span>
-          </Link>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-            <Link href="#contact">Contact Rob</Link>
-          </Button>
-          <Button size="lg" variant="outline" asChild>
-            <Link
-              href="https://r.mtg-app.com/robbhullar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Apply Online
-            </Link>
-          </Button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-      
       {/* Lenders Section */}
       <section id="lenders" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Trusted Lending Partners</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We work with 50+ lenders including major banks, credit unions, and alternative lenders to find you the best
-              rates and terms.
+              We work with 50+ lenders including major banks, credit unions, and alternative lenders to find you the
+              best rates and terms.
             </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center mt-8">
-  <img src="scotiabank.png" alt="Scotiabank" className="h-40" />
-  <img src="td.png" alt="TD Bank" className="h-40" />
-  <img src="firstnational.png" alt="First National" className="h-40" />
-  <img src="hometrust.png" alt="Home Trust" className="h-40" />
-  <img src="rmg.png" alt="RMG Mortgages" className="h-40" />
-</div>
+            <img src="scotiabank.png" alt="Scotiabank" className="h-40" />
+            <img src="td.png" alt="TD Bank" className="h-40" />
+            <img src="firstnational.png" alt="First National" className="h-40" />
+            <img src="hometrust.png" alt="Home Trust" className="h-40" />
+            <img src="rmg.png" alt="RMG Mortgages" className="h-40" />
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
@@ -306,7 +289,8 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Big Banks</h3>
               <p className="text-gray-600">
-                Competitive mortgage options backed by established financial institutions. Ideal for borrowers seeking stability, reliability, and flexible term choices from trusted nationwide lenders.
+                Competitive mortgage options backed by established financial institutions. Ideal for borrowers seeking
+                stability, reliability, and flexible term choices from trusted nationwide lenders.
               </p>
             </div>
 
@@ -375,15 +359,49 @@ export default function HomePage() {
               Stay informed about the latest mortgage trends, rate changes, and housing market news.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <NewsCard
-              title="Bank of Canada Cuts Key Interest Rate to 2.75%"
-              excerpt="The Bank of Canada reduced its target for the overnight rate to 2.75%, providing significant relief for mortgage holders and homebuyers."
-              date="March 12, 2025"
-              category="Interest Rates"
-              slug="/blog/bank-of-canada-holds-key-interest-rate"
-              image="bank-of-canada-building.png"
-            />
+
+          {/* Featured Article */}
+          <div className="mb-12">
+            <Badge className="mb-4 bg-[#032133] text-white">Featured Article</Badge>
+            <Card className="border-0 shadow-2xl overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="h-64 lg:h-auto overflow-hidden">
+                  <img
+                    src="bank-of-canada-building.png"
+                    alt="Bank of Canada Cuts Key Interest Rate to 2.75%"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-center">
+                  <div className="flex justify-between items-center mb-4">
+                    <Badge variant="outline" className="text-[#032133]">
+                      Interest Rates
+                    </Badge>
+                    <span className="text-sm text-gray-500">March 12, 2025</span>
+                  </div>
+                  <Link href="/blog/bank-of-canada-holds-key-interest-rate" className="hover:underline">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                      Bank of Canada Cuts Key Interest Rate to 2.75%
+                    </h3>
+                  </Link>
+                  <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                    The Bank of Canada reduced its target for the overnight rate to 2.75%, providing significant relief
+                    for mortgage holders and homebuyers. This marks a continued effort to stimulate economic growth
+                    while managing inflation concerns.
+                  </p>
+                  <Link
+                    href="/blog/bank-of-canada-holds-key-interest-rate"
+                    className="text-[#032133] font-medium flex items-center hover:underline text-lg"
+                  >
+                    Read Full Article <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          {/* Other Articles */}
+          <div className="grid md:grid-cols-2 gap-8">
             <NewsCard
               title="First-Time Home Buyer Programs Enhanced for 2025"
               excerpt="The federal and provincial governments have expanded first-time homebuyer programs with increased assistance and new opportunities."
@@ -401,6 +419,7 @@ export default function HomePage() {
               image="vancouver-skyline-housing.png"
             />
           </div>
+
           <div className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
               <Link href="/blog">
@@ -412,79 +431,79 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-<section id="contact" className="py-20 bg-slate-50">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-        Contact me today for a free consultation, or start your secure online application right away.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-        <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-          <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-            Start Application
-          </Link>
-        </Button>
-        {/* Optional consultation button */}
-        {/* <Button size="lg" variant="outline" asChild>
+      <section id="contact" className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Contact me today for a free consultation, or start your secure online application right away.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+                <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                  Start Application
+                </Link>
+              </Button>
+              {/* Optional consultation button */}
+              {/* <Button size="lg" variant="outline" asChild>
           <Link href="#contact">Free Consultation</Link>
         </Button> */}
-      </div>
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-16">
-      {/* Left: Contact Form */}
-      <div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-8">Get Your Free Consultation</h3>
-        <ContactForm />
-      </div>
-
-      {/* Right: Contact Info + Highlights */}
-      <div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
-        <div className="space-y-6">
-          {/* Email */}
-          <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
-              <Mail className="w-6 h-6" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-900">Email</h4>
-              <p className="text-gray-600">contact@bcmortgageteam.com</p>
-              <p className="text-sm text-gray-500">Thanks for reaching out — we’ll be in touch shortly.</p>
             </div>
           </div>
 
-          {/* Location */}
-          <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
-              <MapPin className="w-6 h-6" />
-            </div>
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Left: Contact Form */}
             <div>
-              <h4 className="font-semibold text-gray-900">Service Area</h4>
-              <p className="text-gray-600">Greater Vancouver Area</p>
-              <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">Get Your Free Consultation</h3>
+              <ContactForm />
             </div>
-          </div>
-        </div>
 
-        {/* Highlights Box */}
-        <div className="mt-8 p-6 bg-[#032133]/5 rounded-lg">
-          <h4 className="font-semibold text-gray-900 mb-2">Why Choose Me?</h4>
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li>• No cost for my services – lenders pay me</li>
-            <li>• Access to rates banks don't advertise</li>
-            <li>• Pre-approvals in 24–48 hours</li>
-            <li>• Support throughout the entire process</li>
-          </ul>
-        </div>
-        <div className="mb-8">
-                  <NewsletterSubscription />
+            {/* Right: Contact Info + Highlights */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
+              <div className="space-y-6">
+                {/* Email */}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Email</h4>
+                    <p className="text-gray-600">contact@bcmortgageteam.com</p>
+                    <p className="text-sm text-gray-500">Thanks for reaching out — we’ll be in touch shortly.</p>
+                  </div>
                 </div>
-      </div>
-    </div>
-  </div>
-</section>
+
+                {/* Location */}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Service Area</h4>
+                    <p className="text-gray-600">Greater Vancouver Area</p>
+                    <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Highlights Box */}
+              <div className="mt-8 p-6 bg-[#032133]/5 rounded-lg">
+                <h4 className="font-semibold text-gray-900 mb-2">Why Choose Me?</h4>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• No cost for my services – lenders pay me</li>
+                  <li>• Access to rates banks don't advertise</li>
+                  <li>• Pre-approvals in 24–48 hours</li>
+                  <li>• Support throughout the entire process</li>
+                </ul>
+              </div>
+              <div className="mb-8">
+                <NewsletterSubscription />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   )
