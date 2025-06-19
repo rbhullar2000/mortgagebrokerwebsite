@@ -1505,7 +1505,7 @@ function getPostData() {
   author: "Rob Bhullar",
   category: "Mortgage Education",
   image: "fixed-vs-variable-rates.png",
-   }
+   },
 
     "mortgage-stress-test-explained-2025": {
       title: "Mortgage Stress Test Explained: How to Qualify in 2025",
