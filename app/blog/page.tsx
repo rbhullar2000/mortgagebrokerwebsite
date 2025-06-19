@@ -112,10 +112,10 @@ export default function BlogPage() {
             <p className="text-xl text-gray-600 mb-8">
               Expert mortgage advice, market updates, and financial tips to help you make informed decisions.
             </p>
-            <div className="relative max-w-xl mx-auto">
+            {/*   <div className="relative max-w-xl mx-auto">
               <Input type="search" placeholder="Search articles..." className="pl-10 py-6 text-lg" />
               <Search className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
