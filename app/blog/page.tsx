@@ -1,5 +1,5 @@
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer" 
+import { Footer } from "@/components/footer"
 import { NewsCard } from "@/components/news-card"
 import { NewsletterSubscription } from "@/components/newsletter-subscription"
 import { Button } from "@/components/ui/button"
@@ -165,6 +165,7 @@ export default function BlogPage() {
               <div className="grid md:grid-cols-2 gap-8">
                 {blogPosts
                   .filter((post) => !post.featured)
+                  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
                   .map((post, index) => (
                     <NewsCard
                       key={index}
@@ -221,4 +222,3 @@ export default function BlogPage() {
     </div>
   )
 }
-
