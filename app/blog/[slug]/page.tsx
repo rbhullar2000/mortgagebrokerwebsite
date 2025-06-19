@@ -211,44 +211,44 @@ function getPostData() {
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Current Mortgage Rate Environment</h2>
 
         <div class="bg-gray-50 p-6 rounded-lg mb-8">
-          <h3 class="text-xl font-semibold mb-4 text-gray-800">Typical Rates as of June 2025</h3>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white p-4 rounded-lg shadow-sm">
-              <h4 class="font-semibold text-gray-800 mb-2">Variable Rates</h4>
-              <div class="space-y-2">
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Prime - 0.5%</span>
-                  <span class="font-bold text-green-600">3.95%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Prime - 0.25%</span>
-                  <span class="font-bold text-green-600">4.20%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Prime</span>
-                  <span class="font-bold text-green-600">4.45%</span>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-sm">
-              <h4 class="font-semibold text-gray-800 mb-2">Fixed Rates</h4>
-              <div class="space-y-2">
-                <div class="flex justify-between">
-                  <span class="text-gray-600">1-Year Fixed</span>
-                  <span class="font-bold text-blue-600">3.75%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">3-Year Fixed</span>
-                  <span class="font-bold text-blue-600">4.15%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">5-Year Fixed</span>
-                  <span class="font-bold text-blue-600">4.39%</span>
-                </div>
-              </div>
-            </div>
-          </div>
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">Typical Rates as of March 2025</h3>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <h4 class="font-semibold text-gray-800 mb-2">Variable Rates</h4>
+      <div class="space-y-2">
+        <div class="flex justify-between">
+          <span class="text-gray-600">Prime - 0.70%</span>
+          <span class="font-bold text-green-600">4.25%</span>
         </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">Prime - 0.50%</span>
+          <span class="font-bold text-green-600">4.45%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">Prime</span>
+          <span class="font-bold text-green-600">4.95%</span>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <h4 class="font-semibold text-gray-800 mb-2">Fixed Rates</h4>
+      <div class="space-y-2">
+        <div class="flex justify-between">
+          <span class="text-gray-600">1-Year Fixed</span>
+          <span class="font-bold text-blue-600">4.29%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">3-Year Fixed</span>
+          <span class="font-bold text-blue-600">4.49%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">5-Year Fixed</span>
+          <span class="font-bold text-blue-600">4.69%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">What's Next for Interest Rates?</h2>
 
