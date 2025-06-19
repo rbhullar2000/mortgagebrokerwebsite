@@ -34,7 +34,7 @@ export default function BlogPage() {
   date: "March 12, 2025",
   category: "Interest Rates",
   slug: "/blog/bank-of-canada-cuts-key-interest-rate-2025",
-  featured: true,
+  featured: false,
   image: "bank-of-canada-building.png",
 },
     {
