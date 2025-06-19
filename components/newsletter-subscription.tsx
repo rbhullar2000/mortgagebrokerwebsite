@@ -82,7 +82,7 @@ export function NewsletterSubscription() {
         <h3 className="text-xl font-bold text-gray-900">Subscribe to Our Newsletter</h3>
       </div>
       <p className="text-gray-600 mb-4">
-        Get the latest mortgage news, rate updates, and expert tips delivered to your inbox weekly.
+        Get the latest mortgage news, rate updates, and expert tips delivered to your inbox.
       </p>
 
       <form onSubmit={handleSubmit}>
