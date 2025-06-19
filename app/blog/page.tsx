@@ -3,9 +3,7 @@ import { Footer } from "@/components/footer"
 import { NewsCard } from "@/components/news-card"
 import { NewsletterSubscription } from "@/components/newsletter-subscription"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { Search } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -18,6 +16,16 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
   const blogPosts = [
+    {
+      title: "Are Variable Rates Still Worth It in 2025? It Depends…",
+      excerpt:
+        "The fixed vs. variable debate is heating up again in 2025. With forecasts suggesting lower rates ahead, should you lock in fixed for stability or ride the wave with variable?",
+      date: "May 1, 2025",
+      category: "Rate Analysis",
+      slug: "/blog/are-variable-rates-still-worth-it-2025",
+      featured: false,
+      image: "fixed-vs-variable-rates.png",
+    },
     {
       title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
       excerpt:
