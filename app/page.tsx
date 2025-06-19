@@ -570,10 +570,10 @@ export default function HomePage() {
                   <li>• Pre-approvals in 24–48 hours</li>
                   <li>• Support throughout the entire process</li>
                 </ul>
-              </div></div>
+              </div>
               <div className="mb-8">
                 <NewsletterSubscription />
-              </div></div>
+              </div>
             </div>
           </div>
         </div>
