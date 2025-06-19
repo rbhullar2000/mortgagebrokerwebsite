@@ -19,6 +19,16 @@ export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
   const blogPosts = [
    {
+      title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
+      excerpt:
+        "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.",
+      date: "June 4, 2025",
+      category: "Interest Rates",
+      slug: "/blog/bank-of-canada-holds-key-interest-rate",
+      featured: true,
+      image: "/placeholder.svg?height=300&width=600",
+    },
+    {
   title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
   excerpt: "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
   date: "March 12, 2025",
