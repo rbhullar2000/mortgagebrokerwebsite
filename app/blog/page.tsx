@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Expert mortgage advice, market updates, and financial tips from licensed mortgage professionals in BC.",
   keywords: "mortgage blog, mortgage tips, BC housing market, mortgage rates, first-time homebuyer tips",
-}
+} 
 
 export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
