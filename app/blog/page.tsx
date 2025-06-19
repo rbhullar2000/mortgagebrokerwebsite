@@ -120,40 +120,39 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Post */}
-      {featuredPost && (
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900">Featured Article</h2>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-8">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <Badge className="mb-4">{featuredPost.category}</Badge>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                    <Link href={featuredPost.slug} className="hover:underline">
-                      {featuredPost.title}
-                    </Link>
-                  </h3>
-                  <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{featuredPost.date}</span>
-                    <Button asChild className="bg-[#032133] hover:bg-[#032133]/90">
-                      <Link href={featuredPost.slug}>Read Full Article</Link>
-                    </Button>
-                  </div>
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900">Featured Article</h2>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <Badge className="mb-4">Interest Rates</Badge>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  <Link href="/blog/bank-of-canada-holds-key-interest-rate" className="hover:underline">
+                    Bank of Canada Cuts Key Interest Rate
+                  </Link>
+                </h3>
+               <p className="text-gray-600 mb-6">
+  The Bank of Canada lowered its target for the overnight rate to 2.75% on March 12, 2025 — the first rate cut in years.
+  This shift marks a move away from tight monetary policy, offering significant relief for mortgage holders and creating new opportunities for homebuyers.
+</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">March 12, 2025</span>
+                  <Button asChild className="bg-[#032133] hover:bg-[#032133]/90">
+                    <Link href="/blog/bank-of-canada-holds-key-interest-rate">Read Full Article</Link>
+                  </Button>
                 </div>
-                <div>
-                  <img
-                    src={featuredPost.image || "/placeholder.svg"}
-                    alt={featuredPost.title}
-                    className="rounded-lg shadow-lg w-full"
-                  />
-                </div>
+              </div>
+              <div>
+                <img src="bank-of-canada-building.png" alt="Bank of Canada" className="rounded-lg shadow-lg w-full" />
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
       )}
 
       {/* All Posts */}
