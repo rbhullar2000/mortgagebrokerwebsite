@@ -10,16 +10,47 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 function getPostData() {
   return 
-  "bank-of-canada-holds-rates":
-  {
+  "bank-of-canada-holds-key-interest-rate": {
       title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
       excerpt:
-        "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.",
+        "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Here’s why the Bank paused and how homeowners and buyers should respond.",
+      content: `
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
+          <h3 class="text-lg font-semibold text-yellow-800 mb-2">Rate-Hold Highlights</h3>
+          <p class="text-yellow-700">The Governing Council cited cooling core inflation and
+          moderating growth as reasons to pause while it monitors incoming data.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
+          Key Take-aways for Borrowers
+        </h2>
+
+        <ul class="space-y-2 mb-6 text-gray-700">
+          <li>• Variable-rate payments remain unchanged for now.</li>
+          <li>•  Markets still expect additional cuts later in 2025.</li>
+          <li>•  Fixed-rate quotes have already priced in the pause.</li>
+        </ul>
+
+        <p class="mb-8">Borrowers should use the respite to review budgets,
+        pre-payment strategies, and renewal timelines.</p>
+
+        <div class="bg-gradient-to-r from-blue-600 to-green-600 text-white p-6 rounded-lg">
+          <p class="font-semibold text-center">
+            Have questions about today’s announcement? Get a free strategy
+            session.
+          </p>
+          <div class="mt-4 text-center">
+            <a href="/#contact"
+               class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-5 py-3 rounded-lg font-medium">
+              Book a Call
+            </a>
+          </div>
+        </div>
+      `,
       date: "June 4, 2025",
+      author: "Rob Bhullar",
       category: "Interest Rates",
-      slug: "/blog/bank-of-canada-holds-key-interest-rate",
-      featured: true,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/placeholder.svg?height=400&width=800",
     },
   {
     "bank-of-canada-cuts-rates-again": {
