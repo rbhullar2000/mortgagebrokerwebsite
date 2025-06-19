@@ -24,7 +24,7 @@ export default function BlogPage() {
         "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.",
       date: "June 4, 2025",
       category: "Interest Rates",
-      slug: "/blog/bank-of-canada-holds-key-interest-rate",
+      slug: "/blog/bank-of-canada-holds-key-interest-rate-June-2025",
       featured: true,
       image: "/placeholder.svg?height=300&width=600",
     },
@@ -131,17 +131,16 @@ export default function BlogPage() {
                 <Badge className="mb-4">Interest Rates</Badge>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
                   <Link href="/blog/bank-of-canada-holds-key-interest-rate" className="hover:underline">
-                    Bank of Canada Cuts Key Interest Rate
+                    Bank of Canada Holds Key Interest Rate
                   </Link>
                 </h3>
                <p className="text-gray-600 mb-6">
-  The Bank of Canada lowered its target for the overnight rate to 2.75% on March 12, 2025 — the first rate cut in years.
-  This shift marks a move away from tight monetary policy, offering significant relief for mortgage holders and creating new opportunities for homebuyers.
+  At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.
 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">March 12, 2025</span>
+                  <span className="text-sm text-gray-500">June 18, 2025</span>
                   <Button asChild className="bg-[#032133] hover:bg-[#032133]/90">
-                    <Link href="/blog/bank-of-canada-holds-key-interest-rate">Read Full Article</Link>
+                    <Link href="/blog/bbank-of-canada-holds-key-interest-rate-June-2025">Read Full Article</Link>
                   </Button>
                 </div>
               </div>
