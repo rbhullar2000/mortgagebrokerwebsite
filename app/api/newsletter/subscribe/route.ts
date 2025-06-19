@@ -1,8 +1,9 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { google } from "googleapis" 
+import { google } from "googleapis"
 
 export async function POST(request: NextRequest) {
   try {
+    console.log("Newsletter API called")
     const { email } = await request.json()
 
     if (!email) {
@@ -15,11 +16,37 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "Please enter a valid email address" }, { status: 400 })
     }
 
+    // More robust private key processing
+    let privateKey = process.env.GOOGLE_PRIVATE_KEY
+    if (!privateKey) {
+      console.error("Private key not found")
+      return NextResponse.json({ success: false, error: "Configuration error" }, { status: 500 })
+    }
+
+    // Handle different private key formats
+    if (privateKey.includes("\\n")) {
+      // Replace literal \n with actual newlines
+      privateKey = privateKey.replace(/\\n/g, "\n")
+    }
+
+    // Remove any extra quotes that might be wrapping the key
+    privateKey = privateKey.replace(/^["']|["']$/g, "")
+
+    // Ensure proper formatting
+    if (!privateKey.includes("\n")) {
+      // If still no newlines, try to reconstruct the key
+      const keyContent = privateKey.replace("-----BEGIN PRIVATE KEY-----", "").replace("-----END PRIVATE KEY-----", "")
+      privateKey = `-----BEGIN PRIVATE KEY-----\n${keyContent}\n-----END PRIVATE KEY-----\n`
+    }
+
+    console.log("Private key starts with:", privateKey.substring(0, 50))
+    console.log("Private key ends with:", privateKey.substring(privateKey.length - 50))
+
     // Set up Google Sheets API
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+        private_key: privateKey,
       },
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     })
@@ -30,18 +57,6 @@ export async function POST(request: NextRequest) {
     if (!spreadsheetId) {
       console.error("Google Sheet ID not configured")
       return NextResponse.json({ success: false, error: "Newsletter service not configured" }, { status: 500 })
-    }
-
-    // Validate required environment variables
-    if (!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || !process.env.GOOGLE_PRIVATE_KEY) {
-      console.error("Missing Google credentials")
-      return NextResponse.json(
-        {
-          success: false,
-          error: "Newsletter service not configured",
-        },
-        { status: 500 },
-      )
     }
 
     // Check if email already exists
@@ -69,44 +84,13 @@ export async function POST(request: NextRequest) {
       },
     })
 
+    console.log("Subscription successful!")
     return NextResponse.json({
       success: true,
       message: "Successfully subscribed to newsletter",
     })
   } catch (error) {
     console.error("Newsletter subscription error:", error)
-
-    // More specific error messages
-    if (error instanceof Error) {
-      if (error.message.includes("Unable to parse")) {
-        return NextResponse.json(
-          {
-            success: false,
-            error: "Configuration error. Please contact support.",
-          },
-          { status: 500 },
-        )
-      }
-      if (error.message.includes("Requested entity was not found")) {
-        return NextResponse.json(
-          {
-            success: false,
-            error: "Spreadsheet not found. Please contact support.",
-          },
-          { status: 500 },
-        )
-      }
-      if (error.message.includes("does not have permission")) {
-        return NextResponse.json(
-          {
-            success: false,
-            error: "Permission error. Please contact support.",
-          },
-          { status: 500 },
-        )
-      }
-    }
-
     return NextResponse.json(
       {
         success: false,
