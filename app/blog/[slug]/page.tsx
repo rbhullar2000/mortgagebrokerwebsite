@@ -104,12 +104,12 @@ function getPostData() {
             </svg>
             <h3 class="text-lg font-semibold text-green-800">Great News for Borrowers</h3>
           </div>
-          <p class="text-green-700">The Bank of Canada cut its overnight rate to 2.75%, down from the 5% peak in 2023-2024. This represents a total reduction of 2.25% since rate cuts began, providing substantial savings for mortgage holders and improved affordability for homebuyers. This is the most recent information as of June 2025.</p>
+          <p class="text-green-700">The Bank of Canada cut its overnight rate to 2.75%, down from the 5% peak in 2023-2024. This represents a total reduction of 2.25% since rate cuts began, providing substantial savings for mortgage holders and improved affordability for homebuyers. This is the most recent information as of March 2025.</p>
         </div>
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">The Bank of Canada's Decision</h2>
         
-        <p class="mb-6 text-lg leading-relaxed">The Bank of Canada, in its announcement on June 13, 2025, lowered its target for the overnight rate by 25 basis points to <strong>2.75%</strong>, with the Bank Rate now at <strong>3.00%</strong> and the deposit rate at <strong>2.75%</strong>. This marks the fifth consecutive rate cut since the easing cycle began in June 2024, as inflation has returned closer to the 2% target and economic growth has moderated. This is the most recent information as of June 2025.</p>
+        <p class="mb-6 text-lg leading-relaxed">The Bank of Canada, in its announcement on June 13, 2025, lowered its target for the overnight rate by 25 basis points to <strong>2.75%</strong>, with the Bank Rate now at <strong>3.00%</strong> and the deposit rate at <strong>2.75%</strong>. This marks the fifth consecutive rate cut since the easing cycle began in June 2024, as inflation has returned closer to the 2% target and economic growth has moderated. This is the most recent information as of March 2025.</p>
 
         <div class="bg-gray-50 p-6 rounded-lg mb-8">
           <h3 class="text-xl font-semibold mb-4 text-gray-800">Rate History at a Glance</h3>
@@ -1672,7 +1672,7 @@ function getPostData() {
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">The Bank of Canada's Decision</h2>
         
-        <p class="mb-6 text-lg leading-relaxed">The Bank of Canada, in its announcement on June 13, 2025, lowered its target for the overnight rate by 25 basis points to <strong>2.75%</strong>, with the Bank Rate now at <strong>3.00%</strong> and the deposit rate at <strong>2.75%</strong>. This marks the fifth consecutive rate cut since the easing cycle began in June 2024, as inflation has returned closer to the 2% target and economic growth has moderated.</p>
+        <p class="mb-6 text-lg leading-relaxed">The Bank of Canada, in its announcement on March 12 , 2025, lowered its target for the overnight rate by 25 basis points to <strong>2.75%</strong>, with the Bank Rate now at <strong>3.00%</strong> and the deposit rate at <strong>2.75%</strong>. This marks the fifth consecutive rate cut since the easing cycle began in June 2024, as inflation has returned closer to the 2% target and economic growth has moderated.</p>
 
         <div class="bg-gray-50 p-6 rounded-lg mb-8">
           <h3 class="text-xl font-semibold mb-4 text-gray-800">Rate History at a Glance</h3>
@@ -1774,44 +1774,44 @@ function getPostData() {
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Current Mortgage Rate Environment</h2>
 
         <div class="bg-gray-50 p-6 rounded-lg mb-8">
-          <h3 class="text-xl font-semibold mb-4 text-gray-800">Typical Rates as of June 2025</h3>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white p-4 rounded-lg shadow-sm">
-              <h4 class="font-semibold text-gray-800 mb-2">Variable Rates</h4>
-              <div class="space-y-2">
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Prime - 0.5%</span>
-                  <span class="font-bold text-green-600">3.95%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Prime - 0.25%</span>
-                  <span class="font-bold text-green-600">4.20%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">Prime</span>
-                  <span class="font-bold text-green-600">4.45%</span>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-sm">
-              <h4 class="font-semibold text-gray-800 mb-2">Fixed Rates</h4>
-              <div class="space-y-2">
-                <div class="flex justify-between">
-                  <span class="text-gray-600">1-Year Fixed</span>
-                  <span class="font-bold text-blue-600">3.75%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">3-Year Fixed</span>
-                  <span class="font-bold text-blue-600">4.15%</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-gray-600">5-Year Fixed</span>
-                  <span class="font-bold text-blue-600">4.39%</span>
-                </div>
-              </div>
-            </div>
-          </div>
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">Typical Rates as of March 2025</h3>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <h4 class="font-semibold text-gray-800 mb-2">Variable Rates</h4>
+      <div class="space-y-2">
+        <div class="flex justify-between">
+          <span class="text-gray-600">Prime - 0.70%</span>
+          <span class="font-bold text-green-600">4.25%</span>
         </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">Prime - 0.50%</span>
+          <span class="font-bold text-green-600">4.45%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">Prime</span>
+          <span class="font-bold text-green-600">4.95%</span>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <h4 class="font-semibold text-gray-800 mb-2">Fixed Rates</h4>
+      <div class="space-y-2">
+        <div class="flex justify-between">
+          <span class="text-gray-600">1-Year Fixed</span>
+          <span class="font-bold text-blue-600">4.29%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">3-Year Fixed</span>
+          <span class="font-bold text-blue-600">4.49%</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-600">5-Year Fixed</span>
+          <span class="font-bold text-blue-600">4.69%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
         <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">What's Next for Interest Rates?</h2>
 
