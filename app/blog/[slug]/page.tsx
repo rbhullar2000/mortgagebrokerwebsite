@@ -1398,7 +1398,7 @@ function getPostData() {
       category: "Credit & Qualification",
       image: "credit-score-improvement.png",
     },
-
+    
     "fixed-vs-variable-mortgage-rates-2025": {
       title: "Fixed vs Variable Mortgage Rates: Which is Right for You in 2025?",
       excerpt:
