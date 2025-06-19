@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 function getPostData() {
-  return 
+  return {
   "bank-of-canada-holds-key-interest-rate": {
       title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
       excerpt:
