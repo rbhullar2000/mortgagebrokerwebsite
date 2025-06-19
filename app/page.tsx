@@ -477,6 +477,9 @@ export default function HomePage() {
             <li>• Support throughout the entire process</li>
           </ul>
         </div>
+        <div className="mb-8">
+                  <NewsletterSubscription />
+                </div>
       </div>
     </div>
   </div>
