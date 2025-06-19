@@ -9,7 +9,18 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 function getPostData() {
-  return {
+  return 
+  {
+      title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
+      excerpt:
+        "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.",
+      date: "June 4, 2025",
+      category: "Interest Rates",
+      slug: "/blog/bank-of-canada-holds-key-interest-rate",
+      featured: true,
+      image: "/placeholder.svg?height=300&width=600",
+    },
+  {
     "bank-of-canada-cuts-rates-again": {
       title: "Bank of Canada Cuts Key Interest Rate to 2.75%: Historic Relief for Mortgage Holders",
       excerpt:
