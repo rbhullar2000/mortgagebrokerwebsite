@@ -140,7 +140,7 @@ export default function BlogPage() {
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">June 18, 2025</span>
                   <Button asChild className="bg-[#032133] hover:bg-[#032133]/90">
-                    <Link href="/blog/bbank-of-canada-holds-key-interest-rate-June-2025">Read Full Article</Link>
+                    <Link href="/blog/bank-of-canada-holds-key-interest-rate-June-2025">Read Full Article</Link>
                   </Button>
                 </div>
               </div>
