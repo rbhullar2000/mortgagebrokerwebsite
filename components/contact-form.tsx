@@ -71,7 +71,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
       console.error("Error submitting form:", error)
       setSubmitStatus({
         success: false,
-        message: "There was an error sending your message. Please try again or call me directly at (778) 889-7964.",
+        message: "There was an error sending your message. Please try again or directly at (778) 889-7964.",
       })
     } finally {
       setIsSubmitting(false)
