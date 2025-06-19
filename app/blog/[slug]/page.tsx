@@ -1399,11 +1399,11 @@ function getPostData() {
       image: "credit-score-improvement.png",
     },
     
-    "fixed-vs-variable-mortgage-rates-2025": {
-      title: "Fixed vs Variable Mortgage Rates: Which is Right for You in 2025?",
-      excerpt:
-        "With interest rates falling, the choice between fixed and variable rates is more important than ever. Understand the pros and cons of each option to make the best decision for your financial situation.",
-      content: `
+   "fixed-vs-variable-mortgage-rates-2025": {
+  title: "Fixed vs Variable Mortgage Rates: Which is Right for You in 2025?",
+  excerpt:
+    "With interest rates falling, the choice between fixed and variable rates is more important than ever. Understand the pros and cons of each option to make the best decision for your financial situation.",
+  content: `
     <div class="bg-purple-50 border-l-4 border-purple-500 p-6 mb-8 rounded-r-lg">
       <div class="flex items-center mb-3">
         <svg class="w-6 h-6 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1438,41 +1438,74 @@ function getPostData() {
         <h3 class="font-semibold text-green-800 mb-3">Variable Rates</h3>
         <div class="space-y-3">
           <div class="flex justify-between">
-            <span class="text-green-700">Prime - 0.5%</span>
+            <span class="text-green-700">Prime - 0.50%</span>
             <span class="font-bold text-green-800">3.95%</span>
           </div>
-           <div class="flex justify-between">
+          <div class="flex justify-between">
             <span class="text-green-700">Prime - 0.25%</span>
             <span class="font-bold text-green-800">4.20%</span>
           </div>
           <div class="flex justify-between">
-            <span class="text-green-700">Prime Rate</span>
+            <span class="text-green-700">Prime</span>
             <span class="font-bold text-green-800">4.45%</span>
           </div>
         </div>
       </div>
     </div>
 
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Pros & Cons</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-white p-6 border rounded-lg shadow-sm">
+        <h3 class="font-semibold text-blue-700 mb-3">Fixed-Rate Mortgages</h3>
+        <ul class="space-y-2 text-blue-800">
+          <li>• Stability: Monthly payments stay the same for the term</li>
+          <li>• Budgeting: Easier to plan finances long-term</li>
+          <li>• Protection: Immune to future rate hikes</li>
+          <li>• Slightly higher initial rates than variable</li>
+          <li>• Penalties for breaking can be higher</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 border rounded-lg shadow-sm">
+        <h3 class="font-semibold text-green-700 mb-3">Variable-Rate Mortgages</h3>
+        <ul class="space-y-2 text-green-800">
+          <li>• Lower starting rate in most cases</li>
+          <li>• Benefit if rates continue to fall</li>
+          <li>• Typically lower penalties for breaking</li>
+          <li>• Monthly payment may fluctuate</li>
+          <li>• Not ideal for risk-averse borrowers</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Which Is Right for You?</h2>
+
+    <div class="space-y-4 text-gray-700 mb-8">
+      <p><strong>Choose Fixed If:</strong> You want predictability, are on a tight budget, or expect rates to rise again within your mortgage term.</p>
+      <p><strong>Choose Variable If:</strong> You’re comfortable with some risk, want to benefit from potential further rate cuts, or plan to break your mortgage early.</p>
+      <p><strong>Consider a Hybrid:</strong> Some lenders offer a combination of fixed and variable for added flexibility and partial risk protection.</p>
+    </div>
+
     <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-lg mb-8">
       <div class="text-center">
-        <h3 class="text-2xl font-bold mb-4">Need Help Choosing Between Fixed and Variable?</h3>
-        <p class="mb-6 text-purple-100">Every situation is unique. Let's analyze your financial goals, risk tolerance, and market outlook to determine the best rate type for your mortgage.</p>
+        <h3 class="text-2xl font-bold mb-4">Still Unsure Which Rate to Choose?</h3>
+        <p class="mb-6 text-purple-100">Let’s evaluate your goals, lifestyle, and market timing together. A tailored rate strategy can make a major difference over time.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/#contact" class="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
-            Free Rate Consultation
+            Book Your Free Consultation
           </a>
           <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-lg font-semibold transition-colors">
-            Compare Rates
+            Compare Rates Now
           </a>
         </div>
       </div>
     </div>
   `,
-      date: "June 8, 2025",
-      author: "Rob Bhullar",
-      category: "Mortgage Education",
-      image: "fixed-vs-variable-rates.png",
-    },
+  date: "June 8, 2025",
+  author: "Rob Bhullar",
+  category: "Mortgage Education",
+  image: "fixed-vs-variable-rates.png",
+   }
 
     "mortgage-stress-test-explained-2025": {
       title: "Mortgage Stress Test Explained: How to Qualify in 2025",
