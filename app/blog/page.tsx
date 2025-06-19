@@ -86,16 +86,16 @@ export default function BlogPage() {
       featured: false,
       image: "credit-score-improvement.png",
     },
-    {
-      title: "Understanding Mortgage Stress Tests in 2024",
-      excerpt:
-        "Mortgage stress tests continue to impact homebuyers across Canada. Learn how the current rules work and how to prepare for them.",
-      date: "April 22, 2025",
-      category: "Regulations",
-      slug: "/blog/understanding-mortgage-stress-tests-2024",
-      featured: false,
-      image: "stress-test-calculator.png",
-    },
+//    {
+//      title: "Understanding Mortgage Stress Tests in 2024",
+//      excerpt:
+//        "Mortgage stress tests continue to impact homebuyers across Canada. Learn how the current rules work and how to prepare for them.",
+//      date: "April 22, 2025",
+//      category: "Regulations",
+//      slug: "/blog/understanding-mortgage-stress-tests-2024",
+//      featured: false,
+//      image: "stress-test-calculator.png",
+//    },
   ]
 
   const categories = [
