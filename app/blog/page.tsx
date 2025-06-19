@@ -183,7 +183,7 @@ export default function BlogPage() {
                 </Button>
               </div>
             </div>
-            <div className="lg:col-span-1">
+            {/*  <div className="lg:col-span-1">
               <div className="sticky top-24">
                 <div className="mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Categories</h3>
