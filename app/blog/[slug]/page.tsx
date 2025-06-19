@@ -13,7 +13,7 @@ function getPostData() {
   "bank-of-canada-holds-key-interest-rate-June-2025": {
     title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
     excerpt:
-      "On June 5, 2025, the Bank of Canada held its key overnight rate at 2.75%. Here's why the central bank paused and what it means for Canadian homeowners and buyers.",
+      "On June 4, 2025, the Bank of Canada held its key overnight rate at 2.75%. Here's why the central bank paused and what it means for Canadian homeowners and buyers.",
     content: `
       <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
         <h3 class="text-lg font-semibold text-yellow-800 mb-2">Policy Update Summary</h3>
