@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { NewsCard } from "@/components/news-card"
+import { NewsletterSubscription } from "@/components/newsletter-subscription"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
@@ -8,17 +9,16 @@ import { Search } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 
-export const metadata: Metadata = { 
+export const metadata: Metadata = {
   title: "Mortgage Blog | BC Mortgage Team",
-  description:
-    "Expert mortgage advice, market updates, and financial tips from licensed mortgage professionals in BC.",
+  description: "Expert mortgage advice, market updates, and financial tips from licensed mortgage professionals in BC.",
   keywords: "mortgage blog, mortgage tips, BC housing market, mortgage rates, first-time homebuyer tips",
-} 
+}
 
 export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
   const blogPosts = [
-   {
+    {
       title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
       excerpt:
         "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.",
@@ -29,14 +29,15 @@ export default function BlogPage() {
       image: "/bank-of-canada-building.png?height=300&width=600",
     },
     {
-  title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
-  excerpt: "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
-  date: "March 12, 2025",
-  category: "Interest Rates",
-  slug: "/blog/bank-of-canada-cuts-rates-March-2025",
-  featured: false,
-  image: "bank-of-canada-building.png",
-},
+      title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
+      excerpt:
+        "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
+      date: "March 12, 2025",
+      category: "Interest Rates",
+      slug: "/blog/bank-of-canada-cuts-rates-March-2025",
+      featured: false,
+      image: "bank-of-canada-building.png",
+    },
     {
       title: "First-Time Home Buyer Incentive Changes",
       excerpt:
@@ -134,9 +135,10 @@ export default function BlogPage() {
                     Bank of Canada Holds Key Interest Rate
                   </Link>
                 </h3>
-               <p className="text-gray-600 mb-6">
-  At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.
-</p>
+                <p className="text-gray-600 mb-6">
+                  At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent.
+                  Learn why the Bank paused and what it means for homeowners and buyers.
+                </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">June 17, 2025</span>
                   <Button asChild className="bg-[#032133] hover:bg-[#032133]/90">
@@ -151,8 +153,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
-      )}
 
       {/* All Posts */}
       <section className="py-12 bg-white">
@@ -197,18 +197,7 @@ export default function BlogPage() {
                   </div>
                 </div>
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Subscribe</h3>
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <p className="text-gray-600 mb-4">Get the latest mortgage news and tips delivered to your inbox.</p>
-                    <form>
-                      <div className="space-y-4">
-                        <Input type="email" placeholder="Your email address" required />
-                        <Button type="submit" className="w-full bg-[#032133] hover:bg-[#032133]/90">
-                          Subscribe
-                        </Button>
-                      </div>
-                    </form>
-                  </div>
+                  <NewsletterSubscription />
                 </div>
                 {/*   <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Free Resources</h3>
@@ -232,3 +221,4 @@ export default function BlogPage() {
     </div>
   )
 }
+
