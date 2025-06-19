@@ -130,7 +130,7 @@ export default function BlogPage() {
               <div>
                 <Badge className="mb-4">Interest Rates</Badge>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  <Link href="/blog/bank-of-canada-holds-key-interest-rate" className="hover:underline">
+                  <Link href="/blog/bank-of-canada-holds-key-interest-rate-June-2025" className="hover:underline">
                     Bank of Canada Holds Key Interest Rate
                   </Link>
                 </h3>
