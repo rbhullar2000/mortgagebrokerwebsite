@@ -210,7 +210,7 @@ export default function BlogPage() {
                     </form>
                   </div>
                 </div>
-                <div>
+                {/*   <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Free Resources</h3>
                   <div className="bg-slate-50 p-6 rounded-lg">
                     <h4 className="font-bold mb-2">First-Time Homebuyer's Guide</h4>
@@ -221,7 +221,7 @@ export default function BlogPage() {
                       <Link href="/#resources">Download Now</Link>
                     </Button>
                   </div>
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>
