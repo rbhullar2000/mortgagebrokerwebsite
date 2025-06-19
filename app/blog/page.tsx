@@ -33,7 +33,7 @@ export default function BlogPage() {
   excerpt: "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
   date: "March 12, 2025",
   category: "Interest Rates",
-  slug: "/blog/bank-of-canada-cuts-key-interest-rate-2025",
+  slug: "/blog/bank-of-canada-cuts-rates-March-2025",
   featured: false,
   image: "bank-of-canada-building.png",
 },
