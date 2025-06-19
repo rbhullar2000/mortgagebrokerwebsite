@@ -32,6 +32,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "Newsletter service not configured" }, { status: 500 })
     }
 
+    // Validate required environment variables
+    if (!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || !process.env.GOOGLE_PRIVATE_KEY) {
+      console.error("Missing Google credentials")
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Newsletter service not configured",
+        },
+        { status: 500 },
+      )
+    }
+
     // Check if email already exists
     const existingData = await sheets.spreadsheets.values.get({
       spreadsheetId,
@@ -63,6 +75,44 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error("Newsletter subscription error:", error)
-    return NextResponse.json({ success: false, error: "Failed to subscribe. Please try again later." }, { status: 500 })
+
+    // More specific error messages
+    if (error instanceof Error) {
+      if (error.message.includes("Unable to parse")) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Configuration error. Please contact support.",
+          },
+          { status: 500 },
+        )
+      }
+      if (error.message.includes("Requested entity was not found")) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Spreadsheet not found. Please contact support.",
+          },
+          { status: 500 },
+        )
+      }
+      if (error.message.includes("does not have permission")) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Permission error. Please contact support.",
+          },
+          { status: 500 },
+        )
+      }
+    }
+
+    return NextResponse.json(
+      {
+        success: false,
+        error: "Failed to subscribe. Please try again later.",
+      },
+      { status: 500 },
+    )
   }
 }
