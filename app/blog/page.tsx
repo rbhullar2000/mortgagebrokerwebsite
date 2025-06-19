@@ -1,5 +1,5 @@
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Footer } from "@/components/footer" 
 import { NewsCard } from "@/components/news-card"
 import { NewsletterSubscription } from "@/components/newsletter-subscription"
 import { Button } from "@/components/ui/button"
