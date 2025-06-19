@@ -8,7 +8,7 @@ import { Search } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = { 
   title: "Mortgage Blog | BC Mortgage Team",
   description:
     "Expert mortgage advice, market updates, and financial tips from licensed mortgage professionals in BC.",
