@@ -510,7 +510,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Contact me today for a free consultation, or start your secure online application right away.
+              Contact today for a free consultation, or start your secure online application right away.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
