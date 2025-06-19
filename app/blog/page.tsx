@@ -183,9 +183,9 @@ export default function BlogPage() {
                 </Button>
               </div>
             </div>
-            {/*  <div className="lg:col-span-1">
+            <div className="lg:col-span-1">
               <div className="sticky top-24">
-                <div className="mb-8">
+                {/*  <div className="mb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Categories</h3>
                   <div className="space-y-2">
                     {categories.map((category, index) => (
@@ -195,8 +195,8 @@ export default function BlogPage() {
                         </Badge>
                       </Link>
                     ))}
-                  </div>
-                </div>
+                  </div> 
+                </div> */}
                 <div className="mb-8">
                   <NewsletterSubscription />
                 </div>
