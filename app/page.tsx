@@ -563,9 +563,9 @@ export default function HomePage() {
 
               {/* Highlights Box */}
               <div className="mt-8 p-6 bg-[#032133]/5 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Why Choose Me?</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">Why Choose An Independent Mortgage Professional?</h4>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• No cost for my services – lenders pay me</li>
+                  <li>• No cost for our specialized services</li>
                   <li>• Access to rates banks don't advertise</li>
                   <li>• Pre-approvals in 24–48 hours</li>
                   <li>• Support throughout the entire process</li>
