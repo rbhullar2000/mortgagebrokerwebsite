@@ -10,88 +10,89 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 function getPostData() {
   return {
- "bank-of-canada-holds-key-interest-rate-June-2025": {
-  title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
-  excerpt:
-    "On June 5, 2025, the Bank of Canada held its key overnight rate at 2.75%. Here's why the central bank paused and what it means for Canadian homeowners and buyers.",
-  content: `
-    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
-      <h3 class="text-lg font-semibold text-yellow-800 mb-2">Policy Update Summary</h3>
-      <p class="text-yellow-700">
-        At its June 5, 2025 meeting, the Bank of Canada decided to hold its target for the overnight rate at 2.75%.
-        This decision reflects continued progress in reducing core inflation and a desire to evaluate the impact of earlier rate cuts.
-      </p>
-    </div>
-
-    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
-      Why Did the Bank Pause Now?
-    </h2>
-
-    <p class="mb-6 text-gray-700">
-      Canada’s central bank cited improving inflation trends as a key reason for the pause.
-      April’s core inflation readings showed further softening, and economic growth remained subdued.
-      Policymakers emphasized they are taking a cautious approach to avoid reigniting inflation or tightening prematurely.
-    </p>
-
-    <p class="mb-6 text-gray-700">
-      The Bank noted that while shelter price inflation remains elevated, other components of the Consumer Price Index (CPI) are easing.
-      Labour market conditions have also loosened slightly, which is helping reduce wage pressures.
-    </p>
-
-    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
-      What It Means for Borrowers
-    </h2>
-
-    <ul class="space-y-2 mb-6 text-gray-700">
-      <li>• If you have a variable-rate mortgage, your payment remains unchanged — for now.</li>
-      <li>• Fixed mortgage rates have already adjusted based on bond market expectations.</li>
-      <li>• More rate cuts are still expected later in 2025, but timing is data-dependent.</li>
-    </ul>
-
-    <p class="mb-6 text-gray-700">
-      For many Canadian homeowners, this rate hold offers an opportunity to reassess their mortgage strategy.
-      Whether you’re renewing, refinancing, or entering the market for the first time, understanding your options is more important than ever.
-    </p>
-
-    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
-      Strategic Advice for the Months Ahead
-    </h2>
-
-    <p class="mb-6 text-gray-700">
-      Borrowers are encouraged to:
-    </p>
-    <ul class="space-y-2 mb-6 text-gray-700">
-      <li>• Lock in pre-approvals if planning to buy in the next 90 days</li>
-      <li>• Consider shorter-term fixed options as rates evolve</li>
-      <li>• Use rate holds and renewal windows to negotiate with leverage</li>
-    </ul>
-
-    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
-      <h3 class="text-lg font-semibold text-blue-800 mb-2">Market Outlook</h3>
-      <p class="text-blue-700">
-        Economists are divided on the pace of future cuts.
-        While many expect one or two more reductions in 2025, the Bank made it clear that decisions will depend on inflation, consumer spending, and global risks.
-      </p>
-    </div>
-
-    <div class="bg-gradient-to-r from-blue-600 to-green-600 text-white p-6 rounded-lg">
-      <p class="font-semibold text-center">
-        Have questions about how this decision impacts your mortgage?
-        Book a free consultation to review your options.
-      </p>
-      <div class="mt-4 text-center">
-        <a href="/#contact"
-          class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-5 py-3 rounded-lg font-medium">
-          Book a Call
-        </a>
+return {
+  "bank-of-canada-holds-key-interest-rate-June-2025": {
+    title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
+    excerpt:
+      "On June 5, 2025, the Bank of Canada held its key overnight rate at 2.75%. Here's why the central bank paused and what it means for Canadian homeowners and buyers.",
+    content: `
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
+        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Policy Update Summary</h3>
+        <p class="text-yellow-700">
+          At its June 5, 2025 meeting, the Bank of Canada decided to hold its target for the overnight rate at 2.75%.
+          This decision reflects continued progress in reducing core inflation and a desire to evaluate the impact of earlier rate cuts.
+        </p>
       </div>
-    </div>
-  `,
-      date: "June 8, 2025",
-      author: "Rob Bhullar",
-      category: "Interest Rates",
-      image: ""bank-of-canada-building.png?height=400&width=800",
-},
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
+        Why Did the Bank Pause Now?
+      </h2>
+
+      <p class="mb-6 text-gray-700">
+        Canada’s central bank cited improving inflation trends as a key reason for the pause.
+        April’s core inflation readings showed further softening, and economic growth remained subdued.
+        Policymakers emphasized they are taking a cautious approach to avoid reigniting inflation or tightening prematurely.
+      </p>
+
+      <p class="mb-6 text-gray-700">
+        The Bank noted that while shelter price inflation remains elevated, other components of the Consumer Price Index (CPI) are easing.
+        Labour market conditions have also loosened slightly, which is helping reduce wage pressures.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
+        What It Means for Borrowers
+      </h2>
+
+      <ul class="space-y-2 mb-6 text-gray-700">
+        <li>• If you have a variable-rate mortgage, your payment remains unchanged — for now.</li>
+        <li>• Fixed mortgage rates have already adjusted based on bond market expectations.</li>
+        <li>• More rate cuts are still expected later in 2025, but timing is data-dependent.</li>
+      </ul>
+
+      <p class="mb-6 text-gray-700">
+        For many Canadian homeowners, this rate hold offers an opportunity to reassess their mortgage strategy.
+        Whether you’re renewing, refinancing, or entering the market for the first time, understanding your options is more important than ever.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
+        Strategic Advice for the Months Ahead
+      </h2>
+
+      <p class="mb-6 text-gray-700">
+        Borrowers are encouraged to:
+      </p>
+      <ul class="space-y-2 mb-6 text-gray-700">
+        <li>• Lock in pre-approvals if planning to buy in the next 90 days</li>
+        <li>• Consider shorter-term fixed options as rates evolve</li>
+        <li>• Use rate holds and renewal windows to negotiate with leverage</li>
+      </ul>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
+        <h3 class="text-lg font-semibold text-blue-800 mb-2">Market Outlook</h3>
+        <p class="text-blue-700">
+          Economists are divided on the pace of future cuts.
+          While many expect one or two more reductions in 2025, the Bank made it clear that decisions will depend on inflation, consumer spending, and global risks.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-r from-blue-600 to-green-600 text-white p-6 rounded-lg">
+        <p class="font-semibold text-center">
+          Have questions about how this decision impacts your mortgage?
+          Book a free consultation to review your options.
+        </p>
+        <div class="mt-4 text-center">
+          <a href="/#contact"
+            class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-5 py-3 rounded-lg font-medium">
+            Book a Call
+          </a>
+        </div>
+      </div>
+    `,
+    date: "June 8, 2025",
+    author: "Rob Bhullar",
+    category: "Interest Rates",
+    image: "bank-of-canada-building.png?height=400&width=800",
+  },
     "bank-of-canada-cuts-rates-again": {
       title: "Bank of Canada Cuts Key Interest Rate to 2.75%: Historic Relief for Mortgage Holders",
       excerpt:
