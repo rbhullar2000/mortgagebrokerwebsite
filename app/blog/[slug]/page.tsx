@@ -320,15 +320,15 @@ function getPostData() {
                 <div class="flex items-center">
                   <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
                   <div>
-                    <div class="font-medium">September 4, 2025</div>
+                    <div class="font-medium">June 4, 2025</div>
                     <div class="text-sm text-gray-600">Next BoC Rate Decision</div>
                   </div>
                 </div>
                 <div class="flex items-center">
                   <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                   <div>
-                    <div class="font-medium">October 29, 2025</div>
-                    <div class="text-sm text-gray-600">Rate Decision + MPR</div>
+                   <div class="font-medium">September 4, 2025</div>
+                    <div class="text-sm text-gray-600">Next BoC Rate Decision</div>
                   </div>
                 </div>
               </div>
