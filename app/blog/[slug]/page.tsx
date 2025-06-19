@@ -87,6 +87,10 @@ function getPostData() {
       </div>
     </div>
   `,
+      date: "June 8, 2025",
+      author: "Rob Bhullar",
+      category: "Interest Rates",
+      image: ""bank-of-canada-building.png?height=400&width=800",
 }
     "bank-of-canada-cuts-rates-again": {
       title: "Bank of Canada Cuts Key Interest Rate to 2.75%: Historic Relief for Mortgage Holders",
