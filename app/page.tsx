@@ -11,6 +11,89 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export default function HomePage() {
+  // Blog posts data - in a real implementation, this would come from a CMS or database
+  const blogPosts = [
+    {
+      title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
+      excerpt:
+        "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.",
+      date: "June 17, 2025",
+      category: "Interest Rates",
+      slug: "/blog/bank-of-canada-holds-key-interest-rate-June-2025",
+      featured: true,
+      image: "bank-of-canada-building.png",
+    },
+    {
+      title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
+      excerpt:
+        "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
+      date: "March 12, 2025",
+      category: "Interest Rates",
+      slug: "/blog/bank-of-canada-cuts-rates-March-2025",
+      featured: false,
+      image: "bank-of-canada-building.png",
+    },
+    {
+      title: "First-Time Home Buyer Incentive Changes",
+      excerpt:
+        "The federal government announced changes to the First-Time Home Buyer Incentive program, increasing the eligible home price threshold in high-cost markets.",
+      date: "May 22, 2025",
+      category: "Government Programs",
+      slug: "/blog/first-time-home-buyer-incentive-changes",
+      featured: false,
+      image: "first-time-homebuyer-family.png",
+    },
+    {
+      title: "Vancouver Housing Market Update",
+      excerpt:
+        "Vancouver's housing market shows signs of stabilizing after months of price increases. Sales volume has decreased while inventory has slightly increased.",
+      date: "May 15, 2025",
+      category: "Market Updates",
+      slug: "/blog/vancouver-housing-skyline-housing",
+      featured: false,
+      image: "vancouver-skyline-housing.png",
+    },
+    {
+      title: "Fixed vs. Variable: Which is Right for You?",
+      excerpt:
+        "With interest rates stabilizing, many homebuyers are wondering whether to choose a fixed or variable rate mortgage. Here's what you need to consider.",
+      date: "May 8, 2025",
+      category: "Mortgage Tips",
+      slug: "/blog/fixed-vs-variable-which-is-right-for-you",
+      featured: false,
+      image: "fixed-vs-variable-rates.png",
+    },
+    {
+      title: "How to Improve Your Credit Score for Better Mortgage Rates",
+      excerpt:
+        "Your credit score has a significant impact on the mortgage rates you qualify for. Learn practical steps to improve your score before applying.",
+      date: "April 30, 2025",
+      category: "Credit Tips",
+      slug: "/blog/improve-credit-score-for-better-mortgage-rates",
+      featured: false,
+      image: "credit-score-improvement.png",
+    },
+    {
+      title: "Understanding Mortgage Stress Tests in 2024",
+      excerpt:
+        "Mortgage stress tests continue to impact homebuyers across Canada. Learn how the current rules work and how to prepare for them.",
+      date: "April 22, 2025",
+      category: "Regulations",
+      slug: "/blog/understanding-mortgage-stress-tests-2024",
+      featured: false,
+      image: "stress-test-calculator.png",
+    },
+  ]
+
+  // Get featured article
+  const featuredArticle = blogPosts.find((post) => post.featured)
+
+  // Get other recent articles (excluding featured, sorted by date, take 2 most recent)
+  const otherArticles = blogPosts
+    .filter((post) => !post.featured)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 2)
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -336,7 +419,7 @@ export default function HomePage() {
                 <p className="text-xs text-gray-500">More options mean better rates and terms for you</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#032133] mb-2">0.25-0.75%</div>
+                <div className="text-3xl font-bold text-[#032133] mb-2">0.25-0.50%</div>
                 <div className="text-sm text-gray-600 mb-2">Average Savings</div>
                 <p className="text-xs text-gray-500">Typical rate improvement vs. going direct to bank</p>
               </div>
@@ -361,63 +444,54 @@ export default function HomePage() {
           </div>
 
           {/* Featured Article */}
-          <div className="mb-12">
-            <Badge className="mb-4 bg-[#032133] text-white">Featured Article</Badge>
-            <Card className="border-0 shadow-2xl overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-0">
-                <div className="h-64 lg:h-auto overflow-hidden">
-                  <img
-                    src="bank-of-canada-building.png"
-                    alt="Bank of Canada Cuts Key Interest Rate to 2.75%"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-8 flex flex-col justify-center">
-                  <div className="flex justify-between items-center mb-4">
-                    <Badge variant="outline" className="text-[#032133]">
-                      Interest Rates
-                    </Badge>
-                    <span className="text-sm text-gray-500">March 12, 2025</span>
+          {featuredArticle && (
+            <div className="mb-12">
+              <Badge className="mb-4 bg-[#032133] text-white">Featured Article</Badge>
+              <Card className="border-0 shadow-2xl overflow-hidden">
+                <div className="grid lg:grid-cols-2 gap-0">
+                  <div className="h-64 lg:h-auto overflow-hidden">
+                    <img
+                      src={featuredArticle.image || "/placeholder.svg"}
+                      alt={featuredArticle.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link href="/blog/bank-of-canada-holds-key-interest-rate" className="hover:underline">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                      Bank of Canada Cuts Key Interest Rate to 2.75%
-                    </h3>
-                  </Link>
-                  <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                    The Bank of Canada reduced its target for the overnight rate to 2.75%, providing significant relief
-                    for mortgage holders and homebuyers. This marks a continued effort to stimulate economic growth
-                    while managing inflation concerns.
-                  </p>
-                  <Link
-                    href="/blog/bank-of-canada-holds-key-interest-rate"
-                    className="text-[#032133] font-medium flex items-center hover:underline text-lg"
-                  >
-                    Read Full Article <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
+                  <div className="p-8 flex flex-col justify-center">
+                    <div className="flex justify-between items-center mb-4">
+                      <Badge variant="outline" className="text-[#032133]">
+                        {featuredArticle.category}
+                      </Badge>
+                      <span className="text-sm text-gray-500">{featuredArticle.date}</span>
+                    </div>
+                    <Link href={featuredArticle.slug} className="hover:underline">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">{featuredArticle.title}</h3>
+                    </Link>
+                    <p className="text-gray-600 mb-6 text-lg leading-relaxed">{featuredArticle.excerpt}</p>
+                    <Link
+                      href={featuredArticle.slug}
+                      className="text-[#032133] font-medium flex items-center hover:underline text-lg"
+                    >
+                      Read Full Article <ArrowRight className="ml-2 w-5 h-5" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </Card>
-          </div>
+              </Card>
+            </div>
+          )}
 
-          {/* Other Articles */}
+          {/* Other Recent Articles */}
           <div className="grid md:grid-cols-2 gap-8">
-            <NewsCard
-              title="First-Time Home Buyer Programs Enhanced for 2025"
-              excerpt="The federal and provincial governments have expanded first-time homebuyer programs with increased assistance and new opportunities."
-              date="March 15, 2025"
-              category="Government Programs"
-              slug="/blog/first-time-home-buyer-incentive-changes"
-              image="first-time-homebuyer-family.png"
-            />
-            <NewsCard
-              title="Vancouver Housing Market Recovery Underway"
-              excerpt="Vancouver's housing market shows strong signs of recovery as interest rate cuts boost buyer confidence and sales activity."
-              date="June 10, 2025"
-              category="Market Updates"
-              slug="/blog/vancouver-housing-market-update"
-              image="vancouver-skyline-housing.png"
-            />
+            {otherArticles.map((article, index) => (
+              <NewsCard
+                key={index}
+                title={article.title}
+                excerpt={article.excerpt}
+                date={article.date}
+                category={article.category}
+                slug={article.slug}
+                image={article.image}
+              />
+            ))}
           </div>
 
           <div className="text-center mt-12">
@@ -470,7 +544,7 @@ export default function HomePage() {
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
                     <p className="text-gray-600">contact@bcmortgageteam.com</p>
-                    <p className="text-sm text-gray-500">Thanks for reaching out — we’ll be in touch shortly.</p>
+                    <p className="text-sm text-gray-500">Thanks for reaching out — we'll be in touch shortly.</p>
                   </div>
                 </div>
 
