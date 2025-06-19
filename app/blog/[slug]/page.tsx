@@ -1,6 +1,6 @@
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const posts = getPostData()
-  const post = posts[params.slug] || posts["bank-of-canada-cuts-rates-again"]
+  const post = posts[params.slug] || posts["bank-of-canada-cuts-rates-again"] 
 
   return {
     title: `${post.title} | Rob Bhullar Mortgage Blog`, 
