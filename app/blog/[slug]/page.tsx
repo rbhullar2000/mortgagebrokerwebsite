@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 function getPostData() {
   return {
-  "bank-of-canada-holds-key-interest-rate": {
+  "bank-of-canada-holds-key-interest-rate-June-2025": {
       title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
       excerpt:
         "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Here’s why the Bank paused and how homeowners and buyers should respond.",
