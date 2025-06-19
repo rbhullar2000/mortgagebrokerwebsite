@@ -66,7 +66,7 @@ export default function BlogPage() {
       featured: false,
       image: "vancouver-skyline-housing.png",
     },
-    {
+    {/*    {
       title: "Fixed vs. Variable: Which is Right for You?",
       excerpt:
         "With interest rates stabilizing, many homebuyers are wondering whether to choose a fixed or variable rate mortgage. Here's what you need to consider.",
@@ -75,7 +75,7 @@ export default function BlogPage() {
       slug: "/blog/fixed-vs-variable-which-is-right-for-you",
       featured: false,
       image: "fixed-vs-variable-rates.png",
-    },
+    }, */}
     {
       title: "How to Improve Your Credit Score for Better Mortgage Rates",
       excerpt:
