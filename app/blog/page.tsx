@@ -26,7 +26,7 @@ export default function BlogPage() {
       category: "Interest Rates",
       slug: "/blog/bank-of-canada-holds-key-interest-rate-June-2025",
       featured: true,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/bank-of-canada-building.png?height=300&width=600",
     },
     {
   title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
