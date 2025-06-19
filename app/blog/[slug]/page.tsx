@@ -466,7 +466,7 @@ function getPostData() {
 
         <div class="space-y-6 mb-8">
           <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-            <h3 class="text-xl font-semibold text-green-800 mb-3">BC First-Time Home Buyer Down Payment Loan (NEW)</h3>
+            <h3 class="text-xl font-semibold text-green-800 mb-3">BC First-Time Home Buyer Down Payment Loan (NEW and should be confirmed soon!)</h3>
             <div class="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 class="font-medium text-green-700 mb-2">Program Details</h4>
