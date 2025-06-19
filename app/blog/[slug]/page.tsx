@@ -92,7 +92,7 @@ function getPostData() {
     category: "Interest Rates",
     image: "bank-of-canada-building.png?height=400&width=800",
   },
-    "bank-of-canada-cuts-rates-again": {
+    "bank-of-canada-cuts-rates-March 2025": {
       title: "Bank of Canada Cuts Key Interest Rate to 2.75%: Historic Relief for Mortgage Holders",
       excerpt:
         "The Bank of Canada cut its overnight rate by 0.25% to 2.75%, marking the fifth consecutive rate cut since June 2024. This brings significant relief to variable-rate mortgage holders and new opportunities for homebuyers.",
@@ -366,7 +366,7 @@ function getPostData() {
           </p>
         </div>
       `,
-      date: "June 13, 2025",
+      date: "March 12, 2025",
       author: "Rob Bhullar",
       category: "Interest Rates",
       image: "bank-of-canada-building.png",
