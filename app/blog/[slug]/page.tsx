@@ -87,7 +87,7 @@ function getPostData() {
         </div>
       </div>
     `,
-    date: "June 8, 2025",
+    date: "June 17, 2025",
     author: "Rob Bhullar",
     category: "Interest Rates",
     image: "bank-of-canada-building.png?height=400&width=800",
