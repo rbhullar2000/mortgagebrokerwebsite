@@ -64,7 +64,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h5 className="font-semibold mb-3 mt-6 md:mt-0">Follow Me</h5>
+            <h5 className="font-semibold mb-3 mt-6 md:mt-0">Follow on X</h5>
             <div className="flex space-x-3">
               <Link
                 href="https://x.com/robbhullar"
