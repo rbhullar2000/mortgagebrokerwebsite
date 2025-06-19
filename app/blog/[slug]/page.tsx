@@ -3,7 +3,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = posts[params.slug] || posts["bank-of-canada-cuts-rates-again"]
 
   return {
-    title: `${post.title} | Rob Bhullar Mortgage Blog`,
+    title: `${post.title} | Rob Bhullar Mortgage Blog`, 
     description: post.excerpt,
   }
 }
