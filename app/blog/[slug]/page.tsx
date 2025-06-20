@@ -1554,7 +1554,7 @@ Lenders use credit scores to assess risk. A higher score signals responsible cre
 
 
 
-<section class="max-w-3xl mx-auto px-6 py-10 text-gray-800">
+<section class="mx-auto px-6 py-10 text-gray-800">
   <p class="mb-6">
     Even small differences in your credit profile can have a significant impact on monthly payments.
     For example, a <strong>$500,000 mortgage</strong> at <strong>4.39%</strong> vs <strong>5.39%</strong> could mean a difference of over <strong>$300/month</strong> in payments — and more than <strong>$100,000</strong> in interest over 25 years.
