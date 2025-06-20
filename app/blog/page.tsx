@@ -62,20 +62,20 @@ export default function BlogPage() {
         "Vancouver's housing market shows signs of stabilizing after months of price increases. Sales volume has decreased while inventory has slightly increased.",
       date: "May 15, 2025",
       category: "Market Updates",
-      slug: "/blog/vancouver-housing-market-update",
+      slug: "/blog/vancouver-housing-skyline-housing",
       featured: false,
       image: "vancouver-skyline-housing.png",
     },
-//        {
-//      title: "Fixed vs. Variable: Which is Right for You?",
-//      excerpt:
-//        "With interest rates stabilizing, many homebuyers are wondering whether to choose a fixed or variable rate mortgage. Here's what you need to consider.",
-//      date: "May 8, 2025",
-//      category: "Mortgage Tips",
-//      slug: "/blog/fixed-vs-variable-which-is-right-for-you",
-//      featured: false,
-//      image: "fixed-vs-variable-rates.png",
-//    },
+    //        {
+    //      title: "Fixed vs. Variable: Which is Right for You?",
+    //      excerpt:
+    //        "With interest rates stabilizing, many homebuyers are wondering whether to choose a fixed or variable rate mortgage. Here's what you need to consider.",
+    //      date: "May 8, 2025",
+    //      category: "Mortgage Tips",
+    //      slug: "/blog/fixed-vs-variable-which-is-right-for-you",
+    //      featured: false,
+    //      image: "fixed-vs-variable-rates.png",
+    //    },
     {
       title: "How to Improve Your Credit Score for Better Mortgage Rates",
       excerpt:
@@ -86,16 +86,16 @@ export default function BlogPage() {
       featured: false,
       image: "credit-score-improvement.png",
     },
-//    {
-//      title: "Understanding Mortgage Stress Tests in 2024",
-//      excerpt:
-//        "Mortgage stress tests continue to impact homebuyers across Canada. Learn how the current rules work and how to prepare for them.",
-//      date: "April 22, 2025",
-//      category: "Regulations",
-//      slug: "/blog/understanding-mortgage-stress-tests-2024",
-//      featured: false,
-//      image: "stress-test-calculator.png",
-//    },
+    //    {
+    //      title: "Understanding Mortgage Stress Tests in 2024",
+    //      excerpt:
+    //        "Mortgage stress tests continue to impact homebuyers across Canada. Learn how the current rules work and how to prepare for them.",
+    //      date: "April 22, 2025",
+    //      category: "Regulations",
+    //      slug: "/blog/understanding-mortgage-stress-tests-2024",
+    //      featured: false,
+    //      image: "stress-test-calculator.png",
+    //    },
   ]
 
   const categories = [
@@ -113,10 +113,10 @@ export default function BlogPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
+      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Mortgage Blog & Resources</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-[#1D2D44] mb-6">Mortgage Blog & Resources</h1>
             <p className="text-xl text-gray-600 mb-8">
               Expert mortgage advice, market updates, and financial tips to help you make informed decisions.
             </p>
@@ -132,13 +132,13 @@ export default function BlogPage() {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900">Featured Article</h2>
+            <h2 className="text-2xl font-bold text-[#1D2D44]">Featured Article</h2>
           </div>
-          <div className="bg-slate-50 rounded-2xl p-8">
+          <div className="bg-[#F4F6F8] rounded-2xl p-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <Badge className="mb-4">Interest Rates</Badge>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <Badge className="mb-4 bg-[#1D2D44] text-white">Interest Rates</Badge>
+                <h3 className="text-3xl font-bold text-[#1D2D44] mb-4">
                   <Link href="/blog/bank-of-canada-holds-key-interest-rate-June-2025" className="hover:underline">
                     Bank of Canada Holds Key Interest Rate
                   </Link>
@@ -149,7 +149,7 @@ export default function BlogPage() {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">June 17, 2025</span>
-                  <Button asChild className="bg-[#032133] hover:bg-[#032133]/90">
+                  <Button asChild className="bg-[#1D2D44] hover:bg-[#1D2D44]/90">
                     <Link href="/blog/bank-of-canada-holds-key-interest-rate-June-2025">Read Full Article</Link>
                   </Button>
                 </div>
@@ -168,7 +168,7 @@ export default function BlogPage() {
           <div className="grid lg:grid-cols-4 gap-8">
             <div className="lg:col-span-3">
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900">Latest Articles</h2>
+                <h2 className="text-2xl font-bold text-[#1D2D44]">Latest Articles</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 {blogPosts
@@ -186,7 +186,7 @@ export default function BlogPage() {
                   ))}
               </div>
               <div className="mt-12 flex justify-center">
-                <Button variant="outline" size="lg">
+                <Button className="bg-[#1D2D44] hover:bg-[#1D2D44]/90 text-white" size="lg">
                   Load More Articles
                 </Button>
               </div>
