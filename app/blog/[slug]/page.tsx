@@ -1499,6 +1499,61 @@ function getPostData() {
 Lenders use credit scores to assess risk. A higher score signals responsible credit behavior and increases your chances of being offered better rates, flexible terms, and access to top-tier lending products.</p>
     </div>
 
+<section class="bg-gray-900 text-white py-12 px-6 md:px-16">
+  <h2 class="text-2xl md:text-3xl font-bold mb-4">How Credit Score Affects Mortgage Rates</h2>
+  <p class="mb-6 text-gray-300">
+    Here’s a snapshot of current mortgage rate tiers (as of June 2025) and how they correlate to your credit score:
+  </p>
+
+  <div class="overflow-x-auto">
+    <table class="min-w-full table-auto text-left border-collapse border border-gray-700">
+      <thead class="bg-gray-800 text-sm uppercase text-gray-300">
+        <tr>
+          <th class="px-4 py-3 border border-gray-700">Credit Score Range</th>
+          <th class="px-4 py-3 border border-gray-700">Rating</th>
+          <th class="px-4 py-3 border border-gray-700">Typical Mortgage Rate</th>
+          <th class="px-4 py-3 border border-gray-700">Notes</th>
+        </tr>
+      </thead>
+      <tbody class="text-sm text-gray-100 divide-y divide-gray-700">
+        <tr>
+          <td class="px-4 py-3">760+</td>
+          <td class="px-4 py-3">Excellent</td>
+          <td class="px-4 py-3">4.39%</td>
+          <td class="px-4 py-3">Access to best rates and lender incentives</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3">700–759</td>
+          <td class="px-4 py-3">Very Good</td>
+          <td class="px-4 py-3">4.64%</td>
+          <td class="px-4 py-3">Competitive offers with minor limitations</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3">650–699</td>
+          <td class="px-4 py-3">Good</td>
+          <td class="px-4 py-3">4.89%</td>
+          <td class="px-4 py-3">Qualify for most products, but higher costs</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3">600–649</td>
+          <td class="px-4 py-3">Fair</td>
+          <td class="px-4 py-3">5.39%</td>
+          <td class="px-4 py-3">Limited lender options, higher payments</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-3">Below 600</td>
+          <td class="px-4 py-3">Poor</td>
+          <td class="px-4 py-3">6.89%+</td>
+          <td class="px-4 py-3">Often requires private or alternative lenders</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+
     <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Credit Score Ranges and Mortgage Rates</h2>
     
     <div class="bg-gray-50 p-6 rounded-lg mb-8">
