@@ -1,5 +1,6 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const posts = getPostData()
@@ -2222,30 +2223,44 @@ Lenders use credit scores to assess risk. A higher score signals responsible cre
 }
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
-  const posts = getPostData()
-  const post = posts[params.slug]
+  const posts = getPostData();
+  const post = posts[params.slug];
 
-  // If no post found, show a 404 or redirect to blog index
   if (!post) {
     return (
-      <div className="container mx-auto py-12 text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Post Not Found</h1>
-        <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
-        <a href="/blog" className="text-blue-600 hover:text-blue-800 underline">
-          Return to Blog
-        </a>
-      </div>
-    )
+      <>
+        <Header />
+        <div className="container mx-auto py-12 text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Post Not Found</h1>
+          <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+          <a href="/blog" className="text-blue-600 hover:text-blue-800 underline">
+            Return to Blog
+          </a>
+        </div>
+        <Footer />
+      </>
+    );
   }
 
   return (
-    <div className="container mx-auto py-12">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">{post.title}</h1>
-      <div className="text-gray-600 mb-4">
-        Published on {post.date} by {post.author} in {post.category}
+    <>
+      <Header />
+      <div className="container mx-auto py-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">{post.title}</h1>
+        <div className="text-gray-600 mb-4">
+          Published on {post.date} by {post.author} in {post.category}
+        </div>
+        <img
+          src={`/${post.image}`}
+          alt={post.title}
+          className="rounded-lg shadow-md mb-8"
+        />
+        <div
+          className="prose max-w-none"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
       </div>
-      <img src={`/${post.image}`} alt={post.title} className="rounded-lg shadow-md mb-8" />
-      <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
-    </div>
-  )
+      <Footer />
+    </>
+  );
 }
