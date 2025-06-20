@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Calculator, TrendingUp, Shield, AlertTriangle, CheckCircle } from "lucide-react"
+import { Calculator, TrendingUp, Shield, AlertTriangle, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { Header } from "@/components/header"
@@ -16,15 +16,15 @@ export default function RenewalPageClient() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-red-100 text-red-800 hover:bg-red-100">
-                <AlertTriangle className="w-4 h-4 mr-2" />
+              <Badge className="mb-4 bg-gray-100 text-[#1D2D44] hover:bg-gray-100">
+                <AlertTriangle className="w-4 h-4 mr-2 text-[#D4AF37]" />
                 Don't Auto-Renew!
               </Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6">
                 Save Thousands on Your <span className="text-[#032133]">Mortgage Renewal</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -42,7 +42,12 @@ export default function RenewalPageClient() {
                     Get Better Rate Now
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  asChild
+                  className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+                >
                   <Link href="#calculator">
                     <Calculator className="w-5 h-5 mr-2" />
                     Calculate Savings
@@ -50,14 +55,14 @@ export default function RenewalPageClient() {
                 </Button>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="font-bold text-gray-900 mb-2">Average Client Savings:</h3>
+                <h3 className="font-bold text-[#1D2D44] mb-2">Average Client Savings:</h3>
                 <div className="text-3xl font-bold text-[#032133]">$3,200/year</div>
                 <p className="text-sm text-gray-600">Based on $500K mortgage, 0.5% rate improvement</p>
               </div>
             </div>
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Check Your Renewal Options</h3>
+                <h3 className="text-2xl font-bold text-[#1D2D44] mb-6">Check Your Renewal Options</h3>
                 <ContactForm variant="hero" />
               </div>
             </div>
@@ -69,26 +74,26 @@ export default function RenewalPageClient() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-8 mb-12">
+            <div className="bg-[#F4F6F8] border border-[#D4AF37] rounded-lg p-8 mb-12">
               <div className="flex items-start space-x-4">
-                <AlertTriangle className="w-8 h-8 text-red-600 mt-1" />
+                <AlertTriangle className="w-8 h-8 text-[#D4AF37] mt-1" />
                 <div>
-                  <h3 className="text-2xl font-bold text-red-900 mb-4">Don't Make This Costly Mistake!</h3>
-                  <p className="text-red-800 mb-4">
+                  <h3 className="text-2xl font-bold text-[#1D2D44] mb-4">Don't Make This Costly Mistake!</h3>
+                  <p className="text-black mb-4">
                     Most homeowners simply sign their bank's renewal offer without shopping around. This costs the
                     average Canadian homeowner <strong>$3,200 per year</strong> in unnecessary interest payments.
                   </p>
-                  <ul className="space-y-2 text-red-700">
+                  <ul className="space-y-2 text-black">
                     <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-red-600" />
+                      <CheckCircle className="w-5 h-5 mr-3 text-[#D4AF37]" />
                       Banks offer their existing customers higher rates than new customers
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-red-600" />
+                      <CheckCircle className="w-5 h-5 mr-3 text-[#D4AF37]" />
                       You have 120 days before renewal to shop around
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3 text-red-600" />
+                      <CheckCircle className="w-5 h-5 mr-3 text-[#D4AF37]" />
                       My service is completely FREE for renewals
                     </li>
                   </ul>
@@ -100,10 +105,10 @@ export default function RenewalPageClient() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Use a Broker for Renewal?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Why Use a Broker for Renewal?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               I work for YOU, not the bank. My job is to get you the best possible rate and terms.
             </p>
@@ -134,14 +139,14 @@ export default function RenewalPageClient() {
             ].map((benefit, index) => (
               <Card key={index} className="border-0 shadow-lg text-center">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
+                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#1D2D44] mb-4 mx-auto">
                     {benefit.icon}
                   </div>
                   <CardTitle className="text-xl">{benefit.title}</CardTitle>
                   <CardDescription className="text-gray-600">{benefit.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-3xl font-bold text-[#032133] mb-1">{benefit.stat}</div>
+                  <div className="text-3xl font-bold text-[#1D2D44] mb-1">{benefit.stat}</div>
                   <div className="text-sm text-gray-600">{benefit.statLabel}</div>
                 </CardContent>
               </Card>
@@ -154,7 +159,7 @@ export default function RenewalPageClient() {
       <section id="calculator" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Calculate Your Potential Savings</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Calculate Your Potential Savings</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               See how much you could save by getting a better rate on your mortgage renewal.
             </p>
@@ -164,7 +169,7 @@ export default function RenewalPageClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#032133] text-white">
+      <section className="py-20 bg-gradient-to-r from-[#1D2D44] to-[#D4AF37] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Your Renewal is Coming Up?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -176,7 +181,13 @@ export default function RenewalPageClient() {
                 Check My Options
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild onClick={() => window.trackPhoneClick?.()}>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+              onClick={() => window.trackPhoneClick?.()}
+            >
               {/*   <Link href="tel:+16041234567">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
