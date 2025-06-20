@@ -284,285 +284,285 @@ function getPostData() {
     image: "bank-of-canada-building.png",
   },
 
-    "bank-of-canada-cuts-rates-March-2025": {
-      title: "Bank of Canada Cuts Key Interest Rate to 2.75%: Relief for Mortgage Holders",
-      excerpt:
-        "The Bank of Canada cut its overnight rate by 0.25% to 2.75%, marking the fifth consecutive rate cut since June 2024. This brings significant relief to variable-rate mortgage holders and new opportunities for homebuyers.",
-      content: `
-        <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded-r-lg">
-          <div class="flex items-center mb-3">
-            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <h3 class="text-lg font-semibold text-green-800">Great News for Borrowers</h3>
-          </div>
-          <p class="text-green-700">The Bank of Canada cut its overnight rate to 2.75%, down from the 5% peak in 2023-2024. This represents a total reduction of 2.25% since rate cuts began, providing substantial savings for mortgage holders and improved affordability for homebuyers. </p>
+     "bank-of-canada-cuts-rates-March-2025": {
+    title: "Bank of Canada Cuts Key Interest Rate to 2.75%: Relief for Mortgage Holders",
+    excerpt:
+      "The Bank of Canada cut its overnight rate by 0.25% to 2.75%, marking the fifth consecutive rate cut since June 2024. This brings significant relief to variable-rate mortgage holders and new opportunities for homebuyers.",
+    content: `
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">Great News for Borrowers</h3>
+      </div>
+      <p class="text-black">The Bank of Canada cut its overnight rate to 2.75%, down from the 5% peak in 2023-2024. This represents a total reduction of 2.25% since rate cuts began, providing substantial savings for mortgage holders and improved affordability for homebuyers.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Bank of Canada's Decision</h2>
+    
+    <p class="mb-6 text-lg leading-relaxed text-black">The Bank of Canada, in its announcement on March 12, 2025, lowered its target for the overnight rate by 25 basis points to <strong>2.75%</strong>, with the Bank Rate now at <strong>3.00%</strong> and the deposit rate at <strong>2.75%</strong>. This marks the fifth consecutive rate cut since the easing cycle began in June 2024, as inflation has returned closer to the 2% target and economic growth has moderated. This is the most recent information as of March 2025.</p>
+
+    <div class="p-6 rounded-lg mb-8" style="background-color: #F4F6F8;">
+      <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Rate History at a Glance</h3>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+          <div class="text-2xl font-bold" style="color: #1D2D44;">2.75%</div>
+          <div class="text-sm text-black">Current Overnight Rate</div>
         </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">The Bank of Canada's Decision</h2>
-        
-        <p class="mb-6 text-lg leading-relaxed">The Bank of Canada, in its announcement on March 12, 2025, lowered its target for the overnight rate by 25 basis points to <strong>2.75%</strong>, with the Bank Rate now at <strong>3.00%</strong> and the deposit rate at <strong>2.75%</strong>. This marks the fifth consecutive rate cut since the easing cycle began in June 2024, as inflation has returned closer to the 2% target and economic growth has moderated. This is the most recent information as of March 2025.</p>
-
-        <div class="bg-gray-50 p-6 rounded-lg mb-8">
-          <h3 class="text-xl font-semibold mb-4 text-gray-800">Rate History at a Glance</h3>
-          <div class="grid md:grid-cols-3 gap-4">
-            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
-              <div class="text-2xl font-bold text-green-600">2.75%</div>
-              <div class="text-sm text-gray-600">Current Overnight Rate</div>
-            </div>
-            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
-              <div class="text-2xl font-bold text-blue-600">3.00%</div>
-              <div class="text-sm text-gray-600">Bank Rate</div>
-            </div>
-            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
-              <div class="text-2xl font-bold text-purple-600">2.25%</div>
-              <div class="text-sm text-gray-600">Total Rate Cuts Since Peak</div>
-            </div>
-          </div>
+        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+          <div class="text-2xl font-bold" style="color: #1D2D44;">3.00%</div>
+          <div class="text-sm text-black">Bank Rate</div>
         </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Why Rates Were Cut</h2>
-        
-        <p class="mb-4 leading-relaxed">The Bank's decision reflects several key economic developments:</p>
-        
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-            <h3 class="font-semibold text-green-800 mb-3">Positive Economic Indicators</h3>
-            <ul class="space-y-2 text-green-700">
-              <li>• Inflation has fallen to 2.8%, near the 2% target</li>
-              <li>• Core inflation measures showing sustained decline</li>
-              <li>• Economic growth moderating as intended</li>
-              <li>• Labor market rebalancing without major disruption</li>
-            </ul>
-          </div>
-          <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
-            <h3 class="font-semibold text-blue-800 mb-3">Supporting Factors</h3>
-            <ul class="space-y-2 text-blue-700">
-              <li>• Housing market showing signs of stabilization</li>
-              <li>• Consumer spending adjusting to higher rates</li>
-              <li>• Business investment remaining resilient</li>
-              <li>• Global economic conditions improving</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Impact on Different Mortgage Types</h2>
-
-        <div class="space-y-6 mb-8">
-          <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-            <h3 class="text-xl font-semibold text-green-800 mb-3 flex items-center">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-              </svg>
-              Variable-Rate Mortgage Holders
-            </h3>
-            <p class="text-green-700 mb-3">Variable-rate mortgage holders are the biggest winners from this rate cut:</p>
-            <ul class="space-y-1 text-green-700">
-              <li>• <strong>Immediate Savings:</strong> Monthly payments decrease automatically</li>
-              <li>• <strong>Cumulative Relief:</strong> Total savings of ~$750/month on a $500K mortgage since peak rates</li>
-              <li>• <strong>Principal Paydown:</strong> More of your payment goes toward principal</li>
-            </ul>
-            <div class="mt-4 p-3 bg-green-100 rounded-lg">
-              <div class="text-sm text-green-800">
-                <strong>Example:</strong> On a $500,000 variable mortgage, you're now saving approximately $750/month compared to the 5% peak rate.
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-            <h3 class="text-xl font-semibold text-blue-800 mb-3 flex items-center">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-              </svg>
-              Fixed-Rate Mortgage Renewals
-            </h3>
-            <p class="text-blue-700 mb-3">Those renewing fixed-rate mortgages are seeing much better options:</p>
-            <ul class="space-y-1 text-blue-700">
-              <li>• <strong>Lower Renewal Rates:</strong> 5-year fixed rates now around 4.5-5.0%</li>
-              <li>• <strong>Better Terms:</strong> Lenders competing more aggressively</li>
-              <li>• <strong>Refinancing Opportunities:</strong> Consider breaking existing high-rate mortgages</li>
-            </ul>
-          </div>
-
-          <div class="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
-            <h3 class="text-xl font-semibold text-purple-800 mb-3 flex items-center">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-              </svg>
-              Prospective Homebuyers
-            </h3>
-            <p class="text-purple-700 mb-3">New homebuyers are benefiting from improved affordability:</p>
-            <ul class="space-y-1 text-purple-700">
-              <li>• <strong>Lower Mortgage Rates:</strong> Variable rates now starting around 4.5%</li>
-              <li>• <strong>Increased Buying Power:</strong> Qualify for larger mortgages</li>
-              <li>• <strong>Market Opportunities:</strong> More balanced market conditions</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Current Mortgage Rate Environment</h2>
-
-        <div class="bg-gray-50 p-6 rounded-lg mb-8">
-  <h3 class="text-xl font-semibold mb-4 text-gray-800">Typical Rates as of March 2025</h3>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white p-4 rounded-lg shadow-sm">
-      <h4 class="font-semibold text-gray-800 mb-2">Variable Rates</h4>
-      <div class="space-y-2">
-        <div class="flex justify-between">
-          <span class="text-gray-600">Prime - 0.70%</span>
-          <span class="font-bold text-green-600">4.25%</span>
-        </div>
-        <div class="flex justify-between">
-          <span class="text-gray-600">Prime - 0.50%</span>
-          <span class="font-bold text-green-600">4.45%</span>
-        </div>
-        <div class="flex justify-between">
-          <span class="text-gray-600">Prime</span>
-          <span class="font-bold text-green-600">4.95%</span>
+        <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+          <div class="text-2xl font-bold" style="color: #D4AF37;">2.25%</div>
+          <div class="text-sm text-black">Total Rate Cuts Since Peak</div>
         </div>
       </div>
     </div>
-    <div class="bg-white p-4 rounded-lg shadow-sm">
-      <h4 class="font-semibold text-gray-800 mb-2">Fixed Rates</h4>
-      <div class="space-y-2">
-        <div class="flex justify-between">
-          <span class="text-gray-600">1-Year Fixed</span>
-          <span class="font-bold text-blue-600">4.29%</span>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Why Rates Were Cut</h2>
+    
+    <p class="mb-4 leading-relaxed text-black">The Bank's decision reflects several key economic developments:</p>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="font-semibold mb-3" style="color: #1D2D44;">Positive Economic Indicators</h3>
+        <ul class="space-y-2 text-black">
+          <li>• Inflation has fallen to 2.8%, near the 2% target</li>
+          <li>• Core inflation measures showing sustained decline</li>
+          <li>• Economic growth moderating as intended</li>
+          <li>• Labor market rebalancing without major disruption</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="font-semibold mb-3" style="color: #1D2D44;">Supporting Factors</h3>
+        <ul class="space-y-2 text-black">
+          <li>• Housing market showing signs of stabilization</li>
+          <li>• Consumer spending adjusting to higher rates</li>
+          <li>• Business investment remaining resilient</li>
+          <li>• Global economic conditions improving</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Impact on Different Mortgage Types</h2>
+
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+          Variable-Rate Mortgage Holders
+        </h3>
+        <p class="text-black mb-3">Variable-rate mortgage holders are the biggest winners from this rate cut:</p>
+        <ul class="space-y-1 text-black">
+          <li>• <strong>Immediate Savings:</strong> Monthly payments decrease automatically</li>
+          <li>• <strong>Cumulative Relief:</strong> Total savings of ~$750/month on a $500K mortgage since peak rates</li>
+          <li>• <strong>Principal Paydown:</strong> More of your payment goes toward principal</li>
+        </ul>
+        <div class="mt-4 p-3 rounded-lg" style="background-color: #D4AF37; color: white;">
+          <div class="text-sm">
+            <strong>Example:</strong> On a $500,000 variable mortgage, you're now saving approximately $750/month compared to the 5% peak rate.
+          </div>
         </div>
-        <div class="flex justify-between">
-          <span class="text-gray-600">3-Year Fixed</span>
-          <span class="font-bold text-blue-600">4.49%</span>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+          </svg>
+          Fixed-Rate Mortgage Renewals
+        </h3>
+        <p class="text-black mb-3">Those renewing fixed-rate mortgages are seeing much better options:</p>
+        <ul class="space-y-1 text-black">
+          <li>• <strong>Lower Renewal Rates:</strong> 5-year fixed rates now around 4.5-5.0%</li>
+          <li>• <strong>Better Terms:</strong> Lenders competing more aggressively</li>
+          <li>• <strong>Refinancing Opportunities:</strong> Consider breaking existing high-rate mortgages</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          </svg>
+          Prospective Homebuyers
+        </h3>
+        <p class="text-black mb-3">New homebuyers are benefiting from improved affordability:</p>
+        <ul class="space-y-1 text-black">
+          <li>• <strong>Lower Mortgage Rates:</strong> Variable rates now starting around 4.5%</li>
+          <li>• <strong>Increased Buying Power:</strong> Qualify for larger mortgages</li>
+          <li>• <strong>Market Opportunities:</strong> More balanced market conditions</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Current Mortgage Rate Environment</h2>
+
+    <div class="p-6 rounded-lg mb-8" style="background-color: #F4F6F8;">
+      <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Typical Rates as of March 2025</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold mb-2" style="color: #1D2D44;">Variable Rates</h4>
+          <div class="space-y-2">
+            <div class="flex justify-between">
+              <span class="text-black">Prime - 0.70%</span>
+              <span class="font-bold" style="color: #D4AF37;">4.25%</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-black">Prime - 0.50%</span>
+              <span class="font-bold" style="color: #D4AF37;">4.45%</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-black">Prime</span>
+              <span class="font-bold" style="color: #D4AF37;">4.95%</span>
+            </div>
+          </div>
         </div>
-        <div class="flex justify-between">
-          <span class="text-gray-600">5-Year Fixed</span>
-          <span class="font-bold text-blue-600">4.69%</span>
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold mb-2" style="color: #1D2D44;">Fixed Rates</h4>
+          <div class="space-y-2">
+            <div class="flex justify-between">
+              <span class="text-black">1-Year Fixed</span>
+              <span class="font-bold" style="color: #1D2D44;">4.29%</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-black">3-Year Fixed</span>
+              <span class="font-bold" style="color: #1D2D44;">4.49%</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-black">5-Year Fixed</span>
+              <span class="font-bold" style="color: #1D2D44;">4.69%</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">What's Next for Interest Rates?</h2>
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">What's Next for Interest Rates?</h2>
 
-        <div class="space-y-4 mb-8">
-          <div class="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
-            <h3 class="text-lg font-semibold text-yellow-800 mb-3">Bank of Canada's Forward Guidance</h3>
-            <p class="text-yellow-700 mb-3">The Bank has indicated that further rate cuts are possible if:</p>
-            <ul class="space-y-2 text-yellow-700">
-              <li>• Inflation continues to move toward the 2% target</li>
-              <li>• Economic growth remains below potential</li>
-              <li>• Labor market conditions continue to normalize</li>
-              <li>• Global economic conditions remain supportive</li>
-            </ul>
-          </div>
+    <div class="space-y-4 mb-8">
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Bank of Canada's Forward Guidance</h3>
+        <p class="text-black mb-3">The Bank has indicated that further rate cuts are possible if:</p>
+        <ul class="space-y-2 text-black">
+          <li>• Inflation continues to move toward the 2% target</li>
+          <li>• Economic growth remains below potential</li>
+          <li>• Labor market conditions continue to normalize</li>
+          <li>• Global economic conditions remain supportive</li>
+        </ul>
+      </div>
 
-          <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
-            <h3 class="text-lg font-semibold text-blue-800 mb-3">Market Expectations</h3>
-            <p class="text-blue-700 mb-3">Financial markets are pricing in:</p>
-            <ul class="space-y-2 text-blue-700">
-              <li>• Potential for 1-2 more rate cuts in 2025</li>
-              <li>• Overnight rate potentially reaching 2.75-3.00%</li>
-              <li>• Gradual approach to further easing</li>
-              <li>• Data-dependent decision making</li>
-            </ul>
-          </div>
-        </div>
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Market Expectations</h3>
+        <p class="text-black mb-3">Financial markets are pricing in:</p>
+        <ul class="space-y-2 text-black">
+          <li>• Potential for 1-2 more rate cuts in 2025</li>
+          <li>• Overnight rate potentially reaching 2.75-3.00%</li>
+          <li>• Gradual approach to further easing</li>
+          <li>• Data-dependent decision making</li>
+        </ul>
+      </div>
+    </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Strategic Considerations</h2>
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Strategic Considerations</h2>
 
-        <div class="space-y-4 mb-8">
-          <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-            <h3 class="text-lg font-semibold text-green-800 mb-3">If You Have a Variable Rate</h3>
-            <ul class="space-y-2 text-green-700">
-              <li>• <strong>Enjoy the Savings:</strong> Your payments are automatically lower</li>
-              <li>• <strong>Consider Prepayments:</strong> Use savings to pay down principal</li>
-              <li>• <strong>Stay Flexible:</strong> Variable rates may continue to benefit from cuts</li>
-              <li>• <strong>Monitor Trends:</strong> Watch for signs of rate stabilization</li>
-            </ul>
-          </div>
+    <div class="space-y-4 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">If You Have a Variable Rate</h3>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Enjoy the Savings:</strong> Your payments are automatically lower</li>
+          <li>• <strong>Consider Prepayments:</strong> Use savings to pay down principal</li>
+          <li>• <strong>Stay Flexible:</strong> Variable rates may continue to benefit from cuts</li>
+          <li>• <strong>Monitor Trends:</strong> Watch for signs of rate stabilization</li>
+        </ul>
+      </div>
 
-          <div class="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
-            <h3 class="text-lg font-semibold text-orange-800 mb-3">If You Have a High Fixed Rate</h3>
-            <ul class="space-y-2 text-orange-700">
-              <li>• <strong>Consider Breaking:</strong> Calculate penalty vs. savings</li>
-              <li>• <strong>Blend and Extend:</strong> Some lenders offer this option</li>
-              <li>• <strong>Wait for Renewal:</strong> If penalty is too high</li>
-              <li>• <strong>Get Professional Advice:</strong> Complex calculations required</li>
-            </ul>
-          </div>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">If You Have a High Fixed Rate</h3>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Consider Breaking:</strong> Calculate penalty vs. savings</li>
+          <li>• <strong>Blend and Extend:</strong> Some lenders offer this option</li>
+          <li>• <strong>Wait for Renewal:</strong> If penalty is too high</li>
+          <li>• <strong>Get Professional Advice:</strong> Complex calculations required</li>
+        </ul>
+      </div>
 
-          <div class="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
-            <h3 class="text-lg font-semibold text-purple-800 mb-3">If You're Buying a Home</h3>
-            <ul class="space-y-2 text-purple-700">
-              <li>• <strong>Get Pre-Approved:</strong> Lock in current improved rates</li>
-              <li>• <strong>Consider Variable:</strong> May benefit from further cuts</li>
-              <li>• <strong>Shop Around:</strong> Lenders are competing aggressively</li>
-              <li>• <strong>Act Strategically:</strong> Market conditions are improving</li>
-            </ul>
-          </div>
-        </div>
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">If You're Buying a Home</h3>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Get Pre-Approved:</strong> Lock in current improved rates</li>
+          <li>• <strong>Consider Variable:</strong> May benefit from further cuts</li>
+          <li>• <strong>Shop Around:</strong> Lenders are competing aggressively</li>
+          <li>• <strong>Act Strategically:</strong> Market conditions are improving</li>
+        </ul>
+      </div>
+    </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Looking Ahead: Key Dates</h2>
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Looking Ahead: Key Dates</h2>
 
-        <div class="bg-slate-50 p-6 rounded-lg mb-8">
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 class="text-lg font-semibold text-slate-800 mb-3">Upcoming Announcements</h3>
-              <div class="space-y-3">
-                <div class="flex items-center">
-                  <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
-                  <div>
-                    <div class="font-medium">June 4, 2025</div>
-                    <div class="text-sm text-gray-600">Next BoC Rate Decision</div>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                  <div>
-                   <div class="font-medium">September 4, 2025</div>
-                    <div class="text-sm text-gray-600">Next BoC Rate Decision</div>
-                  </div>
-                </div>
+    <div class="p-6 rounded-lg mb-8" style="background-color: #F4F6F8;">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Upcoming Announcements</h3>
+          <div class="space-y-3">
+            <div class="flex items-center">
+              <div class="w-3 h-3 rounded-full mr-3" style="background-color: #1D2D44;"></div>
+              <div>
+                <div class="font-medium text-black">June 4, 2025</div>
+                <div class="text-sm text-black">Next BoC Rate Decision</div>
               </div>
             </div>
-            <div>
-              <h3 class="text-lg font-semibold text-slate-800 mb-3">What to Watch</h3>
-              <ul class="space-y-2 text-slate-700">
-                <li>• Monthly inflation data</li>
-                <li>• Employment statistics</li>
-                <li>• Housing market activity</li>
-                <li>• Consumer spending patterns</li>
-              </ul>
+            <div class="flex items-center">
+              <div class="w-3 h-3 rounded-full mr-3" style="background-color: #D4AF37;"></div>
+              <div>
+               <div class="font-medium text-black">September 4, 2025</div>
+                <div class="text-sm text-black">Next BoC Rate Decision</div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-lg mb-8">
-          <div class="text-center">
-            <h3 class="text-2xl font-bold mb-4">Ready to Take Advantage of Lower Rates?</h3>
-            <p class="mb-6 text-green-100">With rates at their lowest levels since early 2023, now is an excellent time to review your mortgage strategy. Whether you're looking to refinance, renew, or purchase, let's discuss how these rate cuts can benefit you.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/#contact" class="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
-                Free Rate Review
-              </a>
-              <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-lg font-semibold transition-colors">
-                Get Current Rates
-              </a>
-            </div>
-          </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">What to Watch</h3>
+          <ul class="space-y-2 text-black">
+            <li>• Monthly inflation data</li>
+            <li>• Employment statistics</li>
+            <li>• Housing market activity</li>
+            <li>• Consumer spending patterns</li>
+          </ul>
         </div>
+      </div>
+    </div>
 
-        <div class="border-t border-gray-200 pt-6 mt-8">
-          <p class="text-sm text-gray-600 italic">
-            <strong>Disclaimer:</strong> This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and terms are subject to change and individual circumstances may vary. Always consult with a qualified mortgage professional for personalized advice.
-          </p>
+    <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">Ready to Take Advantage of Lower Rates?</h3>
+        <p class="mb-6 opacity-90">With rates at their lowest levels since early 2023, now is an excellent time to review your mortgage strategy. Whether you're looking to refinance, renew, or purchase, let's discuss how these rate cuts can benefit you.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+            Free Rate Review
+          </a>
+          <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+            Get Current Rates
+          </a>
         </div>
-      `,
-      date: "March 12, 2025",
-      author: "Rob Bhullar",
-      category: "Interest Rates",
-      image: "bank-of-canada-building.png",
-    },
+      </div>
+    </div>
+
+    <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+      <p class="text-sm text-black italic">
+        <strong>Disclaimer:</strong> This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and terms are subject to change and individual circumstances may vary. Always consult with a qualified mortgage professional for personalized advice.
+      </p>
+    </div>
+  `,
+    date: "March 12, 2025",
+    author: "Rob Bhullar",
+    category: "Interest Rates",
+    image: "bank-of-canada-building.png",
+  },
 
    "first-time-home-buyer-incentive-changes": {
     title: "First-Time Home Buyer Programs Enhanced for 2025: New Opportunities in BC",
