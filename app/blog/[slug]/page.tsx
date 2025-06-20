@@ -1621,9 +1621,6 @@ Lenders use credit scores to assess risk. A higher score signals responsible cre
     Whether you’re looking to qualify for your first home, refinance to a better rate, or renew your current mortgage,
     strengthening your credit score can give you leverage, lower your costs, and expand your options.
   </p>
-  <p>
-    <strong>Need help reviewing your credit or planning your mortgage strategy?</strong> Feel free to reach out — I’m happy to offer a complimentary review and help you build a plan that puts you in control of your mortgage future.
-  </p>
 </section>
 
 
