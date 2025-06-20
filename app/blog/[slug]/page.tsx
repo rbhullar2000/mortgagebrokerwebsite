@@ -232,13 +232,14 @@ function getPostData() {
       </h2>
 
       <p class="mb-6 text-gray-700">
-        Borrowers are encouraged to:
+        With uncertainty still present, borrowers should consider proactive steps to stay ahead:
       </p>
       <ul class="space-y-2 mb-6 text-gray-700">
-        <li>• Lock in pre-approvals if planning to buy in the next 90 days</li>
-        <li>• Consider shorter-term fixed options as rates evolve</li>
-        <li>• Use rate holds and renewal windows to negotiate with leverage</li>
-      </ul>
+        <li>• Get Pre-Approved Early: If you plan to purchase a home within the next 90–120 days, securing a rate hold can protect you from market fluctuations and increase your negotiating power.</li>
+        <li>• Explore Shorter Fixed Terms: In a declining rate environment, 1–3 year fixed terms may offer a good balance between predictability and flexibility.</li>
+        <li>• Leverage Renewal Opportunities: If your mortgage is up for renewal, use this period of stability to negotiate better terms or consider switching lenders.</li>
+        <li>• Monitor Inflation and Employment Data: These will be key indicators for when the next rate move may happen.</li>
+      </ul> 
 
       <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
         <h3 class="text-lg font-semibold text-blue-800 mb-2">Market Outlook</h3>
