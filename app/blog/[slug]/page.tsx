@@ -241,11 +241,23 @@ function getPostData() {
         <li>• Monitor Inflation and Employment Data: These will be key indicators for when the next rate move may happen.</li>
       </ul> 
 
+<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
+        Looking Ahead: Will More Cuts Follow?
+      </h2>
+
+      <p class="mb-6 text-gray-700">
+        While many economists anticipate one or two additional rate cuts in 2025, the Bank of Canada has made it clear that any future decisions will be contingent on economic data. Key factors include:
+      </p>
+      <ul class="space-y-2 mb-6 text-gray-700">
+        <li>• Core Inflation Trends: Sustained progress toward the 2% target is essential before further easing.</li>
+        <li>• Consumer Spending and Household Debt: A resurgence in spending or borrowing could force the Bank to delay further cuts.</li>
+        <li>• Global Economic Conditions: Instability abroad — such as U.S. rate movements, geopolitical tensions, or commodity price shocks — could influence the Bank’s strategy.</li>
+      </ul> 
+
       <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
-        <h3 class="text-lg font-semibold text-blue-800 mb-2">Market Outlook</h3>
+        <h3 class="text-lg font-semibold text-blue-800 mb-2">Final Thoughts</h3>
         <p class="text-blue-700">
-          Economists are divided on the pace of future cuts.
-          While many expect one or two more reductions in 2025, the Bank made it clear that decisions will depend on inflation, consumer spending, and global risks.
+          This rate hold reflects a pivotal point in the Bank of Canada’s efforts to balance inflation control with economic recovery. For borrowers, it’s an opportunity to plan ahead and make informed mortgage decisions with greater clarity. Whether you’re entering the market, refinancing, or simply keeping an eye on your renewal window, now is the time to assess your position and prepare for what’s next.
         </p>
       </div>
 
