@@ -652,78 +652,78 @@ function getPostData() {
           </div>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">New BC Provincial Programs</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">New BC Provincial Programs (2025)</h2>
 
         <div class="space-y-6 mb-8">
           <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-            <h3 class="text-xl font-semibold text-green-800 mb-3">BC First-Time Home Buyer Down Payment Loan (NEW and should be confirmed soon!)</h3>
+            <h3 class="text-xl font-semibold text-green-800 mb-3">BC First-Time Home Buyer Down Payment Loan (Expected to be finalized in 2025)</h3>
             <div class="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 class="font-medium text-green-700 mb-2">Program Details</h4>
                 <ul class="space-y-1 text-green-600 text-sm">
-                  <li>• Up to $40,000 interest-free loan</li>
-                  <li>• 5% of home purchase price maximum</li>
-                  <li>• No payments for 5 years</li>
-                  <li>• Repayable when you sell</li>
+                  <li>• Up to $40,000 in interest-free loan support</li>
+                  <li>• Covers up to 5% of the home’s purchase price</li>
+                  <li>• No monthly payments for the first 5 years</li>
+                  <li>• Repayment required only upon sale or refinancing of the home</li>
                 </ul>
               </div>
               <div>
                 <h4 class="font-medium text-green-700 mb-2">Eligibility</h4>
                 <ul class="space-y-1 text-green-600 text-sm">
-                  <li>• Household income under $150,000</li>
-                  <li>• Home price under $800,000</li>
-                  <li>• BC resident for 12+ months</li>
-                  <li>• First-time buyer in BC</li>
+                  <li>• Household income below $150,000</li>
+                  <li>• Home purchase price below $800,000</li>
+                  <li>• Must be a BC resident for at least 12 months</li>
+                  <li>• Must qualify as a first-time home buyer in British Columbia</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div class="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
-            <h3 class="text-xl font-semibold text-orange-800 mb-3">Enhanced Property Transfer Tax Exemption</h3>
+            <h3 class="text-xl font-semibold text-orange-800 mb-3">Enhanced Property Transfer Tax (PTT) Exemption</h3>
             <div class="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 class="font-medium text-orange-700 mb-2">2025 Updates</h4>
                 <ul class="space-y-1 text-orange-600 text-sm">
-                  <li>• Full exemption up to $835,000</li>
-                  <li>• Partial exemption up to $885,000</li>
-                  <li>• Saves up to $13,000+ in taxes</li>
-                  <li>• Automatic application</li>
+                  <li>• Full exemption for homes priced up to $835,000</li>
+                  <li>• Partial exemption available up to $885,000</li>
+                  <li>• Potential savings of over $13,000 in taxes</li>
+                  <li>• Automatically applied at the time of purchase if eligible</li>
                 </ul>
               </div>
               <div>
-                <h4 class="font-medium text-orange-700 mb-2">Requirements</h4>
+                <h4 class="font-medium text-orange-700 mb-2">Eligibility Requirements</h4>
                 <ul class="space-y-1 text-orange-600 text-sm">
-                  <li>• Canadian citizen or permanent resident</li>
-                  <li>• BC resident for 12+ months</li>
-                  <li>• First-time buyer in the world</li>
-                  <li>• Primary residence</li>
+                  <li>• Must be a Canadian citizen or permanent resident</li>
+                  <li>• Must have lived in BC for at least 12 consecutive months</li>
+                  <li>• Must be a first-time buyer globally (not just in BC)</li>
+                  <li>• Property must be used as a primary residence</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">RRSP Home Buyers' Plan Updates</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">RRSP Home Buyers’ Plan Updates (2025)</h2>
 
         <div class="bg-yellow-50 p-6 rounded-lg mb-8 border-l-4 border-yellow-400">
-          <h3 class="text-xl font-semibold text-yellow-800 mb-3">Enhanced for 2025</h3>
+          <h3 class="text-xl font-semibold text-yellow-800 mb-3">Significant enhancements have been made to the RRSP Home Buyers’ Plan (HBP) in 2025, expanding both contribution limits and access flexibility.</h3>
           <div class="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 class="font-medium text-yellow-700 mb-2">Increased Limits</h4>
+              <h4 class="font-medium text-yellow-700 mb-2">Increased Withdrawal Limits</h4>
               <ul class="space-y-2 text-yellow-600">
-                <li>• <strong>Individual limit:</strong> $60,000 (up from $35,000)</li>
-                <li>• <strong>Couple limit:</strong> $120,000 combined</li>
-                <li>• <strong>Repayment period:</strong> Still 15 years</li>
-                <li>• <strong>No tax on withdrawal</strong></li>
+                <li>• <strong>Individual withdrawal limit:</strong> $60,000 (up from $35,000)</li>
+                <li>• <strong>Couple withdrawal limit:</strong> $120,000 combined</li>
+                <li>• <strong>Repayment period:</strong> 15 years (unchanged)</li>
+                <li>• <strong>Tax treatment:</strong> Withdrawals remain tax-free if repaid as scheduled</li>
               </ul>
             </div>
             <div>
-              <h4 class="font-medium text-yellow-700 mb-2">New Flexibility</h4>
+              <h4 class="font-medium text-yellow-700 mb-2">New Flexibility and Access</h4>
               <ul class="space-y-2 text-yellow-600">
-                <li>• <strong>Extended eligibility:</strong> Can use again after 4 years</li>
-                <li>• <strong>Divorce provision:</strong> Special rules for separated couples</li>
-                <li>• <strong>Disability provision:</strong> Enhanced access for disabled persons</li>
+                <li>• <strong>Requalification window:</strong> Buyers can re-use the HBP after 4 full years from previous use</li>
+                <li>• <strong>Separation/divorce clause:</strong> Newly separated individuals may requalify for the program under revised rules</li>
+                <li>• <strong>Disability accommodations:</strong> Expanded provisions for persons with disabilities or those purchasing on their behalf</li>
               </ul>
             </div>
           </div>
