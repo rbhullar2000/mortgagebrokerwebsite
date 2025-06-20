@@ -1492,9 +1492,11 @@ function getPostData() {
         <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
-        <h3 class="text-lg font-semibold text-blue-800">Credit Score Impact</h3>
+        <h3 class="text-lg font-semibold text-blue-800">Why Credit Score Matters More Than Ever</h3>
       </div>
-      <p class="text-blue-700">A higher credit score can save you tens of thousands of dollars over the life of your mortgage. Even a 50-point improvement can reduce your rate by 0.25% or more, translating to significant monthly and lifetime savings.</p>
+      <p class="text-blue-700">In today’s dynamic mortgage landscape, your credit score plays a critical role in determining the interest rate you’ll be offered by lenders. Even a modest improvement in your credit score — as little as 50 points — can result in significantly lower borrowing costs, potentially saving you tens of thousands of dollars over the life of your loan.
+
+Lenders use credit scores to assess risk. A higher score signals responsible credit behavior and increases your chances of being offered better rates, flexible terms, and access to top-tier lending products.</p>
     </div>
 
     <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Credit Score Ranges and Mortgage Rates</h2>
