@@ -99,14 +99,14 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
+      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">
+              <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
                 Licensed in British Columbia
               </Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6">
                 Your Trusted Mortgage Team in <span className="text-[#032133]">British Columbia</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -119,7 +119,12 @@ export default function HomePage() {
                     Start Your Application
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="h-12" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-12 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+                  asChild
+                >
                   <Link href="#calculator">
                     <Calculator className="w-5 h-5 mr-2" />
                     Mortgage Calculator
@@ -143,7 +148,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Rate Check</h3>
+                <h3 className="text-2xl font-bold text-[#1D2D44] mb-6">Quick Rate Check</h3>
                 <ContactForm variant="hero" />
               </div>
             </div>
@@ -155,7 +160,7 @@ export default function HomePage() {
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Comprehensive Mortgage Services</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Comprehensive Mortgage Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every
               situation.
@@ -208,7 +213,7 @@ export default function HomePage() {
             ].map((service, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4">
+                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133] mb-4">
                     {service.icon}
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -259,7 +264,7 @@ export default function HomePage() {
       <section id="calculator" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Mortgage Payment Calculator</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Mortgage Payment Calculator</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get an instant estimate of your monthly mortgage payments and see how different rates and terms affect
               your budget.
@@ -288,10 +293,10 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">
+              <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
                 About Rob S. Bhullar, BSc
               </Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Lead Mortgage Expert</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">Lead Mortgage Expert</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 With over 20 years in the financial industry, I combine analytics, lending expertise, and a client-first
                 approach to guide BC homeowners, investors, and first-time buyers through complex mortgage decisions. My
@@ -335,7 +340,12 @@ export default function HomePage() {
                 <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
                   <Link href="#contact">Contact Rob</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+                  asChild
+                >
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
                     Apply Online
                   </Link>
@@ -347,10 +357,10 @@ export default function HomePage() {
       </section>
 
       {/* Lenders Section */}
-      <section id="lenders" className="py-20 bg-slate-50">
+      <section id="lenders" className="py-20 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Trusted Lending Partners</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Trusted Lending Partners</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We work with 50+ lenders including major banks, credit unions, and alternative lenders to find you the
               best rates and terms.
@@ -367,10 +377,10 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
+              <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
                 <Users className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Big Banks</h3>
+              <h3 className="text-xl font-bold text-[#1D2D44] mb-2">Big Banks</h3>
               <p className="text-gray-600">
                 Competitive mortgage options backed by established financial institutions. Ideal for borrowers seeking
                 stability, reliability, and flexible term choices from trusted nationwide lenders.
@@ -378,30 +388,30 @@ export default function HomePage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
+              <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
                 <Shield className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Credit Unions</h3>
+              <h3 className="text-xl font-bold text-[#1D2D44] mb-2">Credit Unions</h3>
               <p className="text-gray-600">
                 Local credit unions offering competitive rates and personalized service for BC residents.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
+              <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
                 <TrendingUp className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Alternative Lenders</h3>
+              <h3 className="text-xl font-bold text-[#1D2D44] mb-2">Alternative Lenders</h3>
               <p className="text-gray-600">
                 Specialized lenders for unique situations, self-employed, and non-traditional income sources.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
+              <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
                 <FileText className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Private Lenders</h3>
+              <h3 className="text-xl font-bold text-[#1D2D44] mb-2">Private Lenders</h3>
               <p className="text-gray-600">
                 Fast approvals and flexible terms for time-sensitive deals and complex scenarios.
               </p>
@@ -410,7 +420,7 @@ export default function HomePage() {
 
           <div className="mt-16 bg-white rounded-2xl shadow-lg p-8">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Work With Multiple Lenders?</h3>
+              <h3 className="text-2xl font-bold text-[#1D2D44] mb-4">Why Work With Multiple Lenders?</h3>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -437,7 +447,7 @@ export default function HomePage() {
       <section id="news" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Mortgage News & Updates</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Mortgage News & Updates</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Stay informed about the latest mortgage trends, rate changes, and housing market news.
             </p>
@@ -464,7 +474,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">{featuredArticle.date}</span>
                     </div>
                     <Link href={featuredArticle.slug} className="hover:underline">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">{featuredArticle.title}</h3>
+                      <h3 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-4">{featuredArticle.title}</h3>
                     </Link>
                     <p className="text-gray-600 mb-6 text-lg leading-relaxed">{featuredArticle.excerpt}</p>
                     <Link
@@ -495,7 +505,12 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
+            <Button
+              variant="outline"
+              size="lg"
+              className="bg-white border-2 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+              asChild
+            >
               <Link href="/blog">
                 View All Articles <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -505,10 +520,10 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-50">
+      <section id="contact" className="py-20 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Contact today for a free consultation, or start your secure online application right away.
             </p>
@@ -528,21 +543,21 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Left: Contact Form */}
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">Get Your Free Consultation</h3>
+              <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Get Your Free Consultation</h3>
               <ContactForm />
             </div>
 
             {/* Right: Contact Info + Highlights */}
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Contact Information</h3>
               <div className="space-y-6">
                 {/* Email */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
+                  <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Email</h4>
+                    <h4 className="font-semibold text-[#1D2D44]">Email</h4>
                     <p className="text-gray-600">contact@bcmortgageteam.com</p>
                     <p className="text-sm text-gray-500">Thanks for reaching out — we'll be in touch shortly.</p>
                   </div>
@@ -550,11 +565,11 @@ export default function HomePage() {
 
                 {/* Location */}
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133]">
+                  <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Service Area</h4>
+                    <h4 className="font-semibold text-[#1D2D44]">Service Area</h4>
                     <p className="text-gray-600">Greater Vancouver Area</p>
                     <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
                   </div>
@@ -562,8 +577,8 @@ export default function HomePage() {
               </div>
 
               {/* Highlights Box */}
-              <div className="mt-8 p-6 bg-[#032133]/5 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Why Choose An Independent Mortgage Professional?</h4>
+              <div className="mt-8 p-6 bg-[#F4F6F8] border-l-4 border-[#D4AF37] rounded-lg">
+                <h4 className="font-semibold text-[#1D2D44] mb-2">Why Choose An Independent Mortgage Professional?</h4>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li>• No cost for our specialized services</li>
                   <li>• Access to rates banks don't advertise</li>
