@@ -193,9 +193,8 @@ function getPostData() {
       <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
         <h3 class="text-lg font-semibold text-yellow-800 mb-2">Policy Update Summary</h3>
         <p class="text-yellow-700">
-          At its June 5, 2025 meeting, the Bank of Canada decided to hold its target for the overnight rate at 2.75%.
-          This decision reflects continued progress in reducing core inflation and a desire to evaluate the impact of earlier rate cuts.
-        </p>
+          At its June 5, 2025 policy meeting, the Bank of Canada opted to hold its overnight lending rate at 2.75%. This pause comes after earlier rate cuts aimed at rebalancing inflation and supporting economic stability. The decision signals a shift toward a more measured, data-driven approach as the central bank continues to monitor the impact of its recent actions.
+          </p>
       </div>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
