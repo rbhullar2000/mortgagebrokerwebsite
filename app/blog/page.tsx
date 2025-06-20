@@ -113,7 +113,7 @@ export default function BlogPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
+      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-[#1D2D44] mb-6">Mortgage Blog & Resources</h1>
@@ -134,7 +134,7 @@ export default function BlogPage() {
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-[#1D2D44]">Featured Article</h2>
           </div>
-          <div className="bg-[#F4F6F8] rounded-2xl p-8">
+          <div className="bg-[#F4F6F8] rounded-2xl p-8 border-2 border-[#D4AF37]">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <Badge className="mb-4 bg-[#1D2D44] text-white">Interest Rates</Badge>
@@ -186,7 +186,11 @@ export default function BlogPage() {
                   ))}
               </div>
               <div className="mt-12 flex justify-center">
-                <Button className="bg-[#1D2D44] hover:bg-[#1D2D44]/90 text-white" size="lg">
+                <Button
+                  variant="outline"
+                  className="bg-white text-[#1D2D44] border-[#D4AF37] hover:bg-[#D4AF37] hover:text-white"
+                  size="lg"
+                >
                   Load More Articles
                 </Button>
               </div>
