@@ -1177,171 +1177,164 @@ function getPostData() {
 
 
 
-    "improve-credit-score-for-better-mortgage-rates": {
-      title: "How to Improve Your Credit Score for Better Mortgage Rates in 2025",
-      excerpt:
-        "Your credit score directly impacts your mortgage rate and can save you thousands over the life of your loan. Learn proven strategies to boost your score and qualify for the best rates available.",
-      content: `
-    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
-      <div class="flex items-center mb-3">
-        <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-        <h3 class="text-lg font-semibold text-blue-800">Why Credit Score Matters More Than Ever</h3>
-      </div>
-      <p class="text-blue-700">In today’s dynamic mortgage landscape, your credit score plays a critical role in determining the interest rate you’ll be offered by lenders. Even a modest improvement in your credit score — as little as 50 points — can result in significantly lower borrowing costs, potentially saving you tens of thousands of dollars over the life of your loan.
+   "improve-credit-score-for-better-mortgage-rates": {
+    title: "How to Improve Your Credit Score for Better Mortgage Rates in 2025",
+    excerpt:
+      "Your credit score directly impacts your mortgage rate and can save you thousands over the life of your loan. Learn proven strategies to boost your score and qualify for the best rates available.",
+    content: `
+      <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+        <div class="flex items-center mb-3">
+          <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h3 class="text-lg font-semibold" style="color: #1D2D44;">Why Credit Score Matters More Than Ever</h3>
+        </div>
+        <p class="text-black">In today's dynamic mortgage landscape, your credit score plays a critical role in determining the interest rate you'll be offered by lenders. Even a modest improvement in your credit score — as little as 50 points — can result in significantly lower borrowing costs, potentially saving you tens of thousands of dollars over the life of your loan.
 
 Lenders use credit scores to assess risk. A higher score signals responsible credit behavior and increases your chances of being offered better rates, flexible terms, and access to top-tier lending products.</p>
-    </div>
+      </div>
 
-<section class="bg-gray-900 text-white py-12 px-6 md:px-16">
-  <h2 class="text-2xl md:text-3xl font-bold mb-4">How Credit Score Affects Mortgage Rates</h2>
-  <p class="mb-6 text-gray-300">
-    Here’s a snapshot of current mortgage rate tiers (as of June 2025) and how they correlate to your credit score:
-  </p>
+      <section class="py-12 px-6 md:px-16" style="background-color: #1D2D44; color: white;">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">How Credit Score Affects Mortgage Rates</h2>
+        <p class="mb-6" style="color: #F4F6F8;">
+          Here's a snapshot of current mortgage rate tiers (as of June 2025) and how they correlate to your credit score:
+        </p>
 
-  <div class="overflow-x-auto">
-    <table class="min-w-full table-auto text-left border-collapse border border-gray-700">
-      <thead class="bg-gray-800 text-sm uppercase text-gray-300">
-        <tr>
-          <th class="px-4 py-3 border border-gray-700">Credit Score Range</th>
-          <th class="px-4 py-3 border border-gray-700">Rating</th>
-          <th class="px-4 py-3 border border-gray-700">Typical Mortgage Rate</th>
-          <th class="px-4 py-3 border border-gray-700">Notes</th>
-        </tr>
-      </thead>
-      <tbody class="text-sm text-gray-100 divide-y divide-gray-700">
-        <tr>
-          <td class="px-4 py-3">760+</td>
-          <td class="px-4 py-3">Excellent</td>
-          <td class="px-4 py-3">4.39%</td>
-          <td class="px-4 py-3">Access to best rates and lender incentives</td>
-        </tr>
-        <tr>
-          <td class="px-4 py-3">700–759</td>
-          <td class="px-4 py-3">Very Good</td>
-          <td class="px-4 py-3">4.64%</td>
-          <td class="px-4 py-3">Competitive offers with minor limitations</td>
-        </tr>
-        <tr>
-          <td class="px-4 py-3">650–699</td>
-          <td class="px-4 py-3">Good</td>
-          <td class="px-4 py-3">4.89%</td>
-          <td class="px-4 py-3">Qualify for most products, but higher costs</td>
-        </tr>
-        <tr>
-          <td class="px-4 py-3">600–649</td>
-          <td class="px-4 py-3">Fair</td>
-          <td class="px-4 py-3">5.39%</td>
-          <td class="px-4 py-3">Limited lender options, higher payments</td>
-        </tr>
-        <tr>
-          <td class="px-4 py-3">Below 600</td>
-          <td class="px-4 py-3">Poor</td>
-          <td class="px-4 py-3">6.89%+</td>
-          <td class="px-4 py-3">Often requires private or alternative lenders</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+        <div class="overflow-x-auto">
+          <table class="min-w-full table-auto text-left border-collapse border" style="border-color: #D4AF37;">
+            <thead class="text-sm uppercase" style="background-color: #1D2D44; color: #F4F6F8;">
+              <tr>
+                <th class="px-4 py-3 border" style="border-color: #D4AF37;">Credit Score Range</th>
+                <th class="px-4 py-3 border" style="border-color: #D4AF37;">Rating</th>
+                <th class="px-4 py-3 border" style="border-color: #D4AF37;">Typical Mortgage Rate</th>
+                <th class="px-4 py-3 border" style="border-color: #D4AF37;">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm text-white divide-y" style="divide-color: #D4AF37;">
+              <tr>
+                <td class="px-4 py-3">760+</td>
+                <td class="px-4 py-3">Excellent</td>
+                <td class="px-4 py-3">4.39%</td>
+                <td class="px-4 py-3">Access to best rates and lender incentives</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">700–759</td>
+                <td class="px-4 py-3">Very Good</td>
+                <td class="px-4 py-3">4.64%</td>
+                <td class="px-4 py-3">Competitive offers with minor limitations</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">650–699</td>
+                <td class="px-4 py-3">Good</td>
+                <td class="px-4 py-3">4.89%</td>
+                <td class="px-4 py-3">Qualify for most products, but higher costs</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">600–649</td>
+                <td class="px-4 py-3">Fair</td>
+                <td class="px-4 py-3">5.39%</td>
+                <td class="px-4 py-3">Limited lender options, higher payments</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3">Below 600</td>
+                <td class="px-4 py-3">Poor</td>
+                <td class="px-4 py-3">6.89%+</td>
+                <td class="px-4 py-3">Often requires private or alternative lenders</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
+      <section class="mx-auto px-6 py-10 text-black">
+        <p class="mb-6">
+          Even small differences in your credit profile can have a significant impact on monthly payments.
+          For example, a <strong>$500,000 mortgage</strong> at <strong>4.39%</strong> vs <strong>5.39%</strong> could mean a difference of over <strong>$300/month</strong> in payments — and more than <strong>$100,000</strong> in interest over 25 years.
+        </p>
 
+        <hr class="my-8" style="border-color: #D4AF37;" />
 
+        <h2 class="text-2xl font-bold mb-4" style="color: #1D2D44;">Quick Credit Score Improvement Strategies</h2>
+        <p class="mb-4">
+          If you're planning to buy or refinance in the next few months, there are immediate steps you can take to increase your score in 30–60 days:
+        </p>
 
-<section class="mx-auto px-6 py-10 text-gray-800">
-  <p class="mb-6">
-    Even small differences in your credit profile can have a significant impact on monthly payments.
-    For example, a <strong>$500,000 mortgage</strong> at <strong>4.39%</strong> vs <strong>5.39%</strong> could mean a difference of over <strong>$300/month</strong> in payments — and more than <strong>$100,000</strong> in interest over 25 years.
-  </p>
+        <h3 class="text-xl font-semibold mb-2" style="color: #1D2D44;">Immediate Actions (30–60 Days)</h3>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li><strong>Lower Credit Card Balances:</strong> Aim to keep usage under 30% of your total credit limit — ideally below 10% for optimal impact.</li>
+          <li><strong>Resolve Collections & Past-Due Accounts:</strong> Bringing accounts current or negotiating settlements can quickly boost your score.</li>
+          <li><strong>Increase Credit Limits:</strong> Request higher limits on existing cards — but avoid using the additional credit.</li>
+          <li><strong>Become an Authorized User:</strong> Being added to a responsible family member's longstanding account can positively influence your score.</li>
+          <li><strong>Dispute Inaccuracies:</strong> Check your credit report (Equifax and TransUnion in Canada) for errors and submit disputes if needed.</li>
+        </ul>
 
-  <hr class="my-8 border-gray-300" />
+        <hr class="my-8" style="border-color: #D4AF37;" />
 
-  <h2 class="text-2xl font-bold mb-4">Quick Credit Score Improvement Strategies</h2>
-  <p class="mb-4">
-    If you’re planning to buy or refinance in the next few months, there are immediate steps you can take to increase your score in 30–60 days:
-  </p>
+        <h2 class="text-2xl font-bold mb-4" style="color: #1D2D44;">Build for Long-Term Credit Health</h2>
+        <p class="mb-4">
+          Improving your credit score isn't just about short-term fixes — building a strong, resilient profile takes time and discipline.
+          Here are key strategies to sustain improvement:
+        </p>
 
-  <h3 class="text-xl font-semibold mb-2 text-green-700">Immediate Actions (30–60 Days)</h3>
-  <ul class="list-disc list-inside space-y-2 mb-6">
-    <li><strong>Lower Credit Card Balances:</strong> Aim to keep usage under 30% of your total credit limit — ideally below 10% for optimal impact.</li>
-    <li><strong>Resolve Collections & Past-Due Accounts:</strong> Bringing accounts current or negotiating settlements can quickly boost your score.</li>
-    <li><strong>Increase Credit Limits:</strong> Request higher limits on existing cards — but avoid using the additional credit.</li>
-    <li><strong>Become an Authorized User:</strong> Being added to a responsible family member’s longstanding account can positively influence your score.</li>
-    <li><strong>Dispute Inaccuracies:</strong> Check your credit report (Equifax and TransUnion in Canada) for errors and submit disputes if needed.</li>
-  </ul>
+        <h3 class="text-xl font-semibold mb-2" style="color: #1D2D44;">Long-Term Strategies (3–12 Months)</h3>
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li><strong>Keep Older Accounts Open:</strong> Length of credit history matters. Don't close old credit cards, even if you don't use them.</li>
+          <li><strong>Diversify Your Credit Mix:</strong> A healthy combination of revolving credit (credit cards) and installment loans shows maturity.</li>
+          <li><strong>Avoid Missed Payments:</strong> Set up autopay to ensure on-time payments — even one late payment can drop your score significantly.</li>
+          <li><strong>Review Reports Regularly:</strong> Use free credit monitoring tools to stay on top of changes, unauthorized activity, or score fluctuations.</li>
+          <li><strong>Avoid Opening New Accounts Too Often:</strong> Each credit inquiry slightly lowers your score; too many new accounts can also reduce your average account age.</li>
+        </ul>
 
-  <hr class="my-8 border-gray-300" />
+        <hr class="my-8" style="border-color: #D4AF37;" />
 
-  <h2 class="text-2xl font-bold mb-4">Build for Long-Term Credit Health</h2>
-  <p class="mb-4">
-    Improving your credit score isn’t just about short-term fixes — building a strong, resilient profile takes time and discipline.
-    Here are key strategies to sustain improvement:
-  </p>
+        <h2 class="text-2xl font-bold mb-4" style="color: #1D2D44;">How to Check Your Score in Canada</h2>
+        <p class="mb-4">You can check your credit score and full report for free from:</p>
+        <ul class="list-disc list-inside mb-6" style="color: #1D2D44;">
+          <li><a href="https://www.consumer.equifax.ca" class="underline hover:opacity-80" target="_blank">Equifax Canada – www.consumer.equifax.ca</a></li>
+          <li><a href="https://www.transunion.ca" class="underline hover:opacity-80" target="_blank">TransUnion Canada – www.transunion.ca</a></li>
+        </ul>
+        <p class="mb-6">
+          Several banks and credit monitoring apps also offer monthly or real-time access to your score at no cost.
+        </p>
 
-  <h3 class="text-xl font-semibold mb-2 text-blue-700">Long-Term Strategies (3–12 Months)</h3>
-  <ul class="list-disc list-inside space-y-2 mb-6">
-    <li><strong>Keep Older Accounts Open:</strong> Length of credit history matters. Don’t close old credit cards, even if you don’t use them.</li>
-    <li><strong>Diversify Your Credit Mix:</strong> A healthy combination of revolving credit (credit cards) and installment loans shows maturity.</li>
-    <li><strong>Avoid Missed Payments:</strong> Set up autopay to ensure on-time payments — even one late payment can drop your score significantly.</li>
-    <li><strong>Review Reports Regularly:</strong> Use free credit monitoring tools to stay on top of changes, unauthorized activity, or score fluctuations.</li>
-    <li><strong>Avoid Opening New Accounts Too Often:</strong> Each credit inquiry slightly lowers your score; too many new accounts can also reduce your average account age.</li>
-  </ul>
+        <hr class="my-8" style="border-color: #D4AF37;" />
 
-  <hr class="my-8 border-gray-300" />
+        <h2 class="text-2xl font-bold mb-4" style="color: #1D2D44;">When to Start? Right Now.</h2>
+        <p class="mb-6">
+          If you're planning to apply for a mortgage in the next 6 to 12 months, improving your credit should be a priority — especially before getting pre-approved.
+          Lenders pull your credit during pre-approval and again at funding, so any improvements you make beforehand can directly affect your offers.
+        </p>
 
-  <h2 class="text-2xl font-bold mb-4">How to Check Your Score in Canada</h2>
-  <p class="mb-4">You can check your credit score and full report for free from:</p>
-  <ul class="list-disc list-inside mb-6 text-blue-700">
-    <li><a href="https://www.consumer.equifax.ca" class="underline hover:text-blue-800" target="_blank">Equifax Canada – www.consumer.equifax.ca</a></li>
-    <li><a href="https://www.transunion.ca" class="underline hover:text-blue-800" target="_blank">TransUnion Canada – www.transunion.ca</a></li>
-  </ul>
-  <p class="mb-6">
-    Several banks and credit monitoring apps also offer monthly or real-time access to your score at no cost.
-  </p>
+        <hr class="my-8" style="border-color: #D4AF37;" />
 
-  <hr class="my-8 border-gray-300" />
+        <h2 class="text-2xl font-bold mb-4" style="color: #1D2D44;">Final Thoughts</h2>
+        <p class="mb-4">
+          Your credit score is one of the most powerful tools you have when applying for a mortgage.
+          Whether you're looking to qualify for your first home, refinance to a better rate, or renew your current mortgage,
+          strengthening your credit score can give you leverage, lower your costs, and expand your options.
+        </p>
+      </section>
 
-  <h2 class="text-2xl font-bold mb-4">When to Start? Right Now.</h2>
-  <p class="mb-6">
-    If you’re planning to apply for a mortgage in the next 6 to 12 months, improving your credit should be a priority — especially before getting pre-approved.
-    Lenders pull your credit during pre-approval and again at funding, so any improvements you make beforehand can directly affect your offers.
-  </p>
-
-  <hr class="my-8 border-gray-300" />
-
-  <h2 class="text-2xl font-bold mb-4">Final Thoughts</h2>
-  <p class="mb-4">
-    Your credit score is one of the most powerful tools you have when applying for a mortgage.
-    Whether you’re looking to qualify for your first home, refinance to a better rate, or renew your current mortgage,
-    strengthening your credit score can give you leverage, lower your costs, and expand your options.
-  </p>
-</section>
-
-
-
-    
-
-    <div class="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg mb-8">
-      <div class="text-center">
-        <h3 class="text-2xl font-bold mb-4">Ready to Improve Your Credit Score?</h3>
-        <p class="mb-6 text-blue-100">Let's review your credit report together and create a personalized plan to boost your score and qualify for the best mortgage rates available.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/#contact" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
-            Free Credit Review
-          </a>
-          <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-semibold transition-colors">
-            Get Pre-Approved
-          </a>
+      <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold mb-4">Ready to Improve Your Credit Score?</h3>
+          <p class="mb-6 opacity-90">Let's review your credit report together and create a personalized plan to boost your score and qualify for the best mortgage rates available.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+              Free Credit Review
+            </a>
+            <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+              Get Pre-Approved
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  `,
-      date: "June 5, 2025",
-      author: "Rob Bhullar",
-      category: "Credit & Qualification",
-      image: "credit-score-improvement.png",
-    },
+    `,
+    date: "June 5, 2025",
+    author: "Rob Bhullar",
+    category: "Credit & Qualification",
+    image: "credit-score-improvement.png",
+  },
     
    "fixed-vs-variable-mortgage-rates-2025": {
   title: "Fixed vs Variable Mortgage Rates: Which is Right for You in 2025?",
