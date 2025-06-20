@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Clock, Zap, CheckCircle, AlertCircle, Target } from "lucide-react"
+import { Clock, Zap, CheckCircle, AlertCircle, Target } from "lucide-react"
 import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { Header } from "@/components/header"
@@ -15,18 +15,18 @@ export default function QuickClosingsPageClient() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
+      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-orange-100 text-orange-800 hover:bg-orange-100">
-                <Zap className="w-4 h-4 mr-2" />
+              <Badge className="mb-4 bg-[#F4F6F8] text-[#1D2D44] hover:bg-[#F4F6F8]">
+                <Zap className="w-4 h-4 mr-2 text-[#D4AF37]" />
                 Fast-Track Specialist
               </Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6">
                 <span className="text-[#032133]">Lightning Fast</span> Mortgage Approvals
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-black mb-8 leading-relaxed">
                 Need to close quickly? Competing in a hot market? I specialize in fast-track approvals and same-day
                 pre-approvals to help you win in competitive situations.
               </p>
@@ -41,7 +41,13 @@ export default function QuickClosingsPageClient() {
                     Get Same-Day Approval
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild onClick={() => window.trackPhoneClick?.()}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  asChild
+                  onClick={() => window.trackPhoneClick?.()}
+                  className="border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white"
+                >
                   {/*  <Link href="tel:+16041234567">
                     <Phone className="w-5 h-5 mr-2" />
                     Call Now
@@ -51,23 +57,23 @@ export default function QuickClosingsPageClient() {
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
                   <div className="text-2xl font-bold text-[#032133]">2hrs</div>
-                  <div className="text-sm text-gray-600">Pre-Approval</div>
+                  <div className="text-sm text-black">Pre-Approval</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-[#032133]">24hrs</div>
-                  <div className="text-sm text-gray-600">Full Approval</div>
+                  <div className="text-sm text-black">Full Approval</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-[#032133]">7 days</div>
-                  <div className="text-sm text-gray-600">To Close</div>
+                  <div className="text-sm text-black">To Close</div>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border-l-4 border-orange-500">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 border-l-4 border-[#D4AF37]">
                 <div className="flex items-center mb-4">
-                  <AlertCircle className="w-6 h-6 text-orange-500 mr-2" />
-                  <h3 className="text-2xl font-bold text-gray-900">Urgent Approval Needed?</h3>
+                  <AlertCircle className="w-6 h-6 text-[#D4AF37] mr-2" />
+                  <h3 className="text-2xl font-bold text-[#1D2D44]">Urgent Approval Needed?</h3>
                 </div>
                 <ContactForm variant="hero" />
               </div>
@@ -80,8 +86,8 @@ export default function QuickClosingsPageClient() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">When You Need Speed</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">When You Need Speed</h2>
+            <p className="text-xl text-black max-w-3xl mx-auto">
               In today's competitive market, speed can make the difference between getting your dream home or losing it
               to another buyer.
             </p>
@@ -115,14 +121,14 @@ export default function QuickClosingsPageClient() {
             ].map((scenario, index) => (
               <Card key={index} className="border-0 shadow-lg text-center">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 mb-4 mx-auto">
+                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#D4AF37] mb-4 mx-auto">
                     {scenario.icon}
                   </div>
                   <CardTitle className="text-xl">{scenario.title}</CardTitle>
-                  <CardDescription className="text-gray-600">{scenario.description}</CardDescription>
+                  <CardDescription className="text-black">{scenario.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-lg font-bold text-[#032133]">{scenario.urgency}</div>
+                  <div className="text-lg font-bold text-[#D4AF37]">{scenario.urgency}</div>
                 </CardContent>
               </Card>
             ))}
@@ -131,11 +137,11 @@ export default function QuickClosingsPageClient() {
       </section>
 
       {/* Fast-Track Process Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Fast-Track Process</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Fast-Track Process</h2>
+            <p className="text-xl text-black max-w-3xl mx-auto">
               Streamlined approval process designed for speed without compromising on service quality.
             </p>
           </div>
@@ -167,12 +173,12 @@ export default function QuickClosingsPageClient() {
               },
             ].map((process, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#032133] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#1D2D44] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {process.step}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{process.title}</h3>
-                <p className="text-gray-600 mb-2">{process.description}</p>
-                <div className="text-sm font-bold text-orange-600">{process.time}</div>
+                <h3 className="text-xl font-bold text-[#1D2D44] mb-2">{process.title}</h3>
+                <p className="text-black mb-2">{process.description}</p>
+                <div className="text-sm font-bold text-[#D4AF37]">{process.time}</div>
               </div>
             ))}
           </div>
@@ -183,8 +189,8 @@ export default function QuickClosingsPageClient() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What Makes Us Fast</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">What Makes Us Fast</h2>
+            <p className="text-xl text-black max-w-3xl mx-auto">
               Years of experience and strong lender relationships enable us to move quickly when you need it most.
             </p>
           </div>
@@ -208,17 +214,17 @@ export default function QuickClosingsPageClient() {
             ].map((advantage, index) => (
               <Card key={index} className="border-0 shadow-lg">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4">
+                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#1D2D44] mb-4">
                     <Zap className="w-8 h-8" />
                   </div>
                   <CardTitle className="text-xl">{advantage.title}</CardTitle>
-                  <CardDescription className="text-gray-600">{advantage.description}</CardDescription>
+                  <CardDescription className="text-black">{advantage.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {advantage.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-[#032133] mr-3" />
+                      <li key={idx} className="flex items-center text-sm text-black">
+                        <CheckCircle className="w-4 h-4 text-[#D4AF37] mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -229,9 +235,9 @@ export default function QuickClosingsPageClient() {
           </div>
         </div>
       </section>
-     
+
       {/* Emergency Contact Section */}
-  {/*     <section className="py-20 bg-orange-50">
+      {/*     <section className="py-20 bg-orange-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -262,7 +268,7 @@ export default function QuickClosingsPageClient() {
       </section>
 */}
       {/* CTA Section */}
-      <section className="py-20 bg-[#032133] text-white">
+      <section className="py-20 bg-gradient-to-r from-[#1D2D44] to-[#D4AF37] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Don't Lose Your Dream Home to Slow Financing</h2>
           <p className="text-xl mb-8 opacity-90">Get the speed you need to compete and win in today's market.</p>
@@ -277,7 +283,13 @@ export default function QuickClosingsPageClient() {
                 Get Fast Approval
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild onClick={() => window.trackPhoneClick?.()}>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              onClick={() => window.trackPhoneClick?.()}
+              className="border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white"
+            >
               {/* <Link href="tel:+17788897964">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
