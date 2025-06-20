@@ -861,319 +861,321 @@ function getPostData() {
   },
 
 
-    "vancouver-housing-market-update": {
-      title: "Vancouver Housing Market Update (June 2025): Recovery Underway as Rates Fall",
-      excerpt:
-        "Vancouver's housing market is showing strong signs of recovery as interest rate cuts boost buyer confidence. Sales are up 25% year-over-year while inventory remains balanced, creating favorable conditions for both buyers and sellers.",
-      content: `
-        <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded-r-lg">
-          <div class="flex items-center mb-3">
-            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+  "vancouver-housing-market-update": {
+    title: "Vancouver Housing Market Update (June 2025): Recovery Underway as Rates Fall",
+    excerpt:
+      "Vancouver's housing market is showing strong signs of recovery as interest rate cuts boost buyer confidence. Sales are up 25% year-over-year while inventory remains balanced, creating favorable conditions for both buyers and sellers.",
+    content: `
+      <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+        <div class="flex items-center mb-3">
+          <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+          <h3 class="text-lg font-semibold" style="color: #1D2D44;">Market Recovery in Progress</h3>
+        </div>
+        <p class="text-black">Vancouver's housing market is experiencing a strong recovery driven by falling interest rates, improved affordability, and renewed buyer confidence. Sales activity is up significantly while maintaining balanced inventory levels.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Key Market Statistics (June 2025)</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="p-6 rounded-lg text-center" style="background-color: #F4F6F8;">
+          <div class="text-3xl font-bold mb-2" style="color: #1D2D44;">$1.40M</div>
+          <div class="text-sm font-medium text-black">Average Home Price</div>
+          <div class="text-xs mt-1" style="color: #D4AF37;">↓ 2.0% vs peak (2024)</div>
+        </div>
+        <div class="p-6 rounded-lg text-center" style="background-color: #F4F6F8;">
+          <div class="text-3xl font-bold mb-2" style="color: #1D2D44;">3,600</div>
+          <div class="text-sm font-medium text-black">Sales This Month</div>
+          <div class="text-xs mt-1" style="color: #D4AF37;">↑ 26.0% vs last year</div>
+        </div>
+        <div class="p-6 rounded-lg text-center" style="background-color: #F4F6F8;">
+          <div class="text-3xl font-bold mb-2" style="color: #1D2D44;">5,000</div>
+          <div class="text-sm font-medium text-black">Active Listings</div>
+          <div class="text-xs mt-1" style="color: #D4AF37;">↑ 4.0% vs last month</div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Market Trends by Property Type</h2>
+
+      <div class="space-y-6 mb-8">
+        <div class="p-6 rounded-lg" style="background-color: #F4F6F8;">
+          <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Detached Homes</h3>
+          <div class="grid md:grid-cols-4 gap-4">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-black">$1.97M</div>
+              <div class="text-sm text-black">Average Price</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 6.5% vs peak</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold" style="color: #1D2D44;">+29%</div>
+              <div class="text-sm text-black">Sales Volume</div>
+              <div class="text-xs" style="color: #D4AF37;">vs last year</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold" style="color: #1D2D44;">2.9 months</div>
+              <div class="text-sm text-black">Inventory Supply</div>
+              <div class="text-xs" style="color: #D4AF37;">Balanced market</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-black">20 days</div>
+              <div class="text-sm text-black">Avg. Days on Market</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 8 days</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+          <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Condominiums</h3>
+          <div class="grid md:grid-cols-4 gap-4">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-black">$750K</div>
+              <div class="text-sm text-black">Average Price</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 5.0% vs peak</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold" style="color: #1D2D44;">+23%</div>
+              <div class="text-sm text-black">Sales Volume</div>
+              <div class="text-xs" style="color: #D4AF37;">vs last year</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold" style="color: #1D2D44;">2.2 months</div>
+              <div class="text-sm text-black">Inventory Supply</div>
+              <div class="text-xs" style="color: #D4AF37;">Seller's market</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-black">17 days</div>
+              <div class="text-sm text-black">Avg. Days on Market</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 5 days</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+          <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Townhomes</h3>
+          <div class="grid md:grid-cols-4 gap-4">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-black">$1.23M</div>
+              <div class="text-sm text-black">Average Price</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 6.0% vs peak</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold" style="color: #1D2D44;">+32%</div>
+              <div class="text-sm text-black">Sales Volume</div>
+              <div class="text-xs" style="color: #D4AF37;">vs last year</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold" style="color: #1D2D44;">2.6 months</div>
+              <div class="text-sm text-black">Inventory Supply</div>
+              <div class="text-xs" style="color: #D4AF37;">Balanced market</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-black">18 days</div>
+              <div class="text-sm text-black">Avg. Days on Market</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 7 days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">What's Driving the Recovery?</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+          <h3 class="font-semibold mb-3" style="color: #1D2D44;">Recovery Drivers</h3>
+          <ul class="space-y-2 text-black">
+            <li>• Interest rates down 1.75% from peak</li>
+            <li>• Improved mortgage affordability</li>
+            <li>• Pent-up buyer demand being released</li>
+            <li>• Enhanced first-time buyer programs</li>
+            <li>• Economic stability and job growth</li>
+            <li>• Immigration targets supporting demand</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+          <h3 class="font-semibold mb-3" style="color: #1D2D44;">Market Fundamentals</h3>
+          <ul class="space-y-2 text-black">
+            <li>• Population growth continues</li>
+            <li>• Limited land supply constraints</li>
+            <li>• Strong employment market</li>
+            <li>• Infrastructure investments</li>
+            <li>• Tech sector expansion</li>
+            <li>• International investment returning</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Regional Performance</h2>
+
+      <div class="space-y-4 mb-8">
+        <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+          <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Vancouver West</h3>
+          <div class="grid md:grid-cols-4 gap-4">
+            <div>
+              <div class="text-xl font-bold text-black">$2.67M</div>
+              <div class="text-sm text-black">Avg. Detached Price</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 5.0% vs peak</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold text-black">$900K</div>
+              <div class="text-sm text-black">Avg. Condo Price</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 5.5% vs peak</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold" style="color: #1D2D44;">+25%</div>
+              <div class="text-sm text-black">Sales Change</div>
+              <div class="text-xs" style="color: #D4AF37;">vs last year</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold text-black">3.0 mo</div>
+              <div class="text-sm text-black">Inventory</div>
+              <div class="text-xs" style="color: #D4AF37;">Balanced</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+          <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Vancouver East</h3>
+          <div class="grid md:grid-cols-4 gap-4">
+            <div>
+              <div class="text-xl font-bold text-black">$1.77M</div>
+              <div class="text-sm text-black">Avg. Detached Price</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 7.5% vs peak</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold text-black">$690K</div>
+              <div class="text-sm text-black">Avg. Condo Price</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 4.5% vs peak</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold" style="color: #1D2D44;">+30%</div>
+              <div class="text-sm text-black">Sales Change</div>
+              <div class="text-xs" style="color: #D4AF37;">vs last year</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold text-black">2.4 mo</div>
+              <div class="text-sm text-black">Inventory</div>
+              <div class="text-xs" style="color: #D4AF37;">Seller's market</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+          <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Richmond & Burnaby</h3>
+          <div class="grid md:grid-cols-4 gap-4">
+            <div>
+              <div class="text-xl font-bold text-black">$1.60M</div>
+              <div class="text-sm text-black">Avg. Detached Price</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 6.5% vs peak</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold text-black">$650K</div>
+              <div class="text-sm text-black">Avg. Condo Price</div>
+              <div class="text-xs" style="color: #D4AF37;">↓ 5.0% vs peak</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold" style="color: #1D2D44;">+27%</div>
+              <div class="text-sm text-black">Sales Change</div>
+              <div class="text-xs" style="color: #D4AF37;">vs last year</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold text-black">2.7 mo</div>
+              <div class="text-sm text-black">Inventory</div>
+              <div class="text-xs" style="color: #D4AF37;">Balanced</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Market Outlook</h2>
+
+      <div class="space-y-6 mb-8">
+        <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+          <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Positive Indicators</h3>
+          <ul class="space-y-2 text-black">
+            <li>• <strong>Rate Environment:</strong> Further cuts expected in 2025</li>
+            <li>• <strong>Buyer Confidence:</strong> Pre-approval applications up 40%</li>
+            <li>• <strong>New Supply:</strong> Construction starts increasing</li>
+            <li>• <strong>Economic Growth:</strong> BC economy outperforming Canada</li>
+            <li>• <strong>Employment:</strong> Job market remains strong</li>
+            </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+          <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Challenges to Watch</h3>
+          <ul class="space-y-2 text-black">
+            <li>• <strong>Affordability:</strong> Still challenging for many buyers</li>
+            <li>• <strong>Supply Constraints:</strong> Limited inventory in some segments</li>
+            <li>• <strong>Policy Changes:</strong> Potential new government measures</li>
+            <li>• <strong>Global Factors:</strong> Economic uncertainty abroad</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">What This Means for You</h2>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+          <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 10H4L5 9z"></path>
             </svg>
-            <h3 class="text-lg font-semibold text-green-800">Market Recovery in Progress</h3>
-          </div>
-          <p class="text-green-700">Vancouver's housing market is experiencing a strong recovery driven by falling interest rates, improved affordability, and renewed buyer confidence. Sales activity is up significantly while maintaining balanced inventory levels.</p>
+            For Buyers
+          </h3>
+          <ul class="space-y-2 text-black">
+            <li>• <strong>Improved Affordability:</strong> Lower rates mean higher buying power</li>
+            <li>• <strong>More Options:</strong> Inventory levels are healthy</li>
+            <li>• <strong>Less Competition:</strong> Multiple offers less common</li>
+            <li>• <strong>Better Financing:</strong> Enhanced government programs available</li>
+            <li>• <strong>Timing Opportunity:</strong> Prices still below peak levels</li>
+          </ul>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Key Market Statistics (June 2025)</h2>
-        
-        <div class="grid md:grid-cols-3 gap-6 mb-8">
-          <div class="bg-green-50 p-6 rounded-lg text-center">
-            <div class="text-3xl font-bold text-green-600 mb-2">$1.40M</div>
-            <div class="text-sm text-green-800 font-medium">Average Home Price</div>
-            <div class="text-xs text-green-600 mt-1">↓ 2.0% vs peak (2024)</div>
-          </div>
-          <div class="bg-blue-50 p-6 rounded-lg text-center">
-            <div class="text-3xl font-bold text-blue-600 mb-2">3,600</div>
-            <div class="text-sm text-blue-800 font-medium">Sales This Month</div>
-            <div class="text-xs text-blue-600 mt-1">↑ 26.0% vs last year</div>
-          </div>
-          <div class="bg-purple-50 p-6 rounded-lg text-center">
-            <div class="text-3xl font-bold text-purple-600 mb-2">5,000</div>
-            <div class="text-sm text-purple-800 font-medium">Active Listings</div>
-            <div class="text-xs text-purple-600 mt-1">↑ 4.0% vs last month</div>
+        <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+          <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+            For Sellers
+          </h3>
+          <ul class="space-y-2 text-black">
+            <li>• <strong>Renewed Demand:</strong> More qualified buyers in the market</li>
+            <li>• <strong>Faster Sales:</strong> Days on market decreasing</li>
+            <li>• <strong>Price Stability:</strong> Values stabilizing after correction</li>
+            <li>• <strong>Strategic Timing:</strong> Spring market showing strength</li>
+            <li>• <strong>Professional Marketing:</strong> Showcase your property effectively</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold mb-4">Ready to Make Your Move in Vancouver?</h3>
+          <p class="mb-6 opacity-90">Whether you're buying or selling, now is the time to take advantage of the recovering Vancouver housing market. With rates falling and demand increasing, let's discuss your options and create a winning strategy.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+              Free Market Analysis
+            </a>
+            <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+              View Current Listings
+            </a>
           </div>
         </div>
+      </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Market Trends by Property Type</h2>
+      <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+        <p class="text-sm text-black italic">
+          <strong>Disclaimer:</strong> Market conditions are subject to change. This analysis is based on data available as of June 2025 and is for informational purposes only. Consult with a qualified real estate professional for personalized advice.
+        </p>
+      </div>
+    `,
+    date: "June 10, 2025",
+    author: "Rob Bhullar",
+    category: "Market Updates",
+    image: "vancouver-skyline-housing.png",
+  },
+}
 
-        <div class="space-y-6 mb-8">
-          <div class="bg-slate-50 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-slate-800 mb-4">Detached Homes</h3>
-            <div class="grid md:grid-cols-4 gap-4">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-slate-700">$1.97M</div>
-                <div class="text-sm text-slate-600">Average Price</div>
-                <div class="text-xs text-slate-500">↓ 6.5% vs peak</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-green-600">+29%</div>
-                <div class="text-sm text-slate-600">Sales Volume</div>
-                <div class="text-xs text-slate-500">vs last year</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-blue-600">2.9 months</div>
-                <div class="text-sm text-slate-600">Inventory Supply</div>
-                <div class="text-xs text-slate-500">Balanced market</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-slate-700">20 days</div>
-                <div class="text-sm text-slate-600">Avg. Days on Market</div>
-                <div class="text-xs text-slate-500">↓ 8 days</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-blue-800 mb-4">Condominiums</h3>
-            <div class="grid md:grid-cols-4 gap-4">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-blue-700">$750K</div>
-                <div class="text-sm text-blue-600">Average Price</div>
-                <div class="text-xs text-blue-500">↓ 5.0% vs peak</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-green-600">+23%</div>
-                <div class="text-sm text-blue-600">Sales Volume</div>
-                <div class="text-xs text-blue-500">vs last year</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-blue-600">2.2 months</div>
-                <div class="text-sm text-blue-600">Inventory Supply</div>
-                <div class="text-xs text-blue-500">Seller's market</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-blue-700">17 days</div>
-                <div class="text-sm text-blue-600">Avg. Days on Market</div>
-                <div class="text-xs text-blue-500">↓ 5 days</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-green-50 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-green-800 mb-4">Townhomes</h3>
-            <div class="grid md:grid-cols-4 gap-4">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-green-700">$1.23M</div>
-                <div class="text-sm text-green-600">Average Price</div>
-                <div class="text-xs text-green-500">↓ 6.0% vs peak</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-green-600">+32%</div>
-                <div class="text-sm text-green-600">Sales Volume</div>
-                <div class="text-xs text-green-500">vs last year</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-green-600">2.6 months</div>
-                <div class="text-sm text-green-600">Inventory Supply</div>
-                <div class="text-xs text-green-500">Balanced market</div>
-              </div>
-              <div class="text-center">
-                <div class="text-2xl font-bold text-green-700">18 days</div>
-                <div class="text-sm text-green-600">Avg. Days on Market</div>
-                <div class="text-xs text-green-500">↓ 7 days</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">What's Driving the Recovery?</h2>
-
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-            <h3 class="font-semibold text-green-800 mb-3">Recovery Drivers</h3>
-            <ul class="space-y-2 text-green-700">
-              <li>• Interest rates down 1.75% from peak</li>
-              <li>• Improved mortgage affordability</li>
-              <li>• Pent-up buyer demand being released</li>
-              <li>• Enhanced first-time buyer programs</li>
-              <li>• Economic stability and job growth</li>
-              <li>• Immigration targets supporting demand</li>
-            </ul>
-          </div>
-          <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
-            <h3 class="font-semibold text-blue-800 mb-3">Market Fundamentals</h3>
-            <ul class="space-y-2 text-blue-700">
-              <li>• Population growth continues</li>
-              <li>• Limited land supply constraints</li>
-              <li>• Strong employment market</li>
-              <li>• Infrastructure investments</li>
-              <li>• Tech sector expansion</li>
-              <li>• International investment returning</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Regional Performance</h2>
-
-        <div class="space-y-4 mb-8">
-          <div class="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
-            <h3 class="text-lg font-semibold text-yellow-800 mb-3">Vancouver West</h3>
-            <div class="grid md:grid-cols-4 gap-4">
-              <div>
-                <div class="text-xl font-bold text-yellow-700">$2.67M</div>
-                <div class="text-sm text-yellow-600">Avg. Detached Price</div>
-                <div class="text-xs text-yellow-500">↓ 5.0% vs peak</div>
-              </div>
-              <div>
-                <div class="text-xl font-bold text-yellow-700">$900K</div>
-                <div class="text-sm text-yellow-600">Avg. Condo Price</div>
-                <div class="text-xs text-yellow-500">↓ 5.5% vs peak</div>
-              </div>
-              <div>
-                <div class="text-xl font-bold text-green-600">+25%</div>
-                <div class="text-sm text-yellow-600">Sales Change</div>
-                <div class="text-xs text-yellow-500">vs last year</div>
-              </div>
-              <div>
-                <div class="text-xl font-bold text-yellow-700">3.0 mo</div>
-                <div class="text-sm text-yellow-600">Inventory</div>
-                <div class="text-xs text-yellow-500">Balanced</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
-            <h3 class="text-lg font-semibold text-purple-800 mb-3">Vancouver East</h3>
-            <div class="grid md:grid-cols-4 gap-4">
-              <div>
-                <div class="text-xl font-bold text-purple-700">$1.77M</div>
-                <div class="text-sm text-purple-600">Avg. Detached Price</div>
-                <div class="text-xs text-purple-500">↓ 7.5% vs peak</div>
-              </div>
-              <div>
-                <div class="text-xl font-bold text-purple-700">$690K</div>
-                <div class="text-sm text-purple-600">Avg. Condo Price</div>
-                <div class="text-xs text-purple-500">↓ 4.5% vs peak</div>
-              </div>
-              <div>
-                <div class="text-xl font-bold text-green-600">+30%</div>
-                <div class="text-sm text-purple-600">Sales Change</div>
-                <div class="text-xs text-purple-500">vs last year</div>
-              </div>
-              <div>
-                <div class="text-xl font-bold text-purple-700">2.4 mo</div>
-                <div class="text-sm text-purple-600">Inventory</div>
-                <div class="text-xs text-purple-500">Seller's market</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-400">
-            <h3 class="text-lg font-semibold text-indigo-800 mb-3">Richmond & Burnaby</h3>
-            <div class="grid md:grid-cols-4 gap-4">
-              <div>
-                <div class="text-xl font-bold text-indigo-700">$1.60M</div>
-                <div class="text-sm text-indigo-600">Avg. Detached Price</div>
-                <div class="text-xs text-indigo-500">↓ 6.5% vs peak</div>
-              </div>
-              <div>
-                <div class="text-xl font-bold text-indigo-700">$650K</div>
-                <div class="text-sm text-indigo-600">Avg. Condo Price</div>
-                <div class="text-xs text-indigo-500">↓ 5.0% vs peak</div>
-              </div>
-              <div>
-                <div class="text-xl font-bold text-green-600">+27%</div>
-                <div class="text-sm text-indigo-600">Sales Change</div>
-                <div class="text-xs text-indigo-500">vs last year</div>
-              </div>
-              <div>
-                <div class="text-xl font-bold text-indigo-700">2.7 mo</div>
-                <div class="text-sm text-indigo-600">Inventory</div>
-                <div class="text-xs text-indigo-500">Balanced</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Market Outlook</h2>
-
-        <div class="space-y-6 mb-8">
-          <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-            <h3 class="text-xl font-semibold text-green-800 mb-3">Positive Indicators</h3>
-            <ul class="space-y-2 text-green-700">
-              <li>• <strong>Rate Environment:</strong> Further cuts expected in 2025</li>
-              <li>• <strong>Buyer Confidence:</strong> Pre-approval applications up 40%</li>
-              <li>• <strong>New Supply:</strong> Construction starts increasing</li>
-              <li>• <strong>Economic Growth:</strong> BC economy outperforming Canada</li>
-              <li>• <strong>Employment:</strong> Job market remains strong</li>
-              </ul>
-          </div>
-
-          <div class="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
-            <h3 class="text-xl font-semibold text-yellow-800 mb-3">Challenges to Watch</h3>
-            <ul class="space-y-2 text-yellow-700">
-              <li>• <strong>Affordability:</strong> Still challenging for many buyers</li>
-              <li>• <strong>Supply Constraints:</strong> Limited inventory in some segments</li>
-              <li>• <strong>Policy Changes:</strong> Potential new government measures</li>
-              <li>• <strong>Global Factors:</strong> Economic uncertainty abroad</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">What This Means for You</h2>
-
-        <div class="space-y-6 mb-8">
-          <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-            <h3 class="text-xl font-semibold text-blue-800 mb-3 flex items-center">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 10H4L5 9z"></path>
-              </svg>
-              For Buyers
-            </h3>
-            <ul class="space-y-2 text-blue-700">
-              <li>• <strong>Improved Affordability:</strong> Lower rates mean higher buying power</li>
-              <li>• <strong>More Options:</strong> Inventory levels are healthy</li>
-              <li>• <strong>Less Competition:</strong> Multiple offers less common</li>
-              <li>• <strong>Better Financing:</strong> Enhanced government programs available</li>
-              <li>• <strong>Timing Opportunity:</strong> Prices still below peak levels</li>
-            </ul>
-          </div>
-
-          <div class="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
-            <h3 class="text-xl font-semibold text-orange-800 mb-3 flex items-center">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-              </svg>
-              For Sellers
-            </h3>
-            <ul class="space-y-2 text-orange-700">
-              <li>• <strong>Renewed Demand:</strong> More qualified buyers in the market</li>
-              <li>• <strong>Faster Sales:</strong> Days on market decreasing</li>
-              <li>• <strong>Price Stability:</strong> Values stabilizing after correction</li>
-              <li>• <strong>Strategic Timing:</strong> Spring market showing strength</li>
-              <li>• <strong>Professional Marketing:</strong> Showcase your property effectively</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-lg mb-8">
-          <div class="text-center">
-            <h3 class="text-2xl font-bold mb-4">Ready to Make Your Move in Vancouver?</h3>
-            <p class="mb-6 text-green-100">Whether you're buying or selling, now is the time to take advantage of the recovering Vancouver housing market. With rates falling and demand increasing, let's discuss your options and create a winning strategy.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/#contact" class="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
-                Free Market Analysis
-              </a>
-              <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-lg font-semibold transition-colors">
-                View Current Listings
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="border-t border-gray-200 pt-6 mt-8">
-          <p class="text-sm text-gray-600 italic">
-            <strong>Disclaimer:</strong> Market conditions are subject to change. This analysis is based on data available as of June 2025 and is for informational purposes only. Consult with a qualified real estate professional for personalized advice.
-          </p>
-        </div>
-      `,
-      date: "June 10, 2025",
-      author: "Rob Bhullar",
-      category: "Market Updates",
-      image: "vancouver-skyline-housing.png",
-    },
 
     "improve-credit-score-for-better-mortgage-rates": {
       title: "How to Improve Your Credit Score for Better Mortgage Rates in 2025",
