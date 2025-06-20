@@ -24,7 +24,7 @@ export async function POST(request: Request) {
       : "Not specified"
 
     const htmlContent = `
-      <h2>New Mortgage Inquiry from <strong>robbhullar.com</strong></h2>
+      <h2>New Mortgage Inquiry from <strong>bcmortgageteam.com</strong></h2>
       <h3>Contact Information:</h3>
       <ul>
         <li><strong>Name:</strong> ${name}</li>
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     })
 
     await transporter.sendMail({
-      from: `"Rob Bhullar Website" <${process.env.SMTP_USER}>`,
+      from: `"BC Mortgage Team Website" <${process.env.SMTP_USER}>`,
       to: process.env.EMAIL_TO || process.env.SMTP_USER,
       subject: `New Mortgage Inquiry from ${name}`,
       html: htmlContent,
