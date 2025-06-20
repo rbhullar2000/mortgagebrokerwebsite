@@ -193,7 +193,7 @@ function getPostData() {
       <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
         <h3 class="text-lg font-semibold text-yellow-800 mb-2">Policy Update Summary</h3>
         <p class="text-yellow-700">
-          At its June 5, 2025 policy meeting, the Bank of Canada opted to hold its overnight lending rate at 2.75%. This pause comes after earlier rate cuts aimed at rebalancing inflation and supporting economic stability. The decision signals a shift toward a more measured, data-driven approach as the central bank continues to monitor the impact of its recent actions.
+          At its June 4, 2025 policy meeting, the Bank of Canada opted to hold its overnight lending rate at 2.75%. This pause comes after earlier rate cuts aimed at rebalancing inflation and supporting economic stability. The decision signals a shift toward a more measured, data-driven approach as the central bank continues to monitor the impact of its recent actions.
           </p>
       </div>
 
@@ -202,9 +202,7 @@ function getPostData() {
       </h2>
 
       <p class="mb-6 text-gray-700">
-        Canada’s central bank cited improving inflation trends as a key reason for the pause.
-        April’s core inflation readings showed further softening, and economic growth remained subdued.
-        Policymakers emphasized they are taking a cautious approach to avoid reigniting inflation or tightening prematurely.
+        The Bank cited continued progress in taming inflation as a primary reason for maintaining its current policy rate. Core inflation readings for April showed further signs of cooling, with headline inflation nearing the Bank’s target range. At the same time, economic growth remains subdued, giving policymakers room to wait and assess how recent rate reductions are flowing through the broader economy.
       </p>
 
       <p class="mb-6 text-gray-700">
