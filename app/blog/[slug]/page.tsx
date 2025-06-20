@@ -1174,7 +1174,7 @@ function getPostData() {
     category: "Market Updates",
     image: "vancouver-skyline-housing.png",
   },
-}
+
 
 
     "improve-credit-score-for-better-mortgage-rates": {
