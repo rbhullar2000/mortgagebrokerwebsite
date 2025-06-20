@@ -562,301 +562,302 @@ function getPostData() {
       image: "bank-of-canada-building.png",
     },
 
-    "first-time-home-buyer-incentive-changes": {
-      title: "First-Time Home Buyer Programs Enhanced for 2025: New Opportunities in BC",
-      excerpt:
-        "Several government programs have been significantly enhanced for 2025 — including an increased home price threshold of up to $850,000 under the First-Time Home Buyer Incentive in BC, a new provincial down payment loan, and expanded tax credits — all aimed at making homeownership more accessible for first-time buyers.",
-      content: `
-        <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded-r-lg">
-          <div class="flex items-center mb-3">
-            <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-            </svg>
-            <h3 class="text-lg font-semibold text-green-800">Enhanced Support for 2025</h3>
+   "first-time-home-buyer-incentive-changes": {
+    title: "First-Time Home Buyer Programs Enhanced for 2025: New Opportunities in BC",
+    excerpt:
+      "Several government programs have been significantly enhanced for 2025 — including an increased home price threshold of up to $850,000 under the First-Time Home Buyer Incentive in BC, a new provincial down payment loan, and expanded tax credits — all aimed at making homeownership more accessible for first-time buyers.",
+    content: `
+      <div class="bg-neutral-light border-l-4 border-accent-gold p-6 mb-8 rounded-r-lg">
+        <div class="flex items-center mb-3">
+          <svg class="w-6 h-6 text-accent-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          </svg>
+          <h3 class="text-lg font-semibold" style="color: #1D2D44;">Enhanced Support for 2025</h3>
+        </div>
+        <p style="color: #2C2C2C;">Multiple government programs have been enhanced for 2025, with the First-Time Home Buyer Incentive increasing price thresholds to $850,000 in BC, new provincial down payment assistance, and expanded tax credits.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">2024 vs. 2025 Program Enhancements</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+          <h3 class="font-semibold mb-3" style="color: #1D2D44;">Previous Limits (2024)</h3>
+          <ul class="space-y-2 text-black">
+            <li>• Maximum eligible home price: $750,000 (BC)</li>
+            <li>• Household income cap: $150,000</li>
+            <li>• Down payment support: Minimal or limited options</li>
+            <li>• Home Buyers' Tax Credit: $5,000 (up to $750 tax refund)</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+          <h3 class="font-semibold mb-3" style="color: #1D2D44;">Enhanced Limits (2025)</h3>
+          <ul class="space-y-2 text-black">
+            <li>• Maximum eligible home price: $850,000 (BC)</li>
+            <li>• Household income cap: $175,000</li>
+            <li>• New support: BC Down Payment Loan Program (up to $40,000 interest-free)</li>
+            <li>• Home Buyers' Tax Credit: Increased to $8,000 (up to $1,200 tax refund)</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Federal Programs</h2>
+
+      <div class="space-y-6 mb-8">
+        <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+          <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">First-Time Home Buyer Incentive (Enhanced)</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-medium mb-2" style="color: #1D2D44;">Eligibility</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Household income must be $175,000 or less</li>
+                <li>• Home purchase price must not exceed $850,000 in British Columbia</li>
+                <li>• Applicant must be a first-time home buyer</li>
+                <li>• Property must be a primary residence</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium mb-2" style="color: #1D2D44;">Benefits</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• 5% shared equity available for resale (existing) homes</li>
+                <li>• 10% shared equity available for newly constructed homes</li>
+                <li>• No monthly repayment required</li>
+                <li>• Repayment due only when the home is sold, refinanced, or reaches 25 years</li>
+              </ul>
+            </div>
           </div>
-          <p class="text-green-700">Multiple government programs have been enhanced for 2025, with the First-Time Home Buyer Incentive increasing price thresholds to $850,000 in BC, new provincial down payment assistance, and expanded tax credits.</p>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">2024 vs. 2025 Program Enhancements</h2>
-        
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
-            <h3 class="font-semibold text-red-800 mb-3">Previous Limits (2024)</h3>
-            <ul class="space-y-2 text-red-700">
-              <li>• Maximum eligible home price: $750,000 (BC)</li>
-              <li>• Household income cap: $150,000</li>
-              <li>• Down payment support: Minimal or limited options</li>
-              <li>• Home Buyers’ Tax Credit: $5,000 (up to $750 tax refund)</li>
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+          <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Enhanced Home Buyers' Tax Credit (2025 Update)</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-medium mb-2" style="color: #1D2D44;">2025 Enhancements</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Increased to $8,000 (previously $5,000)</li>
+                <li>• Provides up to $1,200 in tax relief</li>
+                <li>• Can be applied toward eligible closing costs</li>
+                <li>• Available as a one-time credit per qualifying individual</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium mb-2" style="color: #1D2D44;">Eligible Expenses</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Legal fees related to the purchase</li>
+                <li>• Professional home inspection services</li>
+                <li>• Appraisal fees required by the lender</li>
+                <li>• Title insurance and related closing charges</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">New BC Provincial Programs (2025)</h2>
+
+      <div class="space-y-6 mb-8">
+        <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+          <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">BC First-Time Home Buyer Down Payment Loan (Expected to be finalized in 2025)</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-medium mb-2" style="color: #1D2D44;">Program Details</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Up to $40,000 in interest-free loan support</li>
+                <li>• Covers up to 5% of the home's purchase price</li>
+                <li>• No monthly payments for the first 5 years</li>
+                <li>• Repayment required only upon sale or refinancing of the home</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium mb-2" style="color: #1D2D44;">Eligibility</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Household income below $150,000</li>
+                <li>• Home purchase price below $800,000</li>
+                <li>• Must be a BC resident for at least 12 months</li>
+                <li>• Must qualify as a first-time home buyer in British Columbia</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+          <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Enhanced Property Transfer Tax (PTT) Exemption</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-medium mb-2" style="color: #1D2D44;">2025 Updates</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Full exemption for homes priced up to $835,000</li>
+                <li>• Partial exemption available up to $885,000</li>
+                <li>• Potential savings of over $13,000 in taxes</li>
+                <li>• Automatically applied at the time of purchase if eligible</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium mb-2" style="color: #1D2D44;">Eligibility Requirements</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Must be a Canadian citizen or permanent resident</li>
+                <li>• Must have lived in BC for at least 12 consecutive months</li>
+                <li>• Must be a first-time buyer globally (not just in BC)</li>
+                <li>• Property must be used as a primary residence</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">RRSP Home Buyers' Plan Updates (2025)</h2>
+
+      <div class="p-6 rounded-lg mb-8 border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Significant enhancements have been made to the RRSP Home Buyers' Plan (HBP) in 2025, expanding both contribution limits and access flexibility.</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Increased Withdrawal Limits</h4>
+            <ul class="space-y-2 text-black">
+              <li>• <strong>Individual withdrawal limit:</strong> $60,000 (up from $35,000)</li>
+              <li>• <strong>Couple withdrawal limit:</strong> $120,000 combined</li>
+              <li>• <strong>Repayment period:</strong> 15 years (unchanged)</li>
+              <li>• <strong>Tax treatment:</strong> Withdrawals remain tax-free if repaid as scheduled</li>
             </ul>
           </div>
-          <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-            <h3 class="font-semibold text-green-800 mb-3">Enhanced Limits (2025)</h3>
-            <ul class="space-y-2 text-green-700">
-              <li>• Maximum eligible home price: $850,000 (BC)</li>
-              <li>• Household income cap: $175,000</li>
-              <li>• New support: BC Down Payment Loan Program (up to $40,000 interest-free)</li>
-              <li>• Home Buyers’ Tax Credit: Increased to $8,000 (up to $1,200 tax refund)</li>
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">New Flexibility and Access</h4>
+            <ul class="space-y-2 text-black">
+              <li>• <strong>Requalification window:</strong> Buyers can re-use the HBP after 4 full years from previous use</li>
+              <li>• <strong>Separation/divorce clause:</strong> Newly separated individuals may requalify for the program under revised rules</li>
+              <li>• <strong>Disability accommodations:</strong> Expanded provisions for persons with disabilities or those purchasing on their behalf</li>
             </ul>
           </div>
         </div>
+      </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Federal Programs</h2>
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Real-World Examples</h2>
 
-        <div class="space-y-6 mb-8">
-          <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
-            <h3 class="text-xl font-semibold text-blue-800 mb-3">First-Time Home Buyer Incentive (Enhanced)</h3>
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <h4 class="font-medium text-blue-700 mb-2">Eligibility</h4>
-                <ul class="space-y-1 text-blue-600 text-sm">
-                  <li>• Household income must be $175,000 or less</li>
-                  <li>• Home purchase price must not exceed $850,000 in British Columbia</li>
-                  <li>• Applicant must be a first-time home buyer</li>
-                  <li>• Property must be a primary residence</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-medium text-blue-700 mb-2">Benefits</h4>
-                <ul class="space-y-1 text-blue-600 text-sm">
-                  <li>• 5% shared equity available for resale (existing) homes</li>
-                  <li>• 10% shared equity available for newly constructed homes</li>
-                  <li>• No monthly repayment required</li>
-                  <li>• Repayment due only when the home is sold, refinanced, or reaches 25 years</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
-            <h3 class="text-xl font-semibold text-purple-800 mb-3">Enhanced Home Buyers’ Tax Credit (2025 Update)</h3>
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <h4 class="font-medium text-purple-700 mb-2">2025 Enhancements</h4>
-                <ul class="space-y-1 text-purple-600 text-sm">
-                  <li>• Increased to $8,000 (previously $5,000)</li>
-                  <li>• Provides up to $1,200 in tax relief</li>
-                  <li>• Can be applied toward eligible closing costs</li>
-                  <li>• Available as a one-time credit per qualifying individual</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-medium text-purple-700 mb-2">Eligible Expenses</h4>
-                <ul class="space-y-1 text-purple-600 text-sm">
-                  <li>• Legal fees related to the purchase</li>
-                  <li>• Professional home inspection servicesn</li>
-                  <li>• Appraisal fees required by the lender</li>
-                  <li>• Title insurance and related closing charges</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">New BC Provincial Programs (2025)</h2>
-
-        <div class="space-y-6 mb-8">
-          <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-            <h3 class="text-xl font-semibold text-green-800 mb-3">BC First-Time Home Buyer Down Payment Loan (Expected to be finalized in 2025)</h3>
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <h4 class="font-medium text-green-700 mb-2">Program Details</h4>
-                <ul class="space-y-1 text-green-600 text-sm">
-                  <li>• Up to $40,000 in interest-free loan support</li>
-                  <li>• Covers up to 5% of the home’s purchase price</li>
-                  <li>• No monthly payments for the first 5 years</li>
-                  <li>• Repayment required only upon sale or refinancing of the home</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-medium text-green-700 mb-2">Eligibility</h4>
-                <ul class="space-y-1 text-green-600 text-sm">
-                  <li>• Household income below $150,000</li>
-                  <li>• Home purchase price below $800,000</li>
-                  <li>• Must be a BC resident for at least 12 months</li>
-                  <li>• Must qualify as a first-time home buyer in British Columbia</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
-            <h3 class="text-xl font-semibold text-orange-800 mb-3">Enhanced Property Transfer Tax (PTT) Exemption</h3>
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <h4 class="font-medium text-orange-700 mb-2">2025 Updates</h4>
-                <ul class="space-y-1 text-orange-600 text-sm">
-                  <li>• Full exemption for homes priced up to $835,000</li>
-                  <li>• Partial exemption available up to $885,000</li>
-                  <li>• Potential savings of over $13,000 in taxes</li>
-                  <li>• Automatically applied at the time of purchase if eligible</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-medium text-orange-700 mb-2">Eligibility Requirements</h4>
-                <ul class="space-y-1 text-orange-600 text-sm">
-                  <li>• Must be a Canadian citizen or permanent resident</li>
-                  <li>• Must have lived in BC for at least 12 consecutive months</li>
-                  <li>• Must be a first-time buyer globally (not just in BC)</li>
-                  <li>• Property must be used as a primary residence</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">RRSP Home Buyers’ Plan Updates (2025)</h2>
-
-        <div class="bg-yellow-50 p-6 rounded-lg mb-8 border-l-4 border-yellow-400">
-          <h3 class="text-xl font-semibold text-yellow-800 mb-3">Significant enhancements have been made to the RRSP Home Buyers’ Plan (HBP) in 2025, expanding both contribution limits and access flexibility.</h3>
+      <div class="space-y-6 mb-8">
+        <div class="p-6 rounded-lg" style="background-color: #F4F6F8;">
+          <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Example 1: Vancouver Condo Purchase</h3>
           <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="font-medium text-yellow-700 mb-2">Increased Withdrawal Limits</h4>
-              <ul class="space-y-2 text-yellow-600">
-                <li>• <strong>Individual withdrawal limit:</strong> $60,000 (up from $35,000)</li>
-                <li>• <strong>Couple withdrawal limit:</strong> $120,000 combined</li>
-                <li>• <strong>Repayment period:</strong> 15 years (unchanged)</li>
-                <li>• <strong>Tax treatment:</strong> Withdrawals remain tax-free if repaid as scheduled</li>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-3" style="color: #1D2D44;">Purchase Details</h4>
+              <ul class="space-y-2 text-black text-sm">
+                <li>• Home price: $750,000</li>
+                <li>• Household income: $140,000</li>
+                <li>• Personal savings: $50,000</li>
+                <li>• RRSP available: $80,000</li>
               </ul>
             </div>
-            <div>
-              <h4 class="font-medium text-yellow-700 mb-2">New Flexibility and Access</h4>
-              <ul class="space-y-2 text-yellow-600">
-                <li>• <strong>Requalification window:</strong> Buyers can re-use the HBP after 4 full years from previous use</li>
-                <li>• <strong>Separation/divorce clause:</strong> Newly separated individuals may requalify for the program under revised rules</li>
-                <li>• <strong>Disability accommodations:</strong> Expanded provisions for persons with disabilities or those purchasing on their behalf</li>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-3" style="color: #1D2D44;">Available Assistance</h4>
+              <ul class="space-y-2 text-black text-sm">
+                <li>• FTHBI shared equity: $75,000 (10%)</li>
+                <li>• BC down payment loan: $37,500 (5%)</li>
+                <li>• RRSP HBP: $60,000</li>
+                <li>• PTT exemption: $11,500 saved</li>
+                <li>• Tax credit: $1,200</li>
               </ul>
             </div>
           </div>
-        </div>
-
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Real-World Examples</h2>
-
-        <div class="space-y-6 mb-8">
-          <div class="bg-slate-50 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-slate-800 mb-4">Example 1: Vancouver Condo Purchase</h3>
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <h4 class="font-semibold text-slate-800 mb-3">Purchase Details</h4>
-                <ul class="space-y-2 text-slate-700 text-sm">
-                  <li>• Home price: $750,000</li>
-                  <li>• Household income: $140,000</li>
-                  <li>• Personal savings: $50,000</li>
-                  <li>• RRSP available: $80,000</li>
-                </ul>
-              </div>
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <h4 class="font-semibold text-slate-800 mb-3">Available Assistance</h4>
-                <ul class="space-y-2 text-slate-700 text-sm">
-                  <li>• FTHBI shared equity: $75,000 (10%)</li>
-                  <li>• BC down payment loan: $37,500 (5%)</li>
-                  <li>• RRSP HBP: $60,000</li>
-                  <li>• PTT exemption: $11,500 saved</li>
-                  <li>• Tax credit: $1,200</li>
-                </ul>
-              </div>
-            </div>
-            <div class="mt-4 p-4 bg-green-100 rounded-lg">
-              <div class="text-center">
-                <div class="text-lg font-bold text-green-800">Total Down Payment Assistance: $172,500</div>
-                <div class="text-sm text-green-600">Reduces required cash down payment from $150,000 to just $27,500</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 p-6 rounded-lg">
-            <h3 class="text-xl font-semibold text-blue-800 mb-4">Example 2: Surrey Townhouse</h3>
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <h4 class="font-semibold text-blue-800 mb-3">Purchase Details</h4>
-                <ul class="space-y-2 text-blue-700 text-sm">
-                  <li>• Home price: $820,000</li>
-                  <li>• Household income: $160,000</li>
-                  <li>• Personal savings: $70,000</li>
-                  <li>• RRSP available: $100,000</li>
-                </ul>
-              </div>
-              <div class="bg-white p-4 rounded-lg shadow-sm">
-                <h4 class="font-semibold text-blue-800 mb-3">Available Assistance</h4>
-                <ul class="space-y-2 text-blue-700 text-sm">
-                  <li>• FTHBI shared equity: $41,000 (5%)</li>
-                  <li>• BC down payment loan: $40,000 (max)</li>
-                  <li>• RRSP HBP: $60,000</li>
-                  <li>• PTT partial exemption: $8,500 saved</li>
-                  <li>• Tax credit: $1,200</li>
-                </ul>
-              </div>
-            </div>
-            <div class="mt-4 p-4 bg-blue-100 rounded-lg">
-              <div class="text-center">
-                <div class="text-lg font-bold text-blue-800">Total Down Payment Assistance: $141,000</div>
-                <div class="text-sm text-blue-600">Reduces required cash down payment from $164,000 to just $23,000</div>
-              </div>
+          <div class="mt-4 p-4 rounded-lg" style="background-color: #D4AF37; color: white;">
+            <div class="text-center">
+              <div class="text-lg font-bold">Total Down Payment Assistance: $172,500</div>
+              <div class="text-sm opacity-90">Reduces required cash down payment from $150,000 to just $27,500</div>
             </div>
           </div>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">How to Apply</h2>
-
-        <div class="bg-slate-50 p-6 rounded-lg mb-8">
-          <h3 class="text-xl font-semibold text-slate-800 mb-4">Step-by-Step Process</h3>
-          <div class="space-y-4">
-            <div class="flex items-start">
-              <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">1</div>
-              <div>
-                <div class="font-medium text-slate-800">Get Pre-Approved</div>
-                <div class="text-sm text-slate-600">Work with a mortgage broker to understand your borrowing capacity and program eligibility</div>
-              </div>
+        <div class="p-6 rounded-lg" style="background-color: #F4F6F8;">
+          <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Example 2: Surrey Townhouse</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-3" style="color: #1D2D44;">Purchase Details</h4>
+              <ul class="space-y-2 text-black text-sm">
+                <li>• Home price: $820,000</li>
+                <li>• Household income: $160,000</li>
+                <li>• Personal savings: $70,000</li>
+                <li>• RRSP available: $100,000</li>
+              </ul>
             </div>
-            <div class="flex items-start">
-              <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">2</div>
-              <div>
-                <div class="font-medium text-slate-800">Apply for Programs</div>
-                <div class="text-sm text-slate-600">Submit applications for FTHBI, BC down payment loan, and RRSP HBP simultaneously</div>
-              </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-3" style="color: #1D2D44;">Available Assistance</h4>
+              <ul class="space-y-2 text-black text-sm">
+                <li>• FTHBI shared equity: $41,000 (5%)</li>
+                <li>• BC down payment loan: $40,000 (max)</li>
+                <li>• RRSP HBP: $60,000</li>
+                <li>• PTT partial exemption: $8,500 saved</li>
+                <li>• Tax credit: $1,200</li>
+              </ul>
             </div>
-            <div class="flex items-start">
-              <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">3</div>
-              <div>
-                <div class="font-medium text-slate-800">Find Your Home</div>
-                <div class="text-sm text-slate-600">Shop within program price limits and ensure property meets eligibility requirements</div>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">4</div>
-              <div>
-                <div class="font-medium text-slate-800">Complete Purchase</div>
-                <div class="text-sm text-slate-600">Coordinate with lawyer to ensure all programs are properly applied at closing</div>
-              </div>
+          </div>
+          <div class="mt-4 p-4 rounded-lg" style="background-color: #1D2D44; color: white;">
+            <div class="text-center">
+              <div class="text-lg font-bold">Total Down Payment Assistance: $141,000</div>
+              <div class="text-sm opacity-90">Reduces required cash down payment from $164,000 to just $23,000</div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-lg mb-8">
-          <div class="text-center">
-            <h3 class="text-2xl font-bold mb-4">Ready to Take Advantage of These Enhanced Programs?</h3>
-            <p class="mb-6 text-green-100">With over $170,000 in potential assistance available, 2025 is an excellent year for first-time homebuyers. Let's review your eligibility and create a strategy to maximize your benefits.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/#contact" class="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
-                Free Program Review
-              </a>
-              <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-lg font-semibold transition-colors">
-                Start Application
-              </a>
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">How to Apply</h2>
+
+      <div class="p-6 rounded-lg mb-8" style="background-color: #F4F6F8;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Step-by-Step Process</h3>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #1D2D44;">1</div>
+            <div>
+              <div class="font-medium text-black">Get Pre-Approved</div>
+              <div class="text-sm" style="color: #2C2C2C;">Work with a mortgage broker to understand your borrowing capacity and program eligibility</div>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #1D2D44;">2</div>
+            <div>
+              <div class="font-medium text-black">Apply for Programs</div>
+              <div class="text-sm" style="color: #2C2C2C;">Submit applications for FTHBI, BC down payment loan, and RRSP HBP simultaneously</div>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #1D2D44;">3</div>
+            <div>
+              <div class="font-medium text-black">Find Your Home</div>
+              <div class="text-sm" style="color: #2C2C2C;">Shop within program price limits and ensure property meets eligibility requirements</div>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #D4AF37;">4</div>
+            <div>
+              <div class="font-medium text-black">Complete Purchase</div>
+              <div class="text-sm" style="color: #2C2C2C;">Coordinate with lawyer to ensure all programs are properly applied at closing</div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="border-t border-gray-200 pt-6 mt-8">
-          <p class="text-sm text-gray-600 italic">
-            <strong>Disclaimer:</strong> Program details and eligibility requirements are subject to change. This information is current as of June 2025 and is for educational purposes only. Always verify current program details and consult with a qualified mortgage professional for personalized advice.
-          </p>
+      <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold mb-4">Ready to Take Advantage of These Enhanced Programs?</h3>
+          <p class="mb-6 opacity-90">With over $170,000 in potential assistance available, 2025 is an excellent year for first-time homebuyers. Let's review your eligibility and create a strategy to maximize your benefits.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+              Free Program Review
+            </a>
+            <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors hover:text-primary">
+              Start Application
+            </a>
+          </div>
         </div>
-      `,
-      date: "June 10, 2025",
-      author: "Rob Bhullar",
-      category: "Government Programs",
-      image: "first-time-homebuyer-family.png",
-    },
+      </div>
+
+      <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+        <p class="text-sm italic" style="color: #2C2C2C;">
+          <strong>Disclaimer:</strong> Program details and eligibility requirements are subject to change. This information is current as of June 2025 and is for educational purposes only. Always verify current program details and consult with a qualified mortgage professional for personalized advice.
+        </p>
+      </div>
+    `,
+    date: "June 10, 2025",
+    author: "Rob Bhullar",
+    category: "Government Programs",
+    image: "first-time-homebuyer-family.png",
+  },
+
 
     "vancouver-housing-market-update": {
       title: "Vancouver Housing Market Update (June 2025): Recovery Underway as Rates Fall",
