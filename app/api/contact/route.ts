@@ -63,14 +63,14 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "Thank you for your inquiry! I'll get back to you within 2 hours.",
+      message: "Thank you for your inquiry! We'll get back to you soon.",
     })
   } catch (error) {
     console.error("Email sending failed:", error)
 
     return NextResponse.json({
       success: true,
-      message: "Thank you for your inquiry! I'll get back to you within 2 hours (email fallback).",
+      message: "Thank you for your inquiry! We'll get back to you soon.",
     })
   }
 }
