@@ -189,100 +189,101 @@ function getPostData() {
     category: "Rate Analysis",
     image: "fixed-vs-variable-rates.png",
   },
-  "bank-of-canada-holds-key-interest-rate-June-2025": {
+ "bank-of-canada-holds-key-interest-rate-June-2025": {
     title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
     excerpt:
       "On June 4, 2025, the Bank of Canada held its key overnight rate at 2.75%. Here's why the central bank paused and what it means for Canadian homeowners and buyers.",
     content: `
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
-        <h3 class="text-lg font-semibold text-yellow-800 mb-2">Policy Update Summary</h3>
-        <p class="text-yellow-700">
-          At its June 4, 2025 policy meeting, the Bank of Canada opted to hold its overnight lending rate at 2.75%. This pause comes after earlier rate cuts aimed at rebalancing inflation and supporting economic stability. The decision signals a shift toward a more measured, data-driven approach as the central bank continues to monitor the impact of its recent actions.
-          </p>
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+      <h3 class="text-lg font-semibold mb-2" style="color: #1D2D44;">Policy Update Summary</h3>
+      <p class="text-black">
+        At its June 4, 2025 policy meeting, the Bank of Canada opted to hold its overnight lending rate at 2.75%. This pause comes after earlier rate cuts aimed at rebalancing inflation and supporting economic stability. The decision signals a shift toward a more measured, data-driven approach as the central bank continues to monitor the impact of its recent actions.
+        </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+      Why Did the Bank Pause Now?
+    </h2>
+
+    <p class="mb-6 text-black">
+      The Bank cited continued progress in taming inflation as a primary reason for maintaining its current policy rate. Core inflation readings for April showed further signs of cooling, with headline inflation nearing the Bank's target range. At the same time, economic growth remains subdued, giving policymakers room to wait and assess how recent rate reductions are flowing through the broader economy.
+    </p>
+
+    <p class="mb-6 text-black">
+      Although shelter-related costs — particularly mortgage interest and rent — continue to place upward pressure on the Consumer Price Index (CPI), many other categories are showing signs of easing. Labour market conditions have also softened slightly, with modest increases in unemployment and slower wage growth, which supports the Bank's confidence in its current path.
+      </p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+      What It Means for Borrowers
+    </h2>
+
+    <p class="mb-6 text-black">
+      The implications of a rate hold vary depending on your mortgage type and financial goals:
+      </p>
+      
+    <ul class="space-y-2 mb-6 text-black">
+      <li>• Variable-Rate Mortgage Holders: Your payments remain unchanged for now. However, further cuts later in the year could reduce borrowing costs.</li>
+      <li>• Fixed-Rate Borrowers: Most fixed mortgage rates have already priced in expectations for future Bank of Canada moves. Today's decision will likely reinforce current market sentiment without causing sharp shifts.</li>
+      <li>• New Buyers and Renewers: Stability in rates offers an ideal time to explore your options and position yourself ahead of potential changes later in 2025.</li>
+    </ul>
+
+    <p class="mb-6 text-black">
+      This pause gives many Canadians an important window to reassess their mortgage strategy — whether it's time to refinance, switch lenders, or lock in a new rate before further movement.
+    </p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+      Strategic Advice for the Months Ahead
+    </h2>
+
+    <p class="mb-6 text-black">
+      With uncertainty still present, borrowers should consider proactive steps to stay ahead:
+    </p>
+    <ul class="space-y-2 mb-6 text-black">
+      <li>• Get Pre-Approved Early: If you plan to purchase a home within the next 90–120 days, securing a rate hold can protect you from market fluctuations and increase your negotiating power.</li>
+      <li>• Explore Shorter Fixed Terms: In a declining rate environment, 1–3 year fixed terms may offer a good balance between predictability and flexibility.</li>
+      <li>• Leverage Renewal Opportunities: If your mortgage is up for renewal, use this period of stability to negotiate better terms or consider switching lenders.</li>
+      <li>• Monitor Inflation and Employment Data: These will be key indicators for when the next rate move may happen.</li>
+    </ul> 
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+      Looking Ahead: Will More Cuts Follow?
+    </h2>
+
+    <p class="mb-6 text-black">
+      While many economists anticipate one or two additional rate cuts in 2025, the Bank of Canada has made it clear that any future decisions will be contingent on economic data. Key factors include:
+    </p>
+    <ul class="space-y-2 mb-6 text-black">
+      <li>• Core Inflation Trends: Sustained progress toward the 2% target is essential before further easing.</li>
+      <li>• Consumer Spending and Household Debt: A resurgence in spending or borrowing could force the Bank to delay further cuts.</li>
+      <li>• Global Economic Conditions: Instability abroad — such as U.S. rate movements, geopolitical tensions, or commodity price shocks — could influence the Bank's strategy.</li>
+    </ul> 
+
+    <div class="p-6 mb-8 rounded-r-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+      <h3 class="text-lg font-semibold mb-2" style="color: #1D2D44;">Final Thoughts</h3>
+      <p class="text-black">
+        This rate hold reflects a pivotal point in the Bank of Canada's efforts to balance inflation control with economic recovery. For borrowers, it's an opportunity to plan ahead and make informed mortgage decisions with greater clarity. Whether you're entering the market, refinancing, or simply keeping an eye on your renewal window, now is the time to assess your position and prepare for what's next.
+      </p>
+    </div>
+
+    <div class="text-white p-6 rounded-lg" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+      <p class="font-semibold text-center">
+        Have questions about how this decision impacts your mortgage?
+        Book a free consultation to review your options.
+      </p>
+      <div class="mt-4 text-center">
+        <a href="/#contact"
+          class="inline-block bg-white hover:bg-gray-100 px-5 py-3 rounded-lg font-medium transition-colors" style="color: #1D2D44;">
+          Book a Call
+        </a>
       </div>
-
-      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
-        Why Did the Bank Pause Now?
-      </h2>
-
-      <p class="mb-6 text-gray-700">
-        The Bank cited continued progress in taming inflation as a primary reason for maintaining its current policy rate. Core inflation readings for April showed further signs of cooling, with headline inflation nearing the Bank’s target range. At the same time, economic growth remains subdued, giving policymakers room to wait and assess how recent rate reductions are flowing through the broader economy.
-      </p>
-
-      <p class="mb-6 text-gray-700">
-        Although shelter-related costs — particularly mortgage interest and rent — continue to place upward pressure on the Consumer Price Index (CPI), many other categories are showing signs of easing. Labour market conditions have also softened slightly, with modest increases in unemployment and slower wage growth, which supports the Bank’s confidence in its current path.
-        </p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
-        What It Means for Borrowers
-      </h2>
-
-<p class="mb-6 text-gray-700">
-        The implications of a rate hold vary depending on your mortgage type and financial goals:
-        </p>
-        
-      <ul class="space-y-2 mb-6 text-gray-700">
-        <li>• Variable-Rate Mortgage Holders: Your payments remain unchanged for now. However, further cuts later in the year could reduce borrowing costs.</li>
-        <li>• Fixed-Rate Borrowers: Most fixed mortgage rates have already priced in expectations for future Bank of Canada moves. Today’s decision will likely reinforce current market sentiment without causing sharp shifts.</li>
-        <li>• New Buyers and Renewers: Stability in rates offers an ideal time to explore your options and position yourself ahead of potential changes later in 2025.</li>
-      </ul>
-
-      <p class="mb-6 text-gray-700">
-        This pause gives many Canadians an important window to reassess their mortgage strategy — whether it’s time to refinance, switch lenders, or lock in a new rate before further movement.
-      </p>
-
-      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
-        Strategic Advice for the Months Ahead
-      </h2>
-
-      <p class="mb-6 text-gray-700">
-        With uncertainty still present, borrowers should consider proactive steps to stay ahead:
-      </p>
-      <ul class="space-y-2 mb-6 text-gray-700">
-        <li>• Get Pre-Approved Early: If you plan to purchase a home within the next 90–120 days, securing a rate hold can protect you from market fluctuations and increase your negotiating power.</li>
-        <li>• Explore Shorter Fixed Terms: In a declining rate environment, 1–3 year fixed terms may offer a good balance between predictability and flexibility.</li>
-        <li>• Leverage Renewal Opportunities: If your mortgage is up for renewal, use this period of stability to negotiate better terms or consider switching lenders.</li>
-        <li>• Monitor Inflation and Employment Data: These will be key indicators for when the next rate move may happen.</li>
-      </ul> 
-
-<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
-        Looking Ahead: Will More Cuts Follow?
-      </h2>
-
-      <p class="mb-6 text-gray-700">
-        While many economists anticipate one or two additional rate cuts in 2025, the Bank of Canada has made it clear that any future decisions will be contingent on economic data. Key factors include:
-      </p>
-      <ul class="space-y-2 mb-6 text-gray-700">
-        <li>• Core Inflation Trends: Sustained progress toward the 2% target is essential before further easing.</li>
-        <li>• Consumer Spending and Household Debt: A resurgence in spending or borrowing could force the Bank to delay further cuts.</li>
-        <li>• Global Economic Conditions: Instability abroad — such as U.S. rate movements, geopolitical tensions, or commodity price shocks — could influence the Bank’s strategy.</li>
-      </ul> 
-
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
-        <h3 class="text-lg font-semibold text-blue-800 mb-2">Final Thoughts</h3>
-        <p class="text-blue-700">
-          This rate hold reflects a pivotal point in the Bank of Canada’s efforts to balance inflation control with economic recovery. For borrowers, it’s an opportunity to plan ahead and make informed mortgage decisions with greater clarity. Whether you’re entering the market, refinancing, or simply keeping an eye on your renewal window, now is the time to assess your position and prepare for what’s next.
-        </p>
-      </div>
-
-      <div class="bg-gradient-to-r from-blue-600 to-green-600 text-white p-6 rounded-lg">
-        <p class="font-semibold text-center">
-          Have questions about how this decision impacts your mortgage?
-          Book a free consultation to review your options.
-        </p>
-        <div class="mt-4 text-center">
-          <a href="/#contact"
-            class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-5 py-3 rounded-lg font-medium">
-            Book a Call
-          </a>
-        </div>
-      </div>
-    `,
+    </div>
+  `,
     date: "June 17, 2025",
     author: "Rob Bhullar",
     category: "Interest Rates",
-    image: "bank-of-canada-building.png?height=400&width=800",
+    image: "bank-of-canada-building.png",
   },
+
     "bank-of-canada-cuts-rates-March-2025": {
       title: "Bank of Canada Cuts Key Interest Rate to 2.75%: Relief for Mortgage Holders",
       excerpt:
