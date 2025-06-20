@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Calculator, Users, Shield, TrendingUp, CheckCircle } from "lucide-react"
+import { Calculator, Users, Shield, TrendingUp, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { Header } from "@/components/header"
@@ -16,13 +16,13 @@ export default function PurchasePageClient() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
+      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-slate-100 text-[#032133] hover:bg-[#032133]/10">Home Purchase Specialist</Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Buy Your Dream Home with <span className="text-[#032133]">Confidence</span>
+              <Badge className="mb-4 bg-[#F4F6F8] text-[#1D2D44] hover:bg-[#1D2D44]/10">Home Purchase Specialist</Badge>
+              <h1 className="text-4xl lg:text-6xl font-bold text-black mb-6">
+                Buy Your Dream Home with <span className="text-[#1D2D44]">Confidence</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Whether you're a first-time buyer or moving up, I'll help you secure the best mortgage rates and terms
@@ -31,7 +31,7 @@ export default function PurchasePageClient() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
                   size="lg"
-                  className="bg-[#032133] hover:bg-[#032133]/90"
+                  className="bg-[#1D2D44] hover:bg-[#1D2D44]/90"
                   asChild
                   onClick={() => window.trackApplicationClick?.("purchase_hero")}
                 >
@@ -39,7 +39,12 @@ export default function PurchasePageClient() {
                     Get Pre-Approved Now
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+                  asChild
+                >
                   <Link href="#calculator">
                     <Calculator className="w-5 h-5 mr-2" />
                     Calculate Payments
@@ -48,22 +53,22 @@ export default function PurchasePageClient() {
               </div>
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-[#032133]">24hrs</div>
+                  <div className="text-2xl font-bold text-[#1D2D44]">24hrs</div>
                   <div className="text-sm text-gray-600">Pre-Approval</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[#032133]">50+</div>
+                  <div className="text-2xl font-bold text-[#1D2D44]">50+</div>
                   <div className="text-sm text-gray-600">Lenders</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[#032133]">5%</div>
+                  <div className="text-2xl font-bold text-[#1D2D44]">5%</div>
                   <div className="text-sm text-gray-600">Min Down</div>
                 </div>
               </div>
             </div>
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get Your Purchase Pre-Approval</h3>
+                <h3 className="text-2xl font-bold text-[#1D2D44] mb-6">Get Your Purchase Pre-Approval</h3>
                 <ContactForm variant="hero" />
               </div>
             </div>
@@ -75,7 +80,9 @@ export default function PurchasePageClient() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Choose Me for Your Home Purchase?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">
+              Why Choose Me for Your Home Purchase?
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Buying a home is one of life's biggest decisions. I make the mortgage process simple and stress-free.
             </p>
@@ -103,7 +110,7 @@ export default function PurchasePageClient() {
             ].map((benefit, index) => (
               <Card key={index} className="border-0 shadow-lg">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-[#032133] mb-4">
+                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#1D2D44] mb-4">
                     {benefit.icon}
                   </div>
                   <CardTitle className="text-xl">{benefit.title}</CardTitle>
@@ -113,7 +120,7 @@ export default function PurchasePageClient() {
                   <ul className="space-y-2">
                     {benefit.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-[#032133] mr-3" />
+                        <CheckCircle className="w-4 h-4 text-[#D4AF37] mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -126,10 +133,10 @@ export default function PurchasePageClient() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Simple 4-Step Process</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Simple 4-Step Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From application to keys in hand, I guide you through every step.
             </p>
@@ -142,10 +149,10 @@ export default function PurchasePageClient() {
               { step: "4", title: "Get Your Keys", description: "Close on your new home and move in!" },
             ].map((process, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#032133] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#1D2D44] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {process.step}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{process.title}</h3>
+                <h3 className="text-xl font-bold text-[#1D2D44] mb-2">{process.title}</h3>
                 <p className="text-gray-600">{process.description}</p>
               </div>
             ))}
@@ -157,7 +164,7 @@ export default function PurchasePageClient() {
       <section id="calculator" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Calculate Your Monthly Payments</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Calculate Your Monthly Payments</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Use our mortgage calculator to estimate your monthly payments and see how different factors affect your
               mortgage.
@@ -168,7 +175,7 @@ export default function PurchasePageClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#032133] text-white">
+      <section className="py-20 bg-gradient-to-r from-[#1D2D44] to-[#D4AF37] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Ready to Buy Your Home?</h2>
           <p className="text-xl mb-8 opacity-90">Get pre-approved today and start shopping with confidence.</p>
@@ -183,7 +190,13 @@ export default function PurchasePageClient() {
                 Start Application
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild onClick={() => window.trackPhoneClick?.()}>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+              asChild
+              onClick={() => window.trackPhoneClick?.()}
+            >
               {/* <Link href="tel:+16041234567">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
