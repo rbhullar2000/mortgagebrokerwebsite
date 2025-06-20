@@ -565,7 +565,7 @@ function getPostData() {
     "first-time-home-buyer-incentive-changes": {
       title: "First-Time Home Buyer Programs Enhanced for 2025: New Opportunities in BC",
       excerpt:
-        "The federal and provincial governments have expanded first-time homebuyer programs for 2025, with increased price thresholds, enhanced down payment assistance, and new tax credits making homeownership more accessible.",
+        "Several government programs have been significantly enhanced for 2025 — including an increased home price threshold of up to $850,000 under the First-Time Home Buyer Incentive in BC, a new provincial down payment loan, and expanded tax credits — all aimed at making homeownership more accessible for first-time buyers.",
       content: `
         <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded-r-lg">
           <div class="flex items-center mb-3">
@@ -577,25 +577,25 @@ function getPostData() {
           <p class="text-green-700">Multiple government programs have been enhanced for 2025, with the First-Time Home Buyer Incentive increasing price thresholds to $850,000 in BC, new provincial down payment assistance, and expanded tax credits.</p>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">What's New for 2025?</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">2024 vs. 2025 Program Enhancements</h2>
         
         <div class="grid md:grid-cols-2 gap-6 mb-8">
           <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
             <h3 class="font-semibold text-red-800 mb-3">Previous Limits (2024)</h3>
             <ul class="space-y-2 text-red-700">
-              <li>• Maximum home price: $750,000 in BC</li>
-              <li>• Income limit: $150,000</li>
-              <li>• Limited down payment assistance</li>
-              <li>• Basic tax credit: $5,000</li>
+              <li>• Maximum eligible home price: $750,000 (BC)</li>
+              <li>• Household income cap: $150,000</li>
+              <li>• Down payment support: Minimal or limited options</li>
+              <li>• Home Buyers’ Tax Credit: $5,000 (up to $750 tax refund)</li>
             </ul>
           </div>
           <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
             <h3 class="font-semibold text-green-800 mb-3">Enhanced Limits (2025)</h3>
             <ul class="space-y-2 text-green-700">
-              <li>• Maximum home price: $850,000 in BC</li>
-              <li>• Income limit: $175,000</li>
-              <li>• New BC down payment loan program</li>
-              <li>• Enhanced tax credit: $8,000</li>
+              <li>• Maximum eligible home price: $850,000 (BC)</li>
+              <li>• Household income cap: $175,000</li>
+              <li>• New support: BC Down Payment Loan Program (up to $40,000 interest-free)</li>
+              <li>• Home Buyers’ Tax Credit: Increased to $8,000 (up to $1,200 tax refund)</li>
             </ul>
           </div>
         </div>
@@ -609,43 +609,43 @@ function getPostData() {
               <div>
                 <h4 class="font-medium text-blue-700 mb-2">Eligibility</h4>
                 <ul class="space-y-1 text-blue-600 text-sm">
-                  <li>• Household income up to $175,000</li>
-                  <li>• Home price up to $850,000 in BC</li>
-                  <li>• First-time buyer status</li>
-                  <li>• Primary residence only</li>
+                  <li>• Household income must be $175,000 or less</li>
+                  <li>• Home purchase price must not exceed $850,000 in British Columbia</li>
+                  <li>• Applicant must be a first-time home buyer</li>
+                  <li>• Property must be a primary residence</li>
                 </ul>
               </div>
               <div>
                 <h4 class="font-medium text-blue-700 mb-2">Benefits</h4>
                 <ul class="space-y-1 text-blue-600 text-sm">
-                  <li>• 5% shared equity (existing homes)</li>
-                  <li>• 10% shared equity (new homes)</li>
-                  <li>• No monthly payments</li>
-                  <li>• Repay when you sell or refinance</li>
+                  <li>• 5% shared equity available for resale (existing) homes</li>
+                  <li>• 10% shared equity available for newly constructed homes</li>
+                  <li>• No monthly repayment required</li>
+                  <li>• Repayment due only when the home is sold, refinanced, or reaches 25 years</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div class="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
-            <h3 class="text-xl font-semibold text-purple-800 mb-3">Enhanced Home Buyers' Tax Credit</h3>
+            <h3 class="text-xl font-semibold text-purple-800 mb-3">Enhanced Home Buyers’ Tax Credit (2025 Update)</h3>
             <div class="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 class="font-medium text-purple-700 mb-2">2025 Enhancements</h4>
                 <ul class="space-y-1 text-purple-600 text-sm">
-                  <li>• Increased to $8,000 (from $5,000)</li>
-                  <li>• Up to $1,200 tax refund</li>
-                  <li>• Applies to closing costs</li>
-                  <li>• One-time credit per person</li>
+                  <li>• Increased to $8,000 (previously $5,000)</li>
+                  <li>• Provides up to $1,200 in tax relief</li>
+                  <li>• Can be applied toward eligible closing costs</li>
+                  <li>• Available as a one-time credit per qualifying individual</li>
                 </ul>
               </div>
               <div>
                 <h4 class="font-medium text-purple-700 mb-2">Eligible Expenses</h4>
                 <ul class="space-y-1 text-purple-600 text-sm">
-                  <li>• Legal fees</li>
-                  <li>• Home inspection</li>
-                  <li>• Appraisal fees</li>
-                  <li>• Title insurance</li>
+                  <li>• Legal fees related to the purchase</li>
+                  <li>• Professional home inspection servicesn</li>
+                  <li>• Appraisal fees required by the lender</li>
+                  <li>• Title insurance and related closing charges</li>
                 </ul>
               </div>
             </div>
