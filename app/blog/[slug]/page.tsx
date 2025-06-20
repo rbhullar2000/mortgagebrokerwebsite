@@ -15,179 +15,180 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 function getPostData() {
   return {
      "are-variable-rates-still-worth-it-2025": {
-      title: "Are Variable Rates Still Worth It in 2025? It Depends…",
-      excerpt:
-        "The fixed vs. variable debate is heating up again in 2025. With forecasts suggesting lower rates ahead, should you lock in fixed for stability or ride the wave with variable? Here's what you need to know.",
-      content: `
-    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8 rounded-r-lg">
-      <div class="flex items-center mb-3">
-        <svg class="w-6 h-6 text-yellow-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-        </svg>
-        <h3 class="text-lg font-semibold text-yellow-800">The Variable vs Fixed Dilemma</h3>
+    title: "Are Variable Rates Still Worth It in 2025? It Depends…",
+    excerpt:
+      "The fixed vs. variable debate is heating up again in 2025. With forecasts suggesting lower rates ahead, should you lock in fixed for stability or ride the wave with variable? Here's what you need to know.",
+    content: `
+      <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+        <div class="flex items-center mb-3">
+          <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+          </svg>
+          <h3 class="text-lg font-semibold" style="color: #1D2D44;">The Variable vs Fixed Dilemma</h3>
+        </div>
+        <p class="text-black">The fixed vs. variable debate is heating up again in 2025—and for good reason. Borrowers across Canada are asking: should I lock in a fixed rate for stability, or ride the wave with a variable rate that could drop even further? The truth? There's no universal answer—especially in a year where the economy could swing in either direction.</p>
       </div>
-      <p class="text-yellow-700">The fixed vs. variable debate is heating up again in 2025—and for good reason. Borrowers across Canada are asking: should I lock in a fixed rate for stability, or ride the wave with a variable rate that could drop even further? The truth? There's no universal answer—especially in a year where the economy could swing in either direction.</p>
-    </div>
 
-    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Forecasts Suggest Lower Rates—But Don't Count on It</h2>
-    
-    <p class="mb-6 text-lg leading-relaxed">As of May 1, 2025, the Bank of Canada's policy rate sits at <strong>2.75%</strong>, with a prime rate of <strong>4.95%</strong>. Based on market expectations, both are likely to trend downward by year's end.</p>
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Forecasts Suggest Lower Rates—But Don't Count on It</h2>
+      
+      <p class="mb-6 text-lg leading-relaxed text-black">As of May 1, 2025, the Bank of Canada's policy rate sits at <strong>2.75%</strong>, with a prime rate of <strong>4.95%</strong>. Based on market expectations, both are likely to trend downward by year's end.</p>
 
-    <div class="bg-gray-50 p-6 rounded-lg mb-8">
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Rate Forecast for 2025</h3>
-      <div class="overflow-x-auto">
-        <table class="w-full border-collapse">
-          <thead>
-            <tr class="bg-gray-100">
-              <th class="border border-gray-300 px-4 py-2 text-left">Date</th>
-              <th class="border border-gray-300 px-4 py-2 text-left">Forecasted BoC Rate</th>
-              <th class="border border-gray-300 px-4 py-2 text-left">Forecasted Prime Rate</th>
-              <th class="border border-gray-300 px-4 py-2 text-left">Est. 5-Year Variable (Prime - 0.90%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="border border-gray-300 px-4 py-2">Dec 31, 2025</td>
-              <td class="border border-gray-300 px-4 py-2 font-bold text-green-600">2.25%</td>
-              <td class="border border-gray-300 px-4 py-2 font-bold text-blue-600">4.45%</td>
-              <td class="border border-gray-300 px-4 py-2 font-bold text-purple-600">~3.55%</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="bg-white p-6 rounded-lg mb-8 border" style="border-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Rate Forecast for 2025</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr style="background-color: #1D2D44; color: white;">
+                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Date</th>
+                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Forecasted BoC Rate</th>
+                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Forecasted Prime Rate</th>
+                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Est. 5-Year Variable (Prime - 0.90%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">Dec 31, 2025</td>
+                <td class="border px-4 py-2 font-bold text-black" style="border-color: #D4AF37;">2.25%</td>
+                <td class="border px-4 py-2 font-bold text-black" style="border-color: #D4AF37;">4.45%</td>
+                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">~3.55%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-black mt-4">Meanwhile, 5-year fixed rates for insured mortgages are forecasted to land between <strong>3.82% and 4.00%</strong>.</p>
       </div>
-      <p class="text-sm text-gray-600 mt-4">Meanwhile, 5-year fixed rates for insured mortgages are forecasted to land between <strong>3.82% and 4.00%</strong>.</p>
-    </div>
 
-    <p class="mb-6 leading-relaxed">So far, variable appears to offer slightly lower rates—but that comes with one big catch: <strong>no guarantees</strong>. These forecasts shift as quickly as the economy does.</p>
+      <p class="mb-6 leading-relaxed text-black">So far, variable appears to offer slightly lower rates—but that comes with one big catch: <strong>no guarantees</strong>. These forecasts shift as quickly as the economy does.</p>
 
-    <div class="bg-blue-50 p-4 rounded-lg mb-8 border-l-4 border-blue-400">
-      <p class="text-sm text-blue-800"><strong>Note:</strong> All rates above are insured and for illustrative purposes only. They're subject to change without notice, and actual offers vary by lender.</p>
-    </div>
-
-    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">If You're Feeling Déjà Vu, You're Not Alone</h2>
-
-    <p class="mb-6 leading-relaxed">Back in 2020, when COVID hit, many experts predicted a housing crash. Instead, we saw one of the most aggressive real estate booms in Canadian history. Rates dropped to record lows, demand exploded, and those who chose variable mortgages often came out ahead.</p>
-
-    <p class="mb-6 leading-relaxed">We could be heading into a similar situation. If Canada experiences a mild recession (or even a full one), interest rates typically fall further. That could spark a return of buyer activity—and possibly even another wave of housing competition.</p>
-
-    <p class="mb-8 leading-relaxed">But there's also a real chance we enter a more traditional downturn, where both prices and demand cool off. Either way, timing the market perfectly is next to impossible.</p>
-
-    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Should You Choose Fixed or Variable in 2025?</h2>
-
-    <p class="mb-6 leading-relaxed">Here's a side-by-side to help you decide what might be best for your situation:</p>
-
-    <div class="grid md:grid-cols-2 gap-6 mb-8">
-      <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
-        <h3 class="font-semibold text-blue-800 mb-3">Fixed Rate Might Be Better If…</h3>
-        <ul class="space-y-2 text-blue-700">
-          <li>• You need consistent monthly payments</li>
-          <li>• You're working with a tight or fixed income</li>
-          <li>• You're worried about inflation or rate hikes</li>
-          <li>• You plan to keep your mortgage for the full term</li>
-        </ul>
+      <div class="bg-white p-4 rounded-lg mb-8 border-l-4" style="border-left-color: #1D2D44;">
+        <p class="text-sm text-black"><strong>Note:</strong> All rates above are insured and for illustrative purposes only. They're subject to change without notice, and actual offers vary by lender.</p>
       </div>
-      <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-        <h3 class="font-semibold text-green-800 mb-3">Variable Rate Might Be Better If…</h3>
-        <ul class="space-y-2 text-green-700">
-          <li>• You're okay with fluctuations in your payments</li>
-          <li>• You've got financial flexibility or a buffer</li>
-          <li>• You believe rates will drop over the next 12–24 months</li>
-          <li>• You might sell or refinance early (lower penalties)</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="bg-purple-50 p-4 rounded-lg mb-8 border-l-4 border-purple-400">
-      <p class="text-purple-800"><strong>Quick tip:</strong> Historically, variable rates have outperformed fixed more often than not—but only when borrowers stayed the full term and didn't break the mortgage early.</p>
-    </div>
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">If You're Feeling Déjà Vu, You're Not Alone</h2>
 
-    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">What's Coming for Mortgage Rates? Here's the Forecast</h2>
+      <p class="mb-6 leading-relaxed text-black">Back in 2020, when COVID hit, many experts predicted a housing crash. Instead, we saw one of the most aggressive real estate booms in Canadian history. Rates dropped to record lows, demand exploded, and those who chose variable mortgages often came out ahead.</p>
 
-    <div class="bg-gray-50 p-6 rounded-lg mb-8">
-      <div class="overflow-x-auto">
-        <table class="w-full border-collapse">
-          <thead>
-            <tr class="bg-gray-100">
-              <th class="border border-gray-300 px-4 py-2 text-left">Date</th>
-              <th class="border border-gray-300 px-4 py-2 text-left">BoC Rate</th>
-              <th class="border border-gray-300 px-4 py-2 text-left">Prime Rate</th>
-              <th class="border border-gray-300 px-4 py-2 text-left">5-Year Variable</th>
-              <th class="border border-gray-300 px-4 py-2 text-left">5-Year Fixed</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="border border-gray-300 px-4 py-2">Jun 30, 2025</td>
-              <td class="border border-gray-300 px-4 py-2">2.50%</td>
-              <td class="border border-gray-300 px-4 py-2">4.70%</td>
-              <td class="border border-gray-300 px-4 py-2 font-bold text-green-600">3.65%</td>
-              <td class="border border-gray-300 px-4 py-2 font-bold text-blue-600">3.78%</td>
-            </tr>
-            <tr class="bg-gray-50">
-              <td class="border border-gray-300 px-4 py-2">Dec 31, 2025</td>
-              <td class="border border-gray-300 px-4 py-2">2.25%</td>
-              <td class="border border-gray-300 px-4 py-2">4.45%</td>
-              <td class="border border-gray-300 px-4 py-2 font-bold text-green-600">3.40%</td>
-              <td class="border border-gray-300 px-4 py-2 font-bold text-blue-600">3.82%</td>
-            </tr>
-            <tr>
-              <td class="border border-gray-300 px-4 py-2">Jun 30, 2026</td>
-              <td class="border border-gray-300 px-4 py-2">2.25%</td>
-              <td class="border border-gray-300 px-4 py-2">4.45%</td>
-              <td class="border border-gray-300 px-4 py-2 font-bold text-green-600">3.40%</td>
-              <td class="border border-gray-300 px-4 py-2 font-bold text-blue-600">3.90%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="text-sm text-gray-600 mt-4"><strong>Source:</strong> wowa.ca</p>
-    </div>
+      <p class="mb-6 leading-relaxed text-black">We could be heading into a similar situation. If Canada experiences a mild recession (or even a full one), interest rates typically fall further. That could spark a return of buyer activity—and possibly even another wave of housing competition.</p>
 
-    <p class="mb-8 leading-relaxed">These numbers reflect insured rates, and assume a steady term and risk premium. Real-world conditions—like inflation surprises, global instability, or policy changes—could shift these projections quickly. And honestly, the 5-year fixes seem a bit optimistic to me as well!</p>
+      <p class="mb-8 leading-relaxed text-black">But there's also a real chance we enter a more traditional downturn, where both prices and demand cool off. Either way, timing the market perfectly is next to impossible.</p>
 
-    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">Bottom Line: Strategy Over Prediction</h2>
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Should You Choose Fixed or Variable in 2025?</h2>
 
-    <p class="mb-6 leading-relaxed">No one can say for sure where the market is heading. Not economists, not central banks, not even the traders pricing in future cuts. All we can say with certainty is that mortgage strategy should be based on your goals—not someone else's forecast.</p>
+      <p class="mb-6 leading-relaxed text-black">Here's a side-by-side to help you decide what might be best for your situation:</p>
 
-    <p class="mb-6 leading-relaxed">If you value peace of mind and budgeting certainty, fixed may be the way to go. If you're comfortable riding the rate wave and want the potential to save over time, variable could be worth the risk.</p>
-
-    <p class="mb-8 leading-relaxed">In a world of economic uncertainty, one thing remains constant: making the right choice starts with a conversation.</p>
-
-    <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-lg mb-8">
-      <div class="text-center">
-        <h3 class="text-2xl font-bold mb-4">Let's Talk Through Your Options</h3>
-        <p class="mb-6 text-purple-100">I'll help you compare today's best variable and fixed rates side by side, based on your income, timeline, and comfort with risk—so you can feel confident in whichever path you choose.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/#contact" class="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
-            Free Rate Consultation
-          </a>
-          <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 py-3 rounded-lg font-semibold transition-colors">
-            Compare Current Rates
-          </a>
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+          <h3 class="font-semibold mb-3" style="color: #1D2D44;">Fixed Rate Might Be Better If…</h3>
+          <ul class="space-y-2 text-black">
+            <li>• You need consistent monthly payments</li>
+            <li>• You're working with a tight or fixed income</li>
+            <li>• You're worried about inflation or rate hikes</li>
+            <li>• You plan to keep your mortgage for the full term</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+          <h3 class="font-semibold mb-3" style="color: #1D2D44;">Variable Rate Might Be Better If…</h3>
+          <ul class="space-y-2 text-black">
+            <li>• You're okay with fluctuations in your payments</li>
+            <li>• You've got financial flexibility or a buffer</li>
+            <li>• You believe rates will drop over the next 12–24 months</li>
+            <li>• You might sell or refinance early (lower penalties)</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <div class="bg-gray-50 p-6 rounded-lg mb-8">
-      <h3 class="text-lg font-semibold text-gray-800 mb-3">Sources:</h3>
-      <ul class="space-y-1 text-sm text-gray-600">
-        <li>• <a href="https://wowa.ca/interest-rate-forecast" class="text-blue-600 hover:underline" target="_blank" rel="noopener">wowa.ca/interest-rate-forecast</a></li>
-        <li>• <a href="https://www.canadianmortgagetrends.com" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Canadian Mortgage Trends</a></li>
-        <li>• <a href="https://www.crea.ca/housing-market-stats/" class="text-blue-600 hover:underline" target="_blank" rel="noopener">CREA Housing Market Stats</a></li>
-        <li>• <a href="https://www.cmls.ca" class="text-blue-600 hover:underline" target="_blank" rel="noopener">CMLS Broker Resources</a></li>
-      </ul>
-    </div>
+      <div class="bg-white p-4 rounded-lg mb-8 border-l-4" style="border-left-color: #D4AF37;">
+        <p class="text-black"><strong style="color: #1D2D44;">Quick tip:</strong> Historically, variable rates have outperformed fixed more often than not—but only when borrowers stayed the full term and didn't break the mortgage early.</p>
+      </div>
 
-    <div class="border-t border-gray-200 pt-6 mt-8">
-      <p class="text-sm text-gray-600 italic">
-        <strong>Disclaimer:</strong> Rate forecasts are estimates based on current market conditions and are subject to change. This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and terms vary by lender and individual circumstances. Always consult with a qualified mortgage professional for personalized advice.
-      </p>
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">What's Coming for Mortgage Rates? Here's the Forecast</h2>
+
+      <div class="bg-white p-6 rounded-lg mb-8 border" style="border-color: #1D2D44;">
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr style="background-color: #1D2D44; color: white;">
+                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Date</th>
+                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">BoC Rate</th>
+                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Prime Rate</th>
+                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">5-Year Variable</th>
+                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">5-Year Fixed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">Jun 30, 2025</td>
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">2.50%</td>
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">4.70%</td>
+                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.65%</td>
+                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.78%</td>
+              </tr>
+              <tr style="background-color: #F8F9FA;">
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">Dec 31, 2025</td>
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">2.25%</td>
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">4.45%</td>
+                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.40%</td>
+                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.82%</td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">Jun 30, 2026</td>
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">2.25%</td>
+                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">4.45%</td>
+                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.40%</td>
+                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.90%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-black mt-4"><strong>Source:</strong> wowa.ca</p>
+      </div>
+
+      <p class="mb-8 leading-relaxed text-black">These numbers reflect insured rates, and assume a steady term and risk premium. Real-world conditions—like inflation surprises, global instability, or policy changes—could shift these projections quickly. And honestly, the 5-year fixes seem a bit optimistic to me as well!</p>
+
+      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bottom Line: Strategy Over Prediction</h2>
+
+      <p class="mb-6 leading-relaxed text-black">No one can say for sure where the market is heading. Not economists, not central banks, not even the traders pricing in future cuts. All we can say with certainty is that mortgage strategy should be based on your goals—not someone else's forecast.</p>
+
+      <p class="mb-6 leading-relaxed text-black">If you value peace of mind and budgeting certainty, fixed may be the way to go. If you're comfortable riding the rate wave and want the potential to save over time, variable could be worth the risk.</p>
+
+      <p class="mb-8 leading-relaxed text-black">In a world of economic uncertainty, one thing remains constant: making the right choice starts with a conversation.</p>
+
+      <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold mb-4">Let's Talk Through Your Options</h3>
+          <p class="mb-6 opacity-90">I'll help you compare today's best variable and fixed rates side by side, based on your income, timeline, and comfort with risk—so you can feel confident in whichever path you choose.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+              Free Rate Consultation
+            </a>
+            <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+              Compare Current Rates
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg mb-8 border" style="border-color: #D4AF37;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Sources:</h3>
+        <ul class="space-y-1 text-sm text-black">
+          <li>• <a href="https://wowa.ca/interest-rate-forecast" class="hover:underline" style="color: #1D2D44;" target="_blank" rel="noopener">wowa.ca/interest-rate-forecast</a></li>
+          <li>• <a href="https://www.canadianmortgagetrends.com" class="hover:underline" style="color: #1D2D44;" target="_blank" rel="noopener">Canadian Mortgage Trends</a></li>
+          <li>• <a href="https://www.crea.ca/housing-market-stats/" class="hover:underline" style="color: #1D2D44;" target="_blank" rel="noopener">CREA Housing Market Stats</a></li>
+          <li>• <a href="https://www.cmls.ca" class="hover:underline" style="color: #1D2D44;" target="_blank" rel="noopener">CMLS Broker Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+        <p class="text-sm text-black italic">
+          <strong>Disclaimer:</strong> Rate forecasts are estimates based on current market conditions and are subject to change. This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and terms vary by lender and individual circumstances. Always consult with a qualified mortgage professional for personalized advice.
+        </p>
+      </div>
     `,
-      date: "May 1, 2025",
-      author: "Rob Bhullar",
-      category: "Rate Analysis",
-      image: "fixed-vs-variable-rates.png",
-    },
+    date: "May 1, 2025",
+    author: "Rob Bhullar",
+    category: "Rate Analysis",
+    image: "fixed-vs-variable-rates.png",
+  },
   "bank-of-canada-holds-key-interest-rate-June-2025": {
     title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
     excerpt:
