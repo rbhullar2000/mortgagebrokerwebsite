@@ -1622,6 +1622,84 @@ Lenders use credit scores to assess risk. A higher score signals responsible cre
       </div>
     </div>
 
+
+
+<section class="max-w-3xl mx-auto px-6 py-10 text-gray-800">
+  <p class="mb-6">
+    Even small differences in your credit profile can have a significant impact on monthly payments.
+    For example, a <strong>$500,000 mortgage</strong> at <strong>4.39%</strong> vs <strong>5.39%</strong> could mean a difference of over <strong>$300/month</strong> in payments — and more than <strong>$100,000</strong> in interest over 25 years.
+  </p>
+
+  <hr class="my-8 border-gray-300" />
+
+  <h2 class="text-2xl font-bold mb-4">Quick Credit Score Improvement Strategies</h2>
+  <p class="mb-4">
+    If you’re planning to buy or refinance in the next few months, there are immediate steps you can take to increase your score in 30–60 days:
+  </p>
+
+  <h3 class="text-xl font-semibold mb-2 text-green-700">Immediate Actions (30–60 Days)</h3>
+  <ul class="list-disc list-inside space-y-2 mb-6">
+    <li><strong>Lower Credit Card Balances:</strong> Aim to keep usage under 30% of your total credit limit — ideally below 10% for optimal impact.</li>
+    <li><strong>Resolve Collections & Past-Due Accounts:</strong> Bringing accounts current or negotiating settlements can quickly boost your score.</li>
+    <li><strong>Increase Credit Limits:</strong> Request higher limits on existing cards — but avoid using the additional credit.</li>
+    <li><strong>Become an Authorized User:</strong> Being added to a responsible family member’s longstanding account can positively influence your score.</li>
+    <li><strong>Dispute Inaccuracies:</strong> Check your credit report (Equifax and TransUnion in Canada) for errors and submit disputes if needed.</li>
+  </ul>
+
+  <hr class="my-8 border-gray-300" />
+
+  <h2 class="text-2xl font-bold mb-4">Build for Long-Term Credit Health</h2>
+  <p class="mb-4">
+    Improving your credit score isn’t just about short-term fixes — building a strong, resilient profile takes time and discipline.
+    Here are key strategies to sustain improvement:
+  </p>
+
+  <h3 class="text-xl font-semibold mb-2 text-blue-700">Long-Term Strategies (3–12 Months)</h3>
+  <ul class="list-disc list-inside space-y-2 mb-6">
+    <li><strong>Keep Older Accounts Open:</strong> Length of credit history matters. Don’t close old credit cards, even if you don’t use them.</li>
+    <li><strong>Diversify Your Credit Mix:</strong> A healthy combination of revolving credit (credit cards) and installment loans shows maturity.</li>
+    <li><strong>Avoid Missed Payments:</strong> Set up autopay to ensure on-time payments — even one late payment can drop your score significantly.</li>
+    <li><strong>Review Reports Regularly:</strong> Use free credit monitoring tools to stay on top of changes, unauthorized activity, or score fluctuations.</li>
+    <li><strong>Avoid Opening New Accounts Too Often:</strong> Each credit inquiry slightly lowers your score; too many new accounts can also reduce your average account age.</li>
+  </ul>
+
+  <hr class="my-8 border-gray-300" />
+
+  <h2 class="text-2xl font-bold mb-4">How to Check Your Score in Canada</h2>
+  <p class="mb-4">You can check your credit score and full report for free from:</p>
+  <ul class="list-disc list-inside mb-6 text-blue-700">
+    <li><a href="https://www.consumer.equifax.ca" class="underline hover:text-blue-800" target="_blank">Equifax Canada – www.consumer.equifax.ca</a></li>
+    <li><a href="https://www.transunion.ca" class="underline hover:text-blue-800" target="_blank">TransUnion Canada – www.transunion.ca</a></li>
+  </ul>
+  <p class="mb-6">
+    Several banks and credit monitoring apps also offer monthly or real-time access to your score at no cost.
+  </p>
+
+  <hr class="my-8 border-gray-300" />
+
+  <h2 class="text-2xl font-bold mb-4">When to Start? Right Now.</h2>
+  <p class="mb-6">
+    If you’re planning to apply for a mortgage in the next 6 to 12 months, improving your credit should be a priority — especially before getting pre-approved.
+    Lenders pull your credit during pre-approval and again at funding, so any improvements you make beforehand can directly affect your offers.
+  </p>
+
+  <hr class="my-8 border-gray-300" />
+
+  <h2 class="text-2xl font-bold mb-4">Final Thoughts</h2>
+  <p class="mb-4">
+    Your credit score is one of the most powerful tools you have when applying for a mortgage.
+    Whether you’re looking to qualify for your first home, refinance to a better rate, or renew your current mortgage,
+    strengthening your credit score can give you leverage, lower your costs, and expand your options.
+  </p>
+  <p>
+    <strong>Need help reviewing your credit or planning your mortgage strategy?</strong> Feel free to reach out — I’m happy to offer a complimentary review and help you build a plan that puts you in control of your mortgage future.
+  </p>
+</section>
+
+
+
+    
+
     <div class="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg mb-8">
       <div class="text-center">
         <h3 class="text-2xl font-bold mb-4">Ready to Improve Your Credit Score?</h3>
