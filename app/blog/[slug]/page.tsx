@@ -213,15 +213,18 @@ function getPostData() {
         What It Means for Borrowers
       </h2>
 
+<p class="mb-6 text-gray-700">
+        The implications of a rate hold vary depending on your mortgage type and financial goals:
+        </p>
+        
       <ul class="space-y-2 mb-6 text-gray-700">
-        <li>• If you have a variable-rate mortgage, your payment remains unchanged — for now.</li>
-        <li>• Fixed mortgage rates have already adjusted based on bond market expectations.</li>
-        <li>• More rate cuts are still expected later in 2025, but timing is data-dependent.</li>
+        <li>• Variable-Rate Mortgage Holders: Your payments remain unchanged for now. However, further cuts later in the year could reduce borrowing costs.</li>
+        <li>• Fixed-Rate Borrowers: Most fixed mortgage rates have already priced in expectations for future Bank of Canada moves. Today’s decision will likely reinforce current market sentiment without causing sharp shifts.</li>
+        <li>• New Buyers and Renewers: Stability in rates offers an ideal time to explore your options and position yourself ahead of potential changes later in 2025.</li>
       </ul>
 
       <p class="mb-6 text-gray-700">
-        For many Canadian homeowners, this rate hold offers an opportunity to reassess their mortgage strategy.
-        Whether you’re renewing, refinancing, or entering the market for the first time, understanding your options is more important than ever.
+        This pause gives many Canadians an important window to reassess their mortgage strategy — whether it’s time to refinance, switch lenders, or lock in a new rate before further movement.
       </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
