@@ -206,9 +206,8 @@ function getPostData() {
       </p>
 
       <p class="mb-6 text-gray-700">
-        The Bank noted that while shelter price inflation remains elevated, other components of the Consumer Price Index (CPI) are easing.
-        Labour market conditions have also loosened slightly, which is helping reduce wage pressures.
-      </p>
+        Although shelter-related costs — particularly mortgage interest and rent — continue to place upward pressure on the Consumer Price Index (CPI), many other categories are showing signs of easing. Labour market conditions have also softened slightly, with modest increases in unemployment and slower wage growth, which supports the Bank’s confidence in its current path.
+        </p>
 
       <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4 border-b-2 border-gray-200 pb-2">
         What It Means for Borrowers
