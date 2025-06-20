@@ -13,8 +13,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 function getPostData() {
   return {
-    <Header />
-    <div className="container mx-auto py-8 px-4">
      "are-variable-rates-still-worth-it-2025": {
       title: "Are Variable Rates Still Worth It in 2025? It Depends…",
       excerpt:
@@ -183,8 +181,6 @@ function getPostData() {
       <p class="text-sm text-gray-600 italic">
         <strong>Disclaimer:</strong> Rate forecasts are estimates based on current market conditions and are subject to change. This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and terms vary by lender and individual circumstances. Always consult with a qualified mortgage professional for personalized advice.
       </p>
-    </div>
-    <Footer />
     `,
       date: "May 1, 2025",
       author: "Rob Bhullar",
