@@ -67,7 +67,7 @@ export default function RefinancePageClient() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 border-l-4 border-[#D4AF37]">
                 <h3 className="text-2xl font-bold text-[#1D2D44] mb-6">Free Refinancing Assessment</h3>
                 <ContactForm variant="hero" />
               </div>
