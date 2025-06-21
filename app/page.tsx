@@ -297,12 +297,10 @@ export default function HomePage() {
               />
             </div>
             <div>
-              {/*  <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
+              <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
                 About Rob S. Bhullar, BSc
-              </Badge> */}
-              <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] border border-[#D4AF37]">
-  About Rob S. Bhullar, BSc
-</Badge>
+              </Badge>
+
               <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">Lead Mortgage Expert</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 With over 20 years in the financial industry, I combine analytics, lending expertise, and a client-first
