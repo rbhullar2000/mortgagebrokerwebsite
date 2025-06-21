@@ -172,7 +172,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
   }
 
   return (
-    <Card <Card className="border-l-4 border-[#D4AF37] bg-white shadow-2xl rounded-2xl">className="border-0 shadow-lg">
+    <Card className="border-l-4 border-[#D4AF37] bg-white shadow-2xl rounded-2xl">
       <CardHeader>
         <CardTitle className="flex items-center">
           <Send className="w-5 h-5 mr-2 text-[#032133]" />
