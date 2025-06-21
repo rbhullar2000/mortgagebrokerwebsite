@@ -25,10 +25,10 @@ export function Header() {
           {/* Logo Section */}
           <div className="flex items-center space-x-3 md:space-x-10">
             <Link href="/" className="flex items-center space-x-3 md:space-x-10">
-              <div className="min-w-0">
+              {/*  <div className="min-w-0">
                 <h1 className="text-lg md:text-xl font-bold text-gray-900 truncate">BC Mortgage Team</h1>
                 <p className="text-xs md:text-sm text-gray-600 truncate">Smart Mortgage Solutions</p>
-              </div>
+              </div> */}
               <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
                 <Image
                   src="/BCmortgageteamlogo.jpeg"
