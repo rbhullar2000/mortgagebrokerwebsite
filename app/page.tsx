@@ -214,10 +214,10 @@ export default function HomePage() {
       ].map((service, index) => (
         <Card
           key={index}
-          className="bg-white border border-[#D4AF37] shadow-md hover:shadow-lg transition-shadow"
+          className="bg-white shadow-md hover:shadow-lg transition-shadow"
         >
           <CardHeader>
-            <div className="w-16 h-16 bg-[#F4F6F8] border border-[#D4AF37] rounded-lg flex items-center justify-center mb-4">
+            <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center mb-4">
               {service.icon}
             </div>
             <CardTitle className="text-xl text-[#1D2D44]">{service.title}</CardTitle>
