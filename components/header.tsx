@@ -31,7 +31,7 @@ export function Header() {
               </div>
               <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
                 <Image
-                  src="/BCmortgageteamLogo.png"
+                  src="/BCmortgageteamLogo.jpg"
                   alt="BC Mortgage Team"
                   width={96}
                   height={72}
