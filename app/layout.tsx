@@ -7,17 +7,17 @@ import { Suspense } from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Rob Bhullar - Mortgage Broker | Best Rates in BC",
+  title: "BC Mortgage Team | Smart Financial Solutions",
   description:
-    "Licensed mortgage broker in British Columbia. Get the best mortgage rates for home purchase, renewal, refinance. 50+ lenders, fast approvals.",
+    "BC Mortgage Team are located in British Columbia. Get the best mortgage rates for home purchase, renewal, refinance. 50+ lenders, fast approvals.",
   keywords: "mortgage broker, BC mortgage, Vancouver mortgage, Surrey mortgage, home loans, mortgage rates",
   authors: [{ name: "Rob Bhullar" }],
   openGraph: {
-    title: "Rob Bhullar - Mortgage Broker | Best Rates in BC",
+    title: "BC Mortgage Team | Smart Financial Solutions",
     description:
-      "Licensed mortgage broker in British Columbia. Get the best mortgage rates for home purchase, renewal, refinance.",
+      "BC Mortgage Team are located in British Columbia. Get the best mortgage rates for home purchase, renewal, refinance. 50+ lenders, fast approvals.",
     url: "https://robbhullar.com",
-    siteName: "Rob Bhullar Mortgage Services",
+    siteName: "BC Mortage Team",
     locale: "en_CA",
     type: "website",
   },
@@ -55,14 +55,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FinancialService",
-              name: "Rob Bhullar Mortgage Services",
-              description: "Licensed mortgage broker serving British Columbia",
-              url: "https://robbhullar.com",
-              telephone: "+1-604-123-4567",
-              email: "mrtg@robbhullar.com",
+              name: "BC Mortgage Team - Mortgage Services",
+              description: "BC Mortgage Team serving British Columbia",
+              url: "https://bcmortageteam.com",
+              telephone: "+1-778-889-7964",
+              email: "contactg@bcmortgageteam.com",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Surrey",
+                addressLocality: "Delta",
                 addressRegion: "BC",
                 addressCountry: "CA",
               },
