@@ -176,7 +176,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
       <CardHeader>
         <CardTitle className="flex items-center">
           <Send className="w-5 h-5 mr-2 text-[#032133]" />
-          Send Us a Message
+          Send us a Message
         </CardTitle>
         <CardDescription>Fill out the form below and we’ll be in touch shortly.</CardDescription>
       </CardHeader>
