@@ -251,8 +251,8 @@ export function MortgageCalculator() {
     className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold"
     asChild
   >
-    <Link
-      href="https://r.mtg-app.com/robbhullar"
+      <Link 
+        href="/contact">
       target="_blank"
       rel="noopener noreferrer"
     >
