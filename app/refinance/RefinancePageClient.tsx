@@ -22,7 +22,7 @@ export default function RefinancePageClient() {
             <div>
               <Badge className="mb-4 bg-[#F4F6F8] text-[#1D2D44] hover:bg-[#1D2D44]/10">Refinancing Specialist</Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-black mb-6">
-                Unlock Your Home's <span className="text-[#1D2D44]">Hidden Value</span>
+                Unlock Your Home's <span className="text-[#D4AF37]">Hidden Value</span>
               </h1>
               <p className="text-xl text-black mb-8 leading-relaxed">
                 Access your home's equity for debt consolidation, home improvements, investments, or major purchases.
@@ -202,7 +202,7 @@ export default function RefinancePageClient() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Simple Refinancing Process</h2>
             <p className="text-xl text-black max-w-3xl mx-auto">
-              I handle all the paperwork and negotiations to make refinancing stress-free.
+              We handle all the paperwork and negotiations to make refinancing stress-free.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
