@@ -24,7 +24,7 @@ export default function QuickClosingsPageClient() {
                 Fast-Track Specialist
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6">
-                <span className="text-[#032133]">Lightning Fast</span> Mortgage Approvals
+                <span className="text-[#D4AF37]">Lightning Fast</span> Mortgage Approvals
               </h1>
               <p className="text-xl text-black mb-8 leading-relaxed">
                 Need to close quickly? Competing in a hot market? We specialize in fast-track approvals and same-day
