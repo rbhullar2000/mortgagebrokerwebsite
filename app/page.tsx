@@ -562,11 +562,13 @@ export default function HomePage() {
                   <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
                     <Mail className="w-6 h-6" />
                   </div>
+                   <div className="mt-8 p-6 bg-[#F4F6F8] border-l-4 border-[#D4AF37] rounded-lg">
                   <div>
                     <h4 className="font-semibold text-[#1D2D44]">Email</h4>
                     <p className="text-gray-600">contact@bcmortgageteam.com</p>
                     <p className="text-sm text-gray-500">Thanks for reaching out — we'll be in touch shortly.</p>
                   </div>
+                     </div>
                 </div>
 
                 {/* Location */}
