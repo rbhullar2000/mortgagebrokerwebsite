@@ -53,15 +53,15 @@ export default function RefinancePageClient() {
               </div>
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-[#1D2D44]">80%</div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">80%</div>
                   <div className="text-sm text-black">Max LTV</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[#1D2D44]">48hrs</div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">48hrs</div>
                   <div className="text-sm text-black">Approval</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[#1D2D44]">No Fee</div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">No Fee</div>
                   <div className="text-sm text-black">Consultation</div>
                 </div>
               </div>
