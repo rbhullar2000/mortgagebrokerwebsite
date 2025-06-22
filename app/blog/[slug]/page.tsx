@@ -862,7 +862,7 @@ function getPostData() {
 
 
   "vancouver-housing-market-update": {
-    title: "Vancouver Housing Market Update (June 2025): Recovery Underway as Rates Fall",
+    title: "Vancouver Housing Market Update (June 2025): Signs of Recovery as Rates Fall",
     excerpt:
       "Vancouver's housing market is showing strong signs of recovery as interest rate cuts boost buyer confidence. Sales are up 25% year-over-year while inventory remains balanced, creating favorable conditions for both buyers and sellers.",
     content: `
