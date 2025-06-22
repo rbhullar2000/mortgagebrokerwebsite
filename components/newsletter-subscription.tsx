@@ -123,4 +123,3 @@ export function NewsletterSubscription() {
     </div>
   )
 }
- 
