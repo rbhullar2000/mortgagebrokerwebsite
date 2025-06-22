@@ -69,7 +69,7 @@ export function MortgageCalculator() {
         <Card className="border-0 shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center">
-              <Calculator className="w-5 h-5 mr-2 text-[#032133]" />
+              <Calculator className="w-5 h-5 mr-2 text-[#D4AF37]" />
               Mortgage Details
             </CardTitle>
             <CardDescription>Adjust the values below to see how they affect your monthly payment.</CardDescription>
@@ -185,16 +185,16 @@ export function MortgageCalculator() {
 
         {/* Results */}
         <div className="space-y-6">
-          <Card className="border-0 shadow-lg bg-[#032133]/5">
+          <Card className="border-0 shadow-lg bg-[#D4AF37]/5">
             <CardHeader>
-              <CardTitle className="flex items-center text-[#032133]">
+              <CardTitle className="flex items-center text-[#D4AF37]">
                 <PieChart className="w-5 h-5 mr-2" />
                 Your Monthly Payment
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-4xl font-bold text-[#032133] mb-2">{formatCurrency(results.monthlyPayment)}</div>
-              <p className="text-[#032133]">Principal & Interest</p>
+              <div className="text-4xl font-bold text-[#D4AF37] mb-2">{formatCurrency(results.monthlyPayment)}</div>
+              <p className="text-[#D4AF37]">Principal & Interest</p>
             </CardContent>
           </Card>
 
@@ -216,7 +216,7 @@ export function MortgageCalculator() {
           <Card className="border-0 shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center">
-                <TrendingUp className="w-5 h-5 mr-2 text-[#032133]" />
+                <TrendingUp className="w-5 h-5 mr-2 text-[#D4AF37]" />
                 Payment Breakdown
               </CardTitle>
             </CardHeader>
@@ -232,7 +232,7 @@ export function MortgageCalculator() {
                 </div>
                 <div className="flex justify-between">
                   <span>Monthly Payment:</span>
-                  <span className="font-semibold text-[#032133]">{formatCurrency(results.monthlyPayment)}</span>
+                  <span className="font-semibold text-[#D4AF37]">{formatCurrency(results.monthlyPayment)}</span>
                 </div>
                 <div className="pt-3 border-t">
                   <p className="text-sm text-gray-600">
@@ -245,7 +245,7 @@ export function MortgageCalculator() {
           </Card>
 
           <div className="text-center">
-            <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+            <Button size="lg" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90" asChild>
               <a href="#contact">Get Pre-Approved with These Numbers</a>
             </Button>
           </div>
