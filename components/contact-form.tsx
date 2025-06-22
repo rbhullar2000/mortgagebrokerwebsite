@@ -157,7 +157,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
                 Sending...
               </>
             ) : (
-              "Get My Free Quote"
+              "Send Message"
             )}
           </Button>
           <Button asChild className="w-full bg-[#032133] hover:bg-[#032133]/90">
