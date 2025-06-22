@@ -555,14 +555,14 @@ export default function HomePage() {
 
             {/* Right: Contact Info + Highlights */}
             <div>
-              
+              <div className="mt-8 p-6 bg-[#F4F6F8] border-l-4 border-[#D4AF37] rounded-lg">
               <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Contact Information</h3>
               <div className="space-y-6">
                 {/* Email */}
                 <div className="flex items-start space-x-4">
                     <Mail className="w-6 h-6" />
                   </div>
-                   <div className="mt-8 p-6 bg-[#F4F6F8] border-l-4 border-[#D4AF37] rounded-lg">
+                   
                   <div>
                     <h4 className="font-semibold text-[#1D2D44]">Email</h4>
                     <p className="text-gray-600">contact@bcmortgageteam.com</p>
