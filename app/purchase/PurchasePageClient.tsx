@@ -25,7 +25,7 @@ export default function PurchasePageClient() {
                 Buy Your Dream Home with <span className="text-[#D4AF37]">Confidence</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Whether you're a first-time buyer or moving up, I'll help you secure the best mortgage rates and terms
+                Whether you're a first-time buyer or moving up, we'll help you secure the best mortgage rates and terms
                 for your home purchase in British Columbia.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -84,7 +84,7 @@ export default function PurchasePageClient() {
               Why Choose Me for Your Home Purchase?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Buying a home is one of life's biggest decisions. I make the mortgage process simple and stress-free.
+              Buying a home is one of life's biggest decisions. we make the mortgage process simple and stress-free.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -138,7 +138,7 @@ export default function PurchasePageClient() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Simple 4-Step Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From application to keys in hand, I guide you through every step.
+              From application to keys in hand, we guide you through every step.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
