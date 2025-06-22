@@ -559,7 +559,7 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Contact Information</h3>
               <div className="space-y-6">
                 {/* Email */}
-                <div className="flex items-start space-x-4">
+                {/*     <div className="flex items-start space-x-4"> */}
                     <Mail className="w-6 h-6" />
                   </div>
                    
