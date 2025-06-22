@@ -284,10 +284,24 @@ export function ROICalculator() {
             </div>
 
             {/* Action Button */}
-            <Button className="w-full bg-[#032133] hover:bg-[#032133]/90" size="lg">
+        
+            {/*<Button className="w-full bg-[#032133] hover:bg-[#032133]/90" size="lg">
               <Percent className="w-4 h-4 mr-2" />
               Get Investment Financing
-            </Button>
+            </Button> */}
+
+            <div className="text-center">
+  <Button
+    size="lg"
+    className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold"
+    asChild
+  >
+      <Link 
+        href="/#contact">
+      Get Investment Financing
+    </Link>
+  </Button>
+</div>
           </CardContent>
         </Card>
       </div>
