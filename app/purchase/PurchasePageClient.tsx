@@ -22,7 +22,7 @@ export default function PurchasePageClient() {
             <div>
               <Badge className="mb-4 bg-[#F4F6F8] text-[#1D2D44] hover:bg-[#1D2D44]/10">Home Purchase Specialist</Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-black mb-6">
-                Buy Your Dream Home with <span className="text-[#1D2D44]">Confidence</span>
+                Buy Your Dream Home with <span className="text-[#D4AF37]">Confidence</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Whether you're a first-time buyer or moving up, I'll help you secure the best mortgage rates and terms
