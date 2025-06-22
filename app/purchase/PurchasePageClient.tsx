@@ -53,15 +53,15 @@ export default function PurchasePageClient() {
               </div>
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-[#1D2D44]">24hrs</div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">24hrs</div>
                   <div className="text-sm text-gray-600">Pre-Approval</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[#1D2D44]">50+</div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">50+</div>
                   <div className="text-sm text-gray-600">Lenders</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[#1D2D44]">5%</div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">5%</div>
                   <div className="text-sm text-gray-600">Min Down</div>
                 </div>
               </div>
