@@ -27,7 +27,7 @@ export default function QuickClosingsPageClient() {
                 <span className="text-[#032133]">Lightning Fast</span> Mortgage Approvals
               </h1>
               <p className="text-xl text-black mb-8 leading-relaxed">
-                Need to close quickly? Competing in a hot market? I specialize in fast-track approvals and same-day
+                Need to close quickly? Competing in a hot market? We specialize in fast-track approvals and same-day
                 pre-approvals to help you win in competitive situations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -56,15 +56,15 @@ export default function QuickClosingsPageClient() {
               </div>
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-[#032133]">2hrs</div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">2hrs</div>
                   <div className="text-sm text-black">Pre-Approval</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[#032133]">24hrs</div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">24hrs</div>
                   <div className="text-sm text-black">Full Approval</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[#032133]">7 days</div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">7 days</div>
                   <div className="text-sm text-black">To Close</div>
                 </div>
               </div>
