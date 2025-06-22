@@ -873,7 +873,7 @@ function getPostData() {
           </svg>
           <h3 class="text-lg font-semibold" style="color: #1D2D44;">Market Recovery in Progress</h3>
         </div>
-        <p class="text-black">Vancouver's housing market is experiencing a strong recovery driven by falling interest rates, improved affordability, and renewed buyer confidence. Sales activity is up significantly while maintaining balanced inventory levels.</p>
+        <p class="text-black">Vancouver's housing market is experiencing a recovery driven by falling interest rates, improved affordability, and renewed buyer confidence. Sales activity is up significantly while maintaining balanced inventory levels.</p>
       </div>
 
       <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Key Market Statistics (June 2025)</h2>
