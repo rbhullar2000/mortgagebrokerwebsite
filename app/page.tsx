@@ -555,7 +555,7 @@ export default function HomePage() {
 
             {/* Right: Contact Info + Highlights */}
             <div>
-               <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
+              
               <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Contact Information</h3>
               <div className="space-y-6">
                 {/* Email */}
@@ -581,7 +581,6 @@ export default function HomePage() {
                     <p className="text-gray-600">Greater Vancouver Area</p>
                     <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
                   </div>
-                </div>
                 </div>
               </div>
 
