@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Calculator, TrendingUp, DollarSign, Percent } from "lucide-react"
+import Link from "next/link"
 
 export function ROICalculator() {
   const [purchasePrice, setPurchasePrice] = useState(500000)
