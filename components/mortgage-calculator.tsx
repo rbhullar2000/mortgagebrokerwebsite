@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Slider } from "@/components/ui/slider"
 import { Button } from "@/components/ui/button"
 import { Calculator, PieChart, TrendingUp } from "lucide-react"
+import Link from "next/link"
 
 export function MortgageCalculator() {
   const [homePrice, setHomePrice] = useState(750000)
