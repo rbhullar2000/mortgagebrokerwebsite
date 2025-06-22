@@ -79,7 +79,8 @@ export function NewsletterSubscription() {
     <div className="bg-gray-50 p-6 rounded-lg">
       <div className="flex items-center mb-4">
         <Mail className="w-5 h-5 text-[#032133] mr-2" />
-        <h3 className="text-xl font-bold text-gray-900">Subscribe to Our Newsletter</h3>
+        {/*  <h3 className="text-xl font-bold text-gray-900">Subscribe to Our Newsletter</h3> */}
+        <span className="text-[#D4AF37]">Subscribe to Our Newsletter</span>
       </div>
       <p className="text-gray-600 mb-4">
         Get the latest mortgage news, rate updates, and expert tips delivered to your inbox.
