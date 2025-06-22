@@ -253,8 +253,6 @@ export function MortgageCalculator() {
   >
       <Link 
         href="/contact">
-      target="_blank"
-      rel="noopener noreferrer"
     >
       Get Pre-Approved with These Numbers
     </Link>
