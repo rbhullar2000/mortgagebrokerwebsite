@@ -94,7 +94,7 @@ export default function RenewalPageClient() {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-5 h-5 mr-3 text-[#D4AF37]" />
-                      My service is completely FREE for renewals
+                      Our service is completely FREE for renewals
                     </li>
                   </ul>
                 </div>
@@ -110,7 +110,7 @@ export default function RenewalPageClient() {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Why Use a Broker for Renewal?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              I work for YOU, not the bank. My job is to get you the best possible rate and terms.
+              We work for YOU, not the bank. My job is to get you the best possible rate and terms.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
