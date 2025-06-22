@@ -81,7 +81,7 @@ export default function PurchasePageClient() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">
-              Why Choose Me for Your Home Purchase?
+              Why Choose Us for Your Home Purchase?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Buying a home is one of life's biggest decisions. we make the mortgage process simple and stress-free.
