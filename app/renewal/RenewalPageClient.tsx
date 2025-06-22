@@ -25,7 +25,7 @@ export default function RenewalPageClient() {
                 Don't Auto-Renew!
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6">
-                Save Thousands on Your <span className="text-[#032133]">Mortgage Renewal</span>
+                Save Thousands on Your <span className="text-[#D4AF37]">Mortgage Renewal</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Your bank is counting on you to auto-renew. Don't let them! I'll shop 50+ lenders to find you better
