@@ -1938,7 +1938,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         <img
           src={`/${post.image}`}
           alt={post.title}
-          className="rounded-lg shadow-md mb-8"
+          className="rounded-lg shadow-md mb-8 max-w-full h-auto"
         />
         <div
           className="prose max-w-none"
