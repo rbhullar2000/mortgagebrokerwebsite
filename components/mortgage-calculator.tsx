@@ -245,13 +245,20 @@ export function MortgageCalculator() {
           </Card>
 
           <div className="text-center">
-            <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Get Pre-Approved with These Numbers
-                  </Link>
-            {/*  <Button size="lg" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90" asChild>
-              <a href="#contact">Get Pre-Approved with These Numbers</a>
-            </Button> */}
-          </div>
+  <Button
+    size="lg"
+    className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold"
+    asChild
+  >
+    <Link
+      href="https://r.mtg-app.com/robbhullar"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Get Pre-Approved with These Numbers
+    </Link>
+  </Button>
+</div>
         </div>
       </div>
     </div>
