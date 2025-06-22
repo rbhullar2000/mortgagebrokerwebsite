@@ -107,7 +107,7 @@ export default function HomePage() {
                 Licensed in British Columbia
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6">
-                Your Trusted Mortgage Team in <span className="text-[#032133]">British Columbia</span>
+                Your Trusted Mortgage Team in <span className="text-[#D4AF37]">British Columbia</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Get the best mortgage rates and personalized service. We work with 50+ lenders to find you the perfect
