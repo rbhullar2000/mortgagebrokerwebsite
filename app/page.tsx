@@ -526,81 +526,76 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-[#F4F6F8]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Contact today for a free consultation, or start your secure online application right away.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-                <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                  Start Application
-                </Link>
-              </Button>
-              {/* Optional consultation button */}
-              {/* <Button size="lg" variant="outline" asChild>
-          <Link href="#contact">Free Consultation</Link>
-        </Button> */}
+<section id="contact" className="py-20 bg-[#F4F6F8]">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Ready to Get Started?</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+        Contact today for a free consultation, or start your secure online application right away.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+        <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+          <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+            Start Application
+          </Link>
+        </Button>
+      </div>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-16">
+      {/* Left: Contact Form */}
+      <div>
+        <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Get Your Free Consultation</h3>
+        <ContactForm />
+      </div>
+
+      {/* Right: Contact Info + Highlights */}
+      <div>
+        <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Contact Information</h3>
+        <div className="space-y-6">
+          {/* Email */}
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
+              <Mail className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-[#1D2D44]">Email</h4>
+              <p className="text-gray-600">contact@bcmortgageteam.com</p>
+              <p className="text-sm text-gray-500">Thanks for reaching out — we'll be in touch shortly.</p>
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Left: Contact Form */}
-            <div>
-              <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Get Your Free Consultation</h3>
-              <ContactForm />
+          {/* Location */}
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
+              <MapPin className="w-6 h-6" />
             </div>
-
-            {/* Right: Contact Info + Highlights */}
             <div>
-             
-              <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Contact Information</h3>
-              <div className="space-y-6">
-                {/* Email */}
-                {/*     <div className="flex items-start space-x-4"> */}
-                    <Mail className="w-6 h-6" />
-                  </div>
-                   
-                  <div>
-                    <h4 className="font-semibold text-[#1D2D44]">Email</h4>
-                    <p className="text-gray-600">contact@bcmortgageteam.com</p>
-                    <p className="text-sm text-gray-500">Thanks for reaching out — we'll be in touch shortly.</p>
-                  </div>
-  
-                </div>
-
-                {/* Location */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#1D2D44]">Service Area</h4>
-                    <p className="text-gray-600">Greater Vancouver Area</p>
-                    <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
-              
-                </div>
-              </div>
-
-              {/* Highlights Box */}
-              <div className="mt-8 p-6 bg-[#F4F6F8] border-l-4 border-[#D4AF37] rounded-lg">
-                <h4 className="font-semibold text-[#1D2D44] mb-2">Why Choose An Independent Mortgage Professional?</h4>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• No cost for our specialized services</li>
-                  <li>• Access to rates banks don't advertise</li>
-                  <li>• Pre-approvals in 24–48 hours</li>
-                  <li>• Support throughout the entire process</li>
-                </ul>
-              </div>
-              <div className="mb-8">
-                <NewsletterSubscription />
-              </div>
+              <h4 className="font-semibold text-[#1D2D44]">Service Area</h4>
+              <p className="text-gray-600">Greater Vancouver Area</p>
+              <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
             </div>
+          </div>
+
+          {/* Highlights Box */}
+          <div className="mt-8 p-6 bg-[#F4F6F8] rounded-lg">
+            <h4 className="font-semibold text-[#1D2D44] mb-2">Why Choose An Independent Mortgage Professional?</h4>
+            <ul className="space-y-2 text-sm text-gray-600 list-disc pl-5">
+              <li>No cost for our specialized services</li>
+              <li>Access to rates banks don't advertise</li>
+              <li>Pre-approvals in 24–48 hours</li>
+              <li>Support throughout the entire process</li>
+            </ul>
+          </div>
+
+          <div className="mb-8">
+            <NewsletterSubscription />
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
       <Footer />
     </div>
   )
