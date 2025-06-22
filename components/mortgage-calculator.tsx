@@ -252,7 +252,7 @@ export function MortgageCalculator() {
     asChild
   >
       <Link 
-        href="/contact">
+        href="/#contact">
     >
       Get Pre-Approved with These Numbers
     </Link>
