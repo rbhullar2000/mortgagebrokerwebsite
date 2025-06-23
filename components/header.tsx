@@ -15,7 +15,7 @@ export function Header() {
     { href: "/purchase", label: "Purchase" },
     { href: "/renewal", label: "Renewal" },
     { href: "/blog", label: "Blog" },
-    { href: "/#contact", label: "Contact" },
+    { href: "/contact", label: "Contact" },
   ]
 
   return (
