@@ -9,6 +9,7 @@ import { MortgageCalculator } from "@/components/mortgage-calculator"
 import { NewsCard } from "@/components/news-card"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import Image from "next/image"
 
 export default function HomePage() {
   // Blog posts data - in a real implementation, this would come from a CMS or database
