@@ -12,6 +12,25 @@ export function Footer() {
                 <h3 className="text-lg font-bold">BC Mortgage Team</h3>
                 <p className="text-sm text-gray-400">Smart Financial Solutions</p>
               </div>
+            <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
+                <Image
+                  src="/BCmortgageteamlogo.jpeg"
+                  alt="BC Mortgage Team"
+                  width={96}
+                  height={72}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+              <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
+                <Image
+                  src="/BRX_brand_black.png"
+                  alt="BRX Mortgage"
+                  width={96}
+                  height={72}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+            
             </div>
             {/* 
             <p className="text-gray-400 text-sm">
