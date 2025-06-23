@@ -327,6 +327,24 @@ export default function HomePage() {
                   <div className="text-3xl font-bold text-[#D4AF37]">20+ years</div>
                   <div className="text-sm text-gray-600">Financial Experience</div>
                 </div>
+                 <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
+                <Image
+                  src="/BCmortgageteamlogo.jpeg"
+                  alt="BC Mortgage Team"
+                  width={96}
+                  height={72}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+              <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
+                <Image
+                  src="/BRX_brand_black.png"
+                  alt="BRX Mortgage"
+                  width={96}
+                  height={72}
+                  className="object-contain w-full h-full"
+                />
+              </div>
               </div>
 
               <div className="flex items-center space-x-4 mb-8">
