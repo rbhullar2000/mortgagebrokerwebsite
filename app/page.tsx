@@ -322,31 +322,35 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="grid grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  {/*<div className="text-3xl font-bold text-[#032133]">20+ years</div> */}
-                  <div className="text-3xl font-bold text-[#D4AF37]">20+ years</div>
-                  <div className="text-sm text-gray-600">Financial Experience</div>
-                </div>
-                 <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
-                <Image
-                  src="/BCmortgageteamlogo.jpeg"
-                  alt="BC Mortgage Team"
-                  width={96}
-                  height={72}
-                  className="object-contain w-full h-full"
-                />
-              </div>
-              <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
-                <Image
-                  src="/BRX_brand_black.png"
-                  alt="BRX Mortgage"
-                  width={96}
-                  height={72}
-                  className="object-contain w-full h-full"
-                />
-              </div>
-              </div>
+             <div className="grid grid-cols-3 gap-6 mb-8 items-center text-center">
+  {/* Column 1: Text */}
+  <div className="flex flex-col items-center justify-center w-24 h-18">
+    <div className="text-3xl font-bold text-[#D4AF37]">20+ years</div>
+    <div className="text-sm text-gray-600">Financial Experience</div>
+  </div>
+
+  {/* Column 2: BC Mortgage Logo */}
+  <div className="w-24 h-18 flex items-center justify-center">
+    <Image
+      src="/BCmortgageteamlogo.jpeg"
+      alt="BC Mortgage Team"
+      width={96}
+      height={72}
+      className="object-contain w-full h-full"
+    />
+  </div>
+
+  {/* Column 3: BRX Logo */}
+  <div className="w-24 h-18 flex items-center justify-center">
+    <Image
+      src="/BRX_brand_black.png"
+      alt="BRX Mortgage"
+      width={96}
+      height={72}
+      className="object-contain w-full h-full"
+    />
+  </div>
+</div>
 
               <div className="flex items-center space-x-4 mb-8">
                 <span className="text-gray-600">Follow me for market updates:</span>
