@@ -326,7 +326,7 @@ export default function HomePage() {
   {/* Column 1: Text */}
   <div className="flex flex-col items-center justify-center w-24 h-18">
     <div className="text-3xl font-bold text-[#D4AF37]">20+ years</div>
-    <div className="text-sm text-gray-600">Financial Experience</div>
+    <div className="text-sm text-gray-600">in Financial Industry</div>
   </div>
 
   {/* Column 2: BC Mortgage Logo */}
