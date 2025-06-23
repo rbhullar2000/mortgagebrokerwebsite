@@ -550,7 +550,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Section */}
-<section id="contact" className="py-20 bg-[#F4F6F8]">
+<section id="#contact" className="py-20 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
     <div className="text-center mb-16">
       <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Ready to Get Started?</h2>
