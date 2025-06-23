@@ -309,9 +309,9 @@ export default function HomePage() {
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
+                  "Licensed Mortgage Professional with BRX Mortgage in British Columbia", 
+                  "Hands-on experience managing risk, optimizing client outcomes, and aligning mortgage structures with long-term goals",
                   "Expert in complex approvals, debt consolidation, and investor financing",
-                  "Access to 50+ lenders including major banks, credit unions, and alternative lenders",
                   "BSc in Mathematics and Business Administration from Simon Fraser University",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center">
