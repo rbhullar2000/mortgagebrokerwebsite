@@ -277,12 +277,12 @@ export default function HomePage() {
           </div>
           <MortgageCalculator />
           <div className="text-center mt-8">
-            <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+            {/*    <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
                 Start Your Application Now
               </Link>
             </Button>
-            <p className="text-sm text-gray-500 mt-3">Complete your mortgage application online</p>
+            <p className="text-sm text-gray-500 mt-3">Complete your mortgage application online</p> */}
           </div>
         </div>
       </section>
