@@ -246,16 +246,16 @@ export function MortgageCalculator() {
           </Card>
 
          <div className="text-center">
-  <Button
+ {/*    <Button
     size="lg"
     className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold"
     asChild
   >
-      <Link 
+       <Link 
         href="/#contact">
       Get Pre-Approved with These Numbers
-    </Link>
-  </Button>
+    </Link> 
+  </Button> */}
 </div>
         </div>
       </div>
