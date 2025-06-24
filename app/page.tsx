@@ -143,7 +143,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2 text-[#032133]" />
-                  Best Rates Guaranteed
+                  Unbiased Rate Comparisons
                 </div>
               </div>
             </div>
