@@ -160,12 +160,12 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
               "Send Message"
             )}
           </Button>
-          <Button asChild className="w-full bg-[#032133] hover:bg-[#032133]/90">
+          {/* <Button asChild className="w-full bg-[#032133] hover:bg-[#032133]/90">
             <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
               Start Full Application
             </Link>
           </Button>
-          <p className="text-xs text-gray-500 text-center">Secure application system</p>
+          <p className="text-xs text-gray-500 text-center">Secure application system</p> */}
         </div>
       </form>
     )
