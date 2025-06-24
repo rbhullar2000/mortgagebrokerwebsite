@@ -368,7 +368,7 @@ export default function HomePage() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-                  <Link href="#contact">Contact Rob</Link>
+                  <Link href="mailto:rob@bcmortgageteam.com">Email Rob</Link>
                 </Button>
                 <Button
                   size="lg"
