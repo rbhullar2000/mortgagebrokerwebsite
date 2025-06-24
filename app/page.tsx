@@ -367,13 +367,9 @@ export default function HomePage() {
 
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-  size="lg"
-  className="bg-[#032133] hover:bg-[#032133]/90"
-  onClick={() => window.location.href = 'mailto:rob@bcmortgageteam.ca'}
->
-  Email Rob
-</Button>
+                <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+                  <Link href="#contact">Contact Rob</Link>
+                </Button>
                 <Button
                   size="lg"
                   variant="outline"
