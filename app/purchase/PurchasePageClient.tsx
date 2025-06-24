@@ -103,7 +103,7 @@ export default function PurchasePageClient() {
               },
               {
                 icon: <TrendingUp className="w-8 h-8" />,
-                title: "Best Rates Guaranteed",
+                title: "Unbiased Rate Comparisons",
                 description: "Access to exclusive rates from 50+ lenders",
                 features: ["Bank rates + alternatives", "Rate holds up to 120 days", "No lender fees"],
               },
