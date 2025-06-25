@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link"
 import Image from 'next/image'
 import { Twitter, Linkedin } from "lucide-react"
@@ -11,6 +13,16 @@ export function Footer() {
             <div className="mb-4">
               <h3 className="text-lg font-bold">BC Mortgage Team</h3>
               <p className="text-sm text-gray-400">Smart Financial Solutions</p>
+            </div>
+
+            <div className="w-24 h-18 flex items-center justify-start">
+              <Image
+                src="/BCmortgageteamlogo_white.jpeg"
+                alt="BRX Mortgage"
+                width={96}
+                height={72}
+                className="object-contain"
+              />
             </div>
 
             <div className="w-24 h-18 flex items-center justify-start">
