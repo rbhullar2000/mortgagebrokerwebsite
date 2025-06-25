@@ -12,7 +12,7 @@ export function Footer() {
                 <h3 className="text-lg font-bold">BC Mortgage Team</h3>
                 <p className="text-sm text-gray-400">Smart Financial Solutions</p>
               </div>
-            </div>
+
 
 <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
                 <Image
@@ -23,6 +23,10 @@ export function Footer() {
                   className="object-contain w-full h-full"
                 />
               </div> */
+
+              
+            </div>
+
 
             
             {/* 
