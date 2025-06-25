@@ -8,25 +8,21 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div>
-                <h3 className="text-lg font-bold">BC Mortgage Team</h3>
-                <p className="text-sm text-gray-400">Smart Financial Solutions</p>
-              </div>
-
-
-<div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
-                <Image
-                  src="/BRX_brand_white.png"
-                  alt="BRX Mortgage"
-                  width={96}
-                  height={72}
-                  className="object-contain w-full h-full"
-                />
-              </div> */
-
-              
+            <div className="mb-4">
+              <h3 className="text-lg font-bold">BC Mortgage Team</h3>
+              <p className="text-sm text-gray-400">Smart Financial Solutions</p>
             </div>
+
+            <div className="w-24 h-18 flex items-center justify-start">
+              <Image
+                src="/BRX_brand_white.png"
+                alt="BRX Mortgage"
+                width={96}
+                height={72}
+                className="object-contain"
+              />
+            </div>
+          </div>
 
 
             
