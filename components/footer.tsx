@@ -11,10 +11,6 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Column 1 */}
           <div>
-            <div className="mb-4">
-              <h3 className="text-lg font-bold">BC Mortgage Team</h3>
-              <p className="text-sm text-gray-400">Smart Financial Solutions</p>
-            </div>
 
             <div className="w-24 h-18 flex items-center justify-start mb-2">
               <Image
