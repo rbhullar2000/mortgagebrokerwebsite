@@ -17,6 +17,17 @@ export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
   const blogPosts = [
     {
+      title: "Retirement Planning",
+      excerpt:
+        "Rethinking retirement",
+      date: "June 26, 2025",
+      category: "Retirement Planning",
+      slug: "/blog/rethinking-retirement-home-equity",
+      featured: false,
+      image: "retirement-home-equity.png",
+    },
+    
+    {
       title: "Are Variable Rates Still Worth It in 2025? It Depends…",
       excerpt:
         "The fixed vs. variable debate is heating up again in 2025. With forecasts suggesting lower rates ahead, should you lock in fixed for stability or ride the wave with variable?",
