@@ -142,9 +142,9 @@ const otherArticles = blogPosts
                     ))}
                   </div> 
                 </div> */}
-                <div className="mb-8">
+                {/*   <div className="mb-8">
                   <NewsletterSubscriptionWrapper />
-                </div>
+                </div>  */}
                 {/*   <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Free Resources</h3>
                   <div className="bg-slate-50 p-6 rounded-lg">
