@@ -108,6 +108,8 @@ export default function BlogPage() {
     "First-Time Buyers",
   ]
 
+  const featuredPost = blogPosts.find((post) => post.featured)
+  
   return (
     <div className="min-h-screen bg-white">
       <Header />
