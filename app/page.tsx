@@ -15,6 +15,11 @@ import { blogPosts } from "@/lib/blogPosts"
 
 const featuredPost = blogPosts.find((post) => post.featured)
 
+const otherArticles = blogPosts
+  .filter((post) => !post.featured)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 2)
+
 export default function HomePage() {
   // Blog posts data - in a real implementation, this would come from a CMS or database
   const blogPosts = [
@@ -526,32 +531,33 @@ export default function HomePage() {
         </section> )} 
 
           {/* Other Recent Articles */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {otherArticles.map((article, index) => (
-              <NewsCard
-                key={index}
-                title={article.title}
-                excerpt={article.excerpt}
-                date={article.date}
-                category={article.category}
-                slug={article.slug}
-                image={article.image}
-              />
-            ))}
-          </div>
+         {/* Other Recent Articles */}
+<div className="grid md:grid-cols-2 gap-8">
+  {otherArticles.map((article, index) => (
+    <NewsCard
+      key={index}
+      title={article.title}
+      excerpt={article.excerpt}
+      date={article.date}
+      category={article.category}
+      slug={article.slug}
+      image={article.image}
+    />
+  ))}
+</div>
 
-          <div className="text-center mt-12">
-            <Button
-              variant="outline"
-              size="lg"
-              className="bg-white border-2 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
-              asChild
-            >
-              <Link href="/blog">
-                View All Articles <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </Button>
-          </div>
+<div className="text-center mt-12">
+  <Button
+    variant="outline"
+    size="lg"
+    className="bg-white border-2 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+    asChild
+  >
+    <Link href="/blog">
+      View All Articles <ArrowRight className="ml-2 w-4 h-4" />
+    </Link>
+  </Button>
+</div>
         </div>
       </section>
 
