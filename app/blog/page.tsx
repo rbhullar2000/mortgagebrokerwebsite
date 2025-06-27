@@ -1,14 +1,12 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { NewsCard } from "@/components/news-card"
-{/*import { NewsletterSubscription } from "@/components/newsletter-subscription"*/}
+import { NewsletterSubscription } from "@/components/newsletter-subscription" // ✅ This line is critical
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import type { Metadata } from "next"
-
 import { blogPosts } from "@/lib/blogPosts"
-
 
 export const metadata: Metadata = {
   title: "Mortgage Blog | BC Mortgage Team",
@@ -19,7 +17,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
 
-  const featuredPost = blogPosts.find((post) => post.featured)
+const featuredPost = blogPosts.find((post) => post.featured)
 
 const otherArticles = blogPosts
   .filter((post) => !post.featured)
