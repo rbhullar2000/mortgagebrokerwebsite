@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   keywords: "mortgage blog, mortgage tips, BC housing market, mortgage rates, first-time homebuyer tips",
 }
 
-//export default function BlogPage() {
+export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
 {/*  const blogPosts = [
     {
