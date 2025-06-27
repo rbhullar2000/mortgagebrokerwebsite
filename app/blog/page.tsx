@@ -23,7 +23,7 @@ export default function BlogPage() {
       date: "June 26, 2025",
       category: "Retirement Planning",
       slug: "/blog/rethinking-retirement-home-equity",
-      featured: false,
+      featured: true,
       image: "retirement-home-equity.png",
     },
     
@@ -44,7 +44,7 @@ export default function BlogPage() {
       date: "June 17, 2025",
       category: "Interest Rates",
       slug: "/blog/bank-of-canada-holds-key-interest-rate-June-2025",
-      featured: true,
+      featured: false,
       image: "/bank-of-canada-building.png?height=300&width=600",
     },
     {
