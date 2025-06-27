@@ -10,8 +10,6 @@ import { blogPosts } from "@/lib/blogPosts"
 import dynamic from "next/dynamic"
 import NewsletterSubscriptionWrapper from "@/components/newsletter-subscription-wrapper"
 
-const NewsletterSubscription = dynamic(() => import("@/components/newsletter-subscription"), { ssr: false })
-
 export const metadata: Metadata = {
   title: "Mortgage Blog | BC Mortgage Team",
   description: "Expert mortgage advice, market updates, and financial tips from licensed mortgage professionals in BC.",
