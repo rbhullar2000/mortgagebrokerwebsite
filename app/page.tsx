@@ -483,41 +483,40 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Featured Article */}
-          {featuredArticle && (
-            <div className="mb-12">
-              <Badge className="mb-4 bg-[#032133] text-white">Featured Article</Badge>
-              <Card className="border-0 shadow-2xl overflow-hidden">
-                <div className="grid lg:grid-cols-2 gap-0">
-                  <div className="h-64 lg:h-auto overflow-hidden">
-                    <img
-                      src={featuredArticle.image || "/placeholder.svg"}
-                      alt={featuredArticle.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-8 flex flex-col justify-center">
-                    <div className="flex justify-between items-center mb-4">
-                      <Badge variant="outline" className="text-[#032133]">
-                        {featuredArticle.category}
-                      </Badge>
-                      <span className="text-sm text-gray-500">{featuredArticle.date}</span>
-                    </div>
-                    <Link href={featuredArticle.slug} className="hover:underline">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-4">{featuredArticle.title}</h3>
-                    </Link>
-                    <p className="text-gray-600 mb-6 text-lg leading-relaxed">{featuredArticle.excerpt}</p>
-                    <Link
-                      href={featuredArticle.slug}
-                      className="text-[#032133] font-medium flex items-center hover:underline text-lg"
-                    >
-                      Read Full Article <ArrowRight className="ml-2 w-5 h-5" />
-                    </Link>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          )}
+      {featuredArticle?.title && (
+  <div className="mb-12">
+    <Badge className="mb-4 bg-[#032133] text-white">Featured Article</Badge>
+    <Card className="border-0 shadow-2xl overflow-hidden">
+      <div className="grid lg:grid-cols-2 gap-0">
+        <div className="h-64 lg:h-auto overflow-hidden">
+          <img
+            src={featuredArticle.image || "/placeholder.svg"}
+            alt={featuredArticle.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="p-8 flex flex-col justify-center">
+          <div className="flex justify-between items-center mb-4">
+            <Badge variant="outline" className="text-[#032133]">
+              {featuredArticle.category}
+            </Badge>
+            <span className="text-sm text-gray-500">{featuredArticle.date}</span>
+          </div>
+          <Link href={featuredArticle.slug} className="hover:underline">
+            <h3 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-4">{featuredArticle.title}</h3>
+          </Link>
+          <p className="text-gray-600 mb-6 text-lg leading-relaxed">{featuredArticle.excerpt}</p>
+          <Link
+            href={featuredArticle.slug}
+            className="text-[#032133] font-medium flex items-center hover:underline text-lg"
+          >
+            Read Full Article <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </div>
+      </div>
+    </Card>
+  </div>
+)}
 
           {/* Other Recent Articles */}
           <div className="grid md:grid-cols-2 gap-8">
