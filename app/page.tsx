@@ -530,7 +530,6 @@ export default function HomePage() {
           </div>
         </section> )} 
 
-          {/* Other Recent Articles */}
          {/* Other Recent Articles */}
 <div className="grid md:grid-cols-2 gap-8">
   {otherArticles.map((article, index) => (
