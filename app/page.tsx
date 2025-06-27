@@ -13,7 +13,7 @@ import Image from "next/image"
 
 import { blogPosts } from "@/lib/blogPosts"
 
-const featuredArticle = blogPosts.find((post) => post.featured)
+const featuredPost = blogPosts.find((post) => post.featured)
 
 export default function HomePage() {
   // Blog posts data - in a real implementation, this would come from a CMS or database
