@@ -19,7 +19,7 @@ const featuredPost = blogPosts.find((post) => post.featured)
 
 export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
-  const blogPosts = [ {/*
+  const blogPosts = [ 
     {
       title: "Are Variable Rates Still Worth It in 2025? It Depends…",
       excerpt:
@@ -89,7 +89,7 @@ export default function BlogPage() {
       slug: "/blog/improve-credit-score-for-better-mortgage-rates",
       featured: false,
       image: "credit-score-improvement.png",
-    }, */}
+    }, 
     //    {
     //      title: "Understanding Mortgage Stress Tests in 2024",
     //      excerpt:
