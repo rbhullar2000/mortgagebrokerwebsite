@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
-  const blogPosts = [
+  {/*  const blogPosts = [
     {
       title: "Are Variable Rates Still Worth It in 2025? It Depends…",
       excerpt:
@@ -97,7 +97,7 @@ export default function BlogPage() {
     //      featured: false,
     //      image: "stress-test-calculator.png",
     //    },
-  ]
+  ] */}
 
   const categories = [
     "Interest Rates",
