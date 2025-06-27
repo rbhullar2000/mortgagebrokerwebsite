@@ -36,7 +36,6 @@ const otherArticles = blogPosts
     "Regulations",
     "First-Time Buyers",
   ]
-  const featuredPost = blogPosts.find((post) => post.featured);
 
   return (
     <div className="min-h-screen bg-white">
