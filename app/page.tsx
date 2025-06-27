@@ -483,40 +483,43 @@ export default function HomePage() {
             </p>
           </div>
 
-      {featuredArticle?.title && (
-  <div className="mb-12">
-    <Badge className="mb-4 bg-[#032133] text-white">Featured Article</Badge>
-    <Card className="border-0 shadow-2xl overflow-hidden">
-      <div className="grid lg:grid-cols-2 gap-0">
-        <div className="h-64 lg:h-auto overflow-hidden">
-          <img
-            src={featuredArticle.image || "/placeholder.svg"}
-            alt={featuredArticle.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="p-8 flex flex-col justify-center">
-          <div className="flex justify-between items-center mb-4">
-            <Badge variant="outline" className="text-[#032133]">
-              {featuredArticle.category}
-            </Badge>
-            <span className="text-sm text-gray-500">{featuredArticle.date}</span>
+     {/* Featured Post */}
+      {featuredPost && (
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-[#1D2D44]">Featured Article</h2>
+            </div>
+            <div className="bg-[#F4F6F8] rounded-2xl p-8 border-2 border-[#D4AF37]">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <Badge className="mb-4 bg-[#1D2D44] text-white">
+                    {featuredPost.category}
+                  </Badge>
+                  <h3 className="text-3xl font-bold text-[#1D2D44] mb-4">
+                    <Link href={featuredPost.slug} className="hover:underline">
+                      {featuredPost.title}
+                    </Link>
+                  </h3>
+                  <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">{featuredPost.date}</span>
+                    <Button asChild className="bg-[#1D2D44] hover:bg-[#1D2D44]/90">
+                      <Link href={featuredPost.slug}>Read Full Article</Link>
+                    </Button>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src={featuredPost.image}
+                    alt={featuredPost.title}
+                    className="rounded-lg shadow-lg w-full"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <Link href={featuredArticle.slug} className="hover:underline">
-            <h3 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-4">{featuredArticle.title}</h3>
-          </Link>
-          <p className="text-gray-600 mb-6 text-lg leading-relaxed">{featuredArticle.excerpt}</p>
-          <Link
-            href={featuredArticle.slug}
-            className="text-[#032133] font-medium flex items-center hover:underline text-lg"
-          >
-            Read Full Article <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-        </div>
-      </div>
-    </Card>
-  </div>
-)}
+        </section> )} 
 
           {/* Other Recent Articles */}
           <div className="grid md:grid-cols-2 gap-8">
