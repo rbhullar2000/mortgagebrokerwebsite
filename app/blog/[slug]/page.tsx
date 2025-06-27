@@ -189,6 +189,152 @@ function getPostData() {
     category: "Rate Analysis",
     image: "fixed-vs-variable-rates.png",
   },
+
+
+"rethinking-retirement-home-equity": {
+  title: "Rethinking Retirement: How Your Home Can Be a Financial Asset — Not Just a Place to Live",
+  excerpt:
+    "With Canadian home values rising and retirement costs increasing, it's time to rethink traditional views on home equity. Learn six smart ways to use your home's value to support your lifestyle, family, and long-term goals.",
+  content: `
+<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+  Introduction: The Shift in Retirement Thinking
+</h2>
+
+<p class="mb-6 text-black">
+  For decades, the standard goal for retirement in Canada was simple: buy a home, pay off the mortgage, and live mortgage-free in your golden years. It felt secure, sensible, and prudent.
+</p>
+
+<p class="mb-6 text-black">
+  But today, things have changed. We’re living longer. Expenses are rising. And many Canadians are sitting on homes worth over <strong>$1 million</strong>, with the bulk of their net worth <strong>locked in bricks and mortar</strong>.
+</p>
+
+<p class="mb-6 text-black">
+  That raises a powerful question: <em>What if your home could do more than provide a roof over your head?</em> What if it could <strong>fund your lifestyle</strong>, support your family, and enable you to age in place with dignity?
+</p>
+
+<p class="mb-6 text-black">
+  It’s time to rethink what retirement security really means—and how your home fits into that picture.
+</p>
+
+<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+  💡 Why the “No Mortgage in Retirement” Rule Deserves a Rethink
+</h2>
+
+<ul class="list-disc pl-6 space-y-3 text-black mb-6">
+  <li><strong>You may live longer than planned:</strong> Your retirement could last 25–35 years.</li>
+  <li><strong>Liquidity beats illiquidity:</strong> Equity isn't cash. Unlocking it creates options when needed.</li>
+  <li><strong>Your investments may outperform your mortgage cost:</strong> Capital in the market might return more than what borrowing costs.</li>
+  <li><strong>Healthcare costs are rising:</strong> In-home care and medical expenses are climbing faster than inflation.</li>
+  <li><strong>Peace of mind matters:</strong> Access to $300K equity may feel safer than being debt-free but cash-poor.</li>
+</ul>
+
+<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+  🔐 The Top 6 Ways to Use Home Equity in Retirement
+</h2>
+
+<ol class="list-decimal pl-6 space-y-6 text-black mb-6">
+  <li><strong>Traditional Refinance:</strong> Lower payments or cash out for renovations, gifting, or investments. Best for borrowers with good income and credit.</li>
+  <li><strong>Reverse Mortgage:</strong> Tax-free access to up to 55% of home value. No payments. Repaid upon sale or death.</li>
+  <li><strong>HELOC:</strong> Flexible credit, interest-only payments. Best as an emergency fund or cash flow tool—but needs income to qualify.</li>
+  <li><strong>Downsizing or Partial Sale:</strong> Sell part of your home or rent out space. Can generate income and free up capital without fully moving.</li>
+  <li><strong>Bridge Loan:</strong> Buy a new place before selling your current one. Helps with transitions or supporting family.</li>
+  <li><strong>Multi-Generational Equity Sharing:</strong> Help kids buy while retaining control. Use refinance or HELOC strategically.</li>
+</ol>
+
+<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+  🛠️ Strategy Matrix: What’s the Best Tool for You?
+</h2>
+
+<table class="table-auto text-black border mb-6">
+  <thead>
+    <tr>
+      <th class="border px-4 py-2">Goal</th>
+      <th class="border px-4 py-2">Tool</th>
+      <th class="border px-4 py-2">Why It Works</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border px-4 py-2">Free up cash for travel</td>
+      <td class="border px-4 py-2">Refinance or Reverse Mortgage</td>
+      <td class="border px-4 py-2">Unlocks lump sum without selling</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">Emergency or health fund</td>
+      <td class="border px-4 py-2">HELOC</td>
+      <td class="border px-4 py-2">Revolving access; pay only when used</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">Help adult children</td>
+      <td class="border px-4 py-2">Refinance or HELOC</td>
+      <td class="border px-4 py-2">Early wealth transfer while retaining ownership</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">Age in place without payments</td>
+      <td class="border px-4 py-2">Reverse Mortgage</td>
+      <td class="border px-4 py-2">No monthly payments; you stay in your home</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+  🧠 Emotional Barriers to Using Equity
+</h2>
+
+<p class="mb-6 text-black">
+  Many Canadians hesitate to use their home equity. Common concerns include:
+</p>
+
+<ul class="list-disc pl-6 text-black space-y-2 mb-6">
+  <li>“I worked hard to pay off my mortgage.” → You also worked hard to enjoy your retirement. Equity is a resource, not a burden.</li>
+  <li>“I want to leave something to my kids.” → Most children would rather you be comfortable and secure today.</li>
+  <li>“Debt feels risky.” → Structured wisely, home equity reduces risk—not increases it.</li>
+</ul>
+
+<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+  🔍 Real Example: The “House-Rich, Cash-Limited” Retiree
+</h2>
+
+<p class="mb-6 text-black">
+  <em>Elaine, 73, owns a $1.4M home in Burnaby but only has $50K in RRSPs. Her pension covers basics but not dental care or roof repairs. She unlocks $275K with a reverse mortgage — using $100K upfront and $175K as a standby line of credit.</em>
+</p>
+
+<ul class="text-black space-y-2 mb-6">
+  <li>✅ She renovates and increases accessibility</li>
+  <li>✅ Keeps cash on hand for emergencies</li>
+  <li>✅ Stays in her home and improves her quality of life</li>
+</ul>
+
+<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
+  🎯 Final Thought
+</h2>
+
+<p class="mb-6 text-black">
+  Your home is more than shelter — it’s a tool. With the right plan, you can use your equity to retire with dignity, comfort, and peace of mind. You don’t have to sell. You just need a strategy.
+</p>
+
+<div class="text-white p-6 rounded-lg" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+  <p class="font-semibold text-center">
+    Wondering which option is right for your retirement plan?
+    Book a free consultation with our mortgage team.
+  </p>
+  <div class="mt-4 text-center">
+    <a href="/#contact"
+      class="inline-block bg-white hover:bg-gray-100 px-5 py-3 rounded-lg font-medium transition-colors" style="color: #1D2D44;">
+      Book a Call
+    </a>
+  </div>
+</div>
+  `,
+  date: "June 26, 2025",
+  author: "Rob Bhullar",
+  category: "Retirement Planning",
+  image: "retirement-home-equity.png",
+},
+
+
+
+    
  "bank-of-canada-holds-key-interest-rate-June-2025": {
     title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
     excerpt:
