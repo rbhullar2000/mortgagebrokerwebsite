@@ -1,8 +1,6 @@
-// lib/blogPosts.ts
-
 export const blogPosts = [
   {
-    title: "Retirement Planning",
+    title: "Retirement Planning: Unlocking Your Home's Equity",
     excerpt:
       "Many Canadians have significant equity tied up in their homes — but are unsure how to use it in retirement. This article explores smart strategies like reverse mortgages, HELOCs, and refinancing to unlock that value and live with more financial flexibility.",
     date: "June 26, 2025",
@@ -29,7 +27,7 @@ export const blogPosts = [
     category: "Interest Rates",
     slug: "/blog/bank-of-canada-holds-key-interest-rate-June-2025",
     featured: false,
-    image: "/bank-of-canada-building.png?height=300&width=600",
+    image: "/bank-of-canada-building.png",
   },
   {
     title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
@@ -61,7 +59,7 @@ export const blogPosts = [
     featured: false,
     image: "vancouver-skyline-housing.png",
   },
-  {/*  {
+  {
     title: "How to Improve Your Credit Score for Better Mortgage Rates",
     excerpt:
       "Your credit score has a significant impact on the mortgage rates you qualify for. Learn practical steps to improve your score before applying.",
@@ -70,5 +68,5 @@ export const blogPosts = [
     slug: "/blog/improve-credit-score-for-better-mortgage-rates",
     featured: false,
     image: "credit-score-improvement.png",
-  },*/}
+  },
 ]
