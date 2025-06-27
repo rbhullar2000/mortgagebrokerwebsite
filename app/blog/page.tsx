@@ -7,6 +7,9 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { blogPosts } from "@/lib/blogPosts"
+import dynamic from "next/dynamic"
+
+const NewsletterSubscription = dynamic(() => import("@/components/newsletter-subscription"), { ssr: false })
 
 export const metadata: Metadata = {
   title: "Mortgage Blog | BC Mortgage Team",
