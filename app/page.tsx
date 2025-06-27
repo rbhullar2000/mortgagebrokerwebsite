@@ -11,6 +11,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
 
+const featuredPost = blogPosts.find((post) => post.featured);
+
 export default function HomePage() {
   // Blog posts data - in a real implementation, this would come from a CMS or database
   const blogPosts = [
