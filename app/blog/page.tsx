@@ -8,6 +8,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { blogPosts } from "@/lib/blogPosts"
 import dynamic from "next/dynamic"
+import NewsletterSubscriptionWrapper from "@/components/newsletter-subscription-wrapper"
 
 const NewsletterSubscription = dynamic(() => import("@/components/newsletter-subscription"), { ssr: false })
 
@@ -144,7 +145,7 @@ const otherArticles = blogPosts
                   </div> 
                 </div> */}
                 <div className="mb-8">
-                  <NewsletterSubscription />
+                  <NewsletterSubscriptionWrapper />
                 </div>
                 {/*   <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Free Resources</h3>
