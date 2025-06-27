@@ -176,7 +176,7 @@ export default function BlogPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> )} 
       
       {/* All Posts */}
       <section className="py-12 bg-white">
