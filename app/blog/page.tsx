@@ -129,39 +129,43 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Post */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-[#1D2D44]">Featured Article</h2>
-          </div>
-          <div className="bg-[#F4F6F8] rounded-2xl p-8 border-2 border-[#D4AF37]">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <Badge className="mb-4 bg-[#1D2D44] text-white">Interest Rates</Badge>
-                <h3 className="text-3xl font-bold text-[#1D2D44] mb-4">
-                  <Link href="/blog/bank-of-canada-holds-key-interest-rate-June-2025" className="hover:underline">
-                    Bank of Canada Holds Key Interest Rate
-                  </Link>
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent.
-                  Learn why the Bank paused and what it means for homeowners and buyers.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">June 17, 2025</span>
-                  <Button asChild className="bg-[#1D2D44] hover:bg-[#1D2D44]/90">
-                    <Link href="/blog/bank-of-canada-holds-key-interest-rate-June-2025">Read Full Article</Link>
-                  </Button>
+      {featuredPost && (
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-[#1D2D44]">Featured Article</h2>
+            </div>
+            <div className="bg-[#F4F6F8] rounded-2xl p-8 border-2 border-[#D4AF37]">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <Badge className="mb-4 bg-[#1D2D44] text-white">
+                    {featuredPost.category}
+                  </Badge>
+                  <h3 className="text-3xl font-bold text-[#1D2D44] mb-4">
+                    <Link href={featuredPost.slug} className="hover:underline">
+                      {featuredPost.title}
+                    </Link>
+                  </h3>
+                  <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">{featuredPost.date}</span>
+                    <Button asChild className="bg-[#1D2D44] hover:bg-[#1D2D44]/90">
+                      <Link href={featuredPost.slug}>Read Full Article</Link>
+                    </Button>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <img src="bank-of-canada-building.png" alt="Bank of Canada" className="rounded-lg shadow-lg w-full" />
+                <div>
+                  <img
+                    src={featuredPost.image}
+                    alt={featuredPost.title}
+                    className="rounded-lg shadow-lg w-full"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
+        </section> )} 
+      
       {/* All Posts */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
