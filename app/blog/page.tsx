@@ -9,12 +9,6 @@ import type { Metadata } from "next"
 
 import { blogPosts } from "@/lib/blogPosts"
 
-const featuredPost = blogPosts.find((post) => post.featured)
-
-const otherArticles = blogPosts
-  .filter((post) => !post.featured)
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  .slice(0, 2)
 
 export const metadata: Metadata = {
   title: "Mortgage Blog | BC Mortgage Team",
@@ -24,7 +18,14 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   // Sample blog posts - in a real implementation, these would come from a CMS or database
-  
+
+  const featuredPost = blogPosts.find((post) => post.featured)
+
+const otherArticles = blogPosts
+  .filter((post) => !post.featured)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 2)
+
 
   const categories = [
     "Interest Rates",
