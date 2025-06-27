@@ -19,7 +19,7 @@ export default function BlogPage() {
     {
       title: "Retirement Planning",
       excerpt:
-        "Rethinking retirement",
+        "Many Canadians have significant equity tied up in their homes — but are unsure how to use it in retirement. This article explores smart strategies like reverse mortgages, HELOCs, and refinancing to unlock that value and live with more financial flexibility.",
       date: "June 26, 2025",
       category: "Retirement Planning",
       slug: "/blog/rethinking-retirement-home-equity",
