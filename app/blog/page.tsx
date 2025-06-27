@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { blogPosts } from "@/lib/blogPosts"
 
 export const metadata: Metadata = {
   title: "Mortgage Blog | BC Mortgage Team",
