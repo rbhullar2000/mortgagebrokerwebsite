@@ -17,6 +17,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 })
     }
 
+    // Check if file exists
+    const filePath = path.join(process.cwd(), "public", "resources", fileName)
+    if (!fs.existsSync(filePath)) {
+      return NextResponse.json({ error: "Resource file not found" }, { status: 404 })
+    }
+
     // Create transporter
     const transporter = nodemailer.createTransporter({
       host: process.env.SMTP_HOST,
@@ -27,15 +33,6 @@ export async function POST(request: NextRequest) {
         pass: process.env.SMTP_PASS,
       },
     })
-
-    // File path
-    const filePath = path.join(process.cwd(), "public", "resources", fileName)
-
-    // Check if file exists
-    if (!fs.existsSync(filePath)) {
-      console.error("File not found:", filePath)
-      return NextResponse.json({ error: "Resource file not found" }, { status: 404 })
-    }
 
     // Email to user with attachment
     const userMailOptions = {
@@ -54,34 +51,31 @@ export async function POST(request: NextRequest) {
             
             <p>Hi there,</p>
             
-            <p>Thank you for your interest in our mortgage tools. Please find your <strong>${resourceName}</strong> attached to this email.</p>
+            <p>Thank you for your interest in our mortgage tools. We've attached the <strong>${resourceName}</strong> to this email for your convenience.</p>
             
-            <div style="background-color: white; padding: 20px; border-left: 4px solid #D4AF37; margin: 20px 0;">
-              <h3 style="color: #032133; margin-top: 0;">How to use this tool:</h3>
-              <ul>
-                <li>Download and open the Excel file</li>
-                <li>Enter your mortgage details in the highlighted cells</li>
-                <li>The calculations will update automatically</li>
-                <li>Use this information to make informed mortgage decisions</li>
-              </ul>
-            </div>
+            <p>This Excel tool will help you:</p>
+            <ul>
+              <li>Make informed mortgage decisions</li>
+              <li>Calculate payments and scenarios</li>
+              <li>Plan your financial future</li>
+            </ul>
             
-            <p>If you have any questions about using this tool or need personalized mortgage advice, don't hesitate to reach out to us.</p>
+            <p>If you have any questions about using this tool or need mortgage advice, don't hesitate to reach out to us.</p>
             
-            <div style="text-align: center; margin: 30px 0;">
-              <a href="mailto:contact@bcmortgageteam.com" style="background-color: #032133; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">Contact Us</a>
+            <div style="background-color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+              <h3 style="color: #032133; margin-top: 0;">Contact Information</h3>
+              <p><strong>Email:</strong> contact@bcmortgageteam.com</p>
+              <p><strong>Service Area:</strong> Greater Vancouver Area</p>
+              <p>Surrey, Vancouver, Burnaby, Richmond & more</p>
             </div>
             
             <p>Best regards,<br>
             <strong>BC Mortgage Team</strong><br>
             Your Trusted Mortgage Professionals</p>
-            
-            <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
-            
-            <p style="font-size: 12px; color: #666;">
-              This email was sent because you requested a mortgage resource from our website. 
-              We respect your privacy and will only send you relevant mortgage information.
-            </p>
+          </div>
+          
+          <div style="background-color: #032133; color: white; padding: 15px; text-align: center; font-size: 12px;">
+            <p>This email was sent because you requested a mortgage resource from BC Mortgage Team.</p>
           </div>
         </div>
       `,
@@ -93,23 +87,20 @@ export async function POST(request: NextRequest) {
       ],
     }
 
-    // Admin notification email
+    // Email to admin (notification)
     const adminMailOptions = {
       from: process.env.SMTP_USER,
       to: process.env.EMAIL_TO || "contact@bcmortgageteam.com",
       subject: `New Resource Download: ${resourceName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #032133;">New Resource Download</h2>
+          <h2>New Resource Download</h2>
+          <p><strong>Resource:</strong> ${resourceName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>File:</strong> ${fileName}</p>
+          <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
           
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 5px;">
-            <p><strong>Resource:</strong> ${resourceName}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>File:</strong> ${fileName}</p>
-            <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
-          </div>
-          
-          <p>A new lead has downloaded a resource from your website. Consider following up with personalized mortgage advice.</p>
+          <p>A user has downloaded a resource from your website. Consider following up with them about their mortgage needs.</p>
         </div>
       `,
     }
@@ -117,7 +108,7 @@ export async function POST(request: NextRequest) {
     // Send both emails
     await Promise.all([transporter.sendMail(userMailOptions), transporter.sendMail(adminMailOptions)])
 
-    return NextResponse.json({ success: true })
+    return NextResponse.json({ success: true, message: "Resource sent successfully" })
   } catch (error) {
     console.error("Error sending resource:", error)
     return NextResponse.json({ error: "Failed to send resource" }, { status: 500 })
