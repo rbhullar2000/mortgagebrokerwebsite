@@ -65,6 +65,7 @@ export default function BlogPage() {
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-[#1D2D44]">Featured Article</h2>
             </div>
+
             <div className="bg-[#F4F6F8] rounded-2xl p-8 border-2 border-[#D4AF37]">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -103,6 +104,7 @@ export default function BlogPage() {
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-[#1D2D44]">Latest Articles</h2>
               </div>
+
               <div className="grid md:grid-cols-2 gap-8">
                 {otherPosts.map((post, index) => (
                   <NewsCard
@@ -116,6 +118,7 @@ export default function BlogPage() {
                   />
                 ))}
               </div>
+
               <div className="mt-12 flex justify-center">
                 <Button
                   variant="outline"
@@ -126,6 +129,7 @@ export default function BlogPage() {
                 </Button>
               </div>
             </div>
+
             <div className="lg:col-span-1">
               <div className="sticky top-24">
                 <div className="mb-8">
