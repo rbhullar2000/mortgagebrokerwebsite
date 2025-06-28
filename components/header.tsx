@@ -14,6 +14,7 @@ export function Header() {
     { href: "/#services", label: "Services" },
     { href: "/purchase", label: "Purchase" },
     { href: "/renewal", label: "Renewal" },
+    { href: "/#calculator", label: "Mortgage Calculator" },
     { href: "/blog", label: "Blog" },
     { href: "/#contact", label: "Contact" },
   ]
@@ -38,7 +39,7 @@ export function Header() {
                   className="object-contain w-full h-full"
                 />
               </div>
-    {/*            <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
+              {/*            <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
                 <Image
                   src="/BRX_brand_black.png"
                   alt="BRX Mortgage"
@@ -126,7 +127,7 @@ export function Header() {
                     ))}
                   </nav>
 
-                       <div className="pt-4 border-t">
+                  <div className="pt-4 border-t">
                     <Button
                       asChild
                       className="w-full bg-[#032133] hover:bg-[#032133]/90 h-12 text-base"
