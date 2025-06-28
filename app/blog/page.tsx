@@ -54,9 +54,9 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
+     
       {/* Resources Section */}
-      <ResourcesSection />
+  {/*     <ResourcesSection /> */}
 
       {/* Featured Post */}
       {featuredPost && (
