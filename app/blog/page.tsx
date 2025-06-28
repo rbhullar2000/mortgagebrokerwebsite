@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { NewsCard } from "@/components/news-card"
 import { NewsletterSubscription } from "@/components/newsletter-subscription"
+import { ResourcesSection } from "@/components/resources-section"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
@@ -9,9 +10,11 @@ import type { Metadata } from "next"
 import { blogPosts } from "@/lib/blogPosts"
 
 export const metadata: Metadata = {
-  title: "Mortgage Blog | BC Mortgage Team",
-  description: "Expert mortgage advice, market updates, and financial tips from licensed mortgage professionals in BC.",
-  keywords: "mortgage blog, mortgage tips, BC housing market, mortgage rates, first-time homebuyer tips",
+  title: "Blog & Resources | BC Mortgage Team",
+  description:
+    "Expert mortgage advice, market updates, financial tips, and free mortgage tools from licensed mortgage professionals in BC.",
+  keywords:
+    "mortgage blog, mortgage tips, BC housing market, mortgage rates, first-time homebuyer tips, mortgage calculators, free tools",
 }
 
 export default function BlogPage() {
@@ -43,13 +46,17 @@ export default function BlogPage() {
       <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1D2D44] mb-6">Mortgage Blog & Resources</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-[#1D2D44] mb-6">Blog & Resources</h1>
             <p className="text-xl text-gray-600 mb-8">
-              Expert mortgage advice, market updates, and financial tips to help you make informed decisions.
+              Expert mortgage advice, market updates, financial tips, and free tools to help you make informed
+              decisions.
             </p>
           </div>
         </div>
       </section>
+
+      {/* Resources Section */}
+      <ResourcesSection />
 
       {/* Featured Post */}
       {featuredPost && (
