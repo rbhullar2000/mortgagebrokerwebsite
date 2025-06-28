@@ -9,6 +9,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "Missing required fields" }, { status: 400 })
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ success: false, error: "Invalid email format" }, { status: 400 })
+    }
+
     // Create transporter
     const transporter = nodemailer.createTransporter({
       host: process.env.SMTP_HOST,
@@ -42,7 +48,7 @@ export async function POST(request: NextRequest) {
             <div style="background-color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="color: #032133; margin-top: 0;">How to use this tool:</h3>
               <ul>
-                <li>Open the Excel file</li>
+                <li>Open the Excel file attached to this email</li>
                 <li>Enter your mortgage details in the highlighted cells</li>
                 <li>The calculations will update automatically</li>
                 <li>Use different scenarios to compare options</li>
@@ -76,6 +82,12 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
+      attachments: [
+        {
+          filename: resourceFile,
+          path: `./public/resources/${resourceFile}`,
+        },
+      ],
     }
 
     // Email notification to admin
