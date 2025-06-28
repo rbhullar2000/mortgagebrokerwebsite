@@ -22,7 +22,7 @@ const otherArticles = blogPosts
 
 export default function HomePage() {
   // Blog posts data - in a real implementation, this would come from a CMS or database
- 
+
   // Get featured article
   const featuredArticle = blogPosts.find((post) => post.featured)
 
@@ -60,7 +60,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="h-12 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+                  className="h-12 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white bg-transparent"
                   asChild
                 >
                   <Link href="#calculator">
@@ -85,7 +85,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-             <div className="bg-white rounded-2xl shadow-2xl p-8 border-l-4 border-[#D4AF37]">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 border-l-4 border-[#D4AF37]">
                 <h3 className="text-2xl font-bold text-[#1D2D44] mb-6">Schedule a Consultation</h3>
                 <ContactForm variant="hero" />
               </div>
@@ -94,93 +94,89 @@ export default function HomePage() {
         </div>
       </section>
 
-     {/* Services Section */}
-<section id="services" className="py-20 bg-[#F4F6F8]">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">
-        Comprehensive Mortgage Services
-      </h2>
-      <p className="text-xl text-[#2C2C2C] max-w-3xl mx-auto">
-        From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every situation.
-      </p>
-    </div>
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[
-        {
-          icon: <Users className="w-8 h-8 text-[#1D2D44]" />,
-          title: "First-Time Homebuyers",
-          description: "Navigate your first home purchase with confidence. Special programs and rates available.",
-          features: ["Down payment assistance", "First-time buyer programs", "Step-by-step guidance"],
-          link: "/purchase",
-        },
-        {
-          icon: <TrendingUp className="w-8 h-8 text-[#1D2D44]" />,
-          title: "Mortgage Renewals",
-          description: "Don't auto-renew! We'll find you better rates and terms when your mortgage comes due.",
-          features: ["Rate comparison", "Term optimization", "No-cost renewals"],
-          link: "/renewal",
-        },
-        {
-          icon: <FileText className="w-8 h-8 text-[#1D2D44]" />,
-          title: "Refinancing",
-          description: "Access your home's equity or consolidate debt with competitive refinancing options.",
-          features: ["Debt consolidation", "Home improvements", "Investment opportunities"],
-          link: "/refinance",
-        },
-        {
-          icon: <Calculator className="w-8 h-8 text-[#1D2D44]" />,
-          title: "Investment Properties",
-          description: "Specialized financing for real estate investors and rental property purchases.",
-          features: ["Investment strategies", "Portfolio lending", "Commercial options"],
-          link: "/investment",
-        },
-        {
-          icon: <Shield className="w-8 h-8 text-[#1D2D44]" />,
-          title: "Self-Employed Solutions",
-          description: "Alternative documentation programs for entrepreneurs and self-employed professionals.",
-          features: ["Bank statement programs", "Asset-based lending", "Flexible verification"],
-          link: "/self-employed",
-        },
-        {
-          icon: <Clock className="w-8 h-8 text-[#1D2D44]" />,
-          title: "Quick Closings",
-          description: "Fast-track approvals for time-sensitive purchases and competitive offers.",
-          features: ["24-48 hour approvals", "Same-day pre-approvals", "Priority processing"],
-          link: "/quick-closings",
-        },
-      ].map((service, index) => (
-        <Card
-          key={index}
-          className="bg-white shadow-md hover:shadow-lg transition-shadow"
-        >
-          <CardHeader>
-            <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center mb-4">
-              {service.icon}
-            </div>
-            <CardTitle className="text-xl text-[#1D2D44]">{service.title}</CardTitle>
-            <CardDescription className="text-gray-700">{service.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-2 mb-4">
-              {service.features.map((feature, idx) => (
-                <li key={idx} className="flex items-center text-sm text-gray-700">
-                  <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <Button variant="link" className="p-0 text-[#1D2D44] font-medium" asChild>
-              <Link href={service.link}>
-                Learn more <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </Button>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  </div>
-</section>
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-[#F4F6F8]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Comprehensive Mortgage Services</h2>
+            <p className="text-xl text-[#2C2C2C] max-w-3xl mx-auto">
+              From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every
+              situation.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Users className="w-8 h-8 text-[#1D2D44]" />,
+                title: "First-Time Homebuyers",
+                description: "Navigate your first home purchase with confidence. Special programs and rates available.",
+                features: ["Down payment assistance", "First-time buyer programs", "Step-by-step guidance"],
+                link: "/purchase",
+              },
+              {
+                icon: <TrendingUp className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Mortgage Renewals",
+                description: "Don't auto-renew! We'll find you better rates and terms when your mortgage comes due.",
+                features: ["Rate comparison", "Term optimization", "No-cost renewals"],
+                link: "/renewal",
+              },
+              {
+                icon: <FileText className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Refinancing",
+                description: "Access your home's equity or consolidate debt with competitive refinancing options.",
+                features: ["Debt consolidation", "Home improvements", "Investment opportunities"],
+                link: "/refinance",
+              },
+              {
+                icon: <Calculator className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Investment Properties",
+                description: "Specialized financing for real estate investors and rental property purchases.",
+                features: ["Investment strategies", "Portfolio lending", "Commercial options"],
+                link: "/investment",
+              },
+              {
+                icon: <Shield className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Self-Employed Solutions",
+                description: "Alternative documentation programs for entrepreneurs and self-employed professionals.",
+                features: ["Bank statement programs", "Asset-based lending", "Flexible verification"],
+                link: "/self-employed",
+              },
+              {
+                icon: <Clock className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Quick Closings",
+                description: "Fast-track approvals for time-sensitive purchases and competitive offers.",
+                features: ["24-48 hour approvals", "Same-day pre-approvals", "Priority processing"],
+                link: "/quick-closings",
+              },
+            ].map((service, index) => (
+              <Card key={index} className="bg-white shadow-md hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center mb-4">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl text-[#1D2D44]">{service.title}</CardTitle>
+                  <CardDescription className="text-gray-700">{service.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-700">
+                        <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button variant="link" className="p-0 text-[#1D2D44] font-medium" asChild>
+                    <Link href={service.link}>
+                      Learn more <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Rate Comparison Tool Section */}
       {/*  <section id="rates" className="py-20 bg-slate-50">
@@ -247,7 +243,7 @@ export default function HomePage() {
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  "Licensed Mortgage Professional with BRX Mortgage in British Columbia", 
+                  "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
                   "Hands-on experience managing risk, optimizing client outcomes, and aligning mortgage structures with long-term goals",
                   "Expert in complex approvals, debt consolidation, and investor financing",
                   "BSc in Mathematics and Business Administration from Simon Fraser University",
@@ -259,37 +255,37 @@ export default function HomePage() {
                 ))}
               </div>
 
-             <div className="grid grid-cols-3 gap-6 mb-8 items-center text-center">
-  {/* Column 1: Text */}
-  <div className="flex flex-col items-center justify-center w-24 h-18">
-    <div className="text-3xl font-bold text-[#D4AF37]">20+ years</div>
-    <div className="text-sm text-gray-600">in Financial Industry</div>
-  </div>
+              <div className="grid grid-cols-3 gap-6 mb-8 items-center text-center">
+                {/* Column 1: Text */}
+                <div className="flex flex-col items-center justify-center w-24 h-18">
+                  <div className="text-3xl font-bold text-[#D4AF37]">20+ years</div>
+                  <div className="text-sm text-gray-600">in Financial Industry</div>
+                </div>
 
-  {/* Column 2: BC Mortgage Logo */}
-  <div className="w-24 h-18 flex items-center justify-center">
-    <Image
-      src="/BCmortgageteamlogo.jpeg"
-      alt="BC Mortgage Team"
-      width={96}
-      height={72}
-      className="object-contain w-full h-full"
-    />
-  </div>
+                {/* Column 2: BC Mortgage Logo */}
+                <div className="w-24 h-18 flex items-center justify-center">
+                  <Image
+                    src="/BCmortgageteamlogo.jpeg"
+                    alt="BC Mortgage Team"
+                    width={96}
+                    height={72}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
 
-  {/* Column 3: BRX Logo */}
-  <div className="w-24 h-18 flex items-center justify-center">
-    <Image
-      src="/BRX_brand_black.png"
-      alt="BRX Mortgage"
-      width={96}
-      height={72}
-      className="object-contain w-full h-full"
-    />
-  </div>
-</div>
+                {/* Column 3: BRX Logo */}
+                <div className="w-24 h-18 flex items-center justify-center">
+                  <Image
+                    src="/BRX_brand_black.png"
+                    alt="BRX Mortgage"
+                    width={96}
+                    height={72}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+              </div>
 
-             <div className="flex items-center space-x-4 mb-8">
+              <div className="flex items-center space-x-4 mb-8">
                 <span className="text-gray-600">Follow me for market updates:</span>
                 <Link
                   href="https://x.com/robbhullar"
@@ -302,7 +298,6 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
                   <Link href="#contact">Contact Rob</Link>
@@ -310,7 +305,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+                  className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white bg-transparent"
                   asChild
                 >
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
@@ -420,145 +415,146 @@ export default function HomePage() {
             </p>
           </div>
 
-     {/* Featured Post */}
-      {featuredPost && (
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-[#1D2D44]">Featured Article</h2>
-            </div>
-            <div className="bg-[#F4F6F8] rounded-2xl p-8 border-2 border-[#D4AF37]">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <Badge className="mb-4 bg-[#1D2D44] text-white">
-                    {featuredPost.category}
-                  </Badge>
-                  <h3 className="text-3xl font-bold text-[#1D2D44] mb-4">
-                    <Link href={featuredPost.slug} className="hover:underline">
-                      {featuredPost.title}
-                    </Link>
-                  </h3>
-                  <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{featuredPost.date}</span>
-                    <Button asChild className="bg-[#1D2D44] hover:bg-[#1D2D44]/90">
-                      <Link href={featuredPost.slug}>Read Full Article</Link>
-                    </Button>
+          {/* Featured Post */}
+          {featuredPost && (
+            <section className="py-12 bg-white">
+              <div className="container mx-auto px-4">
+                <div className="mb-8">
+                  <h2 className="text-2xl font-bold text-[#1D2D44]">Featured Article</h2>
+                </div>
+                <div className="bg-[#F4F6F8] rounded-2xl p-8 border-2 border-[#D4AF37]">
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <Badge className="mb-4 bg-[#1D2D44] text-white">{featuredPost.category}</Badge>
+                      <h3 className="text-3xl font-bold text-[#1D2D44] mb-4">
+                        <Link href={featuredPost.slug} className="hover:underline">
+                          {featuredPost.title}
+                        </Link>
+                      </h3>
+                      <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-500">{featuredPost.date}</span>
+                        <Button asChild className="bg-[#1D2D44] hover:bg-[#1D2D44]/90">
+                          <Link href={featuredPost.slug}>Read Full Article</Link>
+                        </Button>
+                      </div>
+                    </div>
+                    <div>
+                      <img
+                        src={featuredPost.image || "/placeholder.svg"}
+                        alt={featuredPost.title}
+                        className="rounded-lg shadow-lg w-full"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <img
-                    src={featuredPost.image}
-                    alt={featuredPost.title}
-                    className="rounded-lg shadow-lg w-full"
-                  />
-                </div>
               </div>
-            </div>
+            </section>
+          )}
+
+          {/* Other Recent Articles */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {otherArticles.map((article, index) => (
+              <NewsCard
+                key={index}
+                title={article.title}
+                excerpt={article.excerpt}
+                date={article.date}
+                category={article.category}
+                slug={article.slug}
+                image={article.image}
+              />
+            ))}
           </div>
-        </section> )} 
 
-         {/* Other Recent Articles */}
-<div className="grid md:grid-cols-2 gap-8">
-  {otherArticles.map((article, index) => (
-    <NewsCard
-      key={index}
-      title={article.title}
-      excerpt={article.excerpt}
-      date={article.date}
-      category={article.category}
-      slug={article.slug}
-      image={article.image}
-    />
-  ))}
-</div>
-
-<div className="text-center mt-12">
-  <Button
-    variant="outline"
-    size="lg"
-    className="bg-white border-2 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
-    asChild
-  >
-    <Link href="/blog">
-      View All Articles <ArrowRight className="ml-2 w-4 h-4" />
-    </Link>
-  </Button>
-</div>
+          <div className="text-center mt-12">
+            <Button
+              variant="outline"
+              size="lg"
+              className="bg-white border-2 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+              asChild
+            >
+              <Link href="/blog">
+                View All Articles <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
-<section id="#contact" className="py-20 bg-[#F4F6F8]">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Ready to Get Started?</h2>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-        Contact today for a free consultation, or start your secure online application right away.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-        <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-          <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-            Start Application
-          </Link>
-        </Button>
-      </div>
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-16">
-      {/* Left: Contact Form */}
-      <div>
-        <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Get Your Free Consultation</h3>
-        <ContactForm />
-      </div>
-
-      {/* Right: Contact Info + Highlights */}
-      <div>
-        <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Contact Information</h3>
-        <div className="space-y-6">
-          {/* Email */}
-          <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
-              <Mail className="w-6 h-6" />
+      <section id="contact" className="py-20 bg-[#F4F6F8]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Contact today for a free consultation, or start your secure online application right away.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+                <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                  Start Application
+                </Link>
+              </Button>
             </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Left: Contact Form */}
             <div>
-              <h4 className="font-semibold text-[#1D2D44]">Email</h4>
-              <p className="text-gray-600">contact@bcmortgageteam.com</p>
-              {/*   <p className="text-sm text-gray-500">Thanks for reaching out — we'll be in touch shortly.</p>*/}
+              <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Get Your Free Consultation</h3>
+              <ContactForm />
             </div>
-          </div>
 
-          {/* Location */}
-          <div className="flex items-start space-x-4">
-            <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
-              <MapPin className="w-6 h-6" />
-            </div>
+            {/* Right: Contact Info + Highlights */}
             <div>
-              <h4 className="font-semibold text-[#1D2D44]">Service Area</h4>
-              <p className="text-gray-600">Greater Vancouver Area</p>
-              <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
+              <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Contact Information</h3>
+              <div className="space-y-6">
+                {/* Email */}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#1D2D44]">Email</h4>
+                    <p className="text-gray-600">contact@bcmortgageteam.com</p>
+                    {/*   <p className="text-sm text-gray-500">Thanks for reaching out — we'll be in touch shortly.</p>*/}
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133]">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#1D2D44]">Service Area</h4>
+                    <p className="text-gray-600">Greater Vancouver Area</p>
+                    <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
+                  </div>
+                </div>
+
+                {/* Highlights Box */}
+                <div className="mt-8 p-6 bg-[#F4F6F8] rounded-lg">
+                  <h4 className="font-semibold text-[#1D2D44] mb-2">
+                    Why Choose An Independent Mortgage Professional?
+                  </h4>
+                  <ul className="space-y-2 text-sm text-gray-600 list-disc pl-5">
+                    <li>No cost for our specialized services</li>
+                    <li>Access to rates banks don't advertise</li>
+                    <li>Pre-approvals in 24–48 hours</li>
+                    <li>Support throughout the entire process</li>
+                  </ul>
+                </div>
+
+                <div className="mb-8">
+                  <NewsletterSubscription />
+                </div>
+              </div>
             </div>
-          </div>
-
-          {/* Highlights Box */}
-          <div className="mt-8 p-6 bg-[#F4F6F8] rounded-lg">
-            <h4 className="font-semibold text-[#1D2D44] mb-2">Why Choose An Independent Mortgage Professional?</h4>
-            <ul className="space-y-2 text-sm text-gray-600 list-disc pl-5">
-              <li>No cost for our specialized services</li>
-              <li>Access to rates banks don't advertise</li>
-              <li>Pre-approvals in 24–48 hours</li>
-              <li>Support throughout the entire process</li>
-            </ul>
-          </div>
-
-          <div className="mb-8">
-            <NewsletterSubscription />
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
       <Footer />
     </div>
   )
