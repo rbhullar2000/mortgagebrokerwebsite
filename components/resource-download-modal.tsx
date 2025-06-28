@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
@@ -56,8 +55,10 @@ export function ResourceDownloadModal({
         }),
       })
 
+      const data = await response.json()
+
       if (!response.ok) {
-        throw new Error("Failed to send resource")
+        throw new Error(data.error || "Failed to send resource")
       }
 
       toast({
@@ -68,6 +69,7 @@ export function ResourceDownloadModal({
       setEmail("")
       onClose()
     } catch (error) {
+      console.error("Error:", error)
       toast({
         title: "Error",
         description: "Failed to send resource. Please try again.",
