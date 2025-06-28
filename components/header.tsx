@@ -15,7 +15,7 @@ export function Header() {
     { href: "/purchase", label: "Purchase" },
     { href: "/renewal", label: "Renewal" },
     { href: "/#calculator", label: "Mortgage Calculator" },
-    { href: "/blog", label: "Blog" },
+    { href: "/blog", label: "Blog & Resources" },
     { href: "/#contact", label: "Contact" },
   ]
 
