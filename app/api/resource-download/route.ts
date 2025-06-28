@@ -7,6 +7,8 @@ export async function POST(request: NextRequest) {
   try {
     const { email, resourceName, fileName } = await request.json()
 
+    console.log("Resource download request:", { email, resourceName, fileName })
+
     if (!email || !resourceName || !fileName) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
@@ -19,7 +21,10 @@ export async function POST(request: NextRequest) {
 
     // Check if file exists
     const filePath = path.join(process.cwd(), "public", "resources", fileName)
+    console.log("Looking for file at:", filePath)
+
     if (!fs.existsSync(filePath)) {
+      console.error("File not found:", filePath)
       return NextResponse.json({ error: "Resource file not found" }, { status: 404 })
     }
 
@@ -53,14 +58,17 @@ export async function POST(request: NextRequest) {
             
             <p>Thank you for your interest in our mortgage tools. We've attached the <strong>${resourceName}</strong> to this email for your convenience.</p>
             
-            <p>This Excel tool will help you:</p>
-            <ul>
-              <li>Make informed mortgage decisions</li>
-              <li>Calculate payments and scenarios</li>
-              <li>Plan your financial future</li>
-            </ul>
+            <div style="background-color: white; padding: 20px; border-left: 4px solid #D4AF37; margin: 20px 0;">
+              <h3 style="color: #032133; margin-top: 0;">How to use this tool:</h3>
+              <ul>
+                <li>Download and open the Excel file</li>
+                <li>Enter your mortgage details in the highlighted cells</li>
+                <li>The calculations will update automatically</li>
+                <li>Use this information to make informed mortgage decisions</li>
+              </ul>
+            </div>
             
-            <p>If you have any questions about using this tool or need mortgage advice, don't hesitate to reach out to us.</p>
+            <p>If you have any questions about using this tool or need personalized mortgage advice, don't hesitate to reach out to us.</p>
             
             <div style="background-color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="color: #032133; margin-top: 0;">Contact Information</h3>
@@ -106,7 +114,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Send both emails
+    console.log("Sending emails...")
     await Promise.all([transporter.sendMail(userMailOptions), transporter.sendMail(adminMailOptions)])
+    console.log("Emails sent successfully")
 
     return NextResponse.json({ success: true, message: "Resource sent successfully" })
   } catch (error) {
