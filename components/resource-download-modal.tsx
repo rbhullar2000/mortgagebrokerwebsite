@@ -3,42 +3,41 @@
 import type React from "react"
 
 import { useState } from "react"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Download, FileSpreadsheet } from "lucide-react"
-import { toast } from "sonner"
+import { Mail, FileSpreadsheet, Loader2 } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
 
 interface ResourceDownloadModalProps {
+  isOpen: boolean
+  onClose: () => void
   resourceName: string
-  resourceFile: string
   resourceDescription: string
-  children: React.ReactNode
+  fileName: string
 }
 
 export function ResourceDownloadModal({
+  isOpen,
+  onClose,
   resourceName,
-  resourceFile,
   resourceDescription,
-  children,
+  fileName,
 }: ResourceDownloadModalProps) {
   const [email, setEmail] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+  const { toast } = useToast()
 
-  const handleDownload = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (!email) {
-      toast.error("Please enter your email address")
+    if (!email || !email.includes("@")) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      })
       return
     }
 
@@ -53,81 +52,81 @@ export function ResourceDownloadModal({
         body: JSON.stringify({
           email,
           resourceName,
-          resourceFile,
+          fileName,
         }),
       })
 
       if (!response.ok) {
-        throw new Error("Failed to process request")
+        throw new Error("Failed to send resource")
       }
 
-      const data = await response.json()
+      toast({
+        title: "Resource Sent!",
+        description: `We've emailed the ${resourceName} to ${email}. Check your inbox!`,
+      })
 
-      if (data.success) {
-        // Create download link
-        const link = document.createElement("a")
-        link.href = `/resources/${resourceFile}`
-        link.download = resourceFile
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-
-        toast.success("Resource sent to your email and download started!")
-        setIsOpen(false)
-        setEmail("")
-      } else {
-        throw new Error(data.error || "Failed to process request")
-      }
+      setEmail("")
+      onClose()
     } catch (error) {
-      console.error("Download error:", error)
-      toast.error("Failed to process your request. Please try again.")
+      toast({
+        title: "Error",
+        description: "Failed to send resource. Please try again.",
+        variant: "destructive",
+      })
     } finally {
       setIsLoading(false)
     }
   }
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild>{children}</DialogTrigger>
+    <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <FileSpreadsheet className="h-5 w-5 text-green-600" />
-            Download {resourceName}
+            Email {resourceName}
           </DialogTitle>
-          <DialogDescription>{resourceDescription}</DialogDescription>
         </DialogHeader>
-        <form onSubmit={handleDownload} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="email">Email Address</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="Enter your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+        <div className="space-y-4">
+          <p className="text-sm text-gray-600">{resourceDescription}</p>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="email">Email Address</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="your.email@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+
             <p className="text-sm text-gray-500">
               We'll email you the resource and keep you updated with mortgage tips.
             </p>
-          </div>
-          <div className="flex gap-2">
-            <Button type="submit" disabled={isLoading} className="flex-1 bg-[#032133] hover:bg-[#032133]/90">
-              {isLoading ? (
-                "Processing..."
-              ) : (
-                <>
-                  <Download className="h-4 w-4 mr-2" />
-                  Download Resource
-                </>
-              )}
-            </Button>
-            <Button type="button" variant="outline" onClick={() => setIsOpen(false)}>
-              Cancel
-            </Button>
-          </div>
-        </form>
+
+            <div className="flex gap-3">
+              <Button type="submit" disabled={isLoading} className="flex-1 bg-[#032133] hover:bg-[#032133]/90">
+                {isLoading ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Mail className="mr-2 h-4 w-4" />
+                    Send to Email
+                  </>
+                )}
+              </Button>
+              <Button type="button" variant="outline" onClick={onClose}>
+                Cancel
+              </Button>
+            </div>
+          </form>
+        </div>
       </DialogContent>
     </Dialog>
   )
