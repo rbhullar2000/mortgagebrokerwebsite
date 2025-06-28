@@ -1,122 +1,83 @@
-import { type NextRequest, NextResponse } from "next/server"
-import nodemailer from "nodemailer"
+import type { Metadata } from "next"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { CalendarDays, Clock, User } from "lucide-react"
+import Link from "next/link"
+import { getAllBlogPosts } from "@/lib/blogPosts"
+import { ResourcesSection } from "@/components/resources-section"
 
-export async function POST(request: NextRequest) {
-  try {
-    const { email, resourceName, resourceFile } = await request.json()
+export const metadata: Metadata = {
+  title: "Blog & Resources | BC Mortgage Team",
+  description:
+    "Expert mortgage advice, market updates, financial tips, and free tools to help you make informed mortgage decisions.",
+}
 
-    if (!email || !resourceName || !resourceFile) {
-      return NextResponse.json({ success: false, error: "Missing required fields" }, { status: 400 })
-    }
+export default function BlogPage() {
+  const posts = getAllBlogPosts()
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
-      return NextResponse.json({ success: false, error: "Invalid email format" }, { status: 400 })
-    }
-
-    // Create transporter
-    const transporter = nodemailer.createTransporter({
-      host: process.env.SMTP_HOST,
-      port: Number.parseInt(process.env.SMTP_PORT || "587"),
-      secure: process.env.SMTP_PORT === "465",
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    })
-
-    // Email to user with the resource
-    const userMailOptions = {
-      from: process.env.SMTP_USER,
-      to: email,
-      subject: `Your ${resourceName} from BC Mortgage Team`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background-color: #032133; color: white; padding: 20px; text-align: center;">
-            <h1>BC Mortgage Team</h1>
-            <p>Your Trusted Mortgage Professionals</p>
-          </div>
-          
-          <div style="padding: 30px; background-color: #f9f9f9;">
-            <h2 style="color: #032133;">Thank you for downloading our ${resourceName}!</h2>
-            
-            <p>Hi there,</p>
-            
-            <p>Thank you for your interest in our ${resourceName}. This tool will help you make informed decisions about your mortgage.</p>
-            
-            <div style="background-color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <h3 style="color: #032133; margin-top: 0;">How to use this tool:</h3>
-              <ul>
-                <li>Open the Excel file attached to this email</li>
-                <li>Enter your mortgage details in the highlighted cells</li>
-                <li>The calculations will update automatically</li>
-                <li>Use different scenarios to compare options</li>
-              </ul>
-            </div>
-            
-            <p>If you have any questions about using this tool or need help with your mortgage needs, don't hesitate to reach out!</p>
-            
-            <div style="text-align: center; margin: 30px 0;">
-              <a href="https://r.mtg-app.com/robbhullar" 
-                 style="background-color: #032133; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">
-                Start Your Application
-              </a>
-            </div>
-            
-            <p>Best regards,<br>
-            <strong>BC Mortgage Team</strong><br>
-            Smart Mortgage Solutions</p>
-            
-            <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
-            
-            <div style="text-align: center;">
-              <p><strong>Contact Information:</strong></p>
-              <p>Email: contact@bcmortgageteam.com<br>
-              Service Area: Greater Vancouver Area</p>
-            </div>
-          </div>
-          
-          <div style="background-color: #032133; color: white; padding: 15px; text-align: center; font-size: 12px;">
-            <p>© 2024 BC Mortgage Team. All rights reserved.</p>
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-[#032133] to-[#054a6b] text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Blog & Resources</h1>
+            <p className="text-xl text-blue-100 mb-8">
+              Expert mortgage advice, market updates, financial tips, and free tools to help you make informed mortgage
+              decisions.
+            </p>
           </div>
         </div>
-      `,
-      attachments: [
-        {
-          filename: resourceFile,
-          path: `./public/resources/${resourceFile}`,
-        },
-      ],
-    }
+      </section>
 
-    // Email notification to admin
-    const adminMailOptions = {
-      from: process.env.SMTP_USER,
-      to: process.env.EMAIL_TO || "contact@bcmortgageteam.com",
-      subject: `Resource Download: ${resourceName}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #032133;">New Resource Download</h2>
-          
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
-            <p><strong>Resource:</strong> ${resourceName}</p>
-            <p><strong>File:</strong> ${resourceFile}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
+      {/* Resources Section */}
+      <ResourcesSection />
+
+      {/* Blog Posts Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Stay informed with our latest insights on mortgage trends, homebuying tips, and financial advice.
+            </p>
           </div>
-          
-          <p>This email has been added to your resource download list for follow-up.</p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <Card key={post.slug} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Badge variant="secondary">{post.category}</Badge>
+                  </div>
+                  <CardTitle className="text-xl mb-2">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-[#032133] transition-colors">
+                      {post.title}
+                    </Link>
+                  </CardTitle>
+                  <CardDescription className="text-gray-600 line-clamp-3">{post.excerpt}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <div className="flex items-center gap-1">
+                      <User className="h-4 w-4" />
+                      <span>{post.author}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CalendarDays className="h-4 w-4" />
+                      <span>{post.date}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-4 w-4" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
-      `,
-    }
-
-    // Send emails
-    await Promise.all([transporter.sendMail(userMailOptions), transporter.sendMail(adminMailOptions)])
-
-    return NextResponse.json({ success: true })
-  } catch (error) {
-    console.error("Resource download error:", error)
-    return NextResponse.json({ success: false, error: "Failed to process request" }, { status: 500 })
-  }
+      </section>
+    </div>
+  )
 }
