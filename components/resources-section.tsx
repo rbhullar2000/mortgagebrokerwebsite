@@ -45,13 +45,13 @@ export function ResourcesSection() {
       fileName: "BC_Mortgage_Team_Amortization_Tool.xlsx",
       color: "text-green-600",
     },
-//     {
-//      title: "Affordability Calculator",
-//      description: "Determine how much house you can afford based on your income and expenses.",
-//      icon: Calculator,
-//      fileName: "BC_Mortgage_Team_Affordability_Calculator.xlsx",
-//      color: "text-blue-600",
-//    },
+    {
+      title: "Affordability Calculator",
+      description: "Determine how much house you can afford based on your income and expenses.",
+      icon: Calculator,
+      fileName: "BC_Mortgage_Team_Affordability_Calculator.xlsx",
+      color: "text-blue-600",
+    },
 //    {
 //      title: "Rate Comparison Tool",
 //      description: "Compare different mortgage rates and terms to find the best option for you.",
