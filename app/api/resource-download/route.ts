@@ -28,10 +28,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Resource file not found" }, { status: 404 })
     }
 
-    // Check if logo exists
-    const logoPath = path.join(process.cwd(), "public", "BCmortgageteamlogo.jpeg")
-    const logoExists = fs.existsSync(logoPath)
-
     // Validate environment variables
     if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
       console.error("Missing SMTP configuration")
@@ -58,32 +54,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Email service unavailable" }, { status: 500 })
     }
 
-    // Prepare attachments
-    const attachments = [
-      {
-        filename: fileName,
-        path: filePath,
-      },
-    ]
-
-    // Add logo as attachment if it exists
-    if (logoExists) {
-      attachments.push({
-        filename: "logo.jpeg",
-        path: logoPath,
-        cid: "logo", // Content ID for embedding in HTML
-      })
-    }
-
     // Email to user with attachment
     const userMailOptions = {
-      from: `"BC Mortgage Team" <${process.env.SMTP_USER}>`,
+      from: process.env.SMTP_USER,
       to: email,
       subject: `Your ${resourceName} from BC Mortgage Team`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background-color: #032133; color: white; padding: 20px; text-align: center;">
-            ${logoExists ? '<img src="cid:logo" alt="BC Mortgage Team Logo" style="max-width: 200px; height: auto; margin-bottom: 10px;" />' : ""}
             <h1>BC Mortgage Team</h1>
             <p>Your Trusted Mortgage Professionals</p>
           </div>
@@ -132,12 +110,17 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-      attachments: attachments,
+      attachments: [
+        {
+          filename: fileName,
+          path: filePath,
+        },
+      ],
     }
 
     // Email to admin (notification)
     const adminMailOptions = {
-      from: `"BC Mortgage Team" <${process.env.SMTP_USER}>`,
+      from: process.env.SMTP_USER,
       to: process.env.EMAIL_TO || "contact@bcmortgageteam.com",
       subject: `New Resource Download: ${resourceName}`,
       html: `
