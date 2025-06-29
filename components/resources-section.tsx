@@ -45,7 +45,7 @@ export function ResourcesSection() {
       fileName: "BC_Mortgage_Team_Amortization_Tool.xlsx",
       color: "text-green-600",
     },
-    {
+    {/*   {
       title: "Affordability Calculator",
       description: "Determine how much house you can afford based on your income and expenses.",
       icon: Calculator,
@@ -58,7 +58,7 @@ export function ResourcesSection() {
       icon: TrendingUp,
       fileName: "BC_Mortgage_Team_Rate_Comparison_Tool.xlsx",
       color: "text-purple-600",
-    },
+    }, */}
   ]
 
   return (
@@ -101,7 +101,7 @@ export function ResourcesSection() {
 
           <div className="text-center mt-12">
             <p className="text-sm text-gray-500 max-w-2xl mx-auto">
-              All resources are free and require only your email address. We respect your privacy and won't spam you.
+              All resources are free and require only your email address. 
             </p>
           </div>
         </div>
