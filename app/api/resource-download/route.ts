@@ -28,6 +28,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Resource file not found" }, { status: 404 })
     }
 
+    // Check if logo exists
+    const logoPath = path.join(process.cwd(), "public", "BCmortgageteamlogo.jpeg")
+    const logoExists = fs.existsSync(logoPath)
+
     // Validate environment variables
     if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
       console.error("Missing SMTP configuration")
@@ -54,14 +58,32 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Email service unavailable" }, { status: 500 })
     }
 
+    // Prepare attachments
+    const attachments = [
+      {
+        filename: fileName,
+        path: filePath,
+      },
+    ]
+
+    // Add logo as attachment if it exists
+    if (logoExists) {
+      attachments.push({
+        filename: "logo.jpeg",
+        path: logoPath,
+        cid: "logo", // Content ID for embedding in HTML
+      })
+    }
+
     // Email to user with attachment
     const userMailOptions = {
-      from: process.env.SMTP_USER,
+      from: `"BC Mortgage Team" <${process.env.SMTP_USER}>`,
       to: email,
       subject: `Your ${resourceName} from BC Mortgage Team`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background-color: #032133; color: white; padding: 20px; text-align: center;">
+            ${logoExists ? '<img src="cid:logo" alt="BC Mortgage Team Logo" style="max-width: 200px; height: auto; margin-bottom: 10px;" />' : ""}
             <h1>BC Mortgage Team</h1>
             <p>Your Trusted Mortgage Professionals</p>
           </div>
@@ -93,6 +115,12 @@ export async function POST(request: NextRequest) {
               <p>Surrey, Vancouver, Burnaby, Richmond & more</p>
             </div>
             
+            <div style="background-color: #032133; color: white; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center;">
+              <h3 style="margin-top: 0; color: white;">Need More Help?</h3>
+              <p style="margin-bottom: 15px;">Visit our website for more mortgage tools, calculators, and expert advice.</p>
+              <a href="https://bcmortgageteam.com" style="display: inline-block; background-color: #D4AF37; color: #032133; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Visit Our Website</a>
+            </div>
+            
             <p>Best regards,<br>
             <strong>BC Mortgage Team</strong><br>
             Your Trusted Mortgage Professionals</p>
@@ -104,17 +132,12 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-      attachments: [
-        {
-          filename: fileName,
-          path: filePath,
-        },
-      ],
+      attachments: attachments,
     }
 
     // Email to admin (notification)
     const adminMailOptions = {
-      from: process.env.SMTP_USER,
+      from: `"BC Mortgage Team" <${process.env.SMTP_USER}>`,
       to: process.env.EMAIL_TO || "contact@bcmortgageteam.com",
       subject: `New Resource Download: ${resourceName}`,
       html: `
