@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if file exists
-    const filePath = path.join(process.cwd(), "public", "resources", fileName)
+    const filePath = path.join(process.cwd(), "public/resources", fileName)
     console.log("Looking for file at:", filePath)
 
     if (!fs.existsSync(filePath)) {
@@ -28,8 +28,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Resource file not found" }, { status: 404 })
     }
 
-    // Create transporter
-    const transporter = nodemailer.createTransporter({
+    // Validate environment variables
+    if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      console.error("Missing SMTP configuration")
+      return NextResponse.json({ error: "Email service not configured" }, { status: 500 })
+    }
+
+    // Create transporter (fixed typo)
+    const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number.parseInt(process.env.SMTP_PORT || "587"),
       secure: process.env.SMTP_PORT === "465",
@@ -38,6 +44,15 @@ export async function POST(request: NextRequest) {
         pass: process.env.SMTP_PASS,
       },
     })
+
+    // Test the connection
+    try {
+      await transporter.verify()
+      console.log("SMTP connection verified")
+    } catch (error) {
+      console.error("SMTP connection failed:", error)
+      return NextResponse.json({ error: "Email service unavailable" }, { status: 500 })
+    }
 
     // Email to user with attachment
     const userMailOptions = {
@@ -121,6 +136,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true, message: "Resource sent successfully" })
   } catch (error) {
     console.error("Error sending resource:", error)
-    return NextResponse.json({ error: "Failed to send resource" }, { status: 500 })
+    return NextResponse.json(
+      {
+        error: `Failed to send resource: ${error instanceof Error ? error.message : "Unknown error"}`,
+      },
+      { status: 500 },
+    )
   }
 }
