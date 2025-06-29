@@ -92,13 +92,7 @@ export async function POST(request: NextRequest) {
               <p><strong>Service Area:</strong> Greater Vancouver Area</p>
               <p>Surrey, Vancouver, Burnaby, Richmond & more</p>
             </div>
-            {/*
-            <div style="background-color: #032133; color: white; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center;">
-              <h3 style="margin-top: 0; color: white;">Need More Help?</h3>
-              <p style="margin-bottom: 15px;">Visit our website for more mortgage tools, calculators, and expert advice.</p>
-              <a href="https://bcmortgageteam.com" style="display: inline-block; background-color: #D4AF37; color: #032133; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Visit Our Website</a>
-            </div>
-            */}
+            
             <p>Best regards,<br>
             <strong>BC Mortgage Team</strong><br>
             Your Trusted Mortgage Professionals</p>
