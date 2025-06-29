@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Email service not configured" }, { status: 500 })
     }
 
-    // Create transporter (fixed typo)
+    // Create transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number.parseInt(process.env.SMTP_PORT || "587"),
@@ -88,8 +88,15 @@ export async function POST(request: NextRequest) {
             <div style="background-color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="color: #032133; margin-top: 0;">Contact Information</h3>
               <p><strong>Email:</strong> contact@bcmortgageteam.com</p>
+              <p><strong>Website:</strong> <a href="https://bcmortgageteam.com" style="color: #D4AF37; text-decoration: none;">bcmortgageteam.com</a></p>
               <p><strong>Service Area:</strong> Greater Vancouver Area</p>
               <p>Surrey, Vancouver, Burnaby, Richmond & more</p>
+            </div>
+            
+            <div style="background-color: #032133; color: white; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center;">
+              <h3 style="margin-top: 0; color: white;">Need More Help?</h3>
+              <p style="margin-bottom: 15px;">Visit our website for more mortgage tools, calculators, and expert advice.</p>
+              <a href="https://bcmortgageteam.com" style="display: inline-block; background-color: #D4AF37; color: #032133; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Visit Our Website</a>
             </div>
             
             <p>Best regards,<br>
@@ -99,6 +106,7 @@ export async function POST(request: NextRequest) {
           
           <div style="background-color: #032133; color: white; padding: 15px; text-align: center; font-size: 12px;">
             <p>This email was sent because you requested a mortgage resource from BC Mortgage Team.</p>
+            <p><a href="https://bcmortgageteam.com" style="color: #D4AF37; text-decoration: none;">Visit bcmortgageteam.com</a> for more mortgage solutions.</p>
           </div>
         </div>
       `,
