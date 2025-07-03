@@ -14,6 +14,132 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 function getPostData() {
   return {
+
+    "is-your-mortgage-pre-approval-useless": {
+      title: "Is Your Mortgage Pre-Approval Actually Useless? Here's Why It Might Be",
+      excerpt:
+        "A Rate Hold Isn't a Guarantee—And That Could Cost You the Home. Getting pre-approved should feel like progress, but if it wasn't done properly, it could be worthless when you need it most.",
+      content: `
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">The Hard Truth About Pre-Approvals</h3>
+      </div>
+      <p class="text-black">Getting pre-approved for a mortgage should feel like progress. It's exciting, empowering, and often the first concrete step toward buying a home. But here's the hard truth: if your mortgage pre-approval wasn't put together properly—or if your broker or banker skipped key steps—it could be virtually worthless when you need it most.</p>
+    </div>
+
+    <p class="mb-6 text-black leading-relaxed">Let's break down what a pre-approval really means, what a rate hold does (and doesn't) do, and why experience matters more than ever in a fast-paced, competitive real estate market.</p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">What Is a Mortgage Pre-Approval Really?</h2>
+    
+    <p class="mb-6 text-black leading-relaxed">A mortgage pre-approval generally includes two things:</p>
+    
+    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
+      <li><strong>A conditional approval</strong> based on the numbers provided by your broker or banker.</li>
+      <li><strong>A rate hold</strong> that locks in an interest rate (typically for 90–120 days), giving you time to shop with peace of mind.</li>
+    </ul>
+
+    <p class="mb-6 text-black leading-relaxed">But here's the issue: most lenders don't actually do a full review of your application until it becomes "live"—that is, until you've written an offer that's been accepted. Before that, they're mostly relying on the information submitted by your broker or banker, not what they've verified themselves.</p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Danger of a Sloppy Pre-Approval</h2>
+    
+    <p class="mb-6 text-black leading-relaxed">Because lenders are only reviewing estimated numbers initially, a pre-approval is always conditional. If anything doesn't add up when they finally double-check it, you could lose your approval—and possibly your home.</p>
+
+    <p class="mb-4 text-black leading-relaxed">Here are some common issues that can derail things during a live file review:</p>
+
+    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
+      <li>Your income was calculated incorrectly (especially for variable or self-employed income)</li>
+      <li>There's undisclosed debt (like student loans, car leases, or co-signed obligations)</li>
+      <li>Your down payment source wasn't verified properly</li>
+      <li>Something as simple as a missed document throws off the whole deal</li>
+    </ul>
+
+    <p class="mb-6 text-black leading-relaxed">This is why it's so critical to work with an experienced broker who knows how to present your file correctly the first time.</p>
+
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #1D2D44;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #1D2D44;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">Pro Tip</h3>
+      </div>
+      <p class="text-black">If your broker or banker didn't ask for full income documents, verify your credit, and analyze your debt load, you don't have a real pre-approval—you have a placeholder.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Rate Holds: What They Do and What They Don't</h2>
+    
+    <p class="mb-6 text-black leading-relaxed">Rate holds are helpful, no question. They give you a buffer against rising rates while you search for the right property. But even if you're holding a great rate, that doesn't guarantee your mortgage will go through when it counts.</p>
+
+    <p class="mb-6 text-black leading-relaxed">Lenders only commit to financing once they've verified everything. And even then, there's another major piece of the puzzle...</p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Your House Has to Qualify, Too</h2>
+    
+    <p class="mb-6 text-black leading-relaxed">This surprises a lot of buyers: just because you are approved, doesn't mean the home is. Lenders always assess the property you're buying, because they're investing in it with you. If something about the home makes them uncomfortable—like:</p>
+
+    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
+      <li>A poor inspection</li>
+      <li>A property in a high-risk location</li>
+      <li>Structural or zoning issues</li>
+      <li>A condo building with known financial concerns</li>
+    </ul>
+
+    <p class="mb-6 text-black leading-relaxed">...they can walk away. This doesn't mean your homeownership journey is over—but it does mean you need someone in your corner who can help pivot to another lender or solution quickly.</p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Why Experience Matters More Than Ever</h2>
+    
+    <p class="mb-4 text-black leading-relaxed">A pre-approval is only as good as the person behind it. An experienced mortgage broker will:</p>
+
+    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
+      <li>Fully underwrite your file upfront</li>
+      <li>Spot issues before the lender does</li>
+      <li>Explain what could cause problems down the line</li>
+      <li>Prepare you for the reality of lender and property review</li>
+    </ul>
+
+    <p class="mb-6 text-black leading-relaxed">This extra care can be the difference between closing confidently and scrambling under pressure.</p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Final Thoughts: Ask the Right Questions Before You Rely on That Pre-Approval</h2>
+    
+    <p class="mb-4 text-black leading-relaxed">Before you start house hunting, ask your mortgage expert:</p>
+
+    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
+      <li>Was my income fully reviewed and verified?</li>
+      <li>Did you check my credit?</li>
+      <li>Have you reviewed all debts and liabilities?</li>
+      <li>Is my file ready to go live?</li>
+    </ul>
+
+    <p class="mb-8 text-black leading-relaxed">If the answers are vague or rushed, it might be time for a second opinion.</p>
+
+    <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">Have Questions About How Strong Your Pre-Approval Really Is?</h3>
+        <p class="mb-6 opacity-90">Let's review your pre-approval together and make sure your mortgage strategy is solid from day one. Don't let a weak pre-approval cost you your dream home.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+            Free Pre-Approval Review
+          </a>
+          <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+            Get Pre-Approved Today
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+      <p class="text-sm text-black italic">
+        <strong>Disclaimer:</strong> This information is for educational purposes only and should not be considered financial advice. Mortgage pre-approval requirements and processes may vary by lender and individual circumstances. Always consult with a qualified mortgage professional for personalized advice.
+      </p>
+    </div>
+  `,
+      date: "January 2, 2025",
+      author: "Rob Bhullar",
+      category: "Pre-Approval Tips",
+      image: "stress-test-calculator.png",
+    },
+    
      "are-variable-rates-still-worth-it-2025": {
     title: "Are Variable Rates Still Worth It in 2025? It Depends…",
     excerpt:
