@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rob Bhullar - Mortgage Broker | Best Rates in BC",
+    title: "Rob Bhullar - Lincensed Mortgage Professional",
     description:
-      "Licensed mortgage broker in British Columbia. Get the best mortgage rates for home purchase, renewal, refinance.",
+      "Licensed Mortgage Professional in British Columbia",
   },
   robots: {
     index: true,
