@@ -47,21 +47,29 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
 
       const result = await response.json()
 
-      if (result.success) {
-        setSubmitStatus({
-          success: true,
-          message: result.message || "Thanks for reaching out — we’ll be in touch shortly.",
-        })
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          mortgageType: "",
-          propertyValue: "",
-          downPayment: "",
-          message: "",
-        })
-      } else {
+     if (result.success) {
+  // ✅ Fire Twitter Conversion Event
+  if (typeof window !== "undefined" && window.twq) {
+    window.twq("event", "tw-q3hms-q3hmu", {
+      email_address: formData.email,
+    })
+  }
+
+  setSubmitStatus({
+    success: true,
+    message: result.message || "Thanks for reaching out — we’ll be in touch shortly.",
+  })
+
+  setFormData({
+    name: "",
+    email: "",
+    phone: "",
+    mortgageType: "",
+    propertyValue: "",
+    downPayment: "",
+    message: "",
+  })
+} else {
         setSubmitStatus({
           success: false,
           message: result.error || "There was an error sending your message. Please try again or call me directly.",
