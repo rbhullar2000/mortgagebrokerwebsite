@@ -9,6 +9,18 @@ export const blogPosts = [
     featured: true,
     image: "retirement-home-equity.png",
   },
+   
+   {
+    title: "A Rate Hold Isn’t a Guarantee—And That Could Cost You the Home",
+    excerpt:
+      "Is Your Mortgage Pre-Approval Actually Useless? Here’s Why It Might Be",
+    date: "July 2, 2025",
+    category: "Pre-Approval Tips",
+    slug: "/blog/is-your-mortgage-pre-approval-useless",
+    featured: false,
+    image: "stress-test-calculator.png",
+  },
+  
   {
     title: "Are Variable Rates Still Worth It in 2025? It Depends…",
     excerpt:
