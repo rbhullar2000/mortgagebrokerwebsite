@@ -134,7 +134,7 @@ function getPostData() {
       </p>
     </div>
   `,
-      date: "January 2, 2025",
+      date: "July 2, 2025",
       author: "Rob Bhullar",
       category: "Pre-Approval Tips",
       image: "stress-test-calculator.png",
