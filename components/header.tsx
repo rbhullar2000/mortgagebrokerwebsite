@@ -21,6 +21,7 @@ export function Header() {
 
   return (
     <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+     <meta name="google-site-verification" content="cqAy-eSzzWV9m3qnmHpP9vTs8olcdSK9IR0LbQ2Zf0U" />
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
