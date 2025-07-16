@@ -9,8 +9,10 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
+import { Switch } from "@/components/ui/switch"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ContactForm } from "@/components/contact-form"
-import { Calculator, TrendingUp, DollarSign, Clock, AlertCircle, CheckCircle } from "lucide-react"
+import { Calculator, TrendingUp, DollarSign, Clock, AlertCircle, CheckCircle, Info, AlertTriangle } from "lucide-react"
 import Link from "next/link"
 
 interface CalculationResults {
@@ -22,15 +24,35 @@ interface CalculationResults {
   fiveYearSavings: number
   tenYearSavings: number
   isWorthwhile: boolean
+  currentTotalInterest: number
+  newTotalInterest: number
+  totalInterestSavings: number
+  netWorthBreakEvenMonths?: number
+  termExtensionWarning: boolean
+  cashOutNetSavings?: number
+  debtConsolidationSavings?: number
 }
 
 export default function BreakEvenCalculatorPageClient() {
+  // Basic inputs
   const [currentBalance, setCurrentBalance] = useState<string>("")
   const [currentRate, setCurrentRate] = useState<string>("")
   const [currentAmortization, setCurrentAmortization] = useState<string>("25")
   const [newRate, setNewRate] = useState<string>("")
   const [newAmortization, setNewAmortization] = useState<string>("25")
   const [closingCosts, setClosingCosts] = useState<string>("")
+
+  // Advanced options
+  const [excludePrepaidInterest, setExcludePrepaidInterest] = useState<boolean>(true)
+  const [prepaidInterest, setPrepaidInterest] = useState<string>("")
+  const [useNetWorthMethod, setUseNetWorthMethod] = useState<boolean>(false)
+  const [calculatorMode, setCalculatorMode] = useState<"refinance" | "cashout">("refinance")
+
+  // Cash-out specific inputs
+  const [cashOutAmount, setCashOutAmount] = useState<string>("")
+  const [debtToConsolidate, setDebtToConsolidate] = useState<string>("")
+  const [averageDebtRate, setAverageDebtRate] = useState<string>("15")
+
   const [results, setResults] = useState<CalculationResults | null>(null)
 
   const calculateMonthlyPayment = (principal: number, annualRate: number, amortizationYears: number): number => {
@@ -47,21 +69,116 @@ export default function BreakEvenCalculatorPageClient() {
     )
   }
 
+  const calculateTotalInterest = (principal: number, monthlyPayment: number, amortizationYears: number): number => {
+    return monthlyPayment * amortizationYears * 12 - principal
+  }
+
+  const calculateNetWorthBreakEven = (
+    currentBalance: number,
+    currentRate: number,
+    currentAmort: number,
+    newRate: number,
+    newAmort: number,
+    costs: number,
+  ): number => {
+    // Calculate principal paydown difference over time
+    const currentPayment = calculateMonthlyPayment(currentBalance, currentRate, currentAmort)
+    const newPayment = calculateMonthlyPayment(currentBalance, newRate, newAmort)
+
+    let cumulativeDifference = 0
+    let currentBalanceRemaining = currentBalance
+    let newBalanceRemaining = currentBalance
+
+    for (let month = 1; month <= 360; month++) {
+      // Current mortgage principal payment
+      const currentInterestPayment = (currentBalanceRemaining * currentRate) / 100 / 12
+      const currentPrincipalPayment = currentPayment - currentInterestPayment
+      currentBalanceRemaining -= currentPrincipalPayment
+
+      // New mortgage principal payment
+      const newInterestPayment = (newBalanceRemaining * newRate) / 100 / 12
+      const newPrincipalPayment = newPayment - newInterestPayment
+      newBalanceRemaining -= newPrincipalPayment
+
+      // Net worth difference (payment savings + principal difference)
+      const paymentSavings = currentPayment - newPayment
+      const principalDifference = currentPrincipalPayment - newPrincipalPayment
+      const monthlyNetWorthChange = paymentSavings + principalDifference
+
+      cumulativeDifference += monthlyNetWorthChange
+
+      if (cumulativeDifference >= costs) {
+        return month
+      }
+
+      if (currentBalanceRemaining <= 0 || newBalanceRemaining <= 0) break
+    }
+
+    return 0 // Never breaks even
+  }
+
   const calculateBreakEven = () => {
     const balance = Number.parseFloat(currentBalance)
     const currentRateNum = Number.parseFloat(currentRate)
     const newRateNum = Number.parseFloat(newRate)
     const currentAmortNum = Number.parseFloat(currentAmortization)
     const newAmortNum = Number.parseFloat(newAmortization)
-    const costs = Number.parseFloat(closingCosts)
+    let costs = Number.parseFloat(closingCosts)
+
+    // Handle prepaid interest
+    const prepaidAmount = Number.parseFloat(prepaidInterest) || 0
+    if (!excludePrepaidInterest && prepaidAmount > 0) {
+      costs += prepaidAmount
+    }
 
     if (!balance || !currentRateNum || !newRateNum || !costs) return
 
     const currentPayment = calculateMonthlyPayment(balance, currentRateNum, currentAmortNum)
-    const newPayment = calculateMonthlyPayment(balance, newRateNum, newAmortNum)
-    const savings = currentPayment - newPayment
+    let newBalance = balance
 
-    if (savings <= 0) {
+    // Handle cash-out refinancing
+    if (calculatorMode === "cashout") {
+      const cashOut = Number.parseFloat(cashOutAmount) || 0
+      newBalance = balance + cashOut
+    }
+
+    const newPayment = calculateMonthlyPayment(newBalance, newRateNum, newAmortNum)
+    let savings = currentPayment - newPayment
+
+    // Add debt consolidation savings
+    let debtSavings = 0
+    if (calculatorMode === "cashout" && debtToConsolidate) {
+      const debtAmount = Number.parseFloat(debtToConsolidate)
+      const debtRate = Number.parseFloat(averageDebtRate)
+      if (debtAmount && debtRate) {
+        const currentDebtPayment = (debtAmount * (debtRate / 100)) / 12 + debtAmount / 60 // Assume 5-year payoff
+        debtSavings = currentDebtPayment
+        savings += debtSavings
+      }
+    }
+
+    // Calculate total interest
+    const currentTotalInterest = calculateTotalInterest(balance, currentPayment, currentAmortNum)
+    const newTotalInterest = calculateTotalInterest(newBalance, newPayment, newAmortNum)
+    const totalInterestSavings = currentTotalInterest - newTotalInterest
+
+    // Check for term extension warning
+    const termExtensionWarning = newAmortNum > currentAmortNum
+
+    // Calculate net worth break-even if enabled
+    let netWorthBreakEvenMonths: number | undefined
+    if (useNetWorthMethod && calculatorMode === "refinance") {
+      netWorthBreakEvenMonths = calculateNetWorthBreakEven(
+        balance,
+        currentRateNum,
+        currentAmortNum,
+        newRateNum,
+        newAmortNum,
+        costs,
+      )
+    }
+
+    if (savings <= 0 && calculatorMode === "refinance") {
       setResults({
         currentMonthlyPayment: currentPayment,
         newMonthlyPayment: newPayment,
@@ -71,6 +188,12 @@ export default function BreakEvenCalculatorPageClient() {
         fiveYearSavings: savings * 60,
         tenYearSavings: savings * 120,
         isWorthwhile: false,
+        currentTotalInterest,
+        newTotalInterest,
+        totalInterestSavings,
+        netWorthBreakEvenMonths,
+        termExtensionWarning,
+        debtConsolidationSavings: debtSavings,
       })
       return
     }
@@ -86,7 +209,14 @@ export default function BreakEvenCalculatorPageClient() {
       breakEvenYears,
       fiveYearSavings: savings * 60 - costs,
       tenYearSavings: savings * 120 - costs,
-      isWorthwhile: breakEvenMonths <= 36, // Generally good if break-even is within 3 years
+      isWorthwhile: breakEvenMonths <= 36,
+      currentTotalInterest,
+      newTotalInterest,
+      totalInterestSavings,
+      netWorthBreakEvenMonths,
+      termExtensionWarning,
+      cashOutNetSavings: calculatorMode === "cashout" ? Number.parseFloat(cashOutAmount) || 0 : undefined,
+      debtConsolidationSavings: debtSavings,
     })
   }
 
@@ -94,7 +224,21 @@ export default function BreakEvenCalculatorPageClient() {
     if (currentBalance && currentRate && newRate && closingCosts) {
       calculateBreakEven()
     }
-  }, [currentBalance, currentRate, newRate, currentAmortization, newAmortization, closingCosts])
+  }, [
+    currentBalance,
+    currentRate,
+    newRate,
+    currentAmortization,
+    newAmortization,
+    closingCosts,
+    excludePrepaidInterest,
+    prepaidInterest,
+    useNetWorthMethod,
+    calculatorMode,
+    cashOutAmount,
+    debtToConsolidate,
+    averageDebtRate,
+  ])
 
   const formatCurrency = (amount: number): string => {
     return new Intl.NumberFormat("en-CA", {
@@ -114,6 +258,16 @@ export default function BreakEvenCalculatorPageClient() {
     }).format(amount)
   }
 
+  const getBreakEvenBadge = (months: number) => {
+    if (months <= 24) {
+      return <Badge className="bg-green-500 hover:bg-green-600">Excellent (&lt;=24 months)</Badge>
+    } else if (months <= 36) {
+      return <Badge className="bg-blue-500 hover:bg-blue-600">Good (&lt;=36 months)</Badge>
+    } else {
+      return <Badge className="bg-yellow-500 hover:bg-yellow-600">Long (&gt;36 months)</Badge>
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -127,10 +281,10 @@ export default function BreakEvenCalculatorPageClient() {
                 <Calculator className="h-12 w-12" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Mortgage Refinance Break-Even Calculator</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Advanced Mortgage Refinance Calculator</h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Determine if refinancing your mortgage makes financial sense. Calculate how long it will take to recover
-              your refinancing costs through monthly savings.
+              Professional-grade break-even analysis with advanced features including net worth calculations, cash-out
+              refinancing, and debt consolidation scenarios.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
@@ -139,11 +293,11 @@ export default function BreakEvenCalculatorPageClient() {
               </Badge>
               <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                 <TrendingUp className="h-4 w-4 mr-2" />
-                Long-Term Savings
+                Net Worth Method
               </Badge>
               <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
                 <DollarSign className="h-4 w-4 mr-2" />
-                Cost Comparison
+                Cash-Out Support
               </Badge>
             </div>
           </div>
@@ -165,47 +319,142 @@ export default function BreakEvenCalculatorPageClient() {
                   <CardDescription>Enter your current and proposed mortgage information</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  {/* Current Mortgage */}
-                  <div>
-                    <h3 className="font-semibold text-lg mb-4 text-[#032133]">Current Mortgage</h3>
-                    <div className="grid gap-4">
+                  {/* Calculator Mode Tabs */}
+                  <Tabs
+                    value={calculatorMode}
+                    onValueChange={(value) => setCalculatorMode(value as "refinance" | "cashout")}
+                  >
+                    <TabsList className="grid w-full grid-cols-2">
+                      <TabsTrigger value="refinance">Rate & Term Refinance</TabsTrigger>
+                      <TabsTrigger value="cashout">Cash-Out Refinance</TabsTrigger>
+                    </TabsList>
+
+                    <TabsContent value="refinance" className="space-y-6">
+                      {/* Current Mortgage */}
                       <div>
-                        <Label htmlFor="currentBalance">Outstanding Balance</Label>
-                        <Input
-                          id="currentBalance"
-                          type="number"
-                          placeholder="500000"
-                          value={currentBalance}
-                          onChange={(e) => setCurrentBalance(e.target.value)}
-                        />
+                        <h3 className="font-semibold text-lg mb-4 text-[#032133]">Current Mortgage</h3>
+                        <div className="grid gap-4">
+                          <div>
+                            <Label htmlFor="currentBalance">Outstanding Balance</Label>
+                            <Input
+                              id="currentBalance"
+                              type="number"
+                              placeholder="500000"
+                              value={currentBalance}
+                              onChange={(e) => setCurrentBalance(e.target.value)}
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="currentRate">Current Interest Rate (%)</Label>
+                            <Input
+                              id="currentRate"
+                              type="number"
+                              step="0.01"
+                              placeholder="5.25"
+                              value={currentRate}
+                              onChange={(e) => setCurrentRate(e.target.value)}
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="currentAmortization">Remaining Amortization (years)</Label>
+                            <Input
+                              id="currentAmortization"
+                              type="number"
+                              placeholder="25"
+                              value={currentAmortization}
+                              onChange={(e) => setCurrentAmortization(e.target.value)}
+                            />
+                          </div>
+                        </div>
                       </div>
+                    </TabsContent>
+
+                    <TabsContent value="cashout" className="space-y-6">
+                      {/* Current Mortgage for Cash-Out */}
                       <div>
-                        <Label htmlFor="currentRate">Current Interest Rate (%)</Label>
-                        <Input
-                          id="currentRate"
-                          type="number"
-                          step="0.01"
-                          placeholder="5.25"
-                          value={currentRate}
-                          onChange={(e) => setCurrentRate(e.target.value)}
-                        />
+                        <h3 className="font-semibold text-lg mb-4 text-[#032133]">Current Mortgage</h3>
+                        <div className="grid gap-4">
+                          <div>
+                            <Label htmlFor="currentBalance">Outstanding Balance</Label>
+                            <Input
+                              id="currentBalance"
+                              type="number"
+                              placeholder="500000"
+                              value={currentBalance}
+                              onChange={(e) => setCurrentBalance(e.target.value)}
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="currentRate">Current Interest Rate (%)</Label>
+                            <Input
+                              id="currentRate"
+                              type="number"
+                              step="0.01"
+                              placeholder="5.25"
+                              value={currentRate}
+                              onChange={(e) => setCurrentRate(e.target.value)}
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="currentAmortization">Remaining Amortization (years)</Label>
+                            <Input
+                              id="currentAmortization"
+                              type="number"
+                              placeholder="25"
+                              value={currentAmortization}
+                              onChange={(e) => setCurrentAmortization(e.target.value)}
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="cashOutAmount">Cash-Out Amount</Label>
+                            <Input
+                              id="cashOutAmount"
+                              type="number"
+                              placeholder="50000"
+                              value={cashOutAmount}
+                              onChange={(e) => setCashOutAmount(e.target.value)}
+                            />
+                            <p className="text-sm text-gray-600 mt-1">Additional funds you want to borrow</p>
+                          </div>
+                        </div>
                       </div>
+
+                      {/* Debt Consolidation */}
                       <div>
-                        <Label htmlFor="currentAmortization">Remaining Amortization (years)</Label>
-                        <Input
-                          id="currentAmortization"
-                          type="number"
-                          placeholder="25"
-                          value={currentAmortization}
-                          onChange={(e) => setCurrentAmortization(e.target.value)}
-                        />
+                        <h3 className="font-semibold text-lg mb-4 text-[#032133]">Debt Consolidation (Optional)</h3>
+                        <div className="grid gap-4">
+                          <div>
+                            <Label htmlFor="debtToConsolidate">High-Interest Debt to Pay Off</Label>
+                            <Input
+                              id="debtToConsolidate"
+                              type="number"
+                              placeholder="25000"
+                              value={debtToConsolidate}
+                              onChange={(e) => setDebtToConsolidate(e.target.value)}
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="averageDebtRate">Average Interest Rate on Debt (%)</Label>
+                            <Input
+                              id="averageDebtRate"
+                              type="number"
+                              step="0.01"
+                              placeholder="15"
+                              value={averageDebtRate}
+                              onChange={(e) => setAverageDebtRate(e.target.value)}
+                            />
+                            <p className="text-sm text-gray-600 mt-1">
+                              Credit cards typically 15-25%, personal loans 8-15%
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    </TabsContent>
+                  </Tabs>
 
                   <Separator />
 
-                  {/* New Mortgage */}
+                  {/* New Mortgage Terms */}
                   <div>
                     <h3 className="font-semibold text-lg mb-4 text-[#032133]">New Mortgage Terms</h3>
                     <div className="grid gap-4">
@@ -230,6 +479,15 @@ export default function BreakEvenCalculatorPageClient() {
                           onChange={(e) => setNewAmortization(e.target.value)}
                         />
                       </div>
+                    </div>
+                  </div>
+
+                  <Separator />
+
+                  {/* Refinancing Costs */}
+                  <div>
+                    <h3 className="font-semibold text-lg mb-4 text-[#032133]">Refinancing Costs</h3>
+                    <div className="grid gap-4">
                       <div>
                         <Label htmlFor="closingCosts">Total Refinancing Costs</Label>
                         <Input
@@ -239,10 +497,76 @@ export default function BreakEvenCalculatorPageClient() {
                           value={closingCosts}
                           onChange={(e) => setClosingCosts(e.target.value)}
                         />
-                        <p className="text-sm text-gray-600 mt-1">
-                          Include legal fees, appraisal, discharge fees, etc.
-                        </p>
+                        <p className="text-sm text-gray-600 mt-1">Legal fees, appraisal, discharge fees, etc.</p>
                       </div>
+
+                      {/* Prepaid Interest Control */}
+                      <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex items-center gap-2">
+                            <Info className="h-4 w-4 text-blue-600" />
+                            <Label htmlFor="excludePrepaidInterest" className="font-medium text-blue-800">
+                              Exclude Prepaid Interest from Break-Even
+                            </Label>
+                          </div>
+                          <Switch
+                            id="excludePrepaidInterest"
+                            checked={excludePrepaidInterest}
+                            onCheckedChange={setExcludePrepaidInterest}
+                          />
+                        </div>
+                        <p className="text-sm text-blue-700 mb-3">
+                          {excludePrepaidInterest ? (
+                            <span className="flex items-center gap-1">
+                              <CheckCircle className="h-4 w-4" />
+                              Recommended: Prepaid interest is part of regular payments, not a true closing cost
+                            </span>
+                          ) : (
+                            <span className="flex items-center gap-1">
+                              <AlertTriangle className="h-4 w-4" />
+                              Warning: Including prepaid interest may overstate your break-even time
+                            </span>
+                          )}
+                        </p>
+                        {!excludePrepaidInterest && (
+                          <div>
+                            <Label htmlFor="prepaidInterest">Prepaid Interest Amount</Label>
+                            <Input
+                              id="prepaidInterest"
+                              type="number"
+                              placeholder="1500"
+                              value={prepaidInterest}
+                              onChange={(e) => setPrepaidInterest(e.target.value)}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <Separator />
+
+                  {/* Advanced Options */}
+                  <div>
+                    <h3 className="font-semibold text-lg mb-4 text-[#032133]">Advanced Analysis</h3>
+                    <div className="space-y-4">
+                      {calculatorMode === "refinance" && (
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <Label htmlFor="useNetWorthMethod" className="font-medium">
+                              Use Net Worth Method
+                            </Label>
+                            <p className="text-sm text-gray-600">
+                              Factors in principal paydown differences for more accurate analysis
+                            </p>
+                          </div>
+                          <Switch
+                            id="useNetWorthMethod"
+                            checked={useNetWorthMethod}
+                            onCheckedChange={setUseNetWorthMethod}
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </CardContent>
@@ -255,11 +579,32 @@ export default function BreakEvenCalculatorPageClient() {
                     <TrendingUp className="h-5 w-5" />
                     Break-Even Analysis
                   </CardTitle>
-                  <CardDescription>Your refinancing break-even calculation</CardDescription>
+                  <CardDescription>
+                    {calculatorMode === "refinance"
+                      ? "Your refinancing break-even calculation"
+                      : "Your cash-out refinancing analysis"}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   {results ? (
                     <div className="space-y-6">
+                      {/* Term Extension Warning */}
+                      {results.termExtensionWarning && (
+                        <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <div className="flex items-start gap-3">
+                            <AlertTriangle className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
+                            <div>
+                              <p className="font-semibold text-yellow-800">Term Extension Notice</p>
+                              <p className="text-sm text-yellow-700 mt-1">
+                                Your new mortgage term is longer than your remaining term. While this reduces monthly
+                                payments, you'll pay {formatCurrency(Math.abs(results.totalInterestSavings))} more in
+                                total interest over the life of the loan.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
                       {/* Payment Comparison */}
                       <div className="grid grid-cols-2 gap-4">
                         <div className="text-center p-4 bg-red-50 rounded-lg">
@@ -278,18 +623,35 @@ export default function BreakEvenCalculatorPageClient() {
 
                       {/* Monthly Savings */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
-                        <p className="text-sm text-gray-600 mb-1">Monthly Savings</p>
+                        <p className="text-sm text-gray-600 mb-1">
+                          Monthly Savings
+                          {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
+                            <span className="text-xs text-blue-600 block">
+                              (Includes {formatDecimal(results.debtConsolidationSavings)} debt savings)
+                            </span>
+                          )}
+                        </p>
                         <p className="text-3xl font-bold text-blue-600">
                           {results.monthlySavings > 0
                             ? formatDecimal(results.monthlySavings)
                             : formatDecimal(Math.abs(results.monthlySavings))}
                         </p>
-                        {results.monthlySavings <= 0 && (
+                        {results.monthlySavings <= 0 && calculatorMode === "refinance" && (
                           <p className="text-sm text-red-600 mt-1">Higher monthly payment</p>
                         )}
                       </div>
 
-                      {results.monthlySavings > 0 ? (
+                      {/* Cash-Out Information */}
+                      {calculatorMode === "cashout" && results.cashOutNetSavings && (
+                        <div className="text-center p-4 bg-purple-50 rounded-lg">
+                          <p className="text-sm text-gray-600 mb-1">Cash Received</p>
+                          <p className="text-2xl font-bold text-purple-600">
+                            {formatCurrency(results.cashOutNetSavings)}
+                          </p>
+                        </div>
+                      )}
+
+                      {results.monthlySavings > 0 || calculatorMode === "cashout" ? (
                         <>
                           {/* Break-Even Point */}
                           <div className="text-center p-6 bg-gradient-to-r from-[#032133] to-[#064a5c] text-white rounded-lg">
@@ -299,18 +661,27 @@ export default function BreakEvenCalculatorPageClient() {
                               ) : (
                                 <AlertCircle className="h-6 w-6 text-yellow-400 mr-2" />
                               )}
-                              <p className="text-lg font-semibold">Break-Even Point</p>
+                              <p className="text-lg font-semibold">
+                                {excludePrepaidInterest
+                                  ? "Break-Even Point (Excluding Prepaid Interest)"
+                                  : "Break-Even Point (Including Prepaid Interest)"}
+                              </p>
                             </div>
                             <p className="text-3xl font-bold mb-2">{Math.round(results.breakEvenMonths)} months</p>
                             <p className="text-lg opacity-90">({results.breakEvenYears.toFixed(1)} years)</p>
-                            <div className="mt-4">
-                              {results.isWorthwhile ? (
-                                <Badge className="bg-green-500 hover:bg-green-600">Recommended</Badge>
-                              ) : (
-                                <Badge className="bg-yellow-500 hover:bg-yellow-600">Consider Carefully</Badge>
-                              )}
-                            </div>
+                            <div className="mt-4">{getBreakEvenBadge(results.breakEvenMonths)}</div>
                           </div>
+
+                          {/* Net Worth Break-Even */}
+                          {useNetWorthMethod && results.netWorthBreakEvenMonths && (
+                            <div className="text-center p-4 bg-indigo-50 rounded-lg border border-indigo-200">
+                              <p className="text-sm text-gray-600 mb-1">Net Worth Break-Even</p>
+                              <p className="text-2xl font-bold text-indigo-600">
+                                {Math.round(results.netWorthBreakEvenMonths)} months
+                              </p>
+                              <p className="text-sm text-indigo-700 mt-1">Accounts for principal paydown differences</p>
+                            </div>
+                          )}
 
                           {/* Long-term Savings */}
                           <div className="grid grid-cols-2 gap-4">
@@ -324,6 +695,22 @@ export default function BreakEvenCalculatorPageClient() {
                               <p className="text-sm text-gray-600 mb-1">10-Year Net Savings</p>
                               <p className="text-xl font-bold text-[#032133]">
                                 {formatCurrency(results.tenYearSavings)}
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Total Interest Comparison */}
+                          <div className="grid grid-cols-2 gap-4">
+                            <div className="text-center p-4 bg-red-50 rounded-lg">
+                              <p className="text-sm text-gray-600 mb-1">Current Total Interest</p>
+                              <p className="text-lg font-bold text-red-600">
+                                {formatCurrency(results.currentTotalInterest)}
+                              </p>
+                            </div>
+                            <div className="text-center p-4 bg-green-50 rounded-lg">
+                              <p className="text-sm text-gray-600 mb-1">New Total Interest</p>
+                              <p className="text-lg font-bold text-green-600">
+                                {formatCurrency(results.newTotalInterest)}
                               </p>
                             </div>
                           </div>
@@ -388,26 +775,45 @@ export default function BreakEvenCalculatorPageClient() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#032133] mb-4">Understanding Mortgage Refinancing Break-Even</h2>
-              <p className="text-lg text-gray-600">Make informed decisions about refinancing your mortgage</p>
+              <h2 className="text-3xl font-bold text-[#032133] mb-4">Advanced Refinancing Analysis</h2>
+              <p className="text-lg text-gray-600">Professional-grade tools for informed refinancing decisions</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-[#032133]" />
-                    What is Break-Even?
+                    <Info className="h-5 w-5 text-[#032133]" />
+                    Prepaid Interest
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
-                    The break-even point is how long it takes for your monthly savings to equal the total cost of
-                    refinancing.
+                    Prepaid interest is the interest you pay from your closing date to the end of that month. It's not a
+                    true closing cost since you'd pay this interest anyway.
                   </p>
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <p className="font-semibold text-[#032133] mb-2">Formula:</p>
-                    <p className="text-sm text-gray-600">Break-Even = Total Refinancing Costs ÷ Monthly Savings</p>
+                  <div className="bg-blue-50 p-3 rounded-lg">
+                    <p className="text-sm font-semibold text-blue-800">Best Practice:</p>
+                    <p className="text-sm text-blue-700">Exclude from break-even calculations for accuracy</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <TrendingUp className="h-5 w-5 text-[#032133]" />
+                    Net Worth Method
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 mb-4">
+                    Advanced analysis that considers how different amortization periods affect your principal paydown
+                    and overall net worth over time.
+                  </p>
+                  <div className="bg-green-50 p-3 rounded-lg">
+                    <p className="text-sm font-semibold text-green-800">When to Use:</p>
+                    <p className="text-sm text-green-700">Extending your mortgage term or investment properties</p>
                   </div>
                 </CardContent>
               </Card>
@@ -416,39 +822,25 @@ export default function BreakEvenCalculatorPageClient() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <DollarSign className="h-5 w-5 text-[#032133]" />
-                    Typical Refinancing Costs
+                    Cash-Out Benefits
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex justify-between">
-                      <span>Legal fees</span>
-                      <span>$1,000 - $2,000</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Appraisal</span>
-                      <span>$300 - $500</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Discharge fees</span>
-                      <span>$300 - $400</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Title insurance</span>
-                      <span>$200 - $400</span>
-                    </li>
-                    <li className="flex justify-between font-semibold text-[#032133] border-t pt-2">
-                      <span>Total typical range</span>
-                      <span>$2,000 - $4,000</span>
-                    </li>
-                  </ul>
+                  <p className="text-gray-600 mb-4">
+                    Cash-out refinancing can provide funds for home improvements, debt consolidation, or investments
+                    while potentially lowering your overall borrowing costs.
+                  </p>
+                  <div className="bg-purple-50 p-3 rounded-lg">
+                    <p className="text-sm font-semibold text-purple-800">Key Advantage:</p>
+                    <p className="text-sm text-purple-700">Replace high-interest debt with low-rate mortgage debt</p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
 
             <Card className="mb-12">
               <CardHeader>
-                <CardTitle>Rules of Thumb for Refinancing</CardTitle>
+                <CardTitle>Break-Even Timeline Guidelines</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -456,24 +848,22 @@ export default function BreakEvenCalculatorPageClient() {
                     <div className="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="h-8 w-8 text-green-600" />
                     </div>
-                    <h3 className="font-semibold text-[#032133] mb-2">Good to Refinance</h3>
-                    <p className="text-sm text-gray-600">
-                      Break-even within 2-3 years and you plan to stay in your home longer
-                    </p>
+                    <h3 className="font-semibold text-[#032133] mb-2">Excellent (&lt;=24 months)</h3>
+                    <p className="text-sm text-gray-600">Strong refinancing opportunity with quick payback period</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Clock className="h-8 w-8 text-blue-600" />
+                    </div>
+                    <h3 className="font-semibold text-[#032133] mb-2">Good (&lt;=36 months)</h3>
+                    <p className="text-sm text-gray-600">Generally favorable if you plan to stay in your home</p>
                   </div>
                   <div className="text-center">
                     <div className="bg-yellow-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                       <AlertCircle className="h-8 w-8 text-yellow-600" />
                     </div>
-                    <h3 className="font-semibold text-[#032133] mb-2">Consider Carefully</h3>
-                    <p className="text-sm text-gray-600">Break-even 3-5 years - depends on your long-term plans</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-red-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <AlertCircle className="h-8 w-8 text-red-600" />
-                    </div>
-                    <h3 className="font-semibold text-[#032133] mb-2">Probably Not Worth It</h3>
-                    <p className="text-sm text-gray-600">Break-even over 5 years or minimal monthly savings</p>
+                    <h3 className="font-semibold text-[#032133] mb-2">Long (&gt;36 months)</h3>
+                    <p className="text-sm text-gray-600">Consider carefully based on your long-term plans</p>
                   </div>
                 </div>
               </CardContent>
@@ -489,7 +879,7 @@ export default function BreakEvenCalculatorPageClient() {
             <h2 className="text-3xl font-bold mb-6">Ready to Explore Refinancing Options?</h2>
             <p className="text-xl text-blue-100 mb-8">
               Get personalized advice from our mortgage experts. We'll help you find the best refinancing solution for
-              your situation.
+              your situation with professional-grade analysis.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
