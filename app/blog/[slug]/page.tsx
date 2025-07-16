@@ -15,21 +15,20 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 function getPostData() {
   return {
 
-    "5-questions-to-ask-your-mortgage-broker": {
-      title: "5 Questions to Ask Your Mortgage Broker in Canada",
-      excerpt:
-        "Shopping for your first mortgage doesn't have to be confusing. Learn the five essential questions that will help you navigate your first home purchase with confidence and avoid hidden surprises.",
-      content: `
-        <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
-          <div class="flex items-center mb-3">
-            <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <h3 class="text-lg font-semibold" style="color: #1D2D44;">Essential Questions for First-Time Buyers</h3>
-          </div>
-          <p class="text-black">Shopping for your first mortgage can feel like a big step, but it doesn't have to be confusing. As someone who's helped many young Canadians navigate their first home purchase, I've found that asking a few key questions up front keeps everything clear and stress-free.</p>
-        </div>
-
+   "5-questions-to-ask-your-mortgage-broker": {
+  title: "5 Questions to Ask Your Mortgage Broker in Canada",
+  excerpt:
+    "Shopping for your first mortgage doesn't have to be confusing. Learn the five essential questions that will help you navigate your first home purchase with confidence and avoid hidden surprises.",
+  content: `
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">Essential Questions for First-Time Buyers</h3>
+      </div>
+      <p class="text-black">Shopping for your first mortgage can feel like a big step, but it doesn't have to be confusing. As someone who's helped many young Canadians navigate their first home purchase, I've found that asking a few key questions up front keeps everything clear and stress-free.</p>
+    </div>
         <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">1. Which Mortgage Type Fits Your Plans?</h2>
         
         <p class="mb-6 text-black leading-relaxed">Every mortgage falls into one of three categories: fixed rate, variable rate, or a combination of the two.</p>
