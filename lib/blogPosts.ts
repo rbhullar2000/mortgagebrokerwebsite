@@ -1,14 +1,14 @@
 export const blogPosts = [
-  {/*  {
-    title: "5 Questions to Ask Your Mortgage Broker in Canada",
-    excerpt:
-      "Shopping for your first mortgage doesn't have to be confusing. Learn the five essential questions that will help you navigate your first home purchase with confidence and avoid hidden surprises.",
-    date: "July 15, 2025",
-    category: "First-Time Buyers",
-    slug: "/blog/5-questions-to-ask-your-mortgage-broker",
-    featured: false,
-    image: "first-time-homebuyer-family.png",
-  },  */}
+  //  {
+  //  title: "5 Questions to Ask Your Mortgage Broker in Canada",
+  //  excerpt:
+  //    "Shopping for your first mortgage doesn't have to be confusing. Learn the five essential questions that will help you navigate your first home purchase with confidence and avoid hidden surprises.",
+  //  date: "July 15, 2025",
+  //  category: "First-Time Buyers",
+  //  slug: "/blog/5-questions-to-ask-your-mortgage-broker",
+  //  featured: false,
+  //  image: "first-time-homebuyer-family.png",
+  //},  
   {
     title: "Retirement Planning: Unlocking Your Home's Equity",
     excerpt:
