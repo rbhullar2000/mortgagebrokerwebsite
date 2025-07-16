@@ -15,6 +15,178 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 function getPostData() {
   return {
 
+    "5-questions-to-ask-your-mortgage-broker": {
+      title: "5 Questions to Ask Your Mortgage Broker in Canada",
+      excerpt:
+        "Shopping for your first mortgage doesn't have to be confusing. Learn the five essential questions that will help you navigate your first home purchase with confidence and avoid hidden surprises.",
+      content: `
+        <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+          <div class="flex items-center mb-3">
+            <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3 class="text-lg font-semibold" style="color: #1D2D44;">Essential Questions for First-Time Buyers</h3>
+          </div>
+          <p class="text-black">Shopping for your first mortgage can feel like a big step, but it doesn't have to be confusing. As someone who's helped many young Canadians navigate their first home purchase, I've found that asking a few key questions up front keeps everything clear and stress-free.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">1. Which Mortgage Type Fits Your Plans?</h2>
+        
+        <p class="mb-6 text-black leading-relaxed">Every mortgage falls into one of three categories: fixed rate, variable rate, or a combination of the two.</p>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+            <h3 class="font-semibold mb-3" style="color: #1D2D44;">Fixed Rate</h3>
+            <p class="text-black text-sm">Keeps your interest and payments the same for the entire term, which makes budgeting simple.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+            <h3 class="font-semibold mb-3" style="color: #1D2D44;">Variable Rate</h3>
+            <p class="text-black text-sm">Often starts lower but can rise or fall as the Bank of Canada adjusts its key rate.</p>
+          </div>
+          <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+            <h3 class="font-semibold mb-3" style="color: #1D2D44;">Combination</h3>
+            <p class="text-black text-sm">Lets you split part of your loan at a fixed rate and part at a variable rate.</p>
+          </div>
+        </div>
+
+        <p class="mb-8 text-black leading-relaxed">Think about how long you plan to stay in your home and how comfortable you are with possible rate changes.</p>
+
+        <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">2. What's the Total Cost? Posted Rate versus APR</h2>
+        
+        <p class="mb-6 text-black leading-relaxed">Banks and brokers often advertise their discounted rate front and center, but that's not the whole story.</p>
+
+        <div class="p-6 rounded-lg mb-8" style="background-color: #F4F6F8;">
+          <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Understanding Rate Types</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #1D2D44;">1</div>
+              <div>
+                <div class="font-medium text-black">Posted Rate</div>
+                <div class="text-sm text-black">The lender's list or standard rate before any discount is applied</div>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #1D2D44;">2</div>
+              <div>
+                <div class="font-medium text-black">Discounted Rate</div>
+                <div class="text-sm text-black">What you actually pay each month</div>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #D4AF37;">3</div>
+              <div>
+                <div class="font-medium text-black">Annual Percentage Rate (APR)</div>
+                <div class="text-sm text-black">Reflects the true cost over the term by including most lender fees such as application or administration charges</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg mb-8 border-l-4" style="border-left-color: #D4AF37;">
+          <p class="text-black"><strong style="color: #1D2D44;">Pro Tip:</strong> Comparing APRs across lenders gives you a clear picture of which offer really costs you the least in the long run.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">3. Which Fees and Penalties Should You Expect?</h2>
+        
+        <p class="mb-6 text-black leading-relaxed">Beyond interest there are a variety of fees that can catch you off guard if you're not prepared.</p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+            <h3 class="font-semibold mb-3" style="color: #1D2D44;">Upfront Fees</h3>
+            <ul class="space-y-2 text-black">
+              <li>• Application fees</li>
+              <li>• Appraisal and legal fees</li>
+              <li>• Property transfer taxes</li>
+              <li>• Title insurance</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+            <h3 class="font-semibold mb-3" style="color: #1D2D44;">Potential Penalties</h3>
+            <ul class="space-y-2 text-black">
+              <li>• Early mortgage break penalties</li>
+              <li>• Prepayment limit excess charges</li>
+              <li>• Discharge fees when switching</li>
+              <li>• Administration fees</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mb-8 text-black leading-relaxed">Ask your broker for a written fee schedule so you know exactly what you'll owe, both now and if you need to make changes later.</p>
+
+        <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">4. How Much Can You Actually Afford? Stress Test and Ratios</h2>
+        
+        <p class="mb-6 text-black leading-relaxed">Lenders use a "stress test" to ensure you could handle higher interest rates in the future. They also look at two key ratios:</p>
+
+        <div class="space-y-6 mb-8">
+          <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+            <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Gross Debt Service (GDS) Ratio</h3>
+            <p class="text-black mb-3">Compares your housing costs to your income</p>
+            <div class="text-sm text-black">
+              <strong>Formula:</strong> (Monthly Housing Costs ÷ Monthly Income) × 100<br>
+              <strong>Limit:</strong> Generally should not exceed 32%
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+            <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Total Debt Service (TDS) Ratio</h3>
+            <p class="text-black mb-3">Compares all your debts to your income</p>
+            <div class="text-sm text-black">
+              <strong>Formula:</strong> (All Monthly Debt Payments ÷ Monthly Income) × 100<br>
+              <strong>Limit:</strong> Generally should not exceed 40%
+            </div>
+          </div>
+        </div>
+
+        <p class="mb-8 text-black leading-relaxed">By running your numbers through these measures your broker can tell you the maximum mortgage you qualify for and suggest a payment that keeps you comfortable. This way you won't feel stretched too thin if interest rates rise or unexpected expenses pop up.</p>
+
+        <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">5. How Flexible Are Your Prepayment Options?</h2>
+        
+        <p class="mb-6 text-black leading-relaxed">If you come into extra cash—perhaps from a bonus, gift, or savings—you'll want to use it to pay down your mortgage faster.</p>
+
+        <div class="p-6 rounded-lg mb-8" style="background-color: #F4F6F8;">
+          <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Typical Prepayment Options</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-2" style="color: #1D2D44;">Annual Lump Sum</h4>
+              <p class="text-black text-sm">Usually 10-20% of your original mortgage amount per year</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold mb-2" style="color: #1D2D44;">Payment Increases</h4>
+              <p class="text-black text-sm">Increase regular payments by a set percentage (often 10-20%)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg mb-8 border-l-4" style="border-left-color: #D4AF37;">
+          <p class="text-black"><strong style="color: #1D2D44;">Important:</strong> Exceeding these limits can trigger a penalty based on the lender's posted rate. Ask for all prepayment details so you can plan a five- or ten-year strategy to reduce your interest costs and own your home sooner.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Next Steps</h2>
+        
+        <p class="mb-8 text-black leading-relaxed">By covering these five areas with your mortgage broker or lender you'll gain confidence, avoid hidden fees, and choose the best mortgage for your needs. Ready to get personalized advice and step into homeownership?</p>
+
+        <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-4">Ready to Get Personalized Advice?</h3>
+            <p class="mb-6 opacity-90">Let's find the right mortgage to fit your life. I'll walk you through each of these questions and help you make an informed decision with confidence.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:778-889-7964" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+                Call 778-889-7964
+              </a>
+              <a href="mailto:contact@bcmortgageteam.com" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+                Email Us
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+          <p class="text-sm text-black italic">
+            <strong>Disclaimer:</strong> This information is for educational purposes only and should not be considered financial advice. Mortgage terms, rates, and qualification requirements may vary by lender and individual circumstances. Always consult with a qualified mortgage professional for personalized advice.
+          </p>
+        </div>
+      `,
+    
     "is-your-mortgage-pre-approval-useless": {
       title: "Is Your Mortgage Pre-Approval Actually Useless? Here's Why It Might Be",
       excerpt:
