@@ -9,6 +9,18 @@ export const blogPosts = [
   //  featured: false,
   //  image: "first-time-homebuyer-family.png",
   //},  
+   {
+    title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
+    excerpt:
+      "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
+    date: "July 19, 2025",
+    category: "Interest Rates",
+    slug: "/blog/july-2025-interest-rate-update",
+    featured: false,
+    image: "bank-of-canada-building.png",
+  },
+  
+  
   {
     title: "Retirement Planning: Unlocking Your Home's Equity",
     excerpt:
