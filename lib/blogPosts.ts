@@ -17,7 +17,7 @@ export const blogPosts = [
     category: "Interest Rates",
     slug: "/blog/july-2025-interest-rate-update",
     featured: false,
-    image: "july2025update.png",
+    image: "July2025update.png",
   },
   
   
