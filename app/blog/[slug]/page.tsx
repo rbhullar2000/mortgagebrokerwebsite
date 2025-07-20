@@ -15,6 +15,195 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 function getPostData() {
   return {
 
+     "july-2025-interest-rate-update": {
+      title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
+      excerpt:
+        "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
+      content: `
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">Mid-Year Rate Update</h3>
+      </div>
+      <p class="text-black">As we move through the heart of summer, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions and market expectations for the remainder of 2025. Whether you're a current homeowner, prospective buyer, or thinking of refinancing, understanding the current rate environment is key to making confident financial decisions.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bank of Canada Holds Steady – But Signals More Cuts Ahead</h2>
+    
+    <p class="mb-6 text-black leading-relaxed">On July 10, 2025, the Bank of Canada (BoC) once again held its overnight rate at <strong>4.75%</strong>, following its initial cut in June. The central bank emphasized that while inflation has cooled from its 2022 and 2023 peaks, it remains cautious due to persistent shelter and service costs.</p>
+
+    <p class="mb-8 text-black leading-relaxed">However, markets and economists are increasingly confident that another rate cut could come as early as September, especially if inflation continues its gradual decline toward the BoC's 2% target.</p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Current Mortgage Rate Trends (as of July 19, 2025)</h2>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Fixed Rates</h3>
+        <p class="text-black mb-3">Fixed mortgage rates have stabilized in the low-to-mid 5% range for most 5-year terms, with some lenders offering promotional rates under 5% for insured or low-LTV deals.</p>
+        <div class="space-y-2">
+          <div class="flex justify-between">
+            <span class="text-black">5-Year Fixed</span>
+            <span class="font-bold" style="color: #1D2D44;">4.89% - 5.19%</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-black">3-Year Fixed</span>
+            <span class="font-bold" style="color: #1D2D44;">4.79% - 5.09%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Variable Rates</h3>
+        <p class="text-black mb-3">Variable mortgage rates remain in the 6.00–6.20% range for prime-based products, depending on the discount offered by your lender.</p>
+        <div class="space-y-2">
+          <div class="flex justify-between">
+            <span class="text-black">Prime - 0.50%</span>
+            <span class="font-bold" style="color: #D4AF37;">6.00%</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-black">Prime - 0.25%</span>
+            <span class="font-bold" style="color: #D4AF37;">6.25%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">HELOCs & Other</h3>
+        <p class="text-black mb-3">Rates on home equity lines of credit (HELOCs) are tied to prime. Expect potential relief later this year if rate cuts continue.</p>
+        <div class="space-y-2">
+          <div class="flex justify-between">
+            <span class="text-black">HELOC</span>
+            <span class="font-bold" style="color: #1D2D44;">7.20% - 7.45%</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-black">Reverse Mortgage</span>
+            <span class="font-bold" style="color: #1D2D44;">7.50% - 8.25%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">What This Means for Borrowers</h2>
+
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 10H4L5 9z"></path>
+          </svg>
+          1. New Buyers
+        </h3>
+        <p class="text-black mb-3">This is still a higher-rate environment compared to the ultra-low rates of 2020–2021, but affordability is improving gradually.</p>
+        <ul class="space-y-2 text-black">
+          <li>• Consider getting pre-approved to hold today's rate while watching for further drops</li>
+          <li>• Enhanced first-time buyer programs are available to help with affordability</li>
+          <li>• Market conditions are more balanced, giving buyers more negotiating power</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+          2. Renewals
+        </h3>
+        <p class="text-black mb-3">Many homeowners renewing in 2025 are facing rate shock compared to their previous terms. Consider:</p>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Shorter-term fixed products</strong> (1–3 years) to wait out the rate cycle</li>
+          <li>• <strong>Variable rates</strong> if you believe the BoC will continue cutting through 2025–2026</li>
+          <li>• <strong>Shopping around</strong> - lenders are competing more aggressively</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+          </svg>
+          3. Refinancing
+        </h3>
+        <p class="text-black mb-3">The key question is "Does refinancing make sense now?"</p>
+        <ul class="space-y-2 text-black">
+          <li>• Use our <a href="/break-even-calculator" class="underline hover:opacity-80" style="color: #1D2D44;">Break-Even Calculator</a> to compare your current mortgage with new offerings</li>
+          <li>• Assess if it's worth paying a penalty to lock in savings</li>
+          <li>• Consider your timeline and future plans</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+          4. Investors
+        </h3>
+        <p class="text-black mb-3">Cap rates and borrowing costs remain tightly linked. Key considerations:</p>
+        <ul class="space-y-2 text-black">
+          <li>• Analyze your cash flow carefully in this rate environment</li>
+          <li>• Remember that mortgage interest on rental properties is tax-deductible</li>
+          <li>• Consider the timing of acquisitions with potential rate cuts ahead</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Looking Ahead: What to Watch for in Q3</h2>
+
+    <div class="p-6 rounded-lg mb-8" style="background-color: #F4F6F8;">
+      <p class="text-black mb-4">The next Bank of Canada rate announcement is <strong>September 4, 2025</strong>. Most analysts now forecast a 25-basis point cut at that meeting, provided inflation continues trending downward.</p>
+      
+      <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Also keep an eye on:</h3>
+      <ul class="space-y-2 text-black">
+        <li>• <strong>July and August CPI reports</strong> - Key inflation indicators</li>
+        <li>• <strong>U.S. Federal Reserve decisions</strong> - Often influence Canadian bond yields and fixed mortgage pricing</li>
+        <li>• <strong>Housing market activity</strong> across major cities, especially in BC and Ontario</li>
+        <li>• <strong>Employment data</strong> - Labor market strength affects BoC decisions</li>
+      </ul>
+    </div>
+
+    <div class="p-6 rounded-lg mb-8 border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+      <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Key Dates to Remember</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <div class="font-medium text-black">September 4, 2025</div>
+          <div class="text-sm text-black">Next BoC Rate Decision</div>
+        </div>
+        <div>
+          <div class="font-medium text-black">October 29, 2025</div>
+          <div class="text-sm text-black">Rate Decision + Monetary Policy Report</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">Have Questions About How This Affects You?</h3>
+        <p class="mb-6 opacity-90">We offer personalized advice tailored to your mortgage goals—whether you're buying your first home, refinancing, or navigating renewal options. Reach out anytime for a free consultation or explore our growing library of mortgage tools and insightful guides.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+            Free Consultation
+          </a>
+          <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+            Get Pre-Approved
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+      <p class="text-sm text-black italic">
+        <strong>Disclaimer:</strong> This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and market conditions are subject to change. Individual circumstances may vary. Always consult with a qualified mortgage professional for personalized advice.
+      </p>
+    </div>
+  `,
+      date: "July 19, 2025",
+      author: "Rob Bhullar",
+      category: "Interest Rates",
+      image: "bank-of-canada-building.png",
+    },
+
     "is-your-mortgage-pre-approval-useless": {
       title: "Is Your Mortgage Pre-Approval Actually Useless? Here's Why It Might Be",
       excerpt:
