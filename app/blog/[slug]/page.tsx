@@ -32,7 +32,7 @@ function getPostData() {
 
     <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bank of Canada Holds Steady – But Signals More Cuts Ahead</h2>
     
-    <p class="mb-6 text-black leading-relaxed">On July 10, 2025, the Bank of Canada (BoC) once again held its overnight rate at <strong>4.75%</strong>, following its initial cut in June. The central bank emphasized that while inflation has cooled from its 2022 and 2023 peaks, it remains cautious due to persistent shelter and service costs.</p>
+    <p class="mb-6 text-black leading-relaxed">On July 10, 2025, the Bank of Canada (BoC) once again held its overnight rate at <strong>4.75%</strong>, following its initial cut in March. The central bank emphasized that while inflation has cooled from its 2022 and 2023 peaks, it remains cautious due to persistent shelter and service costs.</p>
 
     <p class="mb-8 text-black leading-relaxed">However, markets and economists are increasingly confident that another rate cut could come as early as September, especially if inflation continues its gradual decline toward the BoC's 2% target.</p>
 
