@@ -201,7 +201,7 @@ function getPostData() {
       date: "July 19, 2025",
       author: "Rob Bhullar",
       category: "Interest Rates",
-      image: "bank-of-canada-building.png",
+      image: "july2025update.png",
     },
 
     "is-your-mortgage-pre-approval-useless": {
