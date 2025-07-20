@@ -201,7 +201,7 @@ function getPostData() {
       date: "July 19, 2025",
       author: "Rob Bhullar",
       category: "Interest Rates",
-      image: "july2025update.png",
+      image: "July2025update.png",
     },
 
     "is-your-mortgage-pre-approval-useless": {
