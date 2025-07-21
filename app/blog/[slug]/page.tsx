@@ -219,7 +219,7 @@ function getPostData() {
         </h3>
         <p class="text-black mb-3">The current environment makes refinancing decisions more complex:</p>
         <ul class="space-y-2 text-black">
-          <li>• <strong>Break-even analysis critical:</strong> Rising rates make penalties more painful</li>
+          <li>• <strong>Break-even analysis critical:</strong> <a href="https://www.bcmortgageteam.com/break-even-calculator" class="underline hover:opacity-80" style="color: #1D2D44;">Rising rates make penalties more painful – use our calculator</a></li>
           <li>• <strong>Timing considerations:</strong> Wait for potential rate stabilization?</li>
           <li>• <strong>Alternative strategies:</strong> HELOCs, second mortgages may be viable</li>
           <li>• <strong>Debt consolidation impact:</strong> Higher mortgage rates affect consolidation benefits</li>
