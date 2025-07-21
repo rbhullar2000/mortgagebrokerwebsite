@@ -331,7 +331,7 @@ function getPostData() {
 },
 
      "is-your-mortgage-pre-approval-useless": {
-  title: "Is Your Mortgage Pre-Approval Actually Useless? Here's Why It Might Be",
+  title: "Your Mortgage Pre-Approval Might Not Mean What You Think — Here’s Why",
   excerpt:
     "A Rate Hold Isn't a Guarantee—And That Could Cost You the Home. Getting pre-approved should feel like progress, but if it wasn't done properly, it could be worthless when you need it most.",
   content: `
