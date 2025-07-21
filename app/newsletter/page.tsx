@@ -288,7 +288,7 @@ export default function NewsletterPage() {
             <p className="text-xl text-gray-300 mb-8">
               Join BC's most trusted mortgage newsletter. It's free, informative, and could save you thousands.
             </p>
-
+            {/*
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
@@ -305,7 +305,7 @@ export default function NewsletterPage() {
                 </div>
               </div>
             </div>
-
+*/}
             <div className="max-w-2xl mx-auto mb-8">
               <NewsletterSubscription />
             </div>
