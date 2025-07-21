@@ -246,7 +246,7 @@ export default function HomePage() {
                   "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
                   "Hands-on experience managing risk, optimizing client outcomes, and aligning mortgage structures with long-term goals",
                   "Expert in complex approvals, debt consolidation, and investor financing",
-                  "BSc in Mathematics and Business Administration from Simon Fraser University",
+                  "Bachelor of Science in Mathematics with a Minor in Business Administration from Simon Fraser University",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
