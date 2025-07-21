@@ -66,7 +66,7 @@ export default function NewsletterPage() {
               </div>
               <div className="flex items-center">
                 <Clock className="w-5 h-5 mr-2 text-[#D4AF37]" />
-                <span>Weekly Updates</span>
+                <span>Monthly Updates</span>
               </div>
               <div className="flex items-center">
                 <Shield className="w-5 h-5 mr-2 text-[#D4AF37]" />
@@ -86,7 +86,7 @@ export default function NewsletterPage() {
       <section className="py-20 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">What You'll Get Every Week</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">What You'll Get Every Month</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our newsletter delivers actionable mortgage insights that help you save money and make informed decisions.
             </p>
@@ -277,7 +277,10 @@ export default function NewsletterPage() {
         </div>
       </section>
 
+     
+
       {/* Final CTA Section */}
+
       <section className="py-20 bg-gradient-to-r from-[#032133] to-[#1D2D44]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
