@@ -237,10 +237,7 @@ export default function HomePage() {
 
               <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">Mortgage Strategy Lead</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With over 20 years in the financial industry, I combine analytics, lending expertise, and a client-first
-                approach to guide BC homeowners, investors, and first-time buyers through complex mortgage decisions. My
-                focus is on clarity, speed, and securing the right solution—without the stress.
-              </p>
+                With 20+ years of experience in the financial industry, I help BC homeowners, investors, and first-time buyers navigate mortgage decisions with confidence and clarity. Blending deep analytics with lending expertise and a client-first approach, I focus on delivering fast, stress-free solutions tailored to your financial goals.
               <div className="space-y-4 mb-8">
                 {[
                   "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
