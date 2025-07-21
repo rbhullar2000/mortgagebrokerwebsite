@@ -263,7 +263,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Column 2: BC Mortgage Logo */}
-                {/*   <div className="w-24 h-18 flex items-center justify-center">
+                <div className="w-24 h-18 flex items-center justify-center">
                   <Image
                     src="/BCmortgageteamlogo.jpeg"
                     alt="BC Mortgage Team"
@@ -271,7 +271,7 @@ export default function HomePage() {
                     height={72}
                     className="object-contain w-full h-full"
                   />
-                </div>  */}
+                </div> 
 
                 {/* Column 3: BRX Logo */}
                 <div className="w-24 h-18 flex items-center justify-center">
