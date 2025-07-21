@@ -268,6 +268,16 @@ function getPostData() {
       </div>
     </div>
 
+    <div class="p-6 mb-8 rounded-lg border-l-4" style="border-left-color: #1D2D44;background-color:#F4F6F8;">
+  <h3 class="text-xl font-semibold mb-3" style="color:#1D2D44;">🔹 Split Mortgage: A Smart Middle Ground</h3>
+  <p class="text-black mb-2">If you're hesitant to choose fixed or variable, splitting your mortgage gives you the best of both worlds:</p>
+  <ul class="text-black space-y-1">
+    <li>• Lock in a portion at today’s fixed rate (<5%), while allowing flexibility with variable.</li>
+    <li>• Hedge against rate cuts impacting the prime-based portion.</li>
+    <li>• Ideal for saving on penalties and adapting to future market changes.</li>
+  </ul>
+</div>
+
     <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
       <div class="text-center">
         <h3 class="text-2xl font-bold mb-4">Navigate This Complex Rate Environment with Confidence</h3>
