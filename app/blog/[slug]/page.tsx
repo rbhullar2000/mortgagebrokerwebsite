@@ -330,11 +330,11 @@ function getPostData() {
   image: "July2025update.png",
 },
 
-    "is-your-mortgage-pre-approval-useless": {
-      title: "Is Your Mortgage Pre-Approval Actually Useless? Here's Why It Might Be",
-      excerpt:
-        "A Rate Hold Isn't a Guarantee—And That Could Cost You the Home. Getting pre-approved should feel like progress, but if it wasn't done properly, it could be worthless when you need it most.",
-      content: `
+     "is-your-mortgage-pre-approval-useless": {
+  title: "Is Your Mortgage Pre-Approval Actually Useless? Here's Why It Might Be",
+  excerpt:
+    "A Rate Hold Isn't a Guarantee—And That Could Cost You the Home. Getting pre-approved should feel like progress, but if it wasn't done properly, it could be worthless when you need it most.",
+  content: `
     <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
       <div class="flex items-center mb-3">
         <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -349,29 +349,93 @@ function getPostData() {
 
     <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">What Is a Mortgage Pre-Approval Really?</h2>
     
-    <p class="mb-6 text-black leading-relaxed">A mortgage pre-approval generally includes two things:</p>
+    <p class="mb-6 text-black leading-relaxed">A mortgage pre-approval generally includes two main components:</p>
     
-    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
-      <li><strong>A conditional approval</strong> based on the numbers provided by your broker or banker.</li>
-      <li><strong>A rate hold</strong> that locks in an interest rate (typically for 90–120 days), giving you time to shop with peace of mind.</li>
-    </ul>
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">1. Conditional Approval</h3>
+        <p class="text-black mb-3">Based on the financial information provided by your broker or banker to the lender. This gives you a maximum borrowing amount.</p>
+        <ul class="space-y-2 text-black text-sm">
+          <li>• Income verification (initial review)</li>
+          <li>• Credit score assessment</li>
+          <li>• Debt-to-income ratio calculation</li>
+          <li>• Down payment confirmation</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">2. Rate Hold</h3>
+        <p class="text-black mb-3">Locks in an interest rate for typically 90–120 days, protecting you from rate increases while you shop for a home.</p>
+        <ul class="space-y-2 text-black text-sm">
+          <li>• Rate protection for 3-4 months</li>
+          <li>• No obligation to use that lender</li>
+          <li>• Can often be extended if needed</li>
+          <li>• Gives negotiating power with sellers</li>
+        </ul>
+      </div>
+    </div>
 
-    <p class="mb-6 text-black leading-relaxed">But here's the issue: most lenders don't actually do a full review of your application until it becomes "live"—that is, until you've written an offer that's been accepted. Before that, they're mostly relying on the information submitted by your broker or banker, not what they've verified themselves.</p>
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #1D2D44;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #1D2D44;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">The Critical Issue</h3>
+      </div>
+      <p class="text-black">Most lenders don't actually do a full review of your application until it becomes "live"—that is, until you've written an offer that's been accepted. Before that, they're mostly relying on the information submitted by your broker or banker, not what they've verified themselves.</p>
+    </div>
 
     <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Danger of a Sloppy Pre-Approval</h2>
     
     <p class="mb-6 text-black leading-relaxed">Because lenders are only reviewing estimated numbers initially, a pre-approval is always conditional. If anything doesn't add up when they finally double-check it, you could lose your approval—and possibly your home.</p>
 
-    <p class="mb-4 text-black leading-relaxed">Here are some common issues that can derail things during a live file review:</p>
+    <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Common Issues That Derail Pre-Approvals:</h3>
 
-    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
-      <li>Your income was calculated incorrectly (especially for variable or self-employed income)</li>
-      <li>There's undisclosed debt (like student loans, car leases, or co-signed obligations)</li>
-      <li>Your down payment source wasn't verified properly</li>
-      <li>Something as simple as a missed document throws off the whole deal</li>
-    </ul>
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">Income Calculation Errors</h4>
+        <p class="text-black mb-2">Especially problematic for variable or self-employed income:</p>
+        <ul class="space-y-1 text-black text-sm">
+          <li>• Overtime or bonus income calculated incorrectly</li>
+          <li>• Commission income not properly averaged</li>
+          <li>• Self-employed income overstated</li>
+          <li>• Employment status changes not disclosed</li>
+        </ul>
+      </div>
 
-    <p class="mb-6 text-black leading-relaxed">This is why it's so critical to work with an experienced broker who knows how to present your file correctly the first time.</p>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">Undisclosed Debt</h4>
+        <p class="text-black mb-2">Hidden liabilities that surface during final review:</p>
+        <ul class="space-y-1 text-black text-sm">
+          <li>• Student loans in deferment</li>
+          <li>• Car leases or financing</li>
+          <li>• Co-signed obligations</li>
+          <li>• Credit card balances not reported</li>
+          <li>• Child support or alimony payments</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">Down Payment Source Issues</h4>
+        <p class="text-black mb-2">Problems with down payment verification:</p>
+        <ul class="space-y-1 text-black text-sm">
+          <li>• Gifted funds without proper documentation</li>
+          <li>• Borrowed down payment not disclosed</li>
+          <li>• Investment accounts with restrictions</li>
+          <li>• Foreign funds without proper paper trail</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">Documentation Problems</h4>
+        <p class="text-black mb-2">Missing or inadequate paperwork:</p>
+        <ul class="space-y-1 text-black text-sm">
+          <li>• Incomplete employment verification</li>
+          <li>• Missing bank statements</li>
+          <li>• Outdated financial documents</li>
+          <li>• Credit report discrepancies</li>
+        </ul>
+      </div>
+    </div>
 
     <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #1D2D44;">
       <div class="flex items-center mb-3">
@@ -380,58 +444,201 @@ function getPostData() {
         </svg>
         <h3 class="text-lg font-semibold" style="color: #1D2D44;">Pro Tip</h3>
       </div>
-      <p class="text-black">If your broker or banker didn't ask for full income documents, verify your credit, and analyze your debt load, you don't have a real pre-approval—you have a placeholder.</p>
+      <p class="text-black">If your broker or banker didn't ask for full income documents, verify your credit, and analyze your complete debt load, you don't have a real pre-approval—you have a placeholder that could collapse under scrutiny.</p>
     </div>
 
     <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Rate Holds: What They Do and What They Don't</h2>
     
-    <p class="mb-6 text-black leading-relaxed">Rate holds are helpful, no question. They give you a buffer against rising rates while you search for the right property. But even if you're holding a great rate, that doesn't guarantee your mortgage will go through when it counts.</p>
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">What Rate Holds DO:</h3>
+        <ul class="space-y-2 text-black">
+          <li>• Protect you from rising rates during your search</li>
+          <li>• Give you negotiating power with sellers</li>
+          <li>• Provide peace of mind while shopping</li>
+          <li>• Allow you to budget with certainty</li>
+          <li>• Can often be extended if needed</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">What Rate Holds DON'T:</h3>
+        <ul class="space-y-2 text-black">
+          <li>• Guarantee your mortgage will be approved</li>
+          <li>• Protect against income or credit changes</li>
+          <li>• Cover property-specific issues</li>
+          <li>• Ensure the property will qualify</li>
+          <li>• Prevent lender policy changes</li>
+        </ul>
+      </div>
+    </div>
 
-    <p class="mb-6 text-black leading-relaxed">Lenders only commit to financing once they've verified everything. And even then, there's another major piece of the puzzle...</p>
+    <p class="mb-8 text-black leading-relaxed">Even if you're holding a great rate, that doesn't guarantee your mortgage will go through when it counts. Lenders only commit to financing once they've verified everything—and even then, there's another major piece of the puzzle...</p>
 
     <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Your House Has to Qualify, Too</h2>
     
-    <p class="mb-6 text-black leading-relaxed">This surprises a lot of buyers: just because you are approved, doesn't mean the home is. Lenders always assess the property you're buying, because they're investing in it with you. If something about the home makes them uncomfortable—like:</p>
+    <p class="mb-6 text-black leading-relaxed">This surprises many buyers: just because <em>you</em> are approved doesn't mean <em>the home</em> is. Lenders always assess the property you're buying because they're investing in it with you.</p>
 
-    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
-      <li>A poor inspection</li>
-      <li>A property in a high-risk location</li>
-      <li>Structural or zoning issues</li>
-      <li>A condo building with known financial concerns</li>
-    </ul>
+    <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Property Issues That Can Kill Your Deal:</h3>
 
-    <p class="mb-6 text-black leading-relaxed">...they can walk away. This doesn't mean your homeownership journey is over—but it does mean you need someone in your corner who can help pivot to another lender or solution quickly.</p>
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h4 class="font-semibold mb-3" style="color: #1D2D44;">Property Condition</h4>
+        <ul class="space-y-2 text-black">
+          <li>• Poor home inspection results</li>
+          <li>• Structural issues discovered</li>
+          <li>• Environmental concerns (asbestos, mold)</li>
+          <li>• Major systems needing replacement</li>
+          <li>• Safety hazards identified</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h4 class="font-semibold mb-3" style="color: #1D2D44;">Location & Legal Issues</h4>
+        <ul class="space-y-2 text-black">
+          <li>• High-risk flood zones</li>
+          <li>• Zoning violations or restrictions</li>
+          <li>• Easement or title problems</li>
+          <li>• Proximity to environmental hazards</li>
+          <li>• Municipal work orders</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="p-6 rounded-lg mb-8 border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+      <h4 class="font-semibold mb-3" style="color: #1D2D44;">Condominium-Specific Concerns</h4>
+      <ul class="space-y-2 text-black">
+        <li>• Building financial problems or special assessments</li>
+        <li>• High percentage of rental units</li>
+        <li>• Inadequate reserve funds</li>
+        <li>• Ongoing litigation involving the corporation</li>
+        <li>• Poor building maintenance or management</li>
+      </ul>
+    </div>
+
+    <p class="mb-8 text-black leading-relaxed">If something about the property makes the lender uncomfortable, they can walk away. This doesn't mean your homeownership journey is over—but it does mean you need someone in your corner who can help pivot to another lender or solution quickly.</p>
 
     <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Why Experience Matters More Than Ever</h2>
     
-    <p class="mb-4 text-black leading-relaxed">A pre-approval is only as good as the person behind it. An experienced mortgage broker will:</p>
+    <p class="mb-6 text-black leading-relaxed">A pre-approval is only as good as the person behind it. In today's complex mortgage environment, working with an experienced professional can mean the difference between a smooth closing and a last-minute disaster.</p>
 
-    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
-      <li>Fully underwrite your file upfront</li>
-      <li>Spot issues before the lender does</li>
-      <li>Explain what could cause problems down the line</li>
-      <li>Prepare you for the reality of lender and property review</li>
-    </ul>
+    <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">What an Experienced Mortgage Broker Will Do:</h3>
 
-    <p class="mb-6 text-black leading-relaxed">This extra care can be the difference between closing confidently and scrambling under pressure.</p>
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">Thorough Upfront Underwriting</h4>
+        <ul class="space-y-2 text-black">
+          <li>• Review all income sources and calculate them correctly</li>
+          <li>• Obtain and analyze complete credit reports</li>
+          <li>• Identify all debts and liabilities</li>
+          <li>• Verify down payment sources and documentation</li>
+          <li>• Stress-test your application against lender criteria</li>
+        </ul>
+      </div>
 
-    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Final Thoughts: Ask the Right Questions Before You Rely on That Pre-Approval</h2>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">Proactive Problem Solving</h4>
+        <ul class="space-y-2 text-black">
+          <li>• Spot potential issues before the lender does</li>
+          <li>• Prepare alternative solutions and backup plans</li>
+          <li>• Know which lenders are best for your specific situation</li>
+          <li>• Understand property types and potential concerns</li>
+          <li>• Have relationships with multiple lenders</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">Clear Communication</h4>
+        <ul class="space-y-2 text-black">
+          <li>• Explain exactly what could cause problems down the line</li>
+          <li>• Set realistic expectations about the approval process</li>
+          <li>• Keep you informed throughout the entire process</li>
+          <li>• Prepare you for lender and property review requirements</li>
+          <li>• Provide guidance on timing and next steps</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Red Flags: Signs Your Pre-Approval Might Be Weak</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Process Red Flags</h3>
+        <ul class="space-y-2 text-black">
+          <li>• Pre-approval completed in under 30 minutes</li>
+          <li>• No documents requested or reviewed</li>
+          <li>• Credit wasn't actually pulled</li>
+          <li>• Income wasn't properly calculated</li>
+          <li>• No discussion of debt obligations</li>
+          <li>• Down payment source not verified</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Communication Red Flags</h3>
+        <ul class="space-y-2 text-black">
+          <li>• Vague answers about your qualification</li>
+          <li>• No explanation of potential risks</li>
+          <li>• Promises that seem too good to be true</li>
+          <li>• Rushed or pressured decision-making</li>
+          <li>• No discussion of property requirements</li>
+          <li>• Limited lender options presented</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Questions to Ask Before You Rely on Your Pre-Approval</h2>
     
-    <p class="mb-4 text-black leading-relaxed">Before you start house hunting, ask your mortgage expert:</p>
+    <p class="mb-6 text-black leading-relaxed">Before you start house hunting, make sure your pre-approval is solid by asking these critical questions:</p>
 
-    <ul class="list-disc pl-6 space-y-2 mb-6 text-black">
-      <li>Was my income fully reviewed and verified?</li>
-      <li>Did you check my credit?</li>
-      <li>Have you reviewed all debts and liabilities?</li>
-      <li>Is my file ready to go live?</li>
-    </ul>
+    <div class="space-y-4 mb-8">
+      <div class="p-4 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">About Your Income:</h4>
+        <ul class="space-y-1 text-black text-sm">
+          <li>• "How exactly did you calculate my qualifying income?"</li>
+          <li>• "What documents did you review to verify my income?"</li>
+          <li>• "Are there any income sources that might be questioned?"</li>
+        </ul>
+      </div>
 
-    <p class="mb-8 text-black leading-relaxed">If the answers are vague or rushed, it might be time for a second opinion.</p>
+      <div class="p-4 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">About Your Credit and Debts:</h4>
+        <ul class="space-y-1 text-black text-sm">
+          <li>• "Did you pull my actual credit report?"</li>
+          <li>• "What's my credit score and how does it affect my rate?"</li>
+          <li>• "Have you accounted for all my debts and obligations?"</li>
+        </ul>
+      </div>
+
+      <div class="p-4 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">About Your Down Payment:</h4>
+        <ul class="space-y-1 text-black text-sm">
+          <li>• "What documentation do I need for my down payment source?"</li>
+          <li>• "Are there any restrictions on how I can use these funds?"</li>
+          <li>• "What happens if my down payment amount changes?"</li>
+        </ul>
+      </div>
+
+      <div class="p-4 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h4 class="font-semibold mb-2" style="color: #1D2D44;">About the Process:</h4>
+        <ul class="space-y-1 text-black text-sm">
+          <li>• "Is my file ready to go live immediately?"</li>
+          <li>• "What could cause my approval to be declined later?"</li>
+          <li>• "Do you have backup lender options if needed?"</li>
+          <li>• "What property types or locations might be problematic?"</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="mb-8 text-black leading-relaxed">If the answers are vague, rushed, or concerning, it might be time for a second opinion from a more experienced professional.</p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Bottom Line: Don't Let a Weak Pre-Approval Cost You Your Dream Home</h2>
+
+    <p class="mb-6 text-black leading-relaxed">A strong pre-approval is one of your most important tools in today's competitive real estate market. But it's only as good as the professional who prepared it and the thoroughness of the process behind it.</p>
+
+    <p class="mb-8 text-black leading-relaxed">Don't let a sloppy or incomplete pre-approval derail your homebuying journey. Take the time to work with an experienced mortgage professional who will do the job right the first time—your future self will thank you when you're holding the keys to your new home.</p>
 
     <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
       <div class="text-center">
-        <h3 class="text-2xl font-bold mb-4">Have Questions About How Strong Your Pre-Approval Really Is?</h3>
-        <p class="mb-6 opacity-90">Let's review your pre-approval together and make sure your mortgage strategy is solid from day one. Don't let a weak pre-approval cost you your dream home.</p>
+        <h3 class="text-2xl font-bold mb-4">Want to Know How Strong Your Pre-Approval Really Is?</h3>
+        <p class="mb-6 opacity-90">Let's review your pre-approval together and make sure your mortgage strategy is bulletproof from day one. Don't let a weak pre-approval cost you your dream home—get the thorough, professional service you deserve.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
             Free Pre-Approval Review
@@ -449,11 +656,11 @@ function getPostData() {
       </p>
     </div>
   `,
-      date: "July 2, 2025",
-      author: "Rob Bhullar",
-      category: "Pre-Approval Tips",
-      image: "stress-test-calculator.png",
-    },
+  date: "July 2, 2025",
+  author: "Rob Bhullar",
+  category: "Pre-Approval Tips",
+  image: "stress-test-calculator.png",
+},
     
      "are-variable-rates-still-worth-it-2025": {
     title: "Are Variable Rates Still Worth It in 2025? It Depends…",
