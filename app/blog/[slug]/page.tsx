@@ -1289,7 +1289,7 @@ function getPostData() {
       </p>
     </div>
   `,
-  date: "May 1, 2025",
+  date: "July 3, 2025",
   author: "Rob Bhullar",
   category: "Rate Analysis",
   image: "fixed-vs-variable-rates.png",
