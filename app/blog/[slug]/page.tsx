@@ -30,19 +30,39 @@ function getPostData() {
       <p class="text-black">As we move through the heart of summer, the Canadian mortgage landscape is experiencing a complex dynamic: while the Bank of Canada holds rates steady, fixed mortgage rates are actually increasing due to bond market pressures and inflation concerns. Whether you're a current homeowner, prospective buyer, or thinking of refinancing, understanding these market forces is key to making confident financial decisions.</p>
     </div>
 
-    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bank of Canada Holds Steady – But Fixed Rates Are Rising</h2>
-    
-    <p class="mb-6 text-black leading-relaxed">On July 10, 2025, the Bank of Canada once again held its overnight rate at <strong>4.75%</strong>. However, this doesn't tell the whole story. Despite the BoC's pause, <strong>fixed mortgage rates have been climbing</strong> due to rising government bond yields – a trend that's caught many borrowers off guard.</p>
+   <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bank of Canada Holds Steady – But Fixed Rates Are on the Move</h2>
 
-    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #1D2D44;">
-      <div class="flex items-center mb-3">
-        <svg class="w-6 h-6 mr-2" style="color: #1D2D44;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-        </svg>
-        <h3 class="text-lg font-semibold" style="color: #1D2D44;">The Disconnect Explained</h3>
-      </div>
-      <p class="text-black">While the Bank of Canada controls short-term rates (affecting variable mortgages), fixed mortgage rates are tied to government bond yields. Recent inflation concerns and global economic uncertainty have pushed these bond yields higher, causing fixed rates to increase even as the central bank remains on hold.</p>
-    </div>
+<p class="mb-6 text-black leading-relaxed">
+  On <strong>July 10, 2025</strong>, the <strong>Bank of Canada</strong> maintained its <strong>overnight rate at 4.75%</strong>, marking a continued pause in its monetary policy tightening cycle. But beneath the surface, the cost of borrowing is <strong>quietly rising</strong>—and many borrowers are feeling the pinch.
+</p>
+
+<h3 class="text-xl font-semibold text-black mb-3">The Disconnect: Why Fixed Rates Are Rising Anyway</h3>
+
+<p class="mb-4 text-black leading-relaxed">
+  While the BoC’s rate decisions directly influence <strong>variable-rate mortgages</strong>, <strong>fixed-rate mortgages</strong> march to a different beat. Their pricing is closely tied to <strong>Government of Canada (GoC) bond yields</strong>, particularly the <strong>5-year yield</strong>, which serves as a benchmark for most fixed terms.
+</p>
+
+<p class="mb-4 text-black leading-relaxed">
+  In recent weeks, the <strong>5-year GoC bond yield has surged over 30 basis points</strong>, driven by:
+</p>
+
+<ul class="list-disc list-inside mb-4 text-black leading-relaxed">
+  <li><strong>Stubborn core inflation</strong>, especially in shelter and services</li>
+  <li><strong>Stronger-than-expected economic data</strong> in Canada and the U.S.</li>
+  <li><strong>Diminishing expectations</strong> for aggressive near-term rate cuts</li>
+</ul>
+
+<p class="mb-6 text-black leading-relaxed">
+  This bond-market activity has triggered <strong>upward pressure on fixed mortgage rates</strong>, even as the Bank of Canada remains on hold. In short:
+</p>
+
+<div class="p-4 bg-yellow-50 border-l-4 border-yellow-400 italic text-black mb-8">
+  <strong>Fixed rates are reacting to forward-looking inflation fears, not present-day policy.</strong>
+</div>
+
+<p class="text-black leading-relaxed">
+  For borrowers, this creates a confusing dynamic—<strong>rates climbing while the central bank stands still</strong>. And it underscores the importance of understanding <strong>how mortgage pricing is truly set</strong>, especially in a volatile rate environment.
+</p>
 
     <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Current Mortgage Rate Environment (July 19, 2025)</h2>
 
