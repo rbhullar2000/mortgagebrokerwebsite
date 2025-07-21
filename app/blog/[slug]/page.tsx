@@ -30,7 +30,7 @@ function getPostData() {
       <p class="text-black">As we move through the heart of summer, the Canadian mortgage landscape is experiencing a complex dynamic: while the Bank of Canada holds rates steady, fixed mortgage rates are actually increasing due to bond market pressures and inflation concerns. Whether you're a current homeowner, prospective buyer, or thinking of refinancing, understanding these market forces is key to making confident financial decisions.</p>
     </div>
 
-   <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bank of Canada Holds Steady – But Fixed Rates Are on the Move</h2>
+   <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bank of Canada Holds Steady – But Fixed Rates Are Rising</h2>
 
 <p class="mb-6 text-black leading-relaxed">
   On <strong>July 10, 2025</strong>, the <strong>Bank of Canada</strong> maintained its <strong>overnight rate at 4.75%</strong>, marking a continued pause in its monetary policy tightening cycle. But beneath the surface, the cost of borrowing is <strong>quietly rising</strong>—and many borrowers are feeling the pinch.
