@@ -844,135 +844,449 @@ function getPostData() {
   excerpt:
     "With Canadian home values rising and retirement costs increasing, it's time to rethink traditional views on home equity. Learn six smart ways to use your home's value to support your lifestyle, family, and long-term goals.",
   content: `
-<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
-  Introduction: The Shift in Retirement Thinking
-</h2>
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">The Retirement Reality Check</h3>
+      </div>
+      <p class="text-black">For decades, the standard retirement goal in Canada was simple: buy a home, pay off the mortgage, and live mortgage-free in your golden years. But with Canadians living longer, costs rising, and many sitting on homes worth over $1 million, it's time to rethink what retirement security really means.</p>
+    </div>
 
-<p class="mb-6 text-black">
-  For decades, the standard goal for retirement in Canada was simple: buy a home, pay off the mortgage, and live mortgage-free in your golden years. It felt secure, sensible, and prudent.
-</p>
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Shift in Retirement Thinking</h2>
 
-<p class="mb-6 text-black">
-  But today, things have changed. We’re living longer. Expenses are rising. And many Canadians are sitting on homes worth over <strong>$1 million</strong>, with the bulk of their net worth <strong>locked in bricks and mortar</strong>.
-</p>
+    <p class="mb-6 text-black leading-relaxed">The traditional retirement playbook made sense when homes cost $200,000, retirements lasted 15 years, and healthcare was largely covered. Today's reality is dramatically different:</p>
 
-<p class="mb-6 text-black">
-  That raises a powerful question: <em>What if your home could do more than provide a roof over your head?</em> What if it could <strong>fund your lifestyle</strong>, support your family, and enable you to age in place with dignity?
-</p>
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Then (1990s)</h3>
+        <ul class="space-y-2 text-black">
+          <li>• Average home price: $200,000</li>
+          <li>• Retirement duration: 15-20 years</li>
+          <li>• Healthcare largely covered</li>
+          <li>• Defined benefit pensions common</li>
+          <li>• Lower life expectancy</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Now (2025)</h3>
+        <ul class="space-y-2 text-black">
+          <li>• Average home price: $800,000+</li>
+          <li>• Retirement duration: 25-35 years</li>
+          <li>• Rising healthcare costs</li>
+          <li>• Self-directed retirement savings</li>
+          <li>• Longer, more active retirements</li>
+        </ul>
+      </div>
+    </div>
 
-<p class="mb-6 text-black">
-  It’s time to rethink what retirement security really means—and how your home fits into that picture.
-</p>
+    <p class="mb-8 text-black leading-relaxed">This raises a powerful question: <em>What if your home could do more than provide shelter?</em> What if it could fund your lifestyle, support your family, and enable you to age in place with dignity?</p>
 
-<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
-  💡 Why the “No Mortgage in Retirement” Rule Deserves a Rethink
-</h2>
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Why the "No Mortgage in Retirement" Rule Deserves a Rethink</h2>
 
-<ul class="list-disc pl-6 space-y-3 text-black mb-6">
-  <li><strong>You may live longer than planned:</strong> Your retirement could last 25–35 years.</li>
-  <li><strong>Liquidity beats illiquidity:</strong> Equity isn't cash. Unlocking it creates options when needed.</li>
-  <li><strong>Your investments may outperform your mortgage cost:</strong> Capital in the market might return more than what borrowing costs.</li>
-  <li><strong>Healthcare costs are rising:</strong> In-home care and medical expenses are climbing faster than inflation.</li>
-  <li><strong>Peace of mind matters:</strong> Access to $300K equity may feel safer than being debt-free but cash-poor.</li>
-</ul>
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Longevity Risk
+        </h3>
+        <p class="text-black mb-3">Your retirement could last 25–35 years. That's potentially longer than your working career. Having access to your home's equity provides flexibility for unexpected expenses, healthcare needs, or simply maintaining your desired lifestyle.</p>
+        <div class="p-3 rounded-lg" style="background-color: #D4AF37; color: white;">
+          <div class="text-sm">
+            <strong>Reality Check:</strong> A 65-year-old Canadian has a 50% chance of living to age 87, and a 25% chance of living to 94.
+          </div>
+        </div>
+      </div>
 
-<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
-  🔐 The Top 6 Ways to Use Home Equity in Retirement
-</h2>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+          </svg>
+          Liquidity vs. Illiquidity
+        </h3>
+        <p class="text-black mb-3">Equity isn't cash. Having $800,000 in home equity but only $50,000 in savings means you're "house rich, cash poor." Unlocking some equity creates options and financial flexibility when you need it most.</p>
+        <div class="p-3 rounded-lg" style="background-color: #1D2D44; color: white;">
+          <div class="text-sm">
+            <strong>Consider:</strong> Would you rather have $300,000 accessible for emergencies or be debt-free but unable to afford home care?
+          </div>
+        </div>
+      </div>
 
-<ol class="list-decimal pl-6 space-y-6 text-black mb-6">
-  <li><strong>Traditional Refinance:</strong> Lower payments or cash out for renovations, gifting, or investments. Best for borrowers with good income and credit.</li>
-  <li><strong>Reverse Mortgage:</strong> Tax-free access to up to 55% of home value. No payments. Repaid upon sale or death.</li>
-  <li><strong>HELOC:</strong> Flexible credit, interest-only payments. Best as an emergency fund or cash flow tool—but needs income to qualify.</li>
-  <li><strong>Downsizing or Partial Sale:</strong> Sell part of your home or rent out space. Can generate income and free up capital without fully moving.</li>
-  <li><strong>Bridge Loan:</strong> Buy a new place before selling your current one. Helps with transitions or supporting family.</li>
-  <li><strong>Multi-Generational Equity Sharing:</strong> Help kids buy while retaining control. Use refinance or HELOC strategically.</li>
-</ol>
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+          Investment Opportunity Cost
+        </h3>
+        <p class="text-black mb-3">If you can borrow against your home at 5% and invest that capital to earn 7-8% annually, you're ahead financially. Many retirees miss this opportunity by keeping all their wealth locked in real estate.</p>
+        <div class="p-3 rounded-lg" style="background-color: #D4AF37; color: white;">
+          <div class="text-sm">
+            <strong>Example:</strong> $200,000 invested at 7% annual return generates $14,000/year in income—more than enough to cover a $200,000 mortgage at 5%.
+          </div>
+        </div>
+      </div>
 
-<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
-  🛠️ Strategy Matrix: What’s the Best Tool for You?
-</h2>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          </svg>
+          Rising Healthcare Costs
+        </h3>
+        <p class="text-black mb-3">In-home care, medical equipment, and health services not covered by provincial plans are climbing faster than inflation. Having accessible equity means you can age in place comfortably rather than being forced into institutional care.</p>
+        <div class="p-3 rounded-lg" style="background-color: #1D2D44; color: white;">
+          <div class="text-sm">
+            <strong>Cost Reality:</strong> Private home care in BC averages $25-35/hour. Full-time care can cost $6,000-8,000/month.
+          </div>
+        </div>
+      </div>
+    </div>
 
-<table class="table-auto text-black border mb-6">
-  <thead>
-    <tr>
-      <th class="border px-4 py-2">Goal</th>
-      <th class="border px-4 py-2">Tool</th>
-      <th class="border px-4 py-2">Why It Works</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border px-4 py-2">Free up cash for travel</td>
-      <td class="border px-4 py-2">Refinance or Reverse Mortgage</td>
-      <td class="border px-4 py-2">Unlocks lump sum without selling</td>
-    </tr>
-    <tr>
-      <td class="border px-4 py-2">Emergency or health fund</td>
-      <td class="border px-4 py-2">HELOC</td>
-      <td class="border px-4 py-2">Revolving access; pay only when used</td>
-    </tr>
-    <tr>
-      <td class="border px-4 py-2">Help adult children</td>
-      <td class="border px-4 py-2">Refinance or HELOC</td>
-      <td class="border px-4 py-2">Early wealth transfer while retaining ownership</td>
-    </tr>
-    <tr>
-      <td class="border px-4 py-2">Age in place without payments</td>
-      <td class="border px-4 py-2">Reverse Mortgage</td>
-      <td class="border px-4 py-2">No monthly payments; you stay in your home</td>
-    </tr>
-  </tbody>
-</table>
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Top 6 Ways to Use Home Equity in Retirement</h2>
 
-<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
-  🧠 Emotional Barriers to Using Equity
-</h2>
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">1. Traditional Refinance</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">How It Works</h4>
+            <p class="text-black text-sm mb-3">Replace your existing mortgage with a larger one, taking the difference in cash. You can also refinance a paid-off home to access up to 80% of its value.</p>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Best For</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Borrowers with good income and credit</li>
+              <li>• One-time large expenses (renovations, gifting)</li>
+              <li>• Investment opportunities</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Pros & Cons</h4>
+            <div class="text-sm">
+              <div class="text-green-700 mb-2">✓ Lowest interest rates</div>
+              <div class="text-green-700 mb-2">✓ Large amounts available</div>
+              <div class="text-green-700 mb-3">✓ Tax-deductible if used for investment</div>
+              <div class="text-red-600 mb-1">✗ Requires income qualification</div>
+              <div class="text-red-600">✗ Monthly payments required</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<p class="mb-6 text-black">
-  Many Canadians hesitate to use their home equity. Common concerns include:
-</p>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">2. Reverse Mortgage</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">How It Works</h4>
+            <p class="text-black text-sm mb-3">Access up to 55% of your home's value with no monthly payments. Interest compounds and is repaid when you sell, move, or pass away.</p>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Best For</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Limited or no income</li>
+              <li>• Want to stay in home long-term</li>
+              <li>• No desire for monthly payments</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Pros & Cons</h4>
+            <div class="text-sm">
+              <div class="text-green-700 mb-2">✓ No monthly payments</div>
+              <div class="text-green-700 mb-2">✓ No income qualification</div>
+              <div class="text-green-700 mb-3">✓ Tax-free proceeds</div>
+              <div class="text-red-600 mb-1">✗ Higher interest rates</div>
+              <div class="text-red-600">✗ Reduces estate value</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<ul class="list-disc pl-6 text-black space-y-2 mb-6">
-  <li>“I worked hard to pay off my mortgage.” → You also worked hard to enjoy your retirement. Equity is a resource, not a burden.</li>
-  <li>“I want to leave something to my kids.” → Most children would rather you be comfortable and secure today.</li>
-  <li>“Debt feels risky.” → Structured wisely, home equity reduces risk—not increases it.</li>
-</ul>
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">3. Home Equity Line of Credit (HELOC)</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">How It Works</h4>
+            <p class="text-black text-sm mb-3">Revolving credit line secured by your home. Access funds as needed, pay interest only on what you use. Credit limit up to 65% of home value.</p>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Best For</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Emergency fund or cash flow tool</li>
+              <li>• Irregular expenses</li>
+              <li>• Investment opportunities</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Pros & Cons</h4>
+            <div class="text-sm">
+              <div class="text-green-700 mb-2">✓ Flexible access to funds</div>
+              <div class="text-green-700 mb-2">✓ Interest-only payments</div>
+              <div class="text-green-700 mb-3">✓ Pay only for what you use</div>
+              <div class="text-red-600 mb-1">✗ Variable interest rates</div>
+              <div class="text-red-600">✗ Requires income to qualify</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
-  🔍 Real Example: The “House-Rich, Cash-Limited” Retiree
-</h2>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">4. Downsizing Strategy</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">How It Works</h4>
+            <p class="text-black text-sm mb-3">Sell your current home and buy a smaller, less expensive property. Use the difference to fund retirement or invest for income.</p>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Best For</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Empty nesters with large homes</li>
+              <li>• Want to reduce maintenance</li>
+              <li>• Desire lifestyle change</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Pros & Cons</h4>
+            <div class="text-sm">
+              <div class="text-green-700 mb-2">✓ Large lump sum available</div>
+              <div class="text-green-700 mb-2">✓ Lower ongoing costs</div>
+              <div class="text-green-700 mb-3">✓ Simplified lifestyle</div>
+              <div class="text-red-600 mb-1">✗ Moving costs and stress</div>
+              <div class="text-red-600">✗ May regret leaving neighborhood</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<p class="mb-6 text-black">
-  <em>Elaine, 73, owns a $1.4M home in Burnaby but only has $50K in RRSPs. Her pension covers basics but not dental care or roof repairs. She unlocks $275K with a reverse mortgage — using $100K upfront and $175K as a standby line of credit.</em>
-</p>
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">5. Rental Income Strategy</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">How It Works</h4>
+            <p class="text-black text-sm mb-3">Rent out part of your home (basement suite, separate unit) or rent out your entire home and move to a smaller rental property.</p>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Best For</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Homes suitable for rental income</li>
+              <li>• Comfortable being a landlord</li>
+              <li>• Want ongoing monthly income</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Pros & Cons</h4>
+            <div class="text-sm">
+              <div class="text-green-700 mb-2">✓ Monthly income stream</div>
+              <div class="text-green-700 mb-2">✓ Keep your home</div>
+              <div class="text-green-700 mb-3">✓ Tax advantages</div>
+              <div class="text-red-600 mb-1">✗ Landlord responsibilities</div>
+              <div class="text-red-600">✗ Vacancy and maintenance risks</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<ul class="text-black space-y-2 mb-6">
-  <li>✅ She renovates and increases accessibility</li>
-  <li>✅ Keeps cash on hand for emergencies</li>
-  <li>✅ Stays in her home and improves her quality of life</li>
-</ul>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">6. Multi-Generational Equity Sharing</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">How It Works</h4>
+            <p class="text-black text-sm mb-3">Help adult children buy their first home by using your home equity for their down payment, while maintaining ownership and control of your property.</p>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Best For</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Parents wanting to help children</li>
+              <li>• Early wealth transfer strategies</li>
+              <li>• Keeping wealth in the family</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2" style="color: #1D2D44;">Pros & Cons</h4>
+            <div class="text-sm">
+              <div class="text-green-700 mb-2">✓ Help family while alive</div>
+              <div class="text-green-700 mb-2">✓ Retain control of assets</div>
+              <div class="text-green-700 mb-3">✓ Potential tax advantages</div>
+              <div class="text-red-600 mb-1">✗ Complex legal arrangements</div>
+              <div class="text-red-600">✗ Family relationship risks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">
-  🎯 Final Thought
-</h2>
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Strategy Matrix: What's the Best Tool for You?</h2>
 
-<p class="mb-6 text-black">
-  Your home is more than shelter — it’s a tool. With the right plan, you can use your equity to retire with dignity, comfort, and peace of mind. You don’t have to sell. You just need a strategy.
-</p>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full border-collapse border" style="border-color: #D4AF37;">
+        <thead>
+          <tr style="background-color: #1D2D44; color: white;">
+            <th class="border px-4 py-3 text-left" style="border-color: #D4AF37;">Your Goal</th>
+            <th class="border px-4 py-3 text-left" style="border-color: #D4AF37;">Best Tool</th>
+            <th class="border px-4 py-3 text-left" style="border-color: #D4AF37;">Why It Works</th>
+            <th class="border px-4 py-3 text-left" style="border-color: #D4AF37;">Key Consideration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Free up cash for travel & lifestyle</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Refinance or Reverse Mortgage</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Unlocks lump sum without selling</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Income qualification needed for refinance</td>
+          </tr>
+          <tr style="background-color: #F8F9FA;">
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Emergency or health fund</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">HELOC</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Revolving access; pay only when used</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Variable rates and income required</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Help adult children</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Refinance or HELOC</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Early wealth transfer while retaining ownership</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Legal documentation important</td>
+          </tr>
+          <tr style="background-color: #F8F9FA;">
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Age in place without payments</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Reverse Mortgage</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">No monthly payments; stay in your home</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Higher rates, reduces estate value</td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Generate monthly income</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Rental Income or Downsizing</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Ongoing cash flow from property</td>
+            <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Management responsibilities</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-<div class="text-white p-6 rounded-lg" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
-  <p class="font-semibold text-center">
-    Wondering which option is right for your retirement plan?
-    Book a free consultation with our mortgage team.
-  </p>
-  <div class="mt-4 text-center">
-    <a href="/#contact"
-      class="inline-block bg-white hover:bg-gray-100 px-5 py-3 rounded-lg font-medium transition-colors" style="color: #1D2D44;">
-      Book a Call
-    </a>
-  </div>
-</div>
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Overcoming Emotional Barriers to Using Equity</h2>
+
+    <p class="mb-6 text-black leading-relaxed">Many Canadians hesitate to use their home equity due to deeply ingrained beliefs about debt and homeownership. Let's address the most common concerns:</p>
+
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">"I worked hard to pay off my mortgage"</h3>
+        <p class="text-black mb-3"><strong>The Reality:</strong> You also worked hard to enjoy your retirement. Your home equity is a resource you've earned—using it strategically isn't a step backward, it's smart financial planning.</p>
+        <div class="p-3 rounded-lg" style="background-color: #D4AF37; color: white;">
+          <div class="text-sm">
+            <strong>Reframe:</strong> You're not taking on debt—you're accessing your own wealth in a different form.
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">"I want to leave something to my kids"</h3>
+        <p class="text-black mb-3"><strong>The Reality:</strong> Most adult children would rather see their parents comfortable and secure today than inherit a larger estate later. Plus, using equity strategically can actually preserve more wealth long-term.</p>
+        <div class="p-3 rounded-lg" style="background-color: #1D2D44; color: white;">
+          <div class="text-sm">
+            <strong>Consider:</strong> Helping children buy homes now may be more valuable than leaving them cash in 20+ years.
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">"Debt feels risky at my age"</h3>
+        <p class="text-black mb-3"><strong>The Reality:</strong> Structured properly, accessing home equity reduces risk rather than increasing it. Being house-rich but cash-poor is actually riskier than having diversified, liquid assets.</p>
+        <div class="p-3 rounded-lg" style="background-color: #D4AF37; color: white;">
+          <div class="text-sm">
+            <strong>Think About It:</strong> What's riskier—having $300,000 available for emergencies, or being unable to afford the care you need?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Real-World Case Study</h2>
+
+    <div class="p-6 rounded-lg mb-8" style="background-color: #F4F6F8;">
+      <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">The "House-Rich, Cash-Limited" Solution</h3>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold mb-3" style="color: #1D2D44;">The Situation</h4>
+          <p class="text-black text-sm mb-3"><strong>Margaret, 73, Burnaby:</strong></p>
+          <ul class="space-y-1 text-black text-sm">
+            <li>• Home value: $1.4M (mortgage-free)</li>
+            <li>• Savings: $50K in RRSPs</li>
+            <li>• Income: $2,800/month (CPP + OAS)</li>
+            <li>• Challenge: Covers basics but not dental care, home repairs, or emergencies</li>
+          </ul>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h4 class="font-semibold mb-3" style="color: #1D2D44;">The Solution</h4>
+          <p class="text-black text-sm mb-3"><strong>Reverse Mortgage Strategy:</strong></p>
+          <ul class="space-y-1 text-black text-sm">
+            <li>• Accessed: $275K (20% of home value)</li>
+            <li>• Used immediately: $100K for renovations</li>
+            <li>• Standby credit: $175K for future needs</li>
+            <li>• Monthly payments: $0</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 p-4 rounded-lg" style="background-color: #D4AF37; color: white;">
+        <h4 class="font-semibold mb-2">The Results</h4>
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+          <div>✅ Renovated for accessibility and comfort</div>
+          <div>✅ $175K available for healthcare needs</div>
+          <div>✅ Stays in her beloved neighborhood</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Getting Started: Your Next Steps</h2>
+
+    <div class="space-y-4 mb-8">
+      <div class="flex items-start">
+        <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #1D2D44;">1</div>
+        <div>
+          <div class="font-medium text-black">Assess Your Current Position</div>
+          <div class="text-sm text-black">Calculate your home's current value, existing debts, and monthly cash flow needs.</div>
+        </div>
+      </div>
+      <div class="flex items-start">
+        <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #1D2D44;">2</div>
+        <div>
+          <div class="font-medium text-black">Define Your Goals</div>
+          <div class="text-sm text-black">What do you want to accomplish? Travel, home improvements, helping family, or creating an emergency fund?</div>
+        </div>
+      </div>
+      <div class="flex items-start">
+        <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #1D2D44;">3</div>
+        <div>
+          <div class="font-medium text-black">Explore Your Options</div>
+          <div class="text-sm text-black">Meet with a mortgage professional who specializes in retirement strategies to understand all available tools.</div>
+        </div>
+      </div>
+      <div class="flex items-start">
+        <div class="w-8 h-8 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1" style="background-color: #D4AF37;">4</div>
+        <div>
+          <div class="font-medium text-black">Create Your Strategy</div>
+          <div class="text-sm text-black">Develop a comprehensive plan that aligns with your goals, risk tolerance, and family situation.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Bottom Line</h2>
+
+    <p class="mb-6 text-black leading-relaxed">Your home is more than shelter—it's a financial tool that can enhance your retirement security and quality of life. The key is using it strategically, not emotionally.</p>
+
+    <p class="mb-8 text-black leading-relaxed">With the right plan, you can use your equity to retire with dignity, comfort, and peace of mind. You don't have to sell your home or compromise your lifestyle. You just need a strategy that works for your unique situation.</p>
+
+    <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">Ready to Unlock Your Home's Potential?</h3>
+        <p class="mb-6 opacity-90">Every situation is unique. Let's review your specific circumstances and explore which home equity strategy makes the most sense for your retirement goals. Book a free, no-obligation consultation to get started.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+            Free Retirement Strategy Session
+          </a>
+          <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+            Explore Your Options
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+      <p class="text-sm text-black italic">
+        <strong>Disclaimer:</strong> This information is for educational purposes only and should not be considered financial advice. Home equity strategies involve risks and may not be suitable for everyone. Interest rates, fees, and terms vary by lender and individual circumstances. Always consult with qualified financial and legal professionals before making decisions about your home equity.
+      </p>
+    </div>
   `,
   date: "June 26, 2025",
   author: "Rob Bhullar",
