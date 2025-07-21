@@ -663,181 +663,637 @@ function getPostData() {
 },
     
      "are-variable-rates-still-worth-it-2025": {
-    title: "Are Variable Rates Still Worth It in 2025? It Depends…",
-    excerpt:
-      "The fixed vs. variable debate is heating up again in 2025. With forecasts suggesting lower rates ahead, should you lock in fixed for stability or ride the wave with variable? Here's what you need to know.",
-    content: `
-      <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
-        <div class="flex items-center mb-3">
-          <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-          </svg>
-          <h3 class="text-lg font-semibold" style="color: #1D2D44;">The Variable vs Fixed Dilemma</h3>
+  title: "Are Variable Rates Still Worth It in 2025? The Complete Analysis",
+  excerpt:
+    "The fixed vs. variable debate is more complex than ever in 2025. With rate cuts expected but economic uncertainty looming, here's your complete guide to making the right choice for your mortgage strategy.",
+  content: `
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">The Variable vs Fixed Dilemma</h3>
+      </div>
+      <p class="text-black">The fixed vs. variable debate is more complex than ever in 2025. With the Bank of Canada's overnight rate at 2.75% and further cuts expected, borrowers across Canada are asking: should I lock in a fixed rate for stability, or ride the wave with a variable rate that could drop even further? The answer depends on your unique situation, risk tolerance, and market outlook.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Current Rate Environment: The Numbers That Matter</h2>
+    
+    <p class="mb-6 text-lg leading-relaxed text-black">As of July 2025, the Bank of Canada's policy rate sits at <strong>2.75%</strong>, with a prime rate of <strong>4.95%</strong>. This represents a significant decline from the 5% peak in 2023-2024, and market expectations suggest further downward movement by year's end.</p>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Current Variable Rates</h3>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <span class="text-black">Prime - 0.90%</span>
+            <span class="font-bold text-lg" style="color: #1D2D44;">4.05%</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-black">Prime - 0.50%</span>
+            <span class="font-bold text-lg" style="color: #1D2D44;">4.45%</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-black">Prime - 0.25%</span>
+            <span class="font-bold text-lg" style="color: #1D2D44;">4.70%</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-black">Prime Rate</span>
+            <span class="font-bold text-lg" style="color: #1D2D44;">4.95%</span>
+          </div>
         </div>
-        <p class="text-black">The fixed vs. variable debate is heating up again in 2025—and for good reason. Borrowers across Canada are asking: should I lock in a fixed rate for stability, or ride the wave with a variable rate that could drop even further? The truth? There's no universal answer—especially in a year where the economy could swing in either direction.</p>
-      </div>
-
-      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Forecasts Suggest Lower Rates—But Don't Count on It</h2>
-      
-      <p class="mb-6 text-lg leading-relaxed text-black">As of May 1, 2025, the Bank of Canada's policy rate sits at <strong>2.75%</strong>, with a prime rate of <strong>4.95%</strong>. Based on market expectations, both are likely to trend downward by year's end.</p>
-
-      <div class="bg-white p-6 rounded-lg mb-8 border" style="border-color: #1D2D44;">
-        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Rate Forecast for 2025</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse">
-            <thead>
-              <tr style="background-color: #1D2D44; color: white;">
-                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Date</th>
-                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Forecasted BoC Rate</th>
-                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Forecasted Prime Rate</th>
-                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Est. 5-Year Variable (Prime - 0.90%)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">Dec 31, 2025</td>
-                <td class="border px-4 py-2 font-bold text-black" style="border-color: #D4AF37;">2.25%</td>
-                <td class="border px-4 py-2 font-bold text-black" style="border-color: #D4AF37;">4.45%</td>
-                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">~3.55%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-sm text-black mt-4">Meanwhile, 5-year fixed rates for insured mortgages are forecasted to land between <strong>3.82% and 4.00%</strong>.</p>
-      </div>
-
-      <p class="mb-6 leading-relaxed text-black">So far, variable appears to offer slightly lower rates—but that comes with one big catch: <strong>no guarantees</strong>. These forecasts shift as quickly as the economy does.</p>
-
-      <div class="bg-white p-4 rounded-lg mb-8 border-l-4" style="border-left-color: #1D2D44;">
-        <p class="text-sm text-black"><strong>Note:</strong> All rates above are insured and for illustrative purposes only. They're subject to change without notice, and actual offers vary by lender.</p>
-      </div>
-
-      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">If You're Feeling Déjà Vu, You're Not Alone</h2>
-
-      <p class="mb-6 leading-relaxed text-black">Back in 2020, when COVID hit, many experts predicted a housing crash. Instead, we saw one of the most aggressive real estate booms in Canadian history. Rates dropped to record lows, demand exploded, and those who chose variable mortgages often came out ahead.</p>
-
-      <p class="mb-6 leading-relaxed text-black">We could be heading into a similar situation. If Canada experiences a mild recession (or even a full one), interest rates typically fall further. That could spark a return of buyer activity—and possibly even another wave of housing competition.</p>
-
-      <p class="mb-8 leading-relaxed text-black">But there's also a real chance we enter a more traditional downturn, where both prices and demand cool off. Either way, timing the market perfectly is next to impossible.</p>
-
-      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Should You Choose Fixed or Variable in 2025?</h2>
-
-      <p class="mb-6 leading-relaxed text-black">Here's a side-by-side to help you decide what might be best for your situation:</p>
-
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
-          <h3 class="font-semibold mb-3" style="color: #1D2D44;">Fixed Rate Might Be Better If…</h3>
-          <ul class="space-y-2 text-black">
-            <li>• You need consistent monthly payments</li>
-            <li>• You're working with a tight or fixed income</li>
-            <li>• You're worried about inflation or rate hikes</li>
-            <li>• You plan to keep your mortgage for the full term</li>
-          </ul>
-        </div>
-        <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
-          <h3 class="font-semibold mb-3" style="color: #1D2D44;">Variable Rate Might Be Better If…</h3>
-          <ul class="space-y-2 text-black">
-            <li>• You're okay with fluctuations in your payments</li>
-            <li>• You've got financial flexibility or a buffer</li>
-            <li>• You believe rates will drop over the next 12–24 months</li>
-            <li>• You might sell or refinance early (lower penalties)</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="bg-white p-4 rounded-lg mb-8 border-l-4" style="border-left-color: #D4AF37;">
-        <p class="text-black"><strong style="color: #1D2D44;">Quick tip:</strong> Historically, variable rates have outperformed fixed more often than not—but only when borrowers stayed the full term and didn't break the mortgage early.</p>
-      </div>
-
-      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">What's Coming for Mortgage Rates? Here's the Forecast</h2>
-
-      <div class="bg-white p-6 rounded-lg mb-8 border" style="border-color: #1D2D44;">
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse">
-            <thead>
-              <tr style="background-color: #1D2D44; color: white;">
-                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Date</th>
-                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">BoC Rate</th>
-                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">Prime Rate</th>
-                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">5-Year Variable</th>
-                <th class="border px-4 py-2 text-left" style="border-color: #D4AF37;">5-Year Fixed</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">Jun 30, 2025</td>
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">2.50%</td>
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">4.70%</td>
-                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.65%</td>
-                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.78%</td>
-              </tr>
-              <tr style="background-color: #F8F9FA;">
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">Dec 31, 2025</td>
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">2.25%</td>
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">4.45%</td>
-                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.40%</td>
-                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.82%</td>
-              </tr>
-              <tr>
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">Jun 30, 2026</td>
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">2.25%</td>
-                <td class="border px-4 py-2 text-black" style="border-color: #D4AF37;">4.45%</td>
-                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.40%</td>
-                <td class="border px-4 py-2 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.90%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-sm text-black mt-4"><strong>Source:</strong> wowa.ca</p>
-      </div>
-
-      <p class="mb-8 leading-relaxed text-black">These numbers reflect insured rates, and assume a steady term and risk premium. Real-world conditions—like inflation surprises, global instability, or policy changes—could shift these projections quickly. And honestly, the 5-year fixes seem a bit optimistic to me as well!</p>
-
-      <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bottom Line: Strategy Over Prediction</h2>
-
-      <p class="mb-6 leading-relaxed text-black">No one can say for sure where the market is heading. Not economists, not central banks, not even the traders pricing in future cuts. All we can say with certainty is that mortgage strategy should be based on your goals—not someone else's forecast.</p>
-
-      <p class="mb-6 leading-relaxed text-black">If you value peace of mind and budgeting certainty, fixed may be the way to go. If you're comfortable riding the rate wave and want the potential to save over time, variable could be worth the risk.</p>
-
-      <p class="mb-8 leading-relaxed text-black">In a world of economic uncertainty, one thing remains constant: making the right choice starts with a conversation.</p>
-
-      <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
-        <div class="text-center">
-          <h3 class="text-2xl font-bold mb-4">Let's Talk Through Your Options</h3>
-          <p class="mb-6 opacity-90">I'll help you compare today's best variable and fixed rates side by side, based on your income, timeline, and comfort with risk—so you can feel confident in whichever path you choose.</p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
-              Free Rate Consultation
-            </a>
-            <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
-              Compare Current Rates
-            </a>
+        <div class="mt-4 p-3 rounded-lg" style="background-color: #1D2D44; color: white;">
+          <div class="text-sm">
+            <strong>Key Advantage:</strong> Rates automatically decrease when the Bank of Canada cuts rates
           </div>
         </div>
       </div>
 
-      <div class="bg-white p-6 rounded-lg mb-8 border" style="border-color: #D4AF37;">
-        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Sources:</h3>
-        <ul class="space-y-1 text-sm text-black">
-          <li>• <a href="https://wowa.ca/interest-rate-forecast" class="hover:underline" style="color: #1D2D44;" target="_blank" rel="noopener">wowa.ca/interest-rate-forecast</a></li>
-          <li>• <a href="https://www.canadianmortgagetrends.com" class="hover:underline" style="color: #1D2D44;" target="_blank" rel="noopener">Canadian Mortgage Trends</a></li>
-          <li>• <a href="https://www.crea.ca/housing-market-stats/" class="hover:underline" style="color: #1D2D44;" target="_blank" rel="noopener">CREA Housing Market Stats</a></li>
-          <li>• <a href="https://www.cmls.ca" class="hover:underline" style="color: #1D2D44;" target="_blank" rel="noopener">CMLS Broker Resources</a></li>
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Current Fixed Rates</h3>
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <span class="text-black">1-Year Fixed</span>
+            <span class="font-bold text-lg" style="color: #D4AF37;">4.29%</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-black">3-Year Fixed</span>
+            <span class="font-bold text-lg" style="color: #D4AF37;">4.49%</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-black">5-Year Fixed</span>
+            <span class="font-bold text-lg" style="color: #D4AF37;">4.69%</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-black">10-Year Fixed</span>
+            <span class="font-bold text-lg" style="color: #D4AF37;">5.19%</span>
+          </div>
+        </div>
+        <div class="mt-4 p-3 rounded-lg" style="background-color: #D4AF37; color: white;">
+          <div class="text-sm">
+            <strong>Key Advantage:</strong> Payment certainty and protection from rate increases
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Rate Forecast Analysis: What the Experts Are Saying</h2>
+
+    <div class="bg-white p-6 rounded-lg mb-8 border" style="border-color: #1D2D44;">
+      <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Projected Rate Trajectory for 2025-2026</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr style="background-color: #1D2D44; color: white;">
+              <th class="border px-4 py-3 text-left" style="border-color: #D4AF37;">Date</th>
+              <th class="border px-4 py-3 text-left" style="border-color: #D4AF37;">BoC Rate Forecast</th>
+              <th class="border px-4 py-3 text-left" style="border-color: #D4AF37;">Prime Rate</th>
+              <th class="border px-4 py-3 text-left" style="border-color: #D4AF37;">Variable (Prime-0.90%)</th>
+              <th class="border px-4 py-3 text-left" style="border-color: #D4AF37;">5-Year Fixed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Sep 2025</td>
+              <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">2.50%</td>
+              <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">4.70%</td>
+              <td class="border px-4 py-3 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.80%</td>
+              <td class="border px-4 py-3 font-bold" style="border-color: #D4AF37; color: #D4AF37;">4.45%</td>
+            </tr>
+            <tr style="background-color: #F8F9FA;">
+              <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Dec 2025</td>
+              <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">2.25%</td>
+              <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">4.45%</td>
+              <td class="border px-4 py-3 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.55%</td>
+              <td class="border px-4 py-3 font-bold" style="border-color: #D4AF37; color: #D4AF37;">4.25%</td>
+            </tr>
+            <tr>
+              <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">Jun 2026</td>
+              <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">2.25%</td>
+              <td class="border px-4 py-3 text-black" style="border-color: #D4AF37;">4.45%</td>
+              <td class="border px-4 py-3 font-bold" style="border-color: #D4AF37; color: #1D2D44;">3.55%</td>
+              <td class="border px-4 py-3 font-bold" style="border-color: #D4AF37; color: #D4AF37;">4.35%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-black mt-4"><strong>Sources:</strong> Bank of Canada, major Canadian banks' economic forecasts, bond market indicators</p>
+    </div>
+
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #1D2D44;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #1D2D44;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">Important Caveat</h3>
+      </div>
+      <p class="text-black">These forecasts are based on current economic conditions and can change rapidly. Factors like inflation surprises, global economic instability, or policy changes could shift these projections significantly. The key is having a strategy that works regardless of which direction rates move.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Case for Variable Rates in 2025</h2>
+
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+          1. Rate Decline Potential
+        </h3>
+        <p class="text-black mb-3">With the Bank of Canada expected to cut rates further, variable rate holders could see significant savings:</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">Current Scenario</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• $500K mortgage at Prime-0.90% = 4.05%</li>
+              <li>• Monthly payment: ~$2,620</li>
+              <li>• Annual interest cost: ~$20,250</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">If Rates Drop to 3.55%</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Same mortgage at 3.55%</li>
+              <li>• Monthly payment: ~$2,490</li>
+              <li>• Annual savings: ~$1,560</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+        </svg>
+          2. Lower Penalty Costs
+        </h3>
+        <p class="text-black mb-3">Variable mortgages typically have much lower penalties if you need to break your mortgage:</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-lg" style="background-color: #F4F6F8;">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">Variable Penalty</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Usually 3 months' interest</li>
+              <li>• $500K mortgage = ~$5,000</li>
+              <li>• Predictable and manageable</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-lg" style="background-color: #F4F6F8;">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">Fixed Penalty (IRD)</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Can be 3 months or IRD</li>
+              <li>• $500K mortgage = $5,000-$25,000+</li>
+              <li>• Unpredictable and potentially costly</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          3. Historical Performance
+        </h3>
+        <p class="text-black mb-3">Over the long term, variable rates have outperformed fixed rates more often than not:</p>
+        <div class="p-4 rounded-lg bg-white">
+          <div class="grid md:grid-cols-3 gap-4 text-center">
+            <div>
+              <div class="text-2xl font-bold" style="color: #1D2D44;">70%</div>
+              <div class="text-sm text-black">of the time since 1975</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold" style="color: #1D2D44;">$47,000</div>
+              <div class="text-sm text-black">average savings over 5 years</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold" style="color: #1D2D44;">15-20%</div>
+              <div class="text-sm text-black">lower average rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Case for Fixed Rates in 2025</h2>
+
+    <div class="space-y-6 mb-8">
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.586-3L21 21l-6.586-6.586a2 2 0 00-2.828 0L6 21"></path>
+          </svg>
+          1. Payment Certainty
+        </h3>
+        <p class="text-black mb-3">Fixed rates provide predictable payments, making budgeting easier:</p>
+        <div class="p-4 rounded-lg" style="background-color: #F4F6F8;">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-semibold mb-2" style="color: #1D2D44;">Benefits</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Same payment every month</li>
+                <li>• Easy to budget and plan</li>
+                <li>• No payment shock risk</li>
+                <li>• Peace of mind</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2" style="color: #1D2D44;">Best For</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• First-time buyers</li>
+                <li>• Tight budgets</li>
+                <li>• Risk-averse borrowers</li>
+                <li>• Fixed income situations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+          2. Protection Against Rate Increases
+        </h3>
+        <p class="text-black mb-3">While rates are expected to fall, economic surprises could change that quickly:</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">Potential Risks</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Inflation resurgence</li>
+              <li>• Geopolitical events</li>
+              <li>• Economic overheating</li>
+              <li>• Currency pressures</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">Fixed Rate Protection</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Locked-in payment</li>
+              <li>• No payment increases</li>
+              <li>• Budget certainty</li>
+              <li>• Stress reduction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          3. Shorter Terms Offer Flexibility
+        </h3>
+        <p class="text-black mb-3">Consider shorter fixed terms to balance certainty with flexibility:</p>
+        <div class="p-4 rounded-lg" style="background-color: #F4F6F8;">
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="text-center">
+              <div class="text-xl font-bold" style="color: #D4AF37;">1-Year</div>
+              <div class="text-sm text-black">4.29%</div>
+              <div class="text-xs text-black">Maximum flexibility</div>
+            </div>
+            <div class="text-center">
+              <div class="text-xl font-bold" style="color: #D4AF37;">3-Year</div>
+              <div class="text-sm text-black">4.49%</div>
+              <div class="text-xs text-black">Balanced approach</div>
+            </div>
+            <div class="text-center">
+              <div class="text-xl font-bold" style="color: #D4AF37;">5-Year</div>
+              <div class="text-sm text-black">4.69%</div>
+              <div class="text-xs text-black">Traditional choice</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Decision Framework: Which Rate Type Is Right for You?</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Choose Variable If You:</h3>
+        <ul class="space-y-3 text-black">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #1D2D44;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Can handle payment fluctuations</strong> of $100-200/month</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #1D2D44;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Believe rates will continue falling</strong> over the next 2-3 years</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #1D2D44;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Have financial flexibility</strong> or emergency savings</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #1D2D44;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Might sell or refinance</strong> before term ends</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #1D2D44;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Want to benefit</strong> from potential rate decreases</span>
+          </li>
         </ul>
       </div>
 
-      <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
-        <p class="text-sm text-black italic">
-          <strong>Disclaimer:</strong> Rate forecasts are estimates based on current market conditions and are subject to change. This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and terms vary by lender and individual circumstances. Always consult with a qualified mortgage professional for personalized advice.
-        </p>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Choose Fixed If You:</h3>
+        <ul class="space-y-3 text-black">
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Need predictable payments</strong> for budgeting</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Are risk-averse</strong> and prefer certainty</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Have a tight budget</strong> with little room for increases</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Plan to keep the mortgage</strong> for the full term</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span><strong>Worry about economic uncertainty</strong> affecting rates</span>
+          </li>
+        </ul>
       </div>
-    `,
-    date: "May 1, 2025",
-    author: "Rob Bhullar",
-    category: "Rate Analysis",
-    image: "fixed-vs-variable-rates.png",
-  },
+    </div>
 
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Alternative Strategies: Beyond the Binary Choice</h2>
+
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Split Mortgage Strategy</h3>
+        <p class="text-black mb-3">Divide your mortgage between fixed and variable to balance risk and opportunity:</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">Example Split</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• 60% Variable (Prime-0.90%): 4.05%</li>
+              <li>• 40% Fixed (3-Year): 4.49%</li>
+              <li>• Blended rate: ~4.23%</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">Benefits</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Partial protection from rate increases</li>
+              <li>• Benefit from some rate decreases</li>
+              <li>• Reduced overall volatility</li>
+              <li>• Flexibility at renewal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Shorter Fixed Terms</h3>
+        <p class="text-black mb-3">Consider 1-3 year fixed terms to maintain flexibility while getting rate certainty:</p>
+        <div class="p-4 rounded-lg" style="background-color: #F4F6F8;">
+          <div class="grid md:grid-cols-3 gap-4">
+            <div>
+              <h4 class="font-semibold mb-2" style="color: #1D2D44;">1-Year Fixed</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Rate: 4.29%</li>
+                <li>• Maximum flexibility</li>
+                <li>• Reassess annually</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2" style="color: #1D2D44;">2-Year Fixed</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Rate: 4.39%</li>
+                <li>• Good balance</li>
+                <li>• Moderate flexibility</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2" style="color: #1D2D44;">3-Year Fixed</h4>
+              <ul class="space-y-1 text-black text-sm">
+                <li>• Rate: 4.49%</li>
+                <li>• Reasonable certainty</li>
+                <li>• Still flexible</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Convertible Variable</h3>
+        <p class="text-black mb-3">Start with variable and convert to fixed if rates start rising:</p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">How It Works</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Begin with variable rate</li>
+              <li>• Monitor rate trends</li>
+              <li>• Convert to fixed if rates rise</li>
+              <li>• Usually no penalty to convert</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <h4 class="font-semibold mb-2" style="color: #1D2D44;">Strategy Benefits</h4>
+            <ul class="space-y-1 text-black text-sm">
+              <li>• Benefit from rate decreases</li>
+              <li>• Protection if rates reverse</li>
+              <li>• Flexibility to time conversion</li>
+              <li>• Best of both worlds</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Real-World Scenarios: Making the Numbers Work</h2>
+
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg" style="background-color: #F4F6F8;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Scenario 1: The Rate Optimist</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-semibold mb-3" style="color: #1D2D44;">Profile</h4>
+            <ul class="space-y-2 text-black text-sm">
+              <li>• $600K mortgage</li>
+              <li>• Stable income with room for payment increases</li>
+              <li>• Believes rates will drop to 3.5% by 2026</li>
+              <li>• Plans to stay in home 5+ years</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-semibold mb-3" style="color: #1D2D44;">Recommendation: Variable</h4>
+            <ul class="space-y-2 text-black text-sm">
+              <li>• Start at Prime-0.90% (4.05%)</li>
+              <li>• Potential savings: $3,000+/year</li>
+              <li>• Lower penalties if plans change</li>
+              <li>• Maximum benefit from rate cuts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg" style="background-color: #F4F6F8;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Scenario 2: The Budget-Conscious Buyer</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-semibold mb-3" style="color: #1D2D44;">Profile</h4>
+            <ul class="space-y-2 text-black text-sm">
+              <li>• $450K mortgage (first-time buyer)</li>
+              <li>• Tight budget, little room for increases</li>
+              <li>• Needs payment predictability</li>
+              <li>• Risk-averse personality</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-semibold mb-3" style="color: #1D2D44;">Recommendation: 3-Year Fixed</h4>
+            <ul class="space-y-2 text-black text-sm">
+              <li>• Lock in 4.49% for certainty</li>
+              <li>• Predictable $2,350/month payment</li>
+              <li>• Reassess in 3 years when established</li>
+              <li>• Peace of mind during adjustment period</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-lg" style="background-color: #F4F6F8;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Scenario 3: The Balanced Approach</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-semibold mb-3" style="color: #1D2D44;">Profile</h4>
+            <ul class="space-y-2 text-black text-sm">
+              <li>• $750K mortgage</li>
+              <li>• Moderate risk tolerance</li>
+              <li>• Wants some rate protection</li>
+              <li>• Open to creative solutions</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm">
+            <h4 class="font-semibold mb-3" style="color: #1D2D44;">Recommendation: Split Mortgage</h4>
+            <ul class="space-y-2 text-black text-sm">
+              <li>• 60% Variable ($450K at 4.05%)</li>
+              <li>• 40% Fixed ($300K at 4.49%)</li>
+              <li>• Blended payment: ~$3,950/month</li>
+              <li>• Balanced risk and opportunity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Key Factors to Monitor</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Economic Indicators</h3>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Inflation trends:</strong> Core CPI and shelter costs</li>
+          <li>• <strong>Employment data:</strong> Job growth and wage increases</li>
+          <li>• <strong>GDP growth:</strong> Economic expansion or contraction</li>
+          <li>• <strong>Bank of Canada communications:</strong> Forward guidance</li>
+          <li>• <strong>Global factors:</strong> U.S. Fed policy, geopolitical events</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3" style="color: #1D2D44;">Personal Factors</h3>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Income stability:</strong> Job security and income growth</li>
+          <li>• <strong>Budget flexibility:</strong> Room for payment increases</li>
+          <li>• <strong>Risk tolerance:</strong> Comfort with uncertainty</li>
+          <li>• <strong>Timeline:</strong> How long you plan to keep the mortgage</li>
+          <li>• <strong>Life changes:</strong> Family, career, or housing plans</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">The Bottom Line: Strategy Over Prediction</h2>
+
+    <p class="mb-6 text-black leading-relaxed">The truth is, no one can predict with certainty where interest rates will be in 6 months, let alone 5 years. What we can do is create a strategy that aligns with your financial situation, risk tolerance, and goals.</p>
+
+    <div class="p-6 rounded-lg mb-8" style="background-color: #F4F6F8;">
+      <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Key Takeaways for 2025</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-semibold mb-2" style="color: #1D2D44;">Variable Makes Sense If:</h4>
+          <ul class="space-y-1 text-black text-sm">
+            <li>• You can handle payment volatility</li>
+            <li>• You believe rates will continue falling</li>
+            <li>• You value flexibility and lower penalties</li>
+            <li>• You have financial cushion for increases</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2" style="color: #1D2D44;">Fixed Makes Sense If:</h4>
+          <ul class="space-y-1 text-black text-sm">
+            <li>• You need payment predictability</li>
+            <li>• You're risk-averse or budget-constrained</li>
+            <li>• You're worried about economic surprises</li>
+            <li>• You plan to keep the mortgage full-term</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="mb-8 text-black leading-relaxed">Remember, you can always reassess at renewal. The most important thing is choosing a rate type that lets you sleep well at night while positioning you to benefit from favorable market conditions.</p>
+
+    <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">Ready to Make the Right Rate Decision?</h3>
+        <p class="mb-6 opacity-90">Every situation is unique. Let's analyze your specific circumstances, risk tolerance, and financial goals to determine whether variable or fixed rates make the most sense for your mortgage strategy. Get personalized advice based on current market conditions and your individual needs.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+            Free Rate Strategy Session
+          </a>
+          <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+            Compare Current Rates
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+      <p class="text-sm text-black italic">
+        <strong>Disclaimer:</strong> Rate forecasts are estimates based on current market conditions and are subject to change. This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and terms vary by lender and individual circumstances. Historical performance does not guarantee future results. Always consult with a qualified mortgage professional for personalized advice.
+      </p>
+      <p class="text-sm text-black italic mt-2">
+        <strong>Sources:</strong> Bank of Canada, Statistics Canada, major Canadian bank economic forecasts, Government of Canada bond yields, and mortgage industry rate tracking services.
+      </p>
+    </div>
+  `,
+  date: "May 1, 2025",
+  author: "Rob Bhullar",
+  category: "Rate Analysis",
+  image: "fixed-vs-variable-rates.png",
+},
 
 "rethinking-retirement-home-equity": {
   title: "Rethinking Retirement: How Your Home Can Be a Financial Asset — Not Just a Place to Live",
