@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { notFound } from "next/navigation";
-import { NewsletterSubscription } from "@/components/newsletter-subscription"
+import { NewsletterSubscriptionWrapper } from "@/components/newsletter-subscription-wrapper"
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const posts = getPostData()
