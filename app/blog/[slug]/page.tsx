@@ -16,11 +16,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 function getPostData() {
   return {
 
- "july-2025-interest-rate-update": {
-  title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
-  excerpt:
-    "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions and evolving market conditions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
-  content: `
+"july-2025-interest-rate-update": {
+      title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
+      excerpt:
+        "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions and evolving market conditions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
+      content: `
     <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
       <div class="flex items-center mb-3">
         <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -384,10 +384,6 @@ function getPostData() {
       </div>
     </div>
 
-    <div className="mb-8">
-                  <NewsletterSubscription />
-   </div>
-
     <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
       <p class="text-sm text-black italic">
         <strong>Disclaimer:</strong> This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and market conditions are subject to change rapidly. Individual circumstances may vary. Always consult with a qualified mortgage professional for personalized advice.
@@ -396,16 +392,13 @@ function getPostData() {
         <strong>Sources:</strong> Bank of Canada, Government of Canada bond yields, major Canadian lender rate sheets, Integrated Mortgage Planners market analysis, and industry rate tracking services.
       </p>
     </div>
-
-   
   `,
-  date: "July 19, 2025",
-  author: "Rob Bhullar",
-  category: "Interest Rates",
-  image: "July2025update.png",
-  showNewsletter: true,
-},
-
+      date: "July 19, 2025",
+      author: "Rob Bhullar",
+      category: "Interest Rates",
+      image: "July2025update.png",
+      showNewsletter: true,
+    },
 
      "is-your-mortgage-pre-approval-useless": {
   title: "Your Mortgage Pre-Approval Might Not Mean What You Think — Here’s Why",
