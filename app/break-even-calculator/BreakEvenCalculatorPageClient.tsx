@@ -81,40 +81,44 @@ export default function BreakEvenCalculatorPageClient() {
     newAmort: number,
     costs: number,
   ): number => {
-    // Calculate principal paydown difference over time
     const currentPayment = calculateMonthlyPayment(currentBalance, currentRate, currentAmort)
     const newPayment = calculateMonthlyPayment(currentBalance, newRate, newAmort)
 
-    let cumulativeDifference = 0
+    let cumulativeNetWorthGain = 0
     let currentBalanceRemaining = currentBalance
     let newBalanceRemaining = currentBalance
 
+    const currentMonthlyRate = currentRate / 100 / 12
+    const newMonthlyRate = newRate / 100 / 12
+
     for (let month = 1; month <= 360; month++) {
-      // Current mortgage principal payment
-      const currentInterestPayment = (currentBalanceRemaining * currentRate) / 100 / 12
-      const currentPrincipalPayment = currentPayment - currentInterestPayment
-      currentBalanceRemaining -= currentPrincipalPayment
+      // Calculate interest and principal for current mortgage
+      const currentInterestPayment = currentBalanceRemaining * currentMonthlyRate
+      const currentPrincipalPayment = Math.min(currentPayment - currentInterestPayment, currentBalanceRemaining)
+      currentBalanceRemaining = Math.max(0, currentBalanceRemaining - currentPrincipalPayment)
 
-      // New mortgage principal payment
-      const newInterestPayment = (newBalanceRemaining * newRate) / 100 / 12
-      const newPrincipalPayment = newPayment - newInterestPayment
-      newBalanceRemaining -= newPrincipalPayment
+      // Calculate interest and principal for new mortgage
+      const newInterestPayment = newBalanceRemaining * newMonthlyRate
+      const newPrincipalPayment = Math.min(newPayment - newInterestPayment, newBalanceRemaining)
+      newBalanceRemaining = Math.max(0, newBalanceRemaining - newPrincipalPayment)
 
-      // Net worth difference (payment savings + principal difference)
+      // Net worth change = payment savings + difference in principal paydown
       const paymentSavings = currentPayment - newPayment
       const principalDifference = currentPrincipalPayment - newPrincipalPayment
       const monthlyNetWorthChange = paymentSavings + principalDifference
 
-      cumulativeDifference += monthlyNetWorthChange
+      cumulativeNetWorthGain += monthlyNetWorthChange
 
-      if (cumulativeDifference >= costs) {
+      // Check if we've recovered the refinancing costs
+      if (cumulativeNetWorthGain >= costs) {
         return month
       }
 
-      if (currentBalanceRemaining <= 0 || newBalanceRemaining <= 0) break
+      // Stop if both mortgages are paid off
+      if (currentBalanceRemaining <= 0 && newBalanceRemaining <= 0) break
     }
 
-    return 0 // Never breaks even
+    return 0 // Never breaks even within 30 years
   }
 
   const calculateBreakEven = () => {
@@ -125,7 +129,7 @@ export default function BreakEvenCalculatorPageClient() {
     const newAmortNum = Number.parseFloat(newAmortization)
     let costs = Number.parseFloat(closingCosts)
 
-    // Handle prepaid interest
+    // Handle prepaid interest - only add to costs if NOT excluding it
     const prepaidAmount = Number.parseFloat(prepaidInterest) || 0
     if (!excludePrepaidInterest && prepaidAmount > 0) {
       costs += prepaidAmount
@@ -178,6 +182,19 @@ export default function BreakEvenCalculatorPageClient() {
       )
     }
 
+    console.log("Calculation Debug:", {
+      balance,
+      currentRateNum,
+      newRateNum,
+      costs,
+      prepaidAmount,
+      excludePrepaidInterest,
+      currentPayment,
+      newPayment,
+      savings,
+      breakEvenMonths: savings > 0 ? costs / savings : 0,
+    })
+
     if (savings <= 0 && calculatorMode === "refinance") {
       setResults({
         currentMonthlyPayment: currentPayment,
@@ -198,7 +215,7 @@ export default function BreakEvenCalculatorPageClient() {
       return
     }
 
-    const breakEvenMonths = costs / savings
+    const breakEvenMonths = savings > 0 ? costs / savings : 0
     const breakEvenYears = breakEvenMonths / 12
 
     setResults({
@@ -667,8 +684,15 @@ export default function BreakEvenCalculatorPageClient() {
                                   : "Break-Even Point (Including Prepaid Interest)"}
                               </p>
                             </div>
-                            <p className="text-3xl font-bold mb-2">{Math.round(results.breakEvenMonths)} months</p>
-                            <p className="text-lg opacity-90">({results.breakEvenYears.toFixed(1)} years)</p>
+                            <p className="text-3xl font-bold mb-2">
+                              {results.breakEvenMonths > 0 ? Math.round(results.breakEvenMonths) : "N/A"}
+                              {results.breakEvenMonths > 0 ? " months" : ""}
+                            </p>
+                            <p className="text-lg opacity-90">
+                              {results.breakEvenMonths > 0
+                                ? `(${results.breakEvenYears.toFixed(1)} years)`
+                                : "No break-even point"}
+                            </p>
                             <div className="mt-4">{getBreakEvenBadge(results.breakEvenMonths)}</div>
                           </div>
 
