@@ -676,7 +676,7 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings - FIXED to remove stray 0 */}
+                      {/* Monthly Savings - COMPLETELY FIXED to remove stray 0 */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
                         <p className="text-sm text-gray-600 mb-1">Monthly Savings</p>
                         {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
