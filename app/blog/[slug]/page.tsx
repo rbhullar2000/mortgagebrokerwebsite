@@ -392,7 +392,9 @@ function getPostData() {
       </p>
     </div>
 
-    <NewsletterSubscriptionWrapper />
+   <div className="mb-8">
+                  <NewsletterSubscription />
+   </div>
   `,
   date: "July 19, 2025",
   author: "Rob Bhullar",
