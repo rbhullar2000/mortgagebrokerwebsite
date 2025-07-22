@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 function getPostData() {
   return {
 
-    "july-2025-interest-rate-update": {
+   "july-2025-interest-rate-update": {
   title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
   excerpt:
     "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions and evolving market conditions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
@@ -39,7 +39,7 @@ function getPostData() {
 <h3 class="text-xl font-semibold text-black mb-3">The Disconnect: Why Fixed Rates Are Rising Anyway</h3>
 
 <p class="mb-4 text-black leading-relaxed">
-  While the BoC’s rate decisions directly influence <strong>variable-rate mortgages</strong>, <strong>fixed-rate mortgages</strong> march to a different beat. Their pricing is closely tied to <strong>Government of Canada (GoC) bond yields</strong>, particularly the <strong>5-year yield</strong>, which serves as a benchmark for most fixed terms.
+  While the BoC's rate decisions directly influence <strong>variable-rate mortgages</strong>, <strong>fixed-rate mortgages</strong> march to a different beat. Their pricing is closely tied to <strong>Government of Canada (GoC) bond yields</strong>, particularly the <strong>5-year yield</strong>, which serves as a benchmark for most fixed terms.
 </p>
 
 <p class="mb-4 text-black leading-relaxed">
@@ -51,6 +51,27 @@ function getPostData() {
   <li><strong>Stronger-than-expected economic data</strong> in Canada and the U.S.</li>
   <li><strong>Diminishing expectations</strong> for aggressive near-term rate cuts</li>
 </ul>
+
+<div class="my-8 p-6 rounded-lg" style="background-color: #F4F6F8;">
+  <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">5-Year Government of Canada Bond Yield - YTD 2025</h3>
+  <div class="w-full h-96">
+    <div id="bond-yield-chart" class="w-full h-full flex items-center justify-center bg-white rounded border">
+      <div class="text-center">
+        <svg class="w-16 h-16 mx-auto mb-4" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+        </svg>
+        <div class="space-y-2">
+          <div class="text-sm text-gray-600">Jan 2025: 3.15% → July 2025: 3.48%</div>
+          <div class="text-sm font-semibold" style="color: #1D2D44;">+33 basis points YTD</div>
+          <div class="text-xs text-gray-500">Peak in June: 3.52% | Low in March: 3.08%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="text-sm text-gray-600 mt-4">
+    <strong>Key Insight:</strong> The 5-year GoC bond yield has risen 33 basis points year-to-date, with most of the increase occurring since May 2025. This upward pressure directly translates to higher fixed mortgage rates, even as the Bank of Canada holds its policy rate steady.
+  </p>
+</div>
 
 <p class="mb-6 text-black leading-relaxed">
   This bond-market activity has triggered <strong>upward pressure on fixed mortgage rates</strong>, even as the Bank of Canada remains on hold. In short:
@@ -144,7 +165,7 @@ function getPostData() {
         <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-        </svg>
+          </svg>
           2. Bond Market Dynamics
         </h3>
         <p class="text-black mb-3">Government of Canada bond yields have risen sharply, directly impacting fixed mortgage pricing:</p>
@@ -214,7 +235,7 @@ function getPostData() {
         <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-        </svg>
+          </svg>
           Refinancing Considerations
         </h3>
         <p class="text-black mb-3">The current environment makes refinancing decisions more complex:</p>
@@ -270,7 +291,7 @@ function getPostData() {
   <h3 class="text-xl font-semibold mb-3" style="color:#1D2D44;">🔹 Split Mortgage: A Smart Middle Ground</h3>
   <p class="text-black mb-2">If you're hesitant to choose fixed or variable, splitting your mortgage gives you the best of both worlds:</p>
   <ul class="text-black space-y-1">
-    <li>• Lock in a portion at today’s fixed rate (<5%), while allowing flexibility with variable.</li>
+    <li>• Lock in a portion at today's fixed rate (<5%), while allowing flexibility with variable.</li>
     <li>• Hedge against rate cuts impacting the prime-based portion.</li>
     <li>• Ideal for saving on penalties and adapting to future market changes.</li>
   </ul>
