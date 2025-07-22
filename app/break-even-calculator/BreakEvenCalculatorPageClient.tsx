@@ -671,13 +671,13 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings - COMPLETELY FIXED */}
+                      {/* Monthly Savings - FIXED THE DISPLAY BUG COMPLETELY */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
-                        <div className="text-sm text-gray-600 mb-1">Monthly Savings</div>
+                        <p className="text-sm text-gray-600 mb-1">Monthly Savings</p>
                         {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
-                          <div className="text-xs text-blue-600 mb-1">
+                          <p className="text-xs text-blue-600 mb-1">
                             (Includes {formatDecimal(results.debtConsolidationSavings)} debt savings)
-                          </div>
+                          </p>
                         )}
                         <p className="text-3xl font-bold text-blue-600">
                           {results.monthlySavings > 0
