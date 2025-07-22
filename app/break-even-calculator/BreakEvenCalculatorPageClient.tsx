@@ -676,7 +676,7 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings - COMPLETELY FIXED to remove stray 0 */}
+                      {/* Monthly Savings - FIXED to remove any stray characters */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
                         <p className="text-sm text-gray-600 mb-1">Monthly Savings</p>
                         {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
@@ -702,6 +702,7 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       )}
 
+                      {/* Conditional Results Section */}
                       {results.monthlySavings > 0 || calculatorMode === "cashout" ? (
                         <>
                           {/* Break-Even Point */}
