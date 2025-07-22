@@ -58,6 +58,8 @@ export default function BreakEvenCalculatorPageClient() {
   const [results, setResults] = useState<CalculationResults | null>(null)
 
   const calculateMonthlyPayment = (principal: number, annualRate: number, amortizationYears: number): number => {
+    if (principal <= 0 || annualRate < 0 || amortizationYears <= 0) return 0
+
     const monthlyRate = annualRate / 100 / 12
     const numberOfPayments = amortizationYears * 12
 
@@ -72,7 +74,8 @@ export default function BreakEvenCalculatorPageClient() {
   }
 
   const calculateTotalInterest = (principal: number, monthlyPayment: number, amortizationYears: number): number => {
-    return monthlyPayment * amortizationYears * 12 - principal
+    if (principal <= 0 || monthlyPayment <= 0 || amortizationYears <= 0) return 0
+    return Math.max(0, monthlyPayment * amortizationYears * 12 - principal)
   }
 
   const calculateNetWorthBreakEven = (
@@ -83,8 +86,12 @@ export default function BreakEvenCalculatorPageClient() {
     newAmort: number,
     costs: number,
   ): number => {
+    if (currentBalance <= 0 || costs <= 0) return 0
+
     const currentPayment = calculateMonthlyPayment(currentBalance, currentRate, currentAmort)
     const newPayment = calculateMonthlyPayment(currentBalance, newRate, newAmort)
+
+    if (currentPayment <= 0 || newPayment <= 0) return 0
 
     let cumulativeNetWorthGain = 0
     let currentBalanceRemaining = currentBalance
@@ -94,14 +101,19 @@ export default function BreakEvenCalculatorPageClient() {
     const newMonthlyRate = newRate / 100 / 12
 
     for (let month = 1; month <= 360; month++) {
+      if (currentBalanceRemaining <= 0 && newBalanceRemaining <= 0) break
+
       // Calculate interest and principal for current mortgage
       const currentInterestPayment = currentBalanceRemaining * currentMonthlyRate
-      const currentPrincipalPayment = Math.min(currentPayment - currentInterestPayment, currentBalanceRemaining)
+      const currentPrincipalPayment = Math.min(
+        Math.max(0, currentPayment - currentInterestPayment),
+        currentBalanceRemaining,
+      )
       currentBalanceRemaining = Math.max(0, currentBalanceRemaining - currentPrincipalPayment)
 
       // Calculate interest and principal for new mortgage
       const newInterestPayment = newBalanceRemaining * newMonthlyRate
-      const newPrincipalPayment = Math.min(newPayment - newInterestPayment, newBalanceRemaining)
+      const newPrincipalPayment = Math.min(Math.max(0, newPayment - newInterestPayment), newBalanceRemaining)
       newBalanceRemaining = Math.max(0, newBalanceRemaining - newPrincipalPayment)
 
       // Net worth change = payment savings + difference in principal paydown
@@ -115,21 +127,24 @@ export default function BreakEvenCalculatorPageClient() {
       if (cumulativeNetWorthGain >= costs) {
         return month
       }
-
-      // Stop if both mortgages are paid off
-      if (currentBalanceRemaining <= 0 && newBalanceRemaining <= 0) break
     }
 
     return 0 // Never breaks even within 30 years
   }
 
   const calculateBreakEven = () => {
-    const balance = Number.parseFloat(currentBalance)
-    const currentRateNum = Number.parseFloat(currentRate)
-    const newRateNum = Number.parseFloat(newRate)
-    const currentAmortNum = Number.parseFloat(currentAmortization)
-    const newAmortNum = Number.parseFloat(newAmortization)
+    const balance = Number.parseFloat(currentBalance) || 0
+    const currentRateNum = Number.parseFloat(currentRate) || 0
+    const newRateNum = Number.parseFloat(newRate) || 0
+    const currentAmortNum = Number.parseFloat(currentAmortization) || 25
+    const newAmortNum = Number.parseFloat(newAmortization) || 25
     const baseCosts = Number.parseFloat(closingCosts) || 0
+
+    // Validate required inputs
+    if (balance <= 0 || currentRateNum <= 0 || newRateNum <= 0 || baseCosts <= 0) {
+      setResults(null)
+      return
+    }
 
     // Handle prepaid interest - add to costs if NOT excluding it
     const prepaidAmount = Number.parseFloat(prepaidInterest) || 0
@@ -139,11 +154,6 @@ export default function BreakEvenCalculatorPageClient() {
     if (!excludePrepaidInterest && prepaidAmount > 0) {
       totalCosts += prepaidAmount
       prepaidUsed = prepaidAmount
-    }
-
-    if (!balance || !currentRateNum || !newRateNum || !baseCosts) {
-      setResults(null)
-      return
     }
 
     const currentPayment = calculateMonthlyPayment(balance, currentRateNum, currentAmortNum)
@@ -163,17 +173,17 @@ export default function BreakEvenCalculatorPageClient() {
     // Add debt consolidation savings for cash-out
     let debtSavings = 0
     if (calculatorMode === "cashout" && debtToConsolidate) {
-      const debtAmount = Number.parseFloat(debtToConsolidate)
-      const debtRate = Number.parseFloat(averageDebtRate)
-      if (debtAmount && debtRate) {
-        // Assume minimum payment is 2% of balance per month for credit cards
+      const debtAmount = Number.parseFloat(debtToConsolidate) || 0
+      const debtRate = Number.parseFloat(averageDebtRate) || 0
+      if (debtAmount > 0 && debtRate > 0) {
+        // Calculate current debt payment (assume 2% minimum payment for credit cards)
         const currentDebtPayment = debtAmount * 0.02
         debtSavings = currentDebtPayment
         savings += debtSavings
       }
     }
 
-    // Calculate total interest
+    // Calculate total interest over full amortization
     const currentTotalInterest = calculateTotalInterest(balance, currentPayment, currentAmortNum)
     const newTotalInterest = calculateTotalInterest(newBalance, newPayment, newAmortNum)
     const totalInterestSavings = currentTotalInterest - newTotalInterest
@@ -192,11 +202,17 @@ export default function BreakEvenCalculatorPageClient() {
         newAmortNum,
         totalCosts,
       )
+      if (netWorthBreakEvenMonths <= 0) {
+        netWorthBreakEvenMonths = undefined
+      }
     }
 
     // Calculate break-even
     const breakEvenMonths = savings > 0 ? totalCosts / savings : 0
     const breakEvenYears = breakEvenMonths / 12
+
+    // Determine if refinancing is worthwhile
+    const isWorthwhile = breakEvenMonths > 0 && breakEvenMonths <= 36
 
     console.log("Calculation Debug:", {
       balance,
@@ -214,6 +230,7 @@ export default function BreakEvenCalculatorPageClient() {
       calculatorMode,
       cashOutUsed,
       debtSavings,
+      isWorthwhile,
     })
 
     setResults({
@@ -224,7 +241,7 @@ export default function BreakEvenCalculatorPageClient() {
       breakEvenYears,
       fiveYearSavings: savings * 60 - totalCosts,
       tenYearSavings: savings * 120 - totalCosts,
-      isWorthwhile: breakEvenMonths > 0 && breakEvenMonths <= 36,
+      isWorthwhile,
       currentTotalInterest,
       newTotalInterest,
       totalInterestSavings,
@@ -256,6 +273,7 @@ export default function BreakEvenCalculatorPageClient() {
   ])
 
   const formatCurrency = (amount: number): string => {
+    if (isNaN(amount) || !isFinite(amount)) return "$0"
     return new Intl.NumberFormat("en-CA", {
       style: "currency",
       currency: "CAD",
@@ -265,6 +283,7 @@ export default function BreakEvenCalculatorPageClient() {
   }
 
   const formatDecimal = (amount: number): string => {
+    if (isNaN(amount) || !isFinite(amount)) return "$0.00"
     return new Intl.NumberFormat("en-CA", {
       style: "currency",
       currency: "CAD",
@@ -648,16 +667,16 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings - Fixed the display issue */}
+                      {/* Monthly Savings - FIXED THE DISPLAY BUG */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
-                        <p className="text-sm text-gray-600 mb-1">
+                        <div className="text-sm text-gray-600 mb-1">
                           Monthly Savings
                           {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
-                            <span className="text-xs text-blue-600 block">
+                            <div className="text-xs text-blue-600">
                               (Includes {formatDecimal(results.debtConsolidationSavings)} debt savings)
-                            </span>
+                            </div>
                           )}
-                        </p>
+                        </div>
                         <p className="text-3xl font-bold text-blue-600">
                           {results.monthlySavings > 0
                             ? formatDecimal(results.monthlySavings)
@@ -669,7 +688,7 @@ export default function BreakEvenCalculatorPageClient() {
                       </div>
 
                       {/* Cash-Out Information */}
-                      {calculatorMode === "cashout" && results.cashOutNetSavings && (
+                      {calculatorMode === "cashout" && results.cashOutNetSavings && results.cashOutNetSavings > 0 && (
                         <div className="text-center p-4 bg-purple-50 rounded-lg">
                           <p className="text-sm text-gray-600 mb-1">Cash Received</p>
                           <p className="text-2xl font-bold text-purple-600">
@@ -801,6 +820,7 @@ export default function BreakEvenCalculatorPageClient() {
                     <div className="text-center py-8 text-gray-500">
                       <Calculator className="h-12 w-12 mx-auto mb-4 opacity-50" />
                       <p>Enter your mortgage details to see the break-even analysis</p>
+                      <p className="text-sm mt-2">All fields marked with * are required</p>
                     </div>
                   )}
                 </CardContent>
