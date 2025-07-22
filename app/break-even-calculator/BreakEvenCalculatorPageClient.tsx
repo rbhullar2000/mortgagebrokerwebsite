@@ -31,6 +31,8 @@ interface CalculationResults {
   termExtensionWarning: boolean
   cashOutNetSavings?: number
   debtConsolidationSavings?: number
+  totalCostsUsed: number
+  prepaidInterestUsed: number
 }
 
 export default function BreakEvenCalculatorPageClient() {
@@ -127,35 +129,45 @@ export default function BreakEvenCalculatorPageClient() {
     const newRateNum = Number.parseFloat(newRate)
     const currentAmortNum = Number.parseFloat(currentAmortization)
     const newAmortNum = Number.parseFloat(newAmortization)
-    let costs = Number.parseFloat(closingCosts)
+    const baseCosts = Number.parseFloat(closingCosts) || 0
 
-    // Handle prepaid interest - only add to costs if NOT excluding it
+    // Handle prepaid interest - add to costs if NOT excluding it
     const prepaidAmount = Number.parseFloat(prepaidInterest) || 0
+    let totalCosts = baseCosts
+    let prepaidUsed = 0
+
     if (!excludePrepaidInterest && prepaidAmount > 0) {
-      costs += prepaidAmount
+      totalCosts += prepaidAmount
+      prepaidUsed = prepaidAmount
     }
 
-    if (!balance || !currentRateNum || !newRateNum || !costs) return
+    if (!balance || !currentRateNum || !newRateNum || !baseCosts) {
+      setResults(null)
+      return
+    }
 
     const currentPayment = calculateMonthlyPayment(balance, currentRateNum, currentAmortNum)
     let newBalance = balance
 
     // Handle cash-out refinancing
+    let cashOutUsed = 0
     if (calculatorMode === "cashout") {
       const cashOut = Number.parseFloat(cashOutAmount) || 0
       newBalance = balance + cashOut
+      cashOutUsed = cashOut
     }
 
     const newPayment = calculateMonthlyPayment(newBalance, newRateNum, newAmortNum)
     let savings = currentPayment - newPayment
 
-    // Add debt consolidation savings
+    // Add debt consolidation savings for cash-out
     let debtSavings = 0
     if (calculatorMode === "cashout" && debtToConsolidate) {
       const debtAmount = Number.parseFloat(debtToConsolidate)
       const debtRate = Number.parseFloat(averageDebtRate)
       if (debtAmount && debtRate) {
-        const currentDebtPayment = (debtAmount * (debtRate / 100)) / 12 + debtAmount / 60 // Assume 5-year payoff
+        // Assume minimum payment is 2% of balance per month for credit cards
+        const currentDebtPayment = debtAmount * 0.02
         debtSavings = currentDebtPayment
         savings += debtSavings
       }
@@ -178,45 +190,31 @@ export default function BreakEvenCalculatorPageClient() {
         currentAmortNum,
         newRateNum,
         newAmortNum,
-        costs,
+        totalCosts,
       )
     }
+
+    // Calculate break-even
+    const breakEvenMonths = savings > 0 ? totalCosts / savings : 0
+    const breakEvenYears = breakEvenMonths / 12
 
     console.log("Calculation Debug:", {
       balance,
       currentRateNum,
       newRateNum,
-      costs,
+      baseCosts,
       prepaidAmount,
       excludePrepaidInterest,
+      totalCosts,
+      prepaidUsed,
       currentPayment,
       newPayment,
       savings,
-      breakEvenMonths: savings > 0 ? costs / savings : 0,
+      breakEvenMonths,
+      calculatorMode,
+      cashOutUsed,
+      debtSavings,
     })
-
-    if (savings <= 0 && calculatorMode === "refinance") {
-      setResults({
-        currentMonthlyPayment: currentPayment,
-        newMonthlyPayment: newPayment,
-        monthlySavings: savings,
-        breakEvenMonths: 0,
-        breakEvenYears: 0,
-        fiveYearSavings: savings * 60,
-        tenYearSavings: savings * 120,
-        isWorthwhile: false,
-        currentTotalInterest,
-        newTotalInterest,
-        totalInterestSavings,
-        netWorthBreakEvenMonths,
-        termExtensionWarning,
-        debtConsolidationSavings: debtSavings,
-      })
-      return
-    }
-
-    const breakEvenMonths = savings > 0 ? costs / savings : 0
-    const breakEvenYears = breakEvenMonths / 12
 
     setResults({
       currentMonthlyPayment: currentPayment,
@@ -224,23 +222,23 @@ export default function BreakEvenCalculatorPageClient() {
       monthlySavings: savings,
       breakEvenMonths,
       breakEvenYears,
-      fiveYearSavings: savings * 60 - costs,
-      tenYearSavings: savings * 120 - costs,
-      isWorthwhile: breakEvenMonths <= 36,
+      fiveYearSavings: savings * 60 - totalCosts,
+      tenYearSavings: savings * 120 - totalCosts,
+      isWorthwhile: breakEvenMonths > 0 && breakEvenMonths <= 36,
       currentTotalInterest,
       newTotalInterest,
       totalInterestSavings,
       netWorthBreakEvenMonths,
       termExtensionWarning,
-      cashOutNetSavings: calculatorMode === "cashout" ? Number.parseFloat(cashOutAmount) || 0 : undefined,
+      cashOutNetSavings: calculatorMode === "cashout" ? cashOutUsed : undefined,
       debtConsolidationSavings: debtSavings,
+      totalCostsUsed: totalCosts,
+      prepaidInterestUsed: prepaidUsed,
     })
   }
 
   useEffect(() => {
-    if (currentBalance && currentRate && newRate && closingCosts) {
-      calculateBreakEven()
-    }
+    calculateBreakEven()
   }, [
     currentBalance,
     currentRate,
@@ -276,7 +274,9 @@ export default function BreakEvenCalculatorPageClient() {
   }
 
   const getBreakEvenBadge = (months: number) => {
-    if (months <= 24) {
+    if (months <= 0) {
+      return <Badge className="bg-red-500 hover:bg-red-600">No Break-Even</Badge>
+    } else if (months <= 24) {
       return <Badge className="bg-green-500 hover:bg-green-600">Excellent (&lt;=24 months)</Badge>
     } else if (months <= 36) {
       return <Badge className="bg-blue-500 hover:bg-blue-600">Good (&lt;=36 months)</Badge>
@@ -605,6 +605,16 @@ export default function BreakEvenCalculatorPageClient() {
                 <CardContent>
                   {results ? (
                     <div className="space-y-6">
+                      {/* Debug Information */}
+                      {results.prepaidInterestUsed > 0 && (
+                        <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <p className="text-sm text-yellow-800">
+                            <strong>Note:</strong> Including {formatCurrency(results.prepaidInterestUsed)} in prepaid
+                            interest. Total costs used: {formatCurrency(results.totalCostsUsed)}
+                          </p>
+                        </div>
+                      )}
+
                       {/* Term Extension Warning */}
                       {results.termExtensionWarning && (
                         <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
@@ -638,7 +648,7 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings */}
+                      {/* Monthly Savings - Fixed the display issue */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
                         <p className="text-sm text-gray-600 mb-1">
                           Monthly Savings
@@ -697,15 +707,19 @@ export default function BreakEvenCalculatorPageClient() {
                           </div>
 
                           {/* Net Worth Break-Even */}
-                          {useNetWorthMethod && results.netWorthBreakEvenMonths && (
-                            <div className="text-center p-4 bg-indigo-50 rounded-lg border border-indigo-200">
-                              <p className="text-sm text-gray-600 mb-1">Net Worth Break-Even</p>
-                              <p className="text-2xl font-bold text-indigo-600">
-                                {Math.round(results.netWorthBreakEvenMonths)} months
-                              </p>
-                              <p className="text-sm text-indigo-700 mt-1">Accounts for principal paydown differences</p>
-                            </div>
-                          )}
+                          {useNetWorthMethod &&
+                            results.netWorthBreakEvenMonths &&
+                            results.netWorthBreakEvenMonths > 0 && (
+                              <div className="text-center p-4 bg-indigo-50 rounded-lg border border-indigo-200">
+                                <p className="text-sm text-gray-600 mb-1">Net Worth Break-Even</p>
+                                <p className="text-2xl font-bold text-indigo-600">
+                                  {Math.round(results.netWorthBreakEvenMonths)} months
+                                </p>
+                                <p className="text-sm text-indigo-700 mt-1">
+                                  Accounts for principal paydown differences
+                                </p>
+                              </div>
+                            )}
 
                           {/* Long-term Savings */}
                           <div className="grid grid-cols-2 gap-4">
@@ -758,9 +772,11 @@ export default function BreakEvenCalculatorPageClient() {
                                 <p
                                   className={`text-sm mt-1 ${results.isWorthwhile ? "text-green-700" : "text-yellow-700"}`}
                                 >
-                                  {results.isWorthwhile
-                                    ? `You'll break even in ${Math.round(results.breakEvenMonths)} months, which is generally considered favorable for refinancing.`
-                                    : `Your break-even period is ${Math.round(results.breakEvenMonths)} months. Consider if you'll stay in the home long enough to benefit.`}
+                                  {results.breakEvenMonths > 0
+                                    ? results.isWorthwhile
+                                      ? `You'll break even in ${Math.round(results.breakEvenMonths)} months, which is generally considered favorable for refinancing.`
+                                      : `Your break-even period is ${Math.round(results.breakEvenMonths)} months. Consider if you'll stay in the home long enough to benefit.`
+                                    : "No break-even point with current parameters. Consider other options or wait for better rates."}
                                 </p>
                               </div>
                             </div>
