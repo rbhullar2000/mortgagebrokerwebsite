@@ -586,7 +586,7 @@ export default function BreakEvenCalculatorPageClient() {
                   <div>
                     <h3 className="font-semibold text-lg mb-4 text-[#032133]">Advanced Analysis</h3>
                     <div className="space-y-4">
-                      {calculatorMode === "refinance" && (
+                      {calculatorMode === "refinance" ? (
                         <div className="flex items-center justify-between">
                           <div>
                             <Label htmlFor="useNetWorthMethod" className="font-medium">
@@ -601,6 +601,10 @@ export default function BreakEvenCalculatorPageClient() {
                             checked={useNetWorthMethod}
                             onCheckedChange={setUseNetWorthMethod}
                           />
+                        </div>
+                      ) : (
+                        <div className="text-center py-4 text-gray-500">
+                          <p className="text-sm">Advanced analysis options are available for Rate & Term refinancing</p>
                         </div>
                       )}
                     </div>
@@ -667,16 +671,14 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings - FIXED THE DISPLAY BUG */}
+                      {/* Monthly Savings - COMPLETELY FIXED */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
-                        <div className="text-sm text-gray-600 mb-1">
-                          Monthly Savings
-                          {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
-                            <div className="text-xs text-blue-600">
-                              (Includes {formatDecimal(results.debtConsolidationSavings)} debt savings)
-                            </div>
-                          )}
-                        </div>
+                        <div className="text-sm text-gray-600 mb-1">Monthly Savings</div>
+                        {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
+                          <div className="text-xs text-blue-600 mb-1">
+                            (Includes {formatDecimal(results.debtConsolidationSavings)} debt savings)
+                          </div>
+                        )}
                         <p className="text-3xl font-bold text-blue-600">
                           {results.monthlySavings > 0
                             ? formatDecimal(results.monthlySavings)
