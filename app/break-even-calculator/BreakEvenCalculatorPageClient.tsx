@@ -676,152 +676,126 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings - FIXED to remove any stray characters */}
+                      {/* Monthly Savings - COMPLETELY FIXED to remove stray 0 */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
                         <p className="text-sm text-gray-600 mb-1">Monthly Savings</p>
-                        {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
+                        {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 ? (
                           <p className="text-xs text-blue-600 mb-1">
                             (Includes {formatDecimal(results.debtConsolidationSavings)} debt savings)
                           </p>
-                        )}
+                        ) : null}
                         <p className="text-3xl font-bold text-blue-600">
                           {formatDecimal(Math.abs(results.monthlySavings))}
                         </p>
-                        {results.monthlySavings <= 0 && calculatorMode === "refinance" && (
+                        {results.monthlySavings <= 0 && calculatorMode === "refinance" ? (
                           <p className="text-sm text-red-600 mt-1">Higher monthly payment</p>
-                        )}
+                        ) : null}
                       </div>
 
                       {/* Cash-Out Information */}
-                      {calculatorMode === "cashout" && results.cashOutNetSavings && results.cashOutNetSavings > 0 && (
+                      {calculatorMode === "cashout" && results.cashOutNetSavings && results.cashOutNetSavings > 0 ? (
                         <div className="text-center p-4 bg-purple-50 rounded-lg">
                           <p className="text-sm text-gray-600 mb-1">Cash Received</p>
                           <p className="text-2xl font-bold text-purple-600">
                             {formatCurrency(results.cashOutNetSavings)}
                           </p>
                         </div>
-                      )}
+                      ) : null}
 
-                      {/* Conditional Results Section */}
-                      {results.monthlySavings > 0 || calculatorMode === "cashout" ? (
-                        <>
-                          {/* Break-Even Point */}
-                          <div className="text-center p-6 bg-gradient-to-r from-[#032133] to-[#064a5c] text-white rounded-lg">
-                            <div className="flex items-center justify-center mb-2">
-                              {results.isWorthwhile ? (
-                                <CheckCircle className="h-6 w-6 text-green-400 mr-2" />
-                              ) : (
-                                <AlertCircle className="h-6 w-6 text-yellow-400 mr-2" />
-                              )}
-                              <p className="text-lg font-semibold">
-                                {excludePrepaidInterest
-                                  ? "Break-Even Point (Excluding Prepaid Interest)"
-                                  : "Break-Even Point (Including Prepaid Interest)"}
-                              </p>
-                            </div>
-                            <p className="text-3xl font-bold mb-2">
-                              {results.breakEvenMonths > 0 ? Math.round(results.breakEvenMonths) : "N/A"}
-                              {results.breakEvenMonths > 0 ? " months" : ""}
+                      {/* Break-Even Point */}
+                      <div className="text-center p-6 bg-gradient-to-r from-[#032133] to-[#064a5c] text-white rounded-lg">
+                        <div className="flex items-center justify-center mb-2">
+                          {results.isWorthwhile ? (
+                            <CheckCircle className="h-6 w-6 text-green-400 mr-2" />
+                          ) : (
+                            <AlertCircle className="h-6 w-6 text-yellow-400 mr-2" />
+                          )}
+                          <p className="text-lg font-semibold">
+                            {excludePrepaidInterest
+                              ? "Break-Even Point (Excluding Prepaid Interest)"
+                              : "Break-Even Point (Including Prepaid Interest)"}
+                          </p>
+                        </div>
+                        <p className="text-3xl font-bold mb-2">
+                          {results.breakEvenMonths > 0 ? Math.round(results.breakEvenMonths) : "N/A"}
+                          {results.breakEvenMonths > 0 ? " months" : ""}
+                        </p>
+                        <p className="text-lg opacity-90">
+                          {results.breakEvenMonths > 0
+                            ? `(${results.breakEvenYears.toFixed(1)} years)`
+                            : "No break-even point"}
+                        </p>
+                        <div className="mt-4">{getBreakEvenBadge(results.breakEvenMonths)}</div>
+                      </div>
+
+                      {/* Net Worth Break-Even */}
+                      {useNetWorthMethod &&
+                      calculatorMode === "refinance" &&
+                      results.netWorthBreakEvenMonths &&
+                      results.netWorthBreakEvenMonths > 0 ? (
+                        <div className="text-center p-4 bg-indigo-50 rounded-lg border border-indigo-200">
+                          <p className="text-sm text-gray-600 mb-1">Net Worth Break-Even</p>
+                          <p className="text-2xl font-bold text-indigo-600">
+                            {Math.round(results.netWorthBreakEvenMonths)} months
+                          </p>
+                          <p className="text-sm text-indigo-700 mt-1">Accounts for principal paydown differences</p>
+                        </div>
+                      ) : null}
+
+                      {/* Long-term Savings */}
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="text-center p-4 bg-gray-50 rounded-lg">
+                          <p className="text-sm text-gray-600 mb-1">5-Year Net Savings</p>
+                          <p className="text-xl font-bold text-[#032133]">{formatCurrency(results.fiveYearSavings)}</p>
+                        </div>
+                        <div className="text-center p-4 bg-gray-50 rounded-lg">
+                          <p className="text-sm text-gray-600 mb-1">10-Year Net Savings</p>
+                          <p className="text-xl font-bold text-[#032133]">{formatCurrency(results.tenYearSavings)}</p>
+                        </div>
+                      </div>
+
+                      {/* Total Interest Comparison */}
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="text-center p-4 bg-red-50 rounded-lg">
+                          <p className="text-sm text-gray-600 mb-1">Current Total Interest</p>
+                          <p className="text-lg font-bold text-red-600">
+                            {formatCurrency(results.currentTotalInterest)}
+                          </p>
+                        </div>
+                        <div className="text-center p-4 bg-green-50 rounded-lg">
+                          <p className="text-sm text-gray-600 mb-1">New Total Interest</p>
+                          <p className="text-lg font-bold text-green-600">{formatCurrency(results.newTotalInterest)}</p>
+                        </div>
+                      </div>
+
+                      {/* Recommendation */}
+                      <div
+                        className={`p-4 rounded-lg ${results.isWorthwhile ? "bg-green-50 border border-green-200" : "bg-yellow-50 border border-yellow-200"}`}
+                      >
+                        <div className="flex items-start gap-3">
+                          {results.isWorthwhile ? (
+                            <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                          ) : (
+                            <AlertCircle className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
+                          )}
+                          <div>
+                            <p
+                              className={`font-semibold ${results.isWorthwhile ? "text-green-800" : "text-yellow-800"}`}
+                            >
+                              {results.isWorthwhile ? "Refinancing Recommended" : "Consider Your Timeline"}
                             </p>
-                            <p className="text-lg opacity-90">
+                            <p
+                              className={`text-sm mt-1 ${results.isWorthwhile ? "text-green-700" : "text-yellow-700"}`}
+                            >
                               {results.breakEvenMonths > 0
-                                ? `(${results.breakEvenYears.toFixed(1)} years)`
-                                : "No break-even point"}
+                                ? results.isWorthwhile
+                                  ? `You'll break even in ${Math.round(results.breakEvenMonths)} months, which is generally considered favorable for refinancing.`
+                                  : `Your break-even period is ${Math.round(results.breakEvenMonths)} months. Consider if you'll stay in the home long enough to benefit.`
+                                : "No break-even point with current parameters. Consider other options or wait for better rates."}
                             </p>
-                            <div className="mt-4">{getBreakEvenBadge(results.breakEvenMonths)}</div>
-                          </div>
-
-                          {/* Net Worth Break-Even */}
-                          {useNetWorthMethod &&
-                            calculatorMode === "refinance" &&
-                            results.netWorthBreakEvenMonths &&
-                            results.netWorthBreakEvenMonths > 0 && (
-                              <div className="text-center p-4 bg-indigo-50 rounded-lg border border-indigo-200">
-                                <p className="text-sm text-gray-600 mb-1">Net Worth Break-Even</p>
-                                <p className="text-2xl font-bold text-indigo-600">
-                                  {Math.round(results.netWorthBreakEvenMonths)} months
-                                </p>
-                                <p className="text-sm text-indigo-700 mt-1">
-                                  Accounts for principal paydown differences
-                                </p>
-                              </div>
-                            )}
-
-                          {/* Long-term Savings */}
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="text-center p-4 bg-gray-50 rounded-lg">
-                              <p className="text-sm text-gray-600 mb-1">5-Year Net Savings</p>
-                              <p className="text-xl font-bold text-[#032133]">
-                                {formatCurrency(results.fiveYearSavings)}
-                              </p>
-                            </div>
-                            <div className="text-center p-4 bg-gray-50 rounded-lg">
-                              <p className="text-sm text-gray-600 mb-1">10-Year Net Savings</p>
-                              <p className="text-xl font-bold text-[#032133]">
-                                {formatCurrency(results.tenYearSavings)}
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Total Interest Comparison */}
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="text-center p-4 bg-red-50 rounded-lg">
-                              <p className="text-sm text-gray-600 mb-1">Current Total Interest</p>
-                              <p className="text-lg font-bold text-red-600">
-                                {formatCurrency(results.currentTotalInterest)}
-                              </p>
-                            </div>
-                            <div className="text-center p-4 bg-green-50 rounded-lg">
-                              <p className="text-sm text-gray-600 mb-1">New Total Interest</p>
-                              <p className="text-lg font-bold text-green-600">
-                                {formatCurrency(results.newTotalInterest)}
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Recommendation */}
-                          <div
-                            className={`p-4 rounded-lg ${results.isWorthwhile ? "bg-green-50 border border-green-200" : "bg-yellow-50 border border-yellow-200"}`}
-                          >
-                            <div className="flex items-start gap-3">
-                              {results.isWorthwhile ? (
-                                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                              ) : (
-                                <AlertCircle className="h-5 w-5 text-yellow-600 mt-0.5 flex-shrink-0" />
-                              )}
-                              <div>
-                                <p
-                                  className={`font-semibold ${results.isWorthwhile ? "text-green-800" : "text-yellow-800"}`}
-                                >
-                                  {results.isWorthwhile ? "Refinancing Recommended" : "Consider Your Timeline"}
-                                </p>
-                                <p
-                                  className={`text-sm mt-1 ${results.isWorthwhile ? "text-green-700" : "text-yellow-700"}`}
-                                >
-                                  {results.breakEvenMonths > 0
-                                    ? results.isWorthwhile
-                                      ? `You'll break even in ${Math.round(results.breakEvenMonths)} months, which is generally considered favorable for refinancing.`
-                                      : `Your break-even period is ${Math.round(results.breakEvenMonths)} months. Consider if you'll stay in the home long enough to benefit.`
-                                    : "No break-even point with current parameters. Consider other options or wait for better rates."}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      ) : (
-                        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                          <div className="flex items-start gap-3">
-                            <AlertCircle className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0" />
-                            <div>
-                              <p className="font-semibold text-red-800">Refinancing Not Recommended</p>
-                              <p className="text-sm text-red-700 mt-1">
-                                Your new mortgage payment would be higher than your current payment. Consider other
-                                options or wait for better rates.
-                              </p>
-                            </div>
                           </div>
                         </div>
-                      )}
+                      </div>
                     </div>
                   ) : (
                     <div className="text-center py-8 text-gray-500">
