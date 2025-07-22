@@ -391,6 +391,8 @@ function getPostData() {
         <strong>Sources:</strong> Bank of Canada, Government of Canada bond yields, major Canadian lender rate sheets, Integrated Mortgage Planners market analysis, and industry rate tracking services.
       </p>
     </div>
+
+    <NewsletterSubscriptionWrapper />
   `,
   date: "July 19, 2025",
   author: "Rob Bhullar",
