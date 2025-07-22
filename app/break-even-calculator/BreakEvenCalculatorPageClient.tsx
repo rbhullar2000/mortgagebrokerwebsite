@@ -671,22 +671,20 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings - FIXED THE DISPLAY BUG COMPLETELY */}
+                      {/* Monthly Savings - COMPLETELY FIXED */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
                         <p className="text-sm text-gray-600 mb-1">Monthly Savings</p>
-                        {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
+                        {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 ? (
                           <p className="text-xs text-blue-600 mb-1">
                             (Includes {formatDecimal(results.debtConsolidationSavings)} debt savings)
                           </p>
-                        )}
+                        ) : null}
                         <p className="text-3xl font-bold text-blue-600">
-                          {results.monthlySavings > 0
-                            ? formatDecimal(results.monthlySavings)
-                            : formatDecimal(Math.abs(results.monthlySavings))}
+                          {formatDecimal(Math.abs(results.monthlySavings))}
                         </p>
-                        {results.monthlySavings <= 0 && calculatorMode === "refinance" && (
+                        {results.monthlySavings <= 0 && calculatorMode === "refinance" ? (
                           <p className="text-sm text-red-600 mt-1">Higher monthly payment</p>
-                        )}
+                        ) : null}
                       </div>
 
                       {/* Cash-Out Information */}
@@ -729,6 +727,7 @@ export default function BreakEvenCalculatorPageClient() {
 
                           {/* Net Worth Break-Even */}
                           {useNetWorthMethod &&
+                            calculatorMode === "refinance" &&
                             results.netWorthBreakEvenMonths &&
                             results.netWorthBreakEvenMonths > 0 && (
                               <div className="text-center p-4 bg-indigo-50 rounded-lg border border-indigo-200">
