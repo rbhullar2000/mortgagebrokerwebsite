@@ -401,6 +401,7 @@ function getPostData() {
   showNewsletter: true,
 },
 
+
      "is-your-mortgage-pre-approval-useless": {
   title: "Your Mortgage Pre-Approval Might Not Mean What You Think — Here’s Why",
   excerpt:
