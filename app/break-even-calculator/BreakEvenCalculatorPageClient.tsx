@@ -671,20 +671,20 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings - COMPLETELY FIXED */}
+                      {/* Monthly Savings - FIXED */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
                         <p className="text-sm text-gray-600 mb-1">Monthly Savings</p>
-                        {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 ? (
+                        {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
                           <p className="text-xs text-blue-600 mb-1">
                             (Includes {formatDecimal(results.debtConsolidationSavings)} debt savings)
                           </p>
-                        ) : null}
+                        )}
                         <p className="text-3xl font-bold text-blue-600">
                           {formatDecimal(Math.abs(results.monthlySavings))}
                         </p>
-                        {results.monthlySavings <= 0 && calculatorMode === "refinance" ? (
+                        {results.monthlySavings <= 0 && calculatorMode === "refinance" && (
                           <p className="text-sm text-red-600 mt-1">Higher monthly payment</p>
-                        ) : null}
+                        )}
                       </div>
 
                       {/* Cash-Out Information */}
