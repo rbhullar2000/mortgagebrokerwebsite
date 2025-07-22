@@ -56,21 +56,68 @@ function getPostData() {
 <div class="my-8 p-6 rounded-lg" style="background-color: #F4F6F8;">
   <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">5-Year Government of Canada Bond Yield - YTD 2025</h3>
   <div class="w-full h-96">
-    <div id="bond-yield-chart" class="w-full h-full flex items-center justify-center bg-white rounded border">
-      <div class="text-center">
-        <svg class="w-16 h-16 mx-auto mb-4" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-        </svg>
-        <div class="space-y-2">
-          <div class="text-sm text-gray-600">Jan 2025: 3.15% → July 2025: 3.48%</div>
-          <div class="text-sm font-semibold" style="color: #1D2D44;">+33 basis points YTD</div>
-          <div class="text-xs text-gray-500">Peak in June: 3.52% | Low in March: 3.08%</div>
-        </div>
+    <div class="w-full h-full flex flex-col items-center justify-center bg-white rounded border">
+      <svg width="100%" height="300" viewBox="0 0 800 300" class="mb-4">
+        <!-- Grid lines -->
+        <defs>
+          <pattern id="grid" width="80" height="30" patternUnits="userSpaceOnUse">
+            <path d="M 80 0 L 0 0 0 30" fill="none" stroke="#e2e8f0" strokeWidth="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+        
+        <!-- Y-axis -->
+        <line x1="60" y1="20" x2="60" y2="280" stroke="#64748b" strokeWidth="2"/>
+        
+        <!-- X-axis -->
+        <line x1="60" y1="280" x2="780" y2="280" stroke="#64748b" strokeWidth="2"/>
+        
+        <!-- Y-axis labels -->
+        <text x="50" y="25" textAnchor="end" fill="#64748b" fontSize="12">3.6%</text>
+        <text x="50" y="85" textAnchor="end" fill="#64748b" fontSize="12">3.4%</text>
+        <text x="50" y="145" textAnchor="end" fill="#64748b" fontSize="12">3.2%</text>
+        <text x="50" y="205" textAnchor="end" fill="#64748b" fontSize="12">3.1%</text>
+        <text x="50" y="265" textAnchor="end" fill="#64748b" fontSize="12">3.0%</text>
+        
+        <!-- X-axis labels -->
+        <text x="120" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Jan</text>
+        <text x="220" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Feb</text>
+        <text x="320" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Mar</text>
+        <text x="420" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Apr</text>
+        <text x="520" y="295" textAnchor="middle" fill="#64748b" fontSize="12">May</text>
+        <text x="620" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Jun</text>
+        <text x="720" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Jul</text>
+        
+        <!-- Data line (3.15% -> 3.22% -> 3.08% -> 3.18% -> 3.28% -> 3.52% -> 3.48%) -->
+        <polyline
+          fill="none"
+          stroke="#D4AF37"
+          strokeWidth="3"
+          points="120,235 220,215 320,255 420,245 520,225 620,65 720,75"
+        />
+        
+        <!-- Data points -->
+        <circle cx="120" cy="235" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="220" cy="215" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="320" cy="255" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="420" cy="245" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="520" cy="225" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="620" cy="65" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="720" cy="75" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+      </svg>
+      
+      <div class="space-y-2 text-center">
+        <div class="text-sm text-gray-600">Jan 2025: 3.15% → July 2025: 3.48%</div>
+        <div class="text-sm font-semibold" style="color: #1D2D44;">+33 basis points YTD</div>
+        <div class="text-xs text-gray-500">Peak in June: 3.52% | Low in March: 3.08%</div>
       </div>
     </div>
   </div>
   <p class="text-sm text-gray-600 mt-4">
     <strong>Key Insight:</strong> The 5-year GoC bond yield has risen 33 basis points year-to-date, with most of the increase occurring since May 2025. This upward pressure directly translates to higher fixed mortgage rates, even as the Bank of Canada holds its policy rate steady.
+  </p>
+  <p class="text-sm text-gray-600 mt-2">
+    <strong>Learn More:</strong> <a href="https://www.bcmortgageteam.com/bond-yields" class="underline hover:opacity-80" style="color: #1D2D44;">Understanding Bond Yields and Mortgage Rates</a>
   </p>
 </div>
 
