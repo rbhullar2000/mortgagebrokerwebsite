@@ -384,6 +384,10 @@ function getPostData() {
       </div>
     </div>
 
+    <div className="mb-8">
+                  <NewsletterSubscription />
+   </div>
+
     <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
       <p class="text-sm text-black italic">
         <strong>Disclaimer:</strong> This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and market conditions are subject to change rapidly. Individual circumstances may vary. Always consult with a qualified mortgage professional for personalized advice.
@@ -393,9 +397,7 @@ function getPostData() {
       </p>
     </div>
 
-   <div className="mb-8">
-                  <NewsletterSubscription />
-   </div>
+   
   `,
   date: "July 19, 2025",
   author: "Rob Bhullar",
