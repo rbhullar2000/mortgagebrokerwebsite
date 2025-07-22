@@ -85,18 +85,18 @@ export default function BondYieldsPage() {
                   why this relationship exists:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <h4 className="font-semibold text-green-800 mb-2">When Bond Yields Fall:</h4>
-                    <ul className="space-y-1 text-sm text-green-700">
+                  <div className="bg-[#F4F6F8] p-4 rounded-lg border border-gray-200">
+                    <h4 className="font-semibold text-[#1D2D44] mb-2">When Bond Yields Fall:</h4>
+                    <ul className="space-y-1 text-sm text-gray-700">
                       <li>• Fixed mortgage rates typically decrease</li>
                       <li>• Borrowing becomes more affordable</li>
                       <li>• Housing market activity often increases</li>
                       <li>• Refinancing becomes more attractive</li>
                     </ul>
                   </div>
-                  <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-                    <h4 className="font-semibold text-red-800 mb-2">When Bond Yields Rise:</h4>
-                    <ul className="space-y-1 text-sm text-red-700">
+                  <div className="bg-[#F4F6F8] p-4 rounded-lg border border-gray-200">
+                    <h4 className="font-semibold text-[#1D2D44] mb-2">When Bond Yields Rise:</h4>
+                    <ul className="space-y-1 text-sm text-gray-700">
                       <li>• Fixed mortgage rates typically increase</li>
                       <li>• Borrowing becomes more expensive</li>
                       <li>• Housing market may cool down</li>
@@ -185,23 +185,23 @@ export default function BondYieldsPage() {
                   Understanding the bond yield-mortgage rate relationship can help you make better timing decisions:
                 </p>
                 <div className="space-y-4">
-                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                    <h4 className="font-semibold text-blue-800 mb-2">For Home Buyers:</h4>
-                    <p className="text-sm text-blue-700">
+                  <div className="bg-[#F4F6F8] p-4 rounded-lg border border-gray-200">
+                    <h4 className="font-semibold text-[#1D2D44] mb-2">For Home Buyers:</h4>
+                    <p className="text-sm text-gray-700">
                       Monitor bond yield trends when shopping for a mortgage. Rising yields may signal higher rates
                       ahead, making rate holds more valuable. Falling yields might indicate better rates are coming.
                     </p>
                   </div>
-                  <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                    <h4 className="font-semibold text-purple-800 mb-2">For Renewal Clients:</h4>
-                    <p className="text-sm text-purple-700">
+                  <div className="bg-[#F4F6F8] p-4 rounded-lg border border-gray-200">
+                    <h4 className="font-semibold text-[#1D2D44] mb-2">For Renewal Clients:</h4>
+                    <p className="text-sm text-gray-700">
                       If your renewal is approaching and bond yields are rising, consider locking in your rate early. If
                       yields are falling, you might benefit from waiting closer to your renewal date.
                     </p>
                   </div>
-                  <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                    <h4 className="font-semibold text-orange-800 mb-2">For Refinancing:</h4>
-                    <p className="text-sm text-orange-700">
+                  <div className="bg-[#F4F6F8] p-4 rounded-lg border border-gray-200">
+                    <h4 className="font-semibold text-[#1D2D44] mb-2">For Refinancing:</h4>
+                    <p className="text-sm text-gray-700">
                       Falling bond yields create refinancing opportunities. Rising yields might make you want to
                       accelerate your refinancing timeline if you're considering it.
                     </p>
