@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 function getPostData() {
   return {
 
-  "july-2025-interest-rate-update": {
+ "july-2025-interest-rate-update": {
   title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
   excerpt:
     "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions and evolving market conditions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
@@ -396,6 +396,7 @@ function getPostData() {
   author: "Rob Bhullar",
   category: "Interest Rates",
   image: "July2025update.png",
+  showNewsletter: true,
 },
 
      "is-your-mortgage-pre-approval-useless": {
