@@ -140,6 +140,11 @@ export default function BreakEvenCalculatorPageClient() {
     const newAmortNum = Number.parseFloat(newAmortization) || 25
     const baseCosts = Number.parseFloat(closingCosts) || 0
 
+    // Validate realistic refinancing costs (warn if over $50,000)
+    if (baseCosts > 50000) {
+      console.warn("Warning: Refinancing costs seem unusually high:", baseCosts)
+    }
+
     // Validate required inputs
     if (balance <= 0 || currentRateNum <= 0 || newRateNum <= 0 || baseCosts <= 0) {
       setResults(null)
@@ -671,7 +676,7 @@ export default function BreakEvenCalculatorPageClient() {
                         </div>
                       </div>
 
-                      {/* Monthly Savings - FIXED */}
+                      {/* Monthly Savings - FIXED to remove stray 0 */}
                       <div className="text-center p-4 bg-blue-50 rounded-lg">
                         <p className="text-sm text-gray-600 mb-1">Monthly Savings</p>
                         {results.debtConsolidationSavings && results.debtConsolidationSavings > 0 && (
