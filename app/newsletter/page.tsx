@@ -228,9 +228,9 @@ export default function NewsletterPage() {
                   <div>
                     <CardTitle className="text-2xl">BC Mortgage Weekly - January 2025</CardTitle>
                     <CardDescription className="text-gray-300">Rate Forecast Special Edition</CardDescription>
-                  </div>
+                    {/*   </div>
                   <Badge className="bg-[#D4AF37] text-[#032133]">Latest Issue</Badge>
-                </div>
+                </div> */}
               </CardHeader>
               <CardContent className="p-8">
                 <div className="space-y-6">
