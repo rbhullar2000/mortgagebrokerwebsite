@@ -1,242 +1,404 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { notFound } from "next/navigation";
 import { NewsletterSubscriptionWrapper } from "@/components/newsletter-subscription-wrapper"
-import type { Metadata } from "next"
 
-interface BlogPost {
-  title: string
-  excerpt: string
-  content: string
-  date: string
-  author: string
-  category: string
-  image: string
-}
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const posts = getPostData()
+  const post = posts[params.slug] || posts["bank-of-canada-cuts-rates-again"] 
 
-interface BlogPosts {
-  [key: string]: BlogPost
-}
-
-function getPostData(): BlogPosts {
   return {
-    "july-2025-interest-rate-update": {
-      title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
-      excerpt:
-        "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions and evolving market conditions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
-      content: `
-        <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
-          <div class="flex items-center mb-3">
-            <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <h3 class="text-lg font-semibold" style="color: #1D2D44;">Mid-Year Rate Update</h3>
+    title: `${post.title} | Rob Bhullar Mortgage Blog`, 
+    description: post.excerpt,
+  }
+}
+
+function getPostData() {
+  return {
+
+  "july-2025-interest-rate-update": {
+  title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
+  excerpt:
+    "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions and evolving market conditions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
+  content: `
+    <div class="bg-white border-l-4 p-6 mb-8 rounded-r-lg" style="border-left-color: #D4AF37;">
+      <div class="flex items-center mb-3">
+        <svg class="w-6 h-6 mr-2" style="color: #D4AF37;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h3 class="text-lg font-semibold" style="color: #1D2D44;">Mid-Year Rate Update</h3>
+      </div>
+      <p class="text-black">As we move through the heart of summer, the Canadian mortgage landscape is experiencing a complex dynamic: while the Bank of Canada holds rates steady, fixed mortgage rates are actually increasing due to bond market pressures and inflation concerns. Whether you're a current homeowner, prospective buyer, or thinking of refinancing, understanding these market forces is key to making confident financial decisions.</p>
+    </div>
+
+   <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bank of Canada Holds Steady – But Fixed Rates Are Rising</h2>
+
+<p class="mb-6 text-black leading-relaxed">
+  On <strong>July 10, 2025</strong>, the <strong>Bank of Canada</strong> maintained its <strong>overnight rate at 4.75%</strong>, marking a continued pause in its monetary policy tightening cycle. But beneath the surface, the cost of borrowing is <strong>quietly rising</strong>—and many borrowers are feeling the pinch.
+</p>
+
+<h3 class="text-xl font-semibold text-black mb-3">The Disconnect: Why Fixed Rates Are Rising Anyway</h3>
+
+<p class="mb-4 text-black leading-relaxed">
+  While the BoC's rate decisions directly influence <strong>variable-rate mortgages</strong>, <strong>fixed-rate mortgages</strong> march to a different beat. Their pricing is closely tied to <strong>Government of Canada (GoC) bond yields</strong>, particularly the <strong>5-year yield</strong>, which serves as a benchmark for most fixed terms.
+</p>
+
+<p class="mb-4 text-black leading-relaxed">
+  In recent weeks, the <strong>5-year GoC bond yield has surged over 30 basis points</strong>, driven by:
+</p>
+
+<ul class="list-disc list-inside mb-4 text-black leading-relaxed">
+  <li><strong>Stubborn core inflation</strong>, especially in shelter and services</li>
+  <li><strong>Stronger-than-expected economic data</strong> in Canada and the U.S.</li>
+  <li><strong>Diminishing expectations</strong> for aggressive near-term rate cuts</li>
+</ul>
+
+<div class="my-8 p-6 rounded-lg" style="background-color: #F4F6F8;">
+  <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">5-Year Government of Canada Bond Yield - YTD 2025</h3>
+  <div class="w-full h-96">
+    <div class="w-full h-full flex flex-col items-center justify-center bg-white rounded border">
+      <svg width="100%" height="300" viewBox="0 0 800 300" class="mb-4">
+        <!-- Grid lines -->
+        <defs>
+          <pattern id="grid" width="80" height="30" patternUnits="userSpaceOnUse">
+            <path d="M 80 0 L 0 0 0 30" fill="none" stroke="#e2e8f0" strokeWidth="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+        
+        <!-- Y-axis -->
+        <line x1="60" y1="20" x2="60" y2="280" stroke="#64748b" strokeWidth="2"/>
+        
+        <!-- X-axis -->
+        <line x1="60" y1="280" x2="780" y2="280" stroke="#64748b" strokeWidth="2"/>
+        
+        <!-- Y-axis labels -->
+        <text x="50" y="25" textAnchor="end" fill="#64748b" fontSize="12">3.6%</text>
+        <text x="50" y="85" textAnchor="end" fill="#64748b" fontSize="12">3.4%</text>
+        <text x="50" y="145" textAnchor="end" fill="#64748b" fontSize="12">3.2%</text>
+        <text x="50" y="205" textAnchor="end" fill="#64748b" fontSize="12">3.1%</text>
+        <text x="50" y="265" textAnchor="end" fill="#64748b" fontSize="12">3.0%</text>
+        
+        <!-- X-axis labels -->
+        <text x="120" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Jan</text>
+        <text x="220" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Feb</text>
+        <text x="320" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Mar</text>
+        <text x="420" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Apr</text>
+        <text x="520" y="295" textAnchor="middle" fill="#64748b" fontSize="12">May</text>
+        <text x="620" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Jun</text>
+        <text x="720" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Jul</text>
+        
+        <!-- Data line (3.15% -> 3.22% -> 3.08% -> 3.18% -> 3.28% -> 3.52% -> 3.48%) -->
+        <polyline
+          fill="none"
+          stroke="#D4AF37"
+          strokeWidth="3"
+          points="120,235 220,215 320,255 420,245 520,225 620,65 720,75"
+        />
+        
+        <!-- Data points -->
+        <circle cx="120" cy="235" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="220" cy="215" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="320" cy="255" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="420" cy="245" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="520" cy="225" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="620" cy="65" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+        <circle cx="720" cy="75" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
+      </svg>
+      
+      <div class="space-y-2 text-center">
+        <div class="text-sm text-gray-600">Jan 2025: 3.15% → July 2025: 3.48%</div>
+        <div class="text-sm font-semibold" style="color: #1D2D44;">+33 basis points YTD</div>
+        <div class="text-xs text-gray-500">Peak in June: 3.52% | Low in March: 3.08%</div>
+      </div>
+    </div>
+  </div>
+  <p class="text-sm text-gray-600 mt-4">
+    <strong>Key Insight:</strong> The 5-year GoC bond yield has risen 33 basis points year-to-date, with most of the increase occurring since May 2025. This upward pressure directly translates to higher fixed mortgage rates, even as the Bank of Canada holds its policy rate steady.
+  </p>
+  <p class="text-sm text-gray-600 mt-2">
+    <strong>Learn More:</strong> <a href="https://www.bcmortgageteam.com/bond-yields" class="underline hover:opacity-80" style="color: #1D2D44;">Understanding Bond Yields and Mortgage Rates</a>
+  </p>
+</div>
+
+<p class="mb-6 text-black leading-relaxed">
+  This bond-market activity has triggered <strong>upward pressure on fixed mortgage rates</strong>, even as the Bank of Canada remains on hold. In short:
+</p>
+
+<div class="p-4 bg-yellow-50 border-l-4 border-yellow-400 italic text-black mb-8">
+  <strong>Fixed rates are reacting to forward-looking inflation fears, not present-day policy.</strong>
+</div>
+
+<p class="text-black leading-relaxed">
+  For borrowers, this creates a confusing dynamic—<strong>rates climbing while the central bank stands still</strong>. And it underscores the importance of understanding <strong>how mortgage pricing is truly set</strong>, especially in a volatile rate environment.
+</p>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Current Mortgage Rate Environment (July 19, 2025)</h2>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Fixed Rates (Rising)</h3>
+        <p class="text-black mb-3">Fixed mortgage rates have increased 15-25 basis points over the past month, with some lenders pushing rates above 5.5% for conventional mortgages.</p>
+        <div class="space-y-2">
+          <div class="flex justify-between">
+            <span class="text-black">5-Year Fixed</span>
+            <span class="font-bold" style="color: #1D2D44;">5.19% - 5.49%</span>
           </div>
-          <p class="text-black">As we move through the heart of summer, the Canadian mortgage landscape is experiencing a complex dynamic: while the Bank of Canada holds rates steady, fixed mortgage rates are actually increasing due to bond market pressures and inflation concerns. Whether you're a current homeowner, prospective buyer, or thinking of refinancing, understanding these market forces is key to making confident financial decisions.</p>
+          <div class="flex justify-between">
+            <span class="text-black">3-Year Fixed</span>
+            <span class="font-bold" style="color: #1D2D44;">5.09% - 5.39%</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-black">1-Year Fixed</span>
+            <span class="font-bold" style="color: #1D2D44;">5.29% - 5.59%</span>
+          </div>
         </div>
+      </div>
 
-        <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Bank of Canada Holds Steady – But Fixed Rates Are Rising</h2>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Variable Rates (Stable)</h3>
+        <p class="text-black mb-3">Variable rates remain tied to the Bank of Canada's overnight rate and have held steady, though the spread between variable and fixed has narrowed significantly.</p>
+        <div class="space-y-2">
+          <div class="flex justify-between">
+            <span class="text-black">Prime - 0.50%</span>
+            <span class="font-bold" style="color: #D4AF37;">6.00%</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-black">Prime - 0.25%</span>
+            <span class="font-bold" style="color: #D4AF37;">6.25%</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-black">Prime Rate</span>
+            <span class="font-bold" style="color: #D4AF37;">6.50%</span>
+          </div>
+        </div>
+      </div>
 
-        <p class="mb-6 text-black leading-relaxed">
-          On <strong>July 10, 2025</strong>, the <strong>Bank of Canada</strong> maintained its <strong>overnight rate at 4.75%</strong>, marking a continued pause in its monetary policy tightening cycle. But beneath the surface, the cost of borrowing is <strong>quietly rising</strong>—and many borrowers are feeling the pinch.
-        </p>
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Alternative Products</h3>
+        <p class="text-black mb-3">With conventional rates rising, alternative lending products are seeing increased demand from borrowers seeking competitive options.</p>
+        <div class="space-y-2">
+          <div class="flex justify-between">
+            <span class="text-black">HELOC</span>
+            <span class="font-bold" style="color: #1D2D44;">7.50% - 7.75%</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-black">Private Lending</span>
+            <span class="font-bold" style="color: #1D2D44;">8.50% - 12.00%</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <h3 class="text-xl font-semibold text-black mb-3">The Disconnect: Why Fixed Rates Are Rising Anyway</h3>
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Why Are Fixed Rates Rising Despite BoC Pause?</h2>
 
-        <p class="mb-4 text-black leading-relaxed">
-          While the BoC's rate decisions directly influence <strong>variable-rate mortgages</strong>, <strong>fixed-rate mortgages</strong> march to a different beat. Their pricing is closely tied to <strong>Government of Canada (GoC) bond yields</strong>, particularly the <strong>5-year yield</strong>, which serves as a benchmark for most fixed terms.
-        </p>
-
-        <p class="mb-4 text-black leading-relaxed">
-          In recent weeks, the <strong>5-year GoC bond yield has surged over 30 basis points</strong>, driven by:
-        </p>
-
-        <ul class="list-disc list-inside mb-4 text-black leading-relaxed">
-          <li><strong>Stubborn core inflation</strong>, especially in shelter and services</li>
-          <li><strong>Stronger-than-expected economic data</strong> in Canada and the U.S.</li>
-          <li><strong>Diminishing expectations</strong> for aggressive near-term rate cuts</li>
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+          1. Inflation Concerns Resurface
+        </h3>
+        <p class="text-black mb-3">Recent inflation data has shown some stickiness in core measures, particularly in services and shelter costs. This has spooked bond markets and pushed yields higher.</p>
+        <ul class="space-y-2 text-black">
+          <li>• Core CPI remains above the Bank of Canada's comfort zone</li>
+          <li>• Wage growth continues to outpace productivity gains</li>
+          <li>• Housing costs remain a persistent inflationary pressure</li>
+          <li>• Global commodity price volatility adds uncertainty</li>
         </ul>
+      </div>
 
-        <div class="my-8 p-6 rounded-lg" style="background-color: #F4F6F8;">
-          <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">5-Year Government of Canada Bond Yield - YTD 2025</h3>
-          <div class="w-full h-96">
-            <div class="w-full h-full flex flex-col items-center justify-center bg-white rounded border">
-              <svg width="100%" height="300" viewBox="0 0 800 300" class="mb-4">
-                <defs>
-                  <pattern id="grid" width="80" height="30" patternUnits="userSpaceOnUse">
-                    <path d="M 80 0 L 0 0 0 30" fill="none" stroke="#e2e8f0" strokeWidth="1"/>
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#grid)" />
-                
-                <line x1="60" y1="20" x2="60" y2="280" stroke="#64748b" strokeWidth="2"/>
-                <line x1="60" y1="280" x2="780" y2="280" stroke="#64748b" strokeWidth="2"/>
-                
-                <text x="50" y="25" textAnchor="end" fill="#64748b" fontSize="12">3.6%</text>
-                <text x="50" y="85" textAnchor="end" fill="#64748b" fontSize="12">3.4%</text>
-                <text x="50" y="145" textAnchor="end" fill="#64748b" fontSize="12">3.2%</text>
-                <text x="50" y="205" textAnchor="end" fill="#64748b" fontSize="12">3.1%</text>
-                <text x="50" y="265" textAnchor="end" fill="#64748b" fontSize="12">3.0%</text>
-                
-                <text x="120" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Jan</text>
-                <text x="220" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Feb</text>
-                <text x="320" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Mar</text>
-                <text x="420" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Apr</text>
-                <text x="520" y="295" textAnchor="middle" fill="#64748b" fontSize="12">May</text>
-                <text x="620" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Jun</text>
-                <text x="720" y="295" textAnchor="middle" fill="#64748b" fontSize="12">Jul</text>
-                
-                <polyline
-                  fill="none"
-                  stroke="#D4AF37"
-                  strokeWidth="3"
-                  points="120,235 220,215 320,255 420,245 520,225 620,65 720,75"
-                />
-                
-                <circle cx="120" cy="235" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
-                <circle cx="220" cy="215" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
-                <circle cx="320" cy="255" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
-                <circle cx="420" cy="245" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
-                <circle cx="520" cy="225" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
-                <circle cx="620" cy="65" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
-                <circle cx="720" cy="75" r="5" fill="#D4AF37" stroke="white" strokeWidth="2"/>
-              </svg>
-              
-              <div class="space-y-2 text-center">
-                <div class="text-sm text-gray-600">Jan 2025: 3.15% → July 2025: 3.48%</div>
-                <div class="text-sm font-semibold" style="color: #1D2D44;">+33 basis points YTD</div>
-                <div class="text-xs text-gray-500">Peak in June: 3.52% | Low in March: 3.08%</div>
-              </div>
-            </div>
-          </div>
-          <p class="text-sm text-gray-600 mt-4">
-            <strong>Key Insight:</strong> The 5-year GoC bond yield has risen 33 basis points year-to-date, with most of the increase occurring since May 2025. This upward pressure directly translates to higher fixed mortgage rates, even as the Bank of Canada holds its policy rate steady.
-          </p>
-          <p class="text-sm text-gray-600 mt-2">
-            <strong>Learn More:</strong> <a href="https://www.bcmortgageteam.com/bond-yields" class="underline hover:opacity-80" style="color: #1D2D44;">Understanding Bond Yields and Mortgage Rates</a>
-          </p>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+          </svg>
+          2. Bond Market Dynamics
+        </h3>
+        <p class="text-black mb-3">Government of Canada bond yields have risen sharply, directly impacting fixed mortgage pricing:</p>
+        <ul class="space-y-2 text-black">
+          <li>• 5-year GoC bond yield up 30+ basis points in recent weeks</li>
+          <li>• International investors demanding higher premiums</li>
+          <li>• Uncertainty about future BoC policy direction</li>
+          <li>• Global central bank policy divergence creating volatility</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+          3. Lender Risk Management
+        </h3>
+        <p class="text-black mb-3">Banks and lenders are adjusting their pricing models in response to:</p>
+        <ul class="space-y-2 text-black">
+          <li>• Increased funding costs in wholesale markets</li>
+          <li>• Regulatory capital requirements</li>
+          <li>• Credit risk reassessment in current economic climate</li>
+          <li>• Competitive positioning as demand patterns shift</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">What This Means for Different Types of Borrowers</h2>
+
+    <div class="space-y-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 10H4L5 9z"></path>
+          </svg>
+          New Homebuyers
+        </h3>
+        <p class="text-black mb-3">The rising fixed rate environment creates both challenges and opportunities:</p>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Consider variable rates:</strong> The spread between fixed and variable has narrowed significantly</li>
+          <li>• <strong>Shorter fixed terms:</strong> 1-3 year terms may offer better flexibility</li>
+          <li>• <strong>Rate holds are crucial:</strong> Lock in current rates while shopping</li>
+          <li>• <strong>Enhanced programs available:</strong> First-time buyer incentives can offset higher costs</li>
+          <li>• <strong>Market conditions improving:</strong> Less competition, more negotiating power</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+          Renewal Clients
+        </h3>
+        <p class="text-black mb-3">Those coming up for renewal face a challenging environment:</p>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Rate shock reality:</strong> Many will see significant payment increases</li>
+          <li>• <strong>Variable may be attractive:</strong> Potential for BoC cuts later in 2025</li>
+          <li>• <strong>Shop aggressively:</strong> Lender competition varies significantly</li>
+          <li>• <strong>Consider alternative terms:</strong> Shorter terms, different payment structures</li>
+          <li>• <strong>Early renewal options:</strong> Some lenders offer 6-month early renewals</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-xl font-semibold mb-3 flex items-center" style="color: #1D2D44;">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+          </svg>
+          Refinancing Considerations
+        </h3>
+        <p class="text-black mb-3">The current environment makes refinancing decisions more complex:</p>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Break-even analysis critical:</strong> <a href="https://www.bcmortgageteam.com/break-even-calculator" class="underline hover:opacity-80" style="color: #1D2D44;">Rising rates make penalties more painful – use our calculator</a></li>
+          <li>• <strong>Timing considerations:</strong> Wait for potential rate stabilization?</li>
+          <li>• <strong>Alternative strategies:</strong> HELOCs, second mortgages may be viable</li>
+          <li>• <strong>Debt consolidation impact:</strong> Higher mortgage rates affect consolidation benefits</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Market Outlook: Navigating Uncertainty</h2>
+
+    <div class="p-6 mb-8 rounded-r-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
+      <h3 class="text-lg font-semibold mb-2" style="color: #1D2D44;">The Path Forward</h3>
+      <p class="text-black mb-4">The mortgage market is experiencing a period of unusual volatility, with fixed and variable rates moving in different directions. This creates both challenges and opportunities for borrowers who understand the dynamics at play.</p>
+      
+      <h4 class="text-md font-semibold mb-3" style="color: #1D2D44;">Key factors to watch:</h4>
+      <ul class="space-y-2 text-black">
+        <li>• <strong>Inflation data releases:</strong> Core CPI trends will drive bond market sentiment</li>
+        <li>• <strong>Bank of Canada communications:</strong> Any shift in forward guidance</li>
+        <li>• <strong>Global economic developments:</strong> U.S. Fed policy, geopolitical events</li>
+        <li>• <strong>Housing market activity:</strong> Demand patterns affecting lender competition</li>
+        <li>• <strong>Employment trends:</strong> Labor market strength impacts BoC decisions</li>
+      </ul>
+    </div>
+
+    <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Strategic Recommendations</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Short-Term Actions</h3>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Lock in rates quickly:</strong> If shopping, secure rate holds immediately</li>
+          <li>• <strong>Consider variable rates:</strong> The fixed-variable spread has narrowed</li>
+          <li>• <strong>Explore shorter terms:</strong> 1-3 year fixed rates for flexibility</li>
+          <li>• <strong>Review renewal options early:</strong> Don't wait until maturity</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
+        <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Long-Term Planning</h3>
+        <ul class="space-y-2 text-black">
+          <li>• <strong>Build payment flexibility:</strong> Prepare for potential rate volatility</li>
+          <li>• <strong>Diversify mortgage products:</strong> Consider split mortgages</li>
+          <li>• <strong>Monitor market trends:</strong> Stay informed about rate drivers</li>
+          <li>• <strong>Professional guidance:</strong> Complex markets require expert navigation</li>
+        </ul>
+      </div>
+    </div>
+
+     <div class="p-6 mb-8 rounded-lg border-l-4" style="border-left-color: #1D2D44;background-color:#F4F6F8;">
+  <h3 class="text-xl font-semibold mb-3" style="color:#1D2D44;">🔹 Split Mortgage: A Smart Middle Ground</h3>
+  <p class="text-black mb-2">If you're hesitant to choose fixed or variable, splitting your mortgage gives you the best of both worlds:</p>
+  <ul class="text-black space-y-1">
+    <li>• Lock in a portion at today's fixed rate (<5%), while allowing flexibility with variable.</li>
+    <li>• Hedge against rate cuts impacting the prime-based portion.</li>
+    <li>• Ideal for saving on penalties and adapting to future market changes.</li>
+  </ul>
+</div>
+
+
+    <div class="p-6 rounded-lg mb-8 border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
+      <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Key Dates to Remember</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <div class="font-medium text-black">September 4, 2025</div>
+          <div class="text-sm text-black">Next BoC Rate Decision</div>
         </div>
-
-        <p class="mb-6 text-black leading-relaxed">
-          This bond-market activity has triggered <strong>upward pressure on fixed mortgage rates</strong>, even as the Bank of Canada remains on hold. In short:
-        </p>
-
-        <div class="p-4 bg-yellow-50 border-l-4 border-yellow-400 italic text-black mb-8">
-          <strong>Fixed rates are reacting to forward-looking inflation fears, not present-day policy.</strong>
+        <div>
+          <div class="font-medium text-black">August 15, 2025</div>
+          <div class="text-sm text-black">Next CPI Release</div>
         </div>
-
-        <p class="text-black leading-relaxed">
-          For borrowers, this creates a confusing dynamic—<strong>rates climbing while the central bank stands still</strong>. And it underscores the importance of understanding <strong>how mortgage pricing is truly set</strong>, especially in a volatile rate environment.
-        </p>
-
-        <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Current Mortgage Rate Environment (July 19, 2025)</h2>
-
-        <div class="grid md:grid-cols-3 gap-6 mb-8">
-          <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
-            <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Fixed Rates (Rising)</h3>
-            <p class="text-black mb-3">Fixed mortgage rates have increased 15-25 basis points over the past month, with some lenders pushing rates above 5.5% for conventional mortgages.</p>
-            <div class="space-y-2">
-              <div class="flex justify-between">
-                <span class="text-black">5-Year Fixed</span>
-                <span class="font-bold" style="color: #1D2D44;">5.19% - 5.49%</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-black">3-Year Fixed</span>
-                <span class="font-bold" style="color: #1D2D44;">5.09% - 5.39%</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-black">1-Year Fixed</span>
-                <span class="font-bold" style="color: #1D2D44;">5.29% - 5.59%</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #D4AF37;">
-            <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Variable Rates (Stable)</h3>
-            <p class="text-black mb-3">Variable rates remain tied to the Bank of Canada's overnight rate and have held steady, though the spread between variable and fixed has narrowed significantly.</p>
-            <div class="space-y-2">
-              <div class="flex justify-between">
-                <span class="text-black">Prime - 0.50%</span>
-                <span class="font-bold" style="color: #D4AF37;">6.00%</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-black">Prime - 0.25%</span>
-                <span class="font-bold" style="color: #D4AF37;">6.25%</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-black">Prime Rate</span>
-                <span class="font-bold" style="color: #D4AF37;">6.50%</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #1D2D44;">
-            <h3 class="text-xl font-semibold mb-4" style="color: #1D2D44;">Alternative Products</h3>
-            <p class="text-black mb-3">With conventional rates rising, alternative lending products are seeing increased demand from borrowers seeking competitive options.</p>
-            <div class="space-y-2">
-              <div class="flex justify-between">
-                <span class="text-black">HELOC</span>
-                <span class="font-bold" style="color: #1D2D44;">7.50% - 7.75%</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-black">Private Lending</span>
-                <span class="font-bold" style="color: #1D2D44;">8.50% - 12.00%</span>
-              </div>
-            </div>
-          </div>
+        <div>
+          <div class="font-medium text-black">October 29, 2025</div>
+          <div class="text-sm text-black">Rate Decision + Monetary Policy Report</div>
         </div>
-
-        <h2 class="text-2xl font-bold text-black mt-8 mb-4 pb-2" style="border-bottom: 2px solid #D4AF37;">Strategic Recommendations</h2>
-
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="p-6 rounded-lg border-l-4" style="background-color: #F4F6F8; border-left-color: #D4AF37;">
-            <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Short-Term Actions</h3>
-            <ul class="space-y-2 text-black">
-              <li>• <strong>Lock in rates quickly:</strong> If shopping, secure rate holds immediately</li>
-              <li>• <strong>Consider variable rates:</strong> The fixed-variable spread has narrowed</li>
-              <li>• <strong>Explore shorter terms:</strong> 1-3 year fixed rates for flexibility</li>
-              <li>• <strong>Review renewal options early:</strong> Don't wait until maturity</li>
-            </ul>
-          </div>
-          <div class="bg-white p-6 rounded-lg border-l-4" style="border-left-color: #1D2D44;">
-            <h3 class="text-lg font-semibold mb-3" style="color: #1D2D44;">Long-Term Planning</h3>
-            <ul class="space-y-2 text-black">
-              <li>• <strong>Build payment flexibility:</strong> Prepare for potential rate volatility</li>
-              <li>• <strong>Diversify mortgage products:</strong> Consider split mortgages</li>
-              <li>• <strong>Monitor market trends:</strong> Stay informed about rate drivers</li>
-              <li>• <strong>Professional guidance:</strong> Complex markets require expert navigation</li>
-            </ul>
-          </div>
+        <div>
+          <div class="font-medium text-black">Monthly</div>
+          <div class="text-sm text-black">Employment and inflation data</div>
         </div>
+      </div>
+    </div>
 
-        <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
-          <div class="text-center">
-            <h3 class="text-2xl font-bold mb-4">Navigate This Complex Rate Environment with Confidence</h3>
-            <p class="mb-6 opacity-90">With fixed rates rising and market volatility increasing, having an experienced mortgage professional in your corner is more important than ever. We'll help you understand your options and develop a strategy that works in any rate environment.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
-                Free Strategy Session
-              </a>
-              <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
-                Get Current Rates
-              </a>
-            </div>
-          </div>
+   
+    <div class="text-white p-8 rounded-lg mb-8" style="background: linear-gradient(to right, #1D2D44, #D4AF37);">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold mb-4">Navigate This Complex Rate Environment with Confidence</h3>
+        <p class="mb-6 opacity-90">With fixed rates rising and market volatility increasing, having an experienced mortgage professional in your corner is more important than ever. We'll help you understand your options and develop a strategy that works in any rate environment.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/#contact" class="bg-white hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors" style="color: #1D2D44;">
+            Free Strategy Session
+          </a>
+          <a href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white hover:bg-white px-6 py-3 rounded-lg font-semibold transition-colors" style="hover:color: #1D2D44;">
+            Get Current Rates
+          </a>
         </div>
+      </div>
+    </div>
 
-        <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
-          <p class="text-sm text-black italic">
-            <strong>Disclaimer:</strong> This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and market conditions are subject to change rapidly. Individual circumstances may vary. Always consult with a qualified mortgage professional for personalized advice.
-          </p>
-          <p class="text-sm text-black italic mt-2">
-            <strong>Sources:</strong> Bank of Canada, Government of Canada bond yields, major Canadian lender rate sheets, Integrated Mortgage Planners market analysis, and industry rate tracking services.
-          </p>
-        </div>
-      `,
-      date: "July 19, 2025",
-      author: "Rob Bhullar",
-      category: "Interest Rates",
-      image: "July2025update.png",
-    },
+    <div class="border-t pt-6 mt-8" style="border-color: #D4AF37;">
+      <p class="text-sm text-black italic">
+        <strong>Disclaimer:</strong> This analysis is for informational purposes only and should not be considered financial advice. Mortgage rates and market conditions are subject to change rapidly. Individual circumstances may vary. Always consult with a qualified mortgage professional for personalized advice.
+      </p>
+      <p class="text-sm text-black italic mt-2">
+        <strong>Sources:</strong> Bank of Canada, Government of Canada bond yields, major Canadian lender rate sheets, Integrated Mortgage Planners market analysis, and industry rate tracking services.
+      </p>
+    </div>
+  `,
+  date: "July 19, 2025",
+  author: "Rob Bhullar",
+  category: "Interest Rates",
+  image: "July2025update.png",
+},
+
 
      "is-your-mortgage-pre-approval-useless": {
   title: "Your Mortgage Pre-Approval Might Not Mean What You Think — Here’s Why",
