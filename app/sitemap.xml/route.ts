@@ -70,7 +70,7 @@ export async function GET() {
   // Generate blog post URLs
   const blogPostUrls = blogPosts.map((post) => ({
     url: `/blog/${post.slug}`,
-    lastModified: post.date,
+    lastModified: new Date(post.date).toISOString(),
     changeFrequency: "monthly",
     priority: 0.7,
   }))
