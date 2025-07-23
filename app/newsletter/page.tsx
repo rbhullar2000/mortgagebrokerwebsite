@@ -330,7 +330,7 @@ export default function NewsletterPage() {
               >
                 <Link href="/#contact">
                   <ArrowRight className="w-5 h-5 mr-2" />
-                  Contact Rob Directly
+                  Contact Directly
                 </Link>
               </Button>
             </div>
