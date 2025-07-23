@@ -8,29 +8,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = posts[params.slug] || posts["bank-of-canada-cuts-rates-again"] 
 
   return {
-    title: `${post.title} | BC Mortgage Team Articles`,
+    title: `${post.title} | Rob Bhullar Mortgage Blog`, 
     description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      url: `https://www.bcmortgageteam.com/blog/${params.slug}`,
-      type: "article",
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
-      images: [imageUrl],
-    },
-  };
+  }
 }
 
 function getPostData() {
