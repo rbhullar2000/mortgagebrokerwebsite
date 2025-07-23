@@ -1,3 +1,7 @@
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { NewsletterSubscriptionWrapper } from "@/components/newsletter-subscription-wrapper"
+
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const posts = getPostData()
   const post = posts[params.slug] || posts["bank-of-canada-cuts-rates-again"]
@@ -40,7 +44,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     },
   }
 }
-
 function getPostData() {
   return {
 
