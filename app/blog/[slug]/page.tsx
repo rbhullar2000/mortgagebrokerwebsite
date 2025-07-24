@@ -2,6 +2,8 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { notFound } from "next/navigation";
 import { NewsletterSubscriptionWrapper } from "@/components/newsletter-subscription-wrapper"
+import { NewsletterSubscription } from "@/components/newsletter-subscription"
+
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const posts = getPostData()
@@ -392,6 +394,12 @@ function getPostData() {
         <strong>Sources:</strong> Bank of Canada, Government of Canada bond yields, major Canadian lender rate sheets, Integrated Mortgage Planners market analysis, and industry rate tracking services.
       </p>
     </div>
+
+<div className="mb-8">
+                  <NewsletterSubscription />
+                </div>
+
+    
   `,
   date: "July 19, 2025",
   author: "Rob Bhullar",
