@@ -235,7 +235,7 @@ export default function HomePage() {
                 About Rob S. Bhullar, BSc
               </Badge>
 
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">Mortgage Strategy Lead</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">Mortgage Professional</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 With 20+ years of experience in the financial industry, I help BC homeowners, investors, and first-time buyers navigate mortgage decisions with confidence and clarity. Blending deep analytics with lending expertise and a client-first approach, I focus on delivering fast, stress-free solutions tailored to your financial goals.
               </p>
