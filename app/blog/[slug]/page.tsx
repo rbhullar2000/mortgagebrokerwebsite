@@ -385,7 +385,7 @@ function getPostData() {
       </div>
     </div>
 
-    <div className="mb-8">
+   <div className="mb-8">
                   <NewsletterSubscription />
                 </div>
 
