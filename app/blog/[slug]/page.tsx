@@ -1,7 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { notFound } from "next/navigation";
-import { NewsletterSubscriptionWrapper } from "@/components/newsletter-subscription-wrapper"
 import { NewsletterSubscription } from "@/components/newsletter-subscription"
 
 
