@@ -55,8 +55,8 @@ export async function POST(request: Request) {
     })
 
     await transporter.sendMail({
-      from: `"BC Mortgage Team Website" <rob@bcmortgageteam.com>`,
-      to: process.env.EMAIL_TO || "rob@bcmortgageteam.com",
+      from: `"BC Mortgage Team Website" <contact@bcmortgageteam.com>`,
+      to: process.env.EMAIL_TO || "contact@bcmortgageteam.com",
       subject: `New Mortgage Inquiry from ${name}`,
       html: htmlContent,
     })
