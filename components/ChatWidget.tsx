@@ -10,7 +10,7 @@ interface Message {
 const WELCOME_MESSAGE: Message = {
   role: "assistant",
   content:
-    "Hi! I'm Rob's mortgage assistant 👋 I can answer questions about mortgages, rates, and our services — or help you book a free consultation with Rob. What can I help you with today?",
+    "Hi! I'm BC Mortgage Team's assistant 👋 I can answer questions about mortgages, rates, and our services — or help you book a free consultation with a Mortgage Professional. What can I help you with today?",
 };
 
 function linkify(text: string) {
