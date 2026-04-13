@@ -96,90 +96,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-[#F4F6F8]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Comprehensive Mortgage Services</h2>
-            <p className="text-xl text-[#2C2C2C] max-w-3xl mx-auto">
-              From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every
-              situation.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Users className="w-8 h-8 text-[#1D2D44]" />,
-                title: "First-Time Homebuyers",
-                description: "Navigate your first home purchase with confidence. Special programs and rates available.",
-                features: ["Down payment assistance", "First-time buyer programs", "Step-by-step guidance"],
-                link: "/purchase",
-              },
-              {
-                icon: <TrendingUp className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Mortgage Renewals",
-                description: "Don't auto-renew! We'll find you better rates and terms when your mortgage comes due.",
-                features: ["Rate comparison", "Term optimization", "No-cost renewals"],
-                link: "/renewal",
-              },
-              {
-                icon: <FileText className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Refinancing",
-                description: "Access your home's equity or consolidate debt with competitive refinancing options.",
-                features: ["Debt consolidation", "Home improvements", "Investment opportunities"],
-                link: "/refinance",
-              },
-              {
-                icon: <Calculator className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Investment Properties",
-                description: "Specialized financing for real estate investors and rental property purchases.",
-                features: ["Investment strategies", "Portfolio lending", "Commercial options"],
-                link: "/investment",
-              },
-              {
-                icon: <Shield className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Self-Employed Solutions",
-                description: "Alternative documentation programs for entrepreneurs and self-employed professionals.",
-                features: ["Bank statement programs", "Asset-based lending", "Flexible verification"],
-                link: "/self-employed",
-              },
-              {
-                icon: <Clock className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Quick Closings",
-                description: "Fast-track approvals for time-sensitive purchases and competitive offers.",
-                features: ["24-48 hour approvals", "Same-day pre-approvals", "Priority processing"],
-                link: "/quick-closings",
-              },
-            ].map((service, index) => (
-              <Card key={index} className="bg-white shadow-md hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center mb-4">
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-xl text-[#1D2D44]">{service.title}</CardTitle>
-                  <CardDescription className="text-gray-700">{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button variant="link" className="p-0 text-[#1D2D44] font-medium" asChild>
-                    <Link href={service.link}>
-                      Learn more <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
+     
       {/* Rate Comparison Tool Section */}
       {/*  <section id="rates" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
@@ -199,6 +116,67 @@ export default function HomePage() {
           </div>
         </div>
       </section> */}
+
+       {/* Market Insights - Twitter Feed */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">Market Insights</h2>
+            <p className="text-gray-600">Latest updates and market commentary on X</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            {/* Twitter Feed */}
+            <div>
+              <TwitterFeed />
+            </div>
+
+            {/* Info Card */}
+            <div className="lg:pl-4">
+              <Card className="p-8 bg-gradient-to-br from-[#F4F6F8] to-white border border-gray-200">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-[#032133] rounded-full flex items-center justify-center">
+                    <Twitter className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Follow for Updates</h3>
+                  </div>
+                </div>
+
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Stay informed with regular market commentary, mortgage rate updates, and real estate insights. I share analysis on industry trends, rate movements, and strategy tips to help you make informed decisions.
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  {[
+                    'Real-time mortgage rate updates',
+                    'Market analysis and economic commentary',
+                    'Tips for homebuyers and investors',
+                    'Industry news and lending updates',
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-5 h-5 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href="https://x.com/robbhullar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#032133] text-white px-6 py-3 rounded-lg hover:bg-[#032133]/90 transition-colors font-semibold"
+                >
+                  <Twitter className="w-5 h-5" />
+                  Follow @robbhullar
+                </Link>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       <section id="about" className="py-20 bg-white">
@@ -297,67 +275,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Market Insights - Twitter Feed */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">Market Insights</h2>
-            <p className="text-gray-600">Latest updates and market commentary on X</p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            {/* Twitter Feed */}
-            <div>
-              <TwitterFeed />
-            </div>
-
-            {/* Info Card */}
-            <div className="lg:pl-4">
-              <Card className="p-8 bg-gradient-to-br from-[#F4F6F8] to-white border border-gray-200">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-[#032133] rounded-full flex items-center justify-center">
-                    <Twitter className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Follow for Updates</h3>
-                  </div>
-                </div>
-
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  Stay informed with regular market commentary, mortgage rate updates, and real estate insights. I share analysis on industry trends, rate movements, and strategy tips to help you make informed decisions.
-                </p>
-
-                <div className="space-y-4 mb-8">
-                  {[
-                    'Real-time mortgage rate updates',
-                    'Market analysis and economic commentary',
-                    'Tips for homebuyers and investors',
-                    'Industry news and lending updates',
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-5 h-5 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-white text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-700">{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  href="https://x.com/robbhullar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#032133] text-white px-6 py-3 rounded-lg hover:bg-[#032133]/90 transition-colors font-semibold"
-                >
-                  <Twitter className="w-5 h-5" />
-                  Follow @robbhullar
-                </Link>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     
       {/* Lenders Section */}
       <section id="lenders" className="py-20 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
@@ -444,6 +362,91 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+       {/* Services Section */}
+      <section id="services" className="py-20 bg-[#F4F6F8]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Comprehensive Mortgage Services</h2>
+            <p className="text-xl text-[#2C2C2C] max-w-3xl mx-auto">
+              From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every
+              situation.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Users className="w-8 h-8 text-[#1D2D44]" />,
+                title: "First-Time Homebuyers",
+                description: "Navigate your first home purchase with confidence. Special programs and rates available.",
+                features: ["Down payment assistance", "First-time buyer programs", "Step-by-step guidance"],
+                link: "/purchase",
+              },
+              {
+                icon: <TrendingUp className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Mortgage Renewals",
+                description: "Don't auto-renew! We'll find you better rates and terms when your mortgage comes due.",
+                features: ["Rate comparison", "Term optimization", "No-cost renewals"],
+                link: "/renewal",
+              },
+              {
+                icon: <FileText className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Refinancing",
+                description: "Access your home's equity or consolidate debt with competitive refinancing options.",
+                features: ["Debt consolidation", "Home improvements", "Investment opportunities"],
+                link: "/refinance",
+              },
+              {
+                icon: <Calculator className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Investment Properties",
+                description: "Specialized financing for real estate investors and rental property purchases.",
+                features: ["Investment strategies", "Portfolio lending", "Commercial options"],
+                link: "/investment",
+              },
+              {
+                icon: <Shield className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Self-Employed Solutions",
+                description: "Alternative documentation programs for entrepreneurs and self-employed professionals.",
+                features: ["Bank statement programs", "Asset-based lending", "Flexible verification"],
+                link: "/self-employed",
+              },
+              {
+                icon: <Clock className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Quick Closings",
+                description: "Fast-track approvals for time-sensitive purchases and competitive offers.",
+                features: ["24-48 hour approvals", "Same-day pre-approvals", "Priority processing"],
+                link: "/quick-closings",
+              },
+            ].map((service, index) => (
+              <Card key={index} className="bg-white shadow-md hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center mb-4">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl text-[#1D2D44]">{service.title}</CardTitle>
+                  <CardDescription className="text-gray-700">{service.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-700">
+                        <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button variant="link" className="p-0 text-[#1D2D44] font-medium" asChild>
+                    <Link href={service.link}>
+                      Learn more <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Mortgage News Section */}
       <section id="news" className="py-20 bg-white">
