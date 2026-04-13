@@ -1,9 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { Suspense } from "react"
-import ChatWidget from "@/components/ChatWidget";
+import ChatWidget from "@/components/ChatWidget"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -89,6 +90,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         <ChatWidget />
+
+        <Script
+          src="https://platform.twitter.com/widgets.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
