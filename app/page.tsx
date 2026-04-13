@@ -199,27 +199,6 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      {/* Mortgage Calculator Section */}
-      <section id="calculator" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Mortgage Payment Calculator</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get an instant estimate of your monthly mortgage payments and see how different rates and terms affect
-              your budget.
-            </p>
-          </div>
-          <MortgageCalculator />
-          <div className="text-center mt-8">
-            {/*    <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-              <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Start Your Application Now
-              </Link>
-            </Button>
-            <p className="text-sm text-gray-500 mt-3">Complete your mortgage application online</p> */}
-          </div>
-        </div>
-      </section>
 
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -538,6 +517,28 @@ export default function HomePage() {
                 View All Articles <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+       {/* Mortgage Calculator Section */}
+      <section id="calculator" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Mortgage Payment Calculator</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get an instant estimate of your monthly mortgage payments and see how different rates and terms affect
+              your budget.
+            </p>
+          </div>
+          <MortgageCalculator />
+          <div className="text-center mt-8">
+            {/*    <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+              <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                Start Your Application Now
+              </Link>
+            </Button>
+            <p className="text-sm text-gray-500 mt-3">Complete your mortgage application online</p> */}
           </div>
         </div>
       </section>
