@@ -63,10 +63,12 @@ export function TwitterFeed() {
         </p>
 
         <a
-          href="/contact"
-          className="mt-4 inline-block rounded-md bg-[#0A2A43] px-4 py-2 text-sm font-medium text-white hover:opacity-90"
-        >
-          Get Your Numbers →
+  href="https://kanwal-jeet-bhullar.mtg-app.com/signup?brokerId=1b8790a6-314c-429f-884d-77ceebfa2b96"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 inline-block rounded-md bg-[#0A2A43] px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+>
+          Start Your Application → →
         </a>
       </div>
 
