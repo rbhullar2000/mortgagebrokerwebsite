@@ -10,6 +10,7 @@ import { NewsCard } from "@/components/news-card"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
+import { TwitterFeed } from "@/components/twitter-feed"
 
 import { blogPosts } from "@/lib/blogPosts"
 
@@ -311,6 +312,67 @@ export default function HomePage() {
                   </Link>
                 </Button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Insights - Twitter Feed */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">Market Insights</h2>
+            <p className="text-gray-600">Latest updates and market commentary from Rob</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            {/* Twitter Feed */}
+            <div>
+              <TwitterFeed />
+            </div>
+
+            {/* Info Card */}
+            <div className="lg:pl-4">
+              <Card className="p-8 bg-gradient-to-br from-[#F4F6F8] to-white border border-gray-200">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-[#032133] rounded-full flex items-center justify-center">
+                    <Twitter className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Follow for Updates</h3>
+                  </div>
+                </div>
+
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Stay informed with regular market commentary, mortgage rate updates, and real estate insights. I share analysis on industry trends, rate movements, and strategy tips to help you make informed decisions.
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  {[
+                    'Real-time mortgage rate updates',
+                    'Market analysis and economic commentary',
+                    'Tips for homebuyers and investors',
+                    'Industry news and lending updates',
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-5 h-5 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href="https://x.com/robbhullar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#032133] text-white px-6 py-3 rounded-lg hover:bg-[#032133]/90 transition-colors font-semibold"
+                >
+                  <Twitter className="w-5 h-5" />
+                  Follow @robbhullar
+                </Link>
+              </Card>
             </div>
           </div>
         </div>
