@@ -49,14 +49,13 @@ export default function HomePage() {
                 Your Trusted Mortgage Team in <span className="text-[#D4AF37]">British Columbia</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Access 50+ lenders, better rates, and a strategy tailored to your situation — purchase, renewal, or refinance.
-
-                Rates are constantly changing — getting the right structure matters more than ever.
+                Get the best mortgage rates and personalized service. We work with 50+ lenders to find you the perfect
+                mortgage solution for your home purchase, renewal, or refinance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90 h-12" asChild>
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                   Get Pre-Approved → 
+                    Start Your Application
                   </Link>
                 </Button>
                 <Button
@@ -87,16 +86,99 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              {/*   <div className="bg-white rounded-2xl shadow-2xl p-8 border-l-4 border-[#D4AF37]">
-               <h3 className="text-2xl font-bold text-[#1D2D44] mb-6">Schedule a Consultation</h3>
-               <ContactForm variant="hero" />
-              </div> */}
+              <div className="bg-white rounded-2xl shadow-2xl p-8 border-l-4 border-[#D4AF37]">
+                <h3 className="text-2xl font-bold text-[#1D2D44] mb-6">Schedule a Consultation</h3>
+                <ContactForm variant="hero" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-     
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-[#F4F6F8]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Comprehensive Mortgage Services</h2>
+            <p className="text-xl text-[#2C2C2C] max-w-3xl mx-auto">
+              From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every
+              situation.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Users className="w-8 h-8 text-[#1D2D44]" />,
+                title: "First-Time Homebuyers",
+                description: "Navigate your first home purchase with confidence. Special programs and rates available.",
+                features: ["Down payment assistance", "First-time buyer programs", "Step-by-step guidance"],
+                link: "/purchase",
+              },
+              {
+                icon: <TrendingUp className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Mortgage Renewals",
+                description: "Don't auto-renew! We'll find you better rates and terms when your mortgage comes due.",
+                features: ["Rate comparison", "Term optimization", "No-cost renewals"],
+                link: "/renewal",
+              },
+              {
+                icon: <FileText className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Refinancing",
+                description: "Access your home's equity or consolidate debt with competitive refinancing options.",
+                features: ["Debt consolidation", "Home improvements", "Investment opportunities"],
+                link: "/refinance",
+              },
+              {
+                icon: <Calculator className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Investment Properties",
+                description: "Specialized financing for real estate investors and rental property purchases.",
+                features: ["Investment strategies", "Portfolio lending", "Commercial options"],
+                link: "/investment",
+              },
+              {
+                icon: <Shield className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Self-Employed Solutions",
+                description: "Alternative documentation programs for entrepreneurs and self-employed professionals.",
+                features: ["Bank statement programs", "Asset-based lending", "Flexible verification"],
+                link: "/self-employed",
+              },
+              {
+                icon: <Clock className="w-8 h-8 text-[#1D2D44]" />,
+                title: "Quick Closings",
+                description: "Fast-track approvals for time-sensitive purchases and competitive offers.",
+                features: ["24-48 hour approvals", "Same-day pre-approvals", "Priority processing"],
+                link: "/quick-closings",
+              },
+            ].map((service, index) => (
+              <Card key={index} className="bg-white shadow-md hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center mb-4">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl text-[#1D2D44]">{service.title}</CardTitle>
+                  <CardDescription className="text-gray-700">{service.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-700">
+                        <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button variant="link" className="p-0 text-[#1D2D44] font-medium" asChild>
+                    <Link href={service.link}>
+                      Learn more <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Rate Comparison Tool Section */}
       {/*  <section id="rates" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
@@ -117,69 +199,27 @@ export default function HomePage() {
         </div>
       </section> */}
 
-       {/* Market Insights - Twitter Feed */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">Market Insights</h2>
-            <p className="text-gray-600">
-  Real-time mortgage and rate analysis to help you make smarter decisions
-</p>
+      {/* Mortgage Calculator Section */}
+      <section id="calculator" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Mortgage Payment Calculator</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get an instant estimate of your monthly mortgage payments and see how different rates and terms affect
+              your budget.
+            </p>
           </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            {/* Twitter Feed */}
-            <div>
-              <TwitterFeed />
-            </div>
-
-            {/* Info Card */}
-            <div className="lg:pl-4">
-              <Card className="p-8 bg-gradient-to-br from-[#F4F6F8] to-white border border-gray-200">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-[#032133] rounded-full flex items-center justify-center">
-                    <Twitter className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">Follow for Updates</h3>
-                  </div>
-                </div>
-
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  Stay informed with regular market commentary, mortgage rate updates, and real estate insights. I share analysis on industry trends, rate movements, and strategy tips to help you make informed decisions.
-                </p>
-
-                <div className="space-y-4 mb-8">
-                  {[
-                    'Real-time mortgage rate updates',
-                    'Market analysis and economic commentary',
-                    'Tips for homebuyers and investors',
-                    'Industry news and lending updates',
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-5 h-5 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-white text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-700">{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  href="https://x.com/robbhullar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#032133] text-white px-6 py-3 rounded-lg hover:bg-[#032133]/90 transition-colors font-semibold"
-                >
-                  <Twitter className="w-5 h-5" />
-                  Follow @robbhullar
-                </Link>
-              </Card>
-            </div>
+          <MortgageCalculator />
+          <div className="text-center mt-8">
+            {/*    <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+              <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                Start Your Application Now
+              </Link>
+            </Button>
+            <p className="text-sm text-gray-500 mt-3">Complete your mortgage application online</p> */}
           </div>
         </div>
       </section>
-
 
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -196,9 +236,9 @@ export default function HomePage() {
                 About Rob S. Bhullar, BSc
               </Badge>
 
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">Work With an Experienced Mortgage Professional</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">Mortgage Professional</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With over 20 years of experience in finance, I help clients make informed mortgage decisions — not just find rates. My approach focuses on structure, flexibility, and long-term strategy — ensuring your mortgage works for you today and in the future.
+                With 20+ years of experience in the financial industry, I help BC homeowners, investors, and first-time buyers navigate mortgage decisions with confidence and clarity. Blending deep analytics with lending expertise and a client-first approach, I focus on delivering fast, stress-free solutions tailored to your financial goals.
               </p>
                 <div className="space-y-4 mb-8">
                 {[
@@ -277,7 +317,67 @@ export default function HomePage() {
         </div>
       </section>
 
-     
+      {/* Market Insights - Twitter Feed */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">Market Insights</h2>
+            <p className="text-gray-600">Latest updates and market commentary on X</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            {/* Twitter Feed */}
+            <div>
+              <TwitterFeed />
+            </div>
+
+            {/* Info Card */}
+            <div className="lg:pl-4">
+              <Card className="p-8 bg-gradient-to-br from-[#F4F6F8] to-white border border-gray-200">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-[#032133] rounded-full flex items-center justify-center">
+                    <Twitter className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Follow for Updates</h3>
+                  </div>
+                </div>
+
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Stay informed with regular market commentary, mortgage rate updates, and real estate insights. I share analysis on industry trends, rate movements, and strategy tips to help you make informed decisions.
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  {[
+                    'Real-time mortgage rate updates',
+                    'Market analysis and economic commentary',
+                    'Tips for homebuyers and investors',
+                    'Industry news and lending updates',
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-5 h-5 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href="https://x.com/robbhullar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#032133] text-white px-6 py-3 rounded-lg hover:bg-[#032133]/90 transition-colors font-semibold"
+                >
+                  <Twitter className="w-5 h-5" />
+                  Follow @robbhullar
+                </Link>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lenders Section */}
       <section id="lenders" className="py-20 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
@@ -365,91 +465,6 @@ export default function HomePage() {
         </div>
       </section>
 
-       {/* Services Section */}
-      <section id="services" className="py-20 bg-[#F4F6F8]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Comprehensive Mortgage Services</h2>
-            <p className="text-xl text-[#2C2C2C] max-w-3xl mx-auto">
-              From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every
-              situation.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Users className="w-8 h-8 text-[#1D2D44]" />,
-                title: "First-Time Homebuyers",
-                description: "Navigate your first home purchase with confidence. Special programs and rates available.",
-                features: ["Down payment assistance", "First-time buyer programs", "Step-by-step guidance"],
-                link: "/purchase",
-              },
-              {
-                icon: <TrendingUp className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Mortgage Renewals",
-                description: "Don't auto-renew! We'll find you better rates and terms when your mortgage comes due.",
-                features: ["Rate comparison", "Term optimization", "No-cost renewals"],
-                link: "/renewal",
-              },
-              {
-                icon: <FileText className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Refinancing",
-                description: "Access your home's equity or consolidate debt with competitive refinancing options.",
-                features: ["Debt consolidation", "Home improvements", "Investment opportunities"],
-                link: "/refinance",
-              },
-              {
-                icon: <Calculator className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Investment Properties",
-                description: "Specialized financing for real estate investors and rental property purchases.",
-                features: ["Investment strategies", "Portfolio lending", "Commercial options"],
-                link: "/investment",
-              },
-              {
-                icon: <Shield className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Self-Employed Solutions",
-                description: "Alternative documentation programs for entrepreneurs and self-employed professionals.",
-                features: ["Bank statement programs", "Asset-based lending", "Flexible verification"],
-                link: "/self-employed",
-              },
-              {
-                icon: <Clock className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Quick Closings",
-                description: "Fast-track approvals for time-sensitive purchases and competitive offers.",
-                features: ["24-48 hour approvals", "Same-day pre-approvals", "Priority processing"],
-                link: "/quick-closings",
-              },
-            ].map((service, index) => (
-              <Card key={index} className="bg-white shadow-md hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center mb-4">
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-xl text-[#1D2D44]">{service.title}</CardTitle>
-                  <CardDescription className="text-gray-700">{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button variant="link" className="p-0 text-[#1D2D44] font-medium" asChild>
-                    <Link href={service.link}>
-                      Learn more <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
       {/* Mortgage News Section */}
       <section id="news" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -523,28 +538,6 @@ export default function HomePage() {
                 View All Articles <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
-          </div>
-        </div>
-      </section>
-
-       {/* Mortgage Calculator Section */}
-      <section id="calculator" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Mortgage Payment Calculator</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get an instant estimate of your monthly mortgage payments and see how different rates and terms affect
-              your budget.
-            </p>
-          </div>
-          <MortgageCalculator />
-          <div className="text-center mt-8">
-            {/*    <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-              <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Start Your Application Now
-              </Link>
-            </Button>
-            <p className="text-sm text-gray-500 mt-3">Complete your mortgage application online</p> */}
           </div>
         </div>
       </section>
