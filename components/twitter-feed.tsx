@@ -1,38 +1,36 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 export function TwitterFeed() {
-  const [loaded, setLoaded] = useState(false)
-
   useEffect(() => {
     const script = document.createElement('script')
     script.src = 'https://platform.twitter.com/widgets.js'
     script.async = true
 
     script.onload = () => {
-      setLoaded(true)
+      // Force render AFTER layout stabilizes
+      setTimeout(() => {
+        if (window.twttr?.widgets) {
+          window.twttr.widgets.load()
+        }
+      }, 1000) // 🔥 key fix
     }
 
     document.body.appendChild(script)
   }, [])
 
-  useEffect(() => {
-    if (loaded && window.twttr?.widgets) {
-      window.twttr.widgets.load()
-    }
-  }, [loaded])
-
   return (
-    <div className="w-full min-h-[600px]">
-      <a
-        key={loaded ? 'loaded' : 'loading'} // 🔥 forces re-render
-        className="twitter-timeline"
-        href="https://twitter.com/robbhullar"
-        data-height="600"
-      >
-        Tweets by robbhullar
-      </a>
+    <div style={{ minHeight: '600px', width: '100%', maxWidth: '100%' }}>
+      <div style={{ width: '100%', minWidth: '350px' }}>
+        <a
+          className="twitter-timeline"
+          href="https://twitter.com/robbhullar"
+          data-height="600"
+        >
+          Tweets by robbhullar
+        </a>
+      </div>
     </div>
   )
 }
