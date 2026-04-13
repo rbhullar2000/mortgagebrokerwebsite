@@ -1,36 +1,43 @@
 'use client'
+'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+
+declare global {
+  interface Window {
+    twttr?: {
+      widgets?: {
+        load: (element?: HTMLElement | null) => void
+      }
+    }
+  }
+}
 
 export function TwitterFeed() {
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://platform.twitter.com/widgets.js'
-    script.async = true
+  const ref = useRef<HTMLDivElement>(null)
 
-    script.onload = () => {
-      // Force render AFTER layout stabilizes
-      setTimeout(() => {
-        if (window.twttr?.widgets) {
-          window.twttr.widgets.load()
-        }
-      }, 1000) // 🔥 key fix
+  useEffect(() => {
+    const run = () => {
+      if (!window.twttr?.widgets || !ref.current) return
+
+      // Clear any previous failed render attempt
+      ref.current.innerHTML = `
+        <a
+          class="twitter-timeline"
+          data-height="600"
+          data-theme="light"
+          href="https://twitter.com/robbhullar"
+        >
+          Posts by @robbhullar
+        </a>
+      `
+
+      window.twttr.widgets.load(ref.current)
     }
 
-    document.body.appendChild(script)
+    const id = window.setTimeout(run, 300)
+    return () => window.clearTimeout(id)
   }, [])
 
-  return (
-    <div style={{ minHeight: '600px', width: '100%', maxWidth: '100%' }}>
-      <div style={{ width: '100%', minWidth: '350px' }}>
-        <a
-          className="twitter-timeline"
-          href="https://twitter.com/robbhullar"
-          data-height="600"
-        >
-          Tweets by robbhullar
-        </a>
-      </div>
-    </div>
-  )
+  return <div ref={ref} className="w-full min-h-[600px]" />
 }
