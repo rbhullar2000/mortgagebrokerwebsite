@@ -1,65 +1,44 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 
 declare global {
   interface Window {
-    twttr?: {
-      widgets?: {
-        load: (element?: HTMLElement | null) => void
-      }
-    }
+    twttr?: any
   }
 }
 
 export function TwitterFeed() {
-  const ref = useRef<HTMLDivElement>(null)
-
   useEffect(() => {
-    const renderTimeline = () => {
-      if (!window.twttr?.widgets || !ref.current) return
-
-      ref.current.innerHTML = `
-        <a
-          class="twitter-timeline"
-          href="https://twitter.com/robbhullar"
-          data-height="600"
-          data-theme="light"
-        >
-          Posts by @robbhullar
-        </a>
-      `
-
-      window.twttr.widgets.load(ref.current)
-    }
-
-    const existingScript = document.querySelector(
-      'script[src="https://platform.twitter.com/widgets.js"]'
-    ) as HTMLScriptElement | null
-
-    if (existingScript) {
-      if (window.twttr?.widgets) {
-        renderTimeline()
-      } else {
-        existingScript.addEventListener('load', renderTimeline)
-        return () => {
-          existingScript.removeEventListener('load', renderTimeline)
-        }
+    const loadTwitter = () => {
+      if (window.twttr && window.twttr.widgets) {
+        window.twttr.widgets.load()
       }
-      return
     }
 
-    const script = document.createElement('script')
-    script.src = 'https://platform.twitter.com/widgets.js'
-    script.async = true
-    script.charset = 'utf-8'
-    script.onload = renderTimeline
-    document.body.appendChild(script)
+    const scriptId = 'twitter-wjs'
 
-    return () => {
-      script.onload = null
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script')
+      script.id = scriptId
+      script.src = 'https://platform.twitter.com/widgets.js'
+      script.async = true
+      script.onload = loadTwitter
+      document.body.appendChild(script)
+    } else {
+      loadTwitter()
     }
   }, [])
 
-  return <div ref={ref} className="w-full min-h-[600px]" />
+  return (
+    <div className="w-full min-h-[600px]">
+      <a
+        className="twitter-timeline"
+        href="https://twitter.com/robbhullar"
+        data-height="600"
+      >
+        Tweets by @robbhullar
+      </a>
+    </div>
+  )
 }
