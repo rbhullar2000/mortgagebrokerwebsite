@@ -97,11 +97,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         <ChatWidget />
-
-        <Script
-          src="https://platform.twitter.com/widgets.js"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   )
