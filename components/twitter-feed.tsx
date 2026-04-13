@@ -68,7 +68,7 @@ export function TwitterFeed() {
   rel="noopener noreferrer"
   className="mt-4 inline-block rounded-md bg-[#0A2A43] px-4 py-2 text-sm font-medium text-white hover:opacity-90"
 >
-          Start Your Application → →
+          Start Your Application →
         </a>
       </div>
 
