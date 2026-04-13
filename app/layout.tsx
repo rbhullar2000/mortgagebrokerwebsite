@@ -11,23 +11,29 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "BC Mortgage Team | Smart Financial Solutions",
   description:
-    "BC Mortgage Team are located in British Columbia. Get the best mortgage rates for home purchase, renewal, refinance. 50+ lenders, fast approvals.",
-  keywords: "mortgage broker, BC mortgage, Vancouver mortgage, Surrey mortgage, home loans, mortgage rates",
+    "BC Mortgage Team is located in British Columbia. Get the best mortgage rates for home purchase, renewal, and refinance. Access 50+ lenders and fast approvals.",
+  keywords: [
+    "mortgage broker",
+    "BC mortgage",
+    "Vancouver mortgage",
+    "Surrey mortgage",
+    "home loans",
+    "mortgage rates",
+  ],
   authors: [{ name: "Rob Bhullar" }],
   openGraph: {
     title: "BC Mortgage Team | Smart Financial Solutions",
     description:
-      "BC Mortgage Team are located in British Columbia. Get the best mortgage rates for home purchase, renewal, refinance. 50+ lenders, fast approvals.",
-    url: "https://robbhullar.com",
-    siteName: "BC Mortage Team",
+      "BC Mortgage Team is located in British Columbia. Get the best mortgage rates for home purchase, renewal, and refinance. Access 50+ lenders and fast approvals.",
+    url: "https://bcmortgageteam.com",
+    siteName: "BC Mortgage Team",
     locale: "en_CA",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rob Bhullar - Lincensed Mortgage Professional",
-    description:
-      "Licensed Mortgage Professional in British Columbia",
+    title: "Rob Bhullar - Licensed Mortgage Professional",
+    description: "Licensed Mortgage Professional in British Columbia",
   },
   robots: {
     index: true,
@@ -59,21 +65,22 @@ export default function RootLayout({
               "@type": "FinancialService",
               name: "BC Mortgage Team - Mortgage Services",
               description: "BC Mortgage Team serving British Columbia",
-              url: "https://bcmortageteam.com",
+              url: "https://bcmortgageteam.com",
               telephone: "+1-778-889-7964",
-              email: "contactg@bcmortgageteam.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Delta",
                 addressRegion: "BC",
                 addressCountry: "CA",
               },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: "49.1913",
-                longitude: "-122.8490",
-              },
-              areaServed: ["Vancouver", "Surrey", "Burnaby", "Richmond", "Coquitlam", "British Columbia"],
+              areaServed: [
+                "Vancouver",
+                "Surrey",
+                "Burnaby",
+                "Richmond",
+                "Coquitlam",
+                "British Columbia",
+              ],
               serviceType: [
                 "Mortgage Broker",
                 "Home Purchase Loans",
