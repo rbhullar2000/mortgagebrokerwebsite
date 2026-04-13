@@ -122,7 +122,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">Market Insights</h2>
-            <p className="text-gray-600">Latest updates and market commentary on X</p>
+            <p className="text-gray-600"LReal-time mortgage and rate analysis to help you make smarter decisions</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-start">
@@ -196,7 +196,7 @@ export default function HomePage() {
 
               <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">Work With an Experienced Mortgage Professional</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With 20+ years of experience in the financial industry, I help BC homeowners, investors, and first-time buyers navigate mortgage decisions with confidence and clarity. Blending deep analytics with lending expertise and a client-first approach, I focus on delivering fast, stress-free solutions tailored to your financial goals.
+                With over 20 years of experience in finance, I help clients make informed mortgage decisions — not just find rates. My approach focuses on structure, flexibility, and long-term strategy — ensuring your mortgage works for you today and in the future.
               </p>
                 <div className="space-y-4 mb-8">
                 {[
