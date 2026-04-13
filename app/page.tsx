@@ -50,6 +50,8 @@ export default function HomePage() {
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Access 50+ lenders, better rates, and a strategy tailored to your situation — purchase, renewal, or refinance.
+
+                Rates are constantly changing — getting the right structure matters more than ever.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90 h-12" asChild>
