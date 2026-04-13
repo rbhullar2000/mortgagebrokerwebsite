@@ -1,5 +1,4 @@
 'use client'
-'use client'
 
 import { useEffect, useRef } from 'react'
 
@@ -17,16 +16,15 @@ export function TwitterFeed() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const run = () => {
+    const renderTimeline = () => {
       if (!window.twttr?.widgets || !ref.current) return
 
-      // Clear any previous failed render attempt
       ref.current.innerHTML = `
         <a
           class="twitter-timeline"
+          href="https://twitter.com/robbhullar"
           data-height="600"
           data-theme="light"
-          href="https://twitter.com/robbhullar"
         >
           Posts by @robbhullar
         </a>
@@ -35,8 +33,32 @@ export function TwitterFeed() {
       window.twttr.widgets.load(ref.current)
     }
 
-    const id = window.setTimeout(run, 300)
-    return () => window.clearTimeout(id)
+    const existingScript = document.querySelector(
+      'script[src="https://platform.twitter.com/widgets.js"]'
+    ) as HTMLScriptElement | null
+
+    if (existingScript) {
+      if (window.twttr?.widgets) {
+        renderTimeline()
+      } else {
+        existingScript.addEventListener('load', renderTimeline)
+        return () => {
+          existingScript.removeEventListener('load', renderTimeline)
+        }
+      }
+      return
+    }
+
+    const script = document.createElement('script')
+    script.src = 'https://platform.twitter.com/widgets.js'
+    script.async = true
+    script.charset = 'utf-8'
+    script.onload = renderTimeline
+    document.body.appendChild(script)
+
+    return () => {
+      script.onload = null
+    }
   }, [])
 
   return <div ref={ref} className="w-full min-h-[600px]" />
