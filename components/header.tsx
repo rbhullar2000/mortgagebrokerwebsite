@@ -12,6 +12,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navigationItems = [
+    { href: "/", label: "Explore Options" },
     { href: "/strategy", label: "Mortgage Strategy" },
     { href: "/#calculator", label: "Mortgage Calculator" },
     { href: "/break-even-calculator", label: "Refinance Calculator" },
