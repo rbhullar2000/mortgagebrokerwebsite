@@ -208,23 +208,28 @@ export default function HomePage() {
                 About Rob S. Bhullar, BSc
               </Badge>
 
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">Strategy-First Mortgage Advice</h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                With 20+ years of experience in the financial industry, I help BC homeowners, investors, and first-time buyers navigate mortgage decisions with confidence and clarity. Blending deep analytics with lending expertise and a client-first approach, I focus on delivering fast, stress-free solutions tailored to your financial goals.
-              </p>
-                <div className="space-y-4 mb-8">
-                {[
-                  "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
-                  "Hands-on experience managing risk, optimizing client outcomes, and aligning mortgage structures with long-term goals",
-                  "Expert in complex approvals, debt consolidation, and investor financing",
-                  "Bachelor of Science in Mathematics with a Minor in Business Administration from Simon Fraser University",
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-[#032133] rounded-full mr-4"></div>
-                    <span className="text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
+             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">
+  Strategy-First Mortgage Advice
+</h2>
+
+<p className="text-lg text-gray-600 mb-6 leading-relaxed">
+  With 20+ years of experience in finance — including a background as an Equity Analyst — I help BC homeowners, investors, and first-time buyers navigate mortgage decisions with clarity and confidence. My approach combines analytical thinking with real-world lending expertise, focusing on how a mortgage is structured — not just the rate — to support your long-term financial goals.
+</p>
+
+<div className="space-y-4 mb-8">
+  {[
+    "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
+    "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
+    "Experience structuring mortgages for complex approvals, debt consolidation, and investor financing",
+    "Focused on aligning mortgage decisions with long-term financial strategy",
+    "Bachelor of Science in Mathematics, Minor in Business Administration — Simon Fraser University",
+  ].map((item, index) => (
+    <div key={index} className="flex items-start">
+      <div className="w-2 h-2 bg-[#032133] rounded-full mr-4 mt-2"></div>
+      <span className="text-gray-700">{item}</span>
+    </div>
+  ))}
+</div>
 
               <div className="grid grid-cols-3 gap-6 mb-8 items-center text-center">
                 {/* Column 1: Text */}
