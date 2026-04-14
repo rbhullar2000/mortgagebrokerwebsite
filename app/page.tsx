@@ -300,7 +300,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">Market Insights</h2>
-            <p className="text-gray-600">Latest updates and market commentary on X</p>
+            <p className="text-gray-600">Mortgage and rate insights to help you make better decisions</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-start">
