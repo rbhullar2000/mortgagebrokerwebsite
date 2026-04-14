@@ -144,7 +144,7 @@ export function Header() {
                       </div>
                     </div>
 
-                    <                    <nav className="flex flex-col space-y-3">
+                    <nav className="flex flex-col space-y-3">
                       {navigationItems.map((item) => (
                         <Link
                           key={item.href}
