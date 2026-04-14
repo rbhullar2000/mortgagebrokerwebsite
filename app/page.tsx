@@ -43,7 +43,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
-  Licensed Mortgage Guidance for BC Borrowers
+  Strategy-First Mortgage Advice for BC Borrowers
 </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight">
   Smarter Mortgage <span className="text-[#D4AF37]">Decisions</span>{" "}Start Here
