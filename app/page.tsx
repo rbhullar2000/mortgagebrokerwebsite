@@ -38,61 +38,52 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-[#F4F6F8] to-white">
+      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-5 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
-              Strategy-First Mortgage Advice for BC Borrowers
-            </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight text-balance">
-              Smarter Mortgage <span className="text-[#D4AF37]">Decisions</span> Start Here
-            </h1>
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-              Access 50+ lenders — and a strategy tailored to your situation. Most people focus on rates. The real advantage is structure.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-              <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90 h-12" asChild>
-                <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                  Get Your Mortgage Strategy →
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-12 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white bg-transparent"
-                asChild
-              >
-                <Link href="#calculator">
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Mortgage Calculator
-                </Link>
-              </Button>
-            </div>
-            <div className="mb-10 bg-[#F4F6F8] rounded-xl p-5 border border-gray-200 max-w-xl mx-auto text-left">
-              <p className="text-xs font-semibold uppercase tracking-wide text-[#1D2D44] mb-2">
-                Expert Insight
+              <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 inline-block">
+  Strategy-First Mortgage Advice for BC Borrowers
+</Badge>
+              <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight">
+  <span className="whitespace-nowrap">Smarter Mortgage <span className="text-[#D4AF37]">Decisions</span></span>
+  <br />
+  Start Here
+</h1>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                Access 50+ lenders — and a strategy tailored to your situation. Most people focus on rates. The real advantage is structure.
               </p>
-              <p className="text-[#1D2D44] font-semibold mb-1">
-                Most mortgage decisions are based on rate.
-              </p>
-              <p className="text-gray-600">
-                The best ones are based on structure, timing, and long-term strategy.
-              </p>
-            </div>
-            <div className="flex items-center justify-center gap-8 text-sm text-gray-600 flex-wrap">
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-[#032133]" />
-                Licensed & Insured
+              <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+                <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90 h-12" asChild>
+                  <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
+                    Book Your Mortgage Strategy Call →
+                  </Link>
+                </Button>
               </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-[#032133]" />
-                24/7 Support
+<div className="mb-8 max-w-lg mx-auto bg-[#F4F6F8] rounded-lg p-4 border border-gray-200">
+  <p className="text-xs font-semibold uppercase tracking-wide text-[#1D2D44] mb-2">
+    Expert insight
+  </p>
+  <p className="text-[#1D2D44] font-semibold mb-1">
+    Most mortgage decisions are based on rate.
+  </p>
+  <p className="text-gray-600">
+    The best ones are based on structure, timing, and long-term strategy.
+  </p>
+</div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">
+                <div className="flex items-center">
+                  <Shield className="w-5 h-5 mr-2 text-[#032133]" />
+                  Licensed & Insured
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-2 text-[#032133]" />
+                  24/7 Support
+                </div>
+                <div className="flex items-center">
+                  <TrendingUp className="w-5 h-5 mr-2 text-[#032133]" />
+                  Unbiased Rate Comparisons
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-[#032133]" />
-                Unbiased Rate Comparisons
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -288,8 +279,8 @@ export default function HomePage() {
                   className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white bg-transparent"
                   asChild
                 >
-                  <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Get Your Mortgage Strategy →
+                 <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
+                    Book Your Mortgage Strategy Call →
                   </Link>
                 </Button>
               </div>
@@ -556,8 +547,8 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-                <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                  Get Your Mortgage Strategy →
+               <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
+                    Book Your Mortgage Strategy Call →
                 </Link>
               </Button>
             </div>
