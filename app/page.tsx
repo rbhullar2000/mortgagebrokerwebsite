@@ -69,14 +69,14 @@ export default function HomePage() {
                   </Link>
                 </Button>
               </div>
-<div className="mb-8 text-gray-600 max-w-xl">
-  <p className="mb-2">
+<div className="mb-8 max-w-xl bg-[#F4F6F8] rounded-lg p-4 border border-gray-200">
+  <p className="text-[#1D2D44] font-semibold mb-1">
     Most mortgage decisions are based on rate.
   </p>
-  <p>
+  <p className="text-gray-600">
     The best ones are based on structure, timing, and long-term planning.
   </p>
-</div> 
+</div>
               <div className="flex items-center space-x-6 text-sm text-gray-600">
                 <div className="flex items-center">
                   <Shield className="w-5 h-5 mr-2 text-[#032133]" />
