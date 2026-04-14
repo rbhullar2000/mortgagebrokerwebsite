@@ -50,9 +50,10 @@ export function TwitterFeed() {
         >
           View insight →
         </a>
+   {/*
       </div>
-
-      {/* CTA */}
+     
+     
       <div className="rounded-xl border border-gray-200 bg-slate-50 p-6">
         <p className="text-sm font-medium text-slate-900">
           Want help applying this to your situation?
@@ -70,7 +71,7 @@ export function TwitterFeed() {
 >
           Start Your Application →
         </a>
-      </div>
+      </div> */}
 
     </div>
   )
