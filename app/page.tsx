@@ -54,7 +54,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90 h-12" asChild>
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Start Your Application
+                    Get Your Mortgage Options →
                   </Link>
                 </Button>
                 <Button
