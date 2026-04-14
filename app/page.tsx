@@ -43,10 +43,10 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
-  Your Trusted Mortgage Team in <span className="text-[#D4AF37]"> British Columbia</span>
+  Your Trusted Mortgage Team in British Columbia
 </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6">
-                Smarter Mortgage Decisions Start Here
+                Smarter Mortgage <span className="text-[#D4AF37]">Decisions</span>Start Here
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Access 50+ lenders — and a strategy tailored to your situation, not just a rate. Most people focus on rates. The real advantage is structure.
