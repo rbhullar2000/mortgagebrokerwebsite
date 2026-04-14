@@ -296,8 +296,8 @@ export default function HomePage() {
                   className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white bg-transparent"
                   asChild
                 >
-                  <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Get Your Mortgage Strategy →
+                 <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
+                    Book Your Mortgage Strategy Call →
                   </Link>
                 </Button>
               </div>
