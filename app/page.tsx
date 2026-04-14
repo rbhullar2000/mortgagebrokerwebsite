@@ -482,7 +482,7 @@ export default function HomePage() {
                       </h3>
                       <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-500">{featuredPost.date}</span>
+                        {/*  <span className="text-sm text-gray-500">{featuredPost.date}</span> */}
                         <Button asChild className="bg-[#1D2D44] hover:bg-[#1D2D44]/90">
                           <Link href={featuredPost.slug}>Read Full Article</Link>
                         </Button>
