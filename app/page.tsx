@@ -54,7 +54,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90 h-12" asChild>
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Get Your Mortgage Options →
+                    Get Your Mortgage Strategy →
                   </Link>
                 </Button>
                 <Button
@@ -115,14 +115,14 @@ export default function HomePage() {
               },
               {
                 icon: <TrendingUp className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Mortgage Renewals",
+                title: "Renew Your Mortgage (Without Overpaying)",
                 description: "Don't auto-renew! We'll find you better rates and terms when your mortgage comes due.",
                 features: ["Rate comparison", "Term optimization", "No-cost renewals"],
                 link: "/renewal",
               },
               {
                 icon: <FileText className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Refinancing",
+                title: "Refinance & Use Your Equity Strategically",
                 description: "Access your home's equity or consolidate debt with competitive refinancing options.",
                 features: ["Debt consolidation", "Home improvements", "Investment opportunities"],
                 link: "/refinance",
