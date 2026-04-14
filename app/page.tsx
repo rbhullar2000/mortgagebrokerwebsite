@@ -69,6 +69,14 @@ export default function HomePage() {
                   </Link>
                 </Button>
               </div>
+<div className="mb-8 text-gray-600 max-w-xl">
+  <p className="mb-2">
+    Most mortgage decisions are based on rate.
+  </p>
+  <p>
+    The best ones are based on structure, timing, and long-term planning.
+  </p>
+</div> 
               <div className="flex items-center space-x-6 text-sm text-gray-600">
                 <div className="flex items-center">
                   <Shield className="w-5 h-5 mr-2 text-[#032133]" />
