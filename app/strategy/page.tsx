@@ -51,7 +51,7 @@ export default function StrategyPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-[#D4AF37]" />
-                <span>Access to 50+ lenders</span>
+                <span>Quick, no-pressure call to review your options before you commit.</span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-[#D4AF37]" />
