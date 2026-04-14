@@ -288,6 +288,22 @@ export default function HomePage() {
                     Book Your Mortgage Strategy Call →
                   </Link>
                 </Button>
+
+                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-[#D4AF37]" />
+                <span>15-minute call • No obligation</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-[#D4AF37]" />
+                <span>Quick, no-pressure call to review your options before you commit.</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-[#D4AF37]" />
+                <span>Data-driven, strategy-first approach</span>
+              </div>
+            </div>
+                
               </div>
             </div>
           </div>
