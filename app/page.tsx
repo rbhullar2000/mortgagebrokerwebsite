@@ -564,8 +564,9 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-                <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                  Get Your Mortgage Strategy →
+               <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
+                    Book Your Mortgage Strategy Call →
+                  </Link>
                 </Link>
               </Button>
             </div>
