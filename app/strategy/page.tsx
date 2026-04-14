@@ -47,7 +47,7 @@ export default function StrategyPage() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-[#D4AF37]" />
-                <span>15-minute call • No obligation</span>
+                <span>15-minute call</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-[#D4AF37]" />
