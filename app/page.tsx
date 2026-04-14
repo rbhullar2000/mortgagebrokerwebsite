@@ -56,8 +56,8 @@ export default function HomePage() {
                   <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                   </Link>
-                  {/*  </Button>
-                <Button
+                    </Button>
+              {/*  <Button
                   size="lg"
                   variant="outline"
                   className="h-12 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white bg-transparent"
