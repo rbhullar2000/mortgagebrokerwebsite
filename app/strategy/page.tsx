@@ -8,7 +8,7 @@ import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Mortgage Strategy | BC Mortgage Team",
+  title: "Mortgage Strategy | BC Mortgage Team", 
   description:
     "Most people focus on rate. The real advantage is structure. Book a mortgage strategy session with Rob Bhullar — licensed broker with access to 50+ lenders.",
 }
