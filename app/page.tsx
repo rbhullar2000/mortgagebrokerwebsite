@@ -286,7 +286,7 @@ export default function HomePage() {
                   asChild
                 >
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Apply Online
+                    Get Your Mortgage Options →
                   </Link>
                 </Button>
               </div>
