@@ -566,7 +566,6 @@ export default function HomePage() {
               <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
                <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
-                  </Link>
                 </Link>
               </Button>
             </div>
