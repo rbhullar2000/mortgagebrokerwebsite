@@ -275,9 +275,9 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+                {/*  <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
                   <Link href="#contact">Contact Rob</Link>
-                </Button>
+                </Button> */}
                 <Button
                   size="lg"
                   variant="outline"
