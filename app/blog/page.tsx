@@ -111,7 +111,7 @@ export default function BlogPage() {
                     key={index}
                     title={post.title}
                     excerpt={post.excerpt}
-                    date={post.date}
+                    {/* date={post.date}    */}
                     category={post.category}
                     slug={post.slug}
                     image={post.image}
