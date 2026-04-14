@@ -7,7 +7,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
-import Head from "next/head"
+import Head from "next/head" 
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
