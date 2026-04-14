@@ -25,7 +25,7 @@ export function NewsCard({ title, excerpt, date, category, slug, image }: NewsCa
           <Badge variant="outline" className="text-[#032133]">
             {category}
           </Badge>
-          <span className="text-sm text-gray-500">{date}</span>
+         {/* <span className="text-sm text-gray-500">{date}</span>   */}
         </div>
         <Link href={slug} className="hover:underline">
           <h3 className="text-xl font-bold text-gray-900">{title}</h3>
