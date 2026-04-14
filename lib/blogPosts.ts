@@ -16,7 +16,7 @@ export const blogPosts = [
     date: "July 19, 2025",
     category: "Interest Rates",
     slug: "/blog/july-2025-interest-rate-update",
-    featured: true,
+    featured: false,
     image: "July2025update.png",
   },
   
@@ -28,7 +28,7 @@ export const blogPosts = [
     date: "June 26, 2025",
     category: "Retirement Planning",
     slug: "/blog/rethinking-retirement-home-equity",
-    featured: false,
+    featured: true,
     image: "retirement-home-equity.png",
   },
    
