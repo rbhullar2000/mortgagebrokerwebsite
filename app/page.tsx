@@ -261,18 +261,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 mb-8">
-                <span className="text-gray-600">Follow me for market updates:</span>
-                <Link
-                  href="https://x.com/robbhullar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[#032133] hover:underline"
-                >
-                  <Twitter className="w-5 h-5" />
-                  <span>@robbhullar</span>
-                </Link>
-              </div>
+              
 
               <div className="flex flex-col sm:flex-row gap-4">
                 {/*  <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
