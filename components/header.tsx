@@ -6,10 +6,18 @@ import { Menu } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 import Head from "next/head"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/"
+    const path = href.split("#")[0]
+    return path !== "/" && pathname === path
+  }
 
   const navigationItems = [
     { href: "/", label: "Explore Options" },
@@ -70,7 +78,15 @@ export function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
               {navigationItems.map((item) => (
-                <Link key={item.href} href={item.href} className="text-gray-700 hover:text-[#032133] transition-colors">
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`transition-colors font-medium pb-0.5 border-b-2 ${
+                    isActive(item.href)
+                      ? "text-[#032133] border-[#D4AF37]"
+                      : "text-gray-700 hover:text-[#032133] border-transparent"
+                  }`}
+                >
                   {item.label}
                 </Link>
               ))}
@@ -128,12 +144,16 @@ export function Header() {
                       </div>
                     </div>
 
-                    <nav className="flex flex-col space-y-3">
+                    <                    <nav className="flex flex-col space-y-3">
                       {navigationItems.map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="text-lg font-medium text-gray-700 hover:text-[#032133] transition-colors py-2 px-3 rounded-md hover:bg-gray-50"
+                          className={`text-lg font-medium transition-colors py-2 px-3 rounded-md ${
+                            isActive(item.href)
+                              ? "text-[#032133] border-b-2 border-[#D4AF37]"
+                              : "text-gray-700 hover:text-[#032133] hover:bg-gray-50"
+                          }`}
                           onClick={() => setIsOpen(false)}
                         >
                           {item.label}
