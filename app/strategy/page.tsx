@@ -217,7 +217,7 @@ export default function StrategyPage() {
               asChild
             >
               <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
-                Get Your Mortgage Strategy <ArrowRight className="ml-2 w-5 h-5" />
+                Book Your Mortgage Strategy Call <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
             <p className="text-gray-500 text-sm mt-6">
