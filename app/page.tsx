@@ -71,7 +71,7 @@ export default function HomePage() {
               </div>
 <div className="mb-8 max-w-lg bg-[#F4F6F8] rounded-lg p-4 border border-gray-200">
   <p className="text-xs font-semibold uppercase tracking-wide text-[#1D2D44] mb-2">
-    Strategy insight
+    Expert insight
   </p>
   <p className="text-[#1D2D44] font-semibold mb-1">
     Most mortgage decisions are based on rate.
