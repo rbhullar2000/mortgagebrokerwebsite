@@ -59,6 +59,9 @@ export default function HomePage() {
                   </Link>
                 </Button>
               </div>
+              <p className="text-sm text-gray-600 mb-8">
+                15-minute call • No obligation • Strategy-focused
+              </p>
 <div className="mb-8 max-w-lg mx-auto bg-[#F4F6F8] rounded-lg p-4 border border-gray-200">
   <p className="text-xs font-semibold uppercase tracking-wide text-[#1D2D44] mb-2">
     Expert insight
@@ -494,18 +497,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button
-              variant="outline"
-              size="lg"
-              className="bg-white border-2 border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
-              asChild
-            >
-              <Link href="/blog">
-                View All Articles <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -547,6 +538,9 @@ export default function HomePage() {
                 </Link>
               </Button>
             </div>
+            <p className="text-sm text-gray-600 mt-4 text-center">
+              15-minute call • No obligation • Strategy-focused
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
