@@ -39,7 +39,7 @@ export default function StrategyPage() {
               asChild
             >
               <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
-                Get Your Mortgage Strategy <ArrowRight className="ml-2 w-5 h-5" />
+                Book Your Mortgage Strategy Call <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
 
@@ -47,7 +47,7 @@ export default function StrategyPage() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-[#D4AF37]" />
-                <span>Licensed Mortgage Professional (BC)</span>
+                <span>15-minute call • No obligation</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-[#D4AF37]" />
