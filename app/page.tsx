@@ -49,7 +49,7 @@ export default function HomePage() {
                 Smarter Mortgage Decisions Start Here
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                AAccess 50+ lenders — and a strategy tailored to your situation, not just a rate. Most people focus on rates. The real advantage is structure.
+                Access 50+ lenders — and a strategy tailored to your situation, not just a rate. Most people focus on rates. The real advantage is structure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90 h-12" asChild>
