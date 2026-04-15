@@ -52,14 +52,14 @@ export default function HomePage() {
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Access 50+ lenders — and a strategy tailored to your situation. Most people focus on rates. The real advantage is structure.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
                 <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90 h-12" asChild>
                   <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                   </Link>
                 </Button>
               </div>
-              <p className="text-sm text-gray-600 mb-8">
+              <p className="text-sm text-gray-600 mb-6">
                 15-minute call • No obligation • Strategy-focused
               </p>
 <div className="mb-8 max-w-lg mx-auto bg-[#F4F6F8] rounded-lg p-4 border border-gray-200">
