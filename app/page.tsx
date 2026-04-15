@@ -266,21 +266,23 @@ export default function HomePage() {
 
               
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col items-center gap-4 mb-2">
                 {/*  <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
                   <Link href="#contact">Contact Rob</Link>
                 </Button> */}
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white bg-transparent"
+                  className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white bg-transparent w-full sm:w-auto"
                   asChild
                 >
                  <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                   </Link>
                 </Button>
-                
+                <p className="text-sm text-gray-600 text-center">
+                  15-minute call • No obligation • Strategy-focused
+                </p>
               </div>
             </div>
           </div>
