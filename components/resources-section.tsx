@@ -68,16 +68,15 @@ export function ResourcesSection() {
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Free Mortgage Tools & Resources</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Download our professional Excel tools to help you make informed mortgage decisions. All resources are free
-              and require only your email address.
+              Download our professional Excel tools to help you make informed mortgage decisions.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
             {resources.map((resource, index) => {
               const IconComponent = resource.icon
               return (
-                <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 w-full md:w-80">
                   <CardHeader className="text-center pb-4">
                     <div className="mx-auto mb-4 w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center">
                       <IconComponent className={`h-8 w-8 ${resource.color}`} />
@@ -101,7 +100,7 @@ export function ResourcesSection() {
 
           <div className="text-center mt-12">
             <p className="text-sm text-gray-500 max-w-2xl mx-auto">
-              All resources are free and require only your email address. 
+              All resources are provided for educational purposes only and are not intended as financial advice. Results are estimates and may not reflect actual lending terms. Please consult a qualified mortgage professional to review your specific situation.
             </p>
           </div>
         </div>
