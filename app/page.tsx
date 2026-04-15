@@ -76,15 +76,15 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">
                 <div className="flex items-center">
                   <Shield className="w-5 h-5 mr-2 text-[#032133]" />
-                  Licensed & Insured
+                  Access to 50+ lenders
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2 text-[#032133]" />
-                  24/7 Support
+                  Strategy-first approach
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2 text-[#032133]" />
-                  Unbiased Rate Comparisons
+                  Unbiased guidance
                 </div>
               </div>
           </div>
