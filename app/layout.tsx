@@ -29,11 +29,20 @@ export const metadata: Metadata = {
     siteName: "BC Mortgage Team",
     locale: "en_CA",
     type: "website",
+    images: [
+      {
+        url: "https://bcmortgageteam.com/BCmortgageteamlogo_white.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "BC Mortgage Team",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Rob Bhullar - Licensed Mortgage Professional",
     description: "Licensed Mortgage Professional in British Columbia",
+    images: ["https://bcmortgageteam.com/BCmortgageteamlogo_white.jpeg"],
   },
   robots: {
     index: true,
