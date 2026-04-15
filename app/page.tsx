@@ -80,7 +80,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2 text-[#032133]" />
-                  Strategy-first approach
+                  Strategy-driven approach
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2 text-[#032133]" />
