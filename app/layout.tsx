@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://bcmortgageteam.com/BCmortgageteamlogo_white.jpeg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "BC Mortgage Team",
@@ -40,9 +40,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rob Bhullar - Licensed Mortgage Professional",
-    description: "Licensed Mortgage Professional in British Columbia",
-    images: ["https://bcmortgageteam.com/BCmortgageteamlogo_white.jpeg"],
+    title: "BC Mortgage Team | Smart Financial Solutions",
+    description:
+      "BC Mortgage Team is located in British Columbia. Get the best mortgage rates for home purchase, renewal, and refinance. Access 50+ lenders and fast approvals.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
