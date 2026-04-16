@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://bcmortgageteam.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "BC Mortgage Team",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "BC Mortgage Team | Smart Financial Solutions",
     description:
       "BC Mortgage Team is located in British Columbia. Get the best mortgage rates for home purchase, renewal, and refinance. Access 50+ lenders and fast approvals.",
-    images: ["/og-image.jpg"],
+    images: ["https://bcmortgageteam.com/og-image.jpg"],
   },
   robots: {
     index: true,
