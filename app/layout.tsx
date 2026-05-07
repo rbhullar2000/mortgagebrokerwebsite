@@ -81,6 +81,26 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Calendly Booking Conversion Listener */}
+        <Script
+          id="calendly-booking-listener"
+          strategy="afterInteractive"
+        >
+          {`
+            window.addEventListener("message", function(e) {
+              if (e.data && e.data.event === "calendly.event_scheduled") {
+                window.dataLayer = window.dataLayer || [];
+
+                window.dataLayer.push({
+                  event: "calendly_booking"
+                });
+
+                console.log("Calendly booking tracked");
+              }
+            });
+          `}
+        </Script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
