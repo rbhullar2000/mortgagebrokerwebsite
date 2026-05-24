@@ -133,12 +133,12 @@ export default function HomePage() {
 </h2>
 
 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-  With 20+ years of experience in finance — including a background as an Equity Analyst — I help BC homeowners, investors, and first-time buyers navigate mortgage decisions with clarity and confidence. Our approach combines analytical thinking with real-world lending expertise, focusing on how a mortgage is structured — not just the rate — to support your long-term financial goals.
+  BC Mortgage Team brings over 20 years of finance experience together with real-world mortgage expertise to help homeowners, investors, and first-time buyers make smarter mortgage decisions. Our approach blends analytical thinking with practical lending expertise, focusing on how a mortgage is structured — not just the rate — to support long-term financial goals.
 </p>
 
 <div className="space-y-4 mb-8">
   {[
-    "Licensed Mortgage Professional with BRX Mortgage in British Columbia",
+    "Licensed Mortgage Professional with BRX Mortgage",
     "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
     "Experience structuring mortgages for complex approvals, debt consolidation, and investor financing",
     "Focused on aligning mortgage decisions with long-term financial strategy",
