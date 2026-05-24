@@ -66,7 +66,7 @@ export function ResourcesSection() {
       <section className="py-16 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Free Mortgage Tools & Resources</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Free Mortgage Tools</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Download our professional Excel tools to help you make informed mortgage decisions.
             </p>
