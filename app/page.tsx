@@ -189,7 +189,7 @@ export default function HomePage() {
                 </Button> */}
                 <Button
                   size="lg"
-                  className="bg-[#E8B923] hover:bg-[#E8B923]/90 text-[#1D2D44] font-semibold w-full sm:w-auto"
+                  className="bg-[#032133] hover:bg-[#032133]/90 text-[#FFFFFF] font-semibold w-full sm:w-auto"
                   asChild
                 >
                  <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
