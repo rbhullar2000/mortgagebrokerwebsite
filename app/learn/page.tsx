@@ -151,8 +151,7 @@ export default function LearnPage() {
 
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-gray-500 text-white hover:bg-white/10 h-14 px-8 text-base"
+                  className="border-2 border-white bg-transparent hover:bg-white text-white hover:text-[#032133] font-bold h-14 px-8 text-base transition-colors"
                   asChild
                 >
                   <Link href="/#contact">
