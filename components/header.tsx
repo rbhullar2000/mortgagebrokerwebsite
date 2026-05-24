@@ -30,7 +30,7 @@ export function Header() {
     { href: "/strategy", label: "Mortgage Strategy" },
     { href: "/break-even-calculator", label: "Refinance Calculator" },
     { href: "/learn", label: "Learn" },
-    { href: "/blog", label: "Blog & Resources" },
+    { href: "/blog", label: "Resources" },
     { href: "/#contact", label: "Contact" },
   ]
 
