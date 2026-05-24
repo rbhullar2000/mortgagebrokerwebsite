@@ -61,7 +61,7 @@ export default function HomePage() {
                 </Button>
               </div>
               <p className="text-sm text-gray-600 mb-6">
-                15-minute call • No obligation • Strategy-focused
+                15-minute call • No pressure • Strategy-focused
               </p>
 <div className="mb-8 max-w-lg mx-auto bg-[#F4F6F8] rounded-lg p-4 border border-gray-200">
   <p className="text-xs font-semibold uppercase tracking-wide text-[#1D2D44] mb-2">
@@ -197,7 +197,7 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <p className="text-sm text-gray-600 text-center">
-                  15-minute call • No obligation • Strategy-focused
+                  15-minute call • No pressure • Strategy-focused
                 </p>
               </div>
             </div>
@@ -541,7 +541,7 @@ export default function HomePage() {
               </Button>
             </div>
             <p className="text-sm text-gray-600 mt-4 text-center">
-              15-minute call • No obligation • Strategy-focused
+              15-minute call • No pressure • Strategy-focused
             </p>
           </div>
 
