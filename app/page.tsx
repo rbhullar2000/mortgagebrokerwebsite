@@ -133,7 +133,7 @@ export default function HomePage() {
 </h2>
 
 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-  With 20+ years of experience in finance — including a background as an Equity Analyst — I help BC homeowners, investors, and first-time buyers navigate mortgage decisions with clarity and confidence. My approach combines analytical thinking with real-world lending expertise, focusing on how a mortgage is structured — not just the rate — to support your long-term financial goals.
+  With 20+ years of experience in finance — including a background as an Equity Analyst — I help BC homeowners, investors, and first-time buyers navigate mortgage decisions with clarity and confidence. Our approach combines analytical thinking with real-world lending expertise, focusing on how a mortgage is structured — not just the rate — to support your long-term financial goals.
 </p>
 
 <div className="space-y-4 mb-8">
