@@ -154,7 +154,7 @@ export default function HomePage() {
               <div className="grid grid-cols-3 gap-6 mb-8 items-center text-center">
                 {/* Column 1: Text */}
                 <div className="flex flex-col items-center justify-center w-24 h-18">
-                  <div className="text-3xl font-bold text-[#D4AF37]">20+ years</div>
+                  <div className="text-3xl font-bold text-[#D4AF37]">25+ years</div>
                   <div className="text-sm text-gray-600">in Financial Industry</div>
                 </div>
 
