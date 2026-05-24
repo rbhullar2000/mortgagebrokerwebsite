@@ -93,7 +93,7 @@ function LeadCaptureCard({
       <div className="lead-card-header">
         <span className="lead-card-icon">✨</span>
         <div>
-          <p className="lead-card-title">Get personalized help from Rob</p>
+          <p className="lead-card-title">Get personalized help from BC Mortgage Team</p>
           <p className="lead-card-sub">Leave your details and he&apos;ll follow up</p>
         </div>
       </div>
@@ -161,7 +161,7 @@ function LeadSuccessCard() {
   return (
     <div className="lead-card lead-success">
       <div className="success-icon">✅</div>
-      <p className="lead-card-title">Got it! Rob will be in touch soon.</p>
+      <p className="lead-card-title">Got it! BC Mortgage Team will be in touch soon.</p>
       <p className="lead-card-sub">
         In the meantime, feel free to keep asking questions or{" "}
         <a
