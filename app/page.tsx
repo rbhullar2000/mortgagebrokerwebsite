@@ -54,7 +54,7 @@ export default function HomePage() {
                 Most people focus on rates. The real advantage is structure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
-                <Button size="lg" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#1D2D44] h-12 font-semibold" asChild>
+                <Button size="lg" className="bg-[#E8B923] hover:bg-[#E8B923]/90 text-[#1D2D44] h-12 font-semibold" asChild>
                   <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                   </Link>
@@ -189,8 +189,7 @@ export default function HomePage() {
                 </Button> */}
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white bg-transparent w-full sm:w-auto"
+                  className="bg-[#E8B923] hover:bg-[#E8B923]/90 text-[#1D2D44] font-semibold w-full sm:w-auto"
                   asChild
                 >
                  <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
@@ -535,7 +534,7 @@ export default function HomePage() {
               Contact today for a free consultation, or start your secure online application right away.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+              <Button size="lg" className="bg-[#E8B923] hover:bg-[#E8B923]/90 text-[#1D2D44] font-semibold" asChild>
                <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                 </Link>
@@ -606,4 +605,3 @@ export default function HomePage() {
     </div>
   )
 }
- 
