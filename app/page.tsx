@@ -534,7 +534,7 @@ export default function HomePage() {
               Contact today for a free consultation, or start your secure online application right away.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button size="lg" className="bg-[#E8B923] hover:bg-[#E8B923]/90 text-[#D4AF37] font-semibold" asChild>
+              <Button size="lg" className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] font-semibold" asChild>
                <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                 </Link>
