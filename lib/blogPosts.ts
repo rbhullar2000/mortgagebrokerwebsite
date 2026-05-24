@@ -9,16 +9,16 @@ export const blogPosts = [
   //  featured: false,
   //  image: "first-time-homebuyer-family.png",
   //},  
-   {
-    title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
-    excerpt:
-      "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
-    date: "July 19, 2025",
-    category: "Interest Rates",
-    slug: "/blog/july-2025-interest-rate-update",
-    featured: false,
-    image: "July2025update.png",
-  },
+//   {
+//    title: "July 2025 Interest Rate Update: What Borrowers Need to Know",
+//    excerpt:
+//      "As we move through summer 2025, the Canadian mortgage landscape remains shaped by the Bank of Canada's recent decisions. Get the latest on rates, market expectations, and what it means for your mortgage strategy.",
+//    date: "July 19, 2025",
+//    category: "Interest Rates",
+//    slug: "/blog/july-2025-interest-rate-update",
+//    featured: false,
+//    image: "July2025update.png",
+//  },
   
   
   {
@@ -44,7 +44,7 @@ export const blogPosts = [
   },
   
   {
-    title: "Are Variable Rates Still Worth It in 2025? It Depends…",
+    title: "Are Variable Rates Still Worth It? It Depends…",
     excerpt:
       "The fixed vs. variable debate is heating up again in 2025. With forecasts suggesting lower rates ahead, should you lock in fixed for stability or ride the wave with variable?",
     date: "May 1, 2025",
@@ -54,26 +54,26 @@ export const blogPosts = [
     image: "fixed-vs-variable-rates.png",
   },
   {
-    title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
-    excerpt:
-      "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.",
-    date: "June 17, 2025",
-    category: "Interest Rates",
-    slug: "/blog/bank-of-canada-holds-key-interest-rate-June-2025",
-    featured: false,
-    image: "/bank-of-canada-building.png",
-  },
-  {
-    title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
-    excerpt:
-      "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
-    date: "March 12, 2025",
-    category: "Interest Rates",
-    slug: "/blog/bank-of-canada-cuts-rates-March-2025",
-    featured: false,
-    image: "bank-of-canada-building.png",
-  },
-  {
+//    title: "Bank of Canada Holds Key Interest Rate at 2.75%: What It Means for Your Mortgage",
+//    excerpt:
+//      "At its June 4 meeting the Bank of Canada opted to keep the overnight rate steady at 2.75 percent. Learn why the Bank paused and what it means for homeowners and buyers.",
+//    date: "June 17, 2025",
+//    category: "Interest Rates",
+//    slug: "/blog/bank-of-canada-holds-key-interest-rate-June-2025",
+//    featured: false,
+//    image: "/bank-of-canada-building.png",
+//  },
+ // {
+//    title: "Bank of Canada Cuts Key Interest Rate to 2.75%",
+//    excerpt:
+//      "On March 12, 2025, the Bank of Canada reduced its overnight rate target to 2.75%, marking a significant shift in monetary policy and offering much-needed relief to mortgage holders across the country.",
+//    date: "March 12, 2025",
+//    category: "Interest Rates",
+//    slug: "/blog/bank-of-canada-cuts-rates-March-2025",
+//    featured: false,
+//    image: "bank-of-canada-building.png",
+//  },
+//  {
     title: "First-Time Home Buyer Incentive Changes",
     excerpt:
       "The federal government announced changes to the First-Time Home Buyer Incentive program, increasing the eligible home price threshold in high-cost markets.",
