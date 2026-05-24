@@ -117,8 +117,8 @@ export default function BlogPage() {
                   />
                 ))}
               </div>
-
-              <div className="mt-12 flex justify-center">
+{/*
+               <div className="mt-12 flex justify-center">
                 <Button
                   variant="outline"
                   className="bg-white text-[#1D2D44] border-[#D4AF37] hover:bg-[#D4AF37] hover:text-white"
@@ -127,7 +127,7 @@ export default function BlogPage() {
                   Load More Articles
                 </Button>
               </div>
-            </div>
+            </div> */}
 
             <div className="lg:col-span-1">
               <div className="sticky top-24">
