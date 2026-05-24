@@ -10,7 +10,7 @@ import type { Metadata } from "next"
 import { blogPosts } from "@/lib/blogPosts"
 
 export const metadata: Metadata = {
-  title: "Blog & Resources | BC Mortgage Team",
+  title: "Resources | BC Mortgage Team",
   description:
     "Expert mortgage advice, market updates, financial tips, and free mortgage tools from licensed mortgage professionals in BC.",
   keywords:
@@ -46,7 +46,7 @@ export default function BlogPage() {
       <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-[#1D2D44] mb-6">Blog & Resources</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-[#1D2D44] mb-6">Resources</h1>
             <p className="text-xl text-gray-600 mb-8">
               Expert mortgage advice, market updates, financial tips, and free tools to help you make informed
               decisions.
