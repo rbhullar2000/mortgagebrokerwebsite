@@ -2,6 +2,8 @@ import Link from "next/link"
 import { learnPosts } from "@/lib/learnPosts"
 import { BookOpen, ChevronRight } from "lucide-react"
 import type { Metadata } from "next"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Learn | BC Mortgage Team",
@@ -13,7 +15,9 @@ export default function LearnPage() {
   const categories = Array.from(new Set(learnPosts.map((p) => p.category)))
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <>
+      <Header />
+      <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-[#032133] text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -84,5 +88,7 @@ export default function LearnPage() {
         </div>
       </section>
     </main>
+    <Footer />
+    </>
   )
 }
