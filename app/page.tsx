@@ -547,10 +547,10 @@ export default function HomePage() {
 
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Left: Contact Form */}
-       {/*     <div>
-              <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Get Your Free Consultation</h3>
+            <div>
+        {/*      <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Get Your Free Consultation</h3> */}
               <ContactForm />
-            </div> */}
+            </div> 
 
             {/* Right: Contact Info + Highlights */}
             <div>
