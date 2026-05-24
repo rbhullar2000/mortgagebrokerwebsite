@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: "Learn | BC Mortgage Team",
   description:
     "Answers to the most common mortgage questions in BC — down payments, stress tests, fixed vs variable rates, renewals, and more.",
+  openGraph: {
+    title: "Mortgage FAQs for BC Buyers | BC Mortgage Team",
+    description:
+      "Answers to the most common mortgage questions in BC — down payments, stress tests, fixed vs variable rates, renewals, and more.",
+    type: "website",
+    url: "https://www.bcmortgageteam.com/learn",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mortgage FAQs for BC Buyers | BC Mortgage Team",
+    description:
+      "Answers to the most common mortgage questions in BC — down payments, stress tests, fixed vs variable rates, renewals, and more.",
+  },
 }
 
 export default function LearnPage() {
@@ -79,12 +92,22 @@ export default function LearnPage() {
           <p className="text-gray-600 mb-6 max-w-xl mx-auto">
             Get personalized advice from a licensed mortgage broker who knows the BC market.
           </p>
-          <Link
-            href="/#contact"
-            className="inline-flex items-center justify-center px-6 py-3 bg-[#032133] text-white font-medium rounded-lg hover:bg-[#032133]/90 transition-colors"
-          >
-            Ask a Question
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://calendly.com/robsbhullar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#D4AF37] text-[#032133] font-semibold rounded-lg hover:bg-[#D4AF37]/90 transition-colors"
+            >
+              Book a Free Strategy Call
+            </a>
+            <Link
+              href="/#contact"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#032133] text-white font-medium rounded-lg hover:bg-[#032133]/90 transition-colors"
+            >
+              Send a Message
+            </Link>
+          </div>
         </div>
       </section>
     </main>
