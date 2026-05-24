@@ -1,5 +1,4 @@
 'use client';
-
 import Link from "next/link";
 import Image from "next/image";
 import { Twitter, Linkedin } from "lucide-react";
@@ -10,33 +9,25 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Column 1 */}
-         <div className="flex flex-col items-center text-center space-y-3">
-  <div className="w-24 h-18">
-    <Image
-      src="/BCmortgageteamlogo_white.jpeg"
-      alt="BC Mortgage Team Logo"
-      width={96}
-      height={72}
-      className="object-contain"
-    />
-  </div>
-
-  <div className="w-24 h-18">
-    <Image
-      src="/BRX_brand_white.png"
-      alt="BRX Mortgage"
-      width={96}
-      height={72}
-      className="object-contain"
-    />
-  </div>
-
-            {/* Optional description */}
-            {/* 
-            <p className="text-gray-400 text-sm mt-4">
-              Licensed submortgage professional with BRX Mortgages, serving the Greater Vancouver Area with personalized service and competitive rates.
-            </p>
-            */}
+          <div className="flex flex-col items-center text-center space-y-3">
+            <div className="w-24 h-18">
+              <Image
+                src="/BCmortgageteamlogo_white.jpeg"
+                alt="BC Mortgage Team Logo"
+                width={96}
+                height={72}
+                className="object-contain"
+              />
+            </div>
+            <div className="w-24 h-18">
+              <Image
+                src="/BRX_brand_white.png"
+                alt="BRX Mortgage"
+                width={96}
+                height={72}
+                className="object-contain"
+              />
+            </div>
           </div>
 
           {/* Column 2 */}
@@ -76,23 +67,18 @@ export function Footer() {
                 <Twitter className="w-4 h-4" />
                 <span className="sr-only">Follow on X (Twitter)</span>
               </Link>
-              {/* Uncomment if needed later
-              <Link
-                href="https://linkedin.com/in/robbhullar"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 bg-gray-700 hover:bg-[#032133] rounded-full flex items-center justify-center transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
-                <span className="sr-only">Connect on LinkedIn</span>
-              </Link>
-              */}
             </div>
           </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400 space-y-2">
+          <p>
+            Rob Bhullar — Submortgage Broker &nbsp;|&nbsp; BRX Mortgage Inc.
+            &nbsp;|&nbsp; BCFSA: X301291 &nbsp;|&nbsp; FSRA: 13463
+            &nbsp;|&nbsp; FCAA: 512114 &nbsp;|&nbsp; FCNB: 230043033
+            &nbsp;|&nbsp; NSID: #2023-3000563 &nbsp;|&nbsp; QC: 608634
+          </p>
           <p>&copy; 2026 BC Mortgage Team. All rights reserved.</p>
         </div>
       </div>
