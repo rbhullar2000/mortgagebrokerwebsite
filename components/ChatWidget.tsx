@@ -147,7 +147,7 @@ function LeadCaptureCard({
 
       <div className="lead-actions">
         <button className="lead-submit-btn" onClick={handleSubmit} disabled={isSubmitting}>
-          {isSubmitting ? "Sending..." : "Send to Rob →"}
+          {isSubmitting ? "Sending..." : "Send to BC Mortgage Team →"}
         </button>
         <button className="lead-skip-btn" onClick={onSkip} disabled={isSubmitting}>
           Skip for now
