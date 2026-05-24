@@ -89,14 +89,9 @@ export default function LearnPage() {
                     <div className="w-10 h-10 bg-[#032133] rounded-lg flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                       {categoryIcons[category] || <BookOpen className="w-5 h-5" />}
                     </div>
-                    <div>
-                      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44]">
-                        {category}
-                      </h2>
-                      <p className="text-gray-500 text-sm mt-1">
-                        {categoryPosts.length} article{categoryPosts.length !== 1 ? "s" : ""}
-                      </p>
-                    </div>
+                    <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44]">
+                      {category}
+                    </h2>
                   </div>
 
                   <div className="space-y-4">
