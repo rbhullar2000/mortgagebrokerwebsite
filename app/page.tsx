@@ -50,7 +50,7 @@ export default function HomePage() {
   Start Here
 </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Access 50+ lenders — and a strategy tailored to your situation. <br />
+                Access 50+ lenders with strategy-focused mortgage advice tailored to your financial goals. <br />
                 Most people focus on rates. The real advantage is structure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
