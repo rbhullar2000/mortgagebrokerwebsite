@@ -97,7 +97,7 @@ export function Header() {
             <Button
               asChild
               size="sm"
-              className="bg-[#032133] hover:bg-[#032133]/90 h-9 px-3 text-sm md:hidden"
+              className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 h-9 px-3 text-sm md:hidden"
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
                 Apply
