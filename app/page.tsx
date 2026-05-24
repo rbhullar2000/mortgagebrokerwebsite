@@ -54,7 +54,7 @@ export default function HomePage() {
                 Most people focus on rates. The real advantage is structure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
-                <Button size="lg" className="bg-[#1D2D44] hover:bg-[#E8B923]/90 text-[#1D2D44] h-12 font-semibold" asChild>
+                <Button size="lg" className="bg-[#D4AF37] hover:bg-[#E8B923]/90 text-[#1D2D44] h-12 font-semibold" asChild>
                   <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                   </Link>
