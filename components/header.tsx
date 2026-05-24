@@ -84,7 +84,7 @@ export function Header() {
             <Button
               asChild
               size="sm"
-              className="bg-[#C89B2B] hover:bg-[#D4AF37]/90 h-10"
+              className="bg-[#1D2D44] hover:bg-[#243854]/90 h-10"
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
                 Apply Now
@@ -97,7 +97,7 @@ export function Header() {
             <Button
               asChild
               size="sm"
-              className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 h-9 px-3 text-sm md:hidden"
+              className="bg-[#1D2D44] hover:bg-[#243854]/90 h-9 px-3 text-sm md:hidden"
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
                 Apply
