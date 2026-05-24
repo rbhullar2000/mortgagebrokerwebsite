@@ -28,7 +28,6 @@ export function Header() {
   const navigationItems = [
     { href: "/", label: "Start Here" },
     { href: "/strategy", label: "Mortgage Strategy" },
-    { href: "/#calculator", label: "Mortgage Calculator" },
     { href: "/break-even-calculator", label: "Refinance Calculator" },
     { href: "/learn", label: "Learn" },
     { href: "/blog", label: "Blog & Resources" },
