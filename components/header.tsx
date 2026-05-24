@@ -24,7 +24,7 @@ export function Header() {
     { href: "/strategy", label: "Mortgage Strategy" },
     { href: "/#calculator", label: "Mortgage Calculator" },
     { href: "/break-even-calculator", label: "Refinance Calculator" },
-    { href: "/blog", label: "Blog & Resources" },
+    { href: "/blog", label: "Learn" },
     { href: "/#contact", label: "Contact" },
   ]
 
