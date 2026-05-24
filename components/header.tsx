@@ -7,7 +7,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
-import Head from "next/head"
+
+declare global {
+  interface Window {
+    trackApplicationClick?: (location: string) => void
+    twq?: (event: string, id: string, data?: Record<string, string>) => void
+  }
+}
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,164 +30,140 @@ export function Header() {
     { href: "/strategy", label: "Mortgage Strategy" },
     { href: "/#calculator", label: "Mortgage Calculator" },
     { href: "/break-even-calculator", label: "Refinance Calculator" },
+    { href: "/learn", label: "Learn" },
     { href: "/blog", label: "Blog & Resources" },
     { href: "/#contact", label: "Contact" },
   ]
 
   return (
-    <>
-      <Head>
-        <meta name="google-site-verification" content="cqAy-eSzzWV9m3qnmHpP9vTs8olcdSK9IR0LbQ2Zf0U" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){
-                s.exe?s.exe.apply(s,arguments):s.queue.push(arguments)
-              },s.version='1.1',s.queue=[],u=t.createElement(n),
-              u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
-              a=t.getElementsByTagName(n)[0],
-              a.parentNode.insertBefore(u,a))
-              }(window,document,'script');
-              twq('config','q3hms');
-            `,
-          }}
-        />
-      </Head>
+    <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex items-center justify-between">
+          {/* Logo Section */}
+          <div className="flex items-center space-x-3 md:space-x-10">
+            <Link href="/" className="flex items-center space-x-3 md:space-x-10">
+              <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
+                <Image
+                  src="/BCmortgageteamlogo.jpeg"
+                  alt="BC Mortgage Team"
+                  width={96}
+                  height={72}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+              <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
+                <Image
+                  src="/BRX_brand_black.png"
+                  alt="BRX Mortgage"
+                  width={96}
+                  height={72}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+            </Link>
+          </div>
 
-      <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            {/* Logo Section */}
-            <div className="flex items-center space-x-3 md:space-x-10">
-              <Link href="/" className="flex items-center space-x-3 md:space-x-10">
-                <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
-                  <Image
-                    src="/BCmortgageteamlogo.jpeg"
-                    alt="BC Mortgage Team"
-                    width={96}
-                    height={72}
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-                <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
-                  <Image
-                    src="/BRX_brand_black.png"
-                    alt="BRX Mortgage"
-                    width={96}
-                    height={72}
-                    className="object-contain w-full h-full"
-                  />
-                </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-6">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`transition-colors font-medium pb-0.5 border-b-2 ${
+                  isActive(item.href)
+                    ? "text-[#032133] border-[#D4AF37]"
+                    : "text-gray-700 hover:text-[#032133] border-transparent"
+                }`}
+              >
+                {item.label}
               </Link>
-            </div>
+            ))}
+          </nav>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-6">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`transition-colors font-medium pb-0.5 border-b-2 ${
-                    isActive(item.href)
-                      ? "text-[#032133] border-[#D4AF37]"
-                      : "text-gray-700 hover:text-[#032133] border-transparent"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
+          {/* Desktop Apply Button */}
+          <div className="hidden md:flex items-center">
+            <Button
+              asChild
+              size="sm"
+              className="bg-[#032133] hover:bg-[#032133]/90 h-10"
+            >
+              <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                Apply Now
+              </Link>
+            </Button>
+          </div>
 
-            {/* Desktop Apply Button */}
-            <div className="hidden md:flex items-center">
-              <Button
-                asChild
-                size="sm"
-                className="bg-[#032133] hover:bg-[#032133]/90 h-10"
-                onClick={() => window.trackApplicationClick?.("header")}
-              >
-                <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                  Apply Now
-                </Link>
-              </Button>
-            </div>
+          {/* Mobile Menu */}
+          <div className="flex items-center space-x-2 lg:hidden">
+            <Button
+              asChild
+              size="sm"
+              className="bg-[#032133] hover:bg-[#032133]/90 h-9 px-3 text-sm md:hidden"
+            >
+              <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                Apply
+              </Link>
+            </Button>
 
-            {/* Mobile Menu */}
-            <div className="flex items-center space-x-2 lg:hidden">
-              <Button
-                asChild
-                size="sm"
-                className="bg-[#032133] hover:bg-[#032133]/90 h-9 px-3 text-sm md:hidden"
-                onClick={() => window.trackApplicationClick?.("header-mobile")}
-              >
-                <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                  Apply
-                </Link>
-              </Button>
-
-              <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
-                    <Menu className="h-5 w-5" />
-                    <span className="sr-only">Toggle menu</span>
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                  <div className="flex flex-col space-y-4 mt-8">
-                    <div className="flex items-center space-x-3 pb-4 border-b">
-                      <div className="w-12 h-9 flex items-center justify-center">
-                        <Image
-                          src="/BRX_brand_black.png"
-                          alt="BRX Mortgage"
-                          width={48}
-                          height={36}
-                          className="object-contain"
-                        />
-                      </div>
-                      <div>
-                        <h2 className="font-bold text-gray-900">BC Mortgage Team</h2>
-                        <p className="text-sm text-gray-600">Smart Mortgage Solutions</p>
-                      </div>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <div className="flex flex-col space-y-4 mt-8">
+                  <div className="flex items-center space-x-3 pb-4 border-b">
+                    <div className="w-12 h-9 flex items-center justify-center">
+                      <Image
+                        src="/BRX_brand_black.png"
+                        alt="BRX Mortgage"
+                        width={48}
+                        height={36}
+                        className="object-contain"
+                      />
                     </div>
-
-                    <nav className="flex flex-col space-y-3">
-                      {navigationItems.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className={`text-lg font-medium transition-colors py-2 px-3 rounded-md ${
-                            isActive(item.href)
-                              ? "text-[#032133] border-b-2 border-[#D4AF37]"
-                              : "text-gray-700 hover:text-[#032133] hover:bg-gray-50"
-                          }`}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                    </nav>
-
-                    <div className="pt-4 border-t">
-                      <Button
-                        asChild
-                        className="w-full bg-[#032133] hover:bg-[#032133]/90 h-12 text-base"
-                        onClick={() => {
-                          window.trackApplicationClick?.("header-mobile-menu")
-                          setIsOpen(false)
-                        }}
-                      >
-                        <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                          Apply Now
-                        </Link>
-                      </Button>
+                    <div>
+                      <h2 className="font-bold text-gray-900">BC Mortgage Team</h2>
+                      <p className="text-sm text-gray-600">Smart Mortgage Solutions</p>
                     </div>
                   </div>
-                </SheetContent>
-              </Sheet>
-            </div>
+
+                  <nav className="flex flex-col space-y-3">
+                    {navigationItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`text-lg font-medium transition-colors py-2 px-3 rounded-md ${
+                          isActive(item.href)
+                            ? "text-[#032133] border-b-2 border-[#D4AF37]"
+                            : "text-gray-700 hover:text-[#032133] hover:bg-gray-50"
+                        }`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </nav>
+
+                  <div className="pt-4 border-t">
+                    <Button
+                      asChild
+                      className="w-full bg-[#032133] hover:bg-[#032133]/90 h-12 text-base"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                        Apply Now
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   )
 }
