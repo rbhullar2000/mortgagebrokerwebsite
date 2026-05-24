@@ -3,6 +3,8 @@ import Link from "next/link"
 import { learnPosts, type ContentBlock } from "@/lib/learnPosts"
 import { ArrowLeft, ChevronRight } from "lucide-react"
 import type { Metadata } from "next"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 type Params = Promise<{ slug: string }>
 
@@ -130,7 +132,9 @@ export default async function LearnPostPage({ params }: { params: Params }) {
     .slice(0, 3)
 
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <Header />
+      <main className="min-h-screen bg-white">
       {/* Header */}
       <section className="bg-[#032133] text-white py-12 md:py-16">
         <div className="container mx-auto px-4">
@@ -231,5 +235,7 @@ export default async function LearnPostPage({ params }: { params: Params }) {
         </div>
       </article>
     </main>
+    <Footer />
+    </>
   )
 }
