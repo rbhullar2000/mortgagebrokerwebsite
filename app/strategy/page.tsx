@@ -99,6 +99,42 @@ export default function StrategyPage() {
         </div>
       </section>
 
+
+       {/* What Your Strategy Call Includes Section */}
+      <section className="py-12 bg-[#F4F6F8]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
+              What your strategy call includes
+            </h2>
+
+            <p className="text-gray-600 mb-8 text-base">
+              A focused, no-obligation 15-minute conversation built around your specific situation.
+            </p>
+
+            <div className="space-y-3">
+              {[
+                "Review of your current or planned mortgage",
+                "Structure options tailored to your situation",
+                "Trade-offs between rate and flexibility",
+                "Clear next steps before you commit",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-4 text-gray-700"
+                >
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-4 h-4 text-white fill-white" />
+                  </div>
+                  <span className="text-base">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Testimonials Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
@@ -166,40 +202,7 @@ export default function StrategyPage() {
         </div>
       </section>
 
-      {/* What Your Strategy Call Includes Section */}
-      <section className="py-12 bg-[#F4F6F8]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
-              What your strategy call includes
-            </h2>
-
-            <p className="text-gray-600 mb-8 text-base">
-              A focused, no-obligation 15-minute conversation built around your specific situation.
-            </p>
-
-            <div className="space-y-3">
-              {[
-                "Review of your current or planned mortgage",
-                "Structure options tailored to your situation",
-                "Trade-offs between rate and flexibility",
-                "Clear next steps before you commit",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-4 text-gray-700"
-                >
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-4 h-4 text-white fill-white" />
-                  </div>
-                  <span className="text-base">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+     
       {/* Calendly Booking Section */}
      <section className="py-12 bg-white" id="book">
   <div className="container mx-auto px-4">
