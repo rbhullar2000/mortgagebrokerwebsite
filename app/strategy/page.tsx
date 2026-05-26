@@ -54,6 +54,10 @@ export default function StrategyPage() {
               situation changes.
             </p>
 
+            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+              Helping BC homeowners lower payments, improve flexibility, and make smarter long-term mortgage decisions.
+            </p>
+
             <Button
               size="lg"
               className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#032133] font-bold h-14 px-10 text-base"
