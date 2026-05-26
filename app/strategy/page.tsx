@@ -34,7 +34,7 @@ export default function StrategyPage() {
       </Script>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
+      <section className="py-12 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 inline-block">
