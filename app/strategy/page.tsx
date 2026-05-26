@@ -6,6 +6,7 @@ import Link from "next/link"
 import Script from "next/script"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { CalendlyEmbed } from "@/components/calendly-embed"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -195,6 +196,23 @@ export default function StrategyPage() {
                   <span className="text-base">{item}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Calendly Booking Section */}
+      <section className="py-12 bg-white" id="book">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 text-balance">
+              Book your free strategy call
+            </h2>
+            <p className="text-gray-600 mb-6 text-base">
+              Select a time below — no redirect, books instantly.
+            </p>
+            <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+              <CalendlyEmbed url="https://calendly.com/robsbhullar/30min" />
             </div>
           </div>
         </div>
