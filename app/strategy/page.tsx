@@ -34,28 +34,29 @@ export default function StrategyPage() {
       </Script>
 
       {/* Hero Section */}
-      <section className="py-20 bg-[#2A2A2A]">
+      <section className="py-20 bg-gradient-to-br from-[#032133] to-[#1D2D44]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-6 bg-blue-600/30 text-blue-300 hover:bg-blue-600/40 border border-blue-500/50">
+            <Badge className="mb-6 bg-[#D4AF37]/20 text-[#D4AF37] hover:bg-[#D4AF37]/30 border border-[#D4AF37]/30">
               Strategy-first mortgage advice · Surrey, BC
             </Badge>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight text-balance">
               Most people focus on rate.{" "}
-              <span className="block">
+              <span className="text-[#D4AF37]">
                 The real advantage is structure.
               </span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed">
-              A mortgage isn&apos;t just about today&apos;s rate — it&apos;s about flexibility, cost
-              over time, and what happens when your situation changes.
+            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+              A mortgage isn&apos;t just about today&apos;s rate — it&apos;s
+              about flexibility, cost over time, and what happens when your
+              situation changes.
             </p>
 
             <Button
               size="lg"
-              className="bg-white hover:bg-gray-100 text-[#2A2A2A] font-bold h-14 px-10 text-base"
+              className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#032133] font-bold h-14 px-10 text-base"
               asChild
             >
               <Link
@@ -93,6 +94,107 @@ export default function StrategyPage() {
                 </div>
                 <p className="text-gray-400 text-sm lg:text-base">Pre-approval time</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-12 text-balance">
+              What clients say
+            </h2>
+
+            <div className="space-y-6">
+              {/* Testimonial 1 */}
+              <Card className="border border-gray-200 bg-white shadow-sm">
+                <CardContent className="pt-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-[#D4AF37] text-lg">
+                        ★
+                      </span>
+                    ))}
+                  </div>
+
+                  <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                    Rob didn&apos;t just find me a rate — he explained exactly how the mortgage was structured and why. I felt confident signing instead of just hoping for the best.
+                  </p>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">SK</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-[#1D2D44]">Sarah K.</p>
+                      <p className="text-sm text-gray-600">First-time buyer · Vancouver</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Testimonial 2 */}
+              <Card className="border border-gray-200 bg-white shadow-sm">
+                <CardContent className="pt-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-[#D4AF37] text-lg">
+                        ★
+                      </span>
+                    ))}
+                  </div>
+
+                  <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                    I was about to auto-renew with my bank. Rob saved me over $4,000 in the first year just by shopping around. Should have called sooner.
+                  </p>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">DM</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-[#1D2D44]">David M.</p>
+                      <p className="text-sm text-gray-600">Renewal · Surrey</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Your Strategy Call Includes Section */}
+      <section className="py-20 bg-[#F4F6F8]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4 text-balance">
+              What your strategy call includes
+            </h2>
+
+            <p className="text-gray-600 mb-10 text-lg">
+              A focused, no-obligation 15-minute conversation built around your specific situation.
+            </p>
+
+            <div className="space-y-4">
+              {[
+                "Review of your current or planned mortgage",
+                "Structure options tailored to your situation",
+                "Trade-offs between rate and flexibility",
+                "Clear next steps before you commit",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-4 text-gray-700"
+                >
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-4 h-4 text-white fill-white" />
+                  </div>
+                  <span className="text-lg">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -203,59 +305,7 @@ export default function StrategyPage() {
         </div>
       </section>
 
-      {/* What They Get Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4 text-balance">
-              What your mortgage strategy session includes
-            </h2>
-
-            <p className="text-gray-600 mb-10 text-lg">
-              A focused, no-obligation conversation built around your specific
-              situation.
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-5">
-              {[
-                {
-                  icon: <FileText className="w-5 h-5" />,
-                  text: "Review of your current or planned mortgage",
-                },
-                {
-                  icon: <TrendingUp className="w-5 h-5" />,
-                  text: "Structure options tailored to your situation",
-                },
-                {
-                  icon: <Calculator className="w-5 h-5" />,
-                  text: "Trade-offs between rate and flexibility",
-                },
-                {
-                  icon: <CheckCircle className="w-5 h-5" />,
-                  text: "Clear next steps before you commit",
-                },
-              ].map((item) => (
-                <Card
-                  key={item.text}
-                  className="border border-gray-200 shadow-sm"
-                >
-                  <CardContent className="flex items-start gap-4 pt-6">
-                    <div className="w-10 h-10 bg-[#F4F6F8] rounded-lg flex items-center justify-center flex-shrink-0 text-[#032133]">
-                      {item.icon}
-                    </div>
-
-                    <span className="text-gray-700 leading-relaxed">
-                      {item.text}
-                    </span>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who This Is For Section */}
+{/* Who This Is For Section */}
       <section className="py-20 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
