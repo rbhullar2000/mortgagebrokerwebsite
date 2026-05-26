@@ -218,7 +218,7 @@ export default function StrategyPage() {
 
     <div className="max-w-6xl mx-auto text-center">
 
-      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 text-balance">
+   {/*   <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 text-balance">
 
         Book your free strategy call
 
@@ -229,7 +229,7 @@ export default function StrategyPage() {
         Select a time below — no redirect, books instantly.
 
       </p>
-
+*/}
       <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
 
         <iframe
