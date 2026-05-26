@@ -38,7 +38,7 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
+      <section className="py-12 lg:py-16 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
               <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 inline-block">
@@ -113,9 +113,9 @@ export default function HomePage() {
       </section> */}
 
     
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-12 lg:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <img
                 src="/headshot.png?height=600&width=500"
@@ -206,9 +206,9 @@ export default function HomePage() {
       </section>
 
       {/* Lenders Section */}
-      <section id="lenders" className="py-20 bg-[#F4F6F8]">
+      <section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Trusted Lending Partners</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We work with 50+ lenders including major banks, credit unions, and alternative lenders to find you the
@@ -224,7 +224,7 @@ export default function HomePage() {
             <img src="rmg.png" alt="RMG Mortgages" className="h-40" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto">
                 <Users className="w-8 h-8" />
@@ -267,11 +267,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-16 bg-white rounded-2xl shadow-lg p-8">
+          <div className="mt-10 bg-white rounded-2xl shadow-lg p-6">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-[#1D2D44] mb-4">Why Work With Multiple Lenders?</h3>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-[#032133] mb-2">50+</div>
                 <div className="text-sm text-gray-600 mb-2">Lending Partners</div>
@@ -293,7 +293,7 @@ export default function HomePage() {
       </section>
 
         {/* Testimonials Section */}
-      <section className="py-12 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-8 text-balance">
@@ -360,14 +360,14 @@ export default function HomePage() {
       </section>
 
       {/* Market Insights - Twitter Feed */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-10 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
+          <div className="mb-6">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">Market Insights</h2>
             <p className="text-gray-600">Real-world mortgage insights to help you navigate today's market with confidence</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
+          <div className="grid lg:grid-cols-2 gap-6 items-start">
             {/* Twitter Feed */}
             <div>
               <TwitterFeed />
@@ -421,9 +421,9 @@ export default function HomePage() {
       </section>
 
       {/* Mortgage News Section */}
-      <section id="news" className="py-20 bg-white">
+      <section id="news" className="py-12 lg:py-14 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Mortgage News & Updates</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Stay informed about the latest mortgage trends, rate changes, and housing market news.
@@ -432,13 +432,13 @@ export default function HomePage() {
 
           {/* Featured Post */}
           {featuredPost && (
-            <section className="py-12 bg-white">
+            <section className="py-6 bg-white">
               <div className="container mx-auto px-4">
-                <div className="mb-8">
+                <div className="mb-4">
                   <h2 className="text-2xl font-bold text-[#1D2D44]">Featured Article</h2>
                 </div>
-                <div className="bg-[#F4F6F8] rounded-2xl p-8 border-2 border-[#D4AF37]">
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="bg-[#F4F6F8] rounded-2xl p-6 border-2 border-[#D4AF37]">
+                  <div className="grid md:grid-cols-2 gap-6 items-center">
                     <div>
                       <Badge className="mb-4 bg-[#1D2D44] text-white">{featuredPost.category}</Badge>
                       <h3 className="text-3xl font-bold text-[#1D2D44] mb-4">
@@ -468,7 +468,7 @@ export default function HomePage() {
           )}
 
           {/* Other Recent Articles */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {otherArticles.map((article, index) => (
               <NewsCard
                 key={index}
@@ -486,16 +486,16 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-[#F4F6F8]">
+      <section id="services" className="py-12 lg:py-14 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Comprehensive Mortgage Services</h2>
             <p className="text-xl text-[#2C2C2C] max-w-3xl mx-auto">
               From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every
               situation.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: <Users className="w-8 h-8 text-[#1D2D44]" />,
@@ -570,9 +570,9 @@ export default function HomePage() {
       </section>
 
       {/* Mortgage Calculator Section */}
-      <section id="calculator" className="py-20 bg-white">
+      <section id="calculator" className="py-12 lg:py-14 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Mortgage Payment Calculator</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get an instant estimate of your monthly mortgage payments and see how different rates and terms affect
@@ -593,9 +593,9 @@ export default function HomePage() {
 
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-[#F4F6F8]">
+      <section id="contact" className="py-12 lg:py-14 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Ready to Get Started?</h2>
              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Contact today for a free consultation, or start your secure online application right away.
@@ -603,7 +603,7 @@ export default function HomePage() {
             
             
              {/* Calendly Booking Section */}
-     <section className="py-12 bg-white" id="book">
+     <section className="py-8 bg-white" id="book">
   <div className="container mx-auto px-4">
     <div className="max-w-6xl mx-auto">
       <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 text-balance">
@@ -630,7 +630,7 @@ export default function HomePage() {
             
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-10">
             {/* Left: Contact Form */}
             <div>
         {/*      <h3 className="text-2xl font-bold text-[#1D2D44] mb-8">Get Your Free Consultation</h3> */}
