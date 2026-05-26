@@ -55,7 +55,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
                 <Button size="lg" className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold" asChild>
-                  <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://calendly.com/bcmortgageteam" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                   </Link>
                 </Button>
@@ -192,7 +192,7 @@ export default function HomePage() {
                   className="bg-[#032133] hover:bg-[#032133]/90 text-[#FFFFFF] font-semibold w-full sm:w-auto"
                   asChild
                 >
-                 <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
+                 <Link href="https://calendly.com/bcmortgageteam" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                   </Link>
                 </Button>
@@ -535,7 +535,7 @@ export default function HomePage() {
             </p>  
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <Button size="lg" className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] font-semibold" asChild>
-               <Link href="https://calendly.com/robsbhullar" target="_blank" rel="noopener noreferrer">
+               <Link href="https://calendly.com/bcmortgageteam" target="_blank" rel="noopener noreferrer">
                     Book Your Mortgage Strategy Call →
                 </Link>
               </Button>
