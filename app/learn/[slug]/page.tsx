@@ -225,7 +225,7 @@ export default async function LearnPostPage({ params }: { params: Params }) {
                 Get a free consultation with a licensed BC mortgage broker.
               </p>
               <a
-                href="https://calendly.com/robsbhullar"
+                href="https://calendly.com/bcmortgageteam/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-[#D4AF37] text-[#032133] font-semibold rounded-lg hover:bg-[#D4AF37]/90 transition-colors"
