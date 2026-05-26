@@ -226,6 +226,42 @@ export default function StrategyPage() {
   </div>
 </section>
 
+      {/* Who This Is For Section */}
+      <section className="py-12 bg-[#F4F6F8]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
+              Who this is for
+            </h2>
+
+            <p className="text-base text-gray-600 mb-6">
+              This is for you if:
+            </p>
+
+            <div className="space-y-3">
+              {[
+                "You're buying in the next 3–6 months",
+                "You're renewing in the next 12–24 months",
+                "You're considering refinancing",
+                "You want to understand your options before committing",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-4 bg-white rounded-lg px-5 py-3 border border-gray-200 shadow-sm"
+                >
+                  <div className="w-6 h-6 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-4 h-4 text-white fill-white" />
+                  </div>
+
+                  <span className="text-gray-800 text-sm font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Reframe Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
@@ -331,40 +367,6 @@ export default function StrategyPage() {
         </div>
       </section>
 
-{/* Who This Is For Section */}
-      <section className="py-12 bg-[#F4F6F8]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
-              Who this is for
-            </h2>
-
-            <p className="text-base text-gray-600 mb-6">
-              This is for you if:
-            </p>
-
-            <div className="space-y-3">
-              {[
-                "You're buying in the next 3–6 months",
-                "You're renewing in the next 12–24 months",
-                "You're considering refinancing",
-                "You want to understand your options before committing",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-4 bg-white rounded-lg px-5 py-3 border border-gray-200 shadow-sm"
-                >
-                  <div className="w-6 h-6 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-4 h-4 text-white fill-white" />
-                  </div>
-
-                  <span className="text-gray-800 text-sm font-medium">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA Section */}
       <section className="py-16 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
