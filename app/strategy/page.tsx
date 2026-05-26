@@ -100,18 +100,18 @@ export default function StrategyPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-12 text-balance">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-8 text-balance">
               What clients say
             </h2>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {/* Testimonial 1 */}
               <Card className="border border-gray-200 bg-white shadow-sm">
-                <CardContent className="pt-6">
-                  <div className="flex gap-1 mb-4">
+                <CardContent className="pt-5 pb-4">
+                  <div className="flex gap-1 mb-3">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-[#D4AF37] text-lg">
                         ★
@@ -119,7 +119,7 @@ export default function StrategyPage() {
                     ))}
                   </div>
 
-                  <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                  <p className="text-gray-700 mb-4 leading-relaxed text-base">
                     Rob didn&apos;t just find me a rate — he explained exactly how the mortgage was structured and why. I felt confident signing instead of just hoping for the best.
                   </p>
 
@@ -128,8 +128,8 @@ export default function StrategyPage() {
                       <span className="text-white font-bold text-sm">SK</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-[#1D2D44]">Sarah K.</p>
-                      <p className="text-sm text-gray-600">First-time buyer · Vancouver</p>
+                      <p className="font-semibold text-[#1D2D44] text-sm">Sarah K.</p>
+                      <p className="text-xs text-gray-600">First-time buyer · Vancouver</p>
                     </div>
                   </div>
                 </CardContent>
@@ -137,8 +137,8 @@ export default function StrategyPage() {
 
               {/* Testimonial 2 */}
               <Card className="border border-gray-200 bg-white shadow-sm">
-                <CardContent className="pt-6">
-                  <div className="flex gap-1 mb-4">
+                <CardContent className="pt-5 pb-4">
+                  <div className="flex gap-1 mb-3">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-[#D4AF37] text-lg">
                         ★
@@ -146,7 +146,7 @@ export default function StrategyPage() {
                     ))}
                   </div>
 
-                  <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                  <p className="text-gray-700 mb-4 leading-relaxed text-base">
                     I was about to auto-renew with my bank. Rob saved me over $4,000 in the first year just by shopping around. Should have called sooner.
                   </p>
 
@@ -155,8 +155,8 @@ export default function StrategyPage() {
                       <span className="text-white font-bold text-sm">DM</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-[#1D2D44]">David M.</p>
-                      <p className="text-sm text-gray-600">Renewal · Surrey</p>
+                      <p className="font-semibold text-[#1D2D44] text-sm">David M.</p>
+                      <p className="text-xs text-gray-600">Renewal · Surrey</p>
                     </div>
                   </div>
                 </CardContent>
@@ -167,18 +167,18 @@ export default function StrategyPage() {
       </section>
 
       {/* What Your Strategy Call Includes Section */}
-      <section className="py-20 bg-[#F4F6F8]">
+      <section className="py-12 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4 text-balance">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
               What your strategy call includes
             </h2>
 
-            <p className="text-gray-600 mb-10 text-lg">
+            <p className="text-gray-600 mb-8 text-base">
               A focused, no-obligation 15-minute conversation built around your specific situation.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {[
                 "Review of your current or planned mortgage",
                 "Structure options tailored to your situation",
@@ -192,7 +192,7 @@ export default function StrategyPage() {
                   <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-white fill-white" />
                   </div>
-                  <span className="text-lg">{item}</span>
+                  <span className="text-base">{item}</span>
                 </div>
               ))}
             </div>
@@ -201,20 +201,20 @@ export default function StrategyPage() {
       </section>
 
       {/* Reframe Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-8 text-balance">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6 text-balance">
               The way most mortgages are chosen is backwards.
             </h2>
 
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base text-gray-600 mb-6 leading-relaxed">
               Most borrowers are shown a rate and asked to choose. But the
               biggest mortgage decisions aren&apos;t about rate — they&apos;re
               about how the mortgage is structured:
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-3 mb-6">
               {[
                 "Term length",
                 "Flexibility",
@@ -223,15 +223,15 @@ export default function StrategyPage() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-3 bg-[#F4F6F8] rounded-lg px-5 py-4 border border-gray-200"
+                  className="flex items-center gap-3 bg-[#F4F6F8] rounded-lg px-4 py-3 border border-gray-200"
                 >
                   <div className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0" />
-                  <span className="text-[#1D2D44] font-medium">{item}</span>
+                  <span className="text-[#1D2D44] font-medium text-sm">{item}</span>
                 </div>
               ))}
             </div>
 
-            <p className="text-lg text-gray-600 mt-8 leading-relaxed">
+            <p className="text-base text-gray-600 leading-relaxed">
               These factors determine what your mortgage actually costs — and
               how it performs over time.
             </p>
@@ -240,10 +240,10 @@ export default function StrategyPage() {
       </section>
 
       {/* Risk Section */}
-      <section className="py-20 bg-[#F4F6F8]">
+      <section className="py-12 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="flex items-start gap-4 mb-6">
+            <div className="flex items-start gap-4 mb-5">
               <div className="w-10 h-10 bg-[#032133] rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                 <Shield className="w-5 h-5 text-[#D4AF37]" />
               </div>
@@ -253,12 +253,12 @@ export default function StrategyPage() {
               </h2>
             </div>
 
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base text-gray-600 mb-6 leading-relaxed">
               A mortgage with a lower rate but poor structure can cost more over
               time. Especially if:
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 mb-6">
               {[
                 "You need to break the mortgage early",
                 "Interest rates change",
@@ -266,18 +266,18 @@ export default function StrategyPage() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-4 bg-white rounded-lg px-6 py-4 border border-gray-200 shadow-sm"
+                  className="flex items-center gap-4 bg-white rounded-lg px-5 py-3 border border-gray-200 shadow-sm"
                 >
                   <div className="w-8 h-8 bg-[#032133]/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <ArrowRight className="w-4 h-4 text-[#032133]" />
                   </div>
 
-                  <span className="text-gray-700">{item}</span>
+                  <span className="text-gray-700 text-sm">{item}</span>
                 </div>
               ))}
             </div>
 
-            <p className="text-lg text-gray-600 mt-8 font-medium">
+            <p className="text-base text-gray-600 font-medium">
               These scenarios are more common than most people expect.
             </p>
           </div>
@@ -285,19 +285,19 @@ export default function StrategyPage() {
       </section>
 
       {/* Strategy Positioning Section */}
-      <section className="py-20 bg-[#032133]">
+      <section className="py-12 bg-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 text-balance">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 text-balance">
               This is where strategy matters.
             </h2>
 
-            <p className="text-xl text-gray-300 mb-4 leading-relaxed">
+            <p className="text-base text-gray-300 mb-3 leading-relaxed">
               Every mortgage should be structured based on your timeline, risk
               tolerance, and future plans — not just the lowest available rate.
             </p>
 
-            <p className="text-xl text-[#D4AF37] font-semibold leading-relaxed">
+            <p className="text-base text-[#D4AF37] font-semibold leading-relaxed">
               The goal isn&apos;t just to secure a mortgage. It&apos;s to
               structure it properly from the beginning.
             </p>
@@ -306,18 +306,18 @@ export default function StrategyPage() {
       </section>
 
 {/* Who This Is For Section */}
-      <section className="py-20 bg-[#F4F6F8]">
+      <section className="py-12 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4 text-balance">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
               Who this is for
             </h2>
 
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-base text-gray-600 mb-6">
               This is for you if:
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {[
                 "You're buying in the next 3–6 months",
                 "You're renewing in the next 12–24 months",
@@ -326,13 +326,13 @@ export default function StrategyPage() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-4 bg-white rounded-lg px-6 py-5 border border-gray-200 shadow-sm"
+                  className="flex items-center gap-4 bg-white rounded-lg px-5 py-3 border border-gray-200 shadow-sm"
                 >
                   <div className="w-6 h-6 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-white fill-white" />
                   </div>
 
-                  <span className="text-gray-800 font-medium">{item}</span>
+                  <span className="text-gray-800 text-sm font-medium">{item}</span>
                 </div>
               ))}
             </div>
@@ -341,14 +341,14 @@ export default function StrategyPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
+      <section className="py-16 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6 text-balance">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-5 text-balance">
               Understand your options before you commit.
             </h2>
 
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+            <p className="text-base text-gray-300 mb-8 leading-relaxed">
               A well-structured mortgage can save money, reduce risk, and give
               you flexibility when you need it most.
             </p>
@@ -368,11 +368,11 @@ export default function StrategyPage() {
               </Link>
             </Button>
 
-            <p className="text-sm text-[#1D2D44] mt-4 font-medium">
+            <p className="text-xs text-[#1D2D44] mt-3 font-medium">
               15-minute call • No obligation • Strategy-focused
             </p>
 
-            <p className="text-gray-500 text-sm mt-4">
+            <p className="text-gray-500 text-xs mt-2">
               No cost. No obligation. Just clarity on your best path forward.
             </p>
           </div>
