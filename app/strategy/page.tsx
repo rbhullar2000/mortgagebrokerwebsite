@@ -204,11 +204,14 @@ export default function StrategyPage() {
 
      
       {/* Calendly Booking Section */}
-     <section className="py-12 bg-white" id="book">
-  <div className="container mx-auto px-4">
-    <div className="max-w-6xl mx-auto">
+     <div className="container mx-auto px-4">
+
+    <div className="max-w-6xl mx-auto text-center">
+
       <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 text-balance">
+
         Book your free strategy call
+
       </h2>
 
       <p className="text-gray-600 mb-6 text-base">
