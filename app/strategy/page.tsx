@@ -212,7 +212,7 @@ export default function StrategyPage() {
             </p>
             <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
               <iframe
-                src="https://calendly.com/bcmortgageteam/30min"
+                src="https://calendly.com/bcmortgageteam/15min"
                 width="100%"
                 height="750"
                 frameBorder="0"
