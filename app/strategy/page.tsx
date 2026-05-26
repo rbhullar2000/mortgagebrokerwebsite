@@ -147,7 +147,7 @@ export default function StrategyPage() {
                   </div>
 
                   <p className="text-gray-700 mb-4 leading-relaxed text-base">
-  I was ready to renew directly with my bank, but BC Mortgage Team took the time to review my options and structure everything properly. The result was over $4,000 in savings in the first year alone — and a mortgage that fit my long-term goals much better.
+  I was ready to renew directly with my bank, but Rob took the time to review my options and structure everything properly. The result was over $4,000 in savings in the first year alone — and a mortgage that fit my long-term goals much better.
 </p>
 
                   <div className="flex items-center gap-4">
