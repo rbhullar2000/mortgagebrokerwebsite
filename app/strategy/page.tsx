@@ -60,7 +60,7 @@ export default function StrategyPage() {
               asChild
             >
               <Link
-                href="https://calendly.com/robsbhullar"
+                href="https://calendly.com/bcmortgageteam"
                 target="_blank"
                 rel="noopener noreferrer"
               >
