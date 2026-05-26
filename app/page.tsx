@@ -292,6 +292,73 @@ export default function HomePage() {
         </div>
       </section>
 
+        {/* Testimonials Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-8 text-balance">
+              What clients say
+            </h2>
+
+            <div className="space-y-4">
+              {/* Testimonial 1 */}
+              <Card className="border border-gray-200 bg-white shadow-sm">
+                <CardContent className="pt-5 pb-4">
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-[#D4AF37] text-lg">
+                        ★
+                      </span>
+                    ))}
+                  </div>
+
+                <p className="text-gray-700 mb-4 leading-relaxed text-base">
+  BC Mortgage Team didn&apos;t just help me secure a mortgage — they took the time to explain the strategy behind it and why the structure mattered long-term. I felt informed, confident, and supported throughout the process instead of simply choosing the lowest rate and hoping for the best.
+</p>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">SK</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-[#1D2D44] text-sm">Sarah K.</p>
+                      <p className="text-xs text-gray-600">First-time buyer · Vancouver</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Testimonial 2 */}
+              <Card className="border border-gray-200 bg-white shadow-sm">
+                <CardContent className="pt-5 pb-4">
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-[#D4AF37] text-lg">
+                        ★
+                      </span>
+                    ))}
+                  </div>
+
+                  <p className="text-gray-700 mb-4 leading-relaxed text-base">
+  I was ready to renew directly with my bank, but Rob took the time to review my options and structure everything properly. The result was over $4,000 in savings in the first year alone — and a mortgage that fit my long-term goals much better.
+</p>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">DM</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-[#1D2D44] text-sm">David M.</p>
+                      <p className="text-xs text-gray-600">Renewal · Surrey</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Market Insights - Twitter Feed */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
