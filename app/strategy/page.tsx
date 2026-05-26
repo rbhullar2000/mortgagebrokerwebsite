@@ -201,27 +201,30 @@ export default function StrategyPage() {
       </section>
 
       {/* Calendly Booking Section */}
-      <section className="py-12 bg-white" id="book">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 text-balance">
-              Book your free strategy call
-            </h2>
-            <p className="text-gray-600 mb-6 text-base">
-              Select a time below — no redirect, books instantly.
-            </p>
-            <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
-              <iframe
-                src="https://calendly.com/bcmortgageteam/15min"
-                width="100%"
-                height="750"
-                frameBorder="0"
-                title="Book Mortgage Strategy Call"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
+     <section className="py-12 bg-white" id="book">
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 text-balance">
+        Book your free strategy call
+      </h2>
+
+      <p className="text-gray-600 mb-6 text-base">
+        Select a time below — no redirect, books instantly.
+      </p>
+
+      <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
+        <iframe
+          src="https://calendly.com/bcmortgageteam/15min"
+          width="100%"
+          height="950"
+          frameBorder="0"
+          title="Book Mortgage Strategy Call"
+          className="w-full"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Reframe Section */}
       <section className="py-12 bg-white">
