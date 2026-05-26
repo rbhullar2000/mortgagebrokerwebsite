@@ -34,29 +34,28 @@ export default function StrategyPage() {
       </Script>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#032133] to-[#1D2D44]">
+      <section className="py-20 bg-[#2A2A2A]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-6 bg-[#D4AF37]/20 text-[#D4AF37] hover:bg-[#D4AF37]/30 border border-[#D4AF37]/30">
-              Strategy-First Mortgage Advice
+            <Badge className="mb-6 bg-blue-600/30 text-blue-300 hover:bg-blue-600/40 border border-blue-500/50">
+              Strategy-first mortgage advice · Surrey, BC
             </Badge>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight text-balance">
               Most people focus on rate.{" "}
-              <span className="text-[#D4AF37]">
+              <span className="block">
                 The real advantage is structure.
               </span>
             </h1>
 
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-              A mortgage isn&apos;t just about today&apos;s rate — it&apos;s
-              about flexibility, cost over time, and what happens when your
-              situation changes.
+            <p className="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed">
+              A mortgage isn&apos;t just about today&apos;s rate — it&apos;s about flexibility, cost
+              over time, and what happens when your situation changes.
             </p>
 
             <Button
               size="lg"
-              className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#032133] font-bold h-14 px-10 text-base"
+              className="bg-white hover:bg-gray-100 text-[#2A2A2A] font-bold h-14 px-10 text-base"
               asChild
             >
               <Link
@@ -64,29 +63,35 @@ export default function StrategyPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book Your Mortgage Strategy Call{" "}
+                Book my free 15-minute strategy call{" "}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
 
-            {/* Credibility Strip */}
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-[#D4AF37]" />
-                <span>15-minute call</span>
-              </div>
+            {/* Support Text */}
+            <p className="mt-6 text-gray-400 text-sm">
+              No cost · No obligation · Instant confirmation
+            </p>
 
-              <div className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-[#D4AF37]" />
-                <span>
-                  Quick, no-pressure call to review your options before you
-                  commit.
-                </span>
+            {/* Stats Section */}
+            <div className="mt-16 grid grid-cols-3 gap-6 lg:gap-8">
+              <div className="text-center">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                  50+
+                </div>
+                <p className="text-gray-400 text-sm lg:text-base">Lending partners</p>
               </div>
-
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-[#D4AF37]" />
-                <span>Data-driven, strategy-first approach</span>
+              <div className="text-center">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                  25 yrs
+                </div>
+                <p className="text-gray-400 text-sm lg:text-base">Finance experience</p>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                  24 hrs
+                </div>
+                <p className="text-gray-400 text-sm lg:text-base">Pre-approval time</p>
               </div>
             </div>
           </div>
