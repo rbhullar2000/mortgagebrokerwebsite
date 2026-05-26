@@ -74,7 +74,7 @@ export function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400 space-y-2">
           <p>
-            Rob Bhullar — Mortgage Professional &nbsp;|&nbsp; BRX Mortgage Inc.
+            Rob S. Bhullar, BSc — Licensed Mortgage Professional &nbsp;|&nbsp; BRX Mortgage Inc.
             &nbsp;|&nbsp; BCFSA: X301291 &nbsp;|&nbsp; FSRA: 13463
             &nbsp;|&nbsp; FCAA: 512114 &nbsp;|&nbsp; FCNB: 230043033
             &nbsp;|&nbsp; NSID: #2023-3000563 &nbsp;|&nbsp; QC: 608634
