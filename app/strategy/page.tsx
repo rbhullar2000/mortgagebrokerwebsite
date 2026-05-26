@@ -426,7 +426,7 @@ export default function StrategyPage() {
               </Link>
             </Button>
 
-            <p className="text-xs text-[#1D2D44] mt-3 font-medium">
+            <p className="text-xs text-gray-500 mt-3 font-medium">
               15-minute call • No obligation • Strategy-focused
             </p>
 
