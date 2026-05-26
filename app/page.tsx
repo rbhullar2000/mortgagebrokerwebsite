@@ -53,6 +53,11 @@ export default function HomePage() {
                 Access 50+ lenders — and a strategy tailored to your situation. <br />
                 Most people focus on rates. The real advantage is structure.
               </p>
+
+<p className="text-xl text-gray-600 mb-10 leading-relaxed">
+              Helping BC homeowners lower payments, improve flexibility, and make smarter long-term mortgage decisions.
+            </p>
+            
               <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
                 <Button size="lg" className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold" asChild>
                   <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
