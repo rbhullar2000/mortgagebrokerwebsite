@@ -421,7 +421,7 @@ export default function StrategyPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book Your Mortgage Strategy Call{" "}
+                Mortgage Strategy Consultatiom{" "}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
