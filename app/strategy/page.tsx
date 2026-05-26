@@ -410,7 +410,7 @@ export default function StrategyPage() {
               A well-structured mortgage can save money, reduce risk, and give
               you flexibility when you need it most.
             </p>
-
+{/*
             <Button
               size="lg"
               className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#032133] font-bold h-14 px-10 text-base"
@@ -432,7 +432,7 @@ export default function StrategyPage() {
 
             <p className="text-gray-500 text-xs mt-2">
               No cost. No obligation. Just clarity on your best path forward.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
