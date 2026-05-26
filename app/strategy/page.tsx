@@ -34,37 +34,37 @@ export default function StrategyPage() {
       </Script>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#032133] to-[#1D2D44]">
+      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-6 bg-[#D4AF37]/20 text-[#D4AF37] hover:bg-[#D4AF37]/30 border border-[#D4AF37]/30">
+            <Badge className="mb-6 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 inline-block">
               Strategy-first mortgage advice
             </Badge>
 
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight text-balance">
+            <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight text-balance">
               Most people focus on rate.{" "}
               <span className="text-[#D4AF37]">
                 The real advantage is structure.
               </span>
             </h1>
 
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
               A mortgage isn&apos;t just about today&apos;s rate — it&apos;s
               about flexibility, cost over time, and what happens when your
               situation changes.
             </p>
 
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
               Helping BC homeowners lower payments, improve flexibility, and make smarter long-term mortgage decisions.
             </p>
 
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
               Purchase • Refinance • Renewal • Debt Consolidation • Investment Properties
             </p>
 
             <Button
               size="lg"
-              className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#032133] font-bold h-14 px-10 text-base"
+              className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold"
               asChild
             >
               <Link
@@ -78,29 +78,29 @@ export default function StrategyPage() {
             </Button>
 
             {/* Support Text */}
-            <p className="mt-6 text-gray-400 text-sm">
+            <p className="mt-6 text-gray-600 text-sm">
               Trusted Strategy-focused mortgage guidance for BC borrowers
             </p>
 
             {/* Stats Section */}
             <div className="mt-16 grid grid-cols-3 gap-6 lg:gap-8">
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">
                   50+
                 </div>
-                <p className="text-gray-400 text-sm lg:text-base">Lending partners</p>
+                <p className="text-gray-600 text-sm lg:text-base">Lending partners</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">
                   25 yrs
                 </div>
-                <p className="text-gray-400 text-sm lg:text-base">Finance experience</p>
+                <p className="text-gray-600 text-sm lg:text-base">Finance experience</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">
                   24 hrs
                 </div>
-                <p className="text-gray-400 text-sm lg:text-base">Pre-approval time</p>
+                <p className="text-gray-600 text-sm lg:text-base">Pre-approval time</p>
               </div>
             </div>
           </div>
