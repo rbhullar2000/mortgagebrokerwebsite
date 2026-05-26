@@ -120,7 +120,7 @@ export default function StrategyPage() {
                   </div>
 
                   <p className="text-gray-700 mb-4 leading-relaxed text-base">
-                    Rob didn&apos;t just find me a rate — he explained exactly how the mortgage was structured and why. I felt confident signing instead of just hoping for the best.
+                    BC Mortgage Team didn&apos;t just find me a rate — they explained exactly how the mortgage was structured and why. I felt confident signing instead of just hoping for the best.
                   </p>
 
                   <div className="flex items-center gap-4">
