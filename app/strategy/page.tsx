@@ -399,7 +399,7 @@ export default function StrategyPage() {
 
 
       {/* Final CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
+      <section className="py-12 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-5 text-balance">
