@@ -11,7 +11,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Mortgage Strategy | BC Mortgage Team",
   description:
-    "Most people focus on rate. The real advantage is structure. Book a mortgage strategy session with Rob Bhullar — licensed broker with access to 50+ lenders.",
+    "Most people focus on rate. The real advantage is structure. Book a mortgage strategy session with BC Mortgage Team — licensed with access to 50+ lenders.",
 }
 
 export default function StrategyPage() {
@@ -38,7 +38,7 @@ export default function StrategyPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6 bg-[#D4AF37]/20 text-[#D4AF37] hover:bg-[#D4AF37]/30 border border-[#D4AF37]/30">
-              Strategy-first mortgage advice · Surrey, BC
+              Strategy-first mortgage advice
             </Badge>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight text-balance">
