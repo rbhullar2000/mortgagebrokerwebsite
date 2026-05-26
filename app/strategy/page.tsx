@@ -123,7 +123,7 @@ export default function StrategyPage() {
                   key={item}
                   className="flex items-center gap-4 text-gray-700"
                 >
-                  <div className="w-6 h-6 bg-[#1D2D44] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-6 h-6 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-white fill-white" />
                   </div>
                   <span className="text-base">{item}</span>
