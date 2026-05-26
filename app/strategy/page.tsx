@@ -204,7 +204,9 @@ export default function StrategyPage() {
 
      
       {/* Calendly Booking Section */}
-     <div className="container mx-auto px-4">
+     <section className="py-12 bg-white" id="book">
+
+  <div className="container mx-auto px-4">
 
     <div className="max-w-6xl mx-auto text-center">
 
@@ -215,21 +217,35 @@ export default function StrategyPage() {
       </h2>
 
       <p className="text-gray-600 mb-6 text-base">
+
         Select a time below — no redirect, books instantly.
+
       </p>
 
       <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
+
         <iframe
+
           src="https://calendly.com/bcmortgageteam/15min"
+
           width="100%"
+
           height="950"
+
           frameBorder="0"
+
           title="Book Mortgage Strategy Call"
+
           className="w-full"
-        ></iframe>
+
+        />
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
       {/* Who This Is For Section */}
