@@ -34,6 +34,10 @@ export function Header() {
     { href: "/#contact", label: "Contact" },
   ]
 
+  // On Mortgage Strategy page, show only the strategy link
+  const isStrategyPage = pathname === "/strategy"
+  const displayedItems = isStrategyPage ? navigationItems.filter(item => item.href === "/strategy") : navigationItems
+
   return (
     <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3">
@@ -64,7 +68,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
-            {navigationItems.map((item) => (
+            {displayedItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -130,7 +134,7 @@ export function Header() {
                   </div>
 
                   <nav className="flex flex-col space-y-3">
-                    {navigationItems.map((item) => (
+                    {displayedItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
