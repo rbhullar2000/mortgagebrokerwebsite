@@ -109,7 +109,7 @@ export default function StrategyPage() {
 
 
        {/* What Your Strategy Call Includes Section */}
-      <section className="py-12 bg-[#F4F6F8]">
+      <section className="py-8 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
@@ -144,7 +144,7 @@ export default function StrategyPage() {
 
 
       {/* Testimonials Section */}
-      <section className="py-12 bg-white">
+      <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
        {/*      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-8 text-balance">
@@ -212,7 +212,7 @@ export default function StrategyPage() {
 
      
       {/* Calendly Booking Section */}
-     <section className="py-12 bg-white" id="book">
+     <section className="py-8 bg-white" id="book">
 
   <div className="container mx-auto px-4">
 
@@ -257,7 +257,7 @@ export default function StrategyPage() {
 </section>
 
       {/* Who This Is For Section */}
-      <section className="py-12 bg-[#F4F6F8]">
+      <section className="py-8 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
@@ -293,7 +293,7 @@ export default function StrategyPage() {
 
 
       {/* Reframe Section */}
-      <section className="py-12 bg-white">
+      <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6 text-balance">
@@ -332,7 +332,7 @@ export default function StrategyPage() {
       </section>
 
       {/* Risk Section */}
-      <section className="py-12 bg-[#F4F6F8]">
+      <section className="py-8 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-start gap-4 mb-5">
@@ -377,7 +377,7 @@ export default function StrategyPage() {
       </section>
 
       {/* Strategy Positioning Section */}
-      <section className="py-12 bg-[#032133]">
+      <section className="py-8 bg-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 text-balance">
@@ -399,7 +399,7 @@ export default function StrategyPage() {
 
 
       {/* Final CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
+      <section className="py-8 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 text-balance">
