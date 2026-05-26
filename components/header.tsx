@@ -34,9 +34,9 @@ export function Header() {
     { href: "/#contact", label: "Contact" },
   ]
 
-  // On Mortgage Strategy page, show only the strategy link
+  // On Mortgage Strategy page, hide all navigation items
   const isStrategyPage = pathname === "/strategy"
-  const displayedItems = isStrategyPage ? navigationItems.filter(item => item.href === "/strategy") : navigationItems
+  const displayedItems = isStrategyPage ? [] : navigationItems
 
   return (
     <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
