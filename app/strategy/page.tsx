@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Shield, TrendingUp, CheckCircle, ArrowRight, Users, FileText, Calculator } from "lucide-react"
 import Link from "next/link"
 import Script from "next/script"
-import { StrategyHeader } from "@/components/strategy-header"
+import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function StrategyPage() {
   return (
     <div className="min-h-screen bg-white">
-      <StrategyHeader />
+      <Header />
 
       <Script id="calendly-tracking" strategy="afterInteractive">
         {`
