@@ -6,7 +6,6 @@ import Link from "next/link"
 import Script from "next/script"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { CalendlyEmbed } from "@/components/calendly-embed"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -211,8 +210,14 @@ export default function StrategyPage() {
             <p className="text-gray-600 mb-6 text-base">
               Select a time below — no redirect, books instantly.
             </p>
-            <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
-              <CalendlyEmbed url="https://calendly.com/robsbhullar/30min" />
+            <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
+              <iframe
+                src="https://calendly.com/robsbhullar"
+                width="100%"
+                height="750"
+                frameBorder="0"
+                title="Book Mortgage Strategy Call"
+              ></iframe>
             </div>
           </div>
         </div>
