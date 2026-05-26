@@ -147,8 +147,8 @@ export default function StrategyPage() {
                   </div>
 
                   <p className="text-gray-700 mb-4 leading-relaxed text-base">
-                    I was about to auto-renew with my bank. Rob saved me over $4,000 in the first year just by shopping around. Should have called sooner.
-                  </p>
+  I was ready to renew directly with my bank, but BC Mortgage Team took the time to review my options and structure everything properly. The result was over $4,000 in savings in the first year alone — and a mortgage that fit my long-term goals much better.
+</p>
 
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
