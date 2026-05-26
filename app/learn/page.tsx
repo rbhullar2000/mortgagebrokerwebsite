@@ -140,7 +140,7 @@ export default function LearnPage() {
                   asChild
                 >
                   <Link
-                    href="https://calendly.com/robsbhullar"
+                    href="https://calendly.com/bcmortgageteam/15min"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
