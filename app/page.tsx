@@ -74,6 +74,12 @@ export default function HomePage() {
     The best ones are based on structure, timing, and long-term strategy.
   </p>
 </div>
+
+            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+              Purchase • Refinance • Renewal • Debt Consolidation • Investment Properties
+            </p>
+
+            
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">
                 <div className="flex items-center">
                   <Shield className="w-5 h-5 mr-2 text-[#032133]" />
