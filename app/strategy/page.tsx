@@ -143,9 +143,9 @@ export default function StrategyPage() {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-8 text-balance">
+       {/*      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-8 text-balance">
               What clients say
-            </h2>
+            </h2> */}
 
             <div className="space-y-4">
               {/* Testimonial 1 */}
