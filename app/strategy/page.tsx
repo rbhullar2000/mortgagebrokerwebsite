@@ -79,7 +79,7 @@ export default function StrategyPage() {
 
             {/* Support Text */}
             <p className="mt-6 text-gray-400 text-sm">
-              No obligation • Personalized mortgage guidance
+              Trusted Strategy-focused mortgage guidance for BC borrowers
             </p>
 
             {/* Stats Section */}
