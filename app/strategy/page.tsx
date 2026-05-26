@@ -160,7 +160,7 @@ export default function StrategyPage() {
 </p>
 
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#1D2D44] rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-white font-bold text-sm">SK</span>
                     </div>
                     <div>
