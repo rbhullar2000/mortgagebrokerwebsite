@@ -64,7 +64,7 @@ export default function StrategyPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book my free 15-minute strategy call{" "}
+                Book our free 15-minute strategy call{" "}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
