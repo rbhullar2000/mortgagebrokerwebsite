@@ -600,16 +600,34 @@ export default function HomePage() {
              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Contact today for a free consultation, or start your secure online application right away.
             </p>  
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <Button size="lg" className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] font-semibold" asChild>
-               <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
-                    Book Your Mortgage Strategy Call →
-                </Link>
-              </Button>
-            </div>
-            <p className="text-sm text-gray-600 mt-4 text-center">
-              15-minute call • No pressure • Strategy-focused
-            </p>
+            
+            
+             {/* Calendly Booking Section */}
+     <section className="py-12 bg-white" id="book">
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 text-balance">
+        Book your free strategy call
+      </h2>
+
+      <p className="text-gray-600 mb-6 text-base">
+        Select a time below — no redirect, books instantly.
+      </p>
+
+      <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
+        <iframe
+          src="https://calendly.com/bcmortgageteam/15min"
+          width="100%"
+          height="950"
+          frameBorder="0"
+          title="Book Mortgage Strategy Call"
+          className="w-full"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+            
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
