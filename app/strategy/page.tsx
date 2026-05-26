@@ -119,9 +119,9 @@ export default function StrategyPage() {
                     ))}
                   </div>
 
-                  <p className="text-gray-700 mb-4 leading-relaxed text-base">
-                    BC Mortgage Team didn&apos;t just find me a rate — they explained exactly how the mortgage was structured and why. I felt confident signing instead of just hoping for the best.
-                  </p>
+                <p className="text-gray-700 mb-4 leading-relaxed text-base">
+  BC Mortgage Team didn&apos;t just help me secure a mortgage — they took the time to explain the strategy behind it and why the structure mattered long-term. I felt informed, confident, and supported throughout the process instead of simply choosing the lowest rate and hoping for the best.
+</p>
 
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
