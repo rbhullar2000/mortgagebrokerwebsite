@@ -204,11 +204,11 @@ export default function HomePage() {
                   asChild
                 >
                  <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
-                    Book Your Mortgage Strategy Call →
+                    Book Your Mortgage Strategy Consultation →
                   </Link>
                 </Button>
                 <p className="text-sm text-gray-600 text-center">
-                  15-minute call • No pressure • Strategy-focused
+                  Trusted Strategy-focused mortgage guidance for BC borrowers
                 </p>
               </div>
             </div>
