@@ -79,7 +79,7 @@ export default function StrategyPage() {
 
             {/* Support Text */}
             <p className="mt-6 text-gray-400 text-sm">
-              No cost · No obligation 
+              No obligation • Personalized mortgage guidance
             </p>
 
             {/* Stats Section */}
