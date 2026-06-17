@@ -76,7 +76,11 @@ export default function StrategyPage() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-
+<Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
+                  <Link href="/mortgage-checker">
+                    Am I Overpaying? →
+                  </Link>
+                </Button>
             {/* Support Text */}
             <p className="mt-6 text-gray-600 text-sm">
               Trusted Strategy-focused mortgage guidance for BC borrowers
