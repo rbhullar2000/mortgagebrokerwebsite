@@ -240,55 +240,31 @@ export default function MortgageCheckerPage() {
     setAiText("");
 
     const firstName = contact.name.split(" ")[0];
-    const prompt = `You are Rob Bhullar, a licensed Canadian mortgage broker in BC with BRX Mortgage. Write a warm, plain-English, personalized mortgage review for a client based on this data:
 
-- Name: ${firstName}
-- Current mortgage balance: $${fmtNum(bal)}
-- Current rate: ${rate}%
-- Mortgage type: ${RATE_LABELS[mortgage.type]}
-- Lender: ${mortgage.lender}
-- Amortization remaining: ${amort} years
-- Payment frequency: ${mortgage.frequency}
-- Current ${mortgage.frequency} payment: ${fmt(perPeriodActual)}
-- Market rate for their type: ${marketRate}%
-- Market ${mortgage.frequency} payment: ${fmt(perPeriodMarket)}
-- Monthly savings if they switch: ${fmt(monthlySavings)}
-- Annual savings: ${fmt(annualSavings)}
-- Property value: $${fmtNum(propVal)}
-- Original purchase price: $${fmtNum(purchasePrice)}
-- Year purchased: ${purchaseYear}
-- Equity: $${fmtNum(equity)} (LTV: ${ltv.toFixed(1)}%)
-- Accessible equity (up to 80% LTV): $${fmtNum(accessibleEquity)}
-- Strategy score: ${score}/100
-- Renewal warning: ${renewalWarning ? "Yes – rate is significantly above market" : "No"}
+    // Build a personalized review directly from the computed numbers — no external API or package.
+    const p1 = monthlySavings > 0
+      ? `${firstName}, thanks for taking a few minutes to run your numbers. Looking at your situation, your current rate of ${rate}% is running above today's market, and that gap is costing you money every month. Your mortgage health score comes in at ${score}/100 — there's a clear opportunity here worth a closer look.`
+      : `${firstName}, thanks for taking a few minutes to run your numbers. The good news is your current rate of ${rate}% is already competitive with today's market, and your mortgage health score of ${score}/100 reflects that you're in a solid position. It's still smart to review the details before your next renewal.`;
 
-Write 4 short paragraphs:
-1. Greet them by first name and give an honest top-line assessment
-2. Explain what their numbers mean in plain English
-3. One specific action they should consider
-4. Friendly close encouraging a free 15-minute strategy call
+    const p2 = monthlySavings > 0
+      ? `Based on a comparable market rate of ${marketRate}%, switching could save you roughly ${fmt(monthlySavings)} a month — about ${fmt(annualSavings)} a year that's currently staying with your lender instead of in your pocket. On a balance of $${fmtNum(bal)}, even a small rate difference adds up quickly over the life of your term.`
+      : `At a market rate of ${marketRate}%, there isn't a meaningful payment saving to capture right now on your $${fmtNum(bal)} balance. That said, rates and your goals can shift, so it's worth keeping an eye on your renewal window so you're never caught paying more than you need to.`;
 
-Do not use bullet points or headers. Write as if speaking directly to the client. Do not mention you are an AI.`;
+    const equityLine = accessibleEquity > 0
+      ? ` You've also built up around $${fmtNum(accessibleEquity)} in accessible equity (you're at ${ltv.toFixed(0)}% loan-to-value), which could be used for renovations, debt consolidation, or an investment if that fits your plans.`
+      : "";
+    const p3 = renewalWarning
+      ? `My honest recommendation: don't simply sign your lender's renewal letter. That offer is rarely their sharpest rate, and with your numbers, shopping the market 90–120 days before renewal could make a real difference.${equityLine}`
+      : `My recommendation: start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter, which is rarely their best offer.${equityLine}`;
 
-    fetch("/api/mortgage-review", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: prompt, systemPrompt: "You are Rob Bhullar, a licensed mortgage broker in BC. Respond only with the 4-paragraph review. No preamble." }),
-    })
-      .then(res => res.json())
-      .then(data => {
-        const review = data.message || data.content || data.response || "";
-        setAiText(review);
-        setLoading(false);
-        setTimeout(() => resultRef.current?.scrollIntoView({ behavior: "smooth" }), 100);
-        sendLead(r, review);
-      })
-      .catch(() => {
-        const fallback = `${firstName}, based on your numbers, ${monthlySavings > 0 ? `you may be paying ${fmt(monthlySavings)}/month more than necessary at today's market rates` : "your rate is reasonably competitive with today's market"}. ${accessibleEquity > 0 ? `You also have approximately ${fmt(accessibleEquity)} in accessible equity. ` : ""}I'd recommend reviewing your options before your next renewal. Book a free 15-minute strategy call to go through everything in detail.`;
-        setAiText(fallback);
-        setLoading(false);
-        sendLead(r, fallback);
-      });
+    const p4 = `If you'd like, let's hop on a free 15-minute strategy call and I'll walk you through your specific options with access to 50+ lenders — no pressure, just a clear plan. Talk soon, Rob.`;
+
+    const review = `${p1}\n\n${p2}\n\n${p3}\n\n${p4}`;
+
+    setAiText(review);
+    setLoading(false);
+    setTimeout(() => resultRef.current?.scrollIntoView({ behavior: "smooth" }), 100);
+    sendLead(r, review);
   }, [step]);
 
   // ── Send lead to Rob via the existing /api/contact email pipeline ─────────
