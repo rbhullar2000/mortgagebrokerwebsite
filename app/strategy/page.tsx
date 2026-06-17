@@ -76,6 +76,14 @@ export default function StrategyPage() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
+
+             
+                 <br />
+            <br />
+                
+              
+
+            
 <Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
                   <Link href="/mortgage-checker">
                     Am I Overpaying? →
