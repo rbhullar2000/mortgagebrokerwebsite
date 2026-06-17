@@ -78,7 +78,7 @@ export default function StrategyPage() {
             </Button>
 
              
-                 <br />
+            <br />
             <br />
                 
               
