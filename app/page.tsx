@@ -66,10 +66,11 @@ export default function HomePage() {
                 </Button>
                
             <br />
-            <br />    
+            <br />   
+            <br />
+            <br /> 
 
-                <p 
-                </p>
+              
                 
                 <Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
                   <Link href="/mortgage-checker">
