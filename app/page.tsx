@@ -353,8 +353,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+      
       {/* Mortgage News Section */}
+      {/*
       <section id="news" className="py-12 lg:py-14 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
@@ -365,6 +366,7 @@ export default function HomePage() {
           </div>
 
           {/* Featured Post */}
+      {/*
           {featuredPost && (
             <section className="py-6 bg-white">
               <div className="container mx-auto px-4">
@@ -383,7 +385,7 @@ export default function HomePage() {
                       <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
                       <div className="flex items-center justify-between">
                         {/*  <span className="text-sm text-gray-500">{featuredPost.date}</span> */}
-                        <Button asChild className="bg-[#1D2D44] hover:bg-[#1D2D44]/90">
+      {/*                  <Button asChild className="bg-[#1D2D44] hover:bg-[#1D2D44]/90">
                           <Link href={featuredPost.slug}>Read Full Article</Link>
                         </Button>
                       </div>
@@ -402,7 +404,7 @@ export default function HomePage() {
           )}
 
           {/* Other Recent Articles */}
-          <div className="grid md:grid-cols-2 gap-6">
+{/*          <div className="grid md:grid-cols-2 gap-6">
             {otherArticles.map((article, index) => (
               <NewsCard
                 key={index}
@@ -418,7 +420,7 @@ export default function HomePage() {
 
         </div>
       </section>
-
+ */}
       {/* Services Section */}
       <section id="services" className="py-12 lg:py-14 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
