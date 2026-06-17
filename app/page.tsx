@@ -106,7 +106,7 @@ export default function HomePage() {
               </div>
           </div>
         </div>
-      </section>
+      </section> 
 
       {/* Rate Comparison Tool Section */}
       {/*  <section id="rates" className="py-20 bg-slate-50">
