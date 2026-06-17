@@ -1,7 +1,26 @@
 import { NextResponse } from "next/server"
-import { Resend } from "resend"
 
 export const runtime = "nodejs"
+
+// Send an email via Resend's HTTP API (no SDK dependency needed).
+async function sendEmail(
+  apiKey: string,
+  payload: { from: string; to: string; reply_to?: string; subject: string; html: string },
+) {
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  })
+  if (!res.ok) {
+    const detail = await res.text()
+    return { error: detail }
+  }
+  return { error: null }
+}
 
 const NOTIFY_TO = "rob@bcmortgageteam.com"
 // Resend's shared sender works without domain verification. Swap to a verified
@@ -44,7 +63,6 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing contact information." }, { status: 400 })
     }
 
-    const resend = new Resend(apiKey)
     const firstName = contact.name.split(" ")[0]
 
     // ── 1. Lead notification to Rob ──────────────────────────────────────────
@@ -84,10 +102,10 @@ export async function POST(req: Request) {
       </div>
     `
 
-    const leadResult = await resend.emails.send({
+    const leadResult = await sendEmail(apiKey, {
       from: FROM,
       to: NOTIFY_TO,
-      replyTo: contact.email,
+      reply_to: contact.email,
       subject: `New lead: ${contact.name} — ${fmt(results.annualSavings)}/yr potential savings`,
       html: leadHtml,
     })
@@ -122,10 +140,10 @@ export async function POST(req: Request) {
       </div>
     `
 
-    await resend.emails.send({
+    await sendEmail(apiKey, {
       from: FROM,
       to: contact.email,
-      replyTo: NOTIFY_TO,
+      reply_to: NOTIFY_TO,
       subject: `${firstName}, your mortgage snapshot from BC Mortgage Team`,
       html: clientHtml,
     })
@@ -141,4 +159,3 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Unable to process lead." }, { status: 500 })
   }
 }
- 
