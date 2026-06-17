@@ -277,15 +277,65 @@ Do not use bullet points or headers. Write as if speaking directly to the client
     })
       .then(res => res.json())
       .then(data => {
-        setAiText(data.message || data.content || data.response || "");
+        const review = data.message || data.content || data.response || "";
+        setAiText(review);
         setLoading(false);
         setTimeout(() => resultRef.current?.scrollIntoView({ behavior: "smooth" }), 100);
+        sendLead(r, review);
       })
       .catch(() => {
-        setAiText(`${firstName}, based on your numbers, ${monthlySavings > 0 ? `you may be paying ${fmt(monthlySavings)}/month more than necessary at today's market rates` : "your rate is reasonably competitive with today's market"}. ${accessibleEquity > 0 ? `You also have approximately ${fmt(accessibleEquity)} in accessible equity. ` : ""}I'd recommend reviewing your options before your next renewal. Book a free 15-minute strategy call to go through everything in detail.`);
+        const fallback = `${firstName}, based on your numbers, ${monthlySavings > 0 ? `you may be paying ${fmt(monthlySavings)}/month more than necessary at today's market rates` : "your rate is reasonably competitive with today's market"}. ${accessibleEquity > 0 ? `You also have approximately ${fmt(accessibleEquity)} in accessible equity. ` : ""}I'd recommend reviewing your options before your next renewal. Book a free 15-minute strategy call to go through everything in detail.`;
+        setAiText(fallback);
         setLoading(false);
+        sendLead(r, fallback);
       });
   }, [step]);
+
+  // ── Send lead to Rob via the existing /api/contact email pipeline ─────────
+  const sendLead = (r: Results, review: string) => {
+    const details = [
+      `--- MORTGAGE CHECKER LEAD ---`,
+      ``,
+      `Current balance: $${fmtNum(parseFloat(mortgage.balance))}`,
+      `Current rate: ${mortgage.rate}%`,
+      `Mortgage type: ${RATE_LABELS[mortgage.type]}`,
+      `Lender: ${mortgage.lender}`,
+      `Amortization remaining: ${mortgage.amort} years`,
+      `Payment frequency: ${mortgage.frequency}`,
+      `Current ${mortgage.frequency} payment: ${fmt(r.perPeriodActual)}`,
+      ``,
+      `Property value: $${fmtNum(parseFloat(property.value))}`,
+      `Original purchase price: $${fmtNum(parseFloat(property.purchasePrice))}`,
+      `Year purchased: ${property.purchaseYear}`,
+      ``,
+      `Market rate: ${r.marketRate}%`,
+      `Estimated monthly savings: ${fmt(r.monthlySavings)}`,
+      `Estimated annual savings: ${fmt(r.annualSavings)}`,
+      `Equity: $${fmtNum(r.equity)} (LTV: ${r.ltv.toFixed(1)}%)`,
+      `Accessible equity: $${fmtNum(r.accessibleEquity)}`,
+      `Strategy score: ${r.score}/100`,
+      `Renewal warning: ${r.renewalWarning ? "Yes" : "No"}`,
+      ``,
+      `--- AI REVIEW SHOWN TO CLIENT ---`,
+      review,
+    ].join("\n");
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: contact.name,
+        email: contact.email,
+        phone: contact.phone,
+        mortgageType: "renewal",
+        propertyValue: property.value ? `$${fmtNum(parseFloat(property.value))}` : "",
+        downPayment: "",
+        message: details,
+      }),
+    }).catch(() => {
+      // Silent: the user still sees their on-screen report even if the email fails.
+    });
+  };
 
   // ── Input styles ──────────────────────────────────────────────────────────
   const inp = (hasErr: boolean) =>
@@ -400,7 +450,7 @@ Do not use bullet points or headers. Write as if speaking directly to the client
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-[#C79A2B] mb-3">Almost there</p>
             <h1 className="text-3xl font-bold text-[#1D2D44] mb-2" style={{ fontFamily: "Georgia, serif" }}>Where should we send your results?</h1>
-            <p className="text-gray-500 text-sm mb-8 leading-relaxed">Your mortgage health report will be shown instantly — and emailed to you for reference.</p>
+            <p className="text-gray-500 text-sm mb-8 leading-relaxed">Your mortgage health report will be shown instantly.</p>
 
             <div className="mb-5">
               <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Full name</label>
