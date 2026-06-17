@@ -124,97 +124,7 @@ export default function HomePage() {
       </section> */}
 
     
-      <section id="about" className="py-12 lg:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <img
-                src="/headshot.png?height=600&width=500"
-                alt="Rob Bhullar - Mortgage Broker"
-                className="rounded-2xl shadow-2xl w-96 mx-auto"
-              />
-            </div>
-            <div>
-              <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
-                About Rob S. Bhullar, BSc
-              </Badge>
 
-             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">
-  Strategy-First Mortgage Advice
-</h2>
-
-<p className="text-lg text-gray-600 mb-6 leading-relaxed">
-  BC Mortgage Team brings over 25 years of finance experience together with real-world mortgage expertise to help homeowners, investors, and first-time buyers make smarter mortgage decisions. Our approach blends analytical thinking with practical lending expertise, focusing on how a mortgage is structured — not just the rate — to support long-term financial goals.
-</p>
-
-<div className="space-y-4 mb-8">
-  {[
-    "Licensed Mortgage Professional with BRX Mortgage",
-    "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
-    "Experience with complex approvals, debt consolidation, and investor financing",
-    "Focused on aligning mortgage decisions with long-term financial strategy",
-    "Bachelor of Science in Mathematics, Minor in Business Administration — Simon Fraser University",
-  ].map((item, index) => (
-    <div key={index} className="flex items-start">
-      <div className="w-2 h-2 bg-[#032133] rounded-full mr-4 mt-2"></div>
-      <span className="text-gray-700">{item}</span>
-    </div>
-  ))}
-</div>
-
-              <div className="grid grid-cols-3 gap-6 mb-8 items-center text-center">
-                {/* Column 1: Text */}
-                <div className="flex flex-col items-center justify-center w-24 h-18">
-                  <div className="text-3xl font-bold text-[#D4AF37]">25+ years</div>
-                  <div className="text-sm text-gray-600">in Financial Industry</div>
-                </div>
-
-                {/* Column 2: BC Mortgage Logo */}
-                <div className="w-24 h-18 flex items-center justify-center">
-                  <Image
-                    src="/BCmortgageteamlogo.jpeg"
-                    alt="BC Mortgage Team"
-                    width={96}
-                    height={72}
-                    className="object-contain w-full h-full"
-                  />
-                </div> 
-
-                {/* Column 3: BRX Logo */}
-                <div className="w-24 h-18 flex items-center justify-center">
-                  <Image
-                    src="/BRX_brand_black.png"
-                    alt="BRX Mortgage"
-                    width={96}
-                    height={72}
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-              </div>
-
-              
-
-              <div className="flex flex-col items-center gap-4 mb-2">
-                {/*  <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
-                  <Link href="#contact">Contact Rob</Link>
-                </Button> */}
-                <Button
-                  size="lg"
-                  className="bg-[#032133] hover:bg-[#032133]/90 text-[#FFFFFF] font-semibold w-full sm:w-auto"
-                  asChild
-                >
-                 <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
-                    Book Your Mortgage Strategy Consultation →
-                  </Link>
-                </Button>
-                <p className="text-sm text-gray-600 text-center">
-                  Trusted Strategy-focused mortgage guidance for BC borrowers
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Lenders Section */}
       <section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
@@ -580,6 +490,103 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section id="about" className="py-12 lg:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <img
+                src="/headshot.png?height=600&width=500"
+                alt="Rob Bhullar - Mortgage Broker"
+                className="rounded-2xl shadow-2xl w-96 mx-auto"
+              />
+            </div>
+            <div>
+              <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
+                About Rob S. Bhullar, BSc
+              </Badge>
+
+             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">
+  Strategy-First Mortgage Advice
+</h2>
+
+<p className="text-lg text-gray-600 mb-6 leading-relaxed">
+  BC Mortgage Team brings over 25 years of finance experience together with real-world mortgage expertise to help homeowners, investors, and first-time buyers make smarter mortgage decisions. Our approach blends analytical thinking with practical lending expertise, focusing on how a mortgage is structured — not just the rate — to support long-term financial goals.
+</p>
+
+<div className="space-y-4 mb-8">
+  {[
+    "Licensed Mortgage Professional with BRX Mortgage",
+    "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
+    "Experience with complex approvals, debt consolidation, and investor financing",
+    "Focused on aligning mortgage decisions with long-term financial strategy",
+    "Bachelor of Science in Mathematics, Minor in Business Administration — Simon Fraser University",
+  ].map((item, index) => (
+    <div key={index} className="flex items-start">
+      <div className="w-2 h-2 bg-[#032133] rounded-full mr-4 mt-2"></div>
+      <span className="text-gray-700">{item}</span>
+    </div>
+  ))}
+</div>
+
+              <div className="grid grid-cols-3 gap-6 mb-8 items-center text-center">
+                {/* Column 1: Text */}
+                <div className="flex flex-col items-center justify-center w-24 h-18">
+                  <div className="text-3xl font-bold text-[#D4AF37]">25+ years</div>
+                  <div className="text-sm text-gray-600">in Financial Industry</div>
+                </div>
+
+                {/* Column 2: BC Mortgage Logo */}
+                <div className="w-24 h-18 flex items-center justify-center">
+                  <Image
+                    src="/BCmortgageteamlogo.jpeg"
+                    alt="BC Mortgage Team"
+                    width={96}
+                    height={72}
+                    className="object-contain w-full h-full"
+                  />
+                </div> 
+
+                {/* Column 3: BRX Logo */}
+                <div className="w-24 h-18 flex items-center justify-center">
+                  <Image
+                    src="/BRX_brand_black.png"
+                    alt="BRX Mortgage"
+                    width={96}
+                    height={72}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+              </div>
+
+              
+
+              <div className="flex flex-col items-center gap-4 mb-2">
+                {/*  <Button size="lg" className="bg-[#032133] hover:bg-[#032133]/90" asChild>
+                  <Link href="#contact">Contact Rob</Link>
+                </Button> */}
+                <Button
+                  size="lg"
+                  className="bg-[#032133] hover:bg-[#032133]/90 text-[#FFFFFF] font-semibold w-full sm:w-auto"
+                  asChild
+                >
+                 <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
+                    Book Your Mortgage Strategy Consultation →
+                  </Link>
+                </Button>
+                <p className="text-sm text-gray-600 text-center">
+                  Trusted Strategy-focused mortgage guidance for BC borrowers
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      
       {/* Mortgage Calculator Section */}
       <section id="calculator" className="py-12 lg:py-14 bg-white">
         <div className="container mx-auto px-4">
