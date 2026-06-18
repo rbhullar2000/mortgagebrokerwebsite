@@ -150,12 +150,12 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center mt-8">
-            <img src="scotiabank.png" alt="Scotiabank" className="h-25" />
-            <img src="td.png" alt="TD Bank" className="h-40" />
-            <img src="firstnational.png" alt="First National" className="h-40" />
-            <img src="hometrust.png" alt="Home Trust" className="h-40" />
-            <img src="rmg.png" alt="RMG Mortgages" className="h-40" />
-          </div>
+  <img src="scotiabank.png" alt="Scotiabank" className="h-8" />
+  <img src="td.png" alt="TD Bank" className="h-8" />
+  <img src="firstnational.png" alt="First National" className="h-8" />
+  <img src="hometrust.png" alt="Home Trust" className="h-8" />
+  <img src="rmg.png" alt="RMG Mortgages" className="h-8" />
+</div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
