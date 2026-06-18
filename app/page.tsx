@@ -88,7 +88,7 @@ export default function HomePage() {
     Most mortgage decisions are based on rate.
   </p>
   <p className="text-gray-600">
-    The best ones are based on structure, timing, and long-term strategy.
+    The best ones are based on rate, structure, timing, and long-term strategy.
   </p>
 </div>
 
