@@ -142,7 +142,7 @@ export default function HomePage() {
       <section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Trusted Lending Partners</h2>
+            <h2 className="text-2xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Trusted Lending Partners</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We work with 50+ lenders including major banks, credit unions, and alternative lenders to find you the
               best rates and terms.
@@ -229,7 +229,7 @@ export default function HomePage() {
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-8 text-balance">
+            <h2 className="text-3xl lg:text-3xl font-bold text-[#1D2D44] mb-8 text-balance">
               What clients say
             </h2>
 
