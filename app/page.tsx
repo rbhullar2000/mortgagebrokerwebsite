@@ -92,7 +92,7 @@ export default function HomePage() {
   </p>
 </div>
 
-            <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+            <p className="text-base text-gray-600 mb-10 leading-relaxed">
               Purchase • Refinance • Renewal • Debt Consolidation • Investment Properties
             </p>
 
