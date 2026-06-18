@@ -126,7 +126,7 @@ export default function StrategyPage() {
       <section className="py-8 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-3 text-balance">
+            <h2 className="text-1xl lg:text-1xl font-bold text-[#1D2D44] mb-3 text-balance">
               What your strategy call includes
             </h2>
 
@@ -274,14 +274,14 @@ export default function StrategyPage() {
       <section className="py-8 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-3 text-balance">
+            <h2 className="text-1xl lg:text-1xl font-bold text-[#1D2D44] mb-3 text-balance">
               Who this is for
             </h2>
-
+{/*
             <p className="text-base text-gray-600 mb-6">
               This is for you if:
             </p>
-
+*/}
             <div className="space-y-3">
               {[
                 "You're buying in the next 3–6 months",
@@ -310,7 +310,7 @@ export default function StrategyPage() {
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-6 text-balance">
+            <h2 className="text-1xl lg:text-1xl font-bold text-[#1D2D44] mb-6 text-balance">
               The way most mortgages are chosen is backwards.
             </h2>
 
@@ -354,7 +354,7 @@ export default function StrategyPage() {
                 <Shield className="w-5 h-5 text-[#D4AF37]" />
               </div>
 
-              <h2 className="text-2xl lg:text-2xl font-bold text-[#1D2D44] text-balance">
+              <h2 className="text-1xl lg:text-1xl font-bold text-[#1D2D44] text-balance">
                 A lower rate doesn&apos;t always mean a better mortgage.
               </h2>
             </div>
@@ -398,7 +398,7 @@ export default function StrategyPage() {
               This is where strategy matters.
             </h2>
 
-            <p className="text-base text-gray-300 mb-3 leading-relaxed">
+            <p className="text-sm text-gray-300 mb-3 leading-relaxed">
               Every mortgage should be structured based on your timeline, risk
               tolerance, and future plans — not just the lowest available rate.
             </p>
