@@ -461,7 +461,7 @@ export default function HomePage() {
   Strategy-First Mortgage Advice
 </h2>
 
-<p className="text-lg text-gray-600 mb-6 leading-relaxed">
+<p className="text-base text-gray-600 mb-6 leading-relaxed">
   BC Mortgage Team brings over 25 years of finance experience together with real-world mortgage expertise to help homeowners, investors, and first-time buyers make smarter mortgage decisions. Our approach blends analytical thinking with practical lending expertise, focusing on how a mortgage is structured — not just the rate — to support long-term financial goals.
 </p>
 
