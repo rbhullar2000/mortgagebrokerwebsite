@@ -74,6 +74,9 @@ export default function HomePage() {
                 </Button>
                
               </div>
+
+            <br />
+            
       {/*        <p className="text-sm text-gray-600 mb-6">
                 Trusted Strategy-focused mortgage guidance for BC borrowers
               </p>    */}
