@@ -150,7 +150,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center mt-8">
-            <img src="scotiabank.png" alt="Scotiabank" className="h-40" />
+            <img src="scotiabank.png" alt="Scotiabank" className="h-25" />
             <img src="td.png" alt="TD Bank" className="h-40" />
             <img src="firstnational.png" alt="First National" className="h-40" />
             <img src="hometrust.png" alt="Home Trust" className="h-40" />
