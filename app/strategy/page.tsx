@@ -99,19 +99,19 @@ export default function StrategyPage() {
             {/* Stats Section */}
             <div className="mt-16 grid grid-cols-3 gap-6 lg:gap-8">
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">
+                <div className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-2">
                   50+
                 </div>
                 <p className="text-gray-600 text-sm lg:text-base">Lending partners</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">
+                <div className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-2">
                   25 yrs
                 </div>
                 <p className="text-gray-600 text-sm lg:text-base">Finance experience</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2">
+                <div className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-2">
                   24 hrs
                 </div>
                 <p className="text-gray-600 text-sm lg:text-base">Pre-approval time</p>
@@ -126,7 +126,7 @@ export default function StrategyPage() {
       <section className="py-8 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
+            <h2 className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-3 text-balance">
               What your strategy call includes
             </h2>
 
@@ -274,7 +274,7 @@ export default function StrategyPage() {
       <section className="py-8 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-3 text-balance">
+            <h2 className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-3 text-balance">
               Who this is for
             </h2>
 
@@ -310,7 +310,7 @@ export default function StrategyPage() {
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6 text-balance">
+            <h2 className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-6 text-balance">
               The way most mortgages are chosen is backwards.
             </h2>
 
@@ -354,7 +354,7 @@ export default function StrategyPage() {
                 <Shield className="w-5 h-5 text-[#D4AF37]" />
               </div>
 
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] text-balance">
+              <h2 className="text-2xl lg:text-2xl font-bold text-[#1D2D44] text-balance">
                 A lower rate doesn&apos;t always mean a better mortgage.
               </h2>
             </div>
@@ -394,7 +394,7 @@ export default function StrategyPage() {
       <section className="py-8 bg-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 text-balance">
+            <h2 className="text-2xl lg:text-2xl font-bold text-white mb-4 text-balance">
               This is where strategy matters.
             </h2>
 
@@ -416,7 +416,7 @@ export default function StrategyPage() {
       <section className="py-8 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 text-balance">
+            <h2 className="text-2xl lg:text-2xl font-bold text-white mb-4 text-balance">
               Understand your options before you commit.
             </h2>
 
