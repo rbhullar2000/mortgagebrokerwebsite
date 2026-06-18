@@ -403,7 +403,7 @@ export default function StrategyPage() {
               tolerance, and future plans — not just the lowest available rate.
             </p>
 
-            <p className="text-base text-[#D4AF37] font-semibold leading-relaxed">
+            <p className="text-sm text-[#D4AF37] font-semibold leading-relaxed">
               The goal isn&apos;t just to secure a mortgage. It&apos;s to
               structure it properly from the beginning.
             </p>
@@ -420,7 +420,7 @@ export default function StrategyPage() {
               Understand your options before you commit.
             </h2>
 
-            <p className="text-base text-gray-300 mb-8 leading-relaxed">
+            <p className="text-sm text-gray-300 mb-8 leading-relaxed">
               A well-structured mortgage can save money, reduce risk, and give
               you flexibility when you need it most.
             </p>
