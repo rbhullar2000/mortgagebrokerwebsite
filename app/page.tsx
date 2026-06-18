@@ -58,19 +58,21 @@ export default function HomePage() {
             </p>
             */}
               <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
-                <Button size="lg" className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold" asChild>
+                
+                 <Button size="lg" className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold" asChild>
+                  <Link href="/mortgage-checker">    
+                    Am I Overpaying? →
+                  </Link>
+                </Button>
+                
+                <br />
+                
+                <Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
                   <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
                     Book Your Free Mortgage Strategy Consultation →
                   </Link>
                 </Button>
                
-            <br />     
-                
-                <Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
-                  <Link href="/mortgage-checker">
-                    Am I Overpaying? →
-                  </Link>
-                </Button>
               </div>
       {/*        <p className="text-sm text-gray-600 mb-6">
                 Trusted Strategy-focused mortgage guidance for BC borrowers
