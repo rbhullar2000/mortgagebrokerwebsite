@@ -48,7 +48,7 @@ export default function StrategyPage() {
               </span>
             </h1>
 
-            <p className="text-xl text-gray-600 mb-8 text-base">   
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed"> 
               A mortgage isn&apos;t just about today&apos;s rate — it&apos;s
               about flexibility, cost over time, and what happens when your
               situation changes.
