@@ -50,8 +50,7 @@ export default function HomePage() {
   Start Here
 </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Access 50+ lenders — and a strategy tailored to your situation. <br />
-                Most people focus on rates. The real advantage is structure.
+                Access 50+ lenders. Get a better rate, and a strategy built around your situation.
               </p>
 {/*
 <p className="text-xl text-gray-600 mb-10 leading-relaxed">
