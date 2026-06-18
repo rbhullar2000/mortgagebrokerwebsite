@@ -49,7 +49,7 @@ export default function HomePage() {
   <br />
   Start Here
 </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Access 50+ lenders. Get a better rate, and a strategy built around your situation.
               </p>
 {/*
