@@ -206,17 +206,17 @@ export default function HomePage() {
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#032133] mb-2">50+</div>
+                <div className="text-2xl font-bold text-[#032133] mb-2">50+</div>
                 <div className="text-sm text-gray-600 mb-2">Lending Partners</div>
                 <p className="text-xs text-gray-500">More options mean better rates and terms for you</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#032133] mb-2">0.25-0.75%</div>
+                <div className="text-2xl font-bold text-[#032133] mb-2">0.25-0.75%</div>
                 <div className="text-sm text-gray-600 mb-2">Average Savings</div>
                 <p className="text-xs text-gray-500">Typical rate improvement vs. going direct to bank</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#032133] mb-2">24hrs</div>
+                <div className="text-2xl font-bold text-[#032133] mb-2">24hrs</div>
                 <div className="text-sm text-gray-600 mb-2">Pre-Approval Time</div>
                 <p className="text-xs text-gray-500">Fast approvals when you need them most</p>
               </div>
