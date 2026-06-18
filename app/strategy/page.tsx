@@ -394,7 +394,7 @@ export default function StrategyPage() {
       <section className="py-8 bg-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl lg:text-2xl font-bold text-white mb-4 text-balance">
+            <h2 className="text-1xl lg:text-1xl font-bold text-white mb-4 text-balance">
               This is where strategy matters.
             </h2>
 
@@ -416,7 +416,7 @@ export default function StrategyPage() {
       <section className="py-8 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl lg:text-2xl font-bold text-white mb-4 text-balance">
+            <h2 className="text-1xl lg:text-1xl font-bold text-white mb-4 text-balance">
               Understand your options before you commit.
             </h2>
 
