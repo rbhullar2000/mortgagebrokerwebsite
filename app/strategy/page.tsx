@@ -65,7 +65,7 @@ export default function StrategyPage() {
           <Button 
             size="lg"
               className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold"
-              asChild
+              asChild>
                   <Link href="/mortgage-checker">
                     Am I Overpaying? →
                   </Link>
@@ -78,7 +78,7 @@ export default function StrategyPage() {
               <Button
               
                 size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
-            >
+           
               <Link
                 href="https://calendly.com/bcmortgageteam/15min"
                 target="_blank"
