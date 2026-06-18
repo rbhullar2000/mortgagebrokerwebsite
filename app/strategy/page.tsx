@@ -62,10 +62,22 @@ export default function StrategyPage() {
               Purchase • Refinance • Renewal • Debt Consolidation • Investment Properties
             </p>
 
-            <Button
-              size="lg"
+          <Button 
+            size="lg"
               className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold"
               asChild
+                  <Link href="/mortgage-checker">
+                    Am I Overpaying? →
+                  </Link>
+                </Button> 
+
+             
+            <br />
+            <br />
+                
+              <Button
+              
+                size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
             >
               <Link
                 href="https://calendly.com/bcmortgageteam/15min"
@@ -75,20 +87,10 @@ export default function StrategyPage() {
                 Book our free 15-minute strategy consultation{" "}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-            </Button>
-
-             
-            <br />
-            <br />
-                
-              
+            </Button> 
 
             
-<Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
-                  <Link href="/mortgage-checker">
-                    Am I Overpaying? →
-                  </Link>
-                </Button>
+
             {/* Support Text */}
             <p className="mt-6 text-gray-600 text-sm">
               Trusted Strategy-focused mortgage guidance for BC borrowers
