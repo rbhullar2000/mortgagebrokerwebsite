@@ -460,7 +460,7 @@ export default function HomePage() {
                 About Rob S. Bhullar, BSc
               </Badge>
 
-             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-6">
+             <h2 className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-6">
   Strategy-First Mortgage Advice
 </h2>
 
