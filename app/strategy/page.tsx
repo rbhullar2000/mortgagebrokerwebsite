@@ -54,11 +54,11 @@ export default function StrategyPage() {
               situation changes.
             </p>
 
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-4 leading-relaxed">
               Helping BC homeowners lower payments, improve flexibility, and make smarter long-term mortgage decisions.
             </p>
 
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-4 leading-relaxed">
               Purchase • Refinance • Renewal • Debt Consolidation • Investment Properties
             </p>
 
