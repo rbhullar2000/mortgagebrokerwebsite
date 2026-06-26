@@ -258,7 +258,7 @@ export default function MortgageCheckerPage() {
       ? `My honest recommendation: don't simply sign your lender's renewal letter. That offer is rarely their sharpest rate, and with your numbers, shopping the market 90–120 days before renewal could make a real difference.${equityLine}`
       : `My recommendation: start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter, which is rarely their best offer.${equityLine}`;
 
-    const p4 = `If you'd like, let's hop on a free 15-minute strategy call and I'll walk you through your specific options with access to 50+ lenders — no pressure, just a clear plan. Talk soon, Rob.`;
+    const p4 = `If you'd like, let's hop on a free 15-minute strategy call and I'll walk you through your specific options with access to 50+ lenders — no pressure, just a clear plan. Talk soon, BC Mortgage Team.`;
 
     const review = `${p1}\n\n${p2}\n\n${p3}\n\n${p4}`;
 
@@ -503,7 +503,7 @@ export default function MortgageCheckerPage() {
 
             <div className="h-px bg-gray-100 my-5" />
 
-            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Rob&apos;s Assessment</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">BC Mortgage Team&apos;s Assessment</p>
             <div className="bg-[#F4F6F8] border-l-4 border-[#C79A2B] rounded-xl p-5 text-sm text-gray-700 leading-relaxed mb-6">
               {loading
                 ? <span className="animate-pulse">Preparing your personalized mortgage review…</span>
