@@ -547,10 +547,10 @@ export default function HomePage() {
 
           <div className="grid lg:grid-cols-2 gap-6 items-start">
             {/* Twitter Feed */}
-            <div>
+{/*            <div>
               <TwitterFeed />
             </div>
-
+*/}
             {/* Info Card */}
             <div className="lg:pl-4">
               <Card className="p-8 bg-gradient-to-br from-[#F4F6F8] to-white border border-gray-200">
