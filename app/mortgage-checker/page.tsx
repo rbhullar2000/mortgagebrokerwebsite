@@ -253,17 +253,10 @@ export default function MortgageCheckerPage() {
       ? `${firstName}, your current rate of ${rate}% is running above today's market - that gap is worth addressing as lenders rarely lead with their best offer.`
       : `${firstName}, thanks for taking a few minutes to run your numbers. The good news is your current rate of ${rate}% is already competitive with today's market, and your mortgage health score of ${score}/100 reflects that you're in a solid position. It's still smart to review the details before your next renewal.`;
     
-    /* 
+    
     const p2 = monthlySavings > 0
       ? `Based on a comparable market rate of ${marketRate}%, switching could save you roughly ${fmt(monthlySavings)} a month — about ${fmt(annualSavings)} a year that's currently staying with your lender instead of in your pocket. On a balance of $${fmtNum(bal)}, even a small rate difference adds up quickly over the life of your term.`
       : `At a market rate of ${marketRate}%, there isn't a meaningful payment saving to capture right now on your $${fmtNum(bal)} balance. That said, rates and your goals can shift, so it's worth keeping an eye on your renewal window so you're never caught paying more than you need to.`;
-*/
-
-    const p2 = monthlySavings > 0
-      ? ``
-      : `At a market rate of ${marketRate}%, there isn't a meaningful payment saving to capture right now on your $${fmtNum(bal)} balance. That said, rates and your goals can shift, so it's worth keeping an eye on your renewal window so you're never caught paying more than you need to.`;
-
-
 
     
     const equityLine = accessibleEquity > 0
