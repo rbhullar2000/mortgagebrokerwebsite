@@ -217,7 +217,7 @@ export default function MortgageCheckerPage() {
 
     const equity = Math.max(0, propVal - bal);
     const ltv = (bal / propVal) * 100;
-    const accessibleEquity = ltv < 80 ? Math.max(0, propVal * 0.8 - bal) : 0;
+    const accessibleEquity = ltv < 80 ? Math.max(0, Math.min(propVal * 0.8 - bal, propVal - bal)) : 0;
     const appreciation = propVal - purchasePrice;
     const yearsOwned = new Date().getFullYear() - purchaseYear;
     const rateDiff = rate - marketRate;
