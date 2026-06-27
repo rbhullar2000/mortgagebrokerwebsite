@@ -259,7 +259,7 @@ export default function MortgageCheckerPage() {
       : `At a market rate of ${marketRate}%, there isn't a meaningful payment saving to capture right now on your $${fmtNum(bal)} balance. That said, rates and your goals can shift, so it's worth keeping an eye on your renewal window so you're never caught paying more than you need to.`;
 */}
     const equityLine = accessibleEquity > 0
-      ? ` You've also built up around $${fmtNum(accessibleEquity)} in accessible equity (you're at ${ltv.toFixed(0)}% loan-to-value), which could be used for renovations, debt consolidation, or an investment if that fits your plans.`
+      ? `You've also built up around $${fmtNum(accessibleEquity)} in accessible equity (you're at ${ltv.toFixed(0)}% loan-to-value), which could be used for renovations, debt consolidation, or an investment if that fits your plans.`
       : "";
     const p3 = renewalWarning
       ? `Recommendation: don't simply sign your lender's renewal letter. That offer is rarely their sharpest rate, and with your numbers, shopping the market 90–120 days before renewal could make a real difference.${equityLine}`
