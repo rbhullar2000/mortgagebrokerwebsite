@@ -258,7 +258,7 @@ export default function MortgageCheckerPage() {
       ? `Recommendation: don't simply sign your lender's renewal letter. That offer is rarely their sharpest rate, and with your numbers, shopping the market 90–120 days before renewal could make a real difference.${equityLine}`
       : `Recommendation: start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter, which is rarely their best offer.${equityLine}`;
 
-    const p4 = `If you'd like, let's hop on a free 15-minute strategy call and I'll walk you through your specific options with access to 50+ lenders — no pressure, just a clear plan. Talk soon, BC Mortgage Team.`;
+    const p4 = `If you'd like, let's hop on a free 15-minute strategy call and we'll walk you through your specific options with access to 50+ lenders — no pressure, just a clear plan. Talk soon, BC Mortgage Team.`;
 
     const review = `${p1}\n\n${p2}\n\n${p3}\n\n${p4}`;
 
