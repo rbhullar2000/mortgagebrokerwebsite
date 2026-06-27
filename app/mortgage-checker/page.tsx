@@ -255,17 +255,25 @@ export default function MortgageCheckerPage() {
     
     
     const p2 = monthlySavings > 0
-      ? `Based on a comparable market rate of ${marketRate}%, switching could save you roughly ${fmt(monthlySavings)} a month — about ${fmt(annualSavings)} a year that's currently staying with your lender instead of in your pocket. On a balance of $${fmtNum(bal)}, even a small rate difference adds up quickly over the life of your term.`
+      ? `Based on a comparable market rate of ${marketRate}%, switching could save you roughly ${fmt(monthlySavings)} a month — about ${fmt(annualSavings)} a year.`
       : `At a market rate of ${marketRate}%, there isn't a meaningful payment saving to capture right now on your $${fmtNum(bal)} balance. That said, rates and your goals can shift, so it's worth keeping an eye on your renewal window so you're never caught paying more than you need to.`;
    
     const equityLine = accessibleEquity > 0
       ? `You've also built up around $${fmtNum(accessibleEquity)} in accessible equity (you're at ${ltv.toFixed(0)}% loan-to-value), which could be used for renovations, debt consolidation, or an investment if that fits your plans.`
       : "";
-   
+   /*
     const p3 = renewalWarning
       ? `Recommendation: don't simply sign your lender's renewal letter. That offer is rarely their sharpest rate, and with your numbers, shopping the market 90–120 days before renewal could make a real difference. ${equityLine}`
       : `Recommendation: start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter, which is rarely their best offer.${equityLine}`;
+*/
 
+const p3 = renewalWarning
+      ? ``
+      : `Recommendation: start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter, which is rarely their best offer.${equityLine}`;
+
+
+
+    
     const p4 = `Let's go through your specific options on a free 15-minute strategy call and we'll walk you through your specific options with access to 50+ lenders — no pressure, just a clear plan.`;
 
     const review = `${p1}\n\n${p2}\n\n${p3}\n\n${p4}`;
