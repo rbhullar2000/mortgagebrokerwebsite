@@ -4,6 +4,16 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Header } from "@/components/header";
 
+declare global {
+
+  interface Window {
+
+    dataLayer?: Record<string, unknown>[];
+
+  }
+
+}
+
 // ── Market rates — update these periodically ─────────────────────────────────
 const MARKET_RATES: Record<string, number> = {
   fixed_1: 5.09,
@@ -154,6 +164,7 @@ export default function MortgageCheckerPage() {
   const [aiText, setAiText] = useState("");
   const [results, setResults] = useState<Results | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
+  const conversionSent = useRef(false);
 
   const [mortgage, setMortgage] = useState<MortgageForm>({
     balance: "", rate: "", type: "fixed_5",
@@ -281,7 +292,20 @@ const p3 = renewalWarning
     setAiText(review);
     setLoading(false);
     setTimeout(() => resultRef.current?.scrollIntoView({ behavior: "smooth" }), 100);
-    sendLead(r, review);
+    if (!conversionSent.current) {
+  conversionSent.current = true;
+
+  sendLead(r, review);
+
+  if (typeof window !== "undefined") {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "mortgage_checker_complete",
+      conversion_value: 50,
+      currency: "CAD",
+    });
+  }
+}
   }, [step]);
 
   // ── Send lead to Rob via the existing /api/contact email pipeline ─────────
