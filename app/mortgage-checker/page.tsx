@@ -250,7 +250,7 @@ export default function MortgageCheckerPage() {
 
  // Build a personalized review directly from the computed numbers — no external API or package.
     const p1 = monthlySavings > 0
-      ? `${firstName}, your current rate of ${rate}% is running above today's market - that gap is worth addressing as lender rarely lead with their best offer.`
+      ? `${firstName}, your current rate of ${rate}% is running above today's market - that gap is worth addressing as lenders rarely lead with their best offer.`
       : `${firstName}, thanks for taking a few minutes to run your numbers. The good news is your current rate of ${rate}% is already competitive with today's market, and your mortgage health score of ${score}/100 reflects that you're in a solid position. It's still smart to review the details before your next renewal.`;
     
     {/* 
