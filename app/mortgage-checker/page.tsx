@@ -274,7 +274,7 @@ const p3 = renewalWarning
 
 
     
-    const p4 = `Let's go through your specific options on a free 15-minute strategy call and we'll walk you through your specific options with access to 50+ lenders — no pressure, just a clear plan.`;
+    const p4 = `Let's go through your options on a free 15-minute call — no pressure, just a clear plan, with access to 50+ lenders.`;
 
     const review = `${p1}\n\n${p2}\n\n${p3}\n\n${p4}`;
 
