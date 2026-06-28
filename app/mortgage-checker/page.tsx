@@ -212,6 +212,8 @@ interface MortgageForm {
   type: string;
   lender: string;
   amort: string;
+  originalAmort: string;
+  yearsIntoAmort: string;
   frequency: string;
   renewalMonth: string;
   renewalYear: string;
@@ -239,6 +241,7 @@ interface Results {
   ltv: number;
   appreciation: number;
   yearsOwned: number;
+  amortRemaining: number;
   renewalWarning: boolean;
   score: number;
   marketRate: number;
@@ -263,6 +266,8 @@ export default function MortgageCheckerPage() {
     type: "fixed_5",
     lender: "",
     amort: "",
+    originalAmort: "",
+    yearsIntoAmort: "",
     frequency: "monthly",
     renewalMonth: "",
     renewalYear: "",
@@ -304,8 +309,31 @@ export default function MortgageCheckerPage() {
         }
         if (!mortgage.lender) e.lender = "Select your lender";
       }
-      if (!mortgage.amort || isNaN(+mortgage.amort) || +mortgage.amort < 1 || +mortgage.amort > 30) {
-        e.amort = "Enter years remaining, 1–30";
+      if (isNewPurchase) {
+        if (!mortgage.amort || isNaN(+mortgage.amort) || +mortgage.amort < 1 || +mortgage.amort > 30) {
+          e.amort = "Enter years remaining, 1–30";
+        }
+      } else {
+        if (
+          !mortgage.originalAmort ||
+          isNaN(+mortgage.originalAmort) ||
+          +mortgage.originalAmort < 1 ||
+          +mortgage.originalAmort > 35
+        ) {
+          e.originalAmort = "Enter original amortization, 1–35";
+        }
+        if (
+          mortgage.yearsIntoAmort === "" ||
+          isNaN(+mortgage.yearsIntoAmort) ||
+          +mortgage.yearsIntoAmort < 0
+        ) {
+          e.yearsIntoAmort = "Enter years, 0 or more";
+        } else if (
+          !e.originalAmort &&
+          +mortgage.yearsIntoAmort >= +mortgage.originalAmort
+        ) {
+          e.yearsIntoAmort = "Should be less than original amortization";
+        }
       }
     }
     if (s === 1) {
@@ -346,7 +374,13 @@ export default function MortgageCheckerPage() {
     if (step !== 3) return;
     const bal = isNewPurchase ? parseFloat(property.value) * 0.8 : parseFloat(mortgage.balance);
     const rate = isNewPurchase ? MARKET_RATES[mortgage.type] : parseFloat(mortgage.rate);
-    const amort = parseFloat(mortgage.amort);
+    // For existing mortgages, the client enters their original amortization and how
+    // long they've been paying on it — we compute the true remaining years ourselves
+    // rather than asking them to do that subtraction (and risk them re-entering their
+    // original term out of habit instead of what's actually left).
+    const amort = isNewPurchase
+      ? parseFloat(mortgage.amort)
+      : Math.max(1, parseFloat(mortgage.originalAmort) - parseFloat(mortgage.yearsIntoAmort));
     const propVal = parseFloat(property.value);
     const purchasePrice = isNewPurchase
       ? parseFloat(property.value)
@@ -406,6 +440,7 @@ export default function MortgageCheckerPage() {
       ltv,
       appreciation,
       yearsOwned,
+      amortRemaining: amort,
       renewalWarning,
       score,
       marketRate,
@@ -520,7 +555,9 @@ export default function MortgageCheckerPage() {
       `Current rate: ${mortgage.rate ? `${mortgage.rate}%` : "Not provided / purchase estimate"}`,
       `Mortgage type: ${RATE_LABELS[mortgage.type]}`,
       `Lender: ${mortgage.lender || "Not provided"}`,
-      `Amortization remaining: ${mortgage.amort} years`,
+      `Amortization remaining: ${r.amortRemaining} years${
+        isNewPurchase ? "" : ` (original ${mortgage.originalAmort} yrs, ${mortgage.yearsIntoAmort} yrs in)`
+      }`,
       `Payment frequency: ${FREQ_LABELS[mortgage.frequency]}`,
       `Estimated ${FREQ_LABELS[mortgage.frequency].toLowerCase()} payment: ${fmt(r.perPeriodActual)}`,
       `Renewal date: ${renewalDateLabel}`,
@@ -715,37 +752,102 @@ export default function MortgageCheckerPage() {
                   {errors.lender && <p className="text-red-500 text-xs mt-1">{errors.lender}</p>}
                 </div>
               )}
-              <div className="grid grid-cols-2 gap-4 mb-5">
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                    {isNewPurchase ? "Desired amortization (yrs)" : "Amortization remaining (yrs)"}
-                  </label>
-                  <input
-                    type="number"
-                    placeholder="e.g. 25"
-                    value={mortgage.amort}
-                    onChange={(e) => setM("amort", e.target.value)}
-                    className={inp(!!errors.amort)}
-                  />
-                  {errors.amort && <p className="text-red-500 text-xs mt-1">{errors.amort}</p>}
+              {isNewPurchase ? (
+                <div className="grid grid-cols-2 gap-4 mb-5">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                      Desired amortization (yrs)
+                    </label>
+                    <input
+                      type="number"
+                      placeholder="e.g. 25"
+                      value={mortgage.amort}
+                      onChange={(e) => setM("amort", e.target.value)}
+                      className={inp(!!errors.amort)}
+                    />
+                    {errors.amort && <p className="text-red-500 text-xs mt-1">{errors.amort}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                      Payment frequency
+                    </label>
+                    <select
+                      value={mortgage.frequency}
+                      onChange={(e) => setM("frequency", e.target.value)}
+                      className={inp(false)}
+                    >
+                      {Object.entries(FREQ_LABELS).map(([value, label]) => (
+                        <option key={value} value={value}>
+                          {label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                    Payment frequency
-                  </label>
-                  <select
-                    value={mortgage.frequency}
-                    onChange={(e) => setM("frequency", e.target.value)}
-                    className={inp(false)}
-                  >
-                    {Object.entries(FREQ_LABELS).map(([value, label]) => (
-                      <option key={value} value={value}>
-                        {label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
+              ) : (
+                <>
+                  <div className="grid grid-cols-2 gap-4 mb-2">
+                    <div>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                        Original amortization (yrs)
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="e.g. 25"
+                        value={mortgage.originalAmort}
+                        onChange={(e) => setM("originalAmort", e.target.value)}
+                        className={inp(!!errors.originalAmort)}
+                      />
+                      {errors.originalAmort && (
+                        <p className="text-red-500 text-xs mt-1">{errors.originalAmort}</p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                        Years since it started
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="e.g. 2"
+                        value={mortgage.yearsIntoAmort}
+                        onChange={(e) => setM("yearsIntoAmort", e.target.value)}
+                        className={inp(!!errors.yearsIntoAmort)}
+                      />
+                      {errors.yearsIntoAmort && (
+                        <p className="text-red-500 text-xs mt-1">{errors.yearsIntoAmort}</p>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-400 mb-5 leading-snug min-h-[1rem]">
+                    {mortgage.originalAmort &&
+                      mortgage.yearsIntoAmort !== "" &&
+                      !isNaN(+mortgage.originalAmort) &&
+                      !isNaN(+mortgage.yearsIntoAmort) &&
+                      !errors.originalAmort &&
+                      !errors.yearsIntoAmort &&
+                      `= ${Math.max(
+                        1,
+                        Math.round(+mortgage.originalAmort - +mortgage.yearsIntoAmort),
+                      )} years remaining — we'll use this for your payment calculation.`}
+                  </p>
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                      Payment frequency
+                    </label>
+                    <select
+                      value={mortgage.frequency}
+                      onChange={(e) => setM("frequency", e.target.value)}
+                      className={inp(false)}
+                    >
+                      {Object.entries(FREQ_LABELS).map(([value, label]) => (
+                        <option key={value} value={value}>
+                          {label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </>
+              )}
               <button className={btnPrimary} onClick={next}>
                 Next: Property Details →
               </button>
@@ -1077,6 +1179,8 @@ export default function MortgageCheckerPage() {
                     type: "fixed_5",
                     lender: "",
                     amort: "",
+                    originalAmort: "",
+                    yearsIntoAmort: "",
                     frequency: "monthly",
                     renewalMonth: "",
                     renewalYear: "",
