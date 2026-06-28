@@ -9,11 +9,11 @@ declare global {
 }
 // ── Market rates — update these periodically ─────────────────────────────────
 const MARKET_RATES: Record<string, number> = {
-  fixed_1: 4.84,
-  fixed_2: 4.39,
-  fixed_3: 4.49,
-  fixed_5: 4.64,
-  variable: 3.95,
+  fixed_1: 4.74,
+  fixed_2: 4.24,
+  fixed_3: 3.84,
+  fixed_5: 3.94,
+  variable: 3.30,
 };
 const RATE_LABELS: Record<string, string> = {
   fixed_1: "1-yr Fixed",
