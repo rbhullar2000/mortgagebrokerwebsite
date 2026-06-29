@@ -67,11 +67,7 @@ export default function HomePage() {
                 
           {/*      <br /> */}
                 
-                <Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
-                  <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
-                    Book Your Free Mortgage Strategy Consultation →
-                  </Link>
-                </Button>
+                
                
               </div>
 
@@ -111,6 +107,14 @@ export default function HomePage() {
                   Unbiased guidance
                 </div>
               </div>
+
+<Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
+                  <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
+                    Book Your Free Mortgage Strategy Consultation →
+                  </Link>
+                </Button>
+
+            
           </div>
         </div>
       </section> 
