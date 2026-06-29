@@ -41,84 +41,72 @@ export default function HomePage() {
       <section className="py-12 lg:py-16 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-              <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 inline-block">
-  Strategy-First Mortgage Advice for BC Borrowers
-</Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight">
-  <span>Smarter Mortgage <span className="text-[#D4AF37]">Decisions</span></span>
-  <br />
-  Start Here
-</h1>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Access 50+ lenders. Get a better rate, and a strategy built around your situation.
-              </p>
-{/*
-<p className="text-xl text-gray-600 mb-10 leading-relaxed">
-              Helping BC homeowners lower payments, improve flexibility, and make smarter long-term mortgage decisions.
+            <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 inline-block">
+              Strategy-First Mortgage Advice for BC Borrowers
+            </Badge>
+            <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight">
+              <span>Smarter Mortgage <span className="text-[#D4AF37]">Decisions</span></span>
+              <br />
+              Start Here
+            </h1>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Access 50+ lenders. Get a better rate, and a strategy built around your situation.
             </p>
-            */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
-                
-                 <Button size="lg" className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold" asChild>
-                  <Link href="/mortgage-checker">    
-                    Am I Overpaying? →
-                  </Link>
-                </Button>
-                
-          {/*      <br /> */}
-                
-                
-               
-              </div>
 
-            <br />
-            
-      {/*        <p className="text-sm text-gray-600 mb-6">
-                Trusted Strategy-focused mortgage guidance for BC borrowers
-              </p>    */}
-<div className="mb-8 max-w-lg mx-auto bg-[#F4F6F8] rounded-lg p-4 border border-gray-200">
-  <p className="text-xs font-semibold uppercase tracking-wide text-[#1D2D44] mb-2">
-    Expert insight
-  </p>
-  <p className="text-[#1D2D44] font-semibold mb-1">
-    Most mortgage decisions are based on rate.
-  </p>
-  <p className="text-gray-600">
-    The best ones are based on rate, structure, timing, and long-term strategy.
-  </p>
-</div>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+              <Button size="lg" className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold" asChild>
+                <Link href="/mortgage-checker">
+                  Am I Overpaying? →
+                </Link>
+              </Button>
+            </div>
+
+            <div className="mb-8 max-w-lg mx-auto bg-[#F4F6F8] rounded-lg p-4 border border-gray-200">
+              <p className="text-xs font-semibold uppercase tracking-wide text-[#1D2D44] mb-2">
+                Expert insight
+              </p>
+              <p className="text-[#1D2D44] font-semibold mb-1">
+                Most mortgage decisions are based on rate.
+              </p>
+              <p className="text-gray-600">
+                The best ones are based on rate, structure, timing, and long-term strategy.
+              </p>
+            </div>
 
             <p className="text-base text-gray-600 mb-10 leading-relaxed">
               Purchase • Refinance • Renewal • Debt Consolidation • Investment Properties
             </p>
 
-            
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">
-                <div className="flex items-center">
-                  <Shield className="w-5 h-5 mr-2 text-[#032133]" />
-                  Access to 50+ lenders
-                </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2 text-[#032133]" />
-                  Strategy-driven approach
-                </div>
-                <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2 text-[#032133]" />
-                  Unbiased guidance
-                </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">
+              <div className="flex items-center">
+                <Shield className="w-5 h-5 mr-2 text-[#032133]" />
+                Access to 50+ lenders
               </div>
-<div  className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
-              
-<Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
-                  <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
-                    Book Your Free Mortgage Strategy Consultation →
-                  </Link>
-                </Button>
- </div>
-            
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 mr-2 text-[#032133]" />
+                Strategy-driven approach
+              </div>
+              <div className="flex items-center">
+                <TrendingUp className="w-5 h-5 mr-2 text-[#032133]" />
+                Unbiased guidance
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+              <Button size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
+                <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
+                  Book Your Free Mortgage Strategy Consultation →
+                </Link>
+              </Button>
+            </div>
+
           </div>
         </div>
-      </section> 
+      </section>
+    </div>
+  )
+}
+
 
       {/* Rate Comparison Tool Section */}
       {/*  <section id="rates" className="py-20 bg-slate-50">
