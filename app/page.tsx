@@ -503,12 +503,14 @@ export default function HomePage() {
 
             {/* Right: Contact Info */}
             <div className="space-y-6">
+               {/*
+              
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-[#032133] shadow-sm flex-shrink-0">
                   <Mail className="w-6 h-6" />
                 </div>
               </div>
-
+*/}
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-[#032133] shadow-sm flex-shrink-0">
                   <MapPin className="w-6 h-6" />
