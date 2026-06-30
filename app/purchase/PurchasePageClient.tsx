@@ -36,7 +36,7 @@ export default function PurchasePageClient() {
                   onClick={() => window.trackApplicationClick?.("purchase_hero")}
                 >
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Get Pre-Approved Now
+                    Get Pre-Approved - Apply Now
                   </Link>
                 </Button>
                 <Button
