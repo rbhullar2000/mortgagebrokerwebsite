@@ -160,7 +160,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                     >
                       <Link href="/mortgage-checker">
-                        Am I Overpaying? →
+                        Am I Overpaying? (2 min) →
                       </Link>
                     </Button>
                     <Button
@@ -169,7 +169,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                     >
                       <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                        Apply Now
+                        Apply Now →
                       </Link>
                     </Button>
                   </div>
@@ -186,7 +186,7 @@ export function Header() {
               className="bg-[#1D2D44] hover:bg-[#243854]/90 h-9 px-3 text-sm"
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Apply
+                Apply Now →
               </Link>
             </Button>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -237,7 +237,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                     >
                       <Link href="/mortgage-checker">
-                        Am I Overpaying? →
+                        Am I Overpaying? (2 min) →
                       </Link>
                     </Button>
                     <Button
@@ -246,7 +246,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                     >
                       <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                        Apply Now
+                        Apply Now →
                       </Link>
                     </Button>
                   </div>
