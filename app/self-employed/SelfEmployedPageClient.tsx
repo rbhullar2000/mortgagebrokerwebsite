@@ -35,7 +35,7 @@ export default function SelfEmployedPageClient() {
                   onClick={() => window.trackApplicationClick?.("self_employed_hero")}
                 >
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Get Pre-Approved
+                    Get Pre-Approved - Apply Now
                   </Link>
                 </Button>
                 <Button
@@ -389,13 +389,13 @@ export default function SelfEmployedPageClient() {
               onClick={() => window.trackApplicationClick?.("self_employed_cta")}
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Get Pre-Approved
+                Get Pre-Approved - Apply Now
               </Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-[#1D2D44]"
+              className="bg-white text-[#1D2D44] hover:bg-gray-100"
               asChild
               onClick={() => window.trackPhoneClick?.()}
             >
