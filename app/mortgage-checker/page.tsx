@@ -617,7 +617,7 @@ export default function MortgageCheckerPage() {
           {step === 0 && (
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-[#C79A2B] mb-3">
-                Free · 2 minutes · No obligation
+                Free · 2 minute checker · No obligation
               </p>
               <h1
                 className="text-3xl font-bold text-[#1D2D44] mb-2"
