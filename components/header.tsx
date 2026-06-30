@@ -97,7 +97,7 @@ export function Header() {
               className="bg-[#1D2D44] hover:bg-[#243854]/90 h-10"
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Apply Now
+                Apply Now →
               </Link>
             </Button>
           </div>
