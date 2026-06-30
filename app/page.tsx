@@ -71,7 +71,7 @@ export default function HomePage() {
                 className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-12 px-8 font-semibold"
                 asChild
               >
-                <Link href="/mortgage-checker">Am I Overpaying? →</Link>
+                <Link href="/mortgage-checker">Am I Overpaying? 2 minute checker →</Link>
               </Button>
             </div>
 
