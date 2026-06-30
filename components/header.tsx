@@ -34,15 +34,10 @@ export function Header() {
     { href: "/#contact", label: "Contact" },
   ]
 
-  // On Mortgage Strategy page, hide all navigation items
-  const isStrategyPage = pathname === "/strategy"
-  const displayedItems = isStrategyPage ? [] : navigationItems
-
   return (
     <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo Section */}
           <div className="flex items-center space-x-3 md:space-x-10">
             <Link href="/" className="flex items-center space-x-3 md:space-x-10">
               <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
@@ -66,9 +61,8 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
-            {displayedItems.map((item) => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -83,7 +77,6 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Desktop Apply Button */}
           <div className="hidden md:flex items-center">
             <Button
               asChild
@@ -96,7 +89,6 @@ export function Header() {
             </Button>
           </div>
 
-          {/* Mobile Menu */}
           <div className="flex items-center space-x-2 lg:hidden">
             <Button
               asChild
@@ -115,6 +107,7 @@ export function Header() {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
+
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col space-y-4 mt-8">
                   <div className="flex items-center space-x-3 pb-4 border-b">
@@ -134,7 +127,7 @@ export function Header() {
                   </div>
 
                   <nav className="flex flex-col space-y-3">
-                    {displayedItems.map((item) => (
+                    {navigationItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
