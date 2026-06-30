@@ -55,6 +55,11 @@ export default function HomePage() {
               Start Here
             </h1>
 
+            <p className="text-sm font-medium text-gray-500 mb-6 tracking-wide">
+               Serving Metro Vancouver, Surrey & the Fraser Valley
+            </p>
+            
+
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Access 50+ lenders. Get a better rate, and a strategy built around your situation.
             </p>
