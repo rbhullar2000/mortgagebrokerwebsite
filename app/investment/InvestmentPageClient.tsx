@@ -38,7 +38,7 @@ export default function InvestmentPageClient() {
                   onClick={() => window.trackApplicationClick?.("investment_hero")}
                 >
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Get Investment Rates
+                    Get Investment Rates - Apply Now
                   </Link>
                 </Button>
                 <Button
@@ -279,7 +279,7 @@ export default function InvestmentPageClient() {
               onClick={() => window.trackApplicationClick?.("investment_cta")}
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Get Investment Rates
+                Get Investment Rates - Apply Now
               </Link>
             </Button>
             <Button
