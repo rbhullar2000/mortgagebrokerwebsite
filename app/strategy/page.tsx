@@ -69,7 +69,7 @@ export default function StrategyPage() {
               className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold"
               asChild>
                   <Link href="/mortgage-checker">
-                    Am I Overpaying? →
+                    Am I Overpaying? 2 minute checker →
                   </Link>
                 </Button> 
 
