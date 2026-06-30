@@ -88,7 +88,7 @@ export function Header() {
               className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-10 font-semibold"
             >
               <Link href="/mortgage-checker">
-                Am I Overpaying? →
+                Am I Overpaying? (2 min) →
               </Link>
             </Button>
             <Button
