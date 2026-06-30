@@ -507,10 +507,6 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-[#032133] shadow-sm flex-shrink-0">
                   <Mail className="w-6 h-6" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-[#1D2D44]">Email</h4>
-                  <p className="text-gray-600">contact@bcmortgageteam.com</p>
-                </div>
               </div>
 
               <div className="flex items-start space-x-4">
