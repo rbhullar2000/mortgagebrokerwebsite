@@ -178,7 +178,7 @@ export default function RenewalPageClient() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Button size="lg" variant="secondary" asChild onClick={() => window.trackApplicationClick?.("renewal_cta")}>
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Check My Options
+                Check My Options - Apply Now
               </Link>
             </Button>
             <Button
