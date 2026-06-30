@@ -1,17 +1,20 @@
+import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { Shield, TrendingUp, CheckCircle, ArrowRight, Users, FileText, Calculator } from "lucide-react"
+import { CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Script from "next/script"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Mortgage Strategy | BC Mortgage Team",
   description:
-    "Most people focus on rate. The real advantage is structure. Book a mortgage strategy session with BC Mortgage Team — licensed with access to 50+ lenders.",
+    "Strategy-first mortgage advice for BC borrowers. Compare your mortgage, review your structure, and book a free 15-minute mortgage strategy consultation.",
+  alternates: {
+    canonical: "https://www.bcmortgageteam.com/strategy",
+  },
 }
 
 export default function StrategyPage() {
@@ -27,7 +30,6 @@ export default function StrategyPage() {
               window.dataLayer.push({
                 event: "calendly_booking"
               });
-              console.log("Calendly booking tracked");
             }
           });
         `}
