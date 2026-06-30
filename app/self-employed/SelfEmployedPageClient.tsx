@@ -399,7 +399,7 @@ export default function SelfEmployedPageClient() {
               asChild
               onClick={() => window.trackPhoneClick?.()}
             >
-              <Link href="#contact">Schedule Consultation</Link>
+              <Link href="https://calendly.com/bcmortgageteam/15min">Schedule Consultation</Link>
             </Button>
           </div>
         </div>
