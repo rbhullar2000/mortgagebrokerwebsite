@@ -36,7 +36,7 @@ export default function RefinancePageClient() {
                   onClick={() => window.trackApplicationClick?.("refinance_hero")}
                 >
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Check My Equity
+                    Check Your Equity - Apply Now
                   </Link>
                 </Button>
                 <Button
@@ -252,7 +252,7 @@ export default function RefinancePageClient() {
               onClick={() => window.trackApplicationClick?.("refinance_cta")}
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Start Assessment
+                Start Assessment - Apply Now
               </Link>
             </Button>
             <Button
