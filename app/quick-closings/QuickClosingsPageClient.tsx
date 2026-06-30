@@ -38,7 +38,7 @@ export default function QuickClosingsPageClient() {
                   onClick={() => window.trackApplicationClick?.("quick_closing_hero")}
                 >
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Get Same-Day Approval
+                    Get Same-Day Approval - Apply Now
                   </Link>
                 </Button>
                 <Button
@@ -280,7 +280,7 @@ export default function QuickClosingsPageClient() {
               onClick={() => window.trackApplicationClick?.("quick_closing_cta")}
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Get Fast Approval
+                Get Fast Approval - Apply Now
               </Link>
             </Button>
             <Button
