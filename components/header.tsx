@@ -38,6 +38,8 @@ export function Header() {
     <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
+
+          {/* Logo */}
           <div className="flex items-center space-x-3 md:space-x-10">
             <Link href="/" className="flex items-center space-x-3 md:space-x-10">
               <div className="w-16 h-12 md:w-24 md:h-18 flex items-center justify-center flex-shrink-0">
@@ -61,6 +63,7 @@ export function Header() {
             </Link>
           </div>
 
+          {/* Desktop nav */}
           <nav className="hidden lg:flex items-center space-x-6">
             {navigationItems.map((item) => (
               <Link
@@ -77,7 +80,17 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center">
+          {/* Desktop CTAs */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Button
+              asChild
+              size="sm"
+              className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-10 font-semibold"
+            >
+              <Link href="/mortgage-checker">
+                Am I Overpaying? →
+              </Link>
+            </Button>
             <Button
               asChild
               size="sm"
@@ -89,17 +102,17 @@ export function Header() {
             </Button>
           </div>
 
-          <div className="flex items-center space-x-2 lg:hidden">
+          {/* Tablet: show Apply Now button + hamburger, hide checker (too cramped) */}
+          <div className="hidden md:flex lg:hidden items-center gap-2">
             <Button
               asChild
               size="sm"
-              className="bg-[#1D2D44] hover:bg-[#243854]/90 h-9 px-3 text-sm md:hidden"
+              className="bg-[#1D2D44] hover:bg-[#243854]/90 h-10"
             >
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                Apply
+                Apply Now
               </Link>
             </Button>
-
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
@@ -107,7 +120,6 @@ export function Header() {
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col space-y-4 mt-8">
                   <div className="flex items-center space-x-3 pb-4 border-b">
@@ -125,7 +137,6 @@ export function Header() {
                       <p className="text-sm text-gray-600">Smart Mortgage Solutions</p>
                     </div>
                   </div>
-
                   <nav className="flex flex-col space-y-3">
                     {navigationItems.map((item) => (
                       <Link
@@ -142,8 +153,16 @@ export function Header() {
                       </Link>
                     ))}
                   </nav>
-
-                  <div className="pt-4 border-t">
+                  <div className="pt-4 border-t space-y-3">
+                    <Button
+                      asChild
+                      className="w-full bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-12 text-base font-semibold"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <Link href="/mortgage-checker">
+                        Am I Overpaying? →
+                      </Link>
+                    </Button>
                     <Button
                       asChild
                       className="w-full bg-[#032133] hover:bg-[#032133]/90 h-12 text-base"
@@ -158,6 +177,84 @@ export function Header() {
               </SheetContent>
             </Sheet>
           </div>
+
+          {/* Mobile: Apply + hamburger */}
+          <div className="flex items-center space-x-2 md:hidden">
+            <Button
+              asChild
+              size="sm"
+              className="bg-[#1D2D44] hover:bg-[#243854]/90 h-9 px-3 text-sm"
+            >
+              <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                Apply
+              </Link>
+            </Button>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <div className="flex flex-col space-y-4 mt-8">
+                  <div className="flex items-center space-x-3 pb-4 border-b">
+                    <div className="w-12 h-9 flex items-center justify-center">
+                      <Image
+                        src="/BRX_brand_black.png"
+                        alt="BRX Mortgage"
+                        width={48}
+                        height={36}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h2 className="font-bold text-gray-900">BC Mortgage Team</h2>
+                      <p className="text-sm text-gray-600">Smart Mortgage Solutions</p>
+                    </div>
+                  </div>
+                  <nav className="flex flex-col space-y-3">
+                    {navigationItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`text-lg font-medium transition-colors py-2 px-3 rounded-md ${
+                          isActive(item.href)
+                            ? "text-[#032133] border-b-2 border-[#D4AF37]"
+                            : "text-gray-700 hover:text-[#032133] hover:bg-gray-50"
+                        }`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </nav>
+                  <div className="pt-4 border-t space-y-3">
+                    {/* Gold checker button — most valuable lead action */}
+                    <Button
+                      asChild
+                      className="w-full bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-12 text-base font-semibold"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <Link href="/mortgage-checker">
+                        Am I Overpaying? →
+                      </Link>
+                    </Button>
+                    <Button
+                      asChild
+                      className="w-full bg-[#032133] hover:bg-[#032133]/90 h-12 text-base"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
+                        Apply Now
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+
         </div>
       </div>
     </header>
