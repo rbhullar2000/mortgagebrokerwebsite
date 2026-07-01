@@ -46,10 +46,10 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Areas Served</h4>
             <ul className="space-y-2 text-sm text-gray-400">
+              <li>British Columbia</li>
               <li>Vancouver</li>
-              <li>Surrey</li>
-              <li>Burnaby</li>
-              <li>Richmond</li>
+              <li>Fraser Valley</li>
+              <li>Okanagan</li>
               <li>Plus other BC regions</li>
             </ul>
           </div>
