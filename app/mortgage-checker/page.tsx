@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "BC mortgage broker",
   ],
   openGraph: {
-    title: "Am I Overpaying on My Mortgage? | Free 2-Minute Checker — BC Mortgage Team",
+    title: "Am I Overpaying on My Mortgage? | Free 2-Minute Checker",
     description:
       "Enter your current rate and balance to instantly see how you compare to today's BC market rates. Free, no obligation — find out in 2 minutes if you could be saving.",
     url: "https://bcmortgageteam.com/mortgage-checker",
