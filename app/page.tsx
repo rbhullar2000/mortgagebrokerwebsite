@@ -12,11 +12,11 @@ import Image from "next/image"
 import { blogPosts } from "@/lib/blogPosts"
 
 export const metadata: Metadata = {
-  title: "BC Mortgage Team | Mortgage Broker — Vancouver, Surrey & BC",
+  title: "BC Mortgage Team | Mortgage Broker — Vancouver, Fraser Valley & the Okanagan",
   description:
     "Strategy-first mortgage advice for BC borrowers. Access 50+ lenders for home purchase, renewal, and refinance. Licensed mortgage broker serving Vancouver, Surrey, Burnaby, Richmond, and the Fraser Valley.",
   openGraph: {
-    title: "BC Mortgage Team | Mortgage Broker — Vancouver, Surrey & BC",
+    title: "BC Mortgage Team | Mortgage Broker — Serving BC — Vancouver, Fraser Valley & the Okanagan",
     description:
       "Strategy-first mortgage advice for BC borrowers. Access 50+ lenders for home purchase, renewal, and refinance.",
     url: "https://bcmortgageteam.com",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BC Mortgage Team | Mortgage Broker — Vancouver, Surrey & BC",
+    title: "BC Mortgage Team | Mortgage Broker — Serving BC — Vancouver, Fraser Valley & the Okanagan",
     description:
       "Strategy-first mortgage advice for BC borrowers. Access 50+ lenders for home purchase, renewal, and refinance.",
   },
@@ -56,7 +56,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-sm font-medium text-gray-500 mb-6 tracking-wide">
-               Serving Metro Vancouver, Surrey & the Fraser Valley
+               Serving BC — Vancouver, Fraser Valley & the Okanagan
             </p>
             
 
@@ -517,8 +517,8 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[#1D2D44]">Service Area</h4>
-                  <p className="text-gray-600">Greater Vancouver Area</p>
-                  <p className="text-sm text-gray-500">Surrey, Vancouver, Burnaby, Richmond & more</p>
+                  <p className="text-gray-600">British Columbia</p>
+                  <p className="text-sm text-gray-500">Serving BC — Vancouver, Fraser Valley & the Okanagan</p>
                 </div>
               </div>
 
