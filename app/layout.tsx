@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-  template: "%s | BC Mortgage Team",
-  default: "BC Mortgage Team | Mortgage Broker — Vancouver, Surrey & BC",
-},
+    template: "%s | BC Mortgage Team",
+    default: "BC Mortgage Team | Mortgage Broker — Vancouver, Surrey & BC",
+  },
   description:
     "BC Mortgage Team is located in British Columbia. Get the best mortgage rates for home purchase, renewal, and refinance. Access 50+ lenders and fast approvals.",
   keywords: [
