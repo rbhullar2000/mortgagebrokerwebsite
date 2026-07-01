@@ -370,7 +370,7 @@ export default function HomePage() {
                   "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
                   "Experience with complex approvals, debt consolidation, and investor financing",
                   "Focused on aligning mortgage decisions with long-term financial strategy",
-                  "Bachelor of Science in Mathematics, Minor in Business Administration — Simon Fraser University",
+                  "Bachelor of Science in Mathematics, Minor in Business Administration & Computing Studies — Simon Fraser University",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start">
                     <div className="w-2 h-2 bg-[#032133] rounded-full mr-4 mt-2 flex-shrink-0"></div>
