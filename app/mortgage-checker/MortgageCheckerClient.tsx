@@ -251,7 +251,7 @@ interface Results {
   earlyBreakLikely: boolean | null;
 }
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function MortgageCheckerPage() {
+export default function MortgageCheckerClient() {
   const [step, setStep] = useState(0);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
