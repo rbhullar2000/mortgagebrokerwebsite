@@ -307,7 +307,6 @@ export default function MortgageCheckerClient() {
         ) {
           e.rate = "Enter a valid rate, e.g. 5.49";
         }
-        if (!mortgage.lender) e.lender = "Select your lender";
       }
       if (isNewPurchase) {
         if (!mortgage.amort || isNaN(+mortgage.amort) || +mortgage.amort < 1 || +mortgage.amort > 30) {
@@ -337,6 +336,9 @@ export default function MortgageCheckerClient() {
       }
     }
     if (s === 1) {
+      if (!isNewPurchase && !mortgage.lender) {
+        e.lender = "Select your lender";
+      }
       if (!property.value || isNaN(+property.value) || +property.value <= 0) {
         e.value = "Required";
       }
@@ -700,58 +702,6 @@ export default function MortgageCheckerClient() {
                   ))}
                 </div>
               </div>
-              {!isNewPurchase && (
-                <div className="mb-5">
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                    When does your current term renew?{" "}
-                    <span className="text-gray-400 font-normal">(optional, but helps a lot)</span>
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    <select
-                      value={mortgage.renewalMonth}
-                      onChange={(e) => setM("renewalMonth", e.target.value)}
-                      className={inp(false)}
-                    >
-                      <option value="">Month</option>
-                      {MONTHS.map((m, i) => (
-                        <option key={m} value={i + 1}>
-                          {m}
-                        </option>
-                      ))}
-                    </select>
-                    <select
-                      value={mortgage.renewalYear}
-                      onChange={(e) => setM("renewalYear", e.target.value)}
-                      className={inp(false)}
-                    >
-                      <option value="">Year</option>
-                      {YEARS.map((y) => (
-                        <option key={y} value={y}>
-                          {y}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-              )}
-              {!isNewPurchase && (
-                <div className="mb-5">
-                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                    Current lender
-                  </label>
-                  <select
-                    value={mortgage.lender}
-                    onChange={(e) => setM("lender", e.target.value)}
-                    className={inp(!!errors.lender)}
-                  >
-                    <option value="">Select your lender</option>
-                    {LENDERS.map((l) => (
-                      <option key={l}>{l}</option>
-                    ))}
-                  </select>
-                  {errors.lender && <p className="text-red-500 text-xs mt-1">{errors.lender}</p>}
-                </div>
-              )}
               {isNewPurchase ? (
                 <div className="grid grid-cols-2 gap-4 mb-5">
                   <div>
@@ -867,6 +817,58 @@ export default function MortgageCheckerClient() {
               <p className="text-gray-500 text-sm mb-8 leading-relaxed">
                 We'll use this to calculate your equity position and what you could potentially access.
               </p>
+              {!isNewPurchase && (
+                <>
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                      When does your current term renew?{" "}
+                      <span className="text-gray-400 font-normal">(optional, but helps a lot)</span>
+                    </label>
+                    <div className="grid grid-cols-2 gap-3">
+                      <select
+                        value={mortgage.renewalMonth}
+                        onChange={(e) => setM("renewalMonth", e.target.value)}
+                        className={inp(false)}
+                      >
+                        <option value="">Month</option>
+                        {MONTHS.map((m, i) => (
+                          <option key={m} value={i + 1}>
+                            {m}
+                          </option>
+                        ))}
+                      </select>
+                      <select
+                        value={mortgage.renewalYear}
+                        onChange={(e) => setM("renewalYear", e.target.value)}
+                        className={inp(false)}
+                      >
+                        <option value="">Year</option>
+                        {YEARS.map((y) => (
+                          <option key={y} value={y}>
+                            {y}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                  <div className="mb-5">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                      Current lender
+                    </label>
+                    <select
+                      value={mortgage.lender}
+                      onChange={(e) => setM("lender", e.target.value)}
+                      className={inp(!!errors.lender)}
+                    >
+                      <option value="">Select your lender</option>
+                      {LENDERS.map((l) => (
+                        <option key={l}>{l}</option>
+                      ))}
+                    </select>
+                    {errors.lender && <p className="text-red-500 text-xs mt-1">{errors.lender}</p>}
+                  </div>
+                </>
+              )}
               <div className="mb-5">
                 <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
                   {isNewPurchase ? "Estimated purchase price" : "Current estimated property value"}
