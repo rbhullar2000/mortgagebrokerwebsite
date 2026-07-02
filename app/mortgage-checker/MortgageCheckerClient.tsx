@@ -40,6 +40,8 @@ const MONTHS = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",
 ];
+// Default assumption when the user doesn't provide amortization details.
+const DEFAULT_ORIGINAL_AMORT = 25;
 const FREQ_FACTORS: Record<string, number> = {
   monthly: 12,
   "semi-monthly": 24,
@@ -291,6 +293,12 @@ export default function MortgageCheckerClient() {
   const currentYear = new Date().getFullYear();
   const YEARS = Array.from({ length: 7 }, (_, i) => currentYear + i);
   const isNewPurchase = mortgage.service === "New Purchase";
+  // Effective amortization values — fall back to sensible defaults when blank.
+  // Original amortization defaults to 25 years; years elapsed defaults to 0.
+  const effOriginalAmort = mortgage.originalAmort
+    ? parseFloat(mortgage.originalAmort)
+    : DEFAULT_ORIGINAL_AMORT;
+  const effYearsIn = mortgage.yearsIntoAmort ? parseFloat(mortgage.yearsIntoAmort) : 0;
   const validate = (s: number): boolean => {
     const e: Record<string, string> = {};
     if (s === 0) {
@@ -313,23 +321,25 @@ export default function MortgageCheckerClient() {
           e.amort = "Enter years remaining, 1–30";
         }
       } else {
+        // Both amortization fields are optional — only validate when the user
+        // actually types something. Blank = assume 25-year original, 0 years in.
         if (
-          !mortgage.originalAmort ||
-          isNaN(+mortgage.originalAmort) ||
-          +mortgage.originalAmort < 1 ||
-          +mortgage.originalAmort > 35
+          mortgage.originalAmort !== "" &&
+          (isNaN(+mortgage.originalAmort) ||
+            +mortgage.originalAmort < 1 ||
+            +mortgage.originalAmort > 35)
         ) {
-          e.originalAmort = "Enter original amortization, 1–35";
+          e.originalAmort = "Enter 1–35, or leave blank for 25";
         }
         if (
-          mortgage.yearsIntoAmort === "" ||
-          isNaN(+mortgage.yearsIntoAmort) ||
-          +mortgage.yearsIntoAmort < 0
+          mortgage.yearsIntoAmort !== "" &&
+          (isNaN(+mortgage.yearsIntoAmort) || +mortgage.yearsIntoAmort < 0)
         ) {
           e.yearsIntoAmort = "Enter years, 0 or more";
         } else if (
+          mortgage.yearsIntoAmort !== "" &&
           !e.originalAmort &&
-          +mortgage.yearsIntoAmort >= +mortgage.originalAmort
+          +mortgage.yearsIntoAmort >= effOriginalAmort
         ) {
           e.yearsIntoAmort = "Should be less than original amortization";
         }
@@ -376,13 +386,13 @@ export default function MortgageCheckerClient() {
     if (step !== 3) return;
     const bal = isNewPurchase ? parseFloat(property.value) * 0.8 : parseFloat(mortgage.balance);
     const rate = isNewPurchase ? MARKET_RATES[mortgage.type] : parseFloat(mortgage.rate);
-    // For existing mortgages, the client enters their original amortization and how
-    // long they've been paying on it — we compute the true remaining years ourselves
-    // rather than asking them to do that subtraction (and risk them re-entering their
-    // original term out of habit instead of what's actually left).
+    // For existing mortgages we compute remaining years from original amortization
+    // minus years elapsed. Both fields are optional — blanks fall back to a
+    // 25-year original and 0 years elapsed so cold traffic isn't blocked by
+    // details they don't know offhand.
     const amort = isNewPurchase
       ? parseFloat(mortgage.amort)
-      : Math.max(1, parseFloat(mortgage.originalAmort) - parseFloat(mortgage.yearsIntoAmort));
+      : Math.max(1, effOriginalAmort - effYearsIn);
     const propVal = parseFloat(property.value);
     const purchasePrice = isNewPurchase
       ? parseFloat(property.value)
@@ -549,6 +559,11 @@ export default function MortgageCheckerClient() {
     const subjectSavings =
       r.annualSavings > 0 ? ` — ${fmt(r.annualSavings)}/yr potential savings` : "";
     const subject = `${isUrgent ? "⚠️ " : ""}Mortgage Checker Lead: ${contact.name} — ${mortgageType}${subjectSavings}`;
+    const amortDetail = isNewPurchase
+      ? ""
+      : ` (original ${
+          mortgage.originalAmort || `${DEFAULT_ORIGINAL_AMORT} assumed`
+        } yrs, ${mortgage.yearsIntoAmort || "0 assumed"} yrs in)`;
     const details = [
       "--- MORTGAGE CHECKER LEAD ---",
       "",
@@ -557,9 +572,7 @@ export default function MortgageCheckerClient() {
       `Current rate: ${mortgage.rate ? `${mortgage.rate}%` : "Not provided / purchase estimate"}`,
       `Mortgage type: ${RATE_LABELS[mortgage.type]}`,
       `Lender: ${mortgage.lender || "Not provided"}`,
-      `Amortization remaining: ${r.amortRemaining} years${
-        isNewPurchase ? "" : ` (original ${mortgage.originalAmort} yrs, ${mortgage.yearsIntoAmort} yrs in)`
-      }`,
+      `Amortization remaining: ${r.amortRemaining} years${amortDetail}`,
       `Payment frequency: ${FREQ_LABELS[mortgage.frequency]}`,
       `Estimated ${FREQ_LABELS[mortgage.frequency].toLowerCase()} payment: ${fmt(r.perPeriodActual)}`,
       `Renewal date: ${renewalDateLabel}`,
@@ -739,11 +752,12 @@ export default function MortgageCheckerClient() {
                   <div className="grid grid-cols-2 gap-4 mb-2">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                        Original amortization (yrs)
+                        Original amortization{" "}
+                        <span className="text-gray-400 font-normal normal-case">(optional)</span>
                       </label>
                       <input
                         type="number"
-                        placeholder="e.g. 25"
+                        placeholder="25 (default)"
                         value={mortgage.originalAmort}
                         onChange={(e) => setM("originalAmort", e.target.value)}
                         className={inp(!!errors.originalAmort)}
@@ -754,7 +768,8 @@ export default function MortgageCheckerClient() {
                     </div>
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                        Years since it started
+                        Years since it started{" "}
+                        <span className="text-gray-400 font-normal normal-case">(optional)</span>
                       </label>
                       <input
                         type="number"
@@ -769,16 +784,14 @@ export default function MortgageCheckerClient() {
                     </div>
                   </div>
                   <p className="text-xs text-gray-400 mb-5 leading-snug min-h-[1rem]">
-                    {mortgage.originalAmort &&
-                      mortgage.yearsIntoAmort !== "" &&
-                      !isNaN(+mortgage.originalAmort) &&
-                      !isNaN(+mortgage.yearsIntoAmort) &&
-                      !errors.originalAmort &&
-                      !errors.yearsIntoAmort &&
-                      `= ${Math.max(
-                        1,
-                        Math.round(+mortgage.originalAmort - +mortgage.yearsIntoAmort),
-                      )} years remaining — we'll use this for your payment calculation.`}
+                    {!errors.originalAmort && !errors.yearsIntoAmort && (
+                      mortgage.originalAmort || mortgage.yearsIntoAmort
+                        ? `= ${Math.max(
+                            1,
+                            Math.round(effOriginalAmort - effYearsIn),
+                          )} years remaining — we'll use this for your payment calculation.`
+                        : `Not sure? Leave blank and we'll assume a typical ${DEFAULT_ORIGINAL_AMORT}-year amortization.`
+                    )}
                   </p>
                   <div className="mb-5">
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
@@ -1012,6 +1025,11 @@ export default function MortgageCheckerClient() {
               {isNewPurchase && (
                 <p className="text-center text-sm text-gray-500 mb-5 leading-relaxed">
                   This is an early estimate based on a typical 80% loan-to-value mortgage — your real numbers will depend on your down payment, credit profile, and the property you choose.
+                </p>
+              )}
+              {!isNewPurchase && !mortgage.originalAmort && (
+                <p className="text-center text-xs text-gray-400 mb-5 leading-relaxed">
+                  Payment estimates assume a typical {DEFAULT_ORIGINAL_AMORT}-year amortization since one wasn&apos;t provided.
                 </p>
               )}
               {results.renewalWarning && (
