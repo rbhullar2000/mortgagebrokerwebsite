@@ -78,41 +78,45 @@ export default function HomePage() {
       </p>
 
       {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 sm:w-[696px]">
-        <Button
-          size="lg"
-          className="w-full sm:flex-1 h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
-          asChild
-        >
-          <Link href="/mortgage-checker">
-            Check My Mortgage →
-          </Link>
-        </Button>
-
-        <Button
-          size="lg"
-          className="w-full sm:flex-1 h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
-          asChild
-        >
-          <Link
-            href="https://calendly.com/bcmortgageteam/15min"
-            target="_blank"
-            rel="noopener noreferrer"
+      <div className="flex flex-col sm:flex-row gap-4 mb-7 sm:w-[696px]">
+        {/* Primary CTA */}
+        <div className="w-full sm:flex-1">
+          <Button
+            size="lg"
+            className="w-full h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
+            asChild
           >
-            Book A Strategy Call →
-          </Link>
-        </Button>
-      </div>
+            <Link href="/mortgage-checker">
+              Check My Mortgage →
+            </Link>
+          </Button>
 
-      {/* Small trust line */}
-      <p className="mt-3 mb-7 text-sm text-[#1D2D44]/80 font-medium sm:w-[696px] text-center">
-        Free • No obligation • Takes about 2 minutes
-      </p>
+          <p className="mt-2 text-center text-sm text-[#1D2D44]/80 font-medium">
+            No obligation • 2 minutes
+          </p>
+        </div>
+
+        {/* Secondary CTA */}
+        <div className="w-full sm:flex-1">
+          <Button
+            size="lg"
+            className="w-full h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
+            asChild
+          >
+            <Link
+              href="https://calendly.com/bcmortgageteam/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book A Strategy Call →
+            </Link>
+          </Button>
+        </div>
+      </div>
 
       {/* Feature Bar */}
       <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
         <div className="grid grid-cols-3 gap-2 sm:gap-6 text-xs sm:text-sm font-semibold text-[#1D2D44]">
-
           <div className="flex flex-col items-center text-center">
             <Shield className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>50+ Lenders</span>
@@ -127,7 +131,6 @@ export default function HomePage() {
             <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>Independent Advice</span>
           </div>
-
         </div>
       </div>
     </div>
