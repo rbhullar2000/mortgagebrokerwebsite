@@ -23,11 +23,11 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Subscribe to BC Mortgage Team Newsletter | Latest Rates & Market Updates",
   description:
-    "Get exclusive mortgage insights, rate updates, and expert tips delivered to your inbox. Join 1000+ BC homeowners staying informed about the mortgage market.",
+    "I send one email per month when rates move in a way that might actually affect your payment.",
   keywords: "mortgage newsletter, BC mortgage rates, housing market updates, mortgage tips, Vancouver mortgage news",
   openGraph: {
     title: "Subscribe to BC Mortgage Team Newsletter",
-    description: "Get exclusive mortgage insights, rate updates, and expert tips delivered to your inbox.",
+    description: "We send one email per month when rates move in a way that might actually affect your payment.",
     url: "https://bcmortgageteam.com/newsletter",
     siteName: "BC Mortgage Team",
     locale: "en_CA",
