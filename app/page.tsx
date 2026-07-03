@@ -123,80 +123,55 @@ export default function HomePage() {
   </div>
 </section>
       
-      {/* ── Lenders ── */}
-      <section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-[#1D2D44] mb-4">Trusted Lending Partners</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We work with 50+ lenders including major banks, credit unions, and alternative lenders to find you the
-              best rates and terms.
-            </p>
-          </div>
+    {/* ── Lenders ── */}
+<section id="lenders" className="py-10 lg:py-14 bg-[#F4F6F8]">
+  <div className="container mx-auto px-4">
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center mb-10">
-            <img src="scotiabank.png" alt="Scotiabank" className="h-20" />
-            <img src="td.png" alt="TD Bank" className="h-20" />
-            <img src="firstnational.png" alt="First National" className="h-20" />
-            <img src="hometrust.png" alt="Home Trust" className="h-20" />
-            <img src="rmg.png" alt="RMG Mortgages" className="h-20" />
-          </div>
+    <div className="text-center mb-8">
+      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
+        Access 50+ Trusted Lenders
+      </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            {[
-              {
-                icon: <Users className="w-8 h-8" />,
-                title: "Big Banks",
-                body: "Competitive mortgage options backed by established financial institutions. Ideal for borrowers seeking stability, reliability, and flexible term choices.",
-              },
-              {
-                icon: <Shield className="w-8 h-8" />,
-                title: "Credit Unions",
-                body: "Local credit unions offering competitive rates and personalized service for BC residents.",
-              },
-              {
-                icon: <TrendingUp className="w-8 h-8" />,
-                title: "Alternative Lenders",
-                body: "Specialized lenders for unique situations, self-employed, and non-traditional income sources.",
-              },
-              {
-                icon: <FileText className="w-8 h-8" />,
-                title: "Private Lenders",
-                body: "Fast approvals and flexible terms for time-sensitive deals and complex scenarios.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="text-center">
-                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center text-[#032133] mb-4 mx-auto shadow-sm">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold text-[#1D2D44] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.body}</p>
-              </div>
-            ))}
-          </div>
-{/* 
-          <div className="bg-white rounded-2xl shadow-lg p-6">
-            <h3 className="text-2xl font-bold text-[#1D2D44] mb-6 text-center">Why Work With Multiple Lenders?</h3>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-2xl font-bold text-[#032133] mb-1">50+</div>
-                <div className="text-sm text-gray-600 mb-1">Lending Partners</div>
-                <p className="text-xs text-gray-500">More options mean better rates and terms for you</p>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-[#032133] mb-1">0.25–0.75%</div>
-                <div className="text-sm text-gray-600 mb-1">Average Savings</div>
-                <p className="text-xs text-gray-500">Typical rate improvement vs. going direct to a bank</p>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-[#032133] mb-1">24 hrs</div>
-                <div className="text-sm text-gray-600 mb-1">Pre-Approval Time</div>
-                <p className="text-xs text-gray-500">Fast approvals when you need them most</p>
-              </div>
-            </div> 
-          </div> */}
-        </div>
-      </section>
+      <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+        Compare rates and mortgage strategies from Canada's leading banks,
+        credit unions, monoline lenders, and alternative lenders.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+      <img
+        src="/scotiabank.png"
+        alt="Scotiabank"
+        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+      />
+
+      <img
+        src="/td.png"
+        alt="TD Bank"
+        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+      />
+
+      <img
+        src="/firstnational.png"
+        alt="First National"
+        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+      />
+
+      <img
+        src="/hometrust.png"
+        alt="Home Trust"
+        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+      />
+
+      <img
+        src="/rmg.png"
+        alt="RMG Mortgages"
+        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+      />
+    </div>
+
+  </div>
+</section>
 
       {/* ── Testimonials ── */}
       <section className="py-10 bg-white">
