@@ -41,88 +41,79 @@ export default function HomePage() {
       <Header />
 
       {/* ── Hero ── */}
-      <section className="py-12 lg:py-16 bg-gradient-to-br from-[#F4F6F8] to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
+<section className="relative overflow-hidden bg-white">
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/city.png')" }}
+  />
 
-            <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 inline-block">
-              Strategy-First Mortgage Advice for BC Borrowers
-            </Badge>
+  <div className="absolute inset-0 bg-white/55" />
+  <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/55 to-[#032133]/90" />
 
-            <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight">
-              Smarter Mortgage <span className="text-[#D4AF37]">Decisions</span>
-              <br />
-              Start Here
-            </h1>
+  <div className="relative container mx-auto px-4 py-16 lg:py-24">
+    <div className="max-w-3xl mx-auto text-center">
+      <Badge className="mb-4 bg-white/70 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
+        Strategy-First Mortgage Advice for BC Borrowers
+      </Badge>
 
-            <p className="text-sm font-medium text-gray-500 mb-6 tracking-wide">
-               Serving BC — Vancouver, Fraser Valley & the Okanagan
-            </p>
-            
+      <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight">
+        Smarter Mortgage <span className="text-[#D4AF37]">Decisions</span>
+        <br />
+        Start Here
+      </h1>
 
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Access 50+ lenders. Get a better rate, and a strategy built around your situation.
-            </p>
+      <p className="text-sm font-semibold text-[#1D2D44] mb-6 tracking-wide">
+        Serving BC — Vancouver, Fraser Valley & the Okanagan
+      </p>
 
-            {/* Primary CTA — dominant, alone */}
-            <div className="flex justify-center mb-8">
-              <Button
-                size="lg"
-                className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-12 px-8 font-semibold"
-                asChild
-              >
-                <Link href="/mortgage-checker">Am I Overpaying? 2 minute checker →</Link>
-              </Button>
-            </div>
+      <p className="text-lg text-[#1D2D44] mb-8 leading-relaxed">
+        Access 50+ lenders. Get a better rate, and a strategy built around your situation.
+      </p>
 
-            <div className="mb-8 max-w-lg mx-auto bg-[#F4F6F8] rounded-lg p-4 border border-gray-200">
-              <p className="text-xs font-semibold uppercase tracking-wide text-[#1D2D44] mb-2">
-                Expert insight
-              </p>
-              <p className="text-[#1D2D44] font-semibold mb-1">
-                Most mortgage decisions are based on rate.
-              </p>
-              <p className="text-gray-600">
-                The best ones are based on rate, structure, timing, and long-term strategy.
-              </p>
-            </div>
+      <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+        <Button
+          size="lg"
+          className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-12 px-8 font-semibold shadow-lg"
+          asChild
+        >
+          <Link href="/mortgage-checker">Am I Overpaying? 2 minute checker →</Link>
+        </Button>
 
-            <p className="text-base text-gray-600 mb-8 leading-relaxed">
-              Purchase • Refinance • Renewal • Debt Consolidation • Investment Properties
-            </p>
+        <Button
+          size="lg"
+          variant="outline"
+          className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-white/80 backdrop-blur-sm"
+          asChild
+        >
+          <Link
+            href="https://calendly.com/bcmortgageteam/15min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Your Free Mortgage Strategy Consultation →
+          </Link>
+        </Button>
+      </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center">
-                <Shield className="w-5 h-5 mr-2 text-[#032133]" />
-                Access to 50+ lenders
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-2 text-[#032133]" />
-                Strategy-driven approach
-              </div>
-              <div className="flex items-center">
-                <TrendingUp className="w-5 h-5 mr-2 text-[#032133]" />
-                Unbiased guidance
-              </div>
-            </div>
-
-            {/* Secondary CTA — separated with breathing room */}
-            <div className="flex justify-center mt-6">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent"
-                asChild
-              >
-                <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
-                  Book Your Free Mortgage Strategy Consultation →
-                </Link>
-              </Button>
-            </div>
-
+      <div className="mx-auto max-w-3xl rounded-xl border border-white/40 bg-white/65 backdrop-blur-md shadow-lg p-5">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm font-medium text-[#1D2D44]">
+          <div className="flex items-center">
+            <Shield className="w-5 h-5 mr-2 text-[#C79A2B]" />
+            Access to 50+ lenders
+          </div>
+          <div className="flex items-center">
+            <Clock className="w-5 h-5 mr-2 text-[#C79A2B]" />
+            Strategy-driven approach
+          </div>
+          <div className="flex items-center">
+            <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B]" />
+            Unbiased guidance
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ── Lenders ── */}
       <section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
