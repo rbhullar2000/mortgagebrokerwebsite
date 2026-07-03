@@ -40,24 +40,24 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <Header />
 
-    {/* ── Hero ── */}
+   {/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
   <div
-    className="absolute inset-0 bg-cover bg-[68%_center] md:bg-[62%_center]"
+    className="absolute inset-0 bg-cover bg-[73%_center] md:bg-[75%_center]"
     style={{ backgroundImage: "url('/city.png')" }}
   />
 
   <div className="absolute inset-0 bg-white/10 md:bg-white/5" />
-  <div className="absolute inset-0 bg-gradient-to-r from-white/55 via-white/20 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-transparent" />
   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/35" />
-  
-  <div className="relative container mx-auto px-4 py-20 lg:py-32">
-    <div className="max-w-2xl text-left">
-      <Badge className="mb-5 bg-white/70 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
+
+  <div className="relative container mx-auto px-4 py-14 sm:py-20 lg:py-32">
+    <div className="max-w-xl lg:max-w-2xl text-left">
+      <Badge className="mb-5 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-      <h1 className="text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-6 leading-tight">
+      <h1 className="text-[3rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-[1.05]">
         Smarter Mortgage{" "}
         <span className="text-[#C79A2B]">Decisions</span>
         <br />
@@ -68,13 +68,13 @@ export default function HomePage() {
         Serving BC — Vancouver, Fraser Valley & the Okanagan
       </p>
 
-      <div className="mb-7 h-1 w-20 rounded-full bg-[#C79A2B]" />
+      <div className="mb-6 h-1 w-20 rounded-full bg-[#C79A2B]" />
 
-      <p className="text-lg text-[#1D2D44] mb-8 leading-relaxed max-w-xl">
+      <p className="text-base sm:text-lg text-[#1D2D44] mb-7 leading-relaxed max-w-xl">
         Access 50+ lenders. Get a better rate, and a strategy built around your situation.
       </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 mb-8">
+      <div className="flex flex-col sm:flex-row gap-4 mb-7">
         <Button
           size="lg"
           className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-12 px-8 font-semibold shadow-lg"
@@ -101,7 +101,7 @@ export default function HomePage() {
         </Button>
       </div>
 
-      <div className="max-w-2xl rounded-xl border border-white/50 bg-white/75 backdrop-blur-md shadow-lg p-5">
+      <div className="max-w-2xl rounded-xl border border-white/50 bg-white/80 backdrop-blur-md shadow-lg p-5">
         <div className="grid gap-4 sm:grid-cols-3 text-sm font-medium text-[#1D2D44]">
           <div className="flex items-center">
             <Shield className="w-5 h-5 mr-2 text-[#C79A2B]" />
@@ -122,7 +122,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-
+      
       {/* ── Lenders ── */}
       <section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
