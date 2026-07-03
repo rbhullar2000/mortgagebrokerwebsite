@@ -386,7 +386,7 @@ export default function HomePage() {
                   asChild
                 >
                   <Link href="https://calendly.com/bcmortgageteam/15min" target="_blank" rel="noopener noreferrer">
-                    Book Your Mortgage Strategy Consultation →
+                    Book A Strategy Call →
                   </Link>
                 </Button>
                 <p className="text-sm text-gray-600 text-center">
@@ -459,7 +459,7 @@ export default function HomePage() {
 
           {/* Calendly embed — div, not a nested section */}
           <div className="max-w-6xl mx-auto mb-12">
-            <h2 className="text-2xl font-bold text-[#1D2D44] mb-2">Book your free strategy call</h2>
+            <h2 className="text-2xl font-bold text-[#1D2D44] mb-2">Book A Strategy Call</h2>
             <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
               <iframe
                 src="https://calendly.com/bcmortgageteam/15min"
