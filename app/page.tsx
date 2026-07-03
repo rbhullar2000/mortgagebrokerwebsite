@@ -60,11 +60,11 @@ export default function HomePage() {
 
       <h1 className="text-[3rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-[1.05]">
         Your Bank Has a{" "}
-<span className="text-[#C79A2B]">Mortgage Advisor.</span>
-<br />
-You Should Have
-<br />
-One Too.
+        <span className="text-[#C79A2B]">Mortgage Advisor.</span>
+        <br />
+        You Should Have
+        <br />
+        One Too.
       </h1>
 
       <p className="text-base font-bold text-[#1D2D44] mb-4 tracking-wide">
@@ -83,9 +83,7 @@ One Too.
           className="w-full sm:w-[340px] h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
           asChild
         >
-          <Link href="/mortgage-checker">
-            Check My Mortgage (2 min) →
-          </Link>
+          <Link href="/mortgage-checker">Check My Mortgage (2 min) →</Link>
         </Button>
 
         <Button
@@ -103,20 +101,20 @@ One Too.
         </Button>
       </div>
 
-      <div className="max-w-3xl rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-5">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm font-semibold text-[#1D2D44]">
+      <div className="max-w-3xl rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 text-xs sm:text-sm font-semibold text-[#1D2D44]">
           <div className="flex flex-col items-center text-center">
-            <Shield className="w-6 h-6 mb-2 text-[#C79A2B]" />
-            <span>Access to 50+ Lenders</span>
+            <Shield className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-[#C79A2B]" />
+            <span>50+ Lenders</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <Clock className="w-6 h-6 mb-2 text-[#C79A2B]" />
+            <Clock className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-[#C79A2B]" />
             <span>Competitive Rates</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <TrendingUp className="w-6 h-6 mb-2 text-[#C79A2B]" />
+            <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-[#C79A2B]" />
             <span>Independent Advice</span>
           </div>
         </div>
