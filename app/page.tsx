@@ -77,42 +77,36 @@ export default function HomePage() {
         Independent advice. Competitive rates. Better mortgage decisions.
       </p>
 
-      {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-7 sm:w-[696px]">
-        {/* Primary CTA */}
-        <div className="w-full sm:flex-1">
-          <Button
-            size="lg"
-            className="w-full h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
-            asChild
-          >
-            <Link href="/mortgage-checker">
-              Check My Mortgage →
-            </Link>
-          </Button>
+     {/* CTA Buttons */}
+<div className="flex flex-col sm:flex-row gap-4 mb-7 sm:w-[696px]">
+  <div className="w-full sm:flex-1">
+    <Button
+      size="lg"
+      className="w-full h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
+      asChild
+    >
+      <Link href="/mortgage-checker">
+        Check My Mortgage →
+      </Link>
+    </Button>
+  </div>
 
-          <p className="mt-1.5 text-center text-sm font-semibold text-[#C79A2B]">
-  ✓ No obligation • 2 min
-</p>
-        </div>
-
-        {/* Secondary CTA */}
-        <div className="w-full sm:flex-1">
-          <Button
-            size="lg"
-            className="w-full h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
-            asChild
-          >
-            <Link
-              href="https://calendly.com/bcmortgageteam/15min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Book A Strategy Call →
-            </Link>
-          </Button>
-        </div>
-      </div>
+  <div className="w-full sm:flex-1">
+    <Button
+      size="lg"
+      className="w-full h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
+      asChild
+    >
+      <Link
+        href="https://calendly.com/bcmortgageteam/15min"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Book A Strategy Call →
+      </Link>
+    </Button>
+  </div>
+</div>
 
       {/* Feature Bar */}
       <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
