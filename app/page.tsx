@@ -72,7 +72,7 @@ export default function HomePage() {
       <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
 
       <p className="text-lg text-[#1D2D44] font-bold leading-relaxed max-w-xl mb-10">
-        A strategy built around your situation. A better rate to match.
+        Independent advice. Better strategy. Better mortgage.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 mb-7">
@@ -105,17 +105,17 @@ export default function HomePage() {
         <div className="grid gap-5 sm:grid-cols-3 text-sm font-semibold text-[#1D2D44]">
           <div className="flex items-center">
             <Shield className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
-            Access to 50+ lenders
+            Access to 50+ Lenders
           </div>
 
           <div className="flex items-center">
             <Clock className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
-            0.25–1.00% average rate savings
+                Competitive Rates
           </div>
 
           <div className="flex items-center">
             <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
-            Focus on Strategy & Rate
+                Independent Advice
           </div>
         </div>
       </div>
