@@ -44,28 +44,26 @@ export default function HomePage() {
 {/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
   <div
-    className="absolute inset-0 bg-cover bg-[67%_center] md:bg-[75%_center]"
+    className="absolute inset-0 bg-cover bg-[82%_center] md:bg-[75%_center]"
     style={{ backgroundImage: "url('/city.png')" }}
   />
 
-  {/* Mobile overlays */}
   <div className="absolute inset-0 bg-black/10 md:hidden" />
   <div className="absolute inset-0 bg-gradient-to-r from-white/45 via-white/15 to-transparent md:hidden" />
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20 md:hidden" />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/25 md:hidden" />
 
-  {/* Desktop overlays */}
   <div className="absolute inset-0 hidden md:block bg-white/5" />
   <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
   <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
-  {/* ── Mobile Hero ── */}
-  <div className="relative md:hidden px-4 py-10 min-h-[760px]">
+  {/* Mobile Hero */}
+  <div className="relative md:hidden px-4 py-9 min-h-[820px]">
     <div className="max-w-md text-left">
-      <Badge className="mb-3 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
+      <Badge className="mb-6 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-      <h1 className="text-[2.25rem] font-bold text-[#1D2D44] mb-5 leading-[1.04]">
+      <h1 className="text-[2.25rem] font-bold text-[#1D2D44] mb-8 leading-[1.08]">
         Your Bank Has a{" "}
         <span className="text-[#C79A2B]">Mortgage Advisor.</span>
         <br />
@@ -74,17 +72,16 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      <p className="inline-block rounded-lg bg-white/65 backdrop-blur-md border border-white/50 px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug mb-3">
+      <p className="inline-block rounded-lg bg-white/65 backdrop-blur-md border border-white/50 px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug mb-6">
         Access 50+ lenders — not just one bank.
       </p>
 
-      <div className="mb-6 h-1 w-14 rounded-full bg-[#C79A2B]" />
+      <div className="mb-7 h-1 w-14 rounded-full bg-[#C79A2B]" />
 
-      {/* Mobile CTA Buttons - side by side */}
-      <div className="grid grid-cols-2 gap-3 mb-5">
+      <div className="grid grid-cols-2 gap-4 mb-7">
         <Button
           size="lg"
-          className="w-full h-11 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] px-2"
+          className="w-full h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] px-2"
           asChild
         >
           <Link href="/mortgage-checker">Check Mortgage →</Link>
@@ -92,7 +89,7 @@ export default function HomePage() {
 
         <Button
           size="lg"
-          className="w-full h-11 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-[13px] px-2"
+          className="w-full h-12 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-[13px] px-2"
           asChild
         >
           <Link
@@ -105,13 +102,13 @@ export default function HomePage() {
         </Button>
       </div>
 
-      <p className="inline-block rounded-lg bg-white/65 backdrop-blur-md border border-white/50 px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug">
+      <p className="inline-block rounded-md bg-white/65 backdrop-blur-md border border-white/50 px-2.5 py-1 text-[11px] font-bold text-[#1D2D44] leading-snug">
         Serving BC • Vancouver • Fraser Valley • Okanagan
       </p>
     </div>
   </div>
 
-  {/* ── Desktop Hero ── */}
+  {/* Desktop Hero */}
   <div className="relative hidden md:block container mx-auto px-4 py-20 lg:py-32">
     <div className="max-w-xl lg:max-w-3xl text-left">
       <Badge className="mb-5 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
