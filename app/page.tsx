@@ -60,9 +60,11 @@ export default function HomePage() {
 
       <h1 className="text-[3rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-[1.05]">
         Your Bank Has a{" "}
-        <span className="text-[#C79A2B]">Mortgage Advisor.</span>
-        <br />
-        You Should Have One Too.
+<span className="text-[#C79A2B]">Mortgage Advisor.</span>
+<br />
+You Should Have
+<br />
+One Too.
       </h1>
 
       <p className="text-base font-bold text-[#1D2D44] mb-4 tracking-wide">
