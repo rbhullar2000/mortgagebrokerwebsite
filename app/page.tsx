@@ -103,19 +103,19 @@ export default function HomePage() {
 
       <div className="max-w-3xl rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-5">
         <div className="grid gap-5 sm:grid-cols-3 text-sm font-semibold text-[#1D2D44]">
-          <div className="flex items-center">
+          <div className="flex items-center justify-center text-center">
             <Shield className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
             Access to 50+ Lenders
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center justify-center text-center">
             <Clock className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
-                Competitive Rates
+            Competitive Rates
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center justify-center text-center">
             <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
-                Independent Advice
+            Independent Advice
           </div>
         </div>
       </div>
