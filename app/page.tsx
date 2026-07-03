@@ -77,18 +77,21 @@ export default function HomePage() {
         Independent advice. Competitive rates. Better mortgage decisions.
       </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 mb-7">
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 mb-7 sm:w-[696px]">
         <Button
           size="lg"
-          className="w-full sm:w-[340px] h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
+          className="w-full sm:flex-1 h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
           asChild
         >
-          <Link href="/mortgage-checker">Check My Mortgage (2 min) →</Link>
+          <Link href="/mortgage-checker">
+            Check My Mortgage (2 min) →
+          </Link>
         </Button>
 
         <Button
           size="lg"
-          className="w-full sm:w-[340px] h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
+          className="w-full sm:flex-1 h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
           asChild
         >
           <Link
@@ -101,22 +104,25 @@ export default function HomePage() {
         </Button>
       </div>
 
-      <div className="max-w-3xl rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
+      {/* Feature Bar */}
+      <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
         <div className="grid grid-cols-3 gap-2 sm:gap-6 text-xs sm:text-sm font-semibold text-[#1D2D44]">
+
           <div className="flex flex-col items-center text-center">
-            <Shield className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-[#C79A2B]" />
+            <Shield className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>50+ Lenders</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <Clock className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-[#C79A2B]" />
+            <Clock className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>Competitive Rates</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-[#C79A2B]" />
+            <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>Independent Advice</span>
           </div>
+
         </div>
       </div>
     </div>
