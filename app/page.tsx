@@ -72,7 +72,7 @@ export default function HomePage() {
       <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
 
       <p className="text-lg text-[#1D2D44] font-bold leading-relaxed max-w-xl mb-10">
-        Access 50+ lenders. Get a Better Strategy & Rate.
+        A strategy built around your situation. A better rate to match.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 mb-7">
