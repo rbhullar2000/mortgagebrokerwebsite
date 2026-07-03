@@ -182,7 +182,7 @@ export default function HomePage() {
   </div>
 </section>
       
- {/* ── Lenders ── */}
+{/* ── Lenders ── */}
 <section id="lenders" className="py-10 lg:py-16 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
     <div className="text-center mb-8 lg:mb-10">
@@ -196,7 +196,7 @@ export default function HomePage() {
       </p>
     </div>
 
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-5 lg:gap-x-8 lg:gap-y-7 items-center justify-items-center">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-7 items-center justify-items-center">
       {[
         { src: "/td.png", alt: "TD Canada Trust" },
         { src: "/scotiabank.png", alt: "Scotiabank" },
@@ -213,12 +213,12 @@ export default function HomePage() {
       ].map((lender) => (
         <div
           key={lender.alt}
-          className="w-full h-16 sm:h-20 bg-white rounded-xl border border-gray-200 shadow-sm flex items-center justify-center px-4"
+          className="w-full h-20 sm:h-24 bg-white rounded-xl border border-gray-200 shadow-sm flex items-center justify-center px-5"
         >
           <img
             src={lender.src}
             alt={lender.alt}
-            className="max-h-10 sm:max-h-12 max-w-[135px] object-contain"
+            className="max-h-14 sm:max-h-16 max-w-[190px] w-auto object-contain"
           />
         </div>
       ))}
