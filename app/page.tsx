@@ -47,10 +47,10 @@ export default function HomePage() {
     style={{ backgroundImage: "url('/city.png')" }}
   />
 
-  <div className="absolute inset-0 bg-white/25 md:bg-white/15" />
-  <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/45 to-white/5" />
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
-
+  <div className="absolute inset-0 bg-white/10 md:bg-white/5" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/55 via-white/20 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/35" />
+  
   <div className="relative container mx-auto px-4 py-20 lg:py-32">
     <div className="max-w-2xl text-left">
       <Badge className="mb-5 bg-white/70 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
