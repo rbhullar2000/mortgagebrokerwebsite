@@ -82,7 +82,7 @@ export function NewsletterSubscription() {
         <h3 className="text-xl font-bold text-[#1D2D44]">Subscribe to Our Newsletter</h3>
       </div>
       <p className="text-gray-600 mb-4">
-        Get the latest mortgage news, rate updates, and expert tips delivered to your inbox.
+        We send one email per month when rates move in a way that might actually affect your payment.
       </p>
 
       <form onSubmit={handleSubmit}>
