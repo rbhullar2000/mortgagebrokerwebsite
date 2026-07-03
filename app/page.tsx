@@ -59,10 +59,10 @@ export default function HomePage() {
       </Badge>
 
       <h1 className="text-[3rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-[1.05]">
-        Smarter Mortgage{" "}
-        <span className="text-[#C79A2B]">Decisions</span>
+        Your Bank Has a{" "}
+        <span className="text-[#C79A2B]">Mortgage Advisor.</span>
         <br />
-        Start Here
+        You Should Have One Too.
       </h1>
 
       <p className="text-base font-bold text-[#1D2D44] mb-4 tracking-wide">
