@@ -399,9 +399,9 @@ export default function HomePage() {
           <p className="text-sm text-gray-600 text-center">
             Trusted strategy-focused mortgage guidance for BC borrowers
           </p>
-        </div>
+        </div>   */}
       </div>
-*/}
+
       {/* Photo second on mobile, left side on desktop */}
       <div className="order-2 lg:order-1">
         <img
