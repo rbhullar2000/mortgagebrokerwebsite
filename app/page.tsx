@@ -173,26 +173,31 @@ export default function HomePage() {
   </div>
 </section>
 
-     {/* ── Testimonials ── */}
+  {/* ── Testimonials ── */}
 <section className="py-10 bg-white">
   <div className="container mx-auto px-4">
-    <div className="max-w-3xl mx-auto space-y-4">
+    <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-      <Card className="border border-gray-200 bg-white shadow-sm">
-        <CardContent className="pt-5 pb-4">
+      {/* Testimonial 1 */}
+      <Card className="border border-gray-200 bg-white shadow-sm h-full">
+        <CardContent className="pt-5 pb-5 flex flex-col h-full">
           <div className="flex gap-1 mb-3">
             {[...Array(5)].map((_, i) => (
-              <span key={i} className="text-[#D4AF37] text-base">★</span>
+              <span key={i} className="text-[#D4AF37] text-base">
+                ★
+              </span>
             ))}
           </div>
 
-          <p className="text-sm sm:text-[15px] text-gray-700 leading-7 mb-4">
-            BC Mortgage Team didn&apos;t just help me secure a mortgage — they took the time to explain the
-            strategy behind it and why the structure mattered long-term. I felt informed, confident, and
-            supported throughout the process instead of simply choosing the lowest rate and hoping for the best.
+          <p className="text-sm sm:text-[15px] text-gray-700 leading-7 mb-6 flex-grow">
+            BC Mortgage Team didn&apos;t just help me secure a mortgage — they
+            took the time to explain the strategy behind it and why the
+            structure mattered long-term. I felt informed, confident, and
+            supported throughout the process instead of simply choosing the
+            lowest rate and hoping for the best.
           </p>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 mt-auto">
             <div className="w-11 h-11 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
               <span className="text-white font-bold text-sm">SK</span>
             </div>
@@ -209,21 +214,25 @@ export default function HomePage() {
         </CardContent>
       </Card>
 
-      <Card className="border border-gray-200 bg-white shadow-sm">
-        <CardContent className="pt-5 pb-4">
+      {/* Testimonial 2 */}
+      <Card className="border border-gray-200 bg-white shadow-sm h-full">
+        <CardContent className="pt-5 pb-5 flex flex-col h-full">
           <div className="flex gap-1 mb-3">
             {[...Array(5)].map((_, i) => (
-              <span key={i} className="text-[#D4AF37] text-base">★</span>
+              <span key={i} className="text-[#D4AF37] text-base">
+                ★
+              </span>
             ))}
           </div>
 
-          <p className="text-sm sm:text-[15px] text-gray-700 leading-7 mb-4">
-            I was ready to renew directly with my bank, but Rob took the time to review my options and
-            structure everything properly. The result was over $4,000 in savings in the first year alone —
-            and a mortgage that fit my long-term goals much better.
+          <p className="text-sm sm:text-[15px] text-gray-700 leading-7 mb-6 flex-grow">
+            I was ready to renew directly with my bank, but Rob took the time to
+            review my options and structure everything properly. The result was
+            over $4,000 in savings in the first year alone — and a mortgage that
+            fit my long-term goals much better.
           </p>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 mt-auto">
             <div className="w-11 h-11 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
               <span className="text-white font-bold text-sm">DM</span>
             </div>
