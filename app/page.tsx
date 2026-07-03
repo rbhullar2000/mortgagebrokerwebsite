@@ -380,7 +380,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-
+{/*
         <div className="flex flex-col items-center gap-3">
           <Button
             size="lg"
@@ -401,7 +401,7 @@ export default function HomePage() {
           </p>
         </div>
       </div>
-
+*/}
       {/* Photo second on mobile, left side on desktop */}
       <div className="order-2 lg:order-1">
         <img
