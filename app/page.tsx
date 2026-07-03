@@ -421,7 +421,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Market Insights ── */}
+      {/* ── Market Insights ── 
       <section className="py-10 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <div className="mb-6">
@@ -468,6 +468,7 @@ export default function HomePage() {
           </Card>
         </div>
       </section>
+      */}
 
       {/* ── Contact ── */}
     <section className="py-12 lg:py-14 bg-[#F4F6F8]">
