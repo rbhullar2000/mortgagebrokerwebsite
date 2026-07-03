@@ -55,8 +55,7 @@ export default function NewsletterPage() {
             </h1>
 
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Get exclusive mortgage insights, rate forecasts, and expert tips delivered directly to your inbox. Join
-              1000+ BC homeowners making smarter mortgage decisions.
+              We send one email per month when rates move in a way that might actually affect your payment.
             </p>
 
             <div className="flex items-center justify-center space-x-8 text-gray-300 mb-12">
