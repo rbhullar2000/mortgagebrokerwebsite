@@ -41,6 +41,7 @@ export default function HomePage() {
       <Header />
 
    {/* ── Hero ── */}
+{/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
   <div
     className="absolute inset-0 bg-cover bg-[73%_center] md:bg-[75%_center]"
@@ -70,16 +71,14 @@ export default function HomePage() {
 
       <div className="mb-6 h-1 w-20 rounded-full bg-[#C79A2B]" />
 
-      <p className="text-base sm:text-lg text-[#1D2D44] font-medium leading-relaxed max-w-xl mb-8">
-
-  Access 50+ lenders. Get a better strategy & rate.
-
-</p>
+      <p className="text-base sm:text-lg text-[#1D2D44] font-semibold leading-relaxed max-w-xl mb-8">
+        Access 50+ lenders. Get a better strategy & rate.
+      </p>
 
       <div className="flex flex-col sm:flex-row gap-4 mb-7">
         <Button
           size="lg"
-          className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-12 px-8 font-semibold shadow-lg"
+          className="w-full sm:w-[340px] h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
           asChild
         >
           <Link href="/mortgage-checker">
@@ -88,35 +87,34 @@ export default function HomePage() {
         </Button>
 
         <Button
-
-  size="lg"
-  className="bg-[#1D2D44] hover:bg-[#243854] text-white h-14 px-10 font-semibold shadow-lg"
-  asChild
->
-  <Link
-    href="https://calendly.com/bcmortgageteam/15min"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Book A Strategy Call →
-  </Link>
-</Button>
+          size="lg"
+          className="w-full sm:w-[340px] h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
+          asChild
+        >
+          <Link
+            href="https://calendly.com/bcmortgageteam/15min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book A Strategy Call →
+          </Link>
+        </Button>
       </div>
 
-      <div className="max-w-2xl rounded-xl border border-white/50 bg-white/80 backdrop-blur-md shadow-lg p-5">
-        <div className="grid gap-4 sm:grid-cols-3 text-sm font-medium text-[#1D2D44]">
+      <div className="max-w-3xl rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-5">
+        <div className="grid gap-5 sm:grid-cols-3 text-sm font-semibold text-[#1D2D44]">
           <div className="flex items-center">
-            <Shield className="w-5 h-5 mr-2 text-[#C79A2B]" />
+            <Shield className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
             Access to 50+ lenders
           </div>
 
           <div className="flex items-center">
-            <Clock className="w-5 h-5 mr-2 text-[#C79A2B]" />
+            <Clock className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
             0.25–1.00% Avg Savings
           </div>
 
           <div className="flex items-center">
-            <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B]" />
+            <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
             Focus on Strategy & Rate
           </div>
         </div>
