@@ -47,10 +47,6 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-[#1D2D44] mb-6">Resources</h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Expert mortgage advice, market updates, financial tips, and free tools to help you make informed
-              decisions.
-            </p>
           </div>
         </div>
       </section>
