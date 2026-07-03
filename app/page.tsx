@@ -193,8 +193,8 @@ export default function HomePage() {
                 <div className="text-sm text-gray-600 mb-1">Pre-Approval Time</div>
                 <p className="text-xs text-gray-500">Fast approvals when you need them most</p>
               </div>
-            </div> */}
-          </div>
+            </div> 
+          </div> */}
         </div>
       </section>
 
