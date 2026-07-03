@@ -51,7 +51,7 @@ export default function HomePage() {
 <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/20 to-[#032133]/65" />
 
   <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-  <div className="w-[760px] h-[440px] rounded-full bg-white/25 blur-3xl" />
+ <div className="w-[820px] h-[460px] rounded-full bg-white/35 blur-3xl" />
 </div>
 
   <div className="relative container mx-auto px-4 py-20 lg:py-28">
