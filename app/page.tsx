@@ -51,7 +51,7 @@ export default function HomePage() {
 
   {/* Mobile overlays */}
   <div className="absolute inset-0 bg-black/10 md:hidden" />
-  <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/5 to-transparent md:hidden" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/35 via-white/10 to-transparent md:hidden" />
   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/15 md:hidden" />
 
   {/* Desktop overlays */}
@@ -74,21 +74,17 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      {/* Mobile compact text */}
-      <div className="md:hidden space-y-2.5 mb-4">
-        <div className="inline-block rounded-md bg-white/12 backdrop-blur-md border border-white/20 px-2.5 py-1">
-          <p className="text-[12px] font-semibold text-[#1D2D44] leading-snug">
-            Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
-          </p>
-        </div>
+      {/* Mobile compact text — no glass boxes */}
+      <div className="md:hidden mb-4">
+        <p className="text-[13px] font-bold text-[#1D2D44] leading-snug drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)]">
+          Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
+        </p>
 
-        <div className="h-1 w-12 rounded-full bg-[#C79A2B]" />
+        <div className="my-2.5 h-1 w-12 rounded-full bg-[#C79A2B]" />
 
-        <div className="inline-block rounded-md bg-white/12 backdrop-blur-md border border-white/20 px-2.5 py-1">
-          <p className="text-[12.5px] text-[#1D2D44] font-semibold leading-snug">
-            Independent advice. Competitive rates. Better mortgage decisions.
-          </p>
-        </div>
+        <p className="text-[14px] text-[#1D2D44] font-bold leading-snug drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] max-w-[360px]">
+          Independent advice. Competitive rates. Better mortgage decisions.
+        </p>
       </div>
 
       {/* Desktop text */}
