@@ -60,8 +60,8 @@ export default function HomePage() {
       </Badge>
 
       <h1 className="text-[3rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-[1.05]">
-        Your Bank Has a{" "}
-        <span className="text-[#C79A2B]">Mortgage Advisor.</span>
+        Your Bank Has{" "}
+        <span className="text-[#C79A2B]">Mortgage Advisors.</span>
         <br />
         You Should Have
         <br />
