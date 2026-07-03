@@ -182,50 +182,50 @@ export default function HomePage() {
   </div>
 </section>
       
-   {/* ── Lenders ── */}
-<section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
+  {/* ── Lenders ── */}
+<section id="lenders" className="py-8 sm:py-10 lg:py-16 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
 
-    <div className="text-center mb-10">
-      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-4">
+    <div className="text-center mb-7 sm:mb-10">
+      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
         Trusted Lending Partners
       </h2>
 
-      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+      <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
         We work with 50+ lenders including major banks, credit unions, and
         alternative lenders to find you the best rates and terms.
       </p>
     </div>
 
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-7 sm:gap-6 items-center justify-items-center">
       <img
         src="/scotiabank.png"
         alt="Scotiabank"
-        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
+        className="h-10 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
       />
 
       <img
         src="/td.png"
         alt="TD Bank"
-        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
+        className="h-10 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
       />
 
       <img
         src="/firstnational.png"
         alt="First National"
-        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
+        className="h-9 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
       />
 
       <img
         src="/hometrust.png"
         alt="Home Trust"
-        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
+        className="h-10 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
       />
 
       <img
         src="/rmg.png"
         alt="RMG Mortgages"
-        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
+        className="h-11 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105 col-span-2 sm:col-span-1"
       />
     </div>
 
