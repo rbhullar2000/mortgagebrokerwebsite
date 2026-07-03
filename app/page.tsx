@@ -43,29 +43,28 @@ export default function HomePage() {
 
 {/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
-  {/* Background */}
   <div
     className="absolute inset-0 bg-cover bg-[66%_center] md:bg-[75%_center]"
     style={{ backgroundImage: "url('/city.png')" }}
   />
 
   {/* Mobile overlays */}
-  <div className="absolute inset-0 bg-black/5 md:hidden" />
+  <div className="absolute inset-0 bg-black/10 md:hidden" />
   <div className="absolute inset-0 bg-gradient-to-r from-white/45 via-white/15 to-transparent md:hidden" />
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/15 md:hidden" />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20 md:hidden" />
 
-  {/* Desktop overlays */}
+  {/* Desktop overlays - back to previous desktop look */}
   <div className="absolute inset-0 hidden md:block bg-white/5" />
   <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
   <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
-  <div className="relative container mx-auto px-4 py-8 sm:py-14 lg:py-32">
+  <div className="relative container mx-auto px-4 py-7 sm:py-14 lg:py-32">
     <div className="max-w-xl lg:max-w-3xl text-left">
       <Badge className="mb-3 md:mb-5 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm text-[11px] md:text-sm">
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-      <h1 className="text-[2.35rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-4 md:mb-5 leading-[1.04] md:leading-[1.05]">
+      <h1 className="text-[2.15rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-4 md:mb-5 leading-[1.04] md:leading-[1.05]">
         Your Bank Has a{" "}
         <span className="text-[#C79A2B]">Mortgage Advisor.</span>
         <br />
@@ -74,15 +73,41 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      <p className="text-[14px] md:text-lg text-[#1D2D44] font-bold leading-snug md:leading-relaxed max-w-xl mb-5 md:mb-10">
-        Access 50+ lenders — not just one bank.
-      </p>
+      {/* Mobile text - readable */}
+      <div className="md:hidden mb-4 space-y-2.5">
+        <div className="inline-block rounded-lg bg-white/65 backdrop-blur-md border border-white/50 px-3 py-1.5">
+          <p className="text-[12px] font-bold text-[#1D2D44] leading-snug">
+            Access 50+ lenders — not just one bank.
+          </p>
+        </div>
+
+        <div className="h-1 w-12 rounded-full bg-[#C79A2B]" />
+
+        <div className="inline-block rounded-lg bg-white/65 backdrop-blur-md border border-white/50 px-3 py-1.5">
+          <p className="text-[12px] font-bold text-[#1D2D44] leading-snug">
+            Serving BC • Vancouver • Fraser Valley • Okanagan
+          </p>
+        </div>
+      </div>
+
+      {/* Desktop text - restored */}
+      <div className="hidden md:block">
+        <p className="text-base font-bold text-[#1D2D44] mb-4 tracking-wide">
+          Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
+        </p>
+
+        <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
+
+        <p className="text-lg text-[#1D2D44] font-semibold leading-relaxed max-w-2xl mb-10">
+          Independent advice. Competitive rates. Better mortgage decisions.
+        </p>
+      </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-row gap-3 md:gap-4 mb-4 md:mb-7 sm:w-[696px]">
+      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-4 md:mb-7 sm:w-[696px]">
         <Button
           size="lg"
-          className="flex-1 h-11 md:h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-sm md:text-base px-3"
+          className="w-full sm:flex-1 h-12 md:h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-sm md:text-base"
           asChild
         >
           <Link href="/mortgage-checker">Check My Mortgage →</Link>
@@ -90,7 +115,7 @@ export default function HomePage() {
 
         <Button
           size="lg"
-          className="flex-1 h-11 md:h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-sm md:text-base px-3"
+          className="w-full sm:flex-1 h-12 md:h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-sm md:text-base"
           asChild
         >
           <Link
@@ -101,17 +126,6 @@ export default function HomePage() {
             Book A Strategy Call →
           </Link>
         </Button>
-      </div>
-
-      {/* Service Area */}
-      <div className="mb-4 md:mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] md:text-sm font-bold text-[#1D2D44]">
-        <span>Serving BC</span>
-        <span className="text-[#C79A2B]">•</span>
-        <span>Vancouver</span>
-        <span className="text-[#C79A2B]">•</span>
-        <span>Fraser Valley</span>
-        <span className="text-[#C79A2B]">•</span>
-        <span>Okanagan</span>
       </div>
 
       {/* Feature Bar */}
