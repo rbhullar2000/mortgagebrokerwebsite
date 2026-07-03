@@ -40,17 +40,21 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      {/* ── Hero ── */}
+     {/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
   <div
-    className="absolute inset-0 bg-cover bg-center"
+    className="absolute inset-0 bg-cover bg-[center_35%]"
     style={{ backgroundImage: "url('/city.png')" }}
   />
 
-  <div className="absolute inset-0 bg-white/55" />
-  <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/55 to-[#032133]/90" />
+  <div className="absolute inset-0 bg-white/30" />
+  <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-white/25 to-[#032133]/75" />
 
-  <div className="relative container mx-auto px-4 py-16 lg:py-24">
+  <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+    <div className="w-[850px] h-[520px] rounded-full bg-white/35 blur-3xl" />
+  </div>
+
+  <div className="relative container mx-auto px-4 py-20 lg:py-28">
     <div className="max-w-3xl mx-auto text-center">
       <Badge className="mb-4 bg-white/70 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
         Strategy-First Mortgage Advice for BC Borrowers
@@ -76,7 +80,9 @@ export default function HomePage() {
           className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-12 px-8 font-semibold shadow-lg"
           asChild
         >
-          <Link href="/mortgage-checker">Am I Overpaying? 2 minute checker →</Link>
+          <Link href="/mortgage-checker">
+            Am I Overpaying? 2 minute checker →
+          </Link>
         </Button>
 
         <Button
@@ -95,16 +101,18 @@ export default function HomePage() {
         </Button>
       </div>
 
-      <div className="mx-auto max-w-3xl rounded-xl border border-white/40 bg-white/65 backdrop-blur-md shadow-lg p-5">
+      <div className="mx-auto max-w-3xl rounded-xl border border-white/40 bg-white/75 backdrop-blur-md shadow-lg p-5">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm font-medium text-[#1D2D44]">
           <div className="flex items-center">
             <Shield className="w-5 h-5 mr-2 text-[#C79A2B]" />
             Access to 50+ lenders
           </div>
+
           <div className="flex items-center">
             <Clock className="w-5 h-5 mr-2 text-[#C79A2B]" />
             Strategy-driven approach
           </div>
+
           <div className="flex items-center">
             <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B]" />
             Unbiased guidance
