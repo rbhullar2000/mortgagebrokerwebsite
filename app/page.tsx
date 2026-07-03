@@ -49,7 +49,7 @@ export default function HomePage() {
   />
 
   <div className="absolute inset-0 bg-white/10 md:bg-white/5" />
-  <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-transparent md:from-white/60 md:via-white/20" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
   <div className="relative container mx-auto px-4 py-14 sm:py-20 lg:py-32">
@@ -67,31 +67,36 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      <div className="inline-block rounded-xl bg-white/45 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 px-3 py-2 md:px-0 md:py-0 mb-4">
-        <p className="text-base font-bold text-[#1D2D44] tracking-wide">
-          Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
-        </p>
-      </div>
+      <p className="text-base font-bold text-[#1D2D44] mb-4 tracking-wide">
+        Serving BC — Vancouver, Fraser Valley & the Okanagan
+      </p>
 
       <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
 
-      <div className="inline-block rounded-xl bg-white/45 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 px-3 py-2 md:px-0 md:py-0 mb-10">
-        <p className="text-lg text-[#1D2D44] font-bold md:font-semibold leading-relaxed max-w-2xl">
-          Independent advice. Competitive rates. Better mortgage decisions.
-        </p>
-      </div>
+      <p className="text-lg text-[#1D2D44] font-semibold leading-relaxed max-w-2xl mb-10">
+        Independent advice. Competitive rates. Better mortgage decisions.
+      </p>
 
+      {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 mb-7 sm:w-[696px]">
+        {/* Primary CTA */}
         <div className="w-full sm:flex-1">
           <Button
             size="lg"
             className="w-full h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
             asChild
           >
-            <Link href="/mortgage-checker">Check My Mortgage →</Link>
+            <Link href="/mortgage-checker">
+              Check My Mortgage →
+            </Link>
           </Button>
+
+          <p className="mt-2 text-center text-sm text-[#1D2D44]/80 font-medium">
+            No obligation • 2 minutes
+          </p>
         </div>
 
+        {/* Secondary CTA */}
         <div className="w-full sm:flex-1">
           <Button
             size="lg"
@@ -109,6 +114,7 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Feature Bar */}
       <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
         <div className="grid grid-cols-3 gap-2 sm:gap-6 text-xs sm:text-sm font-semibold text-[#1D2D44]">
           <div className="flex flex-col items-center text-center">
