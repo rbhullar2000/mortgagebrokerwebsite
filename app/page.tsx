@@ -47,12 +47,12 @@ export default function HomePage() {
     style={{ backgroundImage: "url('/city.png')" }}
   />
 
-  <div className="absolute inset-0 bg-white/30" />
-  <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-white/25 to-[#032133]/75" />
+  <div className="absolute inset-0 bg-white/20" />
+<div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/20 to-[#032133]/65" />
 
   <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-    <div className="w-[850px] h-[520px] rounded-full bg-white/35 blur-3xl" />
-  </div>
+  <div className="w-[760px] h-[440px] rounded-full bg-white/25 blur-3xl" />
+</div>
 
   <div className="relative container mx-auto px-4 py-20 lg:py-28">
     <div className="max-w-3xl mx-auto text-center">
