@@ -91,9 +91,9 @@ export default function HomePage() {
             </Link>
           </Button>
 
-          <p className="mt-2 text-center text-sm text-[#1D2D44]/80 font-medium">
-            No obligation • 2 minutes
-          </p>
+          <p className="mt-1.5 text-center text-sm font-semibold text-[#C79A2B]">
+  ✓ No obligation • 2 min
+</p>
         </div>
 
         {/* Secondary CTA */}
