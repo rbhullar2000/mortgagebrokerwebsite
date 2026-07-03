@@ -72,7 +72,7 @@ export default function HomePage() {
 
       <p className="text-base sm:text-lg text-[#1D2D44] font-medium leading-relaxed max-w-xl mb-8">
 
-  Access 50+ lenders. Get a better rate, and a better strategy.
+  Access 50+ lenders. Get a better strategy & rate.
 
 </p>
 
@@ -117,7 +117,7 @@ export default function HomePage() {
 
           <div className="flex items-center">
             <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B]" />
-            Focus on both Strategy & Rate
+            Focus on Strategy & Rate
           </div>
         </div>
       </div>
