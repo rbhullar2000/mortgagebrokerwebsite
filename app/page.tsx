@@ -470,7 +470,10 @@ export default function HomePage() {
       </section>
 
       {/* ── Contact ── */}
-      <section id="contact" className="py-12 lg:py-14 bg-[#F4F6F8]">
+     <section
+         id="contact" 
+         className="py-12 lg:py-14 bg-[#F4F6F8] scroll-mt-64"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-[#1D2D44] mb-4">Ready to Get Started?</h2>
