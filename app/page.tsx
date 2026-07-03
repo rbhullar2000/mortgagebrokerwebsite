@@ -70,8 +70,10 @@ export default function HomePage() {
 
       <div className="mb-6 h-1 w-20 rounded-full bg-[#C79A2B]" />
 
-      <p className="text-base sm:text-lg text-[#1D2D44] font-medium leading-relaxed max-w-xl drop-shadow-[0_2px_6px_rgba(255,255,255,0.7)]">
-  Access 50+ lenders. Get a better rate, and a strategy built.
+      <p className="text-base sm:text-lg text-[#1D2D44] font-medium leading-relaxed max-w-xl mb-8">
+
+  Access 50+ lenders. Get a better rate, and a better strategy.
+
 </p>
 
       <div className="flex flex-col sm:flex-row gap-4 mb-7">
