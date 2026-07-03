@@ -123,50 +123,50 @@ export default function HomePage() {
   </div>
 </section>
       
-    {/* ── Lenders ── */}
-<section id="lenders" className="py-10 lg:py-14 bg-[#F4F6F8]">
+   {/* ── Lenders ── */}
+<section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
 
-    <div className="text-center mb-8">
-      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
-        Access 50+ Trusted Lenders
+    <div className="text-center mb-10">
+      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-4">
+        Trusted Lending Partners
       </h2>
 
-      <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
-        Compare rates and mortgage strategies from Canada's leading banks,
-        credit unions, monoline lenders, and alternative lenders.
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        We work with 50+ lenders including major banks, credit unions, and
+        alternative lenders to find you the best rates and terms.
       </p>
     </div>
 
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center">
       <img
         src="/scotiabank.png"
         alt="Scotiabank"
-        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
       />
 
       <img
         src="/td.png"
         alt="TD Bank"
-        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
       />
 
       <img
         src="/firstnational.png"
         alt="First National"
-        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
       />
 
       <img
         src="/hometrust.png"
         alt="Home Trust"
-        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
       />
 
       <img
         src="/rmg.png"
         alt="RMG Mortgages"
-        className="h-14 lg:h-20 object-contain grayscale hover:grayscale-0 transition"
+        className="h-16 sm:h-20 object-contain transition-transform duration-300 hover:scale-105"
       />
     </div>
 
