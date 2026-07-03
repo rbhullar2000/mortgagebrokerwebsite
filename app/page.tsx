@@ -529,7 +529,13 @@ export default function HomePage() {
               </div>
 */}
 
-              <div className="p-6 bg-white rounded-lg shadow-sm">
+             
+
+              <div>
+                <NewsletterSubscription />
+              </div>
+            
+             <div className="p-6 bg-white rounded-lg shadow-sm">
                 <h4 className="font-semibold text-[#1D2D44] mb-3">
                   Why Choose An Independent Mortgage Professional?
                 </h4>
@@ -540,10 +546,8 @@ export default function HomePage() {
                   <li>Support throughout the entire process</li>
                 </ul>
               </div>
-
-              <div>
-                <NewsletterSubscription />
-              </div>
+            
+            
             </div>
           </div>
         </div>
