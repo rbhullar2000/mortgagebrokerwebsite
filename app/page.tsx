@@ -67,7 +67,7 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      <div className="inline-block rounded-lg bg-white/25 md:bg-transparent backdrop-blur-md md:backdrop-blur-0 border border-white/30 md:border-0 px-3 py-1.5 md:px-0 md:py-0 mb-3">
+      <div className="inline-block rounded-lg bg-white/20 md:bg-transparent backdrop-blur-lg md:backdrop-blur-0 border border-white/30 md:border-0 px-3 py-1.5 md:px-0 md:py-0 mb-3">
         <p className="text-sm md:text-base font-bold text-[#1D2D44] tracking-wide">
           Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
         </p>
@@ -75,8 +75,8 @@ export default function HomePage() {
 
       <div className="mb-6 md:mb-8 h-1.5 w-16 md:w-24 rounded-full bg-[#C79A2B]" />
 
-      <div className="inline-block rounded-lg bg-white/25 md:bg-transparent backdrop-blur-md md:backdrop-blur-0 border border-white/30 md:border-0 px-3 py-1.5 md:px-0 md:py-0 mb-7 md:mb-10">
-        <p className="text-base md:text-lg text-[#1D2D44] font-bold md:font-semibold leading-relaxed max-w-2xl">
+      <div className="inline-block rounded-lg bg-white/20 md:bg-transparent backdrop-blur-lg md:backdrop-blur-0 border border-white/30 md:border-0 px-3 py-1.5 md:px-0 md:py-0 mb-7 md:mb-10">
+        <p className="text-sm md:text-lg text-[#1D2D44] font-bold md:font-semibold leading-relaxed max-w-2xl">
           Independent advice. Competitive rates. Better mortgage decisions.
         </p>
       </div>
@@ -89,9 +89,7 @@ export default function HomePage() {
             className="w-full h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
             asChild
           >
-            <Link href="/mortgage-checker">
-              Check My Mortgage →
-            </Link>
+            <Link href="/mortgage-checker">Check My Mortgage →</Link>
           </Button>
         </div>
 
@@ -114,19 +112,19 @@ export default function HomePage() {
 
       {/* Feature Bar */}
       <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 text-sm font-semibold text-[#1D2D44]">
-          <div className="flex items-center sm:flex-col sm:text-center">
-            <Shield className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-0 sm:mb-2 text-[#C79A2B] flex-shrink-0" />
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 text-xs sm:text-sm font-semibold text-[#1D2D44]">
+          <div className="flex flex-col items-center text-center">
+            <Shield className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>50+ Lenders</span>
           </div>
 
-          <div className="flex items-center sm:flex-col sm:text-center">
-            <Clock className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-0 sm:mb-2 text-[#C79A2B] flex-shrink-0" />
+          <div className="flex flex-col items-center text-center">
+            <Clock className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>Competitive Rates</span>
           </div>
 
-          <div className="flex items-center sm:flex-col sm:text-center">
-            <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-0 sm:mb-2 text-[#C79A2B] flex-shrink-0" />
+          <div className="flex flex-col items-center text-center">
+            <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>Independent Advice</span>
           </div>
         </div>
