@@ -174,7 +174,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
+{/* 
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <h3 className="text-2xl font-bold text-[#1D2D44] mb-6 text-center">Why Work With Multiple Lenders?</h3>
             <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -193,7 +193,7 @@ export default function HomePage() {
                 <div className="text-sm text-gray-600 mb-1">Pre-Approval Time</div>
                 <p className="text-xs text-gray-500">Fast approvals when you need them most</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
