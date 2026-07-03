@@ -72,7 +72,7 @@ export default function HomePage() {
       <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
 
       <p className="text-lg text-[#1D2D44] font-bold leading-relaxed max-w-xl mb-10">
-        Independent advice. Better strategy. Better mortgage.
+        Independent advice. Competitive rates. Better mortgage decisions.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 mb-7">
@@ -82,7 +82,7 @@ export default function HomePage() {
           asChild
         >
           <Link href="/mortgage-checker">
-            Am I Overpaying? 2 minute checker →
+            Check My Mortgage (2 min) →
           </Link>
         </Button>
 
@@ -115,7 +115,7 @@ export default function HomePage() {
 
           <div className="flex items-center">
             <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
-                Strategy Built Around You
+                Independent Advice
           </div>
         </div>
       </div>
