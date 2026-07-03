@@ -88,7 +88,7 @@ export function Header() {
               className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-10 font-semibold"
             >
               <Link href="/mortgage-checker">
-                Am I Overpaying? Check My Mortgage →
+                Check My Mortgage →
               </Link>
             </Button>
             <Button
@@ -160,7 +160,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                     >
                       <Link href="/mortgage-checker">
-                        Am I Overpaying? Mortgage Review →
+                        Check My Mortgage →
                       </Link>
                     </Button>
                     <Button
@@ -237,7 +237,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                     >
                       <Link href="/mortgage-checker">
-                        Am I Overpaying? (2 min) →
+                        Check My Mortgage →
                       </Link>
                     </Button>
                     <Button
