@@ -43,7 +43,6 @@ export default function HomePage() {
 
 {/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
-  {/* Background */}
   <div
     className="absolute inset-0 bg-cover bg-[66%_center] md:bg-[75%_center]"
     style={{ backgroundImage: "url('/city.png')" }}
@@ -74,17 +73,21 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      {/* Mobile compact text — no glass boxes */}
+      {/* Mobile text */}
       <div className="md:hidden mb-4">
-        <p className="text-[13px] font-bold text-[#1D2D44] leading-snug drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)]">
-          Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
-        </p>
+        <div className="inline-block rounded-md bg-white/55 backdrop-blur-md border border-white/40 px-2.5 py-1 mb-2">
+          <p className="text-[12px] font-bold text-[#1D2D44] leading-snug">
+            Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
+          </p>
+        </div>
 
-        <div className="my-2.5 h-1 w-12 rounded-full bg-[#C79A2B]" />
+        <div className="mb-2.5 h-1 w-12 rounded-full bg-[#C79A2B]" />
 
-        <p className="text-[14px] text-[#1D2D44] font-bold leading-snug drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] max-w-[360px]">
-          Independent advice. Competitive rates. Better mortgage decisions.
-        </p>
+        <div className="inline-block rounded-md bg-white/55 backdrop-blur-md border border-white/40 px-2.5 py-1.5">
+          <p className="text-[12.5px] text-[#1D2D44] font-bold leading-snug max-w-[350px]">
+            Independent advice. Competitive rates. Better mortgage decisions.
+          </p>
+        </div>
       </div>
 
       {/* Desktop text */}
@@ -102,31 +105,27 @@ export default function HomePage() {
 
       {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-4 md:mb-7 sm:w-[696px]">
-        <div className="w-full sm:flex-1">
-          <Button
-            size="lg"
-            className="w-full h-11 md:h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-sm md:text-base"
-            asChild
-          >
-            <Link href="/mortgage-checker">Check My Mortgage →</Link>
-          </Button>
-        </div>
+        <Button
+          size="lg"
+          className="w-full sm:flex-1 h-11 md:h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-sm md:text-base"
+          asChild
+        >
+          <Link href="/mortgage-checker">Check My Mortgage →</Link>
+        </Button>
 
-        <div className="w-full sm:flex-1">
-          <Button
-            size="lg"
-            className="w-full h-11 md:h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-sm md:text-base"
-            asChild
+        <Button
+          size="lg"
+          className="w-full sm:flex-1 h-11 md:h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-sm md:text-base"
+          asChild
+        >
+          <Link
+            href="https://calendly.com/bcmortgageteam/15min"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <Link
-              href="https://calendly.com/bcmortgageteam/15min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Book A Strategy Call →
-            </Link>
-          </Button>
-        </div>
+            Book A Strategy Call →
+          </Link>
+        </Button>
       </div>
 
       {/* Feature Bar */}
