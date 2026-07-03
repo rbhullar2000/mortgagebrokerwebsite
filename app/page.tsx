@@ -88,19 +88,19 @@ export default function HomePage() {
         </Button>
 
         <Button
-          size="lg"
-          variant="outline"
-          className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-white/85 backdrop-blur-sm"
-          asChild
-        >
-          <Link
-            href="https://calendly.com/bcmortgageteam/15min"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book Your Free Strategy Call →
-          </Link>
-        </Button>
+
+  size="lg"
+  className="bg-[#1D2D44] hover:bg-[#243854] text-white h-14 px-10 font-semibold shadow-lg"
+  asChild
+>
+  <Link
+    href="https://calendly.com/bcmortgageteam/15min"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Book A Strategy Call →
+  </Link>
+</Button>
       </div>
 
       <div className="max-w-2xl rounded-xl border border-white/50 bg-white/80 backdrop-blur-md shadow-lg p-5">
