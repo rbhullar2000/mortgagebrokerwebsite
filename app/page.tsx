@@ -108,7 +108,7 @@ export default function HomePage() {
       <p className="inline-block rounded-lg bg-white/65 backdrop-blur-md border border-white/50 px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug mb-4">
         Serving BC • Vancouver • Fraser Valley • Okanagan
       </p>
-
+{/*
       <div className="rounded-xl border border-white/60 bg-white/70 backdrop-blur-xl shadow-xl px-4 py-3">
         <div className="grid grid-cols-3 gap-2 text-[10.5px] font-semibold text-[#1D2D44]">
           <div className="flex flex-col items-center text-center">
@@ -126,7 +126,7 @@ export default function HomePage() {
             <span>Independent Advice</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   </div>
 
