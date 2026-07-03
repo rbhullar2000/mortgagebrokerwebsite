@@ -40,7 +40,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <Header />
 
-   {/* ── Hero ── */}
+
 {/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
   <div
@@ -49,7 +49,7 @@ export default function HomePage() {
   />
 
   <div className="absolute inset-0 bg-white/10 md:bg-white/5" />
-  <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
   <div className="relative container mx-auto px-4 py-14 sm:py-20 lg:py-32">
@@ -65,13 +65,13 @@ export default function HomePage() {
         Start Here
       </h1>
 
-      <p className="text-sm font-semibold text-[#1D2D44] mb-4 tracking-wide">
+      <p className="text-base font-bold text-[#1D2D44] mb-4 tracking-wide">
         Serving BC — Vancouver, Fraser Valley & the Okanagan
       </p>
 
-      <div className="mb-6 h-1 w-20 rounded-full bg-[#C79A2B]" />
+      <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
 
-      <p className="text-base sm:text-lg text-[#1D2D44] font-semibold leading-relaxed max-w-xl mb-8">
+      <p className="text-lg text-[#1D2D44] font-bold leading-relaxed max-w-xl mb-10">
         Access 50+ lenders. Get a Better Strategy & Rate.
       </p>
 
