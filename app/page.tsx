@@ -255,90 +255,93 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Services ── */}
-      <section id="services" className="py-12 lg:py-14 bg-[#F4F6F8]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-[#1D2D44] mb-4">Comprehensive Mortgage Services</h2>
-            <p className="text-xl text-[#2C2C2C] max-w-3xl mx-auto">
-              From first-time homebuyers to seasoned investors, we provide tailored mortgage solutions for every
-              situation.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <Users className="w-8 h-8 text-[#1D2D44]" />,
-                title: "First-Time Homebuyers",
-                description: "Navigate your first home purchase with confidence. Special programs and rates available.",
-                features: ["Down payment assistance", "First-time buyer programs", "Step-by-step guidance"],
-                link: "/purchase",
-              },
-              {
-                icon: <TrendingUp className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Renew Your Mortgage (Without Overpaying)",
-                description: "Don't auto-renew. We'll find you better rates and terms when your mortgage comes due.",
-                features: ["Rate comparison", "Term optimization", "No-cost renewals"],
-                link: "/renewal",
-              },
-              {
-                icon: <FileText className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Refinance & Use Your Equity Strategically",
-                description: "Access your home's equity or consolidate debt with competitive refinancing options.",
-                features: ["Debt consolidation", "Home improvements", "Investment opportunities"],
-                link: "/refinance",
-              },
-              {
-                icon: <Calculator className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Investment Properties",
-                description: "Specialized financing for real estate investors and rental property purchases.",
-                features: ["Investment strategies", "Portfolio lending", "Commercial options"],
-                link: "/investment",
-              },
-              {
-                icon: <Shield className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Self-Employed Solutions",
-                description: "Alternative documentation programs for entrepreneurs and self-employed professionals.",
-                features: ["Bank statement programs", "Asset-based lending", "Flexible verification"],
-                link: "/self-employed",
-              },
-              {
-                icon: <Clock className="w-8 h-8 text-[#1D2D44]" />,
-                title: "Quick Closings",
-                description: "Fast-track approvals for time-sensitive purchases and competitive offers.",
-                features: ["24–48 hour approvals", "Same-day pre-approvals", "Priority processing"],
-                link: "/quick-closings",
-              },
-            ].map((service, index) => (
-              <Card key={index} className="bg-white shadow-md hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center mb-4">
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-xl text-[#1D2D44]">{service.title}</CardTitle>
-                  <CardDescription className="text-gray-700">{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-700">
-                        <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3 flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button variant="link" className="p-0 text-[#1D2D44] font-medium" asChild>
-                    <Link href={service.link}>
-                      Learn more <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+    {/* ── Services ── */}
+<section id="services" className="py-10 lg:py-14 bg-[#F4F6F8]">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-8">
+      <h2 className="text-2xl font-bold text-[#1D2D44] mb-3">
+        Mortgage Services
+      </h2>
+      <p className="text-base lg:text-xl text-[#2C2C2C] max-w-3xl mx-auto">
+        Practical mortgage solutions for purchases, renewals, refinances, and more.
+      </p>
+    </div>
 
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+      {[
+        {
+          icon: <Users className="w-6 h-6 text-[#1D2D44]" />,
+          title: "Purchase",
+          description: "First-time buyers, next homes, and investment properties.",
+          link: "/purchase",
+        },
+        {
+          icon: <TrendingUp className="w-6 h-6 text-[#1D2D44]" />,
+          title: "Renewal",
+          description: "Don’t auto-renew. Compare your options before signing.",
+          link: "/renewal",
+        },
+        {
+          icon: <FileText className="w-6 h-6 text-[#1D2D44]" />,
+          title: "Refinance",
+          description: "Use equity strategically or consolidate debt.",
+          link: "/refinance",
+        },
+        {
+          icon: <Shield className="w-6 h-6 text-[#1D2D44]" />,
+          title: "Self-Employed",
+          description: "Flexible solutions for business owners and non-traditional income.",
+          link: "/self-employed",
+        },
+        {
+          icon: <Calculator className="w-6 h-6 text-[#1D2D44]" />,
+          title: "Investment Properties",
+          description: "Financing strategies for rental and portfolio growth.",
+          link: "/investment",
+        },
+        {
+          icon: <Clock className="w-6 h-6 text-[#1D2D44]" />,
+          title: "Quick Closings",
+          description: "Fast approvals for time-sensitive deals.",
+          link: "/quick-closings",
+        },
+      ].map((service, index) => (
+        <Card
+          key={index}
+          className="bg-white shadow-sm hover:shadow-md transition-shadow"
+        >
+          <CardContent className="p-5">
+            <div className="flex items-start gap-4">
+              <div className="w-11 h-11 bg-[#F4F6F8] rounded-lg flex items-center justify-center flex-shrink-0">
+                {service.icon}
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-[#1D2D44] mb-1">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-gray-600 mb-3">
+                  {service.description}
+                </p>
+
+                <Button
+                  variant="link"
+                  className="p-0 text-[#1D2D44] font-medium h-auto"
+                  asChild
+                >
+                  <Link href={service.link}>
+                    Learn more <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+  
       {/* ── About ── */}
       <section id="about" className="py-12 lg:py-16 bg-white">
         <div className="container mx-auto px-4">
