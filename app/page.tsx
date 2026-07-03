@@ -69,7 +69,7 @@ export default function HomePage() {
 
       <div className="inline-block rounded-xl bg-white/45 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 px-3 py-2 md:px-0 md:py-0 mb-4">
         <p className="text-base font-bold text-[#1D2D44] tracking-wide">
-          Serving BC — Vancouver, Fraser Valley & the Okanagan
+          Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
         </p>
       </div>
 
@@ -81,7 +81,6 @@ export default function HomePage() {
         </p>
       </div>
 
-      {/* CTA Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 mb-7 sm:w-[696px]">
         <div className="w-full sm:flex-1">
           <Button
@@ -89,9 +88,7 @@ export default function HomePage() {
             className="w-full h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
             asChild
           >
-            <Link href="/mortgage-checker">
-              Check My Mortgage →
-            </Link>
+            <Link href="/mortgage-checker">Check My Mortgage →</Link>
           </Button>
         </div>
 
@@ -111,6 +108,28 @@ export default function HomePage() {
           </Button>
         </div>
       </div>
+
+      <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 text-xs sm:text-sm font-semibold text-[#1D2D44]">
+          <div className="flex flex-col items-center text-center">
+            <Shield className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
+            <span>50+ Lenders</span>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <Clock className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
+            <span>Competitive Rates</span>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
+            <span>Independent Advice</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Feature Bar */}
       <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
