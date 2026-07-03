@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     canonical: "https://bcmortgageteam.com",
   },
 }
-
+ 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
