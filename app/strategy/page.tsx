@@ -2,9 +2,8 @@ import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, ArrowRight } from "lucide-react"
+import { CheckCircle, ArrowRight, Shield, Clock, TrendingUp } from "lucide-react"
 import Link from "next/link"
-import Script from "next/script"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -22,121 +21,91 @@ export default function StrategyPage() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      <Script id="calendly-tracking" strategy="afterInteractive">
-        {`
-          window.addEventListener("message", function(e) {
-            if (e.data && e.data.event === "calendly.event_scheduled") {
-              window.dataLayer = window.dataLayer || [];
-              window.dataLayer.push({
-                event: "calendly_booking"
-              });
-            }
-          });
-        `}
-      </Script>
-
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-[#F4F6F8] to-white">
+      {/* Hero */}
+      <section className="py-14 lg:py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-6 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 inline-block">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-5 bg-white text-[#032133] hover:bg-white inline-block shadow-sm">
               Strategy-First Mortgage Advice for BC Borrowers
             </Badge>
 
-            <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight text-balance">
+            <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight">
               Most people focus on rate.{" "}
-              <span className="text-[#D4AF37]">
+              <span className="text-[#C79A2B]">
                 The real advantage is structure.
               </span>
             </h1>
 
-            <p className="text-base text-gray-600 mb-4 leading-relaxed"> 
-              A mortgage isn&apos;t just about today&apos;s rate — it&apos;s
-              about flexibility, cost over time, and what happens when your
-              situation changes.
+            <p className="text-base lg:text-lg text-gray-700 mb-4 leading-relaxed max-w-3xl mx-auto">
+              A mortgage isn&apos;t just about today&apos;s rate — it&apos;s about flexibility,
+              cost over time, and what happens when your situation changes.
             </p>
 
-            <p className="text-base text-gray-600 mb-4 leading-relaxed">
+            <p className="text-base lg:text-lg text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
               Helping BC homeowners lower payments, improve flexibility, and make smarter long-term mortgage decisions.
             </p>
 
-            <p className="text-base text-gray-600 mb-4 leading-relaxed">
-              Purchase • Refinance • Renewal • Debt Consolidation • Investment Properties
-            </p>
-
-          <Button 
-            size="lg"
-              className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-[#FFFFFF] h-12 font-semibold"
-              asChild>
-                  <Link href="/mortgage-checker">
-                    Am I Overpaying? 2 minute checker →
-                  </Link>
-                </Button> 
-
-             
-            <br />
-            <br />
-                
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
               <Button
-              
-                size="lg" variant="outline" className="border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white h-12 font-semibold bg-transparent" asChild>
-           
-              <Link
-                href="https://calendly.com/bcmortgageteam/15min"
-                target="_blank"
-                rel="noopener noreferrer"
+                size="lg"
+                className="w-full sm:w-[340px] h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
+                asChild
               >
-                Book our free 15-minute strategy consultation{" "}
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button> 
+                <Link href="/mortgage-checker">
+                  Am I Overpaying? 2 minute checker →
+                </Link>
+              </Button>
 
-            
+              <Button
+                size="lg"
+                className="w-full sm:w-[340px] h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
+                asChild
+              >
+                <Link
+                  href="https://calendly.com/bcmortgageteam/15min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book A Strategy Call →
+                </Link>
+              </Button>
+            </div>
 
-            {/* Support Text */}
-            <p className="mt-6 text-gray-600 text-sm">
-              Trusted Strategy-focused mortgage guidance for BC borrowers
-            </p>
+            <div className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white/80 backdrop-blur-xl shadow-lg p-5">
+              <div className="grid gap-5 sm:grid-cols-3 text-sm font-semibold text-[#1D2D44]">
+                <div className="flex items-center justify-center">
+                  <Shield className="w-5 h-5 mr-2 text-[#C79A2B]" />
+                  Access to 50+ lenders
+                </div>
 
-            {/* Stats Section */}
-            <div className="mt-16 grid grid-cols-3 gap-6 lg:gap-8">
-              <div className="text-center">
-                <div className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-2">
-                  50+
+                <div className="flex items-center justify-center">
+                  <Clock className="w-5 h-5 mr-2 text-[#C79A2B]" />
+                  25+ yrs finance experience
                 </div>
-                <p className="text-gray-600 text-sm lg:text-base">Lending partners</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-2">
-                  25 yrs
+
+                <div className="flex items-center justify-center">
+                  <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B]" />
+                  Strategy before rate
                 </div>
-                <p className="text-gray-600 text-sm lg:text-base">Finance experience</p>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl lg:text-2xl font-bold text-[#1D2D44] mb-2">
-                  24 hrs
-                </div>
-                <p className="text-gray-600 text-sm lg:text-base">Pre-approval time</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
-       {/* What Your Strategy Call Includes Section */}
-      <section className="py-8 bg-[#F4F6F8]">
+      {/* What Your Strategy Call Includes */}
+      <section className="py-10 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-1xl lg:text-1xl font-bold text-[#1D2D44] mb-3 text-balance">
+            <h2 className="text-2xl font-bold text-[#1D2D44] mb-3">
               What your strategy call includes
             </h2>
 
-            <p className="text-gray-600 mb-8 text-base">
+            <p className="text-gray-600 mb-6 text-base">
               A focused, no-obligation 15-minute conversation built around your specific situation.
             </p>
 
-            <div className="space-y-3">
+            <div className="grid gap-3">
               {[
                 "Review of your current or planned mortgage",
                 "Structure options tailored to your situation",
@@ -145,12 +114,12 @@ export default function StrategyPage() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-4 text-gray-700"
+                  className="flex items-center gap-4 bg-white rounded-lg px-5 py-3 border border-gray-200 shadow-sm"
                 >
-                  <div className="w-6 h-6 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-6 h-6 bg-[#C79A2B] rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-white fill-white" />
                   </div>
-                  <span className="text-base">{item}</span>
+                  <span className="text-gray-800 text-sm font-medium">{item}</span>
                 </div>
               ))}
             </div>
@@ -158,133 +127,65 @@ export default function StrategyPage() {
         </div>
       </section>
 
-
-      {/* Testimonials Section */}
-      <section className="py-8 bg-white">
+      {/* Testimonials */}
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-       {/*      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-8 text-balance">
-              What clients say
-            </h2> */}
-
-            <div className="space-y-4">
-              {/* Testimonial 1 */}
-              <Card className="border border-gray-200 bg-white shadow-sm">
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              {
+                quote:
+                  "BC Mortgage Team didn’t just help me secure a mortgage — they took the time to explain the strategy behind it and why the structure mattered long-term. I felt informed, confident, and supported throughout the process.",
+                initials: "SK",
+                name: "Sarah K.",
+                detail: "First-time buyer · Vancouver",
+              },
+              {
+                quote:
+                  "I was ready to renew directly with my bank, but Rob took the time to review my options and structure everything properly. The result was over $4,000 in savings in the first year alone.",
+                initials: "DM",
+                name: "David M.",
+                detail: "Renewal · Surrey",
+              },
+            ].map((testimonial) => (
+              <Card key={testimonial.name} className="border border-gray-200 bg-white shadow-sm">
                 <CardContent className="pt-5 pb-4">
                   <div className="flex gap-1 mb-3">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-[#D4AF37] text-lg">
+                      <span key={i} className="text-[#D4AF37] text-base">
                         ★
                       </span>
                     ))}
                   </div>
 
-                <p className="text-gray-700 mb-4 leading-relaxed text-base">
-  BC Mortgage Team didn&apos;t just help me secure a mortgage — they took the time to explain the strategy behind it and why the structure mattered long-term. I felt informed, confident, and supported throughout the process instead of simply choosing the lowest rate and hoping for the best.
-</p>
+                  <p className="text-sm sm:text-[15px] text-gray-700 leading-7 mb-4">
+                    {testimonial.quote}
+                  </p>
 
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-[#1D2D44] rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">SK</span>
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 bg-[#1D2D44] rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">{testimonial.initials}</span>
                     </div>
                     <div>
-                      <p className="font-semibold text-[#1D2D44] text-sm">Sarah K.</p>
-                      <p className="text-xs text-gray-600">First-time buyer · Vancouver</p>
+                      <p className="font-semibold text-[#1D2D44] text-sm">{testimonial.name}</p>
+                      <p className="text-xs text-gray-500">{testimonial.detail}</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Testimonial 2 */}
-              <Card className="border border-gray-200 bg-white shadow-sm">
-                <CardContent className="pt-5 pb-4">
-                  <div className="flex gap-1 mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-[#D4AF37] text-lg">
-                        ★
-                      </span>
-                    ))}
-                  </div>
-
-                  <p className="text-gray-700 mb-4 leading-relaxed text-base">
-  I was ready to renew directly with my bank, but Rob took the time to review my options and structure everything properly. The result was over $4,000 in savings in the first year alone — and a mortgage that fit my long-term goals much better.
-</p>
-
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-[#1D2D44] rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">DM</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-[#1D2D44] text-sm">David M.</p>
-                      <p className="text-xs text-gray-600">Renewal · Surrey</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-     
-      {/* Calendly Booking Section */}
-     <section className="py-8 bg-white" id="book">
-
-  <div className="container mx-auto px-4">
-
-    <div className="max-w-6xl mx-auto text-center">
-
-   {/*   <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 text-balance">
-
-        Book your free strategy call
-
-      </h2>
-
-      <p className="text-gray-600 mb-6 text-base">
-
-        Select a time below — no redirect, books instantly.
-
-      </p>
-*/}
-      <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
-
-        <iframe
-
-          src="https://calendly.com/bcmortgageteam/15min"
-
-          width="100%"
-
-          height="950"
-
-          frameBorder="0"
-
-          title="Book Mortgage Strategy Call"
-
-          className="w-full"
-
-        />
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-      {/* Who This Is For Section */}
-      <section className="py-8 bg-[#F4F6F8]">
+      {/* Who This Is For */}
+      <section className="py-10 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-1xl lg:text-1xl font-bold text-[#1D2D44] mb-3 text-balance">
+            <h2 className="text-2xl font-bold text-[#1D2D44] mb-5">
               Who this is for
             </h2>
-{/*
-            <p className="text-base text-gray-600 mb-6">
-              This is for you if:
-            </p>
-*/}
-            <div className="space-y-3">
+
+            <div className="grid gap-3">
               {[
                 "You're buying in the next 3–6 months",
                 "You're renewing in the next 12–24 months",
@@ -295,10 +196,9 @@ export default function StrategyPage() {
                   key={item}
                   className="flex items-center gap-4 bg-white rounded-lg px-5 py-3 border border-gray-200 shadow-sm"
                 >
-                  <div className="w-6 h-6 bg-[#D4AF37] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-6 h-6 bg-[#C79A2B] rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-white fill-white" />
                   </div>
-
                   <span className="text-gray-800 text-sm font-medium">{item}</span>
                 </div>
               ))}
@@ -307,66 +207,51 @@ export default function StrategyPage() {
         </div>
       </section>
 
-
-      {/* Reframe Section */}
-      <section className="py-8 bg-white">
+      {/* Reframe */}
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-1xl lg:text-1xl font-bold text-[#1D2D44] mb-6 text-balance">
+            <h2 className="text-2xl font-bold text-[#1D2D44] mb-5">
               The way most mortgages are chosen is backwards.
             </h2>
 
             <p className="text-base text-gray-600 mb-6 leading-relaxed">
-              Most borrowers are shown a rate and asked to choose. But the
-              biggest mortgage decisions aren&apos;t about rate — they&apos;re
-              about how the mortgage is structured:
+              Most borrowers are shown a rate and asked to choose. But the biggest mortgage decisions aren&apos;t
+              about rate — they&apos;re about how the mortgage is structured.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3 mb-6">
-              {[
-                "Term length",
-                "Flexibility",
-                "Prepayment options",
-                "Exit strategy",
-              ].map((item) => (
+              {["Term length", "Flexibility", "Prepayment options", "Exit strategy"].map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-3 bg-[#F4F6F8] rounded-lg px-4 py-3 border border-gray-200"
                 >
-                  <div className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0" />
+                  <div className="w-2 h-2 bg-[#C79A2B] rounded-full flex-shrink-0" />
                   <span className="text-[#1D2D44] font-medium text-sm">{item}</span>
                 </div>
               ))}
             </div>
 
             <p className="text-base text-gray-600 leading-relaxed">
-              These factors determine what your mortgage actually costs — and
-              how it performs over time.
+              These factors determine what your mortgage actually costs — and how it performs over time.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Risk Section */}
-      <section className="py-8 bg-[#F4F6F8]">
+      {/* Risk */}
+      <section className="py-10 bg-[#F4F6F8]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="flex items-start gap-4 mb-5">
-             {/* <div className="w-10 h-10 bg-[#032133] rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                <Shield className="w-5 h-5 text-[#D4AF37]" />
-              </div>*/}
-
-              <h2 className="text-1xl lg:text-1xl font-bold text-[#1D2D44] text-balance">
-                A lower rate doesn&apos;t always mean a better mortgage.
-              </h2>
-            </div>
+            <h2 className="text-2xl font-bold text-[#1D2D44] mb-5">
+              A lower rate doesn&apos;t always mean a better mortgage.
+            </h2>
 
             <p className="text-base text-gray-600 mb-6 leading-relaxed">
-              A mortgage with a lower rate but poor structure can cost more over
-              time. Especially if:
+              A mortgage with a lower rate but poor structure can cost more over time, especially if:
             </p>
 
-            <div className="space-y-3 mb-6">
+            <div className="grid gap-3 mb-6">
               {[
                 "You need to break the mortgage early",
                 "Interest rates change",
@@ -379,7 +264,6 @@ export default function StrategyPage() {
                   <div className="w-8 h-8 bg-[#032133]/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <ArrowRight className="w-4 h-4 text-[#032133]" />
                   </div>
-
                   <span className="text-gray-700 text-sm">{item}</span>
                 </div>
               ))}
@@ -392,63 +276,47 @@ export default function StrategyPage() {
         </div>
       </section>
 
-      {/* Strategy Positioning Section */}
-      <section className="py-8 bg-[#032133]">
+      {/* Strategy Positioning */}
+      <section className="py-10 bg-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-1xl lg:text-1xl font-bold text-white mb-4 text-balance">
+            <h2 className="text-2xl font-bold text-white mb-4">
               This is where strategy matters.
             </h2>
 
             <p className="text-sm text-gray-300 mb-3 leading-relaxed">
-              Every mortgage should be structured based on your timeline, risk
-              tolerance, and future plans — not just the lowest available rate.
+              Every mortgage should be structured based on your timeline, risk tolerance, and future plans — not just
+              the lowest available rate.
             </p>
 
             <p className="text-sm text-[#D4AF37] font-semibold leading-relaxed">
-              The goal isn&apos;t just to secure a mortgage. It&apos;s to
-              structure it properly from the beginning.
+              The goal isn&apos;t just to secure a mortgage. It&apos;s to structure it properly from the beginning.
             </p>
           </div>
         </div>
       </section>
 
-
-      {/* Final CTA Section */}
-      <section className="py-8 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
+      {/* Final CTA */}
+      <section className="py-10 bg-gradient-to-br from-[#1D2D44] to-[#032133]">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-1xl lg:text-1xl font-bold text-white mb-4 text-balance">
+            <h2 className="text-2xl font-bold text-white mb-4">
               Understand your options before you commit.
             </h2>
 
             <p className="text-sm text-gray-300 mb-8 leading-relaxed">
-              A well-structured mortgage can save money, reduce risk, and give
-              you flexibility when you need it most.
+              A well-structured mortgage can save money, reduce risk, and give you flexibility when you need it most.
             </p>
-{/*
+
             <Button
               size="lg"
-              className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#032133] font-bold h-14 px-10 text-base"
+              className="w-full sm:w-[340px] h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
               asChild
             >
-              <Link
-                href="https://calendly.com/bcmortgageteam/15min"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mortgage Strategy Consultation{" "}
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <Link href="/mortgage-checker">
+                Start the 2-minute mortgage check →
               </Link>
             </Button>
-
-            <p className="text-xs text-gray-500 mt-3 font-medium">
-              15-minute call • No obligation • Strategy-focused
-            </p>
-
-            <p className="text-gray-500 text-xs mt-2">
-              No cost. No obligation. Just clarity on your best path forward.
-            </p> */}
           </div>
         </div>
       </section>
