@@ -44,27 +44,21 @@ export default function HomePage() {
 {/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
   <div
-    className="absolute inset-0 bg-cover bg-[66%_center] md:bg-[75%_center]"
+    className="absolute inset-0 bg-cover bg-[73%_center] md:bg-[75%_center]"
     style={{ backgroundImage: "url('/city.png')" }}
   />
 
-  {/* Mobile overlays */}
-  <div className="absolute inset-0 bg-black/10 md:hidden" />
-  <div className="absolute inset-0 bg-gradient-to-r from-white/45 via-white/15 to-transparent md:hidden" />
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20 md:hidden" />
+  <div className="absolute inset-0 bg-white/10 md:bg-white/5" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-transparent md:from-white/60 md:via-white/20" />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
-  {/* Desktop overlays - back to previous desktop look */}
-  <div className="absolute inset-0 hidden md:block bg-white/5" />
-  <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
-  <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-transparent via-transparent to-white/35" />
-
-  <div className="relative container mx-auto px-4 py-7 sm:py-14 lg:py-32">
+  <div className="relative container mx-auto px-4 py-14 sm:py-20 lg:py-32">
     <div className="max-w-xl lg:max-w-3xl text-left">
-      <Badge className="mb-3 md:mb-5 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm text-[11px] md:text-sm">
+      <Badge className="mb-5 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-      <h1 className="text-[2.15rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-4 md:mb-5 leading-[1.04] md:leading-[1.05]">
+      <h1 className="text-[3rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-[1.05]">
         Your Bank Has a{" "}
         <span className="text-[#C79A2B]">Mortgage Advisor.</span>
         <br />
@@ -73,76 +67,66 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      {/* Mobile text - readable */}
-      <div className="md:hidden mb-4 space-y-2.5">
-        <div className="inline-block rounded-lg bg-white/65 backdrop-blur-md border border-white/50 px-3 py-1.5">
-          <p className="text-[12px] font-bold text-[#1D2D44] leading-snug">
-            Access 50+ lenders — not just one bank.
-          </p>
-        </div>
-
-        <div className="h-1 w-12 rounded-full bg-[#C79A2B]" />
-
-        <div className="inline-block rounded-lg bg-white/65 backdrop-blur-md border border-white/50 px-3 py-1.5">
-          <p className="text-[12px] font-bold text-[#1D2D44] leading-snug">
-            Serving BC • Vancouver • Fraser Valley • Okanagan
-          </p>
-        </div>
+      <div className="inline-block rounded-xl bg-white/45 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 px-3 py-2 md:px-0 md:py-0 mb-4">
+        <p className="text-base font-bold text-[#1D2D44] tracking-wide">
+          Serving BC — Vancouver, Fraser Valley & the Okanagan
+        </p>
       </div>
 
-      {/* Desktop text - restored */}
-      <div className="hidden md:block">
-        <p className="text-base font-bold text-[#1D2D44] mb-4 tracking-wide">
-          Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
-        </p>
+      <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
 
-        <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
-
-        <p className="text-lg text-[#1D2D44] font-semibold leading-relaxed max-w-2xl mb-10">
+      <div className="inline-block rounded-xl bg-white/45 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 px-3 py-2 md:px-0 md:py-0 mb-10">
+        <p className="text-lg text-[#1D2D44] font-bold md:font-semibold leading-relaxed max-w-2xl">
           Independent advice. Competitive rates. Better mortgage decisions.
         </p>
       </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-4 md:mb-7 sm:w-[696px]">
-        <Button
-          size="lg"
-          className="w-full sm:flex-1 h-12 md:h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-sm md:text-base"
-          asChild
-        >
-          <Link href="/mortgage-checker">Check My Mortgage →</Link>
-        </Button>
-
-        <Button
-          size="lg"
-          className="w-full sm:flex-1 h-12 md:h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-sm md:text-base"
-          asChild
-        >
-          <Link
-            href="https://calendly.com/bcmortgageteam/15min"
-            target="_blank"
-            rel="noopener noreferrer"
+      <div className="flex flex-col sm:flex-row gap-4 mb-7 sm:w-[696px]">
+        <div className="w-full sm:flex-1">
+          <Button
+            size="lg"
+            className="w-full h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
+            asChild
           >
-            Book A Strategy Call →
-          </Link>
-        </Button>
+            <Link href="/mortgage-checker">
+              Check My Mortgage →
+            </Link>
+          </Button>
+        </div>
+
+        <div className="w-full sm:flex-1">
+          <Button
+            size="lg"
+            className="w-full h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
+            asChild
+          >
+            <Link
+              href="https://calendly.com/bcmortgageteam/15min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book A Strategy Call →
+            </Link>
+          </Button>
+        </div>
       </div>
 
       {/* Feature Bar */}
-      <div className="w-full sm:w-[696px] rounded-xl md:rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-xl md:shadow-2xl p-3 md:p-5">
-        <div className="grid grid-cols-3 gap-2 md:gap-6 text-[10.5px] md:text-sm font-semibold text-[#1D2D44]">
+      <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 text-xs sm:text-sm font-semibold text-[#1D2D44]">
           <div className="flex flex-col items-center text-center">
-            <Shield className="w-4 h-4 md:w-6 md:h-6 mb-1 md:mb-2 text-[#C79A2B]" />
+            <Shield className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>50+ Lenders</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <Clock className="w-4 h-4 md:w-6 md:h-6 mb-1 md:mb-2 text-[#C79A2B]" />
+            <Clock className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>Competitive Rates</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <TrendingUp className="w-4 h-4 md:w-6 md:h-6 mb-1 md:mb-2 text-[#C79A2B]" />
+            <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
             <span>Independent Advice</span>
           </div>
         </div>
