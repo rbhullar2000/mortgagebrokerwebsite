@@ -329,7 +329,7 @@ export default function HomePage() {
         </Badge>
 
         <h2 className="text-2xl font-bold text-[#1D2D44] mb-6">
-          Strategy-First Mortgage Advice
+          Lead Mortgage Specialist
         </h2>
 
         <p className="text-base text-gray-600 mb-6 leading-relaxed">
