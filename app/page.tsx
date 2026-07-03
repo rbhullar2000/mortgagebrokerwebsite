@@ -460,7 +460,6 @@ export default function HomePage() {
           {/* Calendly embed — div, not a nested section */}
           <div className="max-w-6xl mx-auto mb-12">
             <h2 className="text-2xl font-bold text-[#1D2D44] mb-2">Book your free strategy call</h2>
-            <p className="text-gray-600 mb-6">Select a time below — no redirect, books instantly.</p>
             <div className="w-full rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
               <iframe
                 src="https://calendly.com/bcmortgageteam/15min"
