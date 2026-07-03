@@ -44,21 +44,21 @@ export default function HomePage() {
 {/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
   <div
-    className="absolute inset-0 bg-cover bg-[73%_center] md:bg-[75%_center]"
+    className="absolute inset-0 bg-cover bg-[68%_center] sm:bg-[73%_center] md:bg-[75%_center]"
     style={{ backgroundImage: "url('/city.png')" }}
   />
 
-  <div className="absolute inset-0 bg-white/10 md:bg-white/5" />
-  <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-transparent md:from-white/60 md:via-white/20" />
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/35" />
+  <div className="absolute inset-0 bg-white/5 md:bg-white/5" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/55 via-white/20 to-transparent md:from-white/60 md:via-white/20" />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/25 md:to-white/35" />
 
-  <div className="relative container mx-auto px-4 py-14 sm:py-20 lg:py-32">
+  <div className="relative container mx-auto px-4 py-10 sm:py-16 lg:py-32">
     <div className="max-w-xl lg:max-w-3xl text-left">
-      <Badge className="mb-5 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
+      <Badge className="mb-4 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-      <h1 className="text-[3rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-[1.05]">
+      <h1 className="text-[2.65rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-[1.05]">
         Your Bank Has a{" "}
         <span className="text-[#C79A2B]">Mortgage Advisor.</span>
         <br />
@@ -67,22 +67,22 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      <div className="inline-block rounded-xl bg-white/45 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 px-3 py-2 md:px-0 md:py-0 mb-4">
-        <p className="text-base font-bold text-[#1D2D44] tracking-wide">
-          Serving BC — Vancouver, Fraser Valley & the Okanagan
+      <div className="inline-block rounded-lg bg-white/25 md:bg-transparent backdrop-blur-md md:backdrop-blur-0 border border-white/30 md:border-0 px-3 py-1.5 md:px-0 md:py-0 mb-3">
+        <p className="text-sm md:text-base font-bold text-[#1D2D44] tracking-wide">
+          Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
         </p>
       </div>
 
-      <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
+      <div className="mb-6 md:mb-8 h-1.5 w-16 md:w-24 rounded-full bg-[#C79A2B]" />
 
-      <div className="inline-block rounded-xl bg-white/45 md:bg-transparent backdrop-blur-sm md:backdrop-blur-0 px-3 py-2 md:px-0 md:py-0 mb-10">
-        <p className="text-lg text-[#1D2D44] font-bold md:font-semibold leading-relaxed max-w-2xl">
+      <div className="inline-block rounded-lg bg-white/25 md:bg-transparent backdrop-blur-md md:backdrop-blur-0 border border-white/30 md:border-0 px-3 py-1.5 md:px-0 md:py-0 mb-7 md:mb-10">
+        <p className="text-base md:text-lg text-[#1D2D44] font-bold md:font-semibold leading-relaxed max-w-2xl">
           Independent advice. Competitive rates. Better mortgage decisions.
         </p>
       </div>
 
       {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-7 sm:w-[696px]">
+      <div className="flex flex-col sm:flex-row gap-4 mb-5 md:mb-7 sm:w-[696px]">
         <div className="w-full sm:flex-1">
           <Button
             size="lg"
@@ -114,19 +114,19 @@ export default function HomePage() {
 
       {/* Feature Bar */}
       <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
-        <div className="grid grid-cols-3 gap-2 sm:gap-6 text-xs sm:text-sm font-semibold text-[#1D2D44]">
-          <div className="flex flex-col items-center text-center">
-            <Shield className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 text-sm font-semibold text-[#1D2D44]">
+          <div className="flex items-center sm:flex-col sm:text-center">
+            <Shield className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-0 sm:mb-2 text-[#C79A2B] flex-shrink-0" />
             <span>50+ Lenders</span>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <Clock className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
+          <div className="flex items-center sm:flex-col sm:text-center">
+            <Clock className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-0 sm:mb-2 text-[#C79A2B] flex-shrink-0" />
             <span>Competitive Rates</span>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mb-2 text-[#C79A2B]" />
+          <div className="flex items-center sm:flex-col sm:text-center">
+            <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-0 sm:mb-2 text-[#C79A2B] flex-shrink-0" />
             <span>Independent Advice</span>
           </div>
         </div>
