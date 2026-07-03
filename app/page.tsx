@@ -472,7 +472,7 @@ export default function HomePage() {
       {/* ── Contact ── */}
      <section
          id="contact" 
-         className="py-12 lg:py-14 bg-[#F4F6F8] scroll-mt-100"
+         className="py-12 lg:py-14 bg-[#F4F6F8] scroll-mt-200"
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
