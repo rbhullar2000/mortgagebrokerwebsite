@@ -53,7 +53,7 @@ export default function HomePage() {
   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
   <div className="relative container mx-auto px-4 py-14 sm:py-20 lg:py-32">
-    <div className="max-w-xl lg:max-w-2xl text-left">
+    <div className="max-w-xl lg:max-w-3xl text-left">
       <Badge className="mb-5 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
@@ -71,7 +71,7 @@ export default function HomePage() {
 
       <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
 
-      <p className="text-lg text-[#1D2D44] font-bold leading-relaxed max-w-xl mb-10">
+      <p className="text-lg text-[#1D2D44] font-semibold leading-relaxed max-w-2xl mb-10">
         Independent advice. Competitive rates. Better mortgage decisions.
       </p>
 
@@ -102,20 +102,20 @@ export default function HomePage() {
       </div>
 
       <div className="max-w-3xl rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-5">
-        <div className="grid gap-5 sm:grid-cols-3 text-sm font-semibold text-[#1D2D44]">
-          <div className="flex items-center justify-center text-center">
-            <Shield className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
-            Access to 50+ Lenders
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm font-semibold text-[#1D2D44]">
+          <div className="flex flex-col items-center text-center">
+            <Shield className="w-6 h-6 mb-2 text-[#C79A2B]" />
+            <span>Access to 50+ Lenders</span>
           </div>
 
-          <div className="flex items-center justify-center text-center">
-            <Clock className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
-            Competitive Rates
+          <div className="flex flex-col items-center text-center">
+            <Clock className="w-6 h-6 mb-2 text-[#C79A2B]" />
+            <span>Competitive Rates</span>
           </div>
 
-          <div className="flex items-center justify-center text-center">
-            <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B] flex-shrink-0" />
-            Independent Advice
+          <div className="flex flex-col items-center text-center">
+            <TrendingUp className="w-6 h-6 mb-2 text-[#C79A2B]" />
+            <span>Independent Advice</span>
           </div>
         </div>
       </div>
