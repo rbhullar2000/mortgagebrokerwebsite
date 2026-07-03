@@ -78,14 +78,14 @@ export default function HomePage() {
       </p>
 
       {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-7 sm:w-[696px]">
+      <div className="flex flex-col sm:flex-row gap-4 sm:w-[696px]">
         <Button
           size="lg"
           className="w-full sm:flex-1 h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
           asChild
         >
           <Link href="/mortgage-checker">
-            Check My Mortgage (2 min) →
+            Check My Mortgage →
           </Link>
         </Button>
 
@@ -103,6 +103,11 @@ export default function HomePage() {
           </Link>
         </Button>
       </div>
+
+      {/* Small trust line */}
+      <p className="mt-3 mb-7 text-sm text-[#1D2D44]/80 font-medium sm:w-[696px] text-center">
+        Free • No obligation • Takes about 2 minutes
+      </p>
 
       {/* Feature Bar */}
       <div className="w-full sm:w-[696px] rounded-2xl border border-white/50 bg-white/70 backdrop-blur-xl shadow-2xl p-4 sm:p-5">
