@@ -59,7 +59,7 @@ export default function HomePage() {
   <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
   {/* Mobile Hero */}
-  <div className="relative md:hidden px-4 pt-10 pb-10 min-h-[650px]">
+  <div className="relative md:hidden px-4 pt-20 pb-10 min-h-[650px]">
     <div className="max-w-md text-left">
       <Badge className="mb-5 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
         Strategy-First Mortgage Advice for BC Borrowers
