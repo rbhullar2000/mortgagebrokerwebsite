@@ -43,43 +43,38 @@ export default function HomePage() {
     {/* ── Hero ── */}
 <section className="relative overflow-hidden bg-white">
   <div
-    className="absolute inset-0 bg-cover"
-    style={{
-      backgroundImage: "url('/city.png')",
-      backgroundPosition: "60% center",
-    }}
+    className="absolute inset-0 bg-cover bg-[68%_center] md:bg-[62%_center]"
+    style={{ backgroundImage: "url('/city.png')" }}
   />
 
-  <div className="absolute inset-0 bg-white/20" />
-  <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/20 to-[#032133]/65" />
+  <div className="absolute inset-0 bg-white/25 md:bg-white/15" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/45 to-white/5" />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
 
-  <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-    <div className="w-[820px] h-[460px] rounded-full bg-white/35 blur-3xl" />
-  </div>
-
-  <div className="relative container mx-auto px-4 py-24 lg:py-36">
-    <div className="max-w-4xl mx-auto text-center">
-      <Badge className="mb-4 bg-[#1D2D44]/10 text-[#032133] hover:bg-[#1D2D44]/10 inline-block backdrop-blur-sm">
+  <div className="relative container mx-auto px-4 py-20 lg:py-32">
+    <div className="max-w-2xl text-left">
+      <Badge className="mb-5 bg-white/70 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm">
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-      <h1 className="text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-tight">
-        Smarter Mortgage <span className="text-[#D4AF37]">Decisions</span>
+      <h1 className="text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-6 leading-tight">
+        Smarter Mortgage{" "}
+        <span className="text-[#C79A2B]">Decisions</span>
         <br />
         Start Here
       </h1>
 
-      <p className="text-sm font-semibold text-[#1D2D44] tracking-wide">
+      <p className="text-sm font-semibold text-[#1D2D44] mb-4 tracking-wide">
         Serving BC — Vancouver, Fraser Valley & the Okanagan
       </p>
 
-      <div className="mx-auto mt-4 mb-8 h-1 w-20 rounded-full bg-[#D4AF37]" />
+      <div className="mb-7 h-1 w-20 rounded-full bg-[#C79A2B]" />
 
-      <p className="text-lg text-[#1D2D44] mb-7 leading-relaxed">
+      <p className="text-lg text-[#1D2D44] mb-8 leading-relaxed max-w-xl">
         Access 50+ lenders. Get a better rate, and a strategy built around your situation.
       </p>
 
-      <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+      <div className="flex flex-col sm:flex-row gap-4 mb-8">
         <Button
           size="lg"
           className="bg-[#C79A2B] hover:bg-[#D4AF37]/90 text-white h-12 px-8 font-semibold shadow-lg"
@@ -101,13 +96,13 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book Your Free Mortgage Strategy Consultation →
+            Book Your Free Strategy Call →
           </Link>
         </Button>
       </div>
 
-      <div className="mx-auto max-w-4xl rounded-xl border border-white/50 bg-white/75 backdrop-blur-md shadow-lg p-5">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm font-medium text-[#1D2D44]">
+      <div className="max-w-2xl rounded-xl border border-white/50 bg-white/75 backdrop-blur-md shadow-lg p-5">
+        <div className="grid gap-4 sm:grid-cols-3 text-sm font-medium text-[#1D2D44]">
           <div className="flex items-center">
             <Shield className="w-5 h-5 mr-2 text-[#C79A2B]" />
             Access to 50+ lenders
@@ -120,7 +115,7 @@ export default function HomePage() {
 
           <div className="flex items-center">
             <TrendingUp className="w-5 h-5 mr-2 text-[#C79A2B]" />
-            Mortgage Strategy Before Rate
+            Strategy Before Rate
           </div>
         </div>
       </div>
