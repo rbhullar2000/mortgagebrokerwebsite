@@ -182,53 +182,47 @@ export default function HomePage() {
   </div>
 </section>
       
-  {/* ── Lenders ── */}
-<section id="lenders" className="py-8 sm:py-10 lg:py-16 bg-[#F4F6F8]">
+ {/* ── Lenders ── */}
+<section id="lenders" className="py-10 lg:py-16 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
-
-    <div className="text-center mb-7 sm:mb-10">
-      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
-        Trusted Lending Partners
+    <div className="text-center mb-8 lg:mb-10">
+      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
+        Access to Canada&apos;s Leading Mortgage Lenders
       </h2>
 
-      <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        We work with 50+ lenders including major banks, credit unions, and
-        alternative lenders to find you the best rates and terms.
+      <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Compare rates and mortgage options from Canada&apos;s leading banks,
+        credit unions and monoline lenders.
       </p>
     </div>
 
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-7 sm:gap-6 items-center justify-items-center">
-      <img
-        src="/scotiabank.png"
-        alt="Scotiabank"
-        className="h-10 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
-      />
-
-      <img
-        src="/td.png"
-        alt="TD Bank"
-        className="h-10 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
-      />
-
-      <img
-        src="/firstnational.png"
-        alt="First National"
-        className="h-9 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
-      />
-
-      <img
-        src="/hometrust.png"
-        alt="Home Trust"
-        className="h-10 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105"
-      />
-
-      <img
-        src="/rmg.png"
-        alt="RMG Mortgages"
-        className="h-11 sm:h-16 lg:h-20 object-contain transition-transform duration-300 hover:scale-105 col-span-2 sm:col-span-1"
-      />
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-5 lg:gap-x-8 lg:gap-y-7 items-center justify-items-center">
+      {[
+        { src: "/td.png", alt: "TD Canada Trust" },
+        { src: "/scotiabank.png", alt: "Scotiabank" },
+        { src: "/Coast_Capital_Savings.png", alt: "Coast Capital Savings" },
+        { src: "/National_Bank.png", alt: "National Bank" },
+        { src: "/firstnational.png", alt: "First National" },
+        { src: "/MCAP.png", alt: "MCAP" },
+        { src: "/rmg.png", alt: "RMG Mortgages" },
+        { src: "/hometrust.png", alt: "Home Trust" },
+        { src: "/equitable-bank.png", alt: "Equitable Bank" },
+        { src: "/Manulife_Canada.png", alt: "Manulife Canada" },
+        { src: "/meridian-credit-union.png", alt: "Meridian Credit Union" },
+        { src: "/Prospera Credit Union.png", alt: "Prospera Credit Union" },
+      ].map((lender) => (
+        <div
+          key={lender.alt}
+          className="w-full h-16 sm:h-20 bg-white rounded-xl border border-gray-200 shadow-sm flex items-center justify-center px-4"
+        >
+          <img
+            src={lender.src}
+            alt={lender.alt}
+            className="max-h-10 sm:max-h-12 max-w-[135px] object-contain"
+          />
+        </div>
+      ))}
     </div>
-
   </div>
 </section>
 
