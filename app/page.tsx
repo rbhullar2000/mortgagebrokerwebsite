@@ -45,27 +45,27 @@ export default function HomePage() {
 <section className="relative overflow-hidden bg-white">
   {/* Background */}
   <div
-    className="absolute inset-0 bg-cover bg-[67%_center] md:bg-[75%_center]"
+    className="absolute inset-0 bg-cover bg-[66%_center] md:bg-[75%_center]"
     style={{ backgroundImage: "url('/city.png')" }}
   />
 
   {/* Mobile overlays */}
-  <div className="absolute inset-0 bg-black/5 md:hidden" />
-  <div className="absolute inset-0 bg-gradient-to-r from-white/35 via-white/10 to-transparent md:hidden" />
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20 md:hidden" />
+  <div className="absolute inset-0 bg-black/10 md:hidden" />
+  <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/5 to-transparent md:hidden" />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/15 md:hidden" />
 
   {/* Desktop overlays */}
   <div className="absolute inset-0 hidden md:block bg-white/5" />
   <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-white/60 via-white/20 to-transparent" />
   <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
-  <div className="relative container mx-auto px-4 py-8 sm:py-14 lg:py-32">
+  <div className="relative container mx-auto px-4 py-7 sm:py-14 lg:py-32">
     <div className="max-w-xl lg:max-w-3xl text-left">
-      <Badge className="mb-3 md:mb-5 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm text-xs md:text-sm">
+      <Badge className="mb-3 md:mb-5 bg-white/75 text-[#032133] hover:bg-white/80 inline-block backdrop-blur-sm text-[11px] md:text-sm">
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-      <h1 className="text-[2.35rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-4 md:mb-5 leading-[1.03] md:leading-[1.05]">
+      <h1 className="text-[2.15rem] sm:text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-4 md:mb-5 leading-[1.04] md:leading-[1.05]">
         Your Bank Has a{" "}
         <span className="text-[#C79A2B]">Mortgage Advisor.</span>
         <br />
@@ -75,17 +75,17 @@ export default function HomePage() {
       </h1>
 
       {/* Mobile compact text */}
-      <div className="md:hidden space-y-3 mb-5">
-        <div className="inline-block rounded-md bg-white/18 backdrop-blur-md border border-white/20 px-2.5 py-1">
-          <p className="text-[13px] font-semibold text-[#1D2D44] leading-snug">
+      <div className="md:hidden space-y-2.5 mb-4">
+        <div className="inline-block rounded-md bg-white/12 backdrop-blur-md border border-white/20 px-2.5 py-1">
+          <p className="text-[12px] font-semibold text-[#1D2D44] leading-snug">
             Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
           </p>
         </div>
 
-        <div className="h-1 w-14 rounded-full bg-[#C79A2B]" />
+        <div className="h-1 w-12 rounded-full bg-[#C79A2B]" />
 
-        <div className="inline-block rounded-md bg-white/18 backdrop-blur-md border border-white/20 px-2.5 py-1.5">
-          <p className="text-[14px] text-[#1D2D44] font-semibold leading-snug">
+        <div className="inline-block rounded-md bg-white/12 backdrop-blur-md border border-white/20 px-2.5 py-1">
+          <p className="text-[12.5px] text-[#1D2D44] font-semibold leading-snug">
             Independent advice. Competitive rates. Better mortgage decisions.
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
         <div className="w-full sm:flex-1">
           <Button
             size="lg"
-            className="w-full h-12 md:h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-base"
+            className="w-full h-11 md:h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-sm md:text-base"
             asChild
           >
             <Link href="/mortgage-checker">Check My Mortgage →</Link>
@@ -119,7 +119,7 @@ export default function HomePage() {
         <div className="w-full sm:flex-1">
           <Button
             size="lg"
-            className="w-full h-12 md:h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-base"
+            className="w-full h-11 md:h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-sm md:text-base"
             asChild
           >
             <Link
@@ -134,8 +134,8 @@ export default function HomePage() {
       </div>
 
       {/* Feature Bar */}
-      <div className="w-full sm:w-[696px] rounded-xl md:rounded-2xl border border-white/50 bg-white/65 md:bg-white/70 backdrop-blur-xl shadow-xl md:shadow-2xl p-3 md:p-5">
-        <div className="grid grid-cols-3 gap-2 md:gap-6 text-[11px] md:text-sm font-semibold text-[#1D2D44]">
+      <div className="w-full sm:w-[696px] rounded-xl md:rounded-2xl border border-white/50 bg-white/60 md:bg-white/70 backdrop-blur-xl shadow-xl md:shadow-2xl p-2.5 md:p-5">
+        <div className="grid grid-cols-3 gap-2 md:gap-6 text-[10.5px] md:text-sm font-semibold text-[#1D2D44]">
           <div className="flex flex-col items-center text-center">
             <Shield className="w-4 h-4 md:w-6 md:h-6 mb-1 md:mb-2 text-[#C79A2B]" />
             <span>50+ Lenders</span>
