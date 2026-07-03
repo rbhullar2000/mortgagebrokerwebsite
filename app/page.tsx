@@ -183,69 +183,95 @@ export default function HomePage() {
 </section>
       
 {/* ── Lenders ── */}
-<section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
+<section id="lenders" className="py-16 lg:py-20 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
 
     {/* Heading */}
-    <div className="text-center mb-10">
-      <h2 className="text-3xl lg:text-5xl font-bold text-[#1D2D44] mb-5">
+    <div className="text-center mb-14">
+      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-5">
         Access to Canada's Leading Mortgage Lenders
       </h2>
 
-      <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+      <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
         Compare rates and mortgage options from Canada's leading banks,
         credit unions and monoline lenders.
       </p>
     </div>
 
-    {/* Logo Grid */}
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+    {/* Logos */}
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-14 gap-x-12 items-center justify-items-center">
 
-      {[
-        { src: "/td.png", alt: "TD Canada Trust" },
-        { src: "/scotiabank.png", alt: "Scotiabank" },
-        { src: "/Coast_Capital_Savings.png", alt: "Coast Capital Savings" },
-        { src: "/National_Bank.png", alt: "National Bank" },
+      <img
+        src="/td.png"
+        alt="TD Bank"
+        className="h-14 w-full object-contain"
+      />
 
-        { src: "/firstnational.png", alt: "First National" },
-        { src: "/MCAP.png", alt: "MCAP" },
-        { src: "/rmg.png", alt: "RMG Mortgages" },
-        { src: "/hometrust.png", alt: "Home Trust" },
+      <img
+        src="/scotiabank.png"
+        alt="Scotiabank"
+        className="h-14 w-full object-contain"
+      />
 
-        { src: "/equitable-bank.png", alt: "Equitable Bank" },
-        { src: "/Manulife_Canada.png", alt: "Manulife" },
-        { src: "/meridian-credit-union.png", alt: "Meridian Credit Union" },
-        { src: "/Logo_Prospera_Credit_Union.svg", alt: "Prospera Credit Union" },
-      ].map((lender) => (
-        <div
-          key={lender.alt}
-          className="
-            h-32
-            rounded-2xl
-            border
-            border-gray-200
-            bg-white
-            shadow-sm
-            hover:shadow-lg
-            transition-all
-            duration-300
-            flex
-            items-center
-            justify-center
-            p-8
-          "
-        >
-          <img
-            src={lender.src}
-            alt={lender.alt}
-            className="
-              w-full
-              h-full
-              object-contain
-            "
-          />
-        </div>
-      ))}
+      <img
+        src="/Coast_Capital_Savings.png"
+        alt="Coast Capital"
+        className="h-16 w-full object-contain"
+      />
+
+      <img
+        src="/National_Bank.png"
+        alt="National Bank"
+        className="h-16 w-full object-contain"
+      />
+
+      <img
+        src="/firstnational.png"
+        alt="First National"
+        className="h-14 w-full object-contain"
+      />
+
+      <img
+        src="/MCAP.png"
+        alt="MCAP"
+        className="h-20 w-full object-contain"
+      />
+
+      <img
+        src="/rmg.png"
+        alt="RMG Mortgages"
+        className="h-14 w-full object-contain"
+      />
+
+      <img
+        src="/hometrust.png"
+        alt="Home Trust"
+        className="h-14 w-full object-contain"
+      />
+
+      <img
+        src="/equitable-bank.png"
+        alt="Equitable Bank"
+        className="h-20 w-full object-contain"
+      />
+
+      <img
+        src="/Manulife_Canada.png"
+        alt="Manulife"
+        className="h-14 w-full object-contain"
+      />
+
+      <img
+        src="/meridian-credit-union.png"
+        alt="Meridian Credit Union"
+        className="h-20 w-full object-contain"
+      />
+
+      <img
+        src="/Logo_Prospera_Credit_Union.svg"
+        alt="Prospera Credit Union"
+        className="h-16 w-full object-contain"
+      />
 
     </div>
 
