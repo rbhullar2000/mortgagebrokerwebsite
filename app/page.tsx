@@ -183,46 +183,72 @@ export default function HomePage() {
 </section>
       
 {/* ── Lenders ── */}
-<section id="lenders" className="py-10 lg:py-16 bg-[#F4F6F8]">
+<section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
-    <div className="text-center mb-8 lg:mb-10">
-      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
-        Access to Canada&apos;s Leading Mortgage Lenders
+
+    {/* Heading */}
+    <div className="text-center mb-10">
+      <h2 className="text-3xl lg:text-5xl font-bold text-[#1D2D44] mb-5">
+        Access to Canada's Leading Mortgage Lenders
       </h2>
 
-      <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Compare rates and mortgage options from Canada&apos;s leading banks,
+      <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        Compare rates and mortgage options from Canada's leading banks,
         credit unions and monoline lenders.
       </p>
     </div>
 
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-7 items-center justify-items-center">
+    {/* Logo Grid */}
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
       {[
         { src: "/td.png", alt: "TD Canada Trust" },
         { src: "/scotiabank.png", alt: "Scotiabank" },
         { src: "/Coast_Capital_Savings.png", alt: "Coast Capital Savings" },
         { src: "/National_Bank.png", alt: "National Bank" },
+
         { src: "/firstnational.png", alt: "First National" },
         { src: "/MCAP.png", alt: "MCAP" },
         { src: "/rmg.png", alt: "RMG Mortgages" },
         { src: "/hometrust.png", alt: "Home Trust" },
+
         { src: "/equitable-bank.png", alt: "Equitable Bank" },
-        { src: "/Manulife_Canada.png", alt: "Manulife Canada" },
+        { src: "/Manulife_Canada.png", alt: "Manulife" },
         { src: "/meridian-credit-union.png", alt: "Meridian Credit Union" },
-        { src: "/Prospera Credit Union.png", alt: "Prospera Credit Union" },
+        { src: "/Logo_Prospera_Credit_Union.svg", alt: "Prospera Credit Union" },
       ].map((lender) => (
         <div
           key={lender.alt}
-          className="w-full h-20 sm:h-24 bg-white rounded-xl border border-gray-200 shadow-sm flex items-center justify-center px-5"
+          className="
+            h-32
+            rounded-2xl
+            border
+            border-gray-200
+            bg-white
+            shadow-sm
+            hover:shadow-lg
+            transition-all
+            duration-300
+            flex
+            items-center
+            justify-center
+            p-8
+          "
         >
           <img
             src={lender.src}
             alt={lender.alt}
-            className="max-h-14 sm:max-h-16 max-w-[190px] w-auto object-contain"
+            className="
+              w-full
+              h-full
+              object-contain
+            "
           />
         </div>
       ))}
+
     </div>
+
   </div>
 </section>
 
