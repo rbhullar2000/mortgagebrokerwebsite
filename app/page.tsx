@@ -312,7 +312,7 @@ export default function HomePage() {
 <section id="services" className="py-8 lg:py-14 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
     <div className="text-center mb-6 lg:mb-8">
-      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 lg:mb-3">
+      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
         Mortgage Services
       </h2>
 
