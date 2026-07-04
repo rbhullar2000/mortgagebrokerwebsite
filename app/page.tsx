@@ -59,13 +59,13 @@ export default function HomePage() {
   <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
   {/* Mobile Hero */}
-  <div className="relative md:hidden px-4 pt-20 pb-10 min-h-[780px]">
+  <div className="relative md:hidden px-4 pt-20 pb-10 min-h-[790px]">
     <div className="max-w-md text-left">
       <Badge className="mb-5 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-      <h1 className="text-[2.25rem] font-bold text-[#1D2D44] mb-6 leading-[1.08]">
+      <h1 className="text-[2.25rem] font-bold text-[#1D2D44] mb-28 leading-[1.08]">
         Your Bank Has a{" "}
         <span className="text-[#C79A2B]">Mortgage Advisor.</span>
         <br />
@@ -74,13 +74,7 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      <p className="inline-block rounded-xl border border-white/50 bg-white/65 backdrop-blur-md px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug mb-20">
-        Access 50+ lenders — not just one bank.
-      </p>
-
-      <div className="mb-12 h-1 w-14 rounded-full bg-[#C79A2B]" />
-
-      <div className="grid grid-cols-2 gap-4 mb-12">
+      <div className="grid grid-cols-2 gap-4 mb-8">
         <Button
           size="lg"
           className="w-full h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] px-2"
@@ -104,9 +98,15 @@ export default function HomePage() {
         </Button>
       </div>
 
-      <p className="inline-block rounded-full border border-white/40 bg-white/70 backdrop-blur-md px-4 py-1.5 text-[11px] font-semibold text-[#1D2D44]">
-        Serving BC • Vancouver • Fraser Valley • Okanagan
-      </p>
+      <div className="flex flex-col items-center gap-3">
+        <p className="inline-block rounded-full border border-white/40 bg-white/70 backdrop-blur-md px-4 py-1.5 text-[11px] font-semibold text-[#1D2D44] text-center">
+          Serving BC • Vancouver • Fraser Valley • Okanagan
+        </p>
+
+        <p className="inline-block rounded-xl border border-white/50 bg-white/65 backdrop-blur-md px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug text-center">
+          Access to 50+ lenders — not just one bank.
+        </p>
+      </div>
     </div>
   </div>
 
