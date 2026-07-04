@@ -183,9 +183,9 @@ export default function HomePage() {
 </section>
       
 {/* ── Lenders ── */}
-<section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
+<section id="lenders" className="py-10 lg:py-16 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
-    <div className="text-center mb-10">
+    <div className="text-center mb-8 lg:mb-10">
       <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
         Access to Canada&apos;s Leading Mortgage Lenders
       </h2>
@@ -196,31 +196,31 @@ export default function HomePage() {
       </p>
     </div>
 
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8 items-center justify-items-center">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8 lg:gap-x-12 lg:gap-y-10 items-center justify-items-center">
       {[
-        { src: "/td.png", alt: "TD Bank", className: "w-[170px] h-[70px] scale-[1.75]" },
-        { src: "/scotiabank.png", alt: "Scotiabank", className: "w-[170px] h-[70px] scale-[1.65]" },
-        { src: "/Coast_Capital_Savings.png", alt: "Coast Capital Savings", className: "w-[190px] h-[70px] scale-[0.95]" },
-        { src: "/National_Bank.png", alt: "National Bank", className: "w-[190px] h-[70px] scale-[0.95]" },
+        { src: "/td.png", alt: "TD Bank", className: "h-10 lg:h-12" },
+        { src: "/scotiabank.png", alt: "Scotiabank", className: "h-10 lg:h-12" },
+        { src: "/Coast_Capital_Savings.png", alt: "Coast Capital Savings", className: "h-11 lg:h-14" },
+        { src: "/National_Bank.png", alt: "National Bank", className: "h-12 lg:h-14" },
 
-        { src: "/firstnational.png", alt: "First National", className: "w-[170px] h-[70px] scale-[1.8]" },
-        { src: "/MCAP.png", alt: "MCAP", className: "w-[190px] h-[70px] scale-[0.9]" },
-        { src: "/rmg.png", alt: "RMG Mortgages", className: "w-[170px] h-[70px] scale-[1.9]" },
-        { src: "/hometrust.png", alt: "Home Trust", className: "w-[170px] h-[70px] scale-[1.9]" },
+        { src: "/firstnational.png", alt: "First National", className: "h-10 lg:h-12" },
+        { src: "/MCAP.png", alt: "MCAP", className: "h-13 lg:h-16" },
+        { src: "/rmg.png", alt: "RMG Mortgages", className: "h-11 lg:h-13" },
+        { src: "/hometrust.png", alt: "Home Trust", className: "h-11 lg:h-13" },
 
-        { src: "/equitable-bank.png", alt: "Equitable Bank", className: "w-[190px] h-[70px] scale-[0.9]" },
-        { src: "/Manulife_Canada.png", alt: "Manulife Canada", className: "w-[170px] h-[70px] scale-[1.7]" },
-        { src: "/meridian-credit-union.png", alt: "Meridian Credit Union", className: "w-[190px] h-[70px] scale-[0.9]" },
-        { src: "/Logo_Prospera_Credit_Union.svg", alt: "Prospera Credit Union", className: "w-[170px] h-[70px] scale-[1.2]" },
+        { src: "/equitable-bank.png", alt: "Equitable Bank", className: "h-12 lg:h-16" },
+        { src: "/Manulife_Canada.png?v=2", alt: "Manulife Canada", className: "h-10 lg:h-12" },
+        { src: "/meridian-credit-union.png", alt: "Meridian Credit Union", className: "h-12 lg:h-16" },
+        { src: "/Logo_Prospera_Credit_Union.svg", alt: "Prospera Credit Union", className: "h-12 lg:h-14" },
       ].map((lender) => (
         <div
           key={lender.alt}
-          className="flex h-20 w-56 items-center justify-center overflow-visible"
+          className="flex h-16 w-full max-w-[170px] lg:h-20 lg:max-w-[220px] items-center justify-center overflow-hidden"
         >
           <img
             src={lender.src}
             alt={lender.alt}
-            className={`${lender.className} object-contain`}
+            className={`${lender.className} max-w-full object-contain`}
           />
         </div>
       ))}
