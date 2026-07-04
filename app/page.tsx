@@ -398,29 +398,29 @@ export default function HomePage() {
   </div>
 </section>
   
-     {/* ── About ── */}
-<section id="about" className="py-12 lg:py-16 bg-white">
+   {/* ── About ── */}
+<section id="about" className="py-10 lg:py-16 bg-white">
   <div className="container mx-auto px-4">
-    <div className="grid lg:grid-cols-2 gap-10 items-center">
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
       
       {/* Write-up first on mobile, right side on desktop */}
       <div className="order-1 lg:order-2">
-        <Badge className="mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10">
+        <Badge className="mb-3 lg:mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 text-xs lg:text-sm">
           About Rob S. Bhullar, BSc
         </Badge>
 
-        <h2 className="text-2xl font-bold text-[#1D2D44] mb-6">
+        <h2 className="text-xl lg:text-2xl font-bold text-[#1D2D44] mb-4 lg:mb-6">
           Lead Mortgage Specialist
         </h2>
 
-        <p className="text-base text-gray-600 mb-6 leading-relaxed">
+        <p className="text-sm lg:text-base text-gray-600 mb-5 lg:mb-6 leading-relaxed">
           BC Mortgage Team brings over 25 years of finance experience together with real-world mortgage
           expertise to help homeowners, investors, and first-time buyers make smarter mortgage decisions.
           Our approach blends analytical thinking with practical lending expertise, focusing on how a
           mortgage is structured — not just the rate — to support long-term financial goals.
         </p>
 
-        <div className="space-y-4 mb-8">
+        <div className="space-y-3 lg:space-y-4 mb-6 lg:mb-8">
           {[
             "Licensed Mortgage Professional with BRX Mortgage",
             "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
@@ -429,16 +429,22 @@ export default function HomePage() {
             "Bachelor of Science in Mathematics, Minor in Business Administration & Computing Studies — Simon Fraser University",
           ].map((item, index) => (
             <div key={index} className="flex items-start">
-              <div className="w-2 h-2 bg-[#032133] rounded-full mr-4 mt-2 flex-shrink-0"></div>
-              <span className="text-gray-700">{item}</span>
+              <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-[#032133] rounded-full mr-3 lg:mr-4 mt-2 flex-shrink-0"></div>
+              <span className="text-sm lg:text-base text-gray-700 leading-relaxed">
+                {item}
+              </span>
             </div>
           ))}
         </div>
 
-        <div className="grid grid-cols-3 gap-6 mb-8 items-center text-center">
+        <div className="grid grid-cols-3 gap-4 lg:gap-6 mb-8 items-center text-center">
           <div className="flex flex-col items-center justify-center">
-            <div className="text-3xl font-bold text-[#D4AF37]">25+ years</div>
-            <div className="text-sm text-gray-600">in Financial Industry</div>
+            <div className="text-2xl lg:text-3xl font-bold text-[#D4AF37]">
+              25+ years
+            </div>
+            <div className="text-xs lg:text-sm text-gray-600">
+              in Financial Industry
+            </div>
           </div>
 
           <div className="flex items-center justify-center">
@@ -447,7 +453,7 @@ export default function HomePage() {
               alt="BC Mortgage Team"
               width={96}
               height={72}
-              className="object-contain"
+              className="object-contain w-20 lg:w-24 h-auto"
             />
           </div>
 
@@ -457,11 +463,12 @@ export default function HomePage() {
               alt="BRX Mortgage"
               width={96}
               height={72}
-              className="object-contain"
+              className="object-contain w-20 lg:w-24 h-auto"
             />
           </div>
         </div>
-{/*
+
+        {/*
         <div className="flex flex-col items-center gap-3">
           <Button
             size="lg"
@@ -480,7 +487,8 @@ export default function HomePage() {
           <p className="text-sm text-gray-600 text-center">
             Trusted strategy-focused mortgage guidance for BC borrowers
           </p>
-        </div>   */}
+        </div>
+        */}
       </div>
 
       {/* Photo second on mobile, left side on desktop */}
@@ -488,14 +496,14 @@ export default function HomePage() {
         <img
           src="/headshot.png"
           alt="Rob Bhullar - Mortgage Broker"
-          className="rounded-2xl shadow-2xl w-72 sm:w-80 lg:w-96 mx-auto"
+          className="rounded-2xl shadow-2xl w-64 sm:w-80 lg:w-96 mx-auto"
         />
       </div>
 
     </div>
   </div>
 </section>
-
+      
       {/* ── Market Insights ── 
       <section className="py-10 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
