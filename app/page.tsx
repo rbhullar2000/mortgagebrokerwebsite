@@ -308,7 +308,7 @@ export default function HomePage() {
   </div>
 </section>
 
-  {/* ── Services ── */}
+ {/* ── Services ── */}
 <section id="services" className="py-8 lg:py-14 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
     <div className="text-center mb-6 lg:mb-8">
@@ -324,37 +324,37 @@ export default function HomePage() {
     <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6">
       {[
         {
-          icon: <Users className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
+          icon: <Users className="w-6 h-6 text-[#1D2D44]" />,
           title: "Purchase",
           description: "Buying a home or investment property.",
           link: "/purchase",
         },
         {
-          icon: <TrendingUp className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
+          icon: <TrendingUp className="w-6 h-6 text-[#1D2D44]" />,
           title: "Renewal",
           description: "Compare before you auto-renew.",
           link: "/renewal",
         },
         {
-          icon: <FileText className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
+          icon: <FileText className="w-6 h-6 text-[#1D2D44]" />,
           title: "Refinance",
           description: "Use equity or consolidate debt.",
           link: "/refinance",
         },
         {
-          icon: <Shield className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
+          icon: <Shield className="w-6 h-6 text-[#1D2D44]" />,
           title: "Self-Employed",
           description: "Flexible income solutions.",
           link: "/self-employed",
         },
         {
-          icon: <Calculator className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
+          icon: <Calculator className="w-6 h-6 text-[#1D2D44]" />,
           title: "Investment",
           description: "Rental and portfolio financing.",
           link: "/investment",
         },
         {
-          icon: <Clock className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
+          icon: <Clock className="w-6 h-6 text-[#1D2D44]" />,
           title: "Quick Closings",
           description: "Fast approvals when timing matters.",
           link: "/quick-closings",
@@ -365,8 +365,8 @@ export default function HomePage() {
           className="bg-white shadow-sm hover:shadow-md transition-shadow rounded-xl"
         >
           <CardContent className="p-4 lg:p-5">
-            <div className="flex flex-col lg:flex-row lg:items-start gap-3 lg:gap-4">
-              <div className="w-9 h-9 lg:w-11 lg:h-11 bg-[#F4F6F8] rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-4">
+              <div className="hidden lg:flex w-11 h-11 bg-[#F4F6F8] rounded-lg items-center justify-center flex-shrink-0">
                 {service.icon}
               </div>
 
@@ -381,7 +381,7 @@ export default function HomePage() {
 
                 <Button
                   variant="link"
-                  className="p-0 h-auto text-[#1D2D44] font-semibold text-xs lg:text-sm"
+                  className="p-0 h-auto text-[#C79A2B] hover:text-[#D4AF37] font-semibold text-xs lg:text-sm"
                   asChild
                 >
                   <Link href={service.link}>
