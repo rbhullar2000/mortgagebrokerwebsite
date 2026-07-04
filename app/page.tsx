@@ -308,82 +308,85 @@ export default function HomePage() {
   </div>
 </section>
 
-    {/* ── Services ── */}
-<section id="services" className="py-10 lg:py-14 bg-[#F4F6F8]">
+  {/* ── Services ── */}
+<section id="services" className="py-8 lg:py-14 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
-    <div className="text-center mb-8">
-      <h2 className="text-2xl font-bold text-[#1D2D44] mb-3">
+    <div className="text-center mb-6 lg:mb-8">
+      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-2 lg:mb-3">
         Mortgage Services
       </h2>
-      <p className="text-base lg:text-xl text-[#2C2C2C] max-w-3xl mx-auto">
+
+      <p className="text-sm sm:text-base lg:text-xl text-[#2C2C2C] max-w-3xl mx-auto leading-relaxed">
         Practical mortgage solutions for purchases, renewals, refinances, and more.
       </p>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6">
       {[
         {
-          icon: <Users className="w-6 h-6 text-[#1D2D44]" />,
+          icon: <Users className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
           title: "Purchase",
-          description: "First-time buyers, next homes, and investment properties.",
+          description: "Buying a home or investment property.",
           link: "/purchase",
         },
         {
-          icon: <TrendingUp className="w-6 h-6 text-[#1D2D44]" />,
+          icon: <TrendingUp className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
           title: "Renewal",
-          description: "Don’t auto-renew. Compare your options before signing.",
+          description: "Compare before you auto-renew.",
           link: "/renewal",
         },
         {
-          icon: <FileText className="w-6 h-6 text-[#1D2D44]" />,
+          icon: <FileText className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
           title: "Refinance",
-          description: "Use equity strategically or consolidate debt.",
+          description: "Use equity or consolidate debt.",
           link: "/refinance",
         },
         {
-          icon: <Shield className="w-6 h-6 text-[#1D2D44]" />,
+          icon: <Shield className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
           title: "Self-Employed",
-          description: "Flexible solutions for business owners and non-traditional income.",
+          description: "Flexible income solutions.",
           link: "/self-employed",
         },
         {
-          icon: <Calculator className="w-6 h-6 text-[#1D2D44]" />,
-          title: "Investment Properties",
-          description: "Financing strategies for rental and portfolio growth.",
+          icon: <Calculator className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
+          title: "Investment",
+          description: "Rental and portfolio financing.",
           link: "/investment",
         },
         {
-          icon: <Clock className="w-6 h-6 text-[#1D2D44]" />,
+          icon: <Clock className="w-5 h-5 lg:w-6 lg:h-6 text-[#1D2D44]" />,
           title: "Quick Closings",
-          description: "Fast approvals for time-sensitive deals.",
+          description: "Fast approvals when timing matters.",
           link: "/quick-closings",
         },
       ].map((service, index) => (
         <Card
           key={index}
-          className="bg-white shadow-sm hover:shadow-md transition-shadow"
+          className="bg-white shadow-sm hover:shadow-md transition-shadow rounded-xl"
         >
-          <CardContent className="p-5">
-            <div className="flex items-start gap-4">
-              <div className="w-11 h-11 bg-[#F4F6F8] rounded-lg flex items-center justify-center flex-shrink-0">
+          <CardContent className="p-4 lg:p-5">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-3 lg:gap-4">
+              <div className="w-9 h-9 lg:w-11 lg:h-11 bg-[#F4F6F8] rounded-lg flex items-center justify-center flex-shrink-0">
                 {service.icon}
               </div>
 
               <div>
-                <h3 className="text-lg font-bold text-[#1D2D44] mb-1">
+                <h3 className="text-base lg:text-lg font-bold text-[#1D2D44] mb-1">
                   {service.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-3">
+
+                <p className="text-xs lg:text-sm text-gray-600 leading-snug mb-2 lg:mb-3">
                   {service.description}
                 </p>
 
                 <Button
                   variant="link"
-                  className="p-0 text-[#1D2D44] font-medium h-auto"
+                  className="p-0 h-auto text-[#1D2D44] font-semibold text-xs lg:text-sm"
                   asChild
                 >
                   <Link href={service.link}>
-                    Learn more <ArrowRight className="ml-2 w-4 h-4" />
+                    Learn more
+                    <ArrowRight className="ml-1.5 lg:ml-2 w-3.5 h-3.5 lg:w-4 lg:h-4" />
                   </Link>
                 </Button>
               </div>
