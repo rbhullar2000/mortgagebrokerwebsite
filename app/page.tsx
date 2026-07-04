@@ -183,134 +183,48 @@ export default function HomePage() {
 </section>
       
 {/* ── Lenders ── */}
-<section id="lenders" className="py-16 lg:py-20 bg-[#F4F6F8]">
+<section id="lenders" className="py-12 lg:py-16 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
-
-    {/* Heading */}
-    <div className="text-center mb-12">
-      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">
-        Access to Canada's Leading Mortgage Lenders
+    <div className="text-center mb-10">
+      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
+        Access to Canada&apos;s Leading Mortgage Lenders
       </h2>
 
-      <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-        Compare rates and mortgage options from Canada's leading banks,
+      <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Compare rates and mortgage options from Canada&apos;s leading banks,
         credit unions and monoline lenders.
       </p>
     </div>
 
-    {/* Logo Grid */}
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-10 items-center justify-items-center">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-8 items-center justify-items-center">
+      {[
+        { src: "/td.png", alt: "TD Bank", className: "h-10" },
+        { src: "/scotiabank.png", alt: "Scotiabank", className: "h-10" },
+        { src: "/Coast_Capital_Savings.png", alt: "Coast Capital Savings", className: "h-12" },
+        { src: "/National_Bank.png", alt: "National Bank", className: "h-14" },
 
-      {/* TD */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/td.png"
-          alt="TD Bank"
-          className="max-h-11 w-auto object-contain"
-        />
-      </div>
+        { src: "/firstnational.png", alt: "First National", className: "h-12" },
+        { src: "/MCAP.png", alt: "MCAP", className: "h-14" },
+        { src: "/rmg.png", alt: "RMG Mortgages", className: "h-10" },
+        { src: "/hometrust.png", alt: "Home Trust", className: "h-10" },
 
-      {/* Scotia */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/scotiabank.png"
-          alt="Scotiabank"
-          className="max-h-11 w-auto object-contain"
-        />
-      </div>
-
-      {/* Coast Capital */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/Coast_Capital_Savings.png"
-          alt="Coast Capital"
-          className="max-h-14 w-auto object-contain"
-        />
-      </div>
-
-      {/* National Bank */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/National_Bank.png"
-          alt="National Bank"
-          className="max-h-14 w-auto object-contain"
-        />
-      </div>
-
-      {/* First National */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/firstnational.png"
-          alt="First National"
-          className="max-h-11 w-auto object-contain"
-        />
-      </div>
-
-      {/* MCAP */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/MCAP.png"
-          alt="MCAP"
-          className="max-h-16 w-auto object-contain"
-        />
-      </div>
-
-      {/* RMG */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/rmg.png"
-          alt="RMG Mortgages"
-          className="max-h-11 w-auto object-contain"
-        />
-      </div>
-
-      {/* Home Trust */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/hometrust.png"
-          alt="Home Trust"
-          className="max-h-11 w-auto object-contain"
-        />
-      </div>
-
-      {/* Equitable */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/equitable-bank.png"
-          alt="Equitable Bank"
-          className="max-h-16 w-auto object-contain"
-        />
-      </div>
-
-      {/* Manulife */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/Manulife_Canada.png"
-          alt="Manulife"
-          className="max-h-11 w-auto object-contain"
-        />
-      </div>
-
-      {/* Meridian */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/meridian-credit-union.png"
-          alt="Meridian"
-          className="max-h-16 w-auto object-contain"
-        />
-      </div>
-
-      {/* Prospera */}
-      <div className="flex items-center justify-center h-16 w-64">
-        <img
-          src="/Logo_Prospera_Credit_Union.svg"
-          alt="Prospera Credit Union"
-          className="max-h-14 w-auto object-contain"
-        />
-      </div>
-
+        { src: "/equitable-bank.png", alt: "Equitable Bank", className: "h-14" },
+        { src: "/Manulife_Canada.png", alt: "Manulife Canada", className: "h-10" },
+        { src: "/meridian-credit-union.png", alt: "Meridian Credit Union", className: "h-14" },
+        { src: "/Logo_Prospera_Credit_Union.svg", alt: "Prospera Credit Union", className: "h-12" },
+      ].map((lender) => (
+        <div
+          key={lender.alt}
+          className="flex h-16 w-52 items-center justify-center"
+        >
+          <img
+            src={lender.src}
+            alt={lender.alt}
+            className={`${lender.className} max-w-full object-contain`}
+          />
+        </div>
+      ))}
     </div>
-
   </div>
 </section>
 
