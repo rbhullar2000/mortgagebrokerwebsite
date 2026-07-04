@@ -49,7 +49,7 @@ export default function HomePage() {
   />
 
   {/* Mobile overlays */}
-  <div className="absolute inset-0 bg-black/10 md:hidden" />
+  <div className="absolute inset-0 bg-white/5 md:hidden" />
   <div className="absolute inset-0 bg-gradient-to-r from-white/45 via-white/10 to-transparent md:hidden" />
   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/20 md:hidden" />
 
