@@ -80,7 +80,7 @@ export default function HomePage() {
           className="w-full h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] px-2"
           asChild
         >
-          <Link href="/mortgage-checker">Check Mortgage →</Link>
+          <Link href="/mortgage-checker">Am I Overpaying →</Link>
         </Button>
 
         <Button
