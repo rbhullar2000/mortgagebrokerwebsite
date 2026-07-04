@@ -83,18 +83,17 @@ export default function HomePage() {
         One Too.
       </h1>
 
-     <div className="flex justify-center mb-8">
-  <Button
-    size="lg"
-    className="w-[330px] max-w-[90%] h-12 bg-[#D4AF37] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] rounded-xl"
-    asChild
-  >
-    <Link href="/mortgage-checker">
-      Am I Overpaying? 2 min →
-    </Link>
-  </Button>
-</div>
+    <Button
+  size="lg"
+  className="w-[330px] max-w-[90%] h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] rounded-xl border-2 border-white/30"
+  asChild
+>
+  <Link href="/mortgage-checker">
+    Am I Overpaying? 2 min →
+  </Link>
+</Button>
 
+      
       <div className="flex flex-col items-center gap-3">
         <p className="inline-block rounded-full border border-white/40 bg-white/70 backdrop-blur-md px-4 py-1.5 text-[11px] font-semibold text-[#1D2D44] text-center">
           Serving BC • Vancouver • Fraser Valley • Okanagan
