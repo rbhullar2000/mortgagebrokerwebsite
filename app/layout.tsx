@@ -9,12 +9,14 @@ import ChatWidget from "@/components/ChatWidget"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bcmortgageteam.com"),
   title: {
     template: "%s | BC Mortgage Team",
-    default: "BC Mortgage Team | Mortgage Broker — Serving BC — Vancouver, Fraser Valley & the Okanagan",
+    default:
+      "BC Mortgage Team | Mortgage Broker — Serving BC — Vancouver, Fraser Valley & the Okanagan",
   },
   description:
-    "BC Mortgage Team is located in British Columbia. Get the best mortgage rates for home purchase, renewal, and refinance. Access 50+ lenders and fast approvals.",
+    "Independent mortgage advice for BC borrowers. Compare 50+ lenders and make smarter mortgage decisions for purchase, renewal, and refinance.",
   keywords: [
     "mortgage broker",
     "BC mortgage",
@@ -25,16 +27,16 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Rob Bhullar" }],
   openGraph: {
-    title: "BC Mortgage Team | Smart Financial Solutions",
+    title: "BC Mortgage Team | Strategy-First Mortgage Advice",
     description:
-      "BC Mortgage Team is located in British Columbia. Get the best mortgage rates for home purchase, renewal, and refinance. Access 50+ lenders and fast approvals.",
+      "Independent mortgage advice for BC borrowers. Compare 50+ lenders and make smarter mortgage decisions.",
     url: "https://bcmortgageteam.com",
     siteName: "BC Mortgage Team",
     locale: "en_CA",
     type: "website",
     images: [
       {
-        url: "https://bcmortgageteam.com/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "BC Mortgage Team",
@@ -43,10 +45,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BC Mortgage Team | Smart Financial Solutions",
+    title: "BC Mortgage Team | Strategy-First Mortgage Advice",
     description:
-      "BC Mortgage Team is located in British Columbia. Get the best mortgage rates for home purchase, renewal, and refinance. Access 50+ lenders and fast approvals.",
-    images: ["https://bcmortgageteam.com/og-image.jpg"],
+      "Independent mortgage advice for BC borrowers. Compare 50+ lenders and make smarter mortgage decisions.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -70,7 +72,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager */}
         <Script id="gtm-head" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];
@@ -93,6 +94,7 @@ export default function RootLayout({
               name: "BC Mortgage Team - Mortgage Services",
               description: "BC Mortgage Team serving British Columbia",
               url: "https://bcmortgageteam.com",
+              image: "https://bcmortgageteam.com/og-image.jpg",
               telephone: "+1-778-889-7964",
               address: {
                 "@type": "PostalAddress",
@@ -123,7 +125,6 @@ export default function RootLayout({
       </head>
 
       <body className={inter.className}>
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-KFT4WFV9"
@@ -133,9 +134,7 @@ export default function RootLayout({
           />
         </noscript>
 
-        <Suspense fallback={<div>Loading...</div>}>
-          {children}
-        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
 
         <ChatWidget />
       </body>
