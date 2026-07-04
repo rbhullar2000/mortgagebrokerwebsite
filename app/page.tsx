@@ -554,14 +554,17 @@ export default function HomePage() {
       */}
 
       {/* ── Contact ── */}
-    <section className="py-12 lg:py-14 bg-[#F4F6F8]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-[#1D2D44] mb-4">Ready to Get Started?</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Contact today for a free consultation, or start your secure online application right away.
-            </p>
-          </div>
+   <section className="py-10 lg:py-14 bg-[#F4F6F8]">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-6 lg:mb-8">
+      <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-2 lg:mb-4">
+        Ready to Get Started?
+      </h2>
+
+      <p className="text-sm lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Contact today for a free consultation, or start your secure online application right away.
+      </p>
+    </div>
 
           {/* Calendly embed — div, not a nested section */}
           <div className="max-w-6xl mx-auto mb-12">
