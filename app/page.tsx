@@ -90,7 +90,7 @@ export default function HomePage() {
     asChild
   >
     <Link href="/mortgage-checker">
-      Am I Overpaying 2 min →
+      Am I Overpaying? 2 min →
     </Link>
   </Button>
 </div>
