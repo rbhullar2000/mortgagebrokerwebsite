@@ -433,7 +433,6 @@ export default function HomePage() {
           {[
             "Licensed Mortgage Professional with BRX Mortgage",
             "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
-            "Experience with complex approvals, debt consolidation, and investor financing",
             "Focused on aligning mortgage decisions with long-term financial strategy",
             "Bachelor of Science in Mathematics, Minor in Business Administration & Computing Studies — Simon Fraser University",
           ].map((item, index) => (
