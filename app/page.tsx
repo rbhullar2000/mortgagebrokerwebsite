@@ -83,29 +83,17 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      <div className="grid grid-cols-2 gap-4 mb-8">
-        <Button
-          size="lg"
-          className="w-full h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] px-2"
-          asChild
-        >
-          <Link href="/mortgage-checker">Am I Overpaying →</Link>
-        </Button>
- {/* 
-        <Button
-          size="lg"
-          className="w-full h-12 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-[13px] px-2"
-          asChild
-        >
-         <Link
-            href="https://calendly.com/bcmortgageteam/15min"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book Call →
-          </Link>
-        </Button>    */}
-      </div>
+     <div className="flex justify-center mb-8">
+  <Button
+    size="lg"
+    className="w-full max-w-sm h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] px-2"
+    asChild
+  >
+    <Link href="/mortgage-checker">
+      Am I Overpaying →
+    </Link>
+  </Button>
+</div>
 
       <div className="flex flex-col items-center gap-3">
         <p className="inline-block rounded-full border border-white/40 bg-white/70 backdrop-blur-md px-4 py-1.5 text-[11px] font-semibold text-[#1D2D44] text-center">
