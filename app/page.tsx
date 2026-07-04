@@ -97,14 +97,14 @@ export default function HomePage() {
           className="w-full h-12 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl text-[13px] px-2"
           asChild
         >
-          <Link
+     {/*      <Link
             href="https://calendly.com/bcmortgageteam/15min"
             target="_blank"
             rel="noopener noreferrer"
           >
             Book Call →
           </Link>
-        </Button>
+        </Button>    */}
       </div>
 
       <div className="flex flex-col items-center gap-3">
