@@ -192,7 +192,7 @@ export default function HomePage() {
 
       <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
         Compare rates and mortgage options from Canada&apos;s leading banks,
-        credit unions and monoline lenders.
+        credit unions and private lenders.
       </p>
     </div>
 
