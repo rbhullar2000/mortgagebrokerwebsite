@@ -187,8 +187,8 @@ export default function HomePage() {
   <div className="container mx-auto px-4">
 
     {/* Heading */}
-    <div className="text-center mb-14">
-      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-5">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">
         Access to Canada's Leading Mortgage Lenders
       </h2>
 
@@ -198,80 +198,116 @@ export default function HomePage() {
       </p>
     </div>
 
-    {/* Logos */}
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-14 gap-x-12 items-center justify-items-center">
+    {/* Logo Grid */}
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-10 items-center justify-items-center">
 
-      <img
-        src="/td.png"
-        alt="TD Bank"
-        className="h-14 w-full object-contain"
-      />
+      {/* TD */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/td.png"
+          alt="TD Bank"
+          className="max-h-11 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/scotiabank.png"
-        alt="Scotiabank"
-        className="h-14 w-full object-contain"
-      />
+      {/* Scotia */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/scotiabank.png"
+          alt="Scotiabank"
+          className="max-h-11 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/Coast_Capital_Savings.png"
-        alt="Coast Capital"
-        className="h-16 w-full object-contain"
-      />
+      {/* Coast Capital */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/Coast_Capital_Savings.png"
+          alt="Coast Capital"
+          className="max-h-14 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/National_Bank.png"
-        alt="National Bank"
-        className="h-16 w-full object-contain"
-      />
+      {/* National Bank */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/National_Bank.png"
+          alt="National Bank"
+          className="max-h-14 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/firstnational.png"
-        alt="First National"
-        className="h-14 w-full object-contain"
-      />
+      {/* First National */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/firstnational.png"
+          alt="First National"
+          className="max-h-11 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/MCAP.png"
-        alt="MCAP"
-        className="h-20 w-full object-contain"
-      />
+      {/* MCAP */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/MCAP.png"
+          alt="MCAP"
+          className="max-h-16 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/rmg.png"
-        alt="RMG Mortgages"
-        className="h-14 w-full object-contain"
-      />
+      {/* RMG */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/rmg.png"
+          alt="RMG Mortgages"
+          className="max-h-11 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/hometrust.png"
-        alt="Home Trust"
-        className="h-14 w-full object-contain"
-      />
+      {/* Home Trust */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/hometrust.png"
+          alt="Home Trust"
+          className="max-h-11 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/equitable-bank.png"
-        alt="Equitable Bank"
-        className="h-20 w-full object-contain"
-      />
+      {/* Equitable */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/equitable-bank.png"
+          alt="Equitable Bank"
+          className="max-h-16 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/Manulife_Canada.png"
-        alt="Manulife"
-        className="h-14 w-full object-contain"
-      />
+      {/* Manulife */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/Manulife_Canada.png"
+          alt="Manulife"
+          className="max-h-11 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/meridian-credit-union.png"
-        alt="Meridian Credit Union"
-        className="h-20 w-full object-contain"
-      />
+      {/* Meridian */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/meridian-credit-union.png"
+          alt="Meridian"
+          className="max-h-16 w-auto object-contain"
+        />
+      </div>
 
-      <img
-        src="/Logo_Prospera_Credit_Union.svg"
-        alt="Prospera Credit Union"
-        className="h-16 w-full object-contain"
-      />
+      {/* Prospera */}
+      <div className="flex items-center justify-center h-16 w-64">
+        <img
+          src="/Logo_Prospera_Credit_Union.svg"
+          alt="Prospera Credit Union"
+          className="max-h-14 w-auto object-contain"
+        />
+      </div>
 
     </div>
 
