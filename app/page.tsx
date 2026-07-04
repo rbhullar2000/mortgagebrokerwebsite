@@ -86,7 +86,7 @@ export default function HomePage() {
      <div className="flex justify-center mb-8">
   <Button
     size="lg"
-    className="w-[500px] max-w-[90%] h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] rounded-xl"
+    className="w-[330px] max-w-[90%] h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] rounded-xl"
     asChild
   >
     <Link href="/mortgage-checker">
