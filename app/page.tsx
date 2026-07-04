@@ -83,15 +83,17 @@ export default function HomePage() {
         One Too.
       </h1>
 
-    <Button
-  size="lg"
-  className="w-[330px] max-w-[90%] h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] rounded-xl border-2 border-white/30"
-  asChild
->
-  <Link href="/mortgage-checker">
-    Am I Overpaying? 2 min →
-  </Link>
-</Button>
+   <div className="flex justify-center mb-8">
+  <Button
+    size="lg"
+    className="w-[330px] max-w-[90%] h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] rounded-xl ring-1 ring-white/40"
+    asChild
+  >
+    <Link href="/mortgage-checker">
+      Am I Overpaying? 2 min →
+    </Link>
+  </Button>
+</div>
 
       
       <div className="flex flex-col items-center gap-3">
