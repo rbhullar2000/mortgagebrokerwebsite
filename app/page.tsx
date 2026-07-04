@@ -23,18 +23,27 @@ export const metadata: Metadata = {
     siteName: "BC Mortgage Team",
     locale: "en_CA",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BC Mortgage Team — Independent Mortgage Broker serving BC",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "BC Mortgage Team | Mortgage Broker — Serving BC — Vancouver, Fraser Valley & the Okanagan",
     description:
       "Strategy-first mortgage advice for BC borrowers. Access 50+ lenders for home purchase, renewal, and refinance.",
+    images: ["/og-image.jpg"],
   },
   alternates: {
     canonical: "https://bcmortgageteam.com",
   },
 }
- 
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
