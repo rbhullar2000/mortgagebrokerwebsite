@@ -183,7 +183,7 @@ export default function HomePage() {
 </section>
       
 {/* ── Lenders ── */}
-<section id="lenders" className="py-10 lg:py-16 bg-[#F4F6F8]">
+<section id="lenders" className="py-9 sm:py-12 lg:py-16 bg-[#F4F6F8]">
   <div className="container mx-auto px-4">
     <div className="text-center mb-8 lg:mb-10">
       <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
@@ -196,31 +196,31 @@ export default function HomePage() {
       </p>
     </div>
 
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8 lg:gap-x-12 lg:gap-y-10 items-center justify-items-center">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-7 lg:gap-x-8 lg:gap-y-8 items-center justify-items-center">
       {[
-        { src: "/td.png", alt: "TD Bank", className: "h-10 lg:h-12" },
-        { src: "/scotiabank.png", alt: "Scotiabank", className: "h-10 lg:h-12" },
-        { src: "/Coast_Capital_Savings.png", alt: "Coast Capital Savings", className: "h-11 lg:h-14" },
-        { src: "/National_Bank.png", alt: "National Bank", className: "h-12 lg:h-14" },
+        { src: "/td.png", alt: "TD Bank", className: "w-[118px] h-[48px] scale-[1.45] lg:w-[170px] lg:h-[70px] lg:scale-[1.75]" },
+        { src: "/scotiabank.png", alt: "Scotiabank", className: "w-[118px] h-[48px] scale-[1.38] lg:w-[170px] lg:h-[70px] lg:scale-[1.65]" },
+        { src: "/Coast_Capital_Savings.png", alt: "Coast Capital Savings", className: "w-[145px] h-[48px] scale-[0.95] lg:w-[190px] lg:h-[70px] lg:scale-[0.95]" },
+        { src: "/National_Bank.png", alt: "National Bank", className: "w-[145px] h-[48px] scale-[0.95] lg:w-[190px] lg:h-[70px] lg:scale-[0.95]" },
 
-        { src: "/firstnational.png", alt: "First National", className: "h-10 lg:h-12" },
-        { src: "/MCAP.png", alt: "MCAP", className: "h-13 lg:h-16" },
-        { src: "/rmg.png", alt: "RMG Mortgages", className: "h-11 lg:h-13" },
-        { src: "/hometrust.png", alt: "Home Trust", className: "h-11 lg:h-13" },
+        { src: "/firstnational.png", alt: "First National", className: "w-[118px] h-[48px] scale-[1.45] lg:w-[170px] lg:h-[70px] lg:scale-[1.8]" },
+        { src: "/MCAP.png", alt: "MCAP", className: "w-[145px] h-[48px] scale-[0.88] lg:w-[190px] lg:h-[70px] lg:scale-[0.9]" },
+        { src: "/rmg.png", alt: "RMG Mortgages", className: "w-[118px] h-[48px] scale-[1.5] lg:w-[170px] lg:h-[70px] lg:scale-[1.9]" },
+        { src: "/hometrust.png", alt: "Home Trust", className: "w-[118px] h-[48px] scale-[1.5] lg:w-[170px] lg:h-[70px] lg:scale-[1.9]" },
 
-        { src: "/equitable-bank.png", alt: "Equitable Bank", className: "h-12 lg:h-16" },
-        { src: "/Manulife_Canada.png?v=2", alt: "Manulife Canada", className: "h-10 lg:h-12" },
-        { src: "/meridian-credit-union.png", alt: "Meridian Credit Union", className: "h-12 lg:h-16" },
-        { src: "/Logo_Prospera_Credit_Union.svg", alt: "Prospera Credit Union", className: "h-12 lg:h-14" },
+        { src: "/equitable-bank.png", alt: "Equitable Bank", className: "w-[145px] h-[48px] scale-[0.9] lg:w-[190px] lg:h-[70px] lg:scale-[0.9]" },
+        { src: "/Manulife_Canada.png?v=2", alt: "Manulife Canada", className: "w-[118px] h-[48px] scale-[1.4] lg:w-[170px] lg:h-[70px] lg:scale-[1.7]" },
+        { src: "/meridian-credit-union.png", alt: "Meridian Credit Union", className: "w-[145px] h-[48px] scale-[0.9] lg:w-[190px] lg:h-[70px] lg:scale-[0.9]" },
+        { src: "/Logo_Prospera_Credit_Union.svg", alt: "Prospera Credit Union", className: "w-[118px] h-[48px] scale-[1.05] lg:w-[170px] lg:h-[70px] lg:scale-[1.2]" },
       ].map((lender) => (
         <div
           key={lender.alt}
-          className="flex h-16 w-full max-w-[170px] lg:h-20 lg:max-w-[220px] items-center justify-center overflow-hidden"
+          className="flex h-14 w-full max-w-[155px] lg:h-20 lg:w-56 lg:max-w-none items-center justify-center overflow-visible"
         >
           <img
             src={lender.src}
             alt={lender.alt}
-            className={`${lender.className} max-w-full object-contain`}
+            className={`${lender.className} object-contain`}
           />
         </div>
       ))}
