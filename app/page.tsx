@@ -407,29 +407,29 @@ export default function HomePage() {
   </div>
 </section>
   
-   {/* ── About ── */}
+ {/* ── About ── */}
 <section id="about" className="py-10 lg:py-16 bg-white">
   <div className="container mx-auto px-4">
-    <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
-      
+    <div className="grid lg:grid-cols-2 gap-8 items-center">
+
       {/* Write-up first on mobile, right side on desktop */}
       <div className="order-1 lg:order-2">
-        <Badge className="mb-3 lg:mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 text-xs lg:text-sm">
+        <Badge className="mb-3 lg:mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 text-xs lg:text-xs">
           About Rob S. Bhullar, BSc
         </Badge>
 
-        <h2 className="text-xl lg:text-2xl font-bold text-[#1D2D44] mb-4 lg:mb-6">
+        <h2 className="text-xl lg:text-xl font-bold text-[#1D2D44] mb-4 lg:mb-5">
           Lead Mortgage Specialist
         </h2>
 
-        <p className="text-sm lg:text-base text-gray-600 mb-5 lg:mb-6 leading-relaxed">
+        <p className="text-sm lg:text-sm text-gray-600 mb-5 lg:mb-5 leading-relaxed">
           BC Mortgage Team brings over 25 years of finance experience together with real-world mortgage
           expertise to help homeowners, investors, and first-time buyers make smarter mortgage decisions.
           Our approach blends analytical thinking with practical lending expertise, focusing on how a
           mortgage is structured — not just the rate — to support long-term financial goals.
         </p>
 
-        <div className="space-y-3 lg:space-y-4 mb-6 lg:mb-8">
+        <div className="space-y-3 lg:space-y-3 mb-6 lg:mb-6">
           {[
             "Licensed Mortgage Professional with BRX Mortgage",
             "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
@@ -438,20 +438,22 @@ export default function HomePage() {
             "Bachelor of Science in Mathematics, Minor in Business Administration & Computing Studies — Simon Fraser University",
           ].map((item, index) => (
             <div key={index} className="flex items-start">
-              <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-[#032133] rounded-full mr-3 lg:mr-4 mt-2 flex-shrink-0"></div>
-              <span className="text-sm lg:text-base text-gray-700 leading-relaxed">
+              <div className="w-1.5 h-1.5 bg-[#032133] rounded-full mr-3 mt-[8px] flex-shrink-0"></div>
+
+              <span className="text-sm lg:text-sm text-gray-700 leading-relaxed">
                 {item}
               </span>
             </div>
           ))}
         </div>
 
-        <div className="grid grid-cols-3 gap-4 lg:gap-6 mb-8 items-center text-center">
+        <div className="grid grid-cols-3 gap-4 lg:gap-5 mb-8 items-center text-center">
           <div className="flex flex-col items-center justify-center">
-            <div className="text-2xl lg:text-3xl font-bold text-[#D4AF37]">
+            <div className="text-2xl lg:text-2xl font-bold text-[#D4AF37]">
               25+ years
             </div>
-            <div className="text-xs lg:text-sm text-gray-600">
+
+            <div className="text-xs lg:text-xs text-gray-600">
               in Financial Industry
             </div>
           </div>
@@ -462,7 +464,7 @@ export default function HomePage() {
               alt="BC Mortgage Team"
               width={96}
               height={72}
-              className="object-contain w-20 lg:w-24 h-auto"
+              className="object-contain w-20 lg:w-20 h-auto"
             />
           </div>
 
@@ -472,7 +474,7 @@ export default function HomePage() {
               alt="BRX Mortgage"
               width={96}
               height={72}
-              className="object-contain w-20 lg:w-24 h-auto"
+              className="object-contain w-20 lg:w-20 h-auto"
             />
           </div>
         </div>
