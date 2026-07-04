@@ -8,7 +8,7 @@ import ChatWidget from "@/components/ChatWidget"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
+export const metadata: Metadata = { 
   metadataBase: new URL("https://bcmortgageteam.com"),
   title: {
     template: "%s | BC Mortgage Team",
