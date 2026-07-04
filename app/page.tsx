@@ -59,7 +59,7 @@ export default function HomePage() {
   <div className="absolute inset-0 hidden md:block bg-gradient-to-b from-transparent via-transparent to-white/35" />
 
   {/* Mobile Hero */}
-  <div className="relative md:hidden px-4 pt-20 pb-10 min-h-[690px]">
+  <div className="relative md:hidden px-4 pt-20 pb-10 min-h-[735px]">
     <div className="max-w-md text-left">
       <Badge className="mb-5 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
         Strategy-First Mortgage Advice for BC Borrowers
@@ -78,9 +78,9 @@ export default function HomePage() {
         Access 50+ lenders — not just one bank.
       </p>
 
-      <div className="mb-9 h-1 w-14 rounded-full bg-[#C79A2B]" />
+      <div className="mb-16 h-1 w-14 rounded-full bg-[#C79A2B]" />
 
-      <div className="grid grid-cols-2 gap-4 mb-8">
+      <div className="grid grid-cols-2 gap-4 mb-10">
         <Button
           size="lg"
           className="w-full h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[13px] px-2"
