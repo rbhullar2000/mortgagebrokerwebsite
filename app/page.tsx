@@ -227,7 +227,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-
+      
   {/* ── Testimonials ── */}
 <section className="py-10 bg-white">
   <div className="container mx-auto px-4">
