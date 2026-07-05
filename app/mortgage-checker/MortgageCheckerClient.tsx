@@ -49,7 +49,8 @@ const BALANCE_RANGES = [
   { label: "$300K–$500K", value: 400000 },
   { label: "$500K–$750K", value: 625000 },
   { label: "$750K–$1M", value: 875000 },
-  { label: "Over $1M", value: 1200000 },
+  { label: "$1M–$1.5M", value: 1250000 },
+  { label: "Over $1.5M", value: 1750000 },
 ];
 
 const RATE_RANGES = [
@@ -65,7 +66,8 @@ const VALUE_RANGES = [
   { label: "$600K–$800K", value: 700000 },
   { label: "$800K–$1M", value: 900000 },
   { label: "$1M–$1.5M", value: 1250000 },
-  { label: "Over $1.5M", value: 1750000 },
+  { label: "$1.5M–$3M", value: 2250000 },
+  { label: "Over $3M", value: 3500000 },
 ];
 
 const MONTHS = [
