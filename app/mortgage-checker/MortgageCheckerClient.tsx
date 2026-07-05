@@ -777,9 +777,23 @@ export default function MortgageCheckerClient() {
       return lines.join(" ");
     })();
 
-    const clientP3 = isNewPurchase
-      ? "Book a free 15-minute call to confirm your real borrowing power and whether fixed or variable fits best — access to 50+ lenders, no pressure."
-      : "Book a free 15-minute call to run your exact numbers — access to 50+ lenders, no pressure.";
+    // The booking button sits directly under this box, so no CTA line here —
+    // close with a short recommendation instead.
+    const clientP3 = (() => {
+      if (isNewPurchase) {
+        return "Recommendation: confirm your real borrowing power and whether fixed or variable fits best before writing an offer.";
+      }
+
+      if (renewalUrgency === "imminent" || renewalUrgency === "overdue") {
+        return "Recommendation: lock in your next term now rather than defaulting to your lender's renewal offer — it's rarely their sharpest rate.";
+      }
+
+      if (renewalWarning) {
+        return "Recommendation: shop the market before your next renewal rather than simply signing your lender's renewal letter.";
+      }
+
+      return "Recommendation: start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter.";
+    })();
 
     const clientReview = [clientP1, clientP2, clientP3].filter(Boolean).join("\n\n");
 
@@ -1628,6 +1642,10 @@ export default function MortgageCheckerClient() {
                   aiText || "Unable to generate review. Please book a call for your full assessment."
                 )}
               </div>
+
+              <p className="text-center text-sm font-semibold text-[#1D2D44] mb-3">
+                Your bank has a mortgage advisor. You should have one too.
+              </p>
 
               <Link
                 href="https://calendly.com/bcmortgageteam/15min"
