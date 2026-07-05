@@ -43,6 +43,31 @@ const LENDERS = [
 
 const SERVICE_OPTIONS = ["New Purchase", "Renewal", "Refinance", "Other"];
 
+// ── Tap-to-select ranges: midpoints used for calculation when no exact number ─
+const BALANCE_RANGES = [
+  { label: "Under $300K", value: 250000 },
+  { label: "$300K–$500K", value: 400000 },
+  { label: "$500K–$750K", value: 625000 },
+  { label: "$750K–$1M", value: 875000 },
+  { label: "Over $1M", value: 1200000 },
+];
+
+const RATE_RANGES = [
+  { label: "Under 3.5%", value: 3.25 },
+  { label: "3.5%–4.5%", value: 4.0 },
+  { label: "4.5%–5.5%", value: 5.0 },
+  { label: "Over 5.5%", value: 6.0 },
+  { label: "Not sure", value: 4.5 }, // assumption, disclosed prominently in the review
+];
+
+const VALUE_RANGES = [
+  { label: "Under $600K", value: 500000 },
+  { label: "$600K–$800K", value: 700000 },
+  { label: "$800K–$1M", value: 900000 },
+  { label: "$1M–$1.5M", value: 1250000 },
+  { label: "Over $1.5M", value: 1750000 },
+];
+
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",
@@ -231,7 +256,9 @@ function ResultCard({
 interface MortgageForm {
   service: string;
   balance: string;
+  balanceRange: string;
   rate: string;
+  rateRange: string;
   type: string;
   lender: string;
   amort: string;
@@ -244,6 +271,7 @@ interface MortgageForm {
 
 interface PropertyForm {
   value: string;
+  valueRange: string;
   purchasePrice: string;
   purchaseYear: string;
 }
@@ -291,7 +319,9 @@ export default function MortgageCheckerClient() {
   const [mortgage, setMortgage] = useState<MortgageForm>({
     service: "",
     balance: "",
+    balanceRange: "",
     rate: "",
+    rateRange: "",
     type: "fixed_5",
     lender: "",
     amort: "",
@@ -304,6 +334,7 @@ export default function MortgageCheckerClient() {
 
   const [property, setProperty] = useState<PropertyForm>({
     value: "",
+    valueRange: "",
     purchasePrice: "",
     purchaseYear: "",
   });
@@ -334,6 +365,32 @@ export default function MortgageCheckerClient() {
 
   const effYearsIn = mortgage.yearsIntoAmort ? parseFloat(mortgage.yearsIntoAmort) : 0;
 
+  // ── Effective values: exact input wins, otherwise range midpoint ────────────
+  const effBalance = mortgage.balance
+    ? parseFloat(mortgage.balance)
+    : BALANCE_RANGES.find((r) => r.label === mortgage.balanceRange)?.value ?? NaN;
+
+  const effRate = mortgage.rate
+    ? parseFloat(mortgage.rate)
+    : RATE_RANGES.find((r) => r.label === mortgage.rateRange)?.value ?? NaN;
+
+  const effValue = property.value
+    ? parseFloat(property.value)
+    : VALUE_RANGES.find((r) => r.label === property.valueRange)?.value ?? NaN;
+
+  const balanceApprox = !mortgage.balance && !!mortgage.balanceRange;
+  const rateApprox = !mortgage.rate && !!mortgage.rateRange;
+  const rateUnsure = rateApprox && mortgage.rateRange === "Not sure";
+  const valueApprox = !property.value && !!property.valueRange;
+  const anyApprox = balanceApprox || rateApprox || valueApprox;
+
+  const chip = (active: boolean) =>
+    `py-2.5 px-2 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
+      active
+        ? "border-[#1D2D44] bg-[#1D2D44]/5 text-[#1D2D44]"
+        : "border-gray-200 text-gray-500 hover:border-gray-400"
+    }`;
+
   const validate = (s: number): boolean => {
     const e: Record<string, string> = {};
 
@@ -341,17 +398,22 @@ export default function MortgageCheckerClient() {
       if (!mortgage.service) e.service = "Please select one";
 
       if (!isNewPurchase) {
-        if (!mortgage.balance || isNaN(+mortgage.balance) || +mortgage.balance <= 0) {
-          e.balance = "Required";
+        // Balance: a range tap OR a valid exact number satisfies the field
+        if (mortgage.balance) {
+          if (isNaN(+mortgage.balance) || +mortgage.balance <= 0) {
+            e.balance = "Enter a valid amount";
+          }
+        } else if (!mortgage.balanceRange) {
+          e.balance = "Tap a range — or type the exact amount";
         }
 
-        if (
-          !mortgage.rate ||
-          isNaN(+mortgage.rate) ||
-          +mortgage.rate <= 0 ||
-          +mortgage.rate > 20
-        ) {
-          e.rate = "Enter a valid rate, e.g. 5.49";
+        // Rate: same pattern, with "Not sure" as a valid answer
+        if (mortgage.rate) {
+          if (isNaN(+mortgage.rate) || +mortgage.rate <= 0 || +mortgage.rate > 20) {
+            e.rate = "Enter a valid rate, e.g. 5.49";
+          }
+        } else if (!mortgage.rateRange) {
+          e.rate = "Tap a range — 'Not sure' is fine too";
         }
       }
 
@@ -389,19 +451,29 @@ export default function MortgageCheckerClient() {
         e.lender = "Select your lender";
       }
 
-      if (!property.value || isNaN(+property.value) || +property.value <= 0) {
-        e.value = "Required";
+      // Property value: range tap OR exact number
+      if (property.value) {
+        if (isNaN(+property.value) || +property.value <= 0) {
+          e.value = "Enter a valid value";
+        }
+      } else if (!property.valueRange) {
+        e.value = "Tap a range — or type the exact value";
       }
 
+      // Purchase price and year are now OPTIONAL — only validate the format
+      // if the user chose to fill them in. They only feed the appreciation
+      // card, which isn't worth losing a lead over.
       if (!isNewPurchase) {
-        if (!property.purchasePrice || isNaN(+property.purchasePrice) || +property.purchasePrice <= 0) {
-          e.purchasePrice = "Required";
+        if (
+          property.purchasePrice &&
+          (isNaN(+property.purchasePrice) || +property.purchasePrice <= 0)
+        ) {
+          e.purchasePrice = "Enter a valid price";
         }
 
         if (
-          !property.purchaseYear ||
-          +property.purchaseYear < 1990 ||
-          +property.purchaseYear > new Date().getFullYear()
+          property.purchaseYear &&
+          (+property.purchaseYear < 1990 || +property.purchaseYear > currentYear)
         ) {
           e.purchaseYear = "Enter a valid year";
         }
@@ -411,7 +483,10 @@ export default function MortgageCheckerClient() {
     if (s === 2) {
       if (!contact.name.trim()) e.name = "Required";
       if (!contact.email.includes("@")) e.email = "Enter a valid email";
-      if (!contact.phone.replace(/\D/g, "").match(/^\d{10}$/)) {
+
+      // Phone is optional — only validate the format if the person chose
+      // to provide one. Email alone is enough to deliver the report.
+      if (contact.phone.trim() && !contact.phone.replace(/\D/g, "").match(/^\d{10}$/)) {
         e.phone = "Enter a 10-digit phone number";
       }
     }
@@ -421,7 +496,21 @@ export default function MortgageCheckerClient() {
   };
 
   const next = () => {
-    if (validate(step)) setStep((s) => s + 1);
+    if (validate(step)) {
+      const newStep = step + 1;
+      setStep(newStep);
+
+      // Micro-conversion signal: lets GTM/Google Ads see progress through the
+      // funnel, and lets us see exactly which step people abandon on.
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "mortgage_checker_step",
+          checker_step: newStep,
+          service_type: mortgage.service || "not_selected",
+        });
+      }
+    }
   };
 
   const back = () => {
@@ -432,20 +521,29 @@ export default function MortgageCheckerClient() {
   useEffect(() => {
     if (step !== 3) return;
 
-    const bal = isNewPurchase ? parseFloat(property.value) * 0.8 : parseFloat(mortgage.balance);
-    const rate = isNewPurchase ? MARKET_RATES[mortgage.type] : parseFloat(mortgage.rate);
+    const bal = isNewPurchase ? effValue * 0.8 : effBalance;
+    const rate = isNewPurchase ? MARKET_RATES[mortgage.type] : effRate;
 
     const amort = isNewPurchase
       ? parseFloat(mortgage.amort)
       : Math.max(1, effOriginalAmort - effYearsIn);
 
-    const propVal = parseFloat(property.value);
+    const propVal = effValue;
+
+    const hasPurchaseInfo =
+      !isNewPurchase && !!property.purchasePrice && !!property.purchaseYear;
+
     const purchasePrice = isNewPurchase
-      ? parseFloat(property.value)
-      : parseFloat(property.purchasePrice);
+      ? propVal
+      : property.purchasePrice
+        ? parseFloat(property.purchasePrice)
+        : propVal;
+
     const purchaseYear = isNewPurchase
-      ? new Date().getFullYear()
-      : parseInt(property.purchaseYear);
+      ? currentYear
+      : property.purchaseYear
+        ? parseInt(property.purchaseYear)
+        : currentYear;
 
     const marketRate = MARKET_RATES[mortgage.type];
     const monthlyActual = calcMonthlyPayment(bal, rate, amort);
@@ -457,10 +555,10 @@ export default function MortgageCheckerClient() {
     const equity = Math.max(0, propVal - bal);
     const ltv = propVal > 0 ? (bal / propVal) * 100 : 0;
     const accessibleEquity = ltv < 80 ? Math.max(0, Math.min(propVal * 0.8 - bal, propVal - bal)) : 0;
-    const appreciation = propVal - purchasePrice;
-    const yearsOwned = new Date().getFullYear() - purchaseYear;
+    const appreciation = hasPurchaseInfo ? propVal - purchasePrice : 0;
+    const yearsOwned = currentYear - purchaseYear;
     const rateDiff = isNewPurchase ? 0 : rate - marketRate;
-    const renewalWarning = !isNewPurchase && rateDiff > 0.5;
+    const renewalWarning = !isNewPurchase && !rateUnsure && rateDiff > 0.5;
 
     const renewalMonth = mortgage.renewalMonth ? parseInt(mortgage.renewalMonth) : null;
     const renewalYearInput = mortgage.renewalYear ? parseInt(mortgage.renewalYear) : null;
@@ -524,26 +622,35 @@ export default function MortgageCheckerClient() {
     setAiText("");
 
     const firstName = contact.name.split(" ")[0];
+    const rateText = mortgage.rate ? `${rate}%` : `an estimated ${rate}%`;
 
     const p1 = (() => {
       if (isNewPurchase) {
         return `${firstName}, thanks for running your numbers. Based on a property value of ${fmt(propVal)}, this gives you a useful starting point for understanding estimated payments, loan-to-value, and affordability before making a purchase.`;
       }
 
+      if (rateUnsure) {
+        return `${firstName}, you weren't sure of your exact rate — that's more common than you'd think, and honestly it's usually the first sign a review is overdue. We've assumed a typical 4.5% below so you can see how the numbers work; your real rate could be higher or lower, and finding out takes one look at your mortgage statement.`;
+      }
+
       if (monthlySavings > 0) {
-        return `${firstName}, your current rate of ${rate}% is running above today's market — that gap is worth addressing because lenders rarely lead with their best offer.`;
+        return `${firstName}, your current rate of ${rateText} is running above today's market — that gap is worth addressing because lenders rarely lead with their best offer.`;
       }
 
       if (renewalUrgency === "imminent" || renewalUrgency === "overdue") {
-        return `${firstName}, thanks for taking a few minutes to run your numbers. The good news is your current rate of ${rate}% is already competitive with today's market, and your mortgage health score of ${score}/100 reflects that you're in a solid position. Since your term is coming up for renewal soon, now's the time to make sure that stays true for your next term too.`;
+        return `${firstName}, thanks for taking a few minutes to run your numbers. The good news is your current rate of ${rateText} is already competitive with today's market, and your mortgage health score of ${score}/100 reflects that you're in a solid position. Since your term is coming up for renewal soon, now's the time to make sure that stays true for your next term too.`;
       }
 
-      return `${firstName}, thanks for taking a few minutes to run your numbers. The good news is your current rate of ${rate}% is already competitive with today's market, and your mortgage health score of ${score}/100 reflects that you're in a solid position. It's still smart to review the details before your next renewal.`;
+      return `${firstName}, thanks for taking a few minutes to run your numbers. The good news is your current rate of ${rateText} is already competitive with today's market, and your mortgage health score of ${score}/100 reflects that you're in a solid position. It's still smart to review the details before your next renewal.`;
     })();
 
     const p2 = (() => {
       if (isNewPurchase) {
         return `Using a comparable market rate of ${marketRate}%, your estimated payment would be about ${fmt(perPeriodMarket)} ${FREQ_LABELS[mortgage.frequency].toLowerCase()} based on an estimated 80% loan-to-value mortgage.`;
+      }
+
+      if (rateUnsure) {
+        return `If your actual rate is around the 4.5% we assumed, a market rate of ${marketRate}% could mean roughly ${fmt(monthlySavings)} a month in savings — about ${fmt(annualSavings)} a year. The only way to know for sure is to check your real number.`;
       }
 
       if (monthlySavings > 0) {
@@ -595,6 +702,12 @@ export default function MortgageCheckerClient() {
       return "";
     })();
 
+    // Honest disclosure when any figure came from a tapped range instead of an
+    // exact number — keeps the report credible without blocking completion.
+    const approxNote = anyApprox
+      ? `A quick note: some figures above are based on the ranges you selected rather than exact numbers, so treat this as a close estimate. The picture sharpens fast once we look at your actual statement.`
+      : "";
+
     const p3 = (() => {
       if (isNewPurchase) {
         return `Recommendation: speak with the BC Mortgage Team before writing an offer so you can confirm your real borrowing power, payment comfort, down payment strategy, and whether a fixed or variable rate makes the most sense.${equityLine ? ` ${equityLine}` : ""}`;
@@ -612,7 +725,7 @@ export default function MortgageCheckerClient() {
     const p4 =
       "Speak with the BC Mortgage Team on a free 15-minute call — no pressure, just a clear plan, with access to 50+ lenders.";
 
-    const review = [p1, p2, penaltyNote, renewalLine, p3, p4]
+    const review = [p1, p2, penaltyNote, renewalLine, approxNote, p3, p4]
       .filter(Boolean)
       .join("\n\n");
 
@@ -657,12 +770,32 @@ export default function MortgageCheckerClient() {
           mortgage.originalAmort || `${DEFAULT_ORIGINAL_AMORT} assumed`
         } yrs, ${mortgage.yearsIntoAmort || "0 assumed"} yrs in)`;
 
+    const balanceLine = mortgage.balance
+      ? `$${fmtNum(parseFloat(mortgage.balance))}`
+      : mortgage.balanceRange
+        ? `~$${fmtNum(effBalance)} (selected range: ${mortgage.balanceRange})`
+        : "Not provided / purchase estimate";
+
+    const rateLine = mortgage.rate
+      ? `${mortgage.rate}%`
+      : mortgage.rateRange === "Not sure"
+        ? "NOT SURE (4.5% assumed) — good conversation opener"
+        : mortgage.rateRange
+          ? `~${effRate}% (selected range: ${mortgage.rateRange})`
+          : "Not provided / purchase estimate";
+
+    const valueLine = property.value
+      ? `$${fmtNum(parseFloat(property.value))}`
+      : property.valueRange
+        ? `~$${fmtNum(effValue)} (selected range: ${property.valueRange})`
+        : "Not provided";
+
     const details = [
       "--- MORTGAGE CHECKER LEAD ---",
       "",
       `Service requested: ${mortgageType}`,
-      `Current balance: ${mortgage.balance ? `$${fmtNum(parseFloat(mortgage.balance))}` : "Not provided / purchase estimate"}`,
-      `Current rate: ${mortgage.rate ? `${mortgage.rate}%` : "Not provided / purchase estimate"}`,
+      `Current balance: ${balanceLine}`,
+      `Current rate: ${rateLine}`,
       `Mortgage type: ${RATE_LABELS[mortgage.type]}`,
       `Lender: ${mortgage.lender || "Not provided"}`,
       `Amortization remaining: ${r.amortRemaining} years${amortDetail}`,
@@ -675,11 +808,11 @@ export default function MortgageCheckerClient() {
         r.earlyBreakLikely === null ? "Unknown" : r.earlyBreakLikely ? "Yes" : "No"
       }`,
       "",
-      `Property value: $${fmtNum(parseFloat(property.value))}`,
+      `Property value: ${valueLine}`,
       `Original purchase price: ${
-        property.purchasePrice ? `$${fmtNum(parseFloat(property.purchasePrice))}` : "Not provided / new purchase"
+        property.purchasePrice ? `$${fmtNum(parseFloat(property.purchasePrice))}` : "Not provided"
       }`,
-      `Year purchased: ${property.purchaseYear || "Not provided / new purchase"}`,
+      `Year purchased: ${property.purchaseYear || "Not provided"}`,
       "",
       `Market rate: ${r.marketRate}%`,
       `Estimated monthly savings: ${fmt(r.monthlySavings)}`,
@@ -688,6 +821,7 @@ export default function MortgageCheckerClient() {
       `Accessible equity: $${fmtNum(r.accessibleEquity)}`,
       `Strategy score: ${r.score}/100`,
       `Renewal warning: ${r.renewalWarning ? "Yes" : "No"}`,
+      `Figures approximate: ${anyApprox ? "Yes — client used range buttons" : "No — exact numbers entered"}`,
       "",
       "--- AI REVIEW SHOWN TO CLIENT ---",
       review,
@@ -699,9 +833,9 @@ export default function MortgageCheckerClient() {
       body: JSON.stringify({
         name: contact.name,
         email: contact.email,
-        phone: contact.phone,
+        phone: contact.phone.trim() || "Not provided — email only",
         mortgageType,
-        propertyValue: property.value ? `$${fmtNum(parseFloat(property.value))}` : "",
+        propertyValue: valueLine,
         downPayment: "",
         message: details,
         to: "rob@bcmortgageteam.com",
@@ -742,7 +876,7 @@ export default function MortgageCheckerClient() {
               </h1>
 
               <p className="text-gray-500 text-sm mb-8 leading-relaxed">
-                Enter your details and we'll compare your rate against today's market — instantly showing what you could save.
+                Tap the closest answer — no statements needed. We'll compare you against today's market instantly.
               </p>
 
               <div className="mb-5">
@@ -755,11 +889,7 @@ export default function MortgageCheckerClient() {
                     <button
                       key={opt}
                       onClick={() => setM("service", opt)}
-                      className={`py-2 px-2 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
-                        mortgage.service === opt
-                          ? "border-[#1D2D44] bg-[#1D2D44]/5 text-[#1D2D44]"
-                          : "border-gray-200 text-gray-500 hover:border-gray-400"
-                      }`}
+                      className={chip(mortgage.service === opt)}
                     >
                       {opt}
                     </button>
@@ -773,14 +903,32 @@ export default function MortgageCheckerClient() {
                 <>
                   <div className="mb-5">
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                      Remaining mortgage balance
+                      Roughly what's left on your mortgage?
                     </label>
+
+                    <div className="grid grid-cols-2 gap-2 mb-2">
+                      {BALANCE_RANGES.map((r) => (
+                        <button
+                          key={r.label}
+                          onClick={() => {
+                            setM("balanceRange", r.label);
+                            setM("balance", "");
+                          }}
+                          className={chip(mortgage.balanceRange === r.label && !mortgage.balance)}
+                        >
+                          {r.label}
+                        </button>
+                      ))}
+                    </div>
 
                     <input
                       type="number"
-                      placeholder="e.g. 450000"
+                      placeholder="Or type the exact amount (optional)"
                       value={mortgage.balance}
-                      onChange={(e) => setM("balance", e.target.value)}
+                      onChange={(e) => {
+                        setM("balance", e.target.value);
+                        if (e.target.value) setM("balanceRange", "");
+                      }}
                       className={inp(!!errors.balance)}
                     />
 
@@ -789,15 +937,33 @@ export default function MortgageCheckerClient() {
 
                   <div className="mb-5">
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                      Your current interest rate (%)
+                      Roughly what's your current rate?
                     </label>
+
+                    <div className="grid grid-cols-2 gap-2 mb-2">
+                      {RATE_RANGES.map((r) => (
+                        <button
+                          key={r.label}
+                          onClick={() => {
+                            setM("rateRange", r.label);
+                            setM("rate", "");
+                          }}
+                          className={chip(mortgage.rateRange === r.label && !mortgage.rate)}
+                        >
+                          {r.label}
+                        </button>
+                      ))}
+                    </div>
 
                     <input
                       type="number"
                       step="0.01"
-                      placeholder="e.g. 5.49"
+                      placeholder="Or type the exact rate, e.g. 5.49 (optional)"
                       value={mortgage.rate}
-                      onChange={(e) => setM("rate", e.target.value)}
+                      onChange={(e) => {
+                        setM("rate", e.target.value);
+                        if (e.target.value) setM("rateRange", "");
+                      }}
                       className={inp(!!errors.rate)}
                     />
 
@@ -816,11 +982,7 @@ export default function MortgageCheckerClient() {
                     <button
                       key={val}
                       onClick={() => setM("type", val)}
-                      className={`py-2 px-2 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
-                        mortgage.type === val
-                          ? "border-[#1D2D44] bg-[#1D2D44]/5 text-[#1D2D44]"
-                          : "border-gray-200 text-gray-500 hover:border-gray-400"
-                      }`}
+                      className={chip(mortgage.type === val)}
                     >
                       {lbl}
                     </button>
@@ -1024,14 +1186,32 @@ export default function MortgageCheckerClient() {
 
               <div className="mb-5">
                 <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                  {isNewPurchase ? "Estimated purchase price" : "Current estimated property value"}
+                  {isNewPurchase ? "Roughly what's the purchase price?" : "Roughly what's your home worth today?"}
                 </label>
+
+                <div className="grid grid-cols-2 gap-2 mb-2">
+                  {VALUE_RANGES.map((r) => (
+                    <button
+                      key={r.label}
+                      onClick={() => {
+                        setP("valueRange", r.label);
+                        setP("value", "");
+                      }}
+                      className={chip(property.valueRange === r.label && !property.value)}
+                    >
+                      {r.label}
+                    </button>
+                  ))}
+                </div>
 
                 <input
                   type="number"
-                  placeholder="e.g. 850000"
+                  placeholder="Or type the exact value (optional)"
                   value={property.value}
-                  onChange={(e) => setP("value", e.target.value)}
+                  onChange={(e) => {
+                    setP("value", e.target.value);
+                    if (e.target.value) setP("valueRange", "");
+                  }}
                   className={inp(!!errors.value)}
                 />
 
@@ -1042,7 +1222,8 @@ export default function MortgageCheckerClient() {
                 <>
                   <div className="mb-5">
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                      Original purchase price
+                      Original purchase price{" "}
+                      <span className="text-gray-400 font-normal">(optional)</span>
                     </label>
 
                     <input
@@ -1060,7 +1241,8 @@ export default function MortgageCheckerClient() {
 
                   <div className="mb-5">
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                      Year purchased
+                      Year purchased{" "}
+                      <span className="text-gray-400 font-normal">(optional)</span>
                     </label>
 
                     <input
@@ -1142,7 +1324,8 @@ export default function MortgageCheckerClient() {
 
               <div className="mb-5">
                 <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                  Phone number
+                  Phone number{" "}
+                  <span className="text-gray-400 font-normal">(optional)</span>
                 </label>
 
                 <input
@@ -1262,7 +1445,13 @@ export default function MortgageCheckerClient() {
                   icon="💳"
                   label={`Your ${FREQ_LABELS[mortgage.frequency].toLowerCase()} payment`}
                   value={fmt(results.perPeriodActual)}
-                  sub={isNewPurchase ? "Estimated purchase payment" : `At ${mortgage.rate}%`}
+                  sub={
+                    isNewPurchase
+                      ? "Estimated purchase payment"
+                      : rateApprox
+                        ? `At ~${effRate}% (estimated)`
+                        : `At ${mortgage.rate}%`
+                  }
                 />
 
                 {!isNewPurchase && (
@@ -1282,16 +1471,28 @@ export default function MortgageCheckerClient() {
                       icon="💰"
                       label="Est. monthly savings"
                       value={results.monthlySavings > 0 ? fmt(results.monthlySavings) : "—"}
-                      sub={results.monthlySavings > 0 ? "If you switched today" : "Rate is competitive"}
-                      highlight={results.monthlySavings > 200}
+                      sub={
+                        results.monthlySavings > 0
+                          ? rateUnsure
+                            ? "Based on assumed 4.5% rate"
+                            : "If you switched today"
+                          : "Rate is competitive"
+                      }
+                      highlight={results.monthlySavings > 200 && !rateUnsure}
                     />
 
                     <ResultCard
                       icon="📅"
                       label="Est. annual savings"
                       value={results.annualSavings > 0 ? fmt(results.annualSavings) : "—"}
-                      sub={results.annualSavings > 0 ? "Over 12 months" : "Rate is competitive"}
-                      highlight={results.annualSavings > 2000}
+                      sub={
+                        results.annualSavings > 0
+                          ? rateUnsure
+                            ? "Based on assumed 4.5% rate"
+                            : "Over 12 months"
+                          : "Rate is competitive"
+                      }
+                      highlight={results.annualSavings > 2000 && !rateUnsure}
                     />
                   </div>
 
@@ -1333,12 +1534,14 @@ export default function MortgageCheckerClient() {
 
               {!isNewPurchase && (
                 <div className="flex flex-wrap gap-3 mb-5">
-                  <ResultCard
-                    icon="📈"
-                    label="Property appreciation"
-                    value={fmt(results.appreciation)}
-                    sub={`Since ${property.purchaseYear} (${results.yearsOwned} yrs)`}
-                  />
+                  {property.purchasePrice && property.purchaseYear && (
+                    <ResultCard
+                      icon="📈"
+                      label="Property appreciation"
+                      value={fmt(results.appreciation)}
+                      sub={`Since ${property.purchaseYear} (${results.yearsOwned} yrs)`}
+                    />
+                  )}
 
                   <ResultCard
                     icon="🎯"
@@ -1388,7 +1591,9 @@ export default function MortgageCheckerClient() {
                   setMortgage({
                     service: "",
                     balance: "",
+                    balanceRange: "",
                     rate: "",
+                    rateRange: "",
                     type: "fixed_5",
                     lender: "",
                     amort: "",
@@ -1400,6 +1605,7 @@ export default function MortgageCheckerClient() {
                   });
                   setProperty({
                     value: "",
+                    valueRange: "",
                     purchasePrice: "",
                     purchaseYear: "",
                   });
