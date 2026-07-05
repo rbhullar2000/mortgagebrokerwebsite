@@ -710,16 +710,16 @@ export default function MortgageCheckerClient() {
 
     const p3 = (() => {
       if (isNewPurchase) {
-        return `Recommendation: speak with the BC Mortgage Team before writing an offer so you can confirm your real borrowing power, payment comfort, down payment strategy, and whether a fixed or variable rate makes the most sense.${equityLine ? ` ${equityLine}` : ""}`;
+        return `Recommendation: Speak with the BC Mortgage Team before writing an offer so you can confirm your real borrowing power, payment comfort, down payment strategy, and whether a fixed or variable rate makes the most sense.${equityLine ? ` ${equityLine}` : ""}`;
       }
 
       if (renewalUrgency === "imminent" || renewalUrgency === "overdue") {
-        return `Recommendation: speak with the BC Mortgage Team to lock in your next term with the best available rate rather than defaulting to your lender's renewal offer.${equityLine ? ` ${equityLine}` : ""}`;
+        return `Recommendation: Speak with the BC Mortgage Team to lock in your next term with the best available rate rather than defaulting to your lender's renewal offer.${equityLine ? ` ${equityLine}` : ""}`;
       }
 
       return renewalWarning
-        ? `Recommendation: it's worth shopping the market before your next renewal rather than simply signing your lender's renewal letter, since that offer is rarely their sharpest rate.${equityLine ? ` ${equityLine}` : ""}`
-        : `Recommendation: start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter, which is rarely their best offer.${equityLine ? ` ${equityLine}` : ""}`;
+        ? `Recommendation: It's worth shopping the market before your next renewal rather than simply signing your lender's renewal letter, since that offer is rarely their sharpest rate.${equityLine ? ` ${equityLine}` : ""}`
+        : `Recommendation: Start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter, which is rarely their best offer.${equityLine ? ` ${equityLine}` : ""}`;
     })();
 
     const p4 =
@@ -781,18 +781,18 @@ export default function MortgageCheckerClient() {
     // close with a short recommendation instead.
     const clientP3 = (() => {
       if (isNewPurchase) {
-        return "Recommendation: confirm your real borrowing power and whether fixed or variable fits best before writing an offer.";
+        return "Recommendation: Confirm your real borrowing power and whether fixed or variable fits best before writing an offer.";
       }
 
       if (renewalUrgency === "imminent" || renewalUrgency === "overdue") {
-        return "Recommendation: lock in your next term now rather than defaulting to your lender's renewal offer — it's rarely their sharpest rate.";
+        return "Recommendation: Lock in your next term now rather than defaulting to your lender's renewal offer — it's rarely their sharpest rate.";
       }
 
       if (renewalWarning) {
-        return "Recommendation: shop the market before your next renewal rather than simply signing your lender's renewal letter.";
+        return "Recommendation: Shop the market before your next renewal rather than simply signing your lender's renewal letter.";
       }
 
-      return "Recommendation: start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter.";
+      return "Recommendation: Start reviewing your options 90–120 days before your renewal date rather than waiting for your lender's letter.";
     })();
 
     const clientReview = [clientP1, clientP2, clientP3].filter(Boolean).join("\n\n");
