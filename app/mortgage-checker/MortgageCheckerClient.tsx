@@ -725,18 +725,72 @@ export default function MortgageCheckerClient() {
     const p4 =
       "Speak with the BC Mortgage Team on a free 15-minute call — no pressure, just a clear plan, with access to 50+ lenders.";
 
-    const review = [p1, p2, penaltyNote, renewalLine, approxNote, p3, p4]
+    // Full version — goes to Rob in the lead email for context on the call.
+    const fullReview = [p1, p2, penaltyNote, renewalLine, approxNote, p3, p4]
       .filter(Boolean)
       .join("\n\n");
 
-    setAiText(review);
+    // Condensed version — shown to the client. One position line, one
+    // timing/caveat line, one CTA. Everything else lives in Rob's email.
+    const clientP1 = (() => {
+      if (isNewPurchase) {
+        return `${firstName}, based on a ${fmt(propVal)} purchase, your estimated payment is about ${fmt(perPeriodMarket)} ${FREQ_LABELS[mortgage.frequency].toLowerCase()} at today's ${marketRate}% market rate (assuming 80% loan-to-value).`;
+      }
+
+      if (rateUnsure) {
+        return `${firstName}, since you weren't sure of your rate, we assumed a typical 4.5%. If that's close, today's ${marketRate}% market rate could mean roughly ${fmt(monthlySavings)} a month in savings — checking your real number takes one look at your statement.`;
+      }
+
+      if (monthlySavings > 0) {
+        return `${firstName}, your rate of ${rateText} is above today's ${marketRate}% market rate — switching could save roughly ${fmt(monthlySavings)} a month, about ${fmt(annualSavings)} a year.`;
+      }
+
+      return `${firstName}, your rate of ${rateText} is competitive with today's market — your score of ${score}/100 reflects a solid position. Still smart to review options before your next renewal.`;
+    })();
+
+    const clientP2 = (() => {
+      const lines: string[] = [];
+
+      if (!isNewPurchase) {
+        if (renewalUrgency === "overdue") {
+          lines.push("Your term may have already ended — worth confirming you're not sitting on your lender's posted rate.");
+        } else if (renewalUrgency === "imminent") {
+          const m = monthsToRenewal as number;
+          lines.push(`Your term renews in about ${m} month${m === 1 ? "" : "s"} — the ideal window to shop before your lender's letter arrives.`);
+        } else if (renewalUrgency === "upcoming") {
+          lines.push(`Your renewal is about ${monthsToRenewal} months out — worth getting on the calendar.`);
+        }
+
+        if (monthlySavings > 0 && earlyBreakLikely === true) {
+          lines.push("Note: breaking your term early usually carries a penalty not reflected above.");
+        }
+
+        if (accessibleEquity > 0) {
+          lines.push(`You also have around $${fmtNum(accessibleEquity)} in accessible equity at ${ltv.toFixed(0)}% loan-to-value.`);
+        }
+      }
+
+      if (anyApprox) {
+        lines.push("Figures are close estimates based on the ranges you selected.");
+      }
+
+      return lines.join(" ");
+    })();
+
+    const clientP3 = isNewPurchase
+      ? "Book a free 15-minute call to confirm your real borrowing power and whether fixed or variable fits best — access to 50+ lenders, no pressure."
+      : "Book a free 15-minute call to run your exact numbers — access to 50+ lenders, no pressure.";
+
+    const clientReview = [clientP1, clientP2, clientP3].filter(Boolean).join("\n\n");
+
+    setAiText(clientReview);
     setLoading(false);
 
     setTimeout(() => resultRef.current?.scrollIntoView({ behavior: "smooth" }), 100);
 
     if (!conversionSent.current) {
       conversionSent.current = true;
-      sendLead(r, review);
+      sendLead(r, fullReview, clientReview);
 
       if (typeof window !== "undefined") {
         window.dataLayer = window.dataLayer || [];
@@ -749,7 +803,7 @@ export default function MortgageCheckerClient() {
     }
   }, [step]);
 
-  const sendLead = (r: Results, review: string) => {
+  const sendLead = (r: Results, fullReview: string, clientReview: string) => {
     const mortgageType = mortgage.service || "Not specified";
 
     const renewalDateLabel =
@@ -823,8 +877,11 @@ export default function MortgageCheckerClient() {
       `Renewal warning: ${r.renewalWarning ? "Yes" : "No"}`,
       `Figures approximate: ${anyApprox ? "Yes — client used range buttons" : "No — exact numbers entered"}`,
       "",
-      "--- AI REVIEW SHOWN TO CLIENT ---",
-      review,
+      "--- SHOWN TO CLIENT (condensed) ---",
+      clientReview,
+      "",
+      "--- FULL ASSESSMENT (for your call prep — client did not see this) ---",
+      fullReview,
     ].join("\n");
 
     fetch("/api/contact", {
@@ -903,7 +960,7 @@ export default function MortgageCheckerClient() {
                 <>
                   <div className="mb-5">
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                      Roughly what's left on your mortgage?
+                      Remaining mortgage balance
                     </label>
 
                     <div className="grid grid-cols-2 gap-2 mb-2">
@@ -937,7 +994,7 @@ export default function MortgageCheckerClient() {
 
                   <div className="mb-5">
                     <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                      Roughly what's your current rate?
+                      Current interest rate
                     </label>
 
                     <div className="grid grid-cols-2 gap-2 mb-2">
@@ -1186,7 +1243,7 @@ export default function MortgageCheckerClient() {
 
               <div className="mb-5">
                 <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                  {isNewPurchase ? "Roughly what's the purchase price?" : "Roughly what's your home worth today?"}
+                  {isNewPurchase ? "Estimated purchase price" : "Current estimated property value"}
                 </label>
 
                 <div className="grid grid-cols-2 gap-2 mb-2">
