@@ -157,24 +157,22 @@ export default function HomePage() {
         </Button>
       </div>
 
-      <div className="w-[696px] rounded-2xl border border-white/60 bg-white/65 backdrop-blur-2xl shadow-xl px-7 py-3">
-        <div className="grid grid-cols-3 gap-4 text-sm font-semibold text-[#1D2D44]">
-          <div className="flex flex-col items-center text-center">
-            <Shield className="w-5 h-5 mb-1 text-[#C79A2B]" />
-            <span>50+ Lenders</span>
-          </div>
-
-          <div className="flex flex-col items-center text-center">
-            <Clock className="w-5 h-5 mb-1 text-[#C79A2B]" />
-            <span>Competitive Rates</span>
-          </div>
-
-          <div className="flex flex-col items-center text-center">
-            <TrendingUp className="w-5 h-5 mb-1 text-[#C79A2B]" />
-            <span>Independent Advice</span>
-          </div>
-        </div>
-      </div>
+     <div className="w-full max-w-2xl rounded-2xl border border-white/60 bg-white/90 backdrop-blur-xl shadow-xl px-7 py-4">
+  <div className="grid grid-cols-3 gap-4 text-sm font-semibold text-[#1D2D44]">
+    <div className="flex flex-col items-center text-center">
+      <Shield className="w-5 h-5 mb-1 text-[#C79A2B]" />
+      <span>50+ Lenders</span>
+    </div>
+    <div className="flex flex-col items-center text-center">
+      <Clock className="w-5 h-5 mb-1 text-[#C79A2B]" />
+      <span>Competitive Rates</span>
+    </div>
+    <div className="flex flex-col items-center text-center">
+      <TrendingUp className="w-5 h-5 mb-1 text-[#C79A2B]" />
+      <span>Independent Advice</span>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </section>
