@@ -140,7 +140,7 @@ export default function HomePage() {
     className="flex-[1.3] h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white text-base font-bold shadow-xl"
     asChild
   >
-    <Link href="/mortgage-checker">Am I Overpaying? 2 min →</Link>
+    <Link href="/mortgage-checker">Am I Overpaying? 2 min checker →</Link>
   </Button>
   <Button
     size="lg"
