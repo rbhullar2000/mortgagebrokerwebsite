@@ -114,8 +114,8 @@ export default function HomePage() {
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-   <h1
-  className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight"
+  <h1
+  className="text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-6 leading-tight"
   style={{ textShadow: "0 1px 12px rgba(255,255,255,0.45)" }}
 >
   Your Bank Has a <span className="text-[#D4AF37]">Mortgage Advisor.</span>
