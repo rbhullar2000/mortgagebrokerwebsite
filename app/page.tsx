@@ -127,7 +127,6 @@ export default function HomePage() {
   Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
 </p>
 
-      <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
 {/* 
      <p className="inline-block bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 text-base font-semibold text-[#1D2D44] mb-6">
   Independent advice. Competitive rates. Better mortgage decisions.
