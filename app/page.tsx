@@ -114,14 +114,14 @@ export default function HomePage() {
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-      <h1 className="text-5xl lg:text-7xl font-bold text-[#1D2D44] mb-5 leading-[1.05]">
-        Your Bank Has a{" "}
-        <span className="text-[#C79A2B]">Mortgage Advisor.</span>
-        <br />
-        You Should Have
-        <br />
-        One Too.
-      </h1>
+     <h1
+  className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight"
+  style={{ textShadow: "0 1px 12px rgba(255,255,255,0.45)" }}
+>
+  Your Bank Has a <span className="text-[#D4AF37]">Mortgage Advisor.</span>
+  <br />
+  You Should Have One Too.
+</h1>
 
      <div className="mb-8">
   <p className="inline-block bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm font-semibold text-[#1D2D44]">
