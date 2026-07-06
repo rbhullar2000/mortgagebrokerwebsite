@@ -114,7 +114,7 @@ export default function HomePage() {
         Strategy-First Mortgage Advice for BC Borrowers
       </Badge>
 
-     <h1
+   <h1
   className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6 leading-tight"
   style={{ textShadow: "0 1px 12px rgba(255,255,255,0.45)" }}
 >
