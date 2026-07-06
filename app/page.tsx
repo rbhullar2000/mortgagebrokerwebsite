@@ -95,11 +95,10 @@ export default function HomePage() {
 </div>
 
       
-      <div className="mb-8">
-  <p className="inline-block bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm font-semibold text-[#1D2D44]">
-    Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
-  </p>
-</div>
+     <div className="flex flex-col items-center gap-3">
+        <p className="inline-block rounded-full border border-white/40 bg-white/70 backdrop-blur-md px-4 py-1.5 text-[11px] font-semibold text-[#1D2D44] text-center">
+          Serving BC • Vancouver • Fraser Valley • Okanagan
+        </p>
 
         <p className="inline-block rounded-xl border border-white/50 bg-white/65 backdrop-blur-md px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug text-center">
           Access to 50+ lenders — not just one bank.
@@ -124,9 +123,11 @@ export default function HomePage() {
         One Too.
       </h1>
 
-     <p className="inline-block bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm font-semibold text-[#1D2D44]">
-  Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
-</p>
+     <div className="mb-8">
+  <p className="inline-block bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm font-semibold text-[#1D2D44]">
+    Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
+  </p>
+</div>
 
 {/* 
      <p className="inline-block bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 text-base font-semibold text-[#1D2D44] mb-6">
