@@ -67,12 +67,13 @@ export default function HomePage() {
 */}
   
  {/* Mobile Hero */}
-<div className="relative md:hidden flex flex-col px-4 pt-20 pb-12 min-h-[92svh]">
+{/* Mobile Hero */}
+<div className="relative md:hidden flex flex-col px-4 pt-20 pb-16 min-h-[92svh]">
   <div className="max-w-md text-left">
     <Badge className="mb-5 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
       Strategy-First Mortgage Advice for BC Borrowers
     </Badge>
-      <h1
+    <h1
       className="text-[2.25rem] font-bold text-[#1D2D44] leading-[1.08]"
       style={{
         textShadow:
@@ -88,8 +89,7 @@ export default function HomePage() {
     </h1>
   </div>
 
-  {/* mt-auto pushes the action group to the bottom of the hero,
-      leaving the middle of the frame open for the house */}
+  {/* mt-auto pushes the action group to the bottom, keeping the house visible */}
   <div className="mt-auto">
     <div className="flex justify-center mb-4">
       <Button
