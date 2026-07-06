@@ -134,30 +134,29 @@ export default function HomePage() {
   Independent advice. Competitive rates. Better mortgage decisions.
 </p>
     */}  
-      <div className="flex gap-4 mb-7 w-[696px]">
-        <Button
-          size="lg"
-          className="flex-1 h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl"
-          asChild
-        >
-          <Link href="/mortgage-checker">Am I Overpaying? 2 min →</Link>
-        </Button>
-
-        <Button
-          size="lg"
-          className="flex-1 h-14 bg-[#1D2D44] hover:bg-[#243854] text-white font-semibold shadow-xl"
-          asChild
-        >
-          <Link
-            href="https://calendly.com/bcmortgageteam/15min"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book A Strategy Call →
-          </Link>
-        </Button>
-      </div>
-
+     <div className="flex flex-col sm:flex-row gap-4 mb-7 w-full max-w-2xl">
+  <Button
+    size="lg"
+    className="flex-[1.3] h-14 bg-[#C79A2B] hover:bg-[#D4AF37] text-white text-base font-bold shadow-xl"
+    asChild
+  >
+    <Link href="/mortgage-checker">Am I Overpaying? 2 min →</Link>
+  </Button>
+  <Button
+    size="lg"
+    className="flex-1 h-14 border-2 border-white/80 bg-white/10 backdrop-blur-sm text-white font-semibold shadow-xl hover:bg-white hover:text-[#1D2D44]"
+    asChild
+  >
+    <Link
+      href="https://calendly.com/bcmortgageteam/15min"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Book A Strategy Call →
+    </Link>
+  </Button>
+</div>
+      
      <div className="w-full max-w-2xl rounded-2xl border border-white/60 bg-white/90 backdrop-blur-xl shadow-xl px-7 py-4">
   <div className="grid grid-cols-3 gap-4 text-sm font-semibold text-[#1D2D44]">
     <div className="flex flex-col items-center text-center">
