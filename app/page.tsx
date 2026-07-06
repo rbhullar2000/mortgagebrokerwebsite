@@ -66,46 +66,48 @@ export default function HomePage() {
   <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-white/75 via-white/25 to-transparent" />
 */}
   
-  {/* Mobile Hero */}
-  <div className="relative md:hidden px-4 pt-20 pb-10 min-h-[835px]">
-    <div className="max-w-md text-left">
-      <Badge className="mb-5 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
-        Strategy-First Mortgage Advice for BC Borrowers
-      </Badge>
+ {/* Mobile Hero */}
+<div className="relative md:hidden flex flex-col px-4 pt-20 pb-12 min-h-[92svh]">
+  <div className="max-w-md text-left">
+    <Badge className="mb-5 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
+      Strategy-First Mortgage Advice for BC Borrowers
+    </Badge>
+    <h1
+      className="text-[2.25rem] font-bold text-[#1D2D44] leading-[1.08]"
+      style={{ textShadow: "0 1px 12px rgba(255,255,255,0.45)" }}
+    >
+      Your Bank Has a{" "}
+      <span className="text-[#C79A2B]">Mortgage Advisor.</span>
+      <br />
+      You Should Have
+      <br />
+      One Too.
+    </h1>
+  </div>
 
-      <h1 className="text-[2.25rem] font-bold text-[#1D2D44] mb-36 leading-[1.08]">
-        Your Bank Has a{" "}
-        <span className="text-[#C79A2B]">Mortgage Advisor.</span>
-        <br />
-        You Should Have
-        <br />
-        One Too.
-      </h1>
+  {/* mt-auto pushes the action group to the bottom of the hero,
+      leaving the middle of the frame open for the house */}
+  <div className="mt-auto">
+    <div className="flex justify-center mb-4">
+      <Button
+        size="lg"
+        className="w-[330px] max-w-[90%] h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[16px] rounded-xl ring-1 ring-white/40"
+        asChild
+      >
+        <Link href="/mortgage-checker">Am I Overpaying? 2 min →</Link>
+      </Button>
+    </div>
 
-   <div className="flex justify-center mb-8">
-  <Button
-    size="lg"
-    className="w-[330px] max-w-[90%] h-12 bg-[#C79A2B] hover:bg-[#D4AF37] text-white font-semibold shadow-xl text-[16px] rounded-xl ring-1 ring-white/40"
-    asChild
-  >
-    <Link href="/mortgage-checker">
-      Am I Overpaying? 2 min →
-    </Link>
-  </Button>
-</div>
-
-      
-     <div className="flex flex-col items-center gap-3">
-        <p className="inline-block rounded-full border border-white/40 bg-white/70 backdrop-blur-md px-4 py-1.5 text-[11px] font-semibold text-[#1D2D44] text-center">
-          Serving BC • Vancouver • Fraser Valley • Okanagan
-        </p>
-
-        <p className="inline-block rounded-xl border border-white/50 bg-white/65 backdrop-blur-md px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug text-center">
-          Access to 50+ lenders — not just one bank.
-        </p>
-      </div>
+    <div className="flex flex-col items-center gap-3">
+      <p className="inline-block rounded-full border border-white/40 bg-white/70 backdrop-blur-md px-4 py-1.5 text-[11px] font-semibold text-[#1D2D44] text-center">
+        Serving BC • Vancouver • Fraser Valley • Okanagan
+      </p>
+      <p className="inline-block rounded-xl border border-white/50 bg-white/65 backdrop-blur-md px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug text-center">
+        Access to 50+ lenders — not just one bank.
+      </p>
     </div>
   </div>
+</div>
 
   {/* Desktop Hero */}
   <div className="relative hidden md:block container mx-auto px-4 py-20 lg:py-32">
