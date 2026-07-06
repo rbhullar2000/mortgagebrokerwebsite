@@ -437,7 +437,37 @@ export default function HomePage() {
           ))}
         </div>
 
-        
+ <div className="grid grid-cols-3 gap-4 lg:gap-5 mb-8 items-center text-center">
+          <div className="flex flex-col items-center justify-center">
+            <div className="text-2xl lg:text-2xl font-bold text-[#D4AF37]">
+              25+ years
+            </div>
+
+            <div className="text-xs lg:text-xs text-gray-600">
+              in Financial Industry
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center">
+            <Image
+              src="/BCmortgageteamlogo.jpeg"
+              alt="BC Mortgage Team"
+              width={96}
+              height={72}
+              className="object-contain w-20 lg:w-20 h-auto"
+            />
+          </div>
+
+          <div className="flex items-center justify-center">
+            <Image
+              src="/BRX_brand_black.png"
+              alt="BRX Mortgage"
+              width={96}
+              height={72}
+              className="object-contain w-20 lg:w-20 h-auto"
+            />
+          </div>
+        </div>       
 
         {/*
         <div className="flex flex-col items-center gap-3">
@@ -471,37 +501,7 @@ export default function HomePage() {
         />
       </div>
 
-<div className="grid grid-cols-3 gap-4 lg:gap-5 mb-8 items-center text-center">
-          <div className="flex flex-col items-center justify-center">
-            <div className="text-2xl lg:text-2xl font-bold text-[#D4AF37]">
-              25+ years
-            </div>
 
-            <div className="text-xs lg:text-xs text-gray-600">
-              in Financial Industry
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center">
-            <Image
-              src="/BCmortgageteamlogo.jpeg"
-              alt="BC Mortgage Team"
-              width={96}
-              height={72}
-              className="object-contain w-20 lg:w-20 h-auto"
-            />
-          </div>
-
-          <div className="flex items-center justify-center">
-            <Image
-              src="/BRX_brand_black.png"
-              alt="BRX Mortgage"
-              width={96}
-              height={72}
-              className="object-contain w-20 lg:w-20 h-auto"
-            />
-          </div>
-        </div>
 
 
 
