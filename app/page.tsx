@@ -245,7 +245,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm sm:text-[15px] text-gray-700 leading-7 mb-6 flex-grow">
-            BC Mortgage Team didn&apos;t just help me secure a mortgage — they
+            BC Mortgage Team didn&apos;t just help me secure a mortgage, they
             took the time to explain the strategy behind it and why the
             structure mattered long-term. I felt informed, confident, and
             supported throughout the process instead of simply choosing the
@@ -281,9 +281,9 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm sm:text-[15px] text-gray-700 leading-7 mb-6 flex-grow">
-            I was ready to renew directly with my bank, but Rob took the time to
+            I was ready to renew directly with my bank, but BC Mortgage Team took the time to
             review my options and structure everything properly. The result was
-            over $4,000 in savings in the first year alone — and a mortgage that
+            over $4,000 in savings in the first year alone and a mortgage that
             fit my long-term goals much better.
           </p>
 
