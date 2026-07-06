@@ -175,7 +175,7 @@ export function Header() {
                       onClick={() => setIsOpen(false)}
                     >
                       <Link href="/mortgage-checker">
-                        Am I Overpaying? 2 min →
+                        Am I Overpaying? 2 min checker →
                       </Link>
                     </Button>
 
