@@ -68,7 +68,7 @@ export default function HomePage() {
   
  {/* Mobile Hero */}
 {/* Mobile Hero */}
-<div className="relative md:hidden flex flex-col px-4 pt-20 pb-16 min-h-[92svh]">
+<div className="relative md:hidden flex flex-col px-4 pt-20 pb-8 min-h-[92svh]">
   <div className="max-w-md text-left">
     <Badge className="mb-5 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
       Strategy-First Mortgage Advice for BC Borrowers
