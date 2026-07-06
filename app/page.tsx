@@ -123,16 +123,16 @@ export default function HomePage() {
         One Too.
       </h1>
 
-      <p className="text-base font-bold text-[#1D2D44] mb-4 tracking-wide">
-        Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
-      </p>
+     <p className="inline-block bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm font-semibold text-[#1D2D44]">
+  Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
+</p>
 
       <div className="mb-8 h-1.5 w-24 rounded-full bg-[#C79A2B]" />
 
-      <p className="text-lg text-[#1D2D44] font-semibold leading-relaxed max-w-2xl mb-10">
-        Independent advice. Competitive rates. Better mortgage decisions.
-      </p>
-
+     <p className="inline-block bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 text-base font-semibold text-[#1D2D44]">
+  Independent advice. Competitive rates. Better mortgage decisions.
+</p>
+      
       <div className="flex gap-4 mb-7 w-[696px]">
         <Button
           size="lg"
