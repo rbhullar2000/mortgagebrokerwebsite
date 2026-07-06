@@ -72,9 +72,12 @@ export default function HomePage() {
     <Badge className="mb-5 bg-white/80 text-[#032133] hover:bg-white/85 inline-block backdrop-blur-sm text-[11px]">
       Strategy-First Mortgage Advice for BC Borrowers
     </Badge>
-    <h1
+      <h1
       className="text-[2.25rem] font-bold text-[#1D2D44] leading-[1.08]"
-      style={{ textShadow: "0 1px 12px rgba(255,255,255,0.45)" }}
+      style={{
+        textShadow:
+          "0 1px 10px rgba(255,255,255,0.65), 0 0 30px rgba(255,255,255,0.4)",
+      }}
     >
       Your Bank Has a{" "}
       <span className="text-[#C79A2B]">Mortgage Advisor.</span>
