@@ -56,13 +56,15 @@ export default function HomePage() {
     className="absolute inset-0 bg-cover bg-[92%_22%] md:bg-[75%_center]"
     style={{ backgroundImage: "url('/city.png')" }}
   />
-
+{/*
  {/* Mobile overlay — strong at top where the headline sits, clears downward */}
-<div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/25 to-transparent md:hidden" />
+{/*
+  <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/25 to-transparent md:hidden" />
 
 {/* Desktop overlay — strong on the left where text sits, house stays clear */}
-<div className="absolute inset-0 hidden md:block bg-gradient-to-r from-white/75 via-white/25 to-transparent" />
-
+{/*
+  <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-white/75 via-white/25 to-transparent" />
+*/}
   
   {/* Mobile Hero */}
   <div className="relative md:hidden px-4 pt-20 pb-10 min-h-[835px]">
