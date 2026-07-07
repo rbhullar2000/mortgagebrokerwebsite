@@ -33,32 +33,47 @@ const INTEREST_OPTIONS = [
 function linkify(text: string) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   const parts = text.split(urlRegex);
+
   return parts.map((part, i) => {
-    if (urlRegex.test(part)) {
-      urlRegex.lastIndex = 0;
-      const isCalendly = part.includes("calendly.com");
-      return (
-        <a
-          key={i}
-          href={part}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            color: isCalendly ? "#fff" : "#1a56db",
-            fontWeight: isCalendly ? 600 : 400,
-            background: isCalendly ? "linear-gradient(135deg, #1a56db, #0e3fa8)" : "transparent",
-            padding: isCalendly ? "4px 10px" : "0",
-            borderRadius: isCalendly ? "6px" : "0",
-            display: isCalendly ? "inline-block" : "inline",
-            marginTop: isCalendly ? "4px" : "0",
-            textDecoration: isCalendly ? "none" : "underline",
-          }}
-        >
-          {isCalendly ? "📅 Book Free Consultation" : part}
-        </a>
-      );
+    // Only treat parts that are a full, valid http(s) URL as links
+    let url: URL | null = null;
+    try {
+      const candidate = new URL(part);
+      if (candidate.protocol === "http:" || candidate.protocol === "https:") {
+        url = candidate;
+      }
+    } catch {
+      url = null;
     }
-    return part;
+
+    if (!url) {
+      return part;
+    }
+
+    // Exact hostname check — not a substring match — so "calendly.com.evil.com" won't pass
+    const isCalendly =
+      url.hostname === "calendly.com" || url.hostname.endsWith(".calendly.com");
+
+    return (
+      
+        key={i}
+        href={url.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          color: isCalendly ? "#fff" : "#1a56db",
+          fontWeight: isCalendly ? 600 : 400,
+          background: isCalendly ? "linear-gradient(135deg, #1a56db, #0e3fa8)" : "transparent",
+          padding: isCalendly ? "4px 10px" : "0",
+          borderRadius: isCalendly ? "6px" : "0",
+          display: isCalendly ? "inline-block" : "inline",
+          marginTop: isCalendly ? "4px" : "0",
+          textDecoration: isCalendly ? "none" : "underline",
+        }}
+      >
+        {isCalendly ? "📅 Book Free Consultation" : part}
+      </a>
+    );
   });
 }
 
@@ -164,7 +179,7 @@ function LeadSuccessCard() {
       <p className="lead-card-title">Got it! BC Mortgage Team will be in touch soon.</p>
       <p className="lead-card-sub">
         In the meantime, feel free to keep asking questions or{" "}
-        <a
+        
           href="https://calendly.com/robsbhullar"
           target="_blank"
           rel="noopener noreferrer"
