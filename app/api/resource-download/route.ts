@@ -3,6 +3,68 @@ import nodemailer from "nodemailer"
 import path from "path"
 import fs from "fs"
 
+// Escapes user-controlled values before embedding them in HTML email bodies (fixes XSS findings)
+function escapeHtml(value: unknown): string {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
+}
+
+// Strips CR/LF so user input can't inject extra email headers via the subject line
+function sanitizeHeader(value: unknown): string {
+  return String(value).replace(/[\r\n]+/g, " ").trim()
+}
+
+// Linear-time email check with a length cap — no catastrophic backtracking (fixes ReDoS finding)
+function isValidEmail(email: unknown): email is string {
+  if (typeof email !== "string" || email.length === 0 || email.length > 254) {
+    return false
+  }
+  const atIndex = email.indexOf("@")
+  // exactly one "@", not first or last char
+  if (atIndex <= 0 || atIndex !== email.lastIndexOf("@") || atIndex === email.length - 1) {
+    return false
+  }
+  const local = email.slice(0, atIndex)
+  const domain = email.slice(atIndex + 1)
+  if (/\s/.test(local) || /\s/.test(domain)) {
+    return false
+  }
+  const dotIndex = domain.indexOf(".")
+  // domain must contain a dot that isn't the first or last char
+  return dotIndex > 0 && dotIndex < domain.length - 1
+}
+
+// Validates fileName as a simple filename and confirms the resolved path stays inside
+// public/resources — returns the safe absolute path, or null if anything looks unsafe (fixes path injection)
+function resolveResourcePath(fileName: unknown): string | null {
+  if (
+    typeof fileName !== "string" ||
+    fileName.length === 0 ||
+    fileName.includes("/") ||
+    fileName.includes("\\") ||
+    fileName.includes("\0") ||
+    path.isAbsolute(fileName) ||
+    fileName === "." ||
+    fileName === ".."
+  ) {
+    return null
+  }
+
+  const resourcesRoot = path.resolve(process.cwd(), "public/resources")
+  const filePath = path.resolve(resourcesRoot, fileName)
+
+  // containment check: guard against tricks like a sibling "public/resources-evil" folder
+  if (filePath !== resourcesRoot && !filePath.startsWith(resourcesRoot + path.sep)) {
+    return null
+  }
+
+  return filePath
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { email, resourceName, fileName } = await request.json()
@@ -14,13 +76,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
+    if (!isValidEmail(email)) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 })
     }
 
-    // Check if file exists
-    const filePath = path.join(process.cwd(), "public/resources", fileName)
+    // Validate and resolve the resource path safely
+    const filePath = resolveResourcePath(fileName)
+    if (!filePath) {
+      return NextResponse.json({ error: "Invalid file name" }, { status: 400 })
+    }
     console.log("Looking for file at:", filePath)
 
     if (!fs.existsSync(filePath)) {
@@ -54,11 +118,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Email service unavailable" }, { status: 500 })
     }
 
+    // Escaped/sanitized copies of user input for safe use in emails
+    const safeResourceName = escapeHtml(resourceName)
+    const safeEmail = escapeHtml(email)
+    const safeFileName = escapeHtml(fileName)
+    const subjectResourceName = sanitizeHeader(resourceName)
+
     // Email to user with attachment
     const userMailOptions = {
       from: process.env.SMTP_USER,
       to: email,
-      subject: `Your ${resourceName} from BC Mortgage Team`,
+      subject: `Your ${subjectResourceName} from BC Mortgage Team`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background-color: #032133; color: white; padding: 20px; text-align: center;">
@@ -67,11 +137,11 @@ export async function POST(request: NextRequest) {
           </div>
           
           <div style="padding: 30px; background-color: #f9f9f9;">
-            <h2 style="color: #032133;">Thank you for downloading our ${resourceName}!</h2>
+            <h2 style="color: #032133;">Thank you for downloading our ${safeResourceName}!</h2>
             
             <p>Hi there,</p>
             
-            <p>Thank you for your interest in our mortgage tools. We've attached the <strong>${resourceName}</strong> to this email for your convenience.</p>
+            <p>Thank you for your interest in our mortgage tools. We've attached the <strong>${safeResourceName}</strong> to this email for your convenience.</p>
             
             <div style="background-color: white; padding: 20px; border-left: 4px solid #D4AF37; margin: 20px 0;">
               <h3 style="color: #032133; margin-top: 0;">How to use this tool:</h3>
@@ -122,13 +192,13 @@ export async function POST(request: NextRequest) {
     const adminMailOptions = {
       from: process.env.SMTP_USER,
       to: process.env.EMAIL_TO || "contact@bcmortgageteam.com",
-      subject: `New Resource Download: ${resourceName}`,
+      subject: `New Resource Download: ${subjectResourceName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2>New Resource Download</h2>
-          <p><strong>Resource:</strong> ${resourceName}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>File:</strong> ${fileName}</p>
+          <p><strong>Resource:</strong> ${safeResourceName}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
+          <p><strong>File:</strong> ${safeFileName}</p>
           <p><strong>Date:</strong> ${new Date().toLocaleString()}</p>
           
           <p>A user has downloaded a resource from your website. Consider following up with them about their mortgage needs.</p>
