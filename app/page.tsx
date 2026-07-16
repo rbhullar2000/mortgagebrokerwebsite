@@ -419,7 +419,7 @@ export default function HomePage() {
 
         <div className="space-y-3 lg:space-y-3 mb-6 lg:mb-6">
           {[
-            "Licensed Mortgage Professional with BRX Mortgage",
+            "Licensed Mortgage Advisor with BRX Mortgage Inc.",
             "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
             "Focused on aligning mortgage decisions with long-term financial strategy",
             "Bachelor of Science in Mathematics, Minor in Business Administration — Simon Fraser University",
