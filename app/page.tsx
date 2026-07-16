@@ -422,7 +422,7 @@ export default function HomePage() {
             "Licensed Mortgage Advisor with BRX Mortgage Inc.",
             "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
             "Focused on aligning mortgage decisions with long-term financial strategy",
-            "Bachelor of Science in Mathematics, Minor in Business Administration — Simon Fraser University",
+            "Bachelor of Science in Pure Mathematics, Minor in Business Administration — Simon Fraser University",
           ].map((item, index) => (
             <div key={index} className="flex items-start">
               <div className="w-1.5 h-1.5 bg-[#032133] rounded-full mr-3 mt-[8px] flex-shrink-0"></div>
