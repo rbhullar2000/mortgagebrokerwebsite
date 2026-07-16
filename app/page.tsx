@@ -410,14 +410,11 @@ export default function HomePage() {
         </Badge>
 
         <h2 className="text-xl lg:text-xl font-bold text-[#1D2D44] mb-4 lg:mb-5">
-          Rob Bhullar - Mortgage Advisor
+          Rob Bhullar - Licensed Mortgage Advisor
         </h2>
 
         <p className="text-sm lg:text-sm text-gray-600 mb-5 lg:mb-5 leading-relaxed">
-          With over 20 years of financial experience together with real-world mortgage
-          expertise to help homeowners, investors, and first-time buyers make smarter mortgage decisions.
-          Our approach blends analytical thinking with practical lending expertise, focusing on how a
-          mortgage is structured — not just the rate — to support long-term financial goals.
+          Rob brings over 20 years of financial experience and real-world mortgage expertise to helping homeowners, investors, and first-time buyers make smarter mortgage decisions. His approach blends analytical thinking with practical lending expertise, focusing on how a mortgage is structured — not just the rate — to support long-term financial goals.
         </p>
 
         <div className="space-y-3 lg:space-y-3 mb-6 lg:mb-6">
