@@ -414,7 +414,7 @@ export default function HomePage() {
         </h2>
 
         <p className="text-sm lg:text-sm text-gray-600 mb-5 lg:mb-5 leading-relaxed">
-          Rob brings over 20 years of financial experience and real-world mortgage expertise to helping homeowners, investors, and first-time buyers make smarter mortgage decisions. His approach blends analytical thinking with practical lending expertise, focusing on how a mortgage is structured — not just the rate — to support long-term financial goals.
+          Bringing over 20 years of financial experience and real-world mortgage expertise to helping homeowners, investors, and first-time buyers make smarter mortgage decisions. Blending analytical thinking with practical lending expertise, focusing on how a mortgage is structured — not just the rate — to support long-term financial goals.
         </p>
 
         <div className="space-y-3 lg:space-y-3 mb-6 lg:mb-6">
