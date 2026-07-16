@@ -406,11 +406,11 @@ export default function HomePage() {
       {/* Write-up first on mobile, right side on desktop */}
       <div className="order-1 lg:order-2">
         <Badge className="mb-3 lg:mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 text-xs lg:text-xs">
-          About Rob S. Bhullar
+          BC Mortgage Team
         </Badge>
 
         <h2 className="text-xl lg:text-xl font-bold text-[#1D2D44] mb-4 lg:mb-5">
-          Mortgage Advisor
+          Rob Bhullar - Mortgage Advisor
         </h2>
 
         <p className="text-sm lg:text-sm text-gray-600 mb-5 lg:mb-5 leading-relaxed">
