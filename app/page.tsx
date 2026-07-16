@@ -406,15 +406,15 @@ export default function HomePage() {
       {/* Write-up first on mobile, right side on desktop */}
       <div className="order-1 lg:order-2">
         <Badge className="mb-3 lg:mb-4 bg-[#F4F6F8] text-[#032133] hover:bg-[#032133]/10 text-xs lg:text-xs">
-          About Rob S. Bhullar, BSc
+          About Rob S. Bhullar
         </Badge>
 
         <h2 className="text-xl lg:text-xl font-bold text-[#1D2D44] mb-4 lg:mb-5">
-          Lead Mortgage Specialist
+          Mortgage Advisor
         </h2>
 
         <p className="text-sm lg:text-sm text-gray-600 mb-5 lg:mb-5 leading-relaxed">
-          BC Mortgage Team brings over 25 years of finance experience together with real-world mortgage
+          BC Mortgage Team brings over 20 years of finance experience together with real-world mortgage
           expertise to help homeowners, investors, and first-time buyers make smarter mortgage decisions.
           Our approach blends analytical thinking with practical lending expertise, focusing on how a
           mortgage is structured — not just the rate — to support long-term financial goals.
@@ -425,7 +425,7 @@ export default function HomePage() {
             "Licensed Mortgage Professional with BRX Mortgage",
             "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
             "Focused on aligning mortgage decisions with long-term financial strategy",
-            "Bachelor of Science in Mathematics, Minor in Business Administration & Computing Studies — Simon Fraser University",
+            "Bachelor of Science in Mathematics, Minor in Business Administration — Simon Fraser University",
           ].map((item, index) => (
             <div key={index} className="flex items-start">
               <div className="w-1.5 h-1.5 bg-[#032133] rounded-full mr-3 mt-[8px] flex-shrink-0"></div>
@@ -440,7 +440,7 @@ export default function HomePage() {
  <div className="grid grid-cols-3 gap-4 lg:gap-5 mb-8 items-center text-center">
           <div className="flex flex-col items-center justify-center">
             <div className="text-2xl lg:text-2xl font-bold text-[#D4AF37]">
-              25+ years
+              20+ years
             </div>
 
             <div className="text-xs lg:text-xs text-gray-600">
