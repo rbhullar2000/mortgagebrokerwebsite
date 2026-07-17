@@ -213,7 +213,7 @@ export function ROICalculator() {
     <div className="w-full max-w-6xl mx-auto">
       <div className="text-center mb-8">
         <div className="flex items-center justify-center mb-4">
-          <Calculator className="w-8 h-8 text-[#032133] mr-3" />
+          <Calculator className="w-8 h-8 text-[#1D2D44] mr-3" />
           <h2 className="text-3xl font-bold text-gray-900">Investment Property Analysis</h2>
         </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -228,7 +228,7 @@ export function ROICalculator() {
         <Card className="border-0 shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center">
-              <DollarSign className="w-5 h-5 mr-2 text-[#032133]" />
+              <DollarSign className="w-5 h-5 mr-2 text-[#1D2D44]" />
               Property Details
             </CardTitle>
             <CardDescription>Enter your investment property information</CardDescription>
@@ -371,7 +371,7 @@ export function ROICalculator() {
         <Card className="border-0 shadow-lg">
           <CardHeader>
             <CardTitle className="flex items-center">
-              <TrendingUp className="w-5 h-5 mr-2 text-[#032133]" />
+              <TrendingUp className="w-5 h-5 mr-2 text-[#1D2D44]" />
               Investment Analysis
             </CardTitle>
             <CardDescription>Your projected returns, cash flow, and financeability</CardDescription>
@@ -387,21 +387,21 @@ export function ROICalculator() {
             {/* Key Metrics */}
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center p-4 bg-slate-50 rounded-lg">
-                <div className="text-2xl font-bold text-[#032133]">
+                <div className="text-2xl font-bold text-[#1D2D44]">
                   {formatPercent(results.cashOnCashReturn)}
                 </div>
                 <div className="text-sm text-gray-600">Cash-on-Cash Return</div>
               </div>
               <div className="text-center p-4 bg-slate-50 rounded-lg">
-                <div className="text-2xl font-bold text-[#032133]">{formatPercent(results.capRate)}</div>
+                <div className="text-2xl font-bold text-[#1D2D44]">{formatPercent(results.capRate)}</div>
                 <div className="text-sm text-gray-600">Cap Rate</div>
               </div>
               <div className="text-center p-4 bg-slate-50 rounded-lg">
-                <div className="text-2xl font-bold text-[#032133]">{results.dscr.toFixed(2)}x</div>
+                <div className="text-2xl font-bold text-[#1D2D44]">{results.dscr.toFixed(2)}x</div>
                 <div className="text-sm text-gray-600">Debt-Service Coverage</div>
               </div>
               <div className="text-center p-4 bg-slate-50 rounded-lg">
-                <div className="text-2xl font-bold text-[#032133]">
+                <div className="text-2xl font-bold text-[#1D2D44]">
                   {results.irrValid ? formatPercent(results.fiveYearIRR) : "n/a"}
                 </div>
                 <div className="text-sm text-gray-600">{holdPeriod}-Year IRR</div>
