@@ -253,7 +253,7 @@ export default function InvestmentPageClient() {
                 title: "An Analyst's Read",
                 description:
                   "20+ years in equity and investment analysis, including Level I of the CFA Program. I read a rental the way an analyst reads any asset.",
-                benefit: "20+ yrs + CFA Level I",
+                benefit: "20+ yrs",
               },
               {
                 icon: <Calculator className="w-8 h-8" />,
