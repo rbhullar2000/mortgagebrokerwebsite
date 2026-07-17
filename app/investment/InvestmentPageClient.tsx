@@ -21,14 +21,15 @@ export default function InvestmentPageClient() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-[#F4F6F8] text-[#1D2D44] hover:bg-[#1D2D44]/10">
-                Investment Property Specialist
+                Investment Property Financing — Analyst-Led
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6">
-                Build Wealth Through <span className="text-[#D4AF37]">Real Estate</span>
+                Know the numbers <span className="text-[#D4AF37]">before you buy</span>
               </h1>
               <p className="text-xl text-black mb-8 leading-relaxed">
-                Specialized financing for rental properties, multi-unit buildings, and real estate investments. Access
-                competitive rates and flexible terms for your portfolio growth.
+                Most brokers quote you a payment. With 20+ years in equity and investment analysis, I
+                underwrite the property first — cash flow, cap rate, debt coverage, and your real
+                return over the hold — then structure the financing around a deal that actually works.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
@@ -49,22 +50,22 @@ export default function InvestmentPageClient() {
                 >
                   <Link href="#calculator">
                     <Calculator className="w-5 h-5 mr-2" />
-                    ROI Calculator
+                    Analyze a Property
                   </Link>
                 </Button>
               </div>
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">20+ yrs</div>
+                  <div className="text-sm text-black">Investment Analysis</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-[#D4AF37]">50+</div>
+                  <div className="text-sm text-black">Lenders Compared</div>
+                </div>
+                <div>
                   <div className="text-2xl font-bold text-[#D4AF37]">20%</div>
                   <div className="text-sm text-black">Min Down</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-[#D4AF37]">10+</div>
-                  <div className="text-sm text-black">Properties</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-[#D4AF37]">Commercial</div>
-                  <div className="text-sm text-black">Available</div>
                 </div>
               </div>
             </div>
@@ -78,14 +79,32 @@ export default function InvestmentPageClient() {
         </div>
       </section>
 
+      {/* Problem Band */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-[#1D2D44] mb-4">
+              Financing is the last step. The numbers come first.
+            </h2>
+            <p className="text-lg text-black leading-relaxed">
+              Almost anyone can arrange a mortgage on a rental. Far fewer can tell you whether it's a
+              good investment. Buyers routinely commit hundreds of thousands of dollars on a gut feel
+              and a gross rent figure — no real underwriting of the cash flow after vacancy, the true
+              operating costs, or the return on the cash they're actually putting in. That gap is
+              where deals go wrong. It's also exactly what I close before you sign anything.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Property Types Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Investment Property Types We Finance</h2>
             <p className="text-xl text-black max-w-3xl mx-auto">
-              From single rental units to large commercial properties, we have financing solutions for every investment
-              strategy.
+              From a single rental unit to a small apartment building, every property gets the same
+              treatment — underwritten on its numbers, then matched to the right lender.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -160,7 +179,8 @@ export default function InvestmentPageClient() {
               <CardContent>
                 <p className="text-black mb-4">
                   Purchase properties for long-term rental income and appreciation. Build wealth through cash flow and
-                  equity growth.
+                  equity growth. Includes furnished and mid-term rental structuring, where the income and cost profile
+                  differ from a standard long-term hold.
                 </p>
                 <div className="space-y-2">
                   <div className="flex justify-between">
@@ -217,48 +237,53 @@ export default function InvestmentPageClient() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Why Work With Me Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">
-              Why Choose us for Investment Financing?
-            </h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Why work with me on this</h2>
             <p className="text-xl text-black max-w-3xl mx-auto">
-              Specialized expertise in investment property financing with access to lenders who understand real estate
-              investing.
+              The difference isn't the rate sheet — every broker has one. It's who reads the deal.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "Portfolio Lending",
-                description: "Finance multiple properties with one lender",
-                benefit: "Streamlined process",
+                icon: <TrendingUp className="w-8 h-8" />,
+                title: "An Analyst's Read",
+                description:
+                  "20+ years in equity and investment analysis, including Level I of the CFA Program. I read a rental the way an analyst reads any asset.",
+                benefit: "20+ yrs + CFA Level I",
               },
               {
-                title: "Cash Flow Analysis",
-                description: "Detailed rental income assessments",
-                benefit: "Maximize borrowing",
+                icon: <Calculator className="w-8 h-8" />,
+                title: "Real Underwriting",
+                description:
+                  "Cash flow after vacancy, cap rate, debt coverage, and a multi-year return with the eventual sale — not a payment quote dressed up as analysis.",
+                benefit: "Cap · DSCR · IRR",
               },
               {
-                title: "Investor Networks",
-                description: "Connect with other real estate professionals",
-                benefit: "Grow your business",
+                icon: <Target className="w-8 h-8" />,
+                title: "Financeability, Solved",
+                description:
+                  "DSCR is where investor deals live or die. I tell you upfront whether it finances cleanly and how to structure it if coverage is thin.",
+                benefit: "DSCR-first",
               },
               {
-                title: "Tax Strategies",
-                description: "Optimize your financing for tax benefits",
-                benefit: "Increase returns",
+                icon: <DollarSign className="w-8 h-8" />,
+                title: "One Relationship",
+                description:
+                  "The analysis and the mortgage come from the same person. The numbers inform the financing, and the financing reflects the numbers.",
+                benefit: "Start to finish",
               },
-            ].map((benefit, index) => (
+            ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-[#F4F6F8] rounded-lg flex items-center justify-center text-[#1D2D44] mb-4 mx-auto">
-                  <Building className="w-8 h-8" />
+                  {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#1D2D44] mb-2">{benefit.title}</h3>
-                <p className="text-black mb-2">{benefit.description}</p>
-                <div className="text-sm font-bold text-[#D4AF37]">{benefit.benefit}</div>
+                <h3 className="text-xl font-bold text-[#1D2D44] mb-2">{item.title}</h3>
+                <p className="text-black mb-2">{item.description}</p>
+                <div className="text-sm font-bold text-[#D4AF37]">{item.benefit}</div>
               </div>
             ))}
           </div>
@@ -268,8 +293,11 @@ export default function InvestmentPageClient() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#1D2D44] to-[#D4AF37] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Ready to Grow Your Investment Portfolio?</h2>
-          <p className="text-xl mb-8 opacity-90">Get specialized financing for your next investment property.</p>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Thinking about a rental? Run the numbers with me first.</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Send me the property and your assumptions. You'll get a straight read on whether it works — and a financing
+            plan built around it.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Button
               size="lg"
@@ -287,12 +315,15 @@ export default function InvestmentPageClient() {
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-[#1D2D44]"
               asChild
-              onClick={() => window.trackPhoneClick?.()}
+              onClick={() => window.trackApplicationClick?.("investment_cta_call")}
             >
-              {/*  <Link href="tel:+16041234567">
-                <Phone className="w-4 h-4 mr-2" />
-                Call Now
-              </Link> */}
+              <Link
+                href="https://calendly.com/bcmortgageteam/15min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book a 15-Minute Call
+              </Link>
             </Button>
           </div>
         </div>
