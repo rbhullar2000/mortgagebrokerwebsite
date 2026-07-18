@@ -321,7 +321,7 @@ export default function HomePage() {
       </p>
     </div>
 
-    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6">
+    <div className="flex flex-wrap justify-center gap-3 lg:gap-6">
       {[
         {
           icon: <Users className="w-6 h-6 text-[#1D2D44]" />,
@@ -353,16 +353,10 @@ export default function HomePage() {
           description: "Rental and portfolio financing.",
           link: "/investment",
         },
-        {
-          icon: <Clock className="w-6 h-6 text-[#1D2D44]" />,
-          title: "Quick Closings",
-          description: "Fast approvals when timing matters.",
-          link: "/quick-closings",
-        },
       ].map((service, index) => (
         <Card
           key={index}
-          className="bg-white shadow-sm hover:shadow-md transition-shadow rounded-xl"
+          className="bg-white shadow-sm hover:shadow-md transition-shadow rounded-xl w-[calc(50%-0.375rem)] lg:w-[calc(33.333%-1rem)]"
         >
           <CardContent className="p-4 lg:p-5">
             <div className="flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-4">
@@ -397,6 +391,7 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+
   
  {/* ── About ── */}
 <section id="about" className="py-10 lg:py-16 bg-white">
