@@ -305,7 +305,7 @@ export default function PurchasePageClient() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-[#1D2D44]"
+              className="bg-white text-[#1D2D44] hover:bg-gray-100"
               asChild
               onClick={() => window.trackApplicationClick?.("purchase_cta_call")}
             >
