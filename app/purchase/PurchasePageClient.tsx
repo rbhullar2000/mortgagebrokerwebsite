@@ -171,8 +171,10 @@ export default function PurchasePageClient() {
 
           <p className="text-xs text-gray-500 text-center mt-8 max-w-3xl mx-auto">
             Buyers of eligible new homes may also qualify for the federal First-Time Home Buyers'
-            GST rebate (up to $50,000 back). Program figures are current for 2026 and subject to
-            change, and this isn't tax advice — let's confirm exactly what you qualify for.
+            GST rebate (up to $50,000 back). The two BC exemptions above can't be combined on the
+            same purchase — you claim whichever saves more, and the federal programs stack on top of
+            it. Program figures are current for 2026 and subject to change, and this isn't tax advice
+            — let's confirm exactly what you qualify for.
           </p>
         </div>
       </section>
