@@ -3,12 +3,11 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Calculator, TrendingUp, Shield, AlertTriangle, CheckCircle } from "lucide-react"
+import { Calculator, TrendingUp, Shield, AlertTriangle, CheckCircle, Clock, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { MortgageCalculator } from "@/components/mortgage-calculator"
 
 export default function RenewalPageClient() {
   return (
@@ -34,7 +33,7 @@ export default function RenewalPageClient() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
                   size="lg"
-                  className="bg-[#032133] hover:bg-[#032133]/90"
+                  className="bg-[#1D2D44] hover:bg-[#1D2D44]/90"
                   asChild
                   onClick={() => window.trackApplicationClick?.("renewal_hero")}
                 >
@@ -50,13 +49,13 @@ export default function RenewalPageClient() {
                 >
                   <Link href="#calculator">
                     <Calculator className="w-5 h-5 mr-2" />
-                    Calculate Savings
+                    Am I Overpaying?
                   </Link>
                 </Button>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <h3 className="font-bold text-[#1D2D44] mb-2">Average Client Savings:</h3>
-                <div className="text-3xl font-bold text-[#032133]">$3,200/year</div>
+                <div className="text-3xl font-bold text-[#1D2D44]">$3,200/year</div>
                 <p className="text-sm text-gray-600">Based on $500K mortgage, 0.5% rate improvement</p>
               </div>
             </div>
@@ -155,16 +154,78 @@ export default function RenewalPageClient() {
         </div>
       </section>
 
-      {/* Calculator Section */}
+      {/* Renewal Checker Section (replaces the old payment calculator) */}
       <section id="calculator" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">Calculate Your Potential Savings</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how much you could save by getting a better rate on your mortgage renewal.
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1D2D44] mb-4">
+                Are You Overpaying on Your Renewal?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Don&apos;t take the bank&apos;s word for it. Run your current mortgage through the 2-minute
+                checker and see — with your own numbers — whether their renewal offer is competitive or
+                quietly costing you.
+              </p>
+            </div>
+
+            <div className="bg-[#F4F6F8] rounded-2xl border border-gray-200 shadow-sm p-8 md:p-10">
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#1D2D44] text-[#D4AF37] flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#1D2D44] mb-1">Your real number</h3>
+                    <p className="text-sm text-gray-600">
+                      The gap between your rate and today&apos;s BC market — in dollars, not a blanket average.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#1D2D44] text-[#D4AF37] flex items-center justify-center">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#1D2D44] mb-1">About two minutes</h3>
+                    <p className="text-sm text-gray-600">
+                      A few questions about your current mortgage and renewal date. That&apos;s it.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#1D2D44] text-[#D4AF37] flex items-center justify-center">
+                    <Shield className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#1D2D44] mb-1">No obligation</h3>
+                    <p className="text-sm text-gray-600">
+                      Free, no credit check, no pressure — just an honest read on where you stand.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <Button
+                  size="lg"
+                  className="bg-[#D4AF37] hover:bg-[#C79A2B] text-[#1D2D44] font-semibold"
+                  asChild
+                  onClick={() => window.trackApplicationClick?.("renewal_checker")}
+                >
+                  <Link href="/mortgage-checker">
+                    Am I Overpaying? Check My Renewal
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                </Button>
+                <p className="text-sm text-gray-500 mt-4">
+                  Takes about 2 minutes · Free · Based on live BC lender rates
+                </p>
+              </div>
+            </div>
           </div>
-          <MortgageCalculator />
         </div>
       </section>
 
@@ -175,23 +236,11 @@ export default function RenewalPageClient() {
           <p className="text-xl mb-8 opacity-90">
             Don't wait until the last minute. Start shopping for better rates today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <div className="flex justify-center">
             <Button size="lg" variant="secondary" asChild onClick={() => window.trackApplicationClick?.("renewal_cta")}>
               <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
                 Check My Options - Apply Now
               </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
-              onClick={() => window.trackPhoneClick?.()}
-            >
-              {/*   <Link href="tel:+16041234567">
-                <Phone className="w-4 h-4 mr-2" />
-                Call Now
-              </Link> */}
             </Button>
           </div>
         </div>
