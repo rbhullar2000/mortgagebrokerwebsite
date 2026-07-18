@@ -8,14 +8,11 @@ import {
   TrendingUp,
   Shield,
   CheckCircle,
-  Home,
-  PiggyBank,
-  Wallet,
-  Clock,
   Percent,
-  Landmark,
-  Layers,
-  BadgeCheck,
+  Clock,
+  DollarSign,
+  Building,
+  Target,
 } from "lucide-react"
 import Link from "next/link"
 import { ContactForm } from "@/components/contact-form"
@@ -112,14 +109,14 @@ export default function PurchasePageClient() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                icon: <PiggyBank className="w-7 h-7" />,
+                icon: <DollarSign className="w-7 h-7" />,
                 tag: "Federal",
                 title: "FHSA",
                 description:
                   "Save up to $40,000 toward your first home completely tax-free — $8,000 per year, deductible like an RRSP.",
               },
               {
-                icon: <Wallet className="w-7 h-7" />,
+                icon: <TrendingUp className="w-7 h-7" />,
                 tag: "Federal",
                 title: "Home Buyers' Plan",
                 description:
@@ -139,14 +136,14 @@ export default function PurchasePageClient() {
                   "First-time buyers and new-build purchasers can stretch to a 30-year amortization for lower monthly payments.",
               },
               {
-                icon: <Landmark className="w-7 h-7" />,
+                icon: <Shield className="w-7 h-7" />,
                 tag: "BC",
                 title: "Property Transfer Tax Exemption",
                 description:
                   "Full PTT exemption up to $835,000 (partial to $860,000) — worth up to about $8,000 saved at closing.",
               },
               {
-                icon: <Home className="w-7 h-7" />,
+                icon: <Building className="w-7 h-7" />,
                 tag: "BC",
                 title: "Newly Built Home Exemption",
                 description:
@@ -201,7 +198,7 @@ export default function PurchasePageClient() {
                   "20+ years in equity and investment analysis. I look at how the mortgage is structured and what it costs you long-term — not just this week's rate.",
               },
               {
-                icon: <Layers className="w-8 h-8" />,
+                icon: <Target className="w-8 h-8" />,
                 title: "Program Stacking",
                 description:
                   "I map every BC and federal program you qualify for and how to combine them, so you don't leave money on the table at closing.",
@@ -213,7 +210,7 @@ export default function PurchasePageClient() {
                   "Bank rates plus alternatives, rate holds up to 120 days, and no lender fees — matched to your situation, not a single lender's shelf.",
               },
               {
-                icon: <BadgeCheck className="w-8 h-8" />,
+                icon: <CheckCircle className="w-8 h-8" />,
                 title: "Pre-Approval Done Right",
                 description:
                   "A real budget and a held rate, so you shop with confidence and put in offers that sellers take seriously.",
