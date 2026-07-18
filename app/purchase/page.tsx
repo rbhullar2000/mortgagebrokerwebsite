@@ -1,3 +1,6 @@
+import type { Metadata } from "next"
+import PurchasePageClient from "@/components/purchase-page-client" // ← keep YOUR existing import path
+
 export const metadata: Metadata = {
   title: "Home Purchase Mortgages in BC | First-Time & Move-Up Buyers | BC Mortgage Team",
   description:
@@ -13,4 +16,8 @@ export const metadata: Metadata = {
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "BC Mortgage Team" }],
   },
   alternates: { canonical: "https://bcmortgageteam.com/purchase" },
+}
+
+export default function Page() {
+  return <PurchasePageClient />
 }
