@@ -187,7 +187,7 @@ export default function HomePage() {
   <div className="container mx-auto px-4">
     <div className="text-center mb-8 lg:mb-10">
       <h2 className="text-2xl lg:text-3xl font-bold text-[#1D2D44] mb-3">
-        Access to Canada&apos;s Leading Mortgage Lenders
+        One application. 50+ lenders. The right mortgage strategy.
       </h2>
 
       <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
