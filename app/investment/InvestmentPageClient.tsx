@@ -32,7 +32,7 @@ export default function InvestmentPageClient() {
                 return over the hold — then structure the financing around a deal that actually works.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button
+               {/* <Button
                   size="lg"
                   className="bg-[#1D2D44] hover:bg-[#1D2D44]/90"
                   asChild
@@ -41,7 +41,7 @@ export default function InvestmentPageClient() {
                   <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
                     Get Investment Rates - Apply Now
                   </Link>
-                </Button>
+                </Button> */}
                 <Button
                   size="lg"
                   variant="outline"
