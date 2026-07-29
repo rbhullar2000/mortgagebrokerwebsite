@@ -128,7 +128,7 @@ export default function StrategyPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-10 bg-white">
+{/*      <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto space-y-4">
             {[
@@ -175,7 +175,7 @@ export default function StrategyPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Who This Is For */}
       <section className="py-10 bg-[#F4F6F8]">
