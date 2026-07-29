@@ -405,7 +405,7 @@ export default function HomePage() {
       {/* ── Mortgage Analysis Centre ── */}
 <section
   id="mortgage-analysis-centre"
-  className="bg-white py-8 sm:py-12 lg:py-16"
+  className="scroll-mt-20 bg-white py-8 sm:py-12 lg:py-16"
 >
   <div className="container mx-auto px-4">
     <div className="mb-6 text-center sm:mb-8 lg:mb-10">
