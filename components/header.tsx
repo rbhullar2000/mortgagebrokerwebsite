@@ -29,6 +29,7 @@ export function Header() {
     { href: "/", label: "Start Here" },
     { href: "/strategy", label: "Mortgage Strategy" },
    // { href: "/break-even-calculator", label: "Refinance Calculator" },
+    { href: "/#mortgage-analysis-centre", label: "Analysis Centre" },
     { href: "/learn", label: "Learn" },
     { href: "/blog", label: "Resources" },
     { href: "/#contact", label: "Contact" },
