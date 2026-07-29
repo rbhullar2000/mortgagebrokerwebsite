@@ -605,59 +605,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Services ── */}
-      <section id="services" className="bg-white py-8 lg:py-14">
-        <div className="container mx-auto px-4">
-          <div className="mb-6 text-center lg:mb-8">
-            <h2 className="mb-3 text-2xl font-bold text-[#1D2D44] lg:text-3xl">
-              Mortgage Services
-            </h2>
+     {/* ── Services ── */}
+<section id="services" className="bg-white py-8 lg:py-10">
+  <div className="container mx-auto px-4">
+    <div className="mb-6 text-center">
+      <h2 className="mb-2 text-2xl font-bold text-[#1D2D44] lg:text-3xl">
+        Mortgage Services
+      </h2>
 
-            <p className="mx-auto max-w-3xl text-sm leading-relaxed text-[#2C2C2C] sm:text-base lg:text-xl">
-              Practical mortgage solutions for purchases, renewals, refinances,
-              and more.
-            </p>
+      <p className="mx-auto max-w-3xl text-sm text-gray-600 sm:text-base">
+        Support for purchases, renewals, refinances, investments, and
+        self-employed borrowers.
+      </p>
+    </div>
+
+    <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 lg:grid-cols-5">
+      {services.map((service) => (
+        <Link
+          key={service.title}
+          href={service.link}
+          className="group rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-[#C79A2B] hover:shadow-md"
+        >
+          <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#F4F6F8]">
+            {service.icon}
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3 lg:gap-6">
-            {services.map((service) => (
-              <Card
-                key={service.title}
-                className="w-[calc(50%-0.375rem)] rounded-xl bg-white shadow-sm transition-shadow hover:shadow-md lg:w-[calc(33.333%-1rem)]"
-              >
-                <CardContent className="p-4 lg:p-5">
-                  <div className="flex flex-col gap-2 lg:flex-row lg:items-start lg:gap-4">
-                    <div className="hidden h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-[#F4F6F8] lg:flex">
-                      {service.icon}
-                    </div>
+          <h3 className="text-base font-bold text-[#1D2D44]">
+            {service.title}
+          </h3>
 
-                    <div>
-                      <h3 className="mb-1 text-base font-bold text-[#1D2D44] lg:text-lg">
-                        {service.title}
-                      </h3>
-
-                      <p className="mb-2 text-xs leading-snug text-gray-600 lg:mb-3 lg:text-sm">
-                        {service.description}
-                      </p>
-
-                      <Button
-                        variant="link"
-                        className="h-auto p-0 text-xs font-semibold text-[#C79A2B] hover:text-[#D4AF37] lg:text-sm"
-                        asChild
-                      >
-                        <Link href={service.link}>
-                          Learn more
-                          <ArrowRight className="ml-1.5 h-3.5 w-3.5 lg:ml-2 lg:h-4 lg:w-4" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="mt-3 flex items-center text-xs font-semibold text-[#C79A2B]">
+            Learn more
+            <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
           </div>
-        </div>
-      </section>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* ── About ── */}
       <section id="about" className="bg-[#F4F6F8] py-10 lg:py-16">
