@@ -403,130 +403,155 @@ export default function HomePage() {
       </section>
 
       {/* ── Mortgage Analysis Centre ── */}
-      <section
-        id="mortgage-analysis-centre"
-        className="bg-white py-10 sm:py-12 lg:py-16"
-      >
-        <div className="container mx-auto px-4">
-          <div className="mb-8 text-center lg:mb-10">
-            <Badge className="mb-3 bg-[#F4F6F8] text-[11px] uppercase tracking-[0.16em] text-[#1D2D44] hover:bg-[#F4F6F8] sm:text-xs">
-              Analyze Before You Borrow
-            </Badge>
+<section
+  id="mortgage-analysis-centre"
+  className="bg-white py-8 sm:py-12 lg:py-16"
+>
+  <div className="container mx-auto px-4">
+    <div className="mb-6 text-center sm:mb-8 lg:mb-10">
+      <Badge className="mb-3 bg-[#F4F6F8] text-[10px] uppercase tracking-[0.16em] text-[#1D2D44] hover:bg-[#F4F6F8] sm:text-xs">
+        Analyze Before You Borrow
+      </Badge>
 
-            <h2 className="mb-3 text-2xl font-bold text-[#1D2D44] lg:text-3xl">
-              Mortgage Analysis Centre
-            </h2>
+      <h2 className="mb-2 text-2xl font-bold text-[#1D2D44] lg:mb-3 lg:text-3xl">
+        Mortgage Analysis Centre
+      </h2>
 
-            <p className="mx-auto max-w-3xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
-              Use these interactive tools to understand the numbers, compare
-              your options, and make a more informed mortgage decision.
-            </p>
-          </div>
+      <p className="mx-auto max-w-3xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
+        Use these interactive tools to understand the numbers, compare your
+        options, and make a more informed mortgage decision.
+      </p>
+    </div>
 
-          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
-            {analysisTools.map((tool) => {
-              const Icon = tool.icon
+    <div className="mx-auto grid max-w-6xl grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:gap-6">
+      {analysisTools.map((tool) => {
+        const Icon = tool.icon
 
-              return (
-                <Card
-                  key={tool.title}
-                  className={`group relative overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+        return (
+          <Link
+            key={tool.title}
+            href={tool.link}
+            aria-label={`${tool.buttonText}: ${tool.title}`}
+            className={`group relative overflow-hidden rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-4 ${
+              tool.featured
+                ? "border-[#C79A2B] bg-[#1D2D44] shadow-lg"
+                : "border-gray-200 bg-white shadow-sm"
+            }`}
+          >
+            {tool.featured && (
+              <div
+                aria-hidden="true"
+                className="absolute right-0 top-0 h-28 w-28 -translate-y-12 translate-x-12 rounded-full bg-[#D4AF37]/10 sm:h-36 sm:w-36 sm:-translate-y-14 sm:translate-x-14"
+              />
+            )}
+
+            <div className="relative p-4 sm:flex sm:min-h-[285px] sm:flex-col sm:p-6 lg:min-h-[310px] lg:p-7">
+              {/* Mobile: compact horizontal card */}
+              <div className="flex items-start gap-3 sm:block">
+                <div
+                  className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl sm:mb-5 sm:h-12 sm:w-12 ${
                     tool.featured
-                      ? "border-[#C79A2B] bg-[#1D2D44] shadow-lg"
-                      : "border-gray-200 bg-white shadow-sm"
+                      ? "bg-[#C79A2B] text-white"
+                      : "bg-[#F4F6F8] text-[#1D2D44]"
                   }`}
                 >
-                  {tool.featured && (
-                    <div className="absolute right-0 top-0 h-36 w-36 -translate-y-14 translate-x-14 rounded-full bg-[#D4AF37]/10" />
-                  )}
+                  <Icon
+                    aria-hidden="true"
+                    className="h-5 w-5 sm:h-6 sm:w-6"
+                  />
+                </div>
 
-                  <CardContent className="relative flex min-h-[330px] h-full flex-col p-6 lg:p-7">
-                    <div className="mb-6 flex items-start justify-between gap-4">
-                      <div
-                        className={`flex h-12 w-12 items-center justify-center rounded-xl ${
-                          tool.featured
-                            ? "bg-[#C79A2B] text-white"
-                            : "bg-[#F4F6F8] text-[#1D2D44]"
-                        }`}
-                      >
-                        <Icon className="h-6 w-6" />
-                      </div>
+                <div className="min-w-0 flex-1">
+                  {/* Category label shown on tablet and desktop */}
+                  <span
+                    className={`mb-3 hidden w-fit rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] sm:inline-block lg:text-xs ${
+                      tool.featured
+                        ? "bg-white/10 text-[#E6C86A]"
+                        : "bg-[#F4F6F8] text-gray-600"
+                    }`}
+                  >
+                    {tool.label}
+                  </span>
 
-                      <span
-                        className={`rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] sm:text-xs ${
-                          tool.featured
-                            ? "bg-white/10 text-[#E6C86A]"
-                            : "bg-[#F4F6F8] text-gray-600"
-                        }`}
-                      >
-                        {tool.label}
-                      </span>
-                    </div>
-
+                  <div className="mb-1 flex items-start justify-between gap-3 sm:mb-3">
                     <h3
-                      className={`mb-3 text-xl font-bold lg:text-2xl ${
+                      className={`text-base font-bold leading-snug sm:text-xl lg:text-2xl ${
                         tool.featured ? "text-white" : "text-[#1D2D44]"
                       }`}
                     >
                       {tool.title}
                     </h3>
 
-                    <p
-                      className={`mb-5 text-sm leading-6 ${
-                        tool.featured ? "text-gray-200" : "text-gray-600"
+                    {/* Mobile arrow */}
+                    <ArrowRight
+                      aria-hidden="true"
+                      className={`mt-0.5 h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1 sm:hidden ${
+                        tool.featured ? "text-[#D4AF37]" : "text-[#C79A2B]"
                       }`}
-                    >
-                      {tool.description}
-                    </p>
+                    />
+                  </div>
 
-                    <div className="mb-7 space-y-2">
-                      {tool.features.map((feature) => (
-                        <div
-                          key={feature}
-                          className={`flex items-center gap-2 text-sm ${
-                            tool.featured ? "text-gray-200" : "text-gray-700"
-                          }`}
-                        >
-                          <div
-                            className={`h-1.5 w-1.5 flex-shrink-0 rounded-full ${
-                              tool.featured
-                                ? "bg-[#D4AF37]"
-                                : "bg-[#C79A2B]"
-                            }`}
-                          />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
+                  <p
+                    className={`line-clamp-2 text-xs leading-5 sm:line-clamp-none sm:text-sm sm:leading-6 ${
+                      tool.featured ? "text-gray-200" : "text-gray-600"
+                    }`}
+                  >
+                    {tool.description}
+                  </p>
+                </div>
+              </div>
 
-                    <div className="mt-auto">
-                      <Button
-                        className={`h-11 w-full font-semibold ${
-                          tool.featured
-                            ? "bg-[#C79A2B] text-white hover:bg-[#D4AF37]"
-                            : "bg-[#1D2D44] text-white hover:bg-[#263C59]"
-                        }`}
-                        asChild
-                      >
-                        <Link href={tool.link}>
-                          {tool.buttonText}
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
+              {/* Tablet and desktop feature list */}
+              <div className="mt-5 hidden space-y-2 sm:block">
+                {tool.features.map((feature) => (
+                  <div
+                    key={feature}
+                    className={`flex items-center gap-2 text-sm ${
+                      tool.featured ? "text-gray-200" : "text-gray-700"
+                    }`}
+                  >
+                    <div
+                      aria-hidden="true"
+                      className={`h-1.5 w-1.5 flex-shrink-0 rounded-full ${
+                        tool.featured ? "bg-[#D4AF37]" : "bg-[#C79A2B]"
+                      }`}
+                    />
 
-          <p className="mx-auto mt-7 max-w-3xl text-center text-xs leading-relaxed text-gray-500 sm:text-sm">
-            Calculations are estimates for educational purposes and do not
-            constitute mortgage approval, a lending commitment, investment
-            advice, or financial advice.
-          </p>
-        </div>
-      </section>
+                    <span>{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Tablet and desktop button */}
+              <div className="mt-auto hidden pt-6 sm:block">
+                <div
+                  className={`flex h-11 w-full items-center justify-center rounded-md font-semibold transition-colors ${
+                    tool.featured
+                      ? "bg-[#C79A2B] text-white group-hover:bg-[#D4AF37]"
+                      : "bg-[#1D2D44] text-white group-hover:bg-[#263C59]"
+                  }`}
+                >
+                  {tool.buttonText}
+
+                  <ArrowRight
+                    aria-hidden="true"
+                    className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                  />
+                </div>
+              </div>
+            </div>
+          </Link>
+        )
+      })}
+    </div>
+
+    <p className="mx-auto mt-5 max-w-3xl text-center text-[10px] leading-relaxed text-gray-500 sm:mt-7 sm:text-sm">
+      Calculations are estimates for educational purposes and do not constitute
+      mortgage approval, a lending commitment, investment advice, or financial
+      advice.
+    </p>
+  </div>
+</section>
 
       {/* ── Testimonials ── */}
       <section className="bg-[#F4F6F8] py-10">
