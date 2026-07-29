@@ -31,7 +31,7 @@ export function Header() {
    // { href: "/break-even-calculator", label: "Refinance Calculator" },
     { href: "/#mortgage-analysis-centre", label: "Analysis Centre" },
     { href: "/learn", label: "Learn" },
-    { href: "/blog", label: "Resources" },
+   // { href: "/blog", label: "Resources" },
     { href: "/#contact", label: "Contact" },
   ]
 
