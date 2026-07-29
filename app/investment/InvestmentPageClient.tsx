@@ -16,69 +16,71 @@ export default function InvestmentPageClient() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#F4F6F8] to-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge className="mb-4 bg-[#F4F6F8] text-[#1D2D44] hover:bg-[#1D2D44]/10">
-                Investment Property Financing — Analyst-Led
-              </Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-[#1D2D44] mb-6">
-                Know the numbers <span className="text-[#D4AF37]">before you buy</span>
-              </h1>
-              <p className="text-xl text-black mb-8 leading-relaxed">
-                Most brokers quote you a payment. With 20+ years in equity and investment analysis, I
-                underwrite the property first — cash flow, cap rate, debt coverage, and your real
-                return over the hold — then structure the financing around a deal that actually works.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-               {/* <Button
-                  size="lg"
-                  className="bg-[#1D2D44] hover:bg-[#1D2D44]/90"
-                  asChild
-                  onClick={() => window.trackApplicationClick?.("investment_hero")}
-                >
-                  <Link href="https://r.mtg-app.com/robbhullar" target="_blank" rel="noopener noreferrer">
-                    Get Investment Rates - Apply Now
-                  </Link>
-                </Button> */}
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-[#D4AF37] text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
-                  asChild
-                >
-                  <Link href="#calculator">
-                    <Calculator className="w-5 h-5 mr-2" />
-                    Analyze a Property
-                  </Link>
-                </Button>
-              </div>
-              <div className="grid grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-2xl font-bold text-[#D4AF37]">20+ yrs</div>
-                  <div className="text-sm text-black">Investment Analysis</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-[#D4AF37]">50+</div>
-                  <div className="text-sm text-black">Lenders Compared</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-[#D4AF37]">20%</div>
-                  <div className="text-sm text-black">Min Down</div>
-                </div>
-              </div>
-            </div>
-          {/*   <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border-l-4 border-[#D4AF37]">
-                <h3 className="text-2xl font-bold text-[#1D2D44] mb-6">Investment Property Consultation</h3>
-                <ContactForm variant="hero" />
-              </div>
-            </div>*/}
+<section className="bg-gradient-to-br from-[#F4F6F8] to-white py-16 sm:py-20 lg:py-24">
+  <div className="container mx-auto px-4">
+    <div className="mx-auto max-w-5xl text-center">
+      <Badge className="mb-4 bg-[#F4F6F8] text-[#1D2D44] hover:bg-[#1D2D44]/10">
+        Investment Property Financing — Analyst-Led
+      </Badge>
+
+      <h1 className="mx-auto mb-6 max-w-4xl text-4xl font-bold leading-tight text-[#1D2D44] sm:text-5xl lg:text-6xl">
+        Know the numbers{" "}
+        <span className="text-[#D4AF37]">before you buy</span>
+      </h1>
+
+      <p className="mx-auto mb-8 max-w-4xl text-lg leading-relaxed text-black sm:text-xl">
+        Most brokers quote you a payment. With 20+ years in equity and
+        investment analysis, I underwrite the property first — cash flow, cap
+        rate, debt coverage, and your real return over the hold — then structure
+        the financing around a deal that actually works.
+      </p>
+
+      <div className="mb-10 flex justify-center">
+        <Button
+          size="lg"
+          variant="outline"
+          className="h-12 border-[#D4AF37] px-7 text-[#1D2D44] hover:bg-[#D4AF37] hover:text-white"
+          asChild
+        >
+          <Link href="#calculator">
+            <Calculator className="mr-2 h-5 w-5" />
+            Analyze a Property
+          </Link>
+        </Button>
+      </div>
+
+      <div className="mx-auto grid max-w-2xl grid-cols-3 gap-3 sm:gap-6">
+        <div className="rounded-xl border border-gray-200 bg-white/70 px-2 py-4 shadow-sm backdrop-blur-sm sm:px-4">
+          <div className="text-xl font-bold text-[#D4AF37] sm:text-2xl">
+            20+ yrs
+          </div>
+          <div className="mt-1 text-xs leading-snug text-black sm:text-sm">
+            Investment Analysis
           </div>
         </div>
-      </section>
 
+        <div className="rounded-xl border border-gray-200 bg-white/70 px-2 py-4 shadow-sm backdrop-blur-sm sm:px-4">
+          <div className="text-xl font-bold text-[#D4AF37] sm:text-2xl">
+            50+
+          </div>
+          <div className="mt-1 text-xs leading-snug text-black sm:text-sm">
+            Lenders Compared
+          </div>
+        </div>
+
+        <div className="rounded-xl border border-gray-200 bg-white/70 px-2 py-4 shadow-sm backdrop-blur-sm sm:px-4">
+          <div className="text-xl font-bold text-[#D4AF37] sm:text-2xl">
+            20%
+          </div>
+          <div className="mt-1 text-xs leading-snug text-black sm:text-sm">
+            Minimum Down
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
       {/* Problem Band */}
       <section className="py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4">
