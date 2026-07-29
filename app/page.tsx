@@ -12,11 +12,11 @@ import Image from "next/image"
 import { blogPosts } from "@/lib/blogPosts"
 
 export const metadata: Metadata = {
-  title: "BC Mortgage Team | Mortgage Broker — Vancouver, Fraser Valley & the Okanagan",
+  title: "BC Mortgage Team | Strategy-First Mortgage Advice for British Columbia Borrowers",
   description:
-    "Strategy-first mortgage advice for BC borrowers. Access 50+ lenders for home purchase, renewal, and refinance. Licensed mortgage broker serving Vancouver, Surrey, Burnaby, Richmond, and the Fraser Valley.",
+    "Strategy-first mortgage advice for BC borrowers. Access 50+ lenders for home purchase, renewal, and refinance. Licensed mortgage advisor serving British Columbia, Canada.",
   openGraph: {
-    title: "BC Mortgage Team | Mortgage Broker — Serving BC — Vancouver, Fraser Valley & the Okanagan",
+    title: "BC Mortgage Team | Strategy-First Mortgage Advice for British Columbia Borrowers",
     description:
       "Strategy-first mortgage advice for BC borrowers. Access 50+ lenders for home purchase, renewal, and refinance.",
     url: "https://bcmortgageteam.com",
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "BC Mortgage Team — Independent Mortgage Broker serving BC",
+        alt: "BC Mortgage Team — Independent Mortgage Advisor serving British Columbia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BC Mortgage Team | Mortgage Broker — Serving BC — Vancouver, Fraser Valley & the Okanagan",
+    title: "BC Mortgage Team | Strategy-First Mortgage Advice for British Columbia Borrowers",
     description:
       "Strategy-first mortgage advice for BC borrowers. Access 50+ lenders for home purchase, renewal, and refinance.",
     images: ["/og-image.jpg"],
@@ -103,7 +103,7 @@ export default function HomePage() {
 
     <div className="flex flex-col items-center gap-3">
       <p className="inline-block rounded-full border border-white/40 bg-white/70 backdrop-blur-md px-4 py-1.5 text-[11px] font-semibold text-[#1D2D44] text-center">
-        Serving BC • Vancouver • Fraser Valley • Okanagan
+        Serving BC • Greater Vancouver • Fraser Valley • Okanagan
       </p>
       <p className="inline-block rounded-xl border border-white/50 bg-white/65 backdrop-blur-md px-3 py-1.5 text-[12px] font-bold text-[#1D2D44] leading-snug text-center">
         Access to 50+ lenders — not just one bank.
@@ -130,7 +130,7 @@ export default function HomePage() {
 
      <div className="mb-8">
   <p className="inline-block bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 text-sm font-semibold text-[#1D2D44]">
-    Serving BC — Vancouver, Fraser Valley &amp; the Okanagan
+    Serving BC — Greater Vancouver, Fraser Valley &amp; the Okanagan
   </p>
 </div>
 
