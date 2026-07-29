@@ -223,8 +223,8 @@ export function Header() {
                   <div className="flex items-center space-x-3 pb-4 border-b">
                     <div className="w-12 h-9 flex items-center justify-center">
                       <Image
-                        src="/BRX_brand_black.png"
-                        alt="BRX Mortgage"
+                        src="/BCmortgageteamlogo.jpeg"
+                        alt="BC Mortgage Team"
                         width={48}
                         height={36}
                         className="object-contain"
@@ -233,7 +233,7 @@ export function Header() {
 
                     <div>
                       <h2 className="font-bold text-gray-900">BC Mortgage Team</h2>
-                      <p className="text-sm text-gray-600">Smart Mortgage Solutions</p>
+                      <p className="text-sm text-gray-600">Right Mortgage Strategy</p>
                     </div>
                   </div>
 
