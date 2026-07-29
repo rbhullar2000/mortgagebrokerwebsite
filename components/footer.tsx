@@ -50,7 +50,6 @@ export function Footer() {
               <li>Greater Vancouver</li>
               <li>Fraser Valley</li>
               <li>Okanagan</li>
-              <li>Plus other BC regions</li>
             </ul>
           </div>
 
