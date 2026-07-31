@@ -1,7 +1,8 @@
 'use client';
+
 import Link from "next/link";
 import Image from "next/image";
-import { Twitter, Linkedin } from "lucide-react";
+import { Twitter, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -19,6 +20,7 @@ export function Footer() {
                 className="object-contain"
               />
             </div>
+
             <div className="w-24 h-18">
               <Image
                 src="/BRX_brand_white.png"
@@ -34,11 +36,50 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link href="/purchase" className="hover:text-white transition-colors">Home Purchase</Link></li>
-              <li><Link href="/renewal" className="hover:text-white transition-colors">Mortgage Renewal</Link></li>
-              <li><Link href="/refinance" className="hover:text-white transition-colors">Refinancing</Link></li>
-              <li><Link href="/investment" className="hover:text-white transition-colors">Investment Properties</Link></li>
-              <li><Link href="/self-employed" className="hover:text-white transition-colors">Self-Employed</Link></li>
+              <li>
+                <Link
+                  href="/purchase"
+                  className="hover:text-white transition-colors"
+                >
+                  Home Purchase
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/renewal"
+                  className="hover:text-white transition-colors"
+                >
+                  Mortgage Renewal
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/refinance"
+                  className="hover:text-white transition-colors"
+                >
+                  Refinancing
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/investment"
+                  className="hover:text-white transition-colors"
+                >
+                  Investment Properties
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/self-employed"
+                  className="hover:text-white transition-colors"
+                >
+                  Self-Employed
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -55,29 +96,56 @@ export function Footer() {
 
           {/* Column 4 */}
           <div>
-            <h5 className="font-semibold mb-3 mt-6 md:mt-0">Follow on X</h5>
-            <div className="flex space-x-3">
+            <h5 className="font-semibold mb-3 mt-6 md:mt-0">Follow Us</h5>
+
+            <div className="flex items-center space-x-3">
+              {/* X */}
               <Link
                 href="https://x.com/robbhullar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 bg-gray-700 hover:bg-[#032133] rounded-full flex items-center justify-center transition-colors"
+                className="w-9 h-9 bg-gray-700 hover:bg-[#032133] rounded-full flex items-center justify-center transition-all duration-200"
               >
                 <Twitter className="w-4 h-4" />
-                <span className="sr-only">Follow on X (Twitter)</span>
+                <span className="sr-only">Follow on X</span>
+              </Link>
+
+              {/* Instagram */}
+              <Link
+                href="https://www.instagram.com/thebcmortgageteam"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-gray-700 hover:bg-[#D4AF37] rounded-full flex items-center justify-center transition-all duration-200"
+              >
+                <Instagram className="w-4 h-4" />
+                <span className="sr-only">
+                  Follow BC Mortgage Team on Instagram
+                </span>
               </Link>
             </div>
+
+            <p className="mt-4 text-sm">
+              <Link
+                href="https://www.instagram.com/thebcmortgageteam"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                @thebcmortgageteam
+              </Link>
+            </p>
           </div>
         </div>
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400 space-y-2">
           <p>
-            Rob S. Bhullar — Licensed Mortgage Advisor &nbsp;|&nbsp; BRX Mortgage Inc.
-            &nbsp;|&nbsp; BCFSA: X301291 &nbsp;|&nbsp; FSRA: 13463
-            &nbsp;|&nbsp; FCAA: 512114 &nbsp;|&nbsp; FCNB: 230043033
-            &nbsp;|&nbsp; NSID: #2023-3000563 &nbsp;|&nbsp; QC: 608634
+            Rob S. Bhullar — Licensed Mortgage Advisor &nbsp;|&nbsp;
+            BRX Mortgage Inc.
+            &nbsp;|&nbsp;
+            BCFSA: X301291
           </p>
+
           <p>&copy; 2026 BC Mortgage Team. All rights reserved.</p>
         </div>
       </div>
