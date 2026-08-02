@@ -368,40 +368,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Lenders ── */}
-      <section
-        id="lenders"
-        className="bg-[#F4F6F8] py-9 sm:py-12 lg:py-16"
-      >
-        <div className="container mx-auto px-4">
-          <div className="mb-8 text-center lg:mb-10">
-            <h2 className="mb-3 text-2xl font-bold text-[#1D2D44] lg:text-3xl">
-              One application. 50+ lenders. The right mortgage strategy.
-            </h2>
-
-            <p className="mx-auto max-w-3xl text-base leading-relaxed text-gray-600 lg:text-lg">
-              Compare rates and mortgage options from Canada&apos;s leading
-              banks, credit unions, and private lenders.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-7 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-8">
-            {lenders.map((lender) => (
-              <div
-                key={lender.alt}
-                className="flex h-14 w-full max-w-[155px] items-center justify-center overflow-visible lg:h-20 lg:w-56 lg:max-w-none"
-              >
-                <img
-                  src={lender.src}
-                  alt={lender.alt}
-                  className={`${lender.className} object-contain`}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Mortgage Analysis Centre ── */}
 <section
   id="mortgage-analysis-centre"
@@ -552,6 +518,40 @@ export default function HomePage() {
     </p>
   </div>
 </section>
+
+ {/* ── Lenders ── */}
+      <section
+        id="lenders"
+        className="bg-[#F4F6F8] py-9 sm:py-12 lg:py-16"
+      >
+        <div className="container mx-auto px-4">
+          <div className="mb-8 text-center lg:mb-10">
+            <h2 className="mb-3 text-2xl font-bold text-[#1D2D44] lg:text-3xl">
+              One application. 50+ lenders. The right mortgage strategy.
+            </h2>
+
+            <p className="mx-auto max-w-3xl text-base leading-relaxed text-gray-600 lg:text-lg">
+              Compare rates and mortgage options from Canada&apos;s leading
+              banks, credit unions, and private lenders.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-7 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-8">
+            {lenders.map((lender) => (
+              <div
+                key={lender.alt}
+                className="flex h-14 w-full max-w-[155px] items-center justify-center overflow-visible lg:h-20 lg:w-56 lg:max-w-none"
+              >
+                <img
+                  src={lender.src}
+                  alt={lender.alt}
+                  className={`${lender.className} object-contain`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── Testimonials ── */}
       <section className="bg-[#F4F6F8] py-10">
