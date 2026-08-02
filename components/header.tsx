@@ -105,12 +105,10 @@ export function Header() {
               rel="noopener noreferrer"
               aria-label="Follow BC Mortgage Team on Instagram"
               title="@thebcmortgageteam"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-[#1D2D44] transition-colors hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-white"
+              className="flex h-10 items-center gap-2 rounded-full border border-gray-200 px-3 text-sm font-medium text-[#1D2D44] transition-colors hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-white"
             >
               <Instagram className="h-5 w-5" />
-              <span className="sr-only">
-                Follow BC Mortgage Team on Instagram
-              </span>
+              <span>Instagram</span>
             </Link>
 
             <Button
@@ -145,12 +143,10 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow BC Mortgage Team on Instagram"
-              className="flex h-9 w-9 items-center justify-center rounded-full text-[#1D2D44] transition-colors hover:bg-[#F4F6F8] hover:text-[#C79A2B]"
+              className="flex h-9 items-center gap-2 rounded-full px-3 text-sm font-medium text-[#1D2D44] transition-colors hover:bg-[#F4F6F8] hover:text-[#C79A2B]"
             >
               <Instagram className="h-5 w-5" />
-              <span className="sr-only">
-                Follow BC Mortgage Team on Instagram
-              </span>
+              <span>Instagram</span>
             </Link>
 
             <Button
