@@ -279,8 +279,12 @@ export default function HomePage() {
                 className="h-12 w-[330px] max-w-[90%] rounded-xl bg-[#C79A2B] text-[16px] font-semibold text-white shadow-xl ring-1 ring-white/40 hover:bg-[#D4AF37]"
                 asChild
               >
-                <Link href="/mortgage-checker">
-                  Am I Overpaying? 2 min checker →
+                <Link
+                  href="https://calendly.com/bcmortgageteam/15min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book A Strategy Call →
                 </Link>
               </Button>
             </div>
