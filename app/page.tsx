@@ -672,7 +672,49 @@ export default function HomePage() {
         </div>
       </section>
 
-        {/* ── Testimonials ── */}
+      {/* ── Contact ── */}
+      <section className="bg-white py-10 lg:py-14">
+        <div className="container mx-auto px-4">
+          <div className="mb-6 text-center lg:mb-8">
+            <h2 className="mb-2 text-2xl font-bold text-[#1D2D44] lg:mb-4 lg:text-3xl">
+              Ready to Get Started?
+            </h2>
+
+            <p className="mx-auto max-w-3xl text-sm leading-relaxed text-gray-600 lg:text-lg">
+              Contact today for a free consultation, or start your secure
+              online application right away.
+            </p>
+          </div>
+
+          <div className="mx-auto mb-12 max-w-6xl">
+            <div className="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <iframe
+                src="https://calendly.com/bcmortgageteam/15min"
+                width="100%"
+                height="950"
+                frameBorder="0"
+                title="Book Mortgage Strategy Call"
+                className="w-full"
+              />
+            </div>
+          </div>
+
+          <div
+            id="contact"
+            className="grid scroll-mt-32 gap-10 lg:grid-cols-2"
+          >
+            <div>
+              <ContactForm />
+            </div>
+
+            <div className="space-y-6">
+              <NewsletterSubscription />
+            </div>
+          </div>
+        </div>
+      </section>
+
+       {/* ── Testimonials ── */}
       <section className="bg-[#F4F6F8] py-10">
         <div className="container mx-auto px-4">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-2">
@@ -745,48 +787,6 @@ export default function HomePage() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Contact ── */}
-      <section className="bg-white py-10 lg:py-14">
-        <div className="container mx-auto px-4">
-          <div className="mb-6 text-center lg:mb-8">
-            <h2 className="mb-2 text-2xl font-bold text-[#1D2D44] lg:mb-4 lg:text-3xl">
-              Ready to Get Started?
-            </h2>
-
-            <p className="mx-auto max-w-3xl text-sm leading-relaxed text-gray-600 lg:text-lg">
-              Contact today for a free consultation, or start your secure
-              online application right away.
-            </p>
-          </div>
-
-          <div className="mx-auto mb-12 max-w-6xl">
-            <div className="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
-              <iframe
-                src="https://calendly.com/bcmortgageteam/15min"
-                width="100%"
-                height="950"
-                frameBorder="0"
-                title="Book Mortgage Strategy Call"
-                className="w-full"
-              />
-            </div>
-          </div>
-
-          <div
-            id="contact"
-            className="grid scroll-mt-32 gap-10 lg:grid-cols-2"
-          >
-            <div>
-              <ContactForm />
-            </div>
-
-            <div className="space-y-6">
-              <NewsletterSubscription />
-            </div>
           </div>
         </div>
       </section>
