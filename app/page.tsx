@@ -248,28 +248,31 @@ export default function HomePage() {
           style={{ backgroundImage: "url('/city.png')" }}
         />
 
-        {/* Mobile Hero */}
+ {/* Mobile Hero */}
 <div className="relative flex min-h-[92svh] flex-col px-4 pb-8 pt-20 md:hidden">
-  {/* Contrast scrim — darkens the busy upper area so the headline stays legible.
-      Place this ABOVE the background image layer but BELOW the text (text uses z-10). */}
+  {/* Light top-only fade — darkens just the strip behind the headline, photo stays bright below */}
   <div
     aria-hidden="true"
-    className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/65 via-black/30 to-transparent"
+    className="pointer-events-none absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-black/40 to-transparent"
   />
-
   <div className="relative z-10 max-w-md text-left">
     <Badge className="mb-5 inline-block bg-white/85 text-[11px] text-[#032133] backdrop-blur-sm hover:bg-white/90">
       Strategy-First Mortgage Advice · Investors & Homeowners
     </Badge>
     <h1
       className="text-[2.25rem] font-bold leading-[1.08] text-white"
-      style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55)" }}
+      style={{ textShadow: "0 1px 3px rgba(0,0,0,0.85), 0 3px 18px rgba(0,0,0,0.6)" }}
     >
       Mortgage Strategy
       <br />
       Backed by
       <br />
-      <span className="text-[#E3B84A]">Investment Analysis</span>
+      <span
+        className="text-[#E3B84A]"
+        style={{ textShadow: "0 1px 3px rgba(0,0,0,0.9), 0 3px 16px rgba(0,0,0,0.7)" }}
+      >
+        Investment Analysis
+      </span>
     </h1>
   </div>
           <div className="mt-auto">
