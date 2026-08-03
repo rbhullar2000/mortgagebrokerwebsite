@@ -249,27 +249,29 @@ export default function HomePage() {
         />
 
         {/* Mobile Hero */}
-        <div className="relative flex min-h-[92svh] flex-col px-4 pb-8 pt-20 md:hidden">
-          <div className="max-w-md text-left">
-            <Badge className="mb-5 inline-block bg-white/80 text-[11px] text-[#032133] backdrop-blur-sm hover:bg-white/85">
-              Strategy-First Mortgage Advice for BC Borrowers
-            </Badge>
+<div className="relative flex min-h-[92svh] flex-col px-4 pb-8 pt-20 md:hidden">
+  {/* Contrast scrim — darkens the busy upper area so the headline stays legible.
+      Place this ABOVE the background image layer but BELOW the text (text uses z-10). */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/65 via-black/30 to-transparent"
+  />
 
-            <h1
-              className="text-[2.25rem] font-bold leading-[1.08] text-[#1D2D44]"
-              style={{
-                textShadow:
-                  "0 1px 10px rgba(255,255,255,0.65), 0 0 30px rgba(255,255,255,0.4)",
-              }}
-            >
-              Mortgage Strategy
-              <br />
-              Backed by
-              <br />
-              <span className="text-[#C79A2B]">Investment Analysis</span>
-            </h1>
-          </div>
-
+  <div className="relative z-10 max-w-md text-left">
+    <Badge className="mb-5 inline-block bg-white/85 text-[11px] text-[#032133] backdrop-blur-sm hover:bg-white/90">
+      Strategy-First Mortgage Advice for BC Borrowers
+    </Badge>
+    <h1
+      className="text-[2.25rem] font-bold leading-[1.08] text-white"
+      style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55)" }}
+    >
+      Mortgage Strategy
+      <br />
+      Backed by
+      <br />
+      <span className="text-[#E3B84A]">Investment Analysis</span>
+    </h1>
+  </div>
           <div className="mt-auto">
             <div className="mb-4 flex justify-center">
               <Button
