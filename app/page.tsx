@@ -265,7 +265,7 @@ export default function HomePage() {
     >
       Mortgage Strategy
       <br />
-      Backed by
+      Built on
       <br />
       <span
         className="text-[#E3B84A]"
@@ -319,7 +319,7 @@ export default function HomePage() {
             >
               Mortgage Strategy
               <br />
-              Backed by
+              Built on
               <br />
               <span className="text-[#C79A2B]">Investment Analysis</span>
               <br />
