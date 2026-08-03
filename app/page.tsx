@@ -714,7 +714,7 @@ export default function HomePage() {
         </div>
       </section>
 
-       {/* ── Testimonials ── */}
+       {/* ── Testimonials ── */} {/*
       <section className="bg-[#F4F6F8] py-10">
         <div className="container mx-auto px-4">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-2">
@@ -789,7 +789,7 @@ export default function HomePage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
