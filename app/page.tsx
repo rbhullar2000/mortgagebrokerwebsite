@@ -291,7 +291,7 @@ export default function HomePage() {
               </p>
 
               <p className="inline-block rounded-xl border border-white/50 bg-white/65 px-3 py-1.5 text-center text-[12px] font-bold leading-snug text-[#1D2D44] backdrop-blur-md">
-                Analyst-Led · 20+ Years of Investment Analysis · Access to 50+ Lenders
+                Analyst-Led · 20+ Years Investment Analysis · Access to 50+ Lenders
               </p>
             </div>
           </div>
