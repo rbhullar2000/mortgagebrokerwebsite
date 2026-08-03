@@ -553,83 +553,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Testimonials ── */}
-      <section className="bg-[#F4F6F8] py-10">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-2">
-            <Card className="h-full border border-gray-200 bg-white shadow-sm">
-              <CardContent className="flex h-full flex-col pb-5 pt-5">
-                <div className="mb-3 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-base text-[#D4AF37]">
-                      ★
-                    </span>
-                  ))}
-                </div>
-
-                <p className="mb-6 flex-grow text-sm leading-7 text-gray-700 sm:text-[15px]">
-                  BC Mortgage Team didn&apos;t just help me secure a mortgage,
-                  they took the time to explain the strategy behind it and why
-                  the structure mattered long-term. I felt informed, confident,
-                  and supported throughout the process instead of simply
-                  choosing the lowest rate and hoping for the best.
-                </p>
-
-                <div className="mt-auto flex items-center gap-3">
-                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-blue-500">
-                    <span className="text-sm font-bold text-white">SK</span>
-                  </div>
-
-                  <div>
-                    <p className="text-sm font-semibold text-[#1D2D44]">
-                      Sarah K.
-                    </p>
-
-                    <p className="text-xs text-gray-500">
-                      First-time buyer · Vancouver
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="h-full border border-gray-200 bg-white shadow-sm">
-              <CardContent className="flex h-full flex-col pb-5 pt-5">
-                <div className="mb-3 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-base text-[#D4AF37]">
-                      ★
-                    </span>
-                  ))}
-                </div>
-
-                <p className="mb-6 flex-grow text-sm leading-7 text-gray-700 sm:text-[15px]">
-                  I was ready to renew directly with my bank, but BC Mortgage
-                  Team took the time to review my options and structure
-                  everything properly. The result was over $4,000 in savings in
-                  the first year alone and a mortgage that fit my long-term
-                  goals much better.
-                </p>
-
-                <div className="mt-auto flex items-center gap-3">
-                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-green-600">
-                    <span className="text-sm font-bold text-white">DM</span>
-                  </div>
-
-                  <div>
-                    <p className="text-sm font-semibold text-[#1D2D44]">
-                      David M.
-                    </p>
-
-                    <p className="text-xs text-gray-500">Renewal · Surrey</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
      {/* ── Services ── */}
 <section id="services" className="bg-white py-8 lg:py-10">
   <div className="container mx-auto px-4">
@@ -745,6 +668,83 @@ export default function HomePage() {
                 className="mx-auto h-auto w-64 rounded-2xl shadow-2xl sm:w-80 lg:w-96"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+        {/* ── Testimonials ── */}
+      <section className="bg-[#F4F6F8] py-10">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-2">
+            <Card className="h-full border border-gray-200 bg-white shadow-sm">
+              <CardContent className="flex h-full flex-col pb-5 pt-5">
+                <div className="mb-3 flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-base text-[#D4AF37]">
+                      ★
+                    </span>
+                  ))}
+                </div>
+
+                <p className="mb-6 flex-grow text-sm leading-7 text-gray-700 sm:text-[15px]">
+                  BC Mortgage Team didn&apos;t just help me secure a mortgage,
+                  they took the time to explain the strategy behind it and why
+                  the structure mattered long-term. I felt informed, confident,
+                  and supported throughout the process instead of simply
+                  choosing the lowest rate and hoping for the best.
+                </p>
+
+                <div className="mt-auto flex items-center gap-3">
+                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-blue-500">
+                    <span className="text-sm font-bold text-white">SK</span>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold text-[#1D2D44]">
+                      Sarah K.
+                    </p>
+
+                    <p className="text-xs text-gray-500">
+                      First-time buyer · Vancouver
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="h-full border border-gray-200 bg-white shadow-sm">
+              <CardContent className="flex h-full flex-col pb-5 pt-5">
+                <div className="mb-3 flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-base text-[#D4AF37]">
+                      ★
+                    </span>
+                  ))}
+                </div>
+
+                <p className="mb-6 flex-grow text-sm leading-7 text-gray-700 sm:text-[15px]">
+                  I was ready to renew directly with my bank, but BC Mortgage
+                  Team took the time to review my options and structure
+                  everything properly. The result was over $4,000 in savings in
+                  the first year alone and a mortgage that fit my long-term
+                  goals much better.
+                </p>
+
+                <div className="mt-auto flex items-center gap-3">
+                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-green-600">
+                    <span className="text-sm font-bold text-white">DM</span>
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold text-[#1D2D44]">
+                      David M.
+                    </p>
+
+                    <p className="text-xs text-gray-500">Renewal · Surrey</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
