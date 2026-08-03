@@ -252,7 +252,7 @@ export default function HomePage() {
         <div className="relative flex min-h-[92svh] flex-col px-4 pb-8 pt-20 md:hidden">
           <div className="max-w-md text-left">
             <Badge className="mb-5 inline-block bg-white/80 text-[11px] text-[#032133] backdrop-blur-sm hover:bg-white/85">
-              Strategy-First Mortgage Advice for BC Borrowers
+              Strategy-First Mortgage Advice · Investors & Homeowners
             </Badge>
 
             <h1
@@ -262,12 +262,12 @@ export default function HomePage() {
                   "0 1px 10px rgba(255,255,255,0.65), 0 0 30px rgba(255,255,255,0.4)",
               }}
             >
-              Your Bank Has a{" "}
-              <span className="text-[#C79A2B]">Mortgage Advisor.</span>
+              Mortgage Strategy Backed by{" "}
+              <span className="text-[#C79A2B]">Investment Analysis</span>
               <br />
-              You Should Have
+              Understand the real costs, trade-offs and long-term impact 
               <br />
-              One Too.
+              before choosing your financing strategy.
             </h1>
           </div>
 
@@ -286,11 +286,11 @@ export default function HomePage() {
 
             <div className="flex flex-col items-center gap-3">
               <p className="inline-block rounded-full border border-white/40 bg-white/70 px-4 py-1.5 text-center text-[11px] font-semibold text-[#1D2D44] backdrop-blur-md">
-                Serving BC • Greater Vancouver • Fraser Valley • Okanagan
+                Serving BC — Greater Vancouver, Fraser Valley & the Okanagan
               </p>
 
               <p className="inline-block rounded-xl border border-white/50 bg-white/65 px-3 py-1.5 text-center text-[12px] font-bold leading-snug text-[#1D2D44] backdrop-blur-md">
-                Access to 50+ lenders — not just one bank.
+                Analyst-Led Advice · 20+ Years of Investment Analysis · Access to 50+ Lenders
               </p>
             </div>
           </div>
