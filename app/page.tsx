@@ -300,7 +300,7 @@ export default function HomePage() {
         <div className="container relative mx-auto hidden px-4 py-20 md:block lg:py-32">
           <div className="max-w-xl text-left lg:max-w-3xl">
             <Badge className="mb-5 inline-block bg-white/75 text-[#032133] backdrop-blur-sm hover:bg-white/80">
-              Strategy-First Mortgage Advice for BC Borrowers
+              Strategy-First Mortgage Advice · Investors & Homeowners
             </Badge>
 
             <h1
@@ -309,15 +309,15 @@ export default function HomePage() {
                 textShadow: "0 1px 12px rgba(255,255,255,0.45)",
               }}
             >
-              Your Bank Has a{" "}
-              <span className="text-[#D4AF37]">Mortgage Advisor.</span>
+              Mortgage Strategy Backed by{" "}
+              <span className="text-[#D4AF37]"Investment Analysis</span>
               <br />
-              You Should Have One Too.
+              Understand the real costs, trade-offs and long-term impact before choosing your financing strategy.
             </h1>
 
             <div className="mb-8">
               <p className="inline-block rounded-full bg-white/80 px-4 py-1.5 text-sm font-semibold text-[#1D2D44] backdrop-blur-sm">
-                Serving BC — Greater Vancouver, Fraser Valley &amp; the Okanagan
+                Serving BC — Greater Vancouver, Fraser Valley & the Okanagan
               </p>
             </div>
 
@@ -351,17 +351,17 @@ export default function HomePage() {
               <div className="grid grid-cols-3 gap-4 text-sm font-semibold text-[#1D2D44]">
                 <div className="flex flex-col items-center text-center">
                   <Shield className="mb-1 h-5 w-5 text-[#C79A2B]" />
-                  <span>50+ Lenders</span>
+                  <span>Analyst-Led Advice</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center">
                   <Clock className="mb-1 h-5 w-5 text-[#C79A2B]" />
-                  <span>Competitive Rates</span>
+                  <span>20+ Years of Investment Analysis</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center">
                   <TrendingUp className="mb-1 h-5 w-5 text-[#C79A2B]" />
-                  <span>Independent Advice</span>
+                  <span>Access to 50+ Lenders</span>
                 </div>
               </div>
             </div>
