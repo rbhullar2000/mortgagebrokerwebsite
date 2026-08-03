@@ -266,7 +266,7 @@ export default function HomePage() {
               <br />
               Backed by
               <br />
-              <span className="text-[#C79A2B]">Investment Analysis.</span>
+              <span className="text-[#C79A2B]">Investment Analysis</span>
             </h1>
           </div>
 
@@ -308,10 +308,11 @@ export default function HomePage() {
                 textShadow: "0 1px 12px rgba(255,255,255,0.45)",
               }}
             >
-              Your Bank Has a{" "}
-              <span className="text-[#D4AF37]">Mortgage Advisor.</span>
+              Mortgage Strategy
               <br />
-              You Should Have One Too.
+              Backed by
+              <br />
+              <span className="text-[#C79A2B]">Investment Analysis</span>
             </h1>
 
             <div className="mb-8">
