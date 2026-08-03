@@ -606,12 +606,13 @@ export default function HomePage() {
               </h2>
 
               <p className="mb-5 text-sm leading-relaxed text-gray-600">
-                Bringing over 20 years of financial experience and real-world
-                mortgage expertise to helping homeowners, investors, and
-                first-time buyers make smarter mortgage decisions. Blending
-                analytical thinking with practical lending expertise, focusing
-                on how a mortgage is structured — not just the rate — to support
-                long-term financial goals.
+                I spent over 20 years in finance as an equity analyst — evaluating risk, valuation, and long-term outcomes — before bringing that same discipline to mortgages. Most advice starts and ends with the rate. I start with the analysis: how the mortgage is structured, what it does to your cash flow and qualifying, and how it fits the financial outcome you're actually working toward.
+
+I work with investors, homeowners, and first-time buyers who want their mortgage treated as a financial decision, not just a transaction.
+
+Licensed Mortgage Advisor — BRX Mortgage Inc.
+Former Equity Analyst — risk, valuation, and long-term outcomes
+B.Sc. Pure Mathematics, Minor in Business Administration — Simon Fraser University
               </p>
 
               <div className="mb-6 space-y-3">
