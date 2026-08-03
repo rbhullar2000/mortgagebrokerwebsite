@@ -607,7 +607,7 @@ export default function HomePage() {
               </h2>
 
               <p className="mb-5 text-sm leading-relaxed text-gray-600">
-                I spent over 20 years in finance as an equity analyst — evaluating risk, valuation, and long-term outcomes — before bringing that same discipline to mortgages. Most advice starts and ends with the rate. I start with the analysis: how the mortgage is structured, what it does to your cash flow and qualifying, and how it fits the financial outcome you're actually working toward.
+                I spent over 20 years in finance as an equity analyst — evaluating risk, valuation, and long-term outcomes — before bringing that same discipline to how people finance their homes and investment properties. Most advice starts and ends with the rate. I start with the analysis: how the mortgage is structured, what it does to your cash flow and qualifying, and how it fits the financial outcome you're actually working toward.
 
 I work with investors, homeowners, and first-time buyers who want their mortgage treated as a financial decision, not just a transaction.
 
