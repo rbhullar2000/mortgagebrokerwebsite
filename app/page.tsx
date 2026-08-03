@@ -262,9 +262,7 @@ export default function HomePage() {
                   "0 1px 10px rgba(255,255,255,0.65), 0 0 30px rgba(255,255,255,0.4)",
               }}
             >
-              Mortgage 
-              <br />
-              Strategy
+              Mortgage Strategy
               <br />
               Backed by
               <br />
