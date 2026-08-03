@@ -355,16 +355,19 @@ export default function HomePage() {
 
             <div className="w-full max-w-2xl rounded-2xl border border-white/60 bg-white/90 px-7 py-4 shadow-xl backdrop-blur-xl">
               <div className="grid grid-cols-3 gap-4 text-sm font-semibold text-[#1D2D44]">
+                
+                 <div className="flex flex-col items-center text-center">
+                  <Clock className="mb-1 h-5 w-5 text-[#C79A2B]" />
+                  <span>20+ Years Investment Analysis</span>
+                </div>
+
+                
                 <div className="flex flex-col items-center text-center">
                   <Shield className="mb-1 h-5 w-5 text-[#C79A2B]" />
                   <span>Strategy Focused</span>
                 </div>
 
-                <div className="flex flex-col items-center text-center">
-                  <Clock className="mb-1 h-5 w-5 text-[#C79A2B]" />
-                  <span>20+ Years Investment Analysis</span>
-                </div>
-
+               
                 <div className="flex flex-col items-center text-center">
                   <TrendingUp className="mb-1 h-5 w-5 text-[#C79A2B]" />
                   <span>Access to 50+ Lenders</span>
