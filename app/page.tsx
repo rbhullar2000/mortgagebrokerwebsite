@@ -230,10 +230,11 @@ export default function HomePage() {
   ]
 
   const credentials = [
-    "Licensed Mortgage Advisor with BRX Mortgage Inc.",
     "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
+    "Licensed Mortgage Advisor with BRX Mortgage Inc.",
     "Focused on aligning mortgage decisions with long-term financial strategy",
     "Bachelor of Science in Pure Mathematics, Minor in Business Administration — Simon Fraser University",
+ 
   ]
 
   return (
@@ -610,9 +611,6 @@ export default function HomePage() {
 
 I work with investors, homeowners, and first-time buyers who want their mortgage treated as a financial decision, not just a transaction.
 
-Licensed Mortgage Advisor — BRX Mortgage Inc.
-Former Equity Analyst — risk, valuation, and long-term outcomes
-B.Sc. Pure Mathematics, Minor in Business Administration — Simon Fraser University
               </p>
 
               <div className="mb-6 space-y-3">
