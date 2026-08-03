@@ -325,7 +325,6 @@ export default function HomePage() {
               <br />
               <br />
               <br />
-              <br />
             </h1>
 
             <div className="mb-8">
