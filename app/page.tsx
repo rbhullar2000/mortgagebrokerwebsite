@@ -335,10 +335,10 @@ export default function HomePage() {
               </Button>
 */}
               <Button
-                size="lg"
-                className="h-14 flex-1 border-2 border-white/80 bg-white/10 font-semibold text-white shadow-xl backdrop-blur-sm hover:bg-white hover:text-[#1D2D44]"
-                asChild
-              >
+  size="lg"
+  className="h-14 w-full border-2 border-white/80 bg-[#1D2D44] px-8 font-semibold text-white shadow-xl hover:bg-[#243854] sm:w-[320px]"
+  asChild
+>
                 <Link
                   href="https://calendly.com/bcmortgageteam/15min"
                   target="_blank"
