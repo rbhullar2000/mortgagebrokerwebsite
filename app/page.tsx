@@ -355,9 +355,9 @@ export default function HomePage() {
                 >
                   Book A Strategy Call →
                 </Link>
-              </Button>
+              </Button> */}
             </div>
-*/}
+
             <div className="w-full max-w-2xl rounded-2xl border border-white/60 bg-white/90 px-7 py-4 shadow-xl backdrop-blur-xl">
               <div className="grid grid-cols-3 gap-4 text-sm font-semibold text-[#1D2D44]">
                 
