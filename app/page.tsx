@@ -262,12 +262,11 @@ export default function HomePage() {
                   "0 1px 10px rgba(255,255,255,0.65), 0 0 30px rgba(255,255,255,0.4)",
               }}
             >
-              Your Bank Has a{" "}
-              <span className="text-[#C79A2B]">Mortgage Advisor.</span>
+              Mortgage Strategy{" "}
               <br />
-              You Should Have
+              Backed by
               <br />
-              One Too.
+              <span className="text-[#C79A2B]">Investment Analysis.</span>
             </h1>
           </div>
 
