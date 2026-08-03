@@ -275,8 +275,8 @@ export default function HomePage() {
       </span>
     </h1>
   </div>
-          <div className="mt-auto">
-            <div className="mb-4 flex justify-center">
+         <div className="mt-auto">
+        {/*      <div className="mb-4 flex justify-center">
               <Button
                 size="lg"
                 className="h-12 w-[330px] max-w-[90%] rounded-xl bg-[#C79A2B] text-[16px] font-semibold text-white shadow-xl ring-1 ring-white/40 hover:bg-[#D4AF37]"
@@ -291,7 +291,7 @@ export default function HomePage() {
                 </Link>
               </Button>
             </div>
-
+*/}
             <div className="flex flex-col items-center gap-3">
               <p className="inline-block rounded-full border border-white/40 bg-white/70 px-4 py-1.5 text-center text-[11px] font-semibold text-[#1D2D44] backdrop-blur-md">
                 Serving BC • Greater Vancouver • Fraser Valley • Okanagan
