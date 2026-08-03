@@ -198,6 +198,12 @@ export default function HomePage() {
 
   const services = [
     {
+      icon: <Calculator className="h-6 w-6 text-[#1D2D44]" />,
+      title: "Investment",
+      description: "Rental and portfolio financing.",
+      link: "/investment",
+    },
+    {
       icon: <Users className="h-6 w-6 text-[#1D2D44]" />,
       title: "Purchase",
       description: "Buying a home or investment property.",
@@ -220,12 +226,6 @@ export default function HomePage() {
       title: "Self-Employed",
       description: "Flexible income solutions.",
       link: "/self-employed",
-    },
-    {
-      icon: <Calculator className="h-6 w-6 text-[#1D2D44]" />,
-      title: "Investment",
-      description: "Rental and portfolio financing.",
-      link: "/investment",
     },
   ]
 
