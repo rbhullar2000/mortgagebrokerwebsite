@@ -319,6 +319,8 @@ export default function HomePage() {
               Backed by
               <br />
               <span className="text-[#C79A2B]">Investment Analysis</span>
+              <br />
+              <br />
             </h1>
 
             <div className="mb-8">
