@@ -291,7 +291,7 @@ export default function HomePage() {
               </p>
 
               <p className="inline-block rounded-xl border border-white/50 bg-white/65 px-3 py-1.5 text-center text-[12px] font-bold leading-snug text-[#1D2D44] backdrop-blur-md">
-                Access to 50+ lenders — not just one bank.
+                Analyst-Led · 20+ Years of Investment Analysis · Access to 50+ Lenders
               </p>
             </div>
           </div>
@@ -353,17 +353,17 @@ export default function HomePage() {
               <div className="grid grid-cols-3 gap-4 text-sm font-semibold text-[#1D2D44]">
                 <div className="flex flex-col items-center text-center">
                   <Shield className="mb-1 h-5 w-5 text-[#C79A2B]" />
-                  <span>50+ Lenders</span>
+                  <span>Analyst-Led</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center">
                   <Clock className="mb-1 h-5 w-5 text-[#C79A2B]" />
-                  <span>Competitive Rates</span>
+                  <span>20+ Years of Investment Analysis</span>
                 </div>
 
                 <div className="flex flex-col items-center text-center">
                   <TrendingUp className="mb-1 h-5 w-5 text-[#C79A2B]" />
-                  <span>Independent Advice</span>
+                  <span>Access to 50+ Lenders</span>
                 </div>
               </div>
             </div>
