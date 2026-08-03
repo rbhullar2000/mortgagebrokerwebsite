@@ -311,7 +311,7 @@ export default function HomePage() {
             <h1
               className="mb-6 text-5xl font-bold leading-tight text-[#1D2D44] lg:text-7xl"
               style={{
-                textShadow: "0 1px 12px rgba(255,255,255,0.45)",
+               // textShadow: "0 1px 12px rgba(255,255,255,0.45)",
               }}
             >
               Mortgage Strategy
