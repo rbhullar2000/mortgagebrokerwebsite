@@ -343,7 +343,7 @@ export default function HomePage() {
                 </Link>
               </Button>
 */}
-             <Button
+  {/*             <Button
   size="lg"
   className="h-14 w-full border-2 border-white/80 bg-white/10 px-8 font-semibold text-white shadow-xl backdrop-blur-sm hover:bg-white hover:text-[#1D2D44] sm:w-[320px]"
   asChild
@@ -357,7 +357,7 @@ export default function HomePage() {
                 </Link>
               </Button>
             </div>
-
+*/}
             <div className="w-full max-w-2xl rounded-2xl border border-white/60 bg-white/90 px-7 py-4 shadow-xl backdrop-blur-xl">
               <div className="grid grid-cols-3 gap-4 text-sm font-semibold text-[#1D2D44]">
                 
