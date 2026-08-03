@@ -324,6 +324,8 @@ export default function HomePage() {
               <span className="text-[#C79A2B]">Investment Analysis</span>
               <br />
               <br />
+              <br />
+              <br />
             </h1>
 
             <div className="mb-8">
@@ -607,7 +609,7 @@ export default function HomePage() {
   </div>
 </section>
 
-      {/* ── About ── */}
+      {/* ── About ── */}  {/* 
       <section id="about" className="bg-[#F4F6F8] py-10 lg:py-16">
         <div className="container mx-auto px-4">
           <div className="grid items-center gap-8 lg:grid-cols-2">
@@ -683,7 +685,7 @@ I work with investors, homeowners, and first-time buyers who want their mortgage
             </div>
           </div>
         </div>
-      </section>
+      </section>    */} 
 
       {/* ── Contact ── */}
       <section className="bg-white py-10 lg:py-14">
