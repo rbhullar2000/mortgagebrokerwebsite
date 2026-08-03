@@ -324,7 +324,7 @@ export default function HomePage() {
             </div>
 
             <div className="mb-7 flex w-full max-w-2xl flex-col gap-4 sm:flex-row">
-              <Button
+            {/*   <Button
                 size="lg"
                 className="h-14 flex-[1.3] bg-[#C79A2B] text-base font-bold text-white shadow-xl hover:bg-[#D4AF37]"
                 asChild
@@ -333,7 +333,7 @@ export default function HomePage() {
                   Am I Overpaying? 2 min checker →
                 </Link>
               </Button>
-
+*/}
               <Button
                 size="lg"
                 className="h-14 flex-1 border-2 border-white/80 bg-white/10 font-semibold text-white shadow-xl backdrop-blur-sm hover:bg-white hover:text-[#1D2D44]"
