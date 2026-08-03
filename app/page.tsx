@@ -259,7 +259,7 @@ export default function HomePage() {
 
   <div className="relative z-10 max-w-md text-left">
     <Badge className="mb-5 inline-block bg-white/85 text-[11px] text-[#032133] backdrop-blur-sm hover:bg-white/90">
-      Strategy-First Mortgage Advice for BC Borrowers
+      Strategy-First Mortgage Advice · Investors & Homeowners
     </Badge>
     <h1
       className="text-[2.25rem] font-bold leading-[1.08] text-white"
@@ -305,7 +305,7 @@ export default function HomePage() {
         <div className="container relative mx-auto hidden px-4 py-20 md:block lg:py-32">
           <div className="max-w-xl text-left lg:max-w-3xl">
             <Badge className="mb-5 inline-block bg-white/75 text-[#032133] backdrop-blur-sm hover:bg-white/80">
-              Strategy-First Mortgage Advice for BC Borrowers
+              Strategy-First Mortgage Advice · Investors & Homeowners
             </Badge>
 
             <h1
