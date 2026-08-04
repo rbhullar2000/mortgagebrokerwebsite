@@ -265,14 +265,16 @@ export default function HomePage() {
     >
       Mortgage Strategy
       <br />
-      Built on
-      <br />
       <span
         className="text-[#E3B84A]"
         style={{ textShadow: "0 1px 3px rgba(0,0,0,0.9), 0 3px 16px rgba(0,0,0,0.7)" }}
       >
+      Built on
+         </span>
+      <br />
+      
         Investment Analysis
-      </span>
+     
     </h1>
   </div>
          <div className="mt-auto">
