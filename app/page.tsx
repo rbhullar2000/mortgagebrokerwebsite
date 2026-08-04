@@ -319,9 +319,9 @@ export default function HomePage() {
             >
               Mortgage Strategy
               <br />
-              Built on
+              <span className="text-[#C79A2B]">Built on</span>
               <br />
-              <span className="text-[#C79A2B]">Investment Analysis</span>
+              Investment Analysis
               <br />
               <br />
               <br />
