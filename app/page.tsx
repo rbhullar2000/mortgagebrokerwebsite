@@ -620,7 +620,7 @@ export default function HomePage() {
               </Badge>
 
               <h2 className="mb-4 text-xl font-bold text-[#1D2D44] lg:mb-5">
-                Rob Bhullar - Licensed Mortgage Advisor
+                Rob Bhullar - Licensed Mortgage Broker
               </h2>
 
               <p className="mb-5 text-sm leading-relaxed text-gray-600">
