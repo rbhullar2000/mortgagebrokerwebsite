@@ -140,7 +140,7 @@ export function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400 space-y-2">
           <p>
-            Rob S. Bhullar — Licensed Mortgage Advisor &nbsp;|&nbsp;
+            Licensed Mortgage Broker &nbsp;|&nbsp;
             BRX Mortgage Inc.
             &nbsp;|&nbsp;
             BCFSA: X301291
