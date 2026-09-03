@@ -230,8 +230,8 @@ export default function HomePage() {
   ]
 
   const credentials = [
+    "Licensed Mortgage Broker with BRX Mortgage Inc.",
     "Former Equity Analyst with a focus on risk, valuation, and long-term outcomes",
-    "Licensed Mortgage Advisor with BRX Mortgage Inc.",
     "Focused on aligning mortgage decisions with long-term financial strategy",
     "Bachelor of Science in Pure Mathematics, Minor in Business Administration — Simon Fraser University",
  
@@ -639,9 +639,9 @@ export default function HomePage() {
               </h2>
 
               <p className="mb-5 text-sm leading-relaxed text-gray-600">
-                Over 20 years in finance as an equity analyst — evaluating risk, valuation, and long-term outcomes — before bringing that same discipline to how people finance their homes and investment properties. Most advice starts and ends with the rate. we start with the analysis: how the mortgage is structured, what it does to your cash flow and qualifying, and how it fits the financial outcome you're actually working toward.
+                Over 20 years in finance — evaluating risk, valuation, and long-term outcomes — before bringing that same discipline to how people finance their homes and investment properties. Most advice starts and ends with the rate. we start with the analysis: how the mortgage is structured, what it does to your cash flow and qualifying, and how it fits the financial outcome you're actually working toward.
 
-We work with investors, homeowners, and first-time buyers who want their mortgage treated as a financial decision, not just a transaction.
+Work with investors, homeowners, and first-time buyers who want their mortgage treated as a financial decision, not just a transaction.
 
               </p>
 
