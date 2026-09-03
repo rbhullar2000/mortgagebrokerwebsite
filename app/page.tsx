@@ -634,9 +634,13 @@ export default function HomePage() {
                 BC Mortgage Team
               </Badge>
 
-              <h2 className="mb-4 text-xl font-bold text-[#1D2D44] lg:mb-5">
-                Rob Bhullar - Mortgage Broker. Independent advice, supported by the underwriting resources of BRX Mortgage Inc.
-              </h2>
+              <h2 className="mb-2 text-xl font-bold text-[#1D2D44]">
+  Rob Bhullar — Mortgage Broker
+</h2>
+
+<p className="mb-4 text-base font-medium text-[#1D2D44] lg:mb-5">
+  Your primary point of contact, supported by the underwriting resources of BRX Mortgage Inc.
+</p>
 
               <p className="mb-5 text-sm leading-relaxed text-gray-600">
                 Over 20 years in finance — evaluating risk, valuation, and long-term outcomes — before bringing that same discipline to how people finance their homes and investment properties. Most advice starts and ends with the rate. we start with the analysis: how the mortgage is structured, what it does to your cash flow and qualifying, and how it fits the financial outcome you're actually working toward.
