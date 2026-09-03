@@ -639,7 +639,7 @@ export default function HomePage() {
 </h2>
 
 <p className="mb-4 text-base font-medium text-[#1D2D44] lg:mb-5">
-  Your primary point of contact, supported by the underwriting resources of BRX Mortgage Inc.
+  Your primary point of contact, licensed with BRX Mortgage Inc.
 </p>
 
               <p className="mb-5 text-sm leading-relaxed text-gray-600">
