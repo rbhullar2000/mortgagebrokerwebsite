@@ -273,8 +273,15 @@ export default function HomePage() {
          </span>
       <br />
       
-        Investment Analysis
-     
+        Investment Analysis.
+      <br />
+      <span
+        className="text-[#E3B84A]"
+        style={{ textShadow: "0 1px 3px rgba(0,0,0,0.9), 0 3px 16px rgba(0,0,0,0.7)" }}
+      >
+      We can help.
+         </span>
+      <br />
     </h1>
   </div>
          <div className="mt-auto">
@@ -620,13 +627,13 @@ export default function HomePage() {
               </Badge>
 
               <h2 className="mb-4 text-xl font-bold text-[#1D2D44] lg:mb-5">
-                Rob Bhullar - Licensed Mortgage Broker
+                Rob Bhullar - Lead Mortgage Broker
               </h2>
 
               <p className="mb-5 text-sm leading-relaxed text-gray-600">
-                I spent over 20 years in finance as an equity analyst — evaluating risk, valuation, and long-term outcomes — before bringing that same discipline to how people finance their homes and investment properties. Most advice starts and ends with the rate. I start with the analysis: how the mortgage is structured, what it does to your cash flow and qualifying, and how it fits the financial outcome you're actually working toward.
+                Over 20 years in finance as an equity analyst — evaluating risk, valuation, and long-term outcomes — before bringing that same discipline to how people finance their homes and investment properties. Most advice starts and ends with the rate. we start with the analysis: how the mortgage is structured, what it does to your cash flow and qualifying, and how it fits the financial outcome you're actually working toward.
 
-I work with investors, homeowners, and first-time buyers who want their mortgage treated as a financial decision, not just a transaction.
+We work with investors, homeowners, and first-time buyers who want their mortgage treated as a financial decision, not just a transaction.
 
               </p>
 
