@@ -279,7 +279,7 @@ export default function HomePage() {
         className="text-[#E3B84A]"
         style={{ textShadow: "0 1px 3px rgba(0,0,0,0.9), 0 3px 16px rgba(0,0,0,0.7)" }}
       >
-      We can help — let's run the numbers.
+      Let's run the numbers.
          </span>
       <br />
     </h1>
@@ -330,7 +330,15 @@ export default function HomePage() {
               <br />
               <span className="text-[#C79A2B]">Built on</span>
               <br />
-              Investment Analysis
+              Investment Analysis.
+              <br />
+      <span
+        className="text-[#E3B84A]"
+        style={{ textShadow: "0 1px 3px rgba(0,0,0,0.9), 0 3px 16px rgba(0,0,0,0.7)" }}
+      >
+      Let's run the numbers.
+         </span>
+      <br />
               <br />
               <br />
               <br />
