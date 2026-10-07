@@ -720,7 +720,7 @@ Work with investors, homeowners, and first-time buyers who want their mortgage t
               online application right away.
             </p>
           </div>
-
+{/*
           <div className="mx-auto mb-12 max-w-6xl">
             <div className="w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
               <iframe
@@ -744,9 +744,9 @@ Work with investors, homeowners, and first-time buyers who want their mortgage t
 
             <div className="space-y-6">
               <NewsletterSubscription />
-            </div>
-          </div>
-        </div>
+            </div> 
+          </div> */}
+        </div> 
       </section>
 
        {/* ── Testimonials ── */} {/*
