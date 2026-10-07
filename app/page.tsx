@@ -733,7 +733,7 @@ Work with investors, homeowners, and first-time buyers who want their mortgage t
               />
             </div>
           </div>
-
+*/}
           <div
             id="contact"
             className="grid scroll-mt-32 gap-10 lg:grid-cols-2"
@@ -745,7 +745,7 @@ Work with investors, homeowners, and first-time buyers who want their mortgage t
             <div className="space-y-6">
               <NewsletterSubscription />
             </div> 
-          </div> */}
+          </div> 
         </div> 
       </section>
 
